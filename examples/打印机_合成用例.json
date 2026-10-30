@@ -1,0 +1,10 @@
+{
+  "status": "synthetic_only",
+  "note": "示例约束，不包含真实价格、型号、评论、评测结果、账号或个人信息",
+  "cases": [
+    {"case_id": "T01", "request": {"category": "printer", "monthly_pages": 30, "needs_color": false}, "expect": "monochrome_laser"},
+    {"case_id": "T02", "request": {"category": "printer", "monthly_pages": 250, "needs_color": true}, "expect": "color_ink_tank"},
+    {"case_id": "T03", "request": {"category": "printer"}, "expect": "clarify"},
+    {"case_id": "T06", "request": {"category": "printer", "monthly_pages": 30, "needs_color": true}, "expect": "clarify"}
+  ]
+}
