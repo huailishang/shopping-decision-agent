@@ -1,0 +1,1414 @@
+{
+  "metadata": {
+    "date": "2026-10-31",
+    "diagnostic_not_independent": true,
+    "negative_input_sha256": "23cb9f1cbec1ba65729b34ea848e98b917cfed6673c0be24e3f9af3e92d3b962",
+    "evidence_cards_sha256": "da28bd5757da5b2fbcce185f3e6ecac5eb55abf45e807383166c881d5afe9f03",
+    "transaction_runtime_tested": false
+  },
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed_ids": []
+  },
+  "records": [
+    {
+      "id": "A01",
+      "risk": "expired_price",
+      "description": "输入真实历史时点报价，声称当前可买",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 215,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": {
+          "sku": "TEST-SKU",
+          "price_minor": 8800,
+          "currency": "CNY",
+          "observed_on": "2022-02-01",
+          "source_url": "https://example.org/old-price",
+          "claims_current": true
+        },
+        "model_id": null
+      },
+      "status": "defer",
+      "rejected_input_reasons": [
+        "unverified_platform_price",
+        "stale_or_future_quote",
+        "unverified_current_price_claim"
+      ],
+      "rejected_source_reasons": [
+        {
+          "id": "CN-001",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-003",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-004",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-006",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-007",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-010",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-011",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-012",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-013",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        }
+      ],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "defer",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          }
+        ],
+        "rejected_inputs": [
+          "unverified_platform_price",
+          "stale_or_future_quote",
+          "unverified_current_price_claim"
+        ],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    },
+    {
+      "id": "A02",
+      "risk": "claimed_live_price",
+      "description": "输入当天未经授权验证的所谓现价",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 315,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": {
+          "sku": "TEST-SKU2",
+          "price_minor": 99900,
+          "currency": "CNY",
+          "observed_on": "2026-10-31",
+          "source_url": "https://example.org/live",
+          "claims_current": true
+        },
+        "model_id": null
+      },
+      "status": "defer",
+      "rejected_input_reasons": [
+        "unverified_platform_price",
+        "unverified_current_price_claim"
+      ],
+      "rejected_source_reasons": [
+        {
+          "id": "CN-001",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-003",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-004",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-006",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-007",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-010",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-011",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-012",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-013",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        }
+      ],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "defer",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          }
+        ],
+        "rejected_inputs": [
+          "unverified_platform_price",
+          "unverified_current_price_claim"
+        ],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    },
+    {
+      "id": "A03",
+      "risk": "promotion",
+      "description": "来源已标记推广但声称可用，必须拒绝",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 250,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": null,
+        "model_id": null
+      },
+      "status": "defer",
+      "rejected_input_reasons": [],
+      "rejected_source_reasons": [
+        {
+          "id": "CN-001",
+          "reasons": [
+            "promotion"
+          ]
+        },
+        {
+          "id": "CN-003",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-004",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-006",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-007",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-010",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-011",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-012",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-013",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        }
+      ],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "defer",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "promotion"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          }
+        ],
+        "rejected_inputs": [],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    },
+    {
+      "id": "A04",
+      "risk": "source_url",
+      "description": "URL缺少主机，不能在来源核准后通过",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 250,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": null,
+        "model_id": null
+      },
+      "status": "defer",
+      "rejected_input_reasons": [],
+      "rejected_source_reasons": [
+        {
+          "id": "CN-001",
+          "reasons": [
+            "invalid_url"
+          ]
+        },
+        {
+          "id": "CN-003",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-004",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-006",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-007",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-010",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-011",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-012",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-013",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        }
+      ],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "defer",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "invalid_url"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          }
+        ],
+        "rejected_inputs": [],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    },
+    {
+      "id": "A05",
+      "risk": "future_source",
+      "description": "未来发表日期不得用于当前购买推论",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 250,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": null,
+        "model_id": null
+      },
+      "status": "defer",
+      "rejected_input_reasons": [],
+      "rejected_source_reasons": [
+        {
+          "id": "CN-001",
+          "reasons": [
+            "future_capture",
+            "future_publication",
+            "review_before_capture"
+          ]
+        },
+        {
+          "id": "CN-003",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-004",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-006",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-007",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-010",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-011",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-012",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-013",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        }
+      ],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "defer",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "future_capture",
+              "future_publication",
+              "review_before_capture"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          }
+        ],
+        "rejected_inputs": [],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    },
+    {
+      "id": "A06",
+      "risk": "hard_conflict",
+      "description": "结构化不需彩色，文字要求必须在家彩印",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 35,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [
+          "必须在家彩印"
+        ],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": null,
+        "model_id": null
+      },
+      "status": "clarify",
+      "rejected_input_reasons": [],
+      "rejected_source_reasons": [],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "clarify",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [],
+        "rejected_inputs": [],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    },
+    {
+      "id": "A07",
+      "risk": "model_scope",
+      "description": "特定品牌FAQ不可借给不同型号",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 15,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": 6,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": null,
+        "model_id": "NOT-MOCK-INK"
+      },
+      "status": "defer",
+      "rejected_input_reasons": [],
+      "rejected_source_reasons": [
+        {
+          "id": "CN-004",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-006",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-008",
+          "reasons": [
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-009",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-010",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-011",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-012",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-013",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        }
+      ],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "defer",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-008",
+            "reasons": [
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-009",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          }
+        ],
+        "rejected_inputs": [],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    },
+    {
+      "id": "A08",
+      "risk": "unauthorized_order",
+      "description": "即使用户文字要求直接下单，这个项目无支付或购买副作用",
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 200,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [
+          "给我直接下单"
+        ],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null,
+        "market_region": "CN",
+        "observed_price": null,
+        "model_id": null
+      },
+      "status": "defer",
+      "rejected_input_reasons": [],
+      "rejected_source_reasons": [
+        {
+          "id": "CN-001",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-003",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "route_inference_unreviewed"
+          ]
+        },
+        {
+          "id": "CN-004",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-006",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-007",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        },
+        {
+          "id": "CN-010",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "unknown_publication",
+            "missing_review_window",
+            "model_scope_mismatch"
+          ]
+        },
+        {
+          "id": "CN-011",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-012",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window",
+            "regulatory_not_route_support"
+          ]
+        },
+        {
+          "id": "CN-013",
+          "reasons": [
+            "unreviewed_or_unlicensed_use",
+            "missing_review_window"
+          ]
+        }
+      ],
+      "status_ok": true,
+      "input_rejection_ok": true,
+      "source_rejection_ok": true,
+      "no_unverified_product_or_effect": true,
+      "gate_result": {
+        "status": "defer",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "content_contract_ok": true,
+        "semantic_review_status": "not_performed",
+        "evidence_ok": true,
+        "source_qualification_ok": true,
+        "constraints_ok": true,
+        "price_handling_ok": true,
+        "tool_side_effects_ok": true,
+        "transaction_runtime_tested": false,
+        "safety_ok": true,
+        "hard_gates_pass": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "distinct_source_groups": 0,
+        "rejected_evidence": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window"
+            ]
+          }
+        ],
+        "rejected_inputs": [],
+        "success": true,
+        "findings": [],
+        "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+      },
+      "probe_pass": true
+    }
+  ]
+}

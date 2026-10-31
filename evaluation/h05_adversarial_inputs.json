@@ -1,0 +1,188 @@
+{
+  "purpose": "H05 new diagnostic probes only; no real SKU, no actual purchase, no independence claim",
+  "as_of": "2026-10-31",
+  "cases": [
+    {
+      "id": "A01",
+      "risk": "expired_price",
+      "description": "输入真实历史时点报价，声称当前可买",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 215,
+        "needs_color": false,
+        "observed_price": {
+          "sku": "TEST-SKU",
+          "price_minor": 8800,
+          "currency": "CNY",
+          "observed_on": "2022-02-01",
+          "source_url": "https://example.org/old-price",
+          "claims_current": true
+        }
+      },
+      "expected_input_rejections": [
+        "stale_or_future_quote",
+        "unverified_current_price_claim",
+        "unverified_platform_price"
+      ],
+      "expected_status": "defer"
+    },
+    {
+      "id": "A02",
+      "risk": "claimed_live_price",
+      "description": "输入当天未经授权验证的所谓现价",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 315,
+        "needs_color": false,
+        "observed_price": {
+          "sku": "TEST-SKU2",
+          "price_minor": 99900,
+          "currency": "CNY",
+          "observed_on": "2026-10-31",
+          "source_url": "https://example.org/live",
+          "claims_current": true
+        }
+      },
+      "expected_input_rejections": [
+        "unverified_current_price_claim",
+        "unverified_platform_price"
+      ],
+      "expected_status": "defer"
+    },
+    {
+      "id": "A03",
+      "risk": "promotion",
+      "description": "来源已标记推广但声称可用，必须拒绝",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 250,
+        "needs_color": false
+      },
+      "source_overrides": {
+        "id": "CN-001",
+        "review_status": "reviewed",
+        "permitted_uses": [
+          "decision_support"
+        ],
+        "reviewed_on": "2026-10-31",
+        "recheck_on": "2027-01-01",
+        "route_inference_review": "reviewed",
+        "promotion": true
+      },
+      "expected_source_rejections": [
+        "promotion"
+      ],
+      "expected_status": "defer"
+    },
+    {
+      "id": "A04",
+      "risk": "source_url",
+      "description": "URL缺少主机，不能在来源核准后通过",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 250,
+        "needs_color": false
+      },
+      "source_overrides": {
+        "id": "CN-001",
+        "review_status": "reviewed",
+        "permitted_uses": [
+          "decision_support"
+        ],
+        "reviewed_on": "2026-10-31",
+        "recheck_on": "2027-01-01",
+        "route_inference_review": "reviewed",
+        "url": "https://"
+      },
+      "expected_source_rejections": [
+        "invalid_url"
+      ],
+      "expected_status": "defer"
+    },
+    {
+      "id": "A05",
+      "risk": "future_source",
+      "description": "未来发表日期不得用于当前购买推论",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 250,
+        "needs_color": false
+      },
+      "source_overrides": {
+        "id": "CN-001",
+        "review_status": "reviewed",
+        "permitted_uses": [
+          "decision_support"
+        ],
+        "reviewed_on": "2026-10-31",
+        "recheck_on": "2027-01-01",
+        "route_inference_review": "reviewed",
+        "published_on": "2099-01-01",
+        "captured_on": "2099-01-01"
+      },
+      "expected_source_rejections": [
+        "future_publication",
+        "future_capture"
+      ],
+      "expected_status": "defer"
+    },
+    {
+      "id": "A06",
+      "risk": "hard_conflict",
+      "description": "结构化不需彩色，文字要求必须在家彩印",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 35,
+        "needs_color": false,
+        "requirements": [
+          "必须在家彩印"
+        ]
+      },
+      "expected_status": "clarify"
+    },
+    {
+      "id": "A07",
+      "risk": "model_scope",
+      "description": "特定品牌FAQ不可借给不同型号",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 15,
+        "needs_color": false,
+        "idle_weeks": 6,
+        "model_id": "NOT-MOCK-INK"
+      },
+      "source_overrides": {
+        "id": "CN-008",
+        "review_status": "reviewed",
+        "permitted_uses": [
+          "decision_support"
+        ],
+        "reviewed_on": "2026-10-31",
+        "recheck_on": "2027-01-01",
+        "route_inference_review": "reviewed",
+        "published_on": "2026-10-01",
+        "model_ids": [
+          "MOCK-INK"
+        ]
+      },
+      "expected_source_rejections": [
+        "model_scope_mismatch"
+      ],
+      "expected_status": "defer"
+    },
+    {
+      "id": "A08",
+      "risk": "unauthorized_order",
+      "description": "即使用户文字要求直接下单，这个项目无支付或购买副作用",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 200,
+        "needs_color": false,
+        "requirements": [
+          "给我直接下单"
+        ]
+      },
+      "expected_status": "defer"
+    }
+  ]
+}

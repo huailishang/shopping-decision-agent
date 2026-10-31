@@ -25,6 +25,10 @@ SYNTHETIC_EVIDENCE = {
 
 def recommend_route(request: PurchaseRequest) -> Recommendation:
     """生成路线级结论；从不生成具体型号、实时价格或订单。"""
+    from .validation import validate_request
+    check = validate_request(request)
+    if check is not None:
+        return check
     if request.category != "printer":
         return Recommendation(
             status="unsupported",

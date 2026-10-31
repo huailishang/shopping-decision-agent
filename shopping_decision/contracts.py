@@ -7,6 +7,17 @@ from typing import Protocol, Literal
 
 
 @dataclass(frozen=True)
+class PriceObservation:
+    """输入端看到的历史或声称当前的报价。未经授权平台核查一律不视为实时价格。"""
+    sku: str
+    price_minor: int
+    currency: str
+    observed_on: str
+    source_url: str
+    claims_current: bool = False
+
+
+@dataclass(frozen=True)
 class PurchaseRequest:
     category: str
     budget_max_cny: int | None = None
@@ -14,6 +25,12 @@ class PurchaseRequest:
     needs_color: bool | None = None
     accepts_outsourced_color: bool | None = None
     requirements: tuple[str, ...] = ()
+    idle_weeks: int | None = None
+    requires_wireless: bool | None = None
+    requires_scan: bool | None = None
+    market_region: str = "CN"
+    observed_price: PriceObservation | None = None
+    model_id: str | None = None
 
 
 @dataclass(frozen=True)
@@ -28,7 +45,7 @@ class Evidence:
 
 @dataclass(frozen=True)
 class Recommendation:
-    status: Literal["clarify", "route_recommended", "compare_routes", "unsupported"]
+    status: Literal["clarify", "route_recommended", "compare_routes", "unsupported", "invalid", "defer"]
     recommended_route: str | None
     reasons: tuple[str, ...]
     questions: tuple[str, ...] = ()
@@ -36,6 +53,8 @@ class Recommendation:
     product_skus: tuple[str, ...] = ()
     live_quotes: tuple[dict, ...] = ()
     authorized_side_effects: tuple[str, ...] = ()
+    unknowns: tuple[str, ...] = ()
+    alternative_routes: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)

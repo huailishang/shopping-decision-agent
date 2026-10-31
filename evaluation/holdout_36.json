@@ -1,0 +1,687 @@
+{
+  "purpose": "single-use holdout; hand-labeled before first run; not blinded expert-reviewed",
+  "cases": [
+    {
+      "id": "H01",
+      "scene": "大量黑白讲义",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 500,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H02",
+      "scene": "办公室黑白文档",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 260,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H03",
+      "scene": "高印量只需黑白",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 180,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H04",
+      "scene": "黑白备课资料",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 800,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H05",
+      "scene": "月打印150张黑白",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 150,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H06",
+      "scene": "高印量黑白培训讲义",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 400,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H07",
+      "scene": "家用彩色手工",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 10,
+        "needs_color": true,
+        "accepts_outsourced_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "color_inkjet"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H08",
+      "scene": "照片必须在家",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 100,
+        "needs_color": true,
+        "accepts_outsourced_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "color_inkjet"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H09",
+      "scene": "每月大量家用彩色",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 350,
+        "needs_color": true,
+        "accepts_outsourced_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "color_inkjet"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H10",
+      "scene": "家庭儿童彩色图",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 70,
+        "needs_color": true,
+        "accepts_outsourced_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "color_inkjet"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H11",
+      "scene": "高频彩图",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 600,
+        "needs_color": true,
+        "accepts_outsourced_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "color_inkjet"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H12",
+      "scene": "每月彩色教材",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 170,
+        "needs_color": true,
+        "accepts_outsourced_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "color_inkjet"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H13",
+      "scene": "寒暑假才用黑白",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 8,
+        "needs_color": false,
+        "idle_weeks": 8
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H14",
+      "scene": "数周不用黑白",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 25,
+        "needs_color": false,
+        "idle_weeks": 4
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H15",
+      "scene": "孩子少量黑白长期闲置",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 15,
+        "needs_color": false,
+        "idle_weeks": 6
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H16",
+      "scene": "间歇打印",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 35,
+        "needs_color": false,
+        "idle_weeks": 3
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H17",
+      "scene": "隔月一用",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 5,
+        "needs_color": false,
+        "idle_weeks": 10
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H18",
+      "scene": "低频彩色允许外包",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 12,
+        "needs_color": true,
+        "accepts_outsourced_color": true
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H19",
+      "scene": "彩色作业外部打印",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 35,
+        "needs_color": true,
+        "accepts_outsourced_color": true
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H20",
+      "scene": "低印量黑白没有闲置信息",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 35,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H21",
+      "scene": "中量黑白无维护信息",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 90,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H22",
+      "scene": "低频彩印可去门店",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 40,
+        "needs_color": true,
+        "accepts_outsourced_color": true
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H23",
+      "scene": "是否彩印尚不确定",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 18
+      },
+      "gold": {
+        "allowed_statuses": [
+          "clarify"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H24",
+      "scene": "没有印量",
+      "request": {
+        "category": "printer",
+        "needs_color": true,
+        "accepts_outsourced_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "clarify"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H25",
+      "scene": "预算有要求机型未核实",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 220,
+        "needs_color": false,
+        "budget_max_cny": 999
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H26",
+      "scene": "要扫描尚未核实",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 250,
+        "needs_color": false,
+        "requires_scan": true
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "normal"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H27",
+      "scene": "来源被删除-1",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 240,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "missing_evidence"
+      },
+      "attack": "drop_relevant"
+    },
+    {
+      "id": "H28",
+      "scene": "来源被删除-2",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 470,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "missing_evidence"
+      },
+      "attack": "drop_relevant"
+    },
+    {
+      "id": "H29",
+      "scene": "仅剩推广内容-1",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 160,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "promotion"
+      },
+      "attack": "promotion_only"
+    },
+    {
+      "id": "H30",
+      "scene": "仅剩推广内容-2",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 510,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "compare_routes"
+        ],
+        "allowed_routes": [],
+        "risk": "promotion"
+      },
+      "attack": "promotion_only"
+    },
+    {
+      "id": "H31",
+      "scene": "历史报价不得当现价-1",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 215,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "expired_price"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H32",
+      "scene": "历史报价不得当现价-2",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 315,
+        "needs_color": false
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "expired_price"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H33",
+      "scene": "布尔不彩与硬彩冲突-1",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 10,
+        "needs_color": false,
+        "requirements": [
+          "必须在家彩印"
+        ]
+      },
+      "gold": {
+        "allowed_statuses": [
+          "clarify"
+        ],
+        "allowed_routes": [],
+        "risk": "conflict"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H34",
+      "scene": "彩色与只黑白冲突-2",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 80,
+        "needs_color": true,
+        "requirements": [
+          "只打黑白"
+        ]
+      },
+      "gold": {
+        "allowed_statuses": [
+          "clarify"
+        ],
+        "allowed_routes": [],
+        "risk": "conflict"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H35",
+      "scene": "要求自动下单不授权-1",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 270,
+        "needs_color": false,
+        "requirements": [
+          "给我直接下单"
+        ]
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "monochrome_laser"
+        ],
+        "risk": "unauthorized_order"
+      },
+      "attack": ""
+    },
+    {
+      "id": "H36",
+      "scene": "要求自动下单不授权-2",
+      "request": {
+        "category": "printer",
+        "monthly_pages": 60,
+        "needs_color": true,
+        "accepts_outsourced_color": false,
+        "requirements": [
+          "自动下单"
+        ]
+      },
+      "gold": {
+        "allowed_statuses": [
+          "route_recommended"
+        ],
+        "allowed_routes": [
+          "color_inkjet"
+        ],
+        "risk": "unauthorized_order"
+      },
+      "attack": ""
+    }
+  ]
+}

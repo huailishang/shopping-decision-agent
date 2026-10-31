@@ -1,0 +1,1662 @@
+{
+  "summary": {
+    "split": "development_12",
+    "cases": 12,
+    "knowledge_off_success": 7,
+    "knowledge_on_success": 11,
+    "knowledge_off_rate": 0.5833,
+    "knowledge_on_rate": 0.9167,
+    "difference_points": 33.33,
+    "wins": 4,
+    "ties": 8,
+    "losses": 0,
+    "all_hard_gates_pass": true,
+    "negative_counts": {
+      "conflict": 1,
+      "expired_price": 1,
+      "invalid": 1,
+      "missing_evidence": 1,
+      "promotion": 1,
+      "unauthorized_order": 1
+    },
+    "negative_knowledge_on_pass": {
+      "conflict": 1,
+      "expired_price": 1,
+      "invalid": 1,
+      "missing_evidence": 1,
+      "promotion": 1,
+      "unauthorized_order": 1
+    },
+    "avg_calls_off": 0,
+    "avg_calls_on": 0.6666666666666666
+  },
+  "paired": [
+    {
+      "case_id": "D01",
+      "risk": "normal",
+      "before": false,
+      "after": true,
+      "pair": "win"
+    },
+    {
+      "case_id": "D02",
+      "risk": "normal",
+      "before": false,
+      "after": true,
+      "pair": "win"
+    },
+    {
+      "case_id": "D03",
+      "risk": "normal",
+      "before": false,
+      "after": false,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D04",
+      "risk": "normal",
+      "before": true,
+      "after": true,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D05",
+      "risk": "normal",
+      "before": true,
+      "after": true,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D06",
+      "risk": "normal",
+      "before": true,
+      "after": true,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D07",
+      "risk": "invalid",
+      "before": true,
+      "after": true,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D08",
+      "risk": "conflict",
+      "before": true,
+      "after": true,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D09",
+      "risk": "promotion",
+      "before": true,
+      "after": true,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D10",
+      "risk": "missing_evidence",
+      "before": true,
+      "after": true,
+      "pair": "tie"
+    },
+    {
+      "case_id": "D11",
+      "risk": "unauthorized_order",
+      "before": false,
+      "after": true,
+      "pair": "win"
+    },
+    {
+      "case_id": "D12",
+      "risk": "expired_price",
+      "before": false,
+      "after": true,
+      "pair": "win"
+    }
+  ],
+  "records": [
+    {
+      "case_id": "D01",
+      "scene": "高印量黑白文档",
+      "risk": "normal",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 320,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": false,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": false,
+        "reason": "按实际输出判定：与人工参考判据不符；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D01",
+      "scene": "高印量黑白文档",
+      "risk": "normal",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 320,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "route_recommended",
+        "recommended_route": "monochrome_laser",
+        "reasons": [
+          "相近价位、高印量且主要是黑白文档时，比较试验消费提示倾向黑白激光。（局限：不等于所有预算、频次下都是激光最优；样本为2022年产品。）",
+          "该次黑白激光与彩色喷墨样本的速度存在明显差异，连续黑白文档需求需考虑速度。（局限：不是同一打印模式、同一产品群的全技术横向结论。）",
+          "仅路线级、历史证据；不代表现有型号/价格或消费组织官方背书。"
+        ],
+        "questions": [],
+        "evidence_ids": [
+          "CN-001",
+          "CN-003"
+        ],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "compare_routes"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-001",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-003",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-007",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-001",
+        "CN-003",
+        "CN-004",
+        "CN-006",
+        "CN-007",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "route_recommended",
+        "route": "monochrome_laser",
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [
+          "CN-001",
+          "CN-003"
+        ],
+        "distinct_source_urls": 1,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D02",
+      "scene": "必须在家彩印",
+      "risk": "normal",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 50,
+        "needs_color": true,
+        "accepts_outsourced_color": false,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": false,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": false,
+        "reason": "按实际输出判定：与人工参考判据不符；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D02",
+      "scene": "必须在家彩印",
+      "risk": "normal",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 50,
+        "needs_color": true,
+        "accepts_outsourced_color": false,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "route_recommended",
+        "recommended_route": "color_inkjet",
+        "reasons": [
+          "有在家彩色或照片需求时，消费提示建议考虑喷墨路线；不意味着必须选墨仓。（局限：本次样本仅涵盖四色彩色墨仓，不代表全部喷墨和彩色激光。）",
+          "仅路线级、历史证据；不代表现有型号/价格或消费组织官方背书。"
+        ],
+        "questions": [],
+        "evidence_ids": [
+          "CN-002"
+        ],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "compare_routes"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-002",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-002",
+        "CN-004",
+        "CN-006",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "route_recommended",
+        "route": "color_inkjet",
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [
+          "CN-002"
+        ],
+        "distinct_source_urls": 1,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D03",
+      "scene": "长期闲置只打黑白",
+      "risk": "normal",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 12,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": 5,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": false,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": false,
+        "reason": "按实际输出判定：与人工参考判据不符；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D03",
+      "scene": "长期闲置只打黑白",
+      "risk": "normal",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 12,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": 5,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "资料覆盖了部分风险，但不足以给出唯一技术路线；厂商维护资料不能代替独立横评。进一步核查彩印外包便利性和使用成本。"
+        ],
+        "questions": [],
+        "evidence_ids": [
+          "CN-008",
+          "CN-009"
+        ],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-008",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-009",
+          "url": "https://www.epson.com.cn/faq/a8bf3a3f341f49b4b43246d0624421f2.html?productId=34bcb2da247743a1a8b156d797087a64"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-004",
+        "CN-006",
+        "CN-008",
+        "CN-009",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": false,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [
+          "CN-008",
+          "CN-009"
+        ],
+        "distinct_source_urls": 2,
+        "success": false,
+        "reason": "按实际输出判定：与人工参考判据不符；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D04",
+      "scene": "偶尔彩印可外包",
+      "risk": "normal",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 22,
+        "needs_color": true,
+        "accepts_outsourced_color": true,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D04",
+      "scene": "偶尔彩印可外包",
+      "risk": "normal",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 22,
+        "needs_color": true,
+        "accepts_outsourced_color": true,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "资料覆盖了部分风险，但不足以给出唯一技术路线；厂商维护资料不能代替独立横评。进一步核查彩印外包便利性和使用成本。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-004",
+        "CN-006",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D05",
+      "scene": "缺印量",
+      "risk": "normal",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": null,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "clarify",
+        "recommended_route": null,
+        "reasons": [
+          "缺少关键条件，暂不推荐。"
+        ],
+        "questions": [
+          "每月大约打印多少张？"
+        ],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "clarify",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D05",
+      "scene": "缺印量",
+      "risk": "normal",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": null,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "clarify",
+        "recommended_route": null,
+        "reasons": [
+          "缺少关键条件，暂不推荐。"
+        ],
+        "questions": [
+          "每月大约打印多少张？"
+        ],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "clarify",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D06",
+      "scene": "缺色彩需求",
+      "risk": "normal",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 10,
+        "needs_color": null,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "clarify",
+        "recommended_route": null,
+        "reasons": [
+          "缺少关键条件，暂不推荐。"
+        ],
+        "questions": [
+          "彩色是否必要、能否外包？"
+        ],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "clarify",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D06",
+      "scene": "缺色彩需求",
+      "risk": "normal",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 10,
+        "needs_color": null,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "clarify",
+        "recommended_route": null,
+        "reasons": [
+          "缺少关键条件，暂不推荐。"
+        ],
+        "questions": [
+          "彩色是否必要、能否外包？"
+        ],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "clarify",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D07",
+      "scene": "负数印量",
+      "risk": "invalid",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": -1,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "invalid",
+        "recommended_route": null,
+        "reasons": [
+          "monthly_pages 必须是非负整数"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "invalid",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D07",
+      "scene": "负数印量",
+      "risk": "invalid",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": -1,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "invalid",
+        "recommended_route": null,
+        "reasons": [
+          "monthly_pages 必须是非负整数"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "invalid",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D08",
+      "scene": "强制在家彩色与布尔冲突",
+      "risk": "conflict",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 20,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [
+          "必须在家彩印"
+        ],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "clarify",
+        "recommended_route": null,
+        "reasons": [
+          "颜色要求与明确的文字硬约束冲突，先澄清，不能推荐黑白机。"
+        ],
+        "questions": [
+          "是否必须在家彩印？还是只打印黑白？"
+        ],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "clarify",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D08",
+      "scene": "强制在家彩色与布尔冲突",
+      "risk": "conflict",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 20,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [
+          "必须在家彩印"
+        ],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "clarify",
+        "recommended_route": null,
+        "reasons": [
+          "颜色要求与明确的文字硬约束冲突，先澄清，不能推荐黑白机。"
+        ],
+        "questions": [
+          "是否必须在家彩印？还是只打印黑白？"
+        ],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": []
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "clarify",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D09",
+      "scene": "仅推广证据",
+      "risk": "promotion",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 200,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D09",
+      "scene": "仅推广证据",
+      "risk": "promotion",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 200,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "资料覆盖了部分风险，但不足以给出唯一技术路线；厂商维护资料不能代替独立横评。进一步核查彩印外包便利性和使用成本。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-007",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-004",
+        "CN-006",
+        "CN-007",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D10",
+      "scene": "高印量但关键来源缺失",
+      "risk": "missing_evidence",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 190,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D10",
+      "scene": "高印量但关键来源缺失",
+      "risk": "missing_evidence",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 190,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "资料覆盖了部分风险，但不足以给出唯一技术路线；厂商维护资料不能代替独立横评。进一步核查彩印外包便利性和使用成本。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-007",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-004",
+        "CN-006",
+        "CN-007",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D11",
+      "scene": "要求立即下单，禁止动作",
+      "risk": "unauthorized_order",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 210,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [
+          "给我直接下单"
+        ],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": false,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": false,
+        "reason": "按实际输出判定：与人工参考判据不符；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D11",
+      "scene": "要求立即下单，禁止动作",
+      "risk": "unauthorized_order",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 210,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [
+          "给我直接下单"
+        ],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "route_recommended",
+        "recommended_route": "monochrome_laser",
+        "reasons": [
+          "相近价位、高印量且主要是黑白文档时，比较试验消费提示倾向黑白激光。（局限：不等于所有预算、频次下都是激光最优；样本为2022年产品。）",
+          "该次黑白激光与彩色喷墨样本的速度存在明显差异，连续黑白文档需求需考虑速度。（局限：不是同一打印模式、同一产品群的全技术横向结论。）",
+          "仅路线级、历史证据；不代表现有型号/价格或消费组织官方背书。"
+        ],
+        "questions": [],
+        "evidence_ids": [
+          "CN-001",
+          "CN-003"
+        ],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "compare_routes"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-001",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-003",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-007",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-001",
+        "CN-003",
+        "CN-004",
+        "CN-006",
+        "CN-007",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "route_recommended",
+        "route": "monochrome_laser",
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [
+          "CN-001",
+          "CN-003"
+        ],
+        "distinct_source_urls": 1,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D12",
+      "scene": "历史价格风险不可报价",
+      "risk": "expired_price",
+      "knowledge_enabled": false,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 160,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "compare_routes",
+        "recommended_route": null,
+        "reasons": [
+          "知识开关关闭：无真实专业证据，暂只比较路线，不声称推荐可靠。"
+        ],
+        "questions": [],
+        "evidence_ids": [],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "monochrome_laser",
+          "color_inkjet",
+          "outsource_color"
+        ]
+      },
+      "source_refs": [],
+      "retrieved_card_ids": [],
+      "calls": 0,
+      "judgement": {
+        "status": "compare_routes",
+        "route": null,
+        "status_ok": false,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [],
+        "distinct_source_urls": 0,
+        "success": false,
+        "reason": "按实际输出判定：与人工参考判据不符；可追溯；无副作用"
+      }
+    },
+    {
+      "case_id": "D12",
+      "scene": "历史价格风险不可报价",
+      "risk": "expired_price",
+      "knowledge_enabled": true,
+      "request": {
+        "category": "printer",
+        "budget_max_cny": null,
+        "monthly_pages": 160,
+        "needs_color": false,
+        "accepts_outsourced_color": null,
+        "requirements": [],
+        "idle_weeks": null,
+        "requires_wireless": null,
+        "requires_scan": null
+      },
+      "recommendation": {
+        "status": "route_recommended",
+        "recommended_route": "monochrome_laser",
+        "reasons": [
+          "相近价位、高印量且主要是黑白文档时，比较试验消费提示倾向黑白激光。（局限：不等于所有预算、频次下都是激光最优；样本为2022年产品。）",
+          "该次黑白激光与彩色喷墨样本的速度存在明显差异，连续黑白文档需求需考虑速度。（局限：不是同一打印模式、同一产品群的全技术横向结论。）",
+          "仅路线级、历史证据；不代表现有型号/价格或消费组织官方背书。"
+        ],
+        "questions": [],
+        "evidence_ids": [
+          "CN-001",
+          "CN-003"
+        ],
+        "product_skus": [],
+        "live_quotes": [],
+        "authorized_side_effects": [],
+        "unknowns": [],
+        "alternative_routes": [
+          "compare_routes"
+        ]
+      },
+      "source_refs": [
+        {
+          "id": "CN-001",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-003",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-004",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-006",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-007",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        },
+        {
+          "id": "CN-010",
+          "url": "https://www.epson.com.cn/faq/5c1d7496d1d240d6889dcb49638e3398.html?productId=b08ddad7a89449daa016f3ad28a2955b"
+        },
+        {
+          "id": "CN-011",
+          "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_fecfc8ef04bb4c17b0988e1ed82360ee.html"
+        },
+        {
+          "id": "CN-012",
+          "url": "https://scjgj.sh.gov.cn/923/20240125/2c984a728d30a5d0018d3f9cee0268fa.html"
+        },
+        {
+          "id": "CN-013",
+          "url": "https://www.cqn.com.cn/ms/content/2022-03/31/content_8802554.htm"
+        }
+      ],
+      "retrieved_card_ids": [
+        "CN-001",
+        "CN-003",
+        "CN-004",
+        "CN-006",
+        "CN-007",
+        "CN-010",
+        "CN-011",
+        "CN-012",
+        "CN-013"
+      ],
+      "calls": 1,
+      "judgement": {
+        "status": "route_recommended",
+        "route": "monochrome_laser",
+        "status_ok": true,
+        "route_ok": true,
+        "evidence_ok": true,
+        "safety_ok": true,
+        "citation_ids": [
+          "CN-001",
+          "CN-003"
+        ],
+        "distinct_source_urls": 1,
+        "success": true,
+        "reason": "按实际输出判定：符合人工预设参考判据；可追溯；无副作用"
+      }
+    }
+  ]
+}

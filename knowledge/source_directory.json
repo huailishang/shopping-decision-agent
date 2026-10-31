@@ -1,0 +1,88 @@
+{
+  "version": "h03-source-routes-v1",
+  "reviewed_on": "2026-10-31",
+  "purpose": "品类研究的来源入口/角色索引，不是可自由再分发的商品测评数据集",
+  "source_roles": [
+    {
+      "id": "standard_register",
+      "purpose": "术语、分类、强制安全/性能测试指标、版本状态",
+      "authority_scope": "规范定义/测试方法；非具体推荐",
+      "portal": "https://std.samr.gov.cn",
+      "region": "CN",
+      "license_note": "公开可查不等于全文可抓取或自由再分发；按版权与使用条款处理",
+      "freshness": "检查现行/废止/替代及实施日期"
+    },
+    {
+      "id": "consumer_comparison",
+      "purpose": "消费者组织及联合实验室的条件明确的比较试验",
+      "authority_scope": "被测试产品、项目、时间与地域；不等于官网推荐购买某产品",
+      "portal": "https://315.cca.org.cn",
+      "region": "CN",
+      "license_note": "查询渠道不等于开放API或开放数据授权，引用摘要与原文链接，不能批量转载",
+      "freshness": "关注试验年份、样本型号、测试条件与是否在当地销售"
+    },
+    {
+      "id": "regional_comparison",
+      "purpose": "香港消费者委员会等独立消费者组织的公开试验",
+      "authority_scope": "只能按其香港市场样本解释，不能直接转为大陆在售型号与价格",
+      "portal": "https://www.consumer.org.hk",
+      "region": "HK",
+      "license_note": "仅做链接和短摘要，批量重用/商用另行核实",
+      "freshness": "检查试验日期及地区样本，成本以当地币种计"
+    },
+    {
+      "id": "manufacturer_document",
+      "purpose": "官方说明书、技术参数和维护知识",
+      "authority_scope": "仅说明适用型号的技术事实；不能代替独立横向比较",
+      "portal": null,
+      "region": "各品牌市场",
+      "license_note": "不得假定所有品牌说明许可再分发",
+      "freshness": "型号版本、固件、保修政策变更时复核"
+    },
+    {
+      "id": "independent_laboratory",
+      "purpose": "可复现测试方法、样本、客观性能和长期成本",
+      "authority_scope": "以实际样本/检测项目和测试方法为限",
+      "portal": null,
+      "region": "按报告",
+      "license_note": "需逐机构核验授权与利益冲突",
+      "freshness": "测试年份、样本可比性、测量指标变化时复核"
+    },
+    {
+      "id": "technical_reference",
+      "purpose": "技术词汇、分类和成熟原理",
+      "authority_scope": "只解释技术路线，不能拿来背书某个型号",
+      "portal": null,
+      "region": "按资料",
+      "license_note": "开放百科的授权需按项目逐项核验",
+      "freshness": "技术路线或标准修订时复核"
+    },
+    {
+      "id": "repair_and_user_feedback",
+      "purpose": "维修案例与用户长期使用反馈、寻找潜在反例",
+      "authority_scope": "样本选择偏差较大；仅作为线索，不能单凭热度升级为行业共识",
+      "portal": null,
+      "region": "按样本",
+      "license_note": "不得未经许可批量复制评论",
+      "freshness": "注明型号/批次/时间和样本来源"
+    },
+    {
+      "id": "authorized_catalogue",
+      "purpose": "当前型号参数、库存、报价、供货区域",
+      "authority_scope": "购买时点和特定SKU有效",
+      "portal": null,
+      "region": "订单所在地",
+      "license_note": "只走获授权接口或用户授权UI；不绕过登录风控",
+      "freshness": "购买前实时核验"
+    },
+    {
+      "id": "seller_official_policy",
+      "purpose": "配送、退换、质保、安装等商家履约条款",
+      "authority_scope": "与具体商家、渠道、订单场景绑定",
+      "portal": null,
+      "region": "订单所在地",
+      "license_note": "只读和标明条款版本；不触发交易",
+      "freshness": "购买前核验当次生效条款"
+    }
+  ]
+}
