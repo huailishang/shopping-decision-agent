@@ -2,9 +2,10 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from datetime import date
-from .contracts import PurchaseRequest, Recommendation
+from .contracts import PurchaseRequest, Recommendation, monthly_page_bounds
 from .evidence_policy import valid_https_url
 from .knowledge import KnowledgeCard, load_cards, screen_cards
+from .route_claims import load_route_claim_cards
 from .validation import validate_request
 
 @dataclass(frozen=True)
@@ -48,30 +49,35 @@ def decide(req: PurchaseRequest, *, knowledge_enabled: bool = True,
     if check is not None:
         return DecisionRecord(req, check, knowledge_enabled, (), (), 0,
                               rejected_inputs=price_rejected)
-    if req.monthly_pages is None or req.needs_color is None:
-        qs = []
-        if req.monthly_pages is None:
-            qs.append("每月大约打印多少张？")
-        if req.needs_color is None:
-            qs.append("彩色是否必要、能否外包？")
-        return DecisionRecord(req, Recommendation("clarify", None,
-            ("缺少关键条件，暂不推荐。",), questions=tuple(qs)),
-            knowledge_enabled, (), (), 0, rejected_inputs=price_rejected)
-
+    bounds = monthly_page_bounds(req)
     unknowns = []
     if req.budget_max_cny is not None:
         unknowns.append("预算是否覆盖实际机型、耗材与售后，尚未核实")
     if req.requires_wireless:
-        unknowns.append("具体机型的无线/微信打印兼容性尚未核验")
+        unknowns.append("具体机型的普通无线/手机打印能力尚未核验")
+    if any('微信' in text for text in req.requirements):
+        unknowns.append("微信打印的具体方式与机型兼容性待确认；若要求从微信小程序直接打印，须另核实对应机型与绑定方法，普通Wi-Fi不代表支持微信打印")
     if req.requires_scan:
         unknowns.append("具体机型的扫描功能尚未核验")
     if price_rejected:
         unknowns.append("已拒绝未经授权平台核实的历史/声称现价报价，不能用作购买依据")
     if req.requirements:
-        ignored = ("必须在家彩印","必须在家打印彩色","必须家用彩印","必须彩色",
-                   "不需要彩色","不能彩印","只打黑白","给我直接下单","自动下单")
-        unknowns.extend("尚未核验自由文本约束：" + s for s in req.requirements
-                        if s.strip() and not any(t in s for t in ignored))
+        # 保守保留所有原文约束；命中颜色短语不表示整句话已被处理。
+        unknowns.extend("尚未逐项核验自由文本约束：" + text for text in req.requirements if text.strip())
+
+    if bounds is not None and bounds[0] != bounds[1]:
+        unknowns.append(f"已记录月印量区间{bounds[0]}–{bounds[1]}页，不能用上界代替整个区间")
+    if bounds is not None and bounds[0] < 150 <= bounds[1]:
+        unknowns.append("该印量区间跨当前程序的条件分界，现有阈值未经专业独立批准，不得单点推断")
+    if bounds is None or req.needs_color is None:
+        qs = []
+        if bounds is None:
+            qs.append("每月大约打印多少张？可填写0–50这样的范围")
+        if req.needs_color is None:
+            qs.append("家里是否必须彩印？偶尔彩印可否到打印店？")
+        return DecisionRecord(req, Recommendation("clarify", None,
+            ("缺少关键条件，暂不推荐。",), questions=tuple(qs), unknowns=tuple(unknowns)),
+            knowledge_enabled, (), (), 0, rejected_inputs=price_rejected)
 
     if not knowledge_enabled:
         return DecisionRecord(req, Recommendation("compare_routes", None,
@@ -80,11 +86,15 @@ def decide(req: PurchaseRequest, *, knowledge_enabled: bool = True,
             alternative_routes=("monochrome_laser","color_inkjet","outsource_color")),
             False, (), (), 0, rejected_inputs=price_rejected)
 
-    active, rejected = screen_cards(req, cards if cards is not None else load_cards(), today=today)
+    # 审批只限逐条主张，仍通过原有 screen_cards 资格门禁；普通路径不能信任研究索引。
+    all_cards = cards if cards is not None else load_cards() + load_route_claim_cards()
+    active, rejected = screen_cards(req, all_cards, today=today)
     source_pairs = tuple((c.id, c.url) for c in active)
+    # 只对已有独立批准且当次适用的主张生成比较理由；不允许单条研究摘录形成唯一购买结论。
+    reviewed_comparisons = tuple(c for c in active if c.use_note == "route_comparison_claim")
     route = None
     relevant: tuple[KnowledgeCard, ...] = ()
-    if req.needs_color is False and req.monthly_pages >= 150:
+    if req.needs_color is False and bounds is not None and bounds[0] >= 150:
         relevant = tuple(c for c in active if c.id in ("CN-001","CN-003"))
         if any(c.id == "CN-001" for c in relevant):
             route = "monochrome_laser"
@@ -100,7 +110,18 @@ def decide(req: PurchaseRequest, *, knowledge_enabled: bool = True,
     # 两篇同一厂商的FAQ不能成为独立横评；route_effect 是复核后的推论而非原文事实。
     if route and not any(c.source_kind == "comparative" for c in relevant):
         route = None
-    if route and relevant:
+    if reviewed_comparisons:
+        reasons = tuple(
+            f"{c.id}（来源：{c.source_name}；发布日期：{c.published_on}；适用范围：{c.claim_scope}）："
+            f"{c.claim}（局限：{c.exceptions}；反证/不能推出：{c.counter_evidence}）"
+            for c in reviewed_comparisons)
+        route_ids = tuple(dict.fromkeys(c.route_effect for c in reviewed_comparisons if c.route_effect))
+        outcome = Recommendation("compare_routes", None,
+            reasons + ("仅对获批准、在适用范围内的比较主张给出引用；尚未核验具体型号、兼容性或当前报价，不给唯一购买建议。",),
+            evidence_ids=tuple(c.id for c in reviewed_comparisons),
+            unknowns=tuple(unknowns),
+            alternative_routes=route_ids)
+    elif route and relevant:
         reasons = tuple(c.claim + "（局限：" + c.exceptions + "）" for c in relevant)
         cite = tuple(c.id for c in relevant)
         if unknowns:
@@ -112,9 +133,19 @@ def decide(req: PurchaseRequest, *, knowledge_enabled: bool = True,
                 reasons + ("仅路线级历史比较；不代表现售型号、价格或官方推荐某品牌。",),
                 evidence_ids=cite, alternative_routes=("compare_routes",))
     elif not active:
+        volume = f"{bounds[0]}–{bounds[1]}页" if bounds[0] != bounds[1] else f"约{bounds[0]}页"
+        color_note = ("家里仅需黑白、彩印可外包" if req.needs_color is False and req.accepts_outsourced_color is True
+                      else "家里需彩印、不能外包" if req.needs_color is True and req.accepts_outsourced_color is False
+                      else "彩印与外包要求按确认条件比较")
+        relevant_routes = ("建议比较满足黑白用途的激光与喷墨方案；彩印可外包，不强迫购买彩色机。"
+                           if req.needs_color is False and req.accepts_outsourced_color is True
+                           else "按用户确认的彩印/外包条件比较可行技术路线，不推定某路线必胜。")
         outcome = Recommendation("defer", None,
-            ("本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。",),
-            unknowns=tuple(unknowns))
+            (f"已记录使用条件：每月{volume}；{color_note}。",
+             "本次场景没有通过适用性、时间和决策使用资格门禁的来源；只能作为研究线索，暂缓唯一推荐。",
+             relevant_routes,
+             "需核查长期耗材/维护、型号级兼容性、售后与相关独立比较；无获批准证据不能作当前品牌或型号结论。"),
+            unknowns=tuple(unknowns), alternative_routes=("monochrome_laser", "inkjet", "external_printing"))
     else:
         outcome = Recommendation("compare_routes", None,
             ("现有证据不足以确定唯一技术路线；需补独立测试、适用范围和长期成本。",),

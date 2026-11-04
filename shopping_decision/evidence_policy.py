@@ -50,16 +50,15 @@ def metadata_gate(*, url: str, region: str, target_region: str, captured_on: str
             problems.append("future_capture")
     except (ValueError, TypeError):
         problems.append("invalid_capture_date")
-    if published_on is not None:
-        try:
-            pub = date.fromisoformat(published_on)
-            if pub > today:
-                problems.append("future_publication")
-            if "captured" in locals() and pub > captured:
-                problems.append("publication_after_capture")
-        except (ValueError, TypeError):
-            if purpose == "decision_support":
-                problems.append("unknown_publication")
+    try:
+        pub = date.fromisoformat(published_on)
+        if pub > today:
+            problems.append("future_publication")
+        if "captured" in locals() and pub > captured:
+            problems.append("publication_after_capture")
+    except (ValueError, TypeError):
+        if purpose == "decision_support":
+            problems.append("unknown_publication")
     if not reviewed_on or not recheck_on:
         problems.append("missing_review_window")
     else:

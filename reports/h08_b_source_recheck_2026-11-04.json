@@ -1,0 +1,83 @@
+{
+  "case_id": "H08_B_2026-11-02",
+  "checked_on": "2026-11-04",
+  "role": "executor",
+  "method": "Python urllib GET (Mozilla/5.0 header), bounded public HTML response; HTMLParser text presence check. sha256 hashes returned raw response bytes, not signed source attestations.",
+  "independent_decision_support_approval": "not_granted",
+  "checks": [
+    {
+      "id": "H08B-S04-original",
+      "url": "https://95105369.com/web/skillsdisp.aspx?id=2772&modelno=dcp1618w_cn",
+      "http_status": 200,
+      "document_code": "CHN-FP0057-1",
+      "page_last_modified_on": "2026-05-08",
+      "publication_date_verified": false,
+      "sha256": "a33dbded44210380b6f0aa2ae4f107c876aab93ba952a3f81313261787521a7f",
+      "anchors": [
+        "首次使用微信打印功能前，需先绑定打印机",
+        "适用机型"
+      ],
+      "model_examples_from_this_page": [
+        "HL-1218W",
+        "DCP-1618W"
+      ],
+      "conclusion": "原PC页及清单文本可直接回源，本页不含HL-L1238W；不能把另一个指南的清单冒充本页清单。不能单据此确认设备现时联机可用。"
+    },
+    {
+      "id": "H08B-S04-new-guide",
+      "url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+      "http_status": 200,
+      "document_code": "CHN-FP2070-1",
+      "page_last_modified_on": "2026-10-20",
+      "publication_date_verified": false,
+      "sha256": "95c2108782e4db472f8067d7ad0bdb21e20f22426640e749390be80dbe45ffa4",
+      "anchors": [
+        "首次使用微信畅享印功能前，需先绑定打印机",
+        "适用机型"
+      ],
+      "model_examples_from_this_page": [
+        "HL-L1238W",
+        "HL-L1808W"
+      ],
+      "conclusion": "同一厂商的较新指南清单明确出现HL-L1238W；不自动继承给原CHN-FP0057-1文档，也未实测微信小程序或授权。"
+    },
+    {
+      "id": "Brother-CN-model-context",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "http_status": 200,
+      "sha256": "d38d397a149bd161d583c7b0f68da2753e376ed21b3f2d649fad31f6018eb022",
+      "anchors": [
+        "HL-L1238W",
+        "微信小程序打印"
+      ],
+      "conclusion": "官网产品页存在配套微信小程序功能宣传，属于厂商型号说明，不是第三方功能测试、实时报价或长期可靠性证据。"
+    },
+    {
+      "id": "H08B-S03-issue-date",
+      "url": "https://www.consumer.org.hk/sc/issue/492",
+      "http_status": 200,
+      "sha256": "231c7e5251d73fd4405c4b3566263e45ad0652e320d0a5d93b441e2da08aac97",
+      "anchor": "2017.10 | 492期",
+      "publication_period": "2017-10",
+      "publication_precision": "month",
+      "publication_day_verified": false,
+      "conclusion": "期刊发布日期能精确到2017年10月；不能虚构为2017-10-01或推断适用2026年中国机型。"
+    },
+    {
+      "id": "H08B-S01",
+      "url": "https://www.consumerreports.org/electronics-computers/printers/buying-guide/",
+      "http_status": null,
+      "local_retrieval_error": "SSL handshake timeout",
+      "web_search_index_updated_on": "2026-02-25",
+      "publication_date_verified": false,
+      "conclusion": "网页索引显示2026-02-25更新及激光/喷墨性能与维护取舍；本地直接GET未成功，不冒称此次完整原文回源；美国研究不替代中国适用性审查。"
+    }
+  ],
+  "use_limits": [
+    "Only short source facts and hyperlinks retained; no source document copyrighted full text archived.",
+    "Document last-modified dates are not original publication dates and do not auto-pass metadata_gate unknown_publication.",
+    "Original S04 and guide share manufacturer; cross-check is not independent comparative evidence.",
+    "No login, privacy terms acceptance, app usage, current SKU/price verification, or transaction.",
+    "Every H08B-C01..C04 remains unapproved pending independent evaluator review."
+  ]
+}

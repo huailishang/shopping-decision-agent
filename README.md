@@ -75,3 +75,47 @@ python3 -m shopping_decision.h05_probes  # 新负向输入8例，仅离线；不
 本项目不包含上述项目的源码、模型权重、数据集或任何用户账号凭证，新增代码独立编写。
 
 H03 增加 `shopping_decision/research_router.py`（通用品类证据规划器）、`knowledge/source_directory.json`（来源职责索引）与 `tests/test_research_router.py`。目前能给陌生品类列出按需研究/复核清单，**不能替代真实联网取证，也不代表已经支持跨品类商品推荐**。
+
+## H08：本机打印机交互原型（2026-11-01）
+
+在项目根目录启动（只监听本机）：
+
+```bash
+python3 -m shopping_decision.web
+# Windows 可使用 python -m shopping_decision.web
+```
+
+打开 `http://127.0.0.1:8765/`，在启动的终端按 `Ctrl+C` 停止。填写一句话需求，再由本人补全并确认印量、预算、彩印、外包、闲置和其他硬条件；修改后重新调用本地后端判断。刷新页面会清空本次输入，不默认写文件或上传。评审JSON仅通过“预览评审记录”显示，保存前应人工隐去个人信息。无模型解析、实时商品报价或支付能力。**真实浏览器点击验收/真实用户独立评审仍待完成**；服务端 HTTP 检验及65项单测已通过。详情见 [H08执行报告](reports/H08_执行报告.md)。
+
+
+## H08最终交互方向：Java Swing 桌面窗口
+
+**以Java桌面窗口为主，不需要浏览器。** 安装JDK 17+及Python 3.11+，在Windows资源管理器双击 `desktop/start_windows.bat` 即可编译并打开窗口（也可以在项目根目录命令行执行）。窗口包含一句话需求、条件补充、人工确认、后端判断、修改重算和评审记录预览。Java仅为UI层，每次判断以Python子进程运行已有 `decide()`；无新增第三方Java依赖、无需HTTP服务或浏览器。Windows须保证 `javac`、`java`、`python` 在PATH中。若找不到Python，请检查解释器命令。原有Web单页仅作为先前工程试验保留，不再作为首选入口。
+
+**验收边界：** Java 17编译、Java→Python文本协议和68项单测已经通过；图形化窗口的人工鼠标点击/截图尚未完成，真人需求与独立推荐效果评审未通过。关闭窗口即结束，不启用真实电商交易。
+
+
+### H10 桌面版进程输出修复
+
+Swing 通过 `DesktopBridgeClient` 同步消费Python完整审计输出，避免先等子进程退出造成管道阻塞。Windows入口仍为 `desktop/start_windows.bat`；通过 `python -m unittest discover -s tests -q` 及 `python -m shopping_decision.h05_probes` 复验。Java进程专项可用 `javac -encoding UTF-8 -d .h08-build desktop/DesktopBridgeClient.java desktop/H10JavaRegression.java`、`java -cp .h08-build H10JavaRegression python`（Linux上使用python3）。修复后的Windows GUI完整点击仍需独立验收，详见 `reports/H10_执行修复报告.md`。
+
+
+## P0 首批真实商品候选事实与比较（2026-11-04）
+
+这不是完整电商导购：已实现厂商官网**型号发现→来源事实快照→硬条件三态对比→Java桌面结果展示**。原路线主张审批不变；`defer`依然代表尚无通过独立评估的路线推荐，`product_comparison`是只读的型号事实比较，不表示已获购买批准。
+
+在项目目录执行：
+
+```bash
+# 1. 只读发现 Brother 中国目录现有的黑白激光型号（无账号、无购物）
+python3 -m shopping_decision.official_model_discovery --out reports/p0_brother_discovery_local.json
+
+# 2. 回查已登记的官方产品来源；只检型号字符串和来源哈希，不自动改写产品字段
+python3 -m shopping_decision.official_source_check --model HL-L1238W
+
+# 3. 商品对比走原正常输入/桌面桥接；测试可复验所有控制边界
+python3 -m unittest discover -s tests -q
+python3 -m shopping_decision.h05_probes
+```
+
+首批产品事实在 `knowledge/printer_products_official.json`（兄弟3款+HP2款；型号、源URL、功能证据、耗材和厂商建议零售价），通用比较器为 `shopping_decision/product_compare.py`；没有联网的实时京东/淘宝到手价、库存或平台SKU。现有Java桌面启动方式不变。**官网建议零售价不是实际到手价**；如果无法核验当前购买价格，所有预算判定必须显示未知。Brother公开目录已经能发现额外型号，但发现记录并不自动成为经过确认的商品功能。查看 [P0执行报告](reports/P0_真实商品候选与比较_执行报告_20261104.md) 和 [CURRENT.md](CURRENT.md)。

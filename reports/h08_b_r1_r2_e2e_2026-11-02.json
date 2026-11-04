@@ -1,0 +1,216 @@
+{
+  "case": "H08B_R1R2_2026-11-02",
+  "context": "real user confirmed shopping requirements, executor submitted actual desktop_bridge subprocess, not independent evaluator GUI",
+  "input": [
+    "预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+    "0–50",
+    "1000",
+    "",
+    "false",
+    "true",
+    "",
+    "",
+    "微信打印实现方式仍待确认，不默认要求微信小程序\n可靠耐用须核实，不可按品牌印象保证\n优先比较兄弟与惠普；当前不核验在售型号"
+  ],
+  "decoded_response": {
+    "status": "defer",
+    "route": "",
+    "reasons": "已记录使用条件：每月0–50页；家里仅需黑白、彩印可外包。\n本次场景没有通过适用性、时间和决策使用资格门禁的来源；只能作为研究线索，暂缓唯一推荐。\n建议比较满足黑白用途的激光与喷墨方案；彩印可外包，不强迫购买彩色机。\n需核查长期耗材/维护、型号级兼容性、售后与相关独立比较；无获批准证据不能作当前品牌或型号结论。",
+    "questions": "",
+    "unknowns": "预算是否覆盖实际机型、耗材与售后，尚未核实\n微信打印的具体方式与机型兼容性待确认；若要求从微信小程序直接打印，须另核实对应机型与绑定方法，普通Wi-Fi不代表支持微信打印\n尚未逐项核验自由文本约束：预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普\n尚未逐项核验自由文本约束：微信打印实现方式仍待确认，不默认要求微信小程序\n尚未逐项核验自由文本约束：可靠耐用须核实，不可按品牌印象保证\n尚未逐项核验自由文本约束：优先比较兄弟与惠普；当前不核验在售型号\n已记录月印量区间0–50页，不能用上界代替整个区间",
+    "evidence": "",
+    "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+    "time": "2026-11-02T14:22:42.616568+00:00",
+    "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": null,\n    \"needs_color\": false,\n    \"accepts_outsourced_color\": true,\n    \"requirements\": [\n      \"预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普\",\n      \"微信打印实现方式仍待确认，不默认要求微信小程序\",\n      \"可靠耐用须核实，不可按品牌印象保证\",\n      \"优先比较兄弟与惠普；当前不核验在售型号\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null,\n    \"monthly_pages_range\": [\n      0,\n      50\n    ]\n  },\n  \"normalized_constraints\": {\n    \"monthly_print_volume\": [\n      0,\n      50\n    ],\n    \"volume_type\": \"range\",\n    \"home_color_required\": false,\n    \"outsource_color_acceptable\": true,\n    \"budget_max_cny\": 1000,\n    \"wireless_required\": null,\n    \"scan_required\": null,\n    \"original_text_and_extra_requirements\": [\n      \"预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普\",\n      \"微信打印实现方式仍待确认，不默认要求微信小程序\",\n      \"可靠耐用须核实，不可按品牌印象保证\",\n      \"优先比较兄弟与惠普；当前不核验在售型号\"\n    ]\n  },\n  \"recommendation\": {\n    \"status\": \"defer\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"已记录使用条件：每月0–50页；家里仅需黑白、彩印可外包。\",\n      \"本次场景没有通过适用性、时间和决策使用资格门禁的来源；只能作为研究线索，暂缓唯一推荐。\",\n      \"建议比较满足黑白用途的激光与喷墨方案；彩印可外包，不强迫购买彩色机。\",\n      \"需核查长期耗材/维护、型号级兼容性、售后与相关独立比较；无获批准证据不能作当前品牌或型号结论。\"\n    ],\n    \"questions\": [],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [\n      \"预算是否覆盖实际机型、耗材与售后，尚未核实\",\n      \"微信打印的具体方式与机型兼容性待确认；若要求从微信小程序直接打印，须另核实对应机型与绑定方法，普通Wi-Fi不代表支持微信打印\",\n      \"尚未逐项核验自由文本约束：预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普\",\n      \"尚未逐项核验自由文本约束：微信打印实现方式仍待确认，不默认要求微信小程序\",\n      \"尚未逐项核验自由文本约束：可靠耐用须核实，不可按品牌印象保证\",\n      \"尚未逐项核验自由文本约束：优先比较兄弟与惠普；当前不核验在售型号\",\n      \"已记录月印量区间0–50页，不能用上界代替整个区间\"\n    ],\n    \"alternative_routes\": [\n      \"monochrome_laser\",\n      \"inkjet\",\n      \"external_printing\"\n    ]\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [\n    [\n      \"CN-004\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-006\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-010\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"model_scope_mismatch\"\n      ]\n    ],\n    [\n      \"CN-011\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-012\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-013\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"H08B-C01\",\n      [\n        \"region_mismatch\",\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"fact_not_checked\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"H08B-C02\",\n      [\n        \"region_mismatch\",\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"fact_not_checked\",\n        \"missing_independent_decision_approval\",\n        \"model_scope_mismatch\"\n      ]\n    ],\n    [\n      \"H08B-C03\",\n      [\n        \"region_mismatch\",\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"fact_not_checked\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"H08B-C04\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"fact_not_checked\",\n        \"missing_independent_decision_approval\"\n      ]\n    ]\n  ],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T14:22:42.616568+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"research_ledger_sha256\": \"3a31255c124ac86fe08da981309e9379a7474758c3158e80302ff06b461b6924\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+  },
+  "trace": {
+    "request": {
+      "category": "printer",
+      "budget_max_cny": 1000,
+      "monthly_pages": null,
+      "needs_color": false,
+      "accepts_outsourced_color": true,
+      "requirements": [
+        "预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+        "微信打印实现方式仍待确认，不默认要求微信小程序",
+        "可靠耐用须核实，不可按品牌印象保证",
+        "优先比较兄弟与惠普；当前不核验在售型号"
+      ],
+      "idle_weeks": null,
+      "requires_wireless": null,
+      "requires_scan": null,
+      "market_region": "CN",
+      "observed_price": null,
+      "model_id": null,
+      "monthly_pages_range": [
+        0,
+        50
+      ]
+    },
+    "normalized_constraints": {
+      "monthly_print_volume": [
+        0,
+        50
+      ],
+      "volume_type": "range",
+      "home_color_required": false,
+      "outsource_color_acceptable": true,
+      "budget_max_cny": 1000,
+      "wireless_required": null,
+      "scan_required": null,
+      "original_text_and_extra_requirements": [
+        "预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+        "微信打印实现方式仍待确认，不默认要求微信小程序",
+        "可靠耐用须核实，不可按品牌印象保证",
+        "优先比较兄弟与惠普；当前不核验在售型号"
+      ]
+    },
+    "recommendation": {
+      "status": "defer",
+      "recommended_route": null,
+      "reasons": [
+        "已记录使用条件：每月0–50页；家里仅需黑白、彩印可外包。",
+        "本次场景没有通过适用性、时间和决策使用资格门禁的来源；只能作为研究线索，暂缓唯一推荐。",
+        "建议比较满足黑白用途的激光与喷墨方案；彩印可外包，不强迫购买彩色机。",
+        "需核查长期耗材/维护、型号级兼容性、售后与相关独立比较；无获批准证据不能作当前品牌或型号结论。"
+      ],
+      "questions": [],
+      "evidence_ids": [],
+      "product_skus": [],
+      "live_quotes": [],
+      "authorized_side_effects": [],
+      "unknowns": [
+        "预算是否覆盖实际机型、耗材与售后，尚未核实",
+        "微信打印的具体方式与机型兼容性待确认；若要求从微信小程序直接打印，须另核实对应机型与绑定方法，普通Wi-Fi不代表支持微信打印",
+        "尚未逐项核验自由文本约束：预算千元内，月打印0–50页，家里只需要黑白打印，偶尔彩印可以去打印店，希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+        "尚未逐项核验自由文本约束：微信打印实现方式仍待确认，不默认要求微信小程序",
+        "尚未逐项核验自由文本约束：可靠耐用须核实，不可按品牌印象保证",
+        "尚未逐项核验自由文本约束：优先比较兄弟与惠普；当前不核验在售型号",
+        "已记录月印量区间0–50页，不能用上界代替整个区间"
+      ],
+      "alternative_routes": [
+        "monochrome_laser",
+        "inkjet",
+        "external_printing"
+      ]
+    },
+    "evidence": [],
+    "rejected_evidence": [
+      [
+        "CN-004",
+        [
+          "unreviewed_or_unlicensed_use",
+          "missing_review_window",
+          "missing_independent_decision_approval"
+        ]
+      ],
+      [
+        "CN-006",
+        [
+          "unreviewed_or_unlicensed_use",
+          "missing_review_window",
+          "missing_independent_decision_approval"
+        ]
+      ],
+      [
+        "CN-010",
+        [
+          "unreviewed_or_unlicensed_use",
+          "unknown_publication",
+          "missing_review_window",
+          "missing_independent_decision_approval",
+          "model_scope_mismatch"
+        ]
+      ],
+      [
+        "CN-011",
+        [
+          "unreviewed_or_unlicensed_use",
+          "missing_review_window",
+          "missing_independent_decision_approval",
+          "regulatory_not_route_support"
+        ]
+      ],
+      [
+        "CN-012",
+        [
+          "unreviewed_or_unlicensed_use",
+          "missing_review_window",
+          "missing_independent_decision_approval",
+          "regulatory_not_route_support"
+        ]
+      ],
+      [
+        "CN-013",
+        [
+          "unreviewed_or_unlicensed_use",
+          "missing_review_window",
+          "missing_independent_decision_approval"
+        ]
+      ],
+      [
+        "H08B-C01",
+        [
+          "region_mismatch",
+          "unreviewed_or_unlicensed_use",
+          "unknown_publication",
+          "missing_review_window",
+          "fact_not_checked",
+          "missing_independent_decision_approval"
+        ]
+      ],
+      [
+        "H08B-C02",
+        [
+          "region_mismatch",
+          "unreviewed_or_unlicensed_use",
+          "missing_review_window",
+          "fact_not_checked",
+          "missing_independent_decision_approval",
+          "model_scope_mismatch"
+        ]
+      ],
+      [
+        "H08B-C03",
+        [
+          "region_mismatch",
+          "unreviewed_or_unlicensed_use",
+          "unknown_publication",
+          "missing_review_window",
+          "fact_not_checked",
+          "missing_independent_decision_approval"
+        ]
+      ],
+      [
+        "H08B-C04",
+        [
+          "unreviewed_or_unlicensed_use",
+          "unknown_publication",
+          "missing_review_window",
+          "fact_not_checked",
+          "missing_independent_decision_approval"
+        ]
+      ]
+    ],
+    "rejected_inputs": [],
+    "evaluated_at": "2026-11-02T14:22:42.616568+00:00",
+    "engine": "shopping_decision.decision.decide",
+    "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+    "research_ledger_sha256": "3a31255c124ac86fe08da981309e9379a7474758c3158e80302ff06b461b6924",
+    "real_time_prices": false,
+    "transactions_enabled": false
+  },
+  "observed": {
+    "status": "defer",
+    "questions": "",
+    "eligible_evidence_count": 0,
+    "rejected_claim_ids": [
+      "H08B-C01",
+      "H08B-C02",
+      "H08B-C03",
+      "H08B-C04"
+    ],
+    "wechat_wording": "微信打印的具体方式与机型兼容性待确认；若要求从微信小程序直接打印，须另核实对应机型与绑定方法，普通Wi-Fi不代表支持微信打印",
+    "ledger_hash": "3a31255c124ac86fe08da981309e9379a7474758c3158e80302ff06b461b6924"
+  }
+}

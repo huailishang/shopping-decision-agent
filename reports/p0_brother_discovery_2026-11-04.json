@@ -1,0 +1,117 @@
+{
+  "discovered_at": "2026-11-04T14:26:27.125769+00:00",
+  "source_url": "https://www.brother.cn/printer/prt",
+  "response_sha256": "9a6def6b13e6874858495e3c22b9b2cc802a04bd9608b55aaf72d1f5b760cd93",
+  "provider": "Brother CN",
+  "catalog_complete": false,
+  "operation": "read_only_model_discovery",
+  "found_count": 9,
+  "new_model_count": 6,
+  "models": [
+    {
+      "model_id": "HL-10W",
+      "brand": "Brother",
+      "name": "HL-10W",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": false
+    },
+    {
+      "model_id": "HL-L1808W",
+      "brand": "Brother",
+      "name": "HL-L1808W",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": true
+    },
+    {
+      "model_id": "HL-L1238W",
+      "brand": "Brother",
+      "name": "HL-L1238W",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": true
+    },
+    {
+      "model_id": "HL-L1228",
+      "brand": "Brother",
+      "name": "HL-L1228",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": true
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "brand": "Brother",
+      "name": "HL-B2188DW",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": false
+    },
+    {
+      "model_id": "HL-B2158W",
+      "brand": "Brother",
+      "name": "HL-B2158W",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": false
+    },
+    {
+      "model_id": "HL-L6418DW",
+      "brand": "Brother",
+      "name": "HL-L6418DW",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l6418dw",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": false
+    },
+    {
+      "model_id": "HL-L5228DW",
+      "brand": "Brother",
+      "name": "HL-L5228DW",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l5228dw",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": false
+    },
+    {
+      "model_id": "HL-L5218DN",
+      "brand": "Brother",
+      "name": "HL-L5218DN",
+      "category": "printer",
+      "category_hint": "mono_laser_from_website_label",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l5218dn",
+      "status": "discovered_unverified_facts",
+      "fact_confidence": "model_and_official_category_label_only",
+      "in_verified_fact_catalog": false
+    }
+  ],
+  "limitations": [
+    "只覆盖兄弟官网当前黑白激光列表，不代表全部品牌、全部在售型号",
+    "官网列出的型号不是零售平台有货，也不是符合预算",
+    "新发现型号必须逐项取得功能、耗材、价格来源之后才能进入选购比较",
+    "没有获取授权平台实时报价，也没有读取账号或执行任何交易"
+  ]
+}

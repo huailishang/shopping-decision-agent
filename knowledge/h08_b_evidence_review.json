@@ -1,0 +1,264 @@
+{
+  "case_id": "H08_B_2026-11-02",
+  "status": "executor_research_pending_independent_review",
+  "created_on": "2026-11-02",
+  "source_count": 4,
+  "source_groups": 4,
+  "decision_use_approved_count": 0,
+  "note": "仅提交执行者已查证公开摘要与可核对事实的位置，不代替独立来源批准；禁止自动导入printer_cards.json或提升决策用途资格。 已明确提供待审的逐主张ID；不因有decision_claims字段自动放行。",
+  "evidence": [
+    {
+      "id": "H08B-S01",
+      "source_url": "https://www.consumerreports.org/electronics-computers/printers/buying-guide/",
+      "source_org": "Consumer Reports",
+      "source_group": "consumer_reports_printer_buying_guide",
+      "source_kind": "independent_consumer_guide",
+      "published_on": null,
+      "captured_on": "2026-11-02",
+      "reviewed_on": "2026-11-02",
+      "section_anchor": "Best Printer Buying Guide / Laser Printers",
+      "fact_summary": "搜索索引摘录显示Consumer Reports选购指南讨论激光与喷墨的文字表现、可靠性和耗材差异；原始网页未能独立打开，不据此推出现售品牌或大陆机型优胜。",
+      "supports": [
+        "家用黑白文字打印应纳入单色激光比较",
+        "耐用性需要可靠性证据而不是品牌印象"
+      ],
+      "counter_evidence": [
+        "指南涉及美国市场和会员调查，不能保证中国在售具体型号的故障率",
+        "文章无法直接证明低至每月0–50页时总成本最优"
+      ],
+      "scope": {
+        "region": "US",
+        "tech": "laser_vs_inkjet",
+        "models": "not_model_specific"
+      },
+      "limitations": "网页未标明明确发布日期；公开摘要可核对，完整页面打开受限；不引用未经核验的年度费用数字。",
+      "permitted_uses": [
+        "research_index"
+      ],
+      "reuse_basis": "原网页链接和简短事实摘要；不转载全文；用途与商用许可待核对",
+      "executor_audit": "limited_supported_public_summary",
+      "independent_approval": "not_granted",
+      "decision_claims": [
+        {
+          "id": "H08B-C01",
+          "topic": "decision_factors",
+          "claim": "Consumer Reports搜索摘要显示激光与喷墨存在文字速度和耗材维护取舍；正文不可独立获取。",
+          "exceptions": "原始网页403，美国市场，不代表国内型号。",
+          "counter_evidence": "缺本例0–50页下长期成本及独立对照数据。",
+          "claim_scope": "US打印机研究摘要；限研究索引",
+          "sample_scope": "美国消费研究，具体文章未回源",
+          "scope_level": "historical_comparison",
+          "route_effect": null,
+          "applies_when": "any",
+          "approval": {
+            "review_status": "pending",
+            "permitted_uses": [
+              "research_index"
+            ],
+            "fact_audit_status": "pending",
+            "decision_support_approval": "not_granted",
+            "approval_authority": "",
+            "approval_evidence_ref": "",
+            "route_inference_review": "pending",
+            "reviewed_on": null,
+            "recheck_on": null
+          }
+        }
+      ],
+      "retrieval_check": "Consumer Reports原网页直接打开403；搜索索引摘录注明2026-02-25更新，但未取得网页正文。不可当作独立原文完整核验。",
+      "source_updated_on_search": "2026-02-25"
+    },
+    {
+      "id": "H08B-S02",
+      "source_url": "https://faq.brother.co.jp/app/answers/detail/a_id/9595/kw/MFC-J997DN/p/1/related/1",
+      "source_org": "Brother Japan",
+      "source_group": "brother_jp_inkjet_faq",
+      "source_kind": "manufacturer_support",
+      "published_on": "2019-08-25",
+      "last_modified_on": "2026-04-07",
+      "captured_on": "2026-11-02",
+      "reviewed_on": "2026-11-02",
+      "section_anchor": "モノクロ印刷しかしていないのにカラーインクが減ったり",
+      "fact_summary": "兄弟日本官网说明部分喷墨机为防堵头执行自动清洁，即使只打印黑白或闲置也可能消耗彩色墨水。",
+      "supports": [
+        "喷墨机低频使用和长期墨水成本应包含清洁消耗"
+      ],
+      "counter_evidence": [
+        "该厂商说明不证明所有喷墨型号都有相同机制",
+        "不能仅由厂商FAQ得出黑白激光必然胜出的结论"
+      ],
+      "scope": {
+        "region": "JP",
+        "tech": "some_brother_inkjet",
+        "models": "see_original_faq"
+      },
+      "limitations": "跨地区、品牌和型号外推须重新核验；厂商不是独立横评。",
+      "permitted_uses": [
+        "research_index"
+      ],
+      "reuse_basis": "原网页链接和简短事实摘要；用途/商用许可未审批",
+      "executor_audit": "limited_supported_public_summary",
+      "independent_approval": "not_granted",
+      "decision_claims": [
+        {
+          "id": "H08B-C02",
+          "topic": "decision_factors",
+          "claim": "Brother日本支持页说明其特定喷墨机即使黑白或闲置也可能用彩墨作清洁。",
+          "exceptions": "只适用于页面列明的产品范围及日本支持文档。",
+          "counter_evidence": "不能推断所有喷墨型号同理，不能推断激光必胜。",
+          "claim_scope": "Brother Japan 部分喷墨维护情况",
+          "sample_scope": "单一厂商特定型号",
+          "scope_level": "model_specific",
+          "route_effect": null,
+          "applies_when": "any",
+          "approval": {
+            "review_status": "pending",
+            "permitted_uses": [
+              "research_index"
+            ],
+            "fact_audit_status": "pending",
+            "decision_support_approval": "not_granted",
+            "approval_authority": "",
+            "approval_evidence_ref": "",
+            "route_inference_review": "pending",
+            "reviewed_on": null,
+            "recheck_on": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "H08B-S03",
+      "source_url": "https://www.consumer.org.hk/sc/article/492-4445",
+      "source_org": "香港消费者委员会",
+      "source_group": "hk_consumer_council_issue492",
+      "source_kind": "consumer_comparative",
+      "published_on": null,
+      "publication_period": "2017-10",
+      "publication_precision": "month",
+      "publication_issue_url": "https://www.consumer.org.hk/sc/issue/492",
+      "captured_on": "2026-11-02",
+      "reviewed_on": "2026-11-04",
+      "section_anchor": "买打印机必须计算整体开支 / 492期；2017.10 第492期目录",
+      "fact_summary": "该期测试摘要指出部分家用喷墨打印机的长期墨水开支可能超出机价；比较选购时应计长期使用总成本。",
+      "supports": [
+        "比较方案应分别记录购机成本、消耗品与维护费用"
+      ],
+      "counter_evidence": [
+        "历史香港多功能喷墨样本不能直接推断2026年大陆黑白激光的最优型号",
+        "不同月印量和实际报价可逆转成本排序"
+      ],
+      "scope": {
+        "region": "HK",
+        "tech": "historical_multifunction_inkjet",
+        "models": "historical_sample"
+      },
+      "limitations": "已从香港消委会第492期官方目录复核出版月份为2017-10，未核得具体日，故published_on保持null；样本属于2017年香港市场旧多功能喷墨机，不可复刻历史排行或推导2026年大陆型号成本。",
+      "permitted_uses": [
+        "research_index"
+      ],
+      "reuse_basis": "原网页链接与简短事实摘要；未取得转载/商用授权",
+      "executor_audit": "limited_supported_public_summary",
+      "independent_approval": "not_granted",
+      "decision_claims": [
+        {
+          "id": "H08B-C03",
+          "topic": "decision_factors",
+          "claim": "香港消委会旧样本显示部分喷墨机长期墨水成本值得计入总拥有成本。",
+          "exceptions": "历史香港市场样本，非2026大陆现售机。",
+          "counter_evidence": "不能得出本例三年真实费用或机型排名。",
+          "claim_scope": "历史墨水成本对比",
+          "sample_scope": "香港消费者委员会492期部分历史样本",
+          "scope_level": "historical_comparison",
+          "route_effect": null,
+          "applies_when": "any",
+          "approval": {
+            "review_status": "pending",
+            "permitted_uses": [
+              "research_index"
+            ],
+            "fact_audit_status": "pending",
+            "decision_support_approval": "not_granted",
+            "approval_authority": "",
+            "approval_evidence_ref": "",
+            "route_inference_review": "pending",
+            "reviewed_on": null,
+            "recheck_on": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "H08B-S04",
+      "source_url": "https://95105369.com/web/skillsdisp.aspx?id=2772&modelno=dcp1618w_cn",
+      "source_org": "兄弟中国产品服务站（95105369）",
+      "source_group": "brother_cn_wechat_miniprogram_20260508",
+      "source_kind": "manufacturer_support",
+      "published_on": null,
+      "last_modified_on": "2026-05-08",
+      "captured_on": "2026-11-02",
+      "reviewed_on": "2026-11-04",
+      "source_recheck": {
+        "checked_on": "2026-11-04",
+        "result": "original_pc_html_http_200_model_list_readable",
+        "original_page_model_examples": ["HL-1218W", "DCP-1618W"],
+        "supplemental_guide_url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+        "supplemental_guide_document_code": "CHN-FP2070-1",
+        "supplemental_guide_last_modified_on": "2026-10-20",
+        "supplemental_guide_model_examples": ["HL-L1238W", "HL-L1808W"],
+        "supplemental_product_page_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+        "evidence_ref": "reports/h08_b_source_recheck_2026-11-04.json",
+        "effect_on_approval": "none; decision_support remains unapproved"
+      },
+      "section_anchor": "CHN-FP0057-1 / 原PC页正文：最近修改日期、首次绑定、适用机型；补充CHN-FP2070-1 / 新手指南：最近修改日期、适用机型",
+      "fact_summary": "2026-11-04重新直接取得兄弟中国CHN-FP0057-1原PC页正文（HTTP 200），可核对首次绑定与适用机型名单，其中有HL-1218W、DCP-1618W；另取得2026-10-20更新的CHN-FP2070-1新手指南正文，其名单含HL-L1238W。两页清单不同，不能合并解释为同一份支持声明。",
+      "supports": [
+        "微信打印需要核对当前型号、绑定方式、小程序适用清单，不等同普通Wi-Fi"
+      ],
+      "counter_evidence": [
+        "支持清单仅能说明列举机型的说明范围，未列不等于确认不支持",
+        "没有惠普对应机型的对照，不能做品牌推荐；网页列名不等于实际联机功能验证"
+      ],
+      "scope": {
+        "region": "CN",
+        "tech": "brother_wechat_miniprogram",
+        "models": "listed_models_only"
+      },
+      "limitations": "2026-11-04原PC页及2026-10-20新版指南已各自通过直接GET 200回源，能核对文档代码、最后修改日期、首次绑定及各自适用名单；不能将旧名单、新名单互相继承，或拿URL中的modelno当支持证明。原始发布日期未知、官网宣传未实测、用途/商用许可待独立审核，不得推断惠普支持与否。",
+      "permitted_uses": [
+        "research_index"
+      ],
+      "reuse_basis": "原网页链接与简短事实摘要；小程序协议/数据权限独立核验",
+      "executor_audit": "limited_supported_public_summary",
+      "independent_approval": "not_granted",
+      "decision_claims": [
+        {
+          "id": "H08B-C04",
+          "topic": "decision_factors",
+          "claim": "兄弟中国CHN-FP0057-1服务说明小程序打印前需绑定打印机，原页面列有适用机型；具体机型当前兼容性与操作方式仍须购买前核验。",
+          "exceptions": "不能据此认定用户必须从小程序发起打印。",
+          "counter_evidence": "原PC页虽已回源核对名单，不等于用户设备实测；2026-10-20新手指南名单与原文不同，不能合并；不得外推惠普或其他型号支持。",
+          "claim_scope": "兄弟中国微信小程序打印使用流程",
+          "sample_scope": "CHN-FP0057-1：原PC页首次绑定与适用清单（2026-05-08最后修改）；另页CHN-FP2070-1仅作独立交叉核对（2026-10-20最后修改）",
+          "scope_level": "category_principle",
+          "route_effect": null,
+          "applies_when": "any",
+          "approval": {
+            "review_status": "pending",
+            "permitted_uses": [
+              "research_index"
+            ],
+            "fact_audit_status": "pending",
+            "decision_support_approval": "not_granted",
+            "approval_authority": "",
+            "approval_evidence_ref": "",
+            "route_inference_review": "pending",
+            "reviewed_on": null,
+            "recheck_on": null
+          }
+        }
+      ],
+      "retrieval_check": "2026-11-02先前浏览器回源失败；2026-11-04执行者通过不登录的HTTPS GET取得CHN-FP0057-1原PC页200及完整可读名单（例HL-1218W、DCP-1618W），另取得CHN-FP2070-1新手指南200（名单含HL-L1238W）；源字节哈希、日期和不同文档锚点见reports/h08_b_source_recheck_2026-11-04.json。仅核来源文本，不代表小程序实际测试、机型商业推荐或独立决策批准。"
+    }
+  ]
+}

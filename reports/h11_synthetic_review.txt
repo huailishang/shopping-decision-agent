@@ -1,0 +1,144 @@
+确认条件：
+第三步 · 请确认整理后的条件（未知不代表否）
+
+原始需求：H11 synthetic printer test; not a real-user trial
+每月张数：200
+预算：未知
+闲置周数：未知
+彩印：否
+外包彩印：未知
+无线：未知
+扫描：未知
+待核对原话与其他要求：
+H11 synthetic printer test; not a real-user trial
+
+
+完整后端审计记录（包含引用、拒绝理由、来源日期、版本）：
+{
+  "request": {
+    "category": "printer",
+    "budget_max_cny": null,
+    "monthly_pages": 200,
+    "needs_color": false,
+    "accepts_outsourced_color": null,
+    "requirements": [
+      "H11 synthetic printer test; not a real-user trial"
+    ],
+    "idle_weeks": null,
+    "requires_wireless": null,
+    "requires_scan": null,
+    "market_region": "CN",
+    "observed_price": null,
+    "model_id": null
+  },
+  "recommendation": {
+    "status": "defer",
+    "recommended_route": null,
+    "reasons": [
+      "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。",
+      "建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。",
+      "需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。"
+    ],
+    "questions": [],
+    "evidence_ids": [],
+    "product_skus": [],
+    "live_quotes": [],
+    "authorized_side_effects": [],
+    "unknowns": [
+      "尚未逐项核验自由文本约束：H11 synthetic printer test; not a real-user trial"
+    ],
+    "alternative_routes": []
+  },
+  "evidence": [],
+  "rejected_evidence": [
+    [
+      "CN-001",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval",
+        "route_inference_unreviewed"
+      ]
+    ],
+    [
+      "CN-003",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval",
+        "route_inference_unreviewed"
+      ]
+    ],
+    [
+      "CN-004",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval"
+      ]
+    ],
+    [
+      "CN-006",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval"
+      ]
+    ],
+    [
+      "CN-007",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval"
+      ]
+    ],
+    [
+      "CN-010",
+      [
+        "unreviewed_or_unlicensed_use",
+        "unknown_publication",
+        "missing_review_window",
+        "missing_independent_decision_approval",
+        "model_scope_mismatch"
+      ]
+    ],
+    [
+      "CN-011",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval",
+        "regulatory_not_route_support"
+      ]
+    ],
+    [
+      "CN-012",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval",
+        "regulatory_not_route_support"
+      ]
+    ],
+    [
+      "CN-013",
+      [
+        "unreviewed_or_unlicensed_use",
+        "missing_review_window",
+        "missing_independent_decision_approval"
+      ]
+    ]
+  ],
+  "rejected_inputs": [],
+  "evaluated_at": "2026-11-01T13:54:17.795872+00:00",
+  "engine": "shopping_decision.decision.decide",
+  "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+  "real_time_prices": false,
+  "transactions_enabled": false
+}
+
+人工评审状态：未完成
+
+人工评审意见（请自行填写）：
+H11 synthetic UI save check only. Not a real-user trial or recommendation-quality approval.

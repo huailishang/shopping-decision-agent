@@ -1,0 +1,559 @@
+{
+  "role": "independent evaluator",
+  "date_local": "2026-11-02",
+  "purpose": "Replay saved real-demand input and probe 0-50 endpoints and interior; not actual GUI and not user-confirmed scalar volume",
+  "saved_protocol_integrity": true,
+  "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+  "runs": [
+    {
+      "monthly_pages_probe": null,
+      "synthetic_probe_not_user_confirmation": true,
+      "exit_code": 0,
+      "decoded": {
+        "status": "clarify",
+        "route": "",
+        "reasons": "缺少关键条件，暂不推荐。",
+        "questions": "每月大约打印多少张？",
+        "unknowns": "",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T13:08:49.226268+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": null,\n    \"needs_color\": false,\n    \"accepts_outsourced_color\": true,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"家里只需黑白打印，彩印可外包\",\n      \"微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"clarify\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"缺少关键条件，暂不推荐。\"\n    ],\n    \"questions\": [\n      \"每月大约打印多少张？\"\n    ],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T13:08:49.226268+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": null,
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "印量0–50页/月：50作为上界代理值，非精确印量",
+            "家里只需黑白打印，彩印可外包",
+            "微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "clarify",
+          "recommended_route": null,
+          "reasons": [
+            "缺少关键条件，暂不推荐。"
+          ],
+          "questions": [
+            "每月大约打印多少张？"
+          ],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T13:08:49.226268+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "monthly_pages_probe": 0,
+      "synthetic_probe_not_user_confirmation": true,
+      "exit_code": 0,
+      "decoded": {
+        "status": "defer",
+        "route": "",
+        "reasons": "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\n建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\n需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。",
+        "questions": "",
+        "unknowns": "预算是否覆盖实际机型、耗材与售后，尚未核实\n尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\n尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\n尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\n尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\n尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T13:08:49.486921+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": 0,\n    \"needs_color\": false,\n    \"accepts_outsourced_color\": true,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"家里只需黑白打印，彩印可外包\",\n      \"微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"defer\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\",\n      \"建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\",\n      \"需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。\"\n    ],\n    \"questions\": [],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [\n      \"预算是否覆盖实际机型、耗材与售后，尚未核实\",\n      \"尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\",\n      \"尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [\n    [\n      \"CN-004\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-006\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-010\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"model_scope_mismatch\"\n      ]\n    ],\n    [\n      \"CN-011\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-012\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-013\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ]\n  ],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T13:08:49.486921+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": 0,
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "印量0–50页/月：50作为上界代理值，非精确印量",
+            "家里只需黑白打印，彩印可外包",
+            "微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "defer",
+          "recommended_route": null,
+          "reasons": [
+            "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。",
+            "建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。",
+            "需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。"
+          ],
+          "questions": [],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [
+            "预算是否覆盖实际机型、耗材与售后，尚未核实",
+            "尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量",
+            "尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包",
+            "尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [
+          [
+            "CN-004",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-006",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-010",
+            [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          ],
+          [
+            "CN-011",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-012",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-013",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ]
+        ],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T13:08:49.486921+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "monthly_pages_probe": 1,
+      "synthetic_probe_not_user_confirmation": true,
+      "exit_code": 0,
+      "decoded": {
+        "status": "defer",
+        "route": "",
+        "reasons": "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\n建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\n需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。",
+        "questions": "",
+        "unknowns": "预算是否覆盖实际机型、耗材与售后，尚未核实\n尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\n尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\n尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\n尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\n尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T13:08:49.749554+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": 1,\n    \"needs_color\": false,\n    \"accepts_outsourced_color\": true,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"家里只需黑白打印，彩印可外包\",\n      \"微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"defer\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\",\n      \"建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\",\n      \"需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。\"\n    ],\n    \"questions\": [],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [\n      \"预算是否覆盖实际机型、耗材与售后，尚未核实\",\n      \"尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\",\n      \"尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [\n    [\n      \"CN-004\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-006\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-010\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"model_scope_mismatch\"\n      ]\n    ],\n    [\n      \"CN-011\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-012\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-013\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ]\n  ],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T13:08:49.749554+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": 1,
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "印量0–50页/月：50作为上界代理值，非精确印量",
+            "家里只需黑白打印，彩印可外包",
+            "微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "defer",
+          "recommended_route": null,
+          "reasons": [
+            "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。",
+            "建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。",
+            "需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。"
+          ],
+          "questions": [],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [
+            "预算是否覆盖实际机型、耗材与售后，尚未核实",
+            "尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量",
+            "尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包",
+            "尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [
+          [
+            "CN-004",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-006",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-010",
+            [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          ],
+          [
+            "CN-011",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-012",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-013",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ]
+        ],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T13:08:49.749554+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "monthly_pages_probe": 25,
+      "synthetic_probe_not_user_confirmation": true,
+      "exit_code": 0,
+      "decoded": {
+        "status": "defer",
+        "route": "",
+        "reasons": "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\n建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\n需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。",
+        "questions": "",
+        "unknowns": "预算是否覆盖实际机型、耗材与售后，尚未核实\n尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\n尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\n尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\n尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\n尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T13:08:50.010909+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": 25,\n    \"needs_color\": false,\n    \"accepts_outsourced_color\": true,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"家里只需黑白打印，彩印可外包\",\n      \"微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"defer\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\",\n      \"建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\",\n      \"需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。\"\n    ],\n    \"questions\": [],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [\n      \"预算是否覆盖实际机型、耗材与售后，尚未核实\",\n      \"尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\",\n      \"尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [\n    [\n      \"CN-004\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-006\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-010\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"model_scope_mismatch\"\n      ]\n    ],\n    [\n      \"CN-011\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-012\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-013\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ]\n  ],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T13:08:50.010909+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": 25,
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "印量0–50页/月：50作为上界代理值，非精确印量",
+            "家里只需黑白打印，彩印可外包",
+            "微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "defer",
+          "recommended_route": null,
+          "reasons": [
+            "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。",
+            "建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。",
+            "需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。"
+          ],
+          "questions": [],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [
+            "预算是否覆盖实际机型、耗材与售后，尚未核实",
+            "尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量",
+            "尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包",
+            "尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [
+          [
+            "CN-004",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-006",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-010",
+            [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          ],
+          [
+            "CN-011",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-012",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-013",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ]
+        ],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T13:08:50.010909+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "monthly_pages_probe": 50,
+      "synthetic_probe_not_user_confirmation": true,
+      "exit_code": 0,
+      "decoded": {
+        "status": "defer",
+        "route": "",
+        "reasons": "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\n建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\n需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。",
+        "questions": "",
+        "unknowns": "预算是否覆盖实际机型、耗材与售后，尚未核实\n尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\n尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\n尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\n尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\n尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T13:08:50.255543+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": 50,\n    \"needs_color\": false,\n    \"accepts_outsourced_color\": true,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"家里只需黑白打印，彩印可外包\",\n      \"微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"defer\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\",\n      \"建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\",\n      \"需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。\"\n    ],\n    \"questions\": [],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [\n      \"预算是否覆盖实际机型、耗材与售后，尚未核实\",\n      \"尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店\",\n      \"尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量\",\n      \"尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包\",\n      \"尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印\",\n      \"尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普\"\n    ],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [\n    [\n      \"CN-004\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-006\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-010\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"model_scope_mismatch\"\n      ]\n    ],\n    [\n      \"CN-011\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-012\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-013\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ]\n  ],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T13:08:50.255543+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": 50,
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "印量0–50页/月：50作为上界代理值，非精确印量",
+            "家里只需黑白打印，彩印可外包",
+            "微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "defer",
+          "recommended_route": null,
+          "reasons": [
+            "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。",
+            "建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。",
+            "需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。"
+          ],
+          "questions": [],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [
+            "预算是否覆盖实际机型、耗材与售后，尚未核实",
+            "尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普；用户补充：家里只需要黑白打印，偶尔彩印可以去打印店",
+            "尚未逐项核验自由文本约束：印量0–50页/月：50作为上界代理值，非精确印量",
+            "尚未逐项核验自由文本约束：家里只需黑白打印，彩印可外包",
+            "尚未逐项核验自由文本约束：微信打印须单独核验，普通Wi-Fi不等于微信打印",
+            "尚未逐项核验自由文本约束：希望可靠耐用，优先比较兄弟、惠普"
+          ],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [
+          [
+            "CN-004",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-006",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-010",
+            [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          ],
+          [
+            "CN-011",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-012",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-013",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ]
+        ],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T13:08:50.255543+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    }
+  ]
+}

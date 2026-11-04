@@ -31,6 +31,17 @@ class PurchaseRequest:
     market_region: str = "CN"
     observed_price: PriceObservation | None = None
     model_id: str | None = None
+    # 精确 monthly_pages 与范围 monthly_pages_range 互斥，保留老调用兼容。
+    monthly_pages_range: tuple[int, int] | None = None
+
+
+def monthly_page_bounds(request: PurchaseRequest) -> tuple[int, int] | None:
+    """通用区间语义：未知为None，精确数n视作[n,n]。"""
+    if request.monthly_pages_range is not None:
+        return request.monthly_pages_range
+    if request.monthly_pages is not None:
+        return (request.monthly_pages, request.monthly_pages)
+    return None
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-11-04T14:23:24.546260+00:00",
+  "catalog_recorded_on": "2026-11-04",
+  "operation": "read_only_official_model_anchor_recheck",
+  "checks": [
+    {
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "final_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "model": "HL-L1238W",
+      "status": "model_anchor_found",
+      "http_status": 200,
+      "response_sha256": "7eaa9d9f0832bb89a45edc564b7eac94e5616ce5790e0c62f8a86396bed6b093",
+      "response_bytes": 86449,
+      "limitations": "此检查仅证明请求得到HTML和存在型号字符串，不证明功能、在售、报价、授权或实机体验"
+    },
+    {
+      "url": "https://www.brother.cn/printer/prt/hl-l1808w",
+      "final_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+      "model": "HL-L1808W",
+      "status": "model_anchor_found",
+      "http_status": 200,
+      "response_sha256": "46498878ebcefad2bda18b28eaffccc56ff5dcf3e14ed7107981c8569911207d",
+      "response_bytes": 86445,
+      "limitations": "此检查仅证明请求得到HTML和存在型号字符串，不证明功能、在售、报价、授权或实机体验"
+    },
+    {
+      "url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "final_url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "model": "HL-L1228",
+      "status": "model_anchor_found",
+      "http_status": 200,
+      "response_sha256": "a151001e745543cd545dae9a5ba77834612d06a29c09300cdaef421806016468",
+      "response_bytes": 82531,
+      "limitations": "此检查仅证明请求得到HTML和存在型号字符串，不证明功能、在售、报价、授权或实机体验"
+    },
+    {
+      "url": "https://support.hp.com/cn-zh/product/product-specs/hp-laser-100-printer-series/24494347",
+      "final_url": "https://support.hp.com/cn-zh/product/product-specs/hp-laser-100-printer-series/24494347",
+      "model": "HP-Laser-108w",
+      "status": "model_anchor_missing",
+      "http_status": 200,
+      "response_sha256": "0ef18ab300f36471b05aa13327b02d6f16d6aa3c928432a417f1c3b5df81fd3c",
+      "response_bytes": 7456,
+      "limitations": "此检查仅证明请求得到HTML和存在型号字符串，不证明功能、在售、报价、授权或实机体验"
+    },
+    {
+      "url": "https://support.hp.com/cn-zh/product/product-specs/hp/24494359",
+      "final_url": "https://support.hp.com/cn-zh/product/product-specs/hp/24494359",
+      "model": "HP-Laser-108a",
+      "status": "model_anchor_missing",
+      "http_status": 200,
+      "response_sha256": "0ef18ab300f36471b05aa13327b02d6f16d6aa3c928432a417f1c3b5df81fd3c",
+      "response_bytes": 7456,
+      "limitations": "此检查仅证明请求得到HTML和存在型号字符串，不证明功能、在售、报价、授权或实机体验"
+    }
+  ],
+  "count": 5,
+  "fresh_model_anchors": 3,
+  "limitations": [
+    "不自动更改已登记产品事实或证据批准状态",
+    "失败不会判定该产品停产；需要官方资料/型号范围进一步核对",
+    "未执行跨站搜索/商品发现、实时报价、登录、下单或支付"
+  ]
+}

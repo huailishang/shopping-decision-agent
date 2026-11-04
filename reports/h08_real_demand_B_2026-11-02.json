@@ -1,0 +1,322 @@
+{
+  "run_context": {
+    "date_local": "2026-11-02",
+    "role": "Executor",
+    "task": "H08 B real-user input, evidence only, not evaluator acceptance",
+    "method": "local desktop_bridge actual Python child process, no Swing GUI manual clicking",
+    "boundary": "no app login, no platform prices, no payment, not independently approved recommendation",
+    "user_input_origin": "user explicitly confirmed candidate requirements as the actual request",
+    "normalization_warning": "confirmed=True is a bridge-protocol technical flag, not evidence of actual Swing summary confirmation",
+    "test_stdout": "python3 unittest 71/71, H05 8/8, exit 0"
+  },
+  "cases": [
+    {
+      "case_id": "REAL_RAW_UNRESOLVED",
+      "user_confirmed_raw_request": true,
+      "user_confirmed_normalized_fields": false,
+      "hypothetical_test_not_user_answer": false,
+      "bridge_args_decoded": [
+        "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+        "",
+        "1000",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "每月打印量是0–50页的范围，不是用户确认每月50张\n黑白为主，不等于完全不彩印\n微信打印须核实，不等同于普通Wi-Fi\n希望可靠耐用\n优先比较兄弟和惠普"
+      ],
+      "command_type": "python3 -m shopping_decision.desktop_bridge, 9 positional Base64 args",
+      "exit_code": 0,
+      "stdout_raw_base64_protocol": "status\tY2xhcmlmeQ==\nroute\t\nreasons\t57y65bCR5YWz6ZSu5p2h5Lu277yM5pqC5LiN5o6o6I2Q44CC\nquestions\t5q+P5pyI5aSn57qm5omT5Y2w5aSa5bCR5byg77yfCuW9qeiJsuaYr+WQpuW/heimgeOAgeiDveWQpuWkluWMhe+8nw==\nunknowns\t\nevidence\t\ncard_version\tZTE5OGI1ZThhYTRkYWU0YmI3ZDA5YmRhMDE2NmI2YjNlMTI2OTY0ZjJjZTViY2M3Yjc3OGExNDJkZmQ3ODJmMQ==\ntime\tMjAyNi0xMS0wMlQxMjo0MTo1My4xMjUzNDMrMDA6MDA=\nreport_json\tewogICJyZXF1ZXN0IjogewogICAgImNhdGVnb3J5IjogInByaW50ZXIiLAogICAgImJ1ZGdldF9tYXhfY255IjogMTAwMCwKICAgICJtb250aGx5X3BhZ2VzIjogbnVsbCwKICAgICJuZWVkc19jb2xvciI6IG51bGwsCiAgICAiYWNjZXB0c19vdXRzb3VyY2VkX2NvbG9yIjogbnVsbCwKICAgICJyZXF1aXJlbWVudHMiOiBbCiAgICAgICLpooTnrpfljYPlhYPlhoXjgIHmnIjmiZPljbAgMOKAkzUwIOmhteOAgem7keeZveS4uuS4u+OAgeW4jOacm+aUr+aMgeW+ruS/oeaJk+WNsOOAgeWPr+mdoOiAkOeUqO+8jOmHjeeCueavlOi+g+WFhOW8n+WSjOaDoOaZriIsCiAgICAgICLmr4/mnIjmiZPljbDph4/mmK8w4oCTNTDpobXnmoTojIPlm7TvvIzkuI3mmK/nlKjmiLfnoa7orqTmr4/mnIg1MOW8oCIsCiAgICAgICLpu5Hnmb3kuLrkuLvvvIzkuI3nrYnkuo7lrozlhajkuI3lvanljbAiLAogICAgICAi5b6u5L+h5omT5Y2w6aG75qC45a6e77yM5LiN562J5ZCM5LqO5pmu6YCaV2ktRmkiLAogICAgICAi5biM5pyb5Y+v6Z2g6ICQ55SoIiwKICAgICAgIuS8mOWFiOavlOi+g+WFhOW8n+WSjOaDoOaZriIKICAgIF0sCiAgICAiaWRsZV93ZWVrcyI6IG51bGwsCiAgICAicmVxdWlyZXNfd2lyZWxlc3MiOiBudWxsLAogICAgInJlcXVpcmVzX3NjYW4iOiBudWxsLAogICAgIm1hcmtldF9yZWdpb24iOiAiQ04iLAogICAgIm9ic2VydmVkX3ByaWNlIjogbnVsbCwKICAgICJtb2RlbF9pZCI6IG51bGwKICB9LAogICJyZWNvbW1lbmRhdGlvbiI6IHsKICAgICJzdGF0dXMiOiAiY2xhcmlmeSIsCiAgICAicmVjb21tZW5kZWRfcm91dGUiOiBudWxsLAogICAgInJlYXNvbnMiOiBbCiAgICAgICLnvLrlsJHlhbPplK7mnaHku7bvvIzmmoLkuI3mjqjojZDjgIIiCiAgICBdLAogICAgInF1ZXN0aW9ucyI6IFsKICAgICAgIuavj+aciOWkp+e6puaJk+WNsOWkmuWwkeW8oO+8nyIsCiAgICAgICLlvanoibLmmK/lkKblv4XopoHjgIHog73lkKblpJbljIXvvJ8iCiAgICBdLAogICAgImV2aWRlbmNlX2lkcyI6IFtdLAogICAgInByb2R1Y3Rfc2t1cyI6IFtdLAogICAgImxpdmVfcXVvdGVzIjogW10sCiAgICAiYXV0aG9yaXplZF9zaWRlX2VmZmVjdHMiOiBbXSwKICAgICJ1bmtub3ducyI6IFtdLAogICAgImFsdGVybmF0aXZlX3JvdXRlcyI6IFtdCiAgfSwKICAiZXZpZGVuY2UiOiBbXSwKICAicmVqZWN0ZWRfZXZpZGVuY2UiOiBbXSwKICAicmVqZWN0ZWRfaW5wdXRzIjogW10sCiAgImV2YWx1YXRlZF9hdCI6ICIyMDI2LTExLTAyVDEyOjQxOjUzLjEyNTM0MyswMDowMCIsCiAgImVuZ2luZSI6ICJzaG9wcGluZ19kZWNpc2lvbi5kZWNpc2lvbi5kZWNpZGUiLAogICJjYXJkX3NoYTI1NiI6ICJlMTk4YjVlOGFhNGRhZTRiYjdkMDliZGEwMTY2YjZiM2UxMjY5NjRmMmNlNWJjYzdiNzc4YTE0MmRmZDc4MmYxIiwKICAicmVhbF90aW1lX3ByaWNlcyI6IGZhbHNlLAogICJ0cmFuc2FjdGlvbnNfZW5hYmxlZCI6IGZhbHNlCn0=\n",
+      "decoded_bridge": {
+        "status": "clarify",
+        "route": "",
+        "reasons": "缺少关键条件，暂不推荐。",
+        "questions": "每月大约打印多少张？\n彩色是否必要、能否外包？",
+        "unknowns": "",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T12:41:53.125343+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": null,\n    \"needs_color\": null,\n    \"accepts_outsourced_color\": null,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普\",\n      \"每月打印量是0–50页的范围，不是用户确认每月50张\",\n      \"黑白为主，不等于完全不彩印\",\n      \"微信打印须核实，不等同于普通Wi-Fi\",\n      \"希望可靠耐用\",\n      \"优先比较兄弟和惠普\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"clarify\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"缺少关键条件，暂不推荐。\"\n    ],\n    \"questions\": [\n      \"每月大约打印多少张？\",\n      \"彩色是否必要、能否外包？\"\n    ],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T12:41:53.125343+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": null,
+          "needs_color": null,
+          "accepts_outsourced_color": null,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+            "每月打印量是0–50页的范围，不是用户确认每月50张",
+            "黑白为主，不等于完全不彩印",
+            "微信打印须核实，不等同于普通Wi-Fi",
+            "希望可靠耐用",
+            "优先比较兄弟和惠普"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "clarify",
+          "recommended_route": null,
+          "reasons": [
+            "缺少关键条件，暂不推荐。"
+          ],
+          "questions": [
+            "每月大约打印多少张？",
+            "彩色是否必要、能否外包？"
+          ],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T12:41:53.125343+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "case_id": "PROBE_MONTHLY_UPPER_BOUND_UNCONFIRMED",
+      "user_confirmed_raw_request": true,
+      "user_confirmed_normalized_fields": false,
+      "hypothetical_test_not_user_answer": true,
+      "bridge_args_decoded": [
+        "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+        "50",
+        "1000",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "每月打印量是0–50页的范围，不是用户确认每月50张\n黑白为主，不等于完全不彩印\n微信打印须核实，不等同于普通Wi-Fi\n希望可靠耐用\n优先比较兄弟和惠普\n仅技术探针：50是区间上界，非真实月印量"
+      ],
+      "command_type": "python3 -m shopping_decision.desktop_bridge, 9 positional Base64 args",
+      "exit_code": 0,
+      "stdout_raw_base64_protocol": "status\tY2xhcmlmeQ==\nroute\t\nreasons\t57y65bCR5YWz6ZSu5p2h5Lu277yM5pqC5LiN5o6o6I2Q44CC\nquestions\t5b2p6Imy5piv5ZCm5b+F6KaB44CB6IO95ZCm5aSW5YyF77yf\nunknowns\t\nevidence\t\ncard_version\tZTE5OGI1ZThhYTRkYWU0YmI3ZDA5YmRhMDE2NmI2YjNlMTI2OTY0ZjJjZTViY2M3Yjc3OGExNDJkZmQ3ODJmMQ==\ntime\tMjAyNi0xMS0wMlQxMjo0MTo1My41ODM5NjMrMDA6MDA=\nreport_json\tewogICJyZXF1ZXN0IjogewogICAgImNhdGVnb3J5IjogInByaW50ZXIiLAogICAgImJ1ZGdldF9tYXhfY255IjogMTAwMCwKICAgICJtb250aGx5X3BhZ2VzIjogNTAsCiAgICAibmVlZHNfY29sb3IiOiBudWxsLAogICAgImFjY2VwdHNfb3V0c291cmNlZF9jb2xvciI6IG51bGwsCiAgICAicmVxdWlyZW1lbnRzIjogWwogICAgICAi6aKE566X5Y2D5YWD5YaF44CB5pyI5omT5Y2wIDDigJM1MCDpobXjgIHpu5Hnmb3kuLrkuLvjgIHluIzmnJvmlK/mjIHlvq7kv6HmiZPljbDjgIHlj6/pnaDogJDnlKjvvIzph43ngrnmr5TovoPlhYTlvJ/lkozmg6Dmma4iLAogICAgICAi5q+P5pyI5omT5Y2w6YeP5pivMOKAkzUw6aG155qE6IyD5Zu077yM5LiN5piv55So5oi356Gu6K6k5q+P5pyINTDlvKAiLAogICAgICAi6buR55m95Li65Li777yM5LiN562J5LqO5a6M5YWo5LiN5b2p5Y2wIiwKICAgICAgIuW+ruS/oeaJk+WNsOmhu+aguOWunu+8jOS4jeetieWQjOS6juaZrumAmldpLUZpIiwKICAgICAgIuW4jOacm+WPr+mdoOiAkOeUqCIsCiAgICAgICLkvJjlhYjmr5TovoPlhYTlvJ/lkozmg6Dmma4iLAogICAgICAi5LuF5oqA5pyv5o6i6ZKI77yaNTDmmK/ljLrpl7TkuIrnlYzvvIzpnZ7nnJ/lrp7mnIjljbDph48iCiAgICBdLAogICAgImlkbGVfd2Vla3MiOiBudWxsLAogICAgInJlcXVpcmVzX3dpcmVsZXNzIjogbnVsbCwKICAgICJyZXF1aXJlc19zY2FuIjogbnVsbCwKICAgICJtYXJrZXRfcmVnaW9uIjogIkNOIiwKICAgICJvYnNlcnZlZF9wcmljZSI6IG51bGwsCiAgICAibW9kZWxfaWQiOiBudWxsCiAgfSwKICAicmVjb21tZW5kYXRpb24iOiB7CiAgICAic3RhdHVzIjogImNsYXJpZnkiLAogICAgInJlY29tbWVuZGVkX3JvdXRlIjogbnVsbCwKICAgICJyZWFzb25zIjogWwogICAgICAi57y65bCR5YWz6ZSu5p2h5Lu277yM5pqC5LiN5o6o6I2Q44CCIgogICAgXSwKICAgICJxdWVzdGlvbnMiOiBbCiAgICAgICLlvanoibLmmK/lkKblv4XopoHjgIHog73lkKblpJbljIXvvJ8iCiAgICBdLAogICAgImV2aWRlbmNlX2lkcyI6IFtdLAogICAgInByb2R1Y3Rfc2t1cyI6IFtdLAogICAgImxpdmVfcXVvdGVzIjogW10sCiAgICAiYXV0aG9yaXplZF9zaWRlX2VmZmVjdHMiOiBbXSwKICAgICJ1bmtub3ducyI6IFtdLAogICAgImFsdGVybmF0aXZlX3JvdXRlcyI6IFtdCiAgfSwKICAiZXZpZGVuY2UiOiBbXSwKICAicmVqZWN0ZWRfZXZpZGVuY2UiOiBbXSwKICAicmVqZWN0ZWRfaW5wdXRzIjogW10sCiAgImV2YWx1YXRlZF9hdCI6ICIyMDI2LTExLTAyVDEyOjQxOjUzLjU4Mzk2MyswMDowMCIsCiAgImVuZ2luZSI6ICJzaG9wcGluZ19kZWNpc2lvbi5kZWNpc2lvbi5kZWNpZGUiLAogICJjYXJkX3NoYTI1NiI6ICJlMTk4YjVlOGFhNGRhZTRiYjdkMDliZGEwMTY2YjZiM2UxMjY5NjRmMmNlNWJjYzdiNzc4YTE0MmRmZDc4MmYxIiwKICAicmVhbF90aW1lX3ByaWNlcyI6IGZhbHNlLAogICJ0cmFuc2FjdGlvbnNfZW5hYmxlZCI6IGZhbHNlCn0=\n",
+      "decoded_bridge": {
+        "status": "clarify",
+        "route": "",
+        "reasons": "缺少关键条件，暂不推荐。",
+        "questions": "彩色是否必要、能否外包？",
+        "unknowns": "",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T12:41:53.583963+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": 50,\n    \"needs_color\": null,\n    \"accepts_outsourced_color\": null,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普\",\n      \"每月打印量是0–50页的范围，不是用户确认每月50张\",\n      \"黑白为主，不等于完全不彩印\",\n      \"微信打印须核实，不等同于普通Wi-Fi\",\n      \"希望可靠耐用\",\n      \"优先比较兄弟和惠普\",\n      \"仅技术探针：50是区间上界，非真实月印量\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": null,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"clarify\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"缺少关键条件，暂不推荐。\"\n    ],\n    \"questions\": [\n      \"彩色是否必要、能否外包？\"\n    ],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T12:41:53.583963+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": 50,
+          "needs_color": null,
+          "accepts_outsourced_color": null,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+            "每月打印量是0–50页的范围，不是用户确认每月50张",
+            "黑白为主，不等于完全不彩印",
+            "微信打印须核实，不等同于普通Wi-Fi",
+            "希望可靠耐用",
+            "优先比较兄弟和惠普",
+            "仅技术探针：50是区间上界，非真实月印量"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "clarify",
+          "recommended_route": null,
+          "reasons": [
+            "缺少关键条件，暂不推荐。"
+          ],
+          "questions": [
+            "彩色是否必要、能否外包？"
+          ],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T12:41:53.583963+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "case_id": "PROBE_BW_ONLY_UNCONFIRMED",
+      "user_confirmed_raw_request": true,
+      "user_confirmed_normalized_fields": false,
+      "hypothetical_test_not_user_answer": true,
+      "bridge_args_decoded": [
+        "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+        "50",
+        "1000",
+        "",
+        "false",
+        "",
+        "true",
+        "",
+        "每月打印量是0–50页的范围，不是用户确认每月50张\n黑白为主，不等于完全不彩印\n微信打印须核实，不等同于普通Wi-Fi\n希望可靠耐用\n优先比较兄弟和惠普\n仅技术探针：彩印=false、无线=true，均非用户确认的字段"
+      ],
+      "command_type": "python3 -m shopping_decision.desktop_bridge, 9 positional Base64 args",
+      "exit_code": 0,
+      "stdout_raw_base64_protocol": "status\tZGVmZXI=\nroute\t\nreasons\t5pys5qyh5Zy65pmv5rKh5pyJ6YCa6L+H5pe26Ze044CB6YCC55So6IyD5Zu05ZKM5L2/55So6LWE5qC86Zeo56aB55qE54us56uL5p2l5rqQ77yb5L+d55WZ5Li656CU56m257q/57Si77yM5pqC57yT5ZSv5LiA5o6o6I2Q44CCCuW7uuiuruWIhuWIq+aguOafpem7keeZvea/gOWFieOAgeW9qeiJsuWWt+WiqOWPiuWkluWMheW9qeWNsOeahOmAgueUqOadoeS7tu+8jOmHjeeCueavlOi+g+mXsue9rue7tOaKpOOAgemVv+acn+iAl+adkOaIkOacrOWSjOaXoOe6v+WFvOWuueaAp+OAggrpnIDopoHooaXlvZPliY3mnLrlnovnmoTni6znq4vor4TmtYvjgIHogJfmnZDkuI7llK7lkI7otYTmlpnlj4rnnJ/lrp7lubPlj7DmiqXku7fvvJvnoJTnqbbljaHkuI3og73lvZPkvZzotK3kubDkvp3mja7jgII=\nquestions\t\nunknowns\t6aKE566X5piv5ZCm6KaG55uW5a6e6ZmF5py65Z6L44CB6ICX5p2Q5LiO5ZSu5ZCO77yM5bCa5pyq5qC45a6eCuWFt+S9k+acuuWei+eahOaXoOe6vy/lvq7kv6HmiZPljbDlhbzlrrnmgKflsJrmnKrmoLjpqowK5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya6aKE566X5Y2D5YWD5YaF44CB5pyI5omT5Y2wIDDigJM1MCDpobXjgIHpu5Hnmb3kuLrkuLvjgIHluIzmnJvmlK/mjIHlvq7kv6HmiZPljbDjgIHlj6/pnaDogJDnlKjvvIzph43ngrnmr5TovoPlhYTlvJ/lkozmg6Dmma4K5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya5q+P5pyI5omT5Y2w6YeP5pivMOKAkzUw6aG155qE6IyD5Zu077yM5LiN5piv55So5oi356Gu6K6k5q+P5pyINTDlvKAK5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya6buR55m95Li65Li777yM5LiN562J5LqO5a6M5YWo5LiN5b2p5Y2wCuWwmuacqumAkOmhueaguOmqjOiHqueUseaWh+acrOe6puadn++8muW+ruS/oeaJk+WNsOmhu+aguOWunu+8jOS4jeetieWQjOS6juaZrumAmldpLUZpCuWwmuacqumAkOmhueaguOmqjOiHqueUseaWh+acrOe6puadn++8muW4jOacm+WPr+mdoOiAkOeUqArlsJrmnKrpgJDpobnmoLjpqozoh6rnlLHmlofmnKznuqbmnZ/vvJrkvJjlhYjmr5TovoPlhYTlvJ/lkozmg6Dmma4K5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya5LuF5oqA5pyv5o6i6ZKI77ya5b2p5Y2wPWZhbHNl44CB5peg57q/PXRydWXvvIzlnYfpnZ7nlKjmiLfnoa7orqTnmoTlrZfmrrU=\nevidence\t\ncard_version\tZTE5OGI1ZThhYTRkYWU0YmI3ZDA5YmRhMDE2NmI2YjNlMTI2OTY0ZjJjZTViY2M3Yjc3OGExNDJkZmQ3ODJmMQ==\ntime\tMjAyNi0xMS0wMlQxMjo0MTo1NC4wNzk2NzkrMDA6MDA=\nreport_json\tewogICJyZXF1ZXN0IjogewogICAgImNhdGVnb3J5IjogInByaW50ZXIiLAogICAgImJ1ZGdldF9tYXhfY255IjogMTAwMCwKICAgICJtb250aGx5X3BhZ2VzIjogNTAsCiAgICAibmVlZHNfY29sb3IiOiBmYWxzZSwKICAgICJhY2NlcHRzX291dHNvdXJjZWRfY29sb3IiOiBudWxsLAogICAgInJlcXVpcmVtZW50cyI6IFsKICAgICAgIumihOeul+WNg+WFg+WGheOAgeaciOaJk+WNsCAw4oCTNTAg6aG144CB6buR55m95Li65Li744CB5biM5pyb5pSv5oyB5b6u5L+h5omT5Y2w44CB5Y+v6Z2g6ICQ55So77yM6YeN54K55q+U6L6D5YWE5byf5ZKM5oOg5pmuIiwKICAgICAgIuavj+aciOaJk+WNsOmHj+aYrzDigJM1MOmhteeahOiMg+WbtO+8jOS4jeaYr+eUqOaIt+ehruiupOavj+aciDUw5bygIiwKICAgICAgIum7keeZveS4uuS4u++8jOS4jeetieS6juWujOWFqOS4jeW9qeWNsCIsCiAgICAgICLlvq7kv6HmiZPljbDpobvmoLjlrp7vvIzkuI3nrYnlkIzkuo7mma7pgJpXaS1GaSIsCiAgICAgICLluIzmnJvlj6/pnaDogJDnlKgiLAogICAgICAi5LyY5YWI5q+U6L6D5YWE5byf5ZKM5oOg5pmuIiwKICAgICAgIuS7heaKgOacr+aOoumSiO+8muW9qeWNsD1mYWxzZeOAgeaXoOe6vz10cnVl77yM5Z2H6Z2e55So5oi356Gu6K6k55qE5a2X5q61IgogICAgXSwKICAgICJpZGxlX3dlZWtzIjogbnVsbCwKICAgICJyZXF1aXJlc193aXJlbGVzcyI6IHRydWUsCiAgICAicmVxdWlyZXNfc2NhbiI6IG51bGwsCiAgICAibWFya2V0X3JlZ2lvbiI6ICJDTiIsCiAgICAib2JzZXJ2ZWRfcHJpY2UiOiBudWxsLAogICAgIm1vZGVsX2lkIjogbnVsbAogIH0sCiAgInJlY29tbWVuZGF0aW9uIjogewogICAgInN0YXR1cyI6ICJkZWZlciIsCiAgICAicmVjb21tZW5kZWRfcm91dGUiOiBudWxsLAogICAgInJlYXNvbnMiOiBbCiAgICAgICLmnKzmrKHlnLrmma/msqHmnInpgJrov4fml7bpl7TjgIHpgILnlKjojIPlm7Tlkozkvb/nlKjotYTmoLzpl6jnpoHnmoTni6znq4vmnaXmupDvvJvkv53nlZnkuLrnoJTnqbbnur/ntKLvvIzmmoLnvJPllK/kuIDmjqjojZDjgIIiLAogICAgICAi5bu66K6u5YiG5Yir5qC45p+l6buR55m95r+A5YWJ44CB5b2p6Imy5Za35aKo5Y+K5aSW5YyF5b2p5Y2w55qE6YCC55So5p2h5Lu277yM6YeN54K55q+U6L6D6Zey572u57u05oqk44CB6ZW/5pyf6ICX5p2Q5oiQ5pys5ZKM5peg57q/5YW85a655oCn44CCIiwKICAgICAgIumcgOimgeihpeW9k+WJjeacuuWei+eahOeLrOeri+ivhOa1i+OAgeiAl+adkOS4juWUruWQjui1hOaWmeWPiuecn+WunuW5s+WPsOaKpeS7t++8m+eglOeptuWNoeS4jeiDveW9k+S9nOi0reS5sOS+neaNruOAgiIKICAgIF0sCiAgICAicXVlc3Rpb25zIjogW10sCiAgICAiZXZpZGVuY2VfaWRzIjogW10sCiAgICAicHJvZHVjdF9za3VzIjogW10sCiAgICAibGl2ZV9xdW90ZXMiOiBbXSwKICAgICJhdXRob3JpemVkX3NpZGVfZWZmZWN0cyI6IFtdLAogICAgInVua25vd25zIjogWwogICAgICAi6aKE566X5piv5ZCm6KaG55uW5a6e6ZmF5py65Z6L44CB6ICX5p2Q5LiO5ZSu5ZCO77yM5bCa5pyq5qC45a6eIiwKICAgICAgIuWFt+S9k+acuuWei+eahOaXoOe6vy/lvq7kv6HmiZPljbDlhbzlrrnmgKflsJrmnKrmoLjpqowiLAogICAgICAi5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya6aKE566X5Y2D5YWD5YaF44CB5pyI5omT5Y2wIDDigJM1MCDpobXjgIHpu5Hnmb3kuLrkuLvjgIHluIzmnJvmlK/mjIHlvq7kv6HmiZPljbDjgIHlj6/pnaDogJDnlKjvvIzph43ngrnmr5TovoPlhYTlvJ/lkozmg6Dmma4iLAogICAgICAi5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya5q+P5pyI5omT5Y2w6YeP5pivMOKAkzUw6aG155qE6IyD5Zu077yM5LiN5piv55So5oi356Gu6K6k5q+P5pyINTDlvKAiLAogICAgICAi5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya6buR55m95Li65Li777yM5LiN562J5LqO5a6M5YWo5LiN5b2p5Y2wIiwKICAgICAgIuWwmuacqumAkOmhueaguOmqjOiHqueUseaWh+acrOe6puadn++8muW+ruS/oeaJk+WNsOmhu+aguOWunu+8jOS4jeetieWQjOS6juaZrumAmldpLUZpIiwKICAgICAgIuWwmuacqumAkOmhueaguOmqjOiHqueUseaWh+acrOe6puadn++8muW4jOacm+WPr+mdoOiAkOeUqCIsCiAgICAgICLlsJrmnKrpgJDpobnmoLjpqozoh6rnlLHmlofmnKznuqbmnZ/vvJrkvJjlhYjmr5TovoPlhYTlvJ/lkozmg6Dmma4iLAogICAgICAi5bCa5pyq6YCQ6aG55qC46aqM6Ieq55Sx5paH5pys57qm5p2f77ya5LuF5oqA5pyv5o6i6ZKI77ya5b2p5Y2wPWZhbHNl44CB5peg57q/PXRydWXvvIzlnYfpnZ7nlKjmiLfnoa7orqTnmoTlrZfmrrUiCiAgICBdLAogICAgImFsdGVybmF0aXZlX3JvdXRlcyI6IFtdCiAgfSwKICAiZXZpZGVuY2UiOiBbXSwKICAicmVqZWN0ZWRfZXZpZGVuY2UiOiBbCiAgICBbCiAgICAgICJDTi0wMDQiLAogICAgICBbCiAgICAgICAgInVucmV2aWV3ZWRfb3JfdW5saWNlbnNlZF91c2UiLAogICAgICAgICJtaXNzaW5nX3Jldmlld193aW5kb3ciLAogICAgICAgICJtaXNzaW5nX2luZGVwZW5kZW50X2RlY2lzaW9uX2FwcHJvdmFsIgogICAgICBdCiAgICBdLAogICAgWwogICAgICAiQ04tMDA1IiwKICAgICAgWwogICAgICAgICJ1bnJldmlld2VkX29yX3VubGljZW5zZWRfdXNlIiwKICAgICAgICAibWlzc2luZ19yZXZpZXdfd2luZG93IiwKICAgICAgICAibWlzc2luZ19pbmRlcGVuZGVudF9kZWNpc2lvbl9hcHByb3ZhbCIKICAgICAgXQogICAgXSwKICAgIFsKICAgICAgIkNOLTAwNiIsCiAgICAgIFsKICAgICAgICAidW5yZXZpZXdlZF9vcl91bmxpY2Vuc2VkX3VzZSIsCiAgICAgICAgIm1pc3NpbmdfcmV2aWV3X3dpbmRvdyIsCiAgICAgICAgIm1pc3NpbmdfaW5kZXBlbmRlbnRfZGVjaXNpb25fYXBwcm92YWwiCiAgICAgIF0KICAgIF0sCiAgICBbCiAgICAgICJDTi0wMTAiLAogICAgICBbCiAgICAgICAgInVucmV2aWV3ZWRfb3JfdW5saWNlbnNlZF91c2UiLAogICAgICAgICJ1bmtub3duX3B1YmxpY2F0aW9uIiwKICAgICAgICAibWlzc2luZ19yZXZpZXdfd2luZG93IiwKICAgICAgICAibWlzc2luZ19pbmRlcGVuZGVudF9kZWNpc2lvbl9hcHByb3ZhbCIsCiAgICAgICAgIm1vZGVsX3Njb3BlX21pc21hdGNoIgogICAgICBdCiAgICBdLAogICAgWwogICAgICAiQ04tMDExIiwKICAgICAgWwogICAgICAgICJ1bnJldmlld2VkX29yX3VubGljZW5zZWRfdXNlIiwKICAgICAgICAibWlzc2luZ19yZXZpZXdfd2luZG93IiwKICAgICAgICAibWlzc2luZ19pbmRlcGVuZGVudF9kZWNpc2lvbl9hcHByb3ZhbCIsCiAgICAgICAgInJlZ3VsYXRvcnlfbm90X3JvdXRlX3N1cHBvcnQiCiAgICAgIF0KICAgIF0sCiAgICBbCiAgICAgICJDTi0wMTIiLAogICAgICBbCiAgICAgICAgInVucmV2aWV3ZWRfb3JfdW5saWNlbnNlZF91c2UiLAogICAgICAgICJtaXNzaW5nX3Jldmlld193aW5kb3ciLAogICAgICAgICJtaXNzaW5nX2luZGVwZW5kZW50X2RlY2lzaW9uX2FwcHJvdmFsIiwKICAgICAgICAicmVndWxhdG9yeV9ub3Rfcm91dGVfc3VwcG9ydCIKICAgICAgXQogICAgXSwKICAgIFsKICAgICAgIkNOLTAxMyIsCiAgICAgIFsKICAgICAgICAidW5yZXZpZXdlZF9vcl91bmxpY2Vuc2VkX3VzZSIsCiAgICAgICAgIm1pc3NpbmdfcmV2aWV3X3dpbmRvdyIsCiAgICAgICAgIm1pc3NpbmdfaW5kZXBlbmRlbnRfZGVjaXNpb25fYXBwcm92YWwiCiAgICAgIF0KICAgIF0KICBdLAogICJyZWplY3RlZF9pbnB1dHMiOiBbXSwKICAiZXZhbHVhdGVkX2F0IjogIjIwMjYtMTEtMDJUMTI6NDE6NTQuMDc5Njc5KzAwOjAwIiwKICAiZW5naW5lIjogInNob3BwaW5nX2RlY2lzaW9uLmRlY2lzaW9uLmRlY2lkZSIsCiAgImNhcmRfc2hhMjU2IjogImUxOThiNWU4YWE0ZGFlNGJiN2QwOWJkYTAxNjZiNmIzZTEyNjk2NGYyY2U1YmNjN2I3NzhhMTQyZGZkNzgyZjEiLAogICJyZWFsX3RpbWVfcHJpY2VzIjogZmFsc2UsCiAgInRyYW5zYWN0aW9uc19lbmFibGVkIjogZmFsc2UKfQ==\n",
+      "decoded_bridge": {
+        "status": "defer",
+        "route": "",
+        "reasons": "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\n建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\n需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。",
+        "questions": "",
+        "unknowns": "预算是否覆盖实际机型、耗材与售后，尚未核实\n具体机型的无线/微信打印兼容性尚未核验\n尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普\n尚未逐项核验自由文本约束：每月打印量是0–50页的范围，不是用户确认每月50张\n尚未逐项核验自由文本约束：黑白为主，不等于完全不彩印\n尚未逐项核验自由文本约束：微信打印须核实，不等同于普通Wi-Fi\n尚未逐项核验自由文本约束：希望可靠耐用\n尚未逐项核验自由文本约束：优先比较兄弟和惠普\n尚未逐项核验自由文本约束：仅技术探针：彩印=false、无线=true，均非用户确认的字段",
+        "evidence": "",
+        "card_version": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "time": "2026-11-02T12:41:54.079679+00:00",
+        "report_json": "{\n  \"request\": {\n    \"category\": \"printer\",\n    \"budget_max_cny\": 1000,\n    \"monthly_pages\": 50,\n    \"needs_color\": false,\n    \"accepts_outsourced_color\": null,\n    \"requirements\": [\n      \"预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普\",\n      \"每月打印量是0–50页的范围，不是用户确认每月50张\",\n      \"黑白为主，不等于完全不彩印\",\n      \"微信打印须核实，不等同于普通Wi-Fi\",\n      \"希望可靠耐用\",\n      \"优先比较兄弟和惠普\",\n      \"仅技术探针：彩印=false、无线=true，均非用户确认的字段\"\n    ],\n    \"idle_weeks\": null,\n    \"requires_wireless\": true,\n    \"requires_scan\": null,\n    \"market_region\": \"CN\",\n    \"observed_price\": null,\n    \"model_id\": null\n  },\n  \"recommendation\": {\n    \"status\": \"defer\",\n    \"recommended_route\": null,\n    \"reasons\": [\n      \"本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。\",\n      \"建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。\",\n      \"需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。\"\n    ],\n    \"questions\": [],\n    \"evidence_ids\": [],\n    \"product_skus\": [],\n    \"live_quotes\": [],\n    \"authorized_side_effects\": [],\n    \"unknowns\": [\n      \"预算是否覆盖实际机型、耗材与售后，尚未核实\",\n      \"具体机型的无线/微信打印兼容性尚未核验\",\n      \"尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普\",\n      \"尚未逐项核验自由文本约束：每月打印量是0–50页的范围，不是用户确认每月50张\",\n      \"尚未逐项核验自由文本约束：黑白为主，不等于完全不彩印\",\n      \"尚未逐项核验自由文本约束：微信打印须核实，不等同于普通Wi-Fi\",\n      \"尚未逐项核验自由文本约束：希望可靠耐用\",\n      \"尚未逐项核验自由文本约束：优先比较兄弟和惠普\",\n      \"尚未逐项核验自由文本约束：仅技术探针：彩印=false、无线=true，均非用户确认的字段\"\n    ],\n    \"alternative_routes\": []\n  },\n  \"evidence\": [],\n  \"rejected_evidence\": [\n    [\n      \"CN-004\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-005\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-006\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ],\n    [\n      \"CN-010\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"unknown_publication\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"model_scope_mismatch\"\n      ]\n    ],\n    [\n      \"CN-011\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-012\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\",\n        \"regulatory_not_route_support\"\n      ]\n    ],\n    [\n      \"CN-013\",\n      [\n        \"unreviewed_or_unlicensed_use\",\n        \"missing_review_window\",\n        \"missing_independent_decision_approval\"\n      ]\n    ]\n  ],\n  \"rejected_inputs\": [],\n  \"evaluated_at\": \"2026-11-02T12:41:54.079679+00:00\",\n  \"engine\": \"shopping_decision.decision.decide\",\n  \"card_sha256\": \"e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1\",\n  \"real_time_prices\": false,\n  \"transactions_enabled\": false\n}"
+      },
+      "result": {
+        "request": {
+          "category": "printer",
+          "budget_max_cny": 1000,
+          "monthly_pages": 50,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [
+            "预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+            "每月打印量是0–50页的范围，不是用户确认每月50张",
+            "黑白为主，不等于完全不彩印",
+            "微信打印须核实，不等同于普通Wi-Fi",
+            "希望可靠耐用",
+            "优先比较兄弟和惠普",
+            "仅技术探针：彩印=false、无线=true，均非用户确认的字段"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": true,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null
+        },
+        "recommendation": {
+          "status": "defer",
+          "recommended_route": null,
+          "reasons": [
+            "本次场景没有通过时间、适用范围和使用资格门禁的独立来源；保留为研究线索，暂缓唯一推荐。",
+            "建议分别核查黑白激光、彩色喷墨及外包彩印的适用条件，重点比较闲置维护、长期耗材成本和无线兼容性。",
+            "需要补当前机型的独立评测、耗材与售后资料及真实平台报价；研究卡不能当作购买依据。"
+          ],
+          "questions": [],
+          "evidence_ids": [],
+          "product_skus": [],
+          "live_quotes": [],
+          "authorized_side_effects": [],
+          "unknowns": [
+            "预算是否覆盖实际机型、耗材与售后，尚未核实",
+            "具体机型的无线/微信打印兼容性尚未核验",
+            "尚未逐项核验自由文本约束：预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+            "尚未逐项核验自由文本约束：每月打印量是0–50页的范围，不是用户确认每月50张",
+            "尚未逐项核验自由文本约束：黑白为主，不等于完全不彩印",
+            "尚未逐项核验自由文本约束：微信打印须核实，不等同于普通Wi-Fi",
+            "尚未逐项核验自由文本约束：希望可靠耐用",
+            "尚未逐项核验自由文本约束：优先比较兄弟和惠普",
+            "尚未逐项核验自由文本约束：仅技术探针：彩印=false、无线=true，均非用户确认的字段"
+          ],
+          "alternative_routes": []
+        },
+        "evidence": [],
+        "rejected_evidence": [
+          [
+            "CN-004",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-005",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-006",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ],
+          [
+            "CN-010",
+            [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          ],
+          [
+            "CN-011",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-012",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          ],
+          [
+            "CN-013",
+            [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          ]
+        ],
+        "rejected_inputs": [],
+        "evaluated_at": "2026-11-02T12:41:54.079679+00:00",
+        "engine": "shopping_decision.decision.decide",
+        "card_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+        "real_time_prices": false,
+        "transactions_enabled": false
+      }
+    }
+  ]
+}

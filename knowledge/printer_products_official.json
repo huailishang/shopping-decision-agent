@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "source_kind": "manufacturer_public_pages",
+  "recorded_on": "2026-11-04",
+  "market_region": "CN",
+  "scope": "项目首次候选研究快照，不代表完整现售商品库",
+  "price_quote_provider": "none",
+  "stock_provider": "none",
+  "catalog_discovery": "manual_seed_from_manufacturer_sources",
+  "notice": "可核对型号和官方功能主张；没有独立质量排名、实际库存、授权实时商品报价、平台SKU。'manufacturer_suggested_retail_cny'不是现价，不能作为预算通过/淘汰判据。",
+  "products": [
+    {
+      "model_id": "HL-L1238W",
+      "brand": "Brother",
+      "category": "printer",
+      "name": "兄弟 HL-L1238W 黑白激光打印机",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+          "note": "厂商标注黑白激光打印机"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+          "note": "厂商标注黑白激光"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+          "note": "官方标注无线网络"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+          "note": "新版CHN-FP2070-1官方适用清单列此型号；非现场连接测试"
+        },
+        "scan": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+          "note": "单功能打印机产品页"
+        }
+      },
+      "consumables": [
+        {
+          "model": "TN118",
+          "kind": "toner",
+          "claimed_yield_pages": 1500,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1238w"
+        },
+        {
+          "model": "DR118",
+          "kind": "drum",
+          "claimed_yield_pages": 10000,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1238w"
+        }
+      ],
+      "manufacturer_suggested_retail_cny": 1906,
+      "manufacturer_suggested_retail_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "independent_durability_test": false
+    },
+    {
+      "model_id": "HL-L1808W",
+      "brand": "Brother",
+      "category": "printer",
+      "name": "兄弟 HL-L1808W 黑白激光打印机",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+          "note": "厂商标注黑白激光"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+          "note": "黑白激光"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+          "note": "官方标注无线网络"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+          "note": "新版官方小程序指南清单列此型号；未实机验证"
+        },
+        "scan": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+          "note": "单功能打印机"
+        }
+      },
+      "consumables": [
+        {
+          "model": "TN118",
+          "kind": "toner",
+          "claimed_yield_pages": 1500,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1808w"
+        },
+        {
+          "model": "DR118",
+          "kind": "drum",
+          "claimed_yield_pages": 10000,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1808w"
+        }
+      ],
+      "manufacturer_suggested_retail_cny": 1976,
+      "manufacturer_suggested_retail_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+      "independent_durability_test": false
+    },
+    {
+      "model_id": "HL-L1228",
+      "brand": "Brother",
+      "category": "printer",
+      "name": "兄弟 HL-L1228 黑白激光打印机",
+      "official_url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1228",
+          "note": "官方标注黑白激光"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1228",
+          "note": "黑白激光"
+        },
+        "wireless": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1228",
+          "note": "官方型号页只列USB连接，此型号属非无线版本；进一步购买前核对"
+        },
+        "wechat_miniprogram": {
+          "value": null,
+          "source_url": null,
+          "note": "未找到该型号在兄弟畅享印适用清单中的直接证明；不能以缺少记录断言不支持"
+        },
+        "scan": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1228",
+          "note": "单功能打印机"
+        }
+      },
+      "consumables": [
+        {
+          "model": "TN118",
+          "kind": "toner",
+          "claimed_yield_pages": 1500,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+        },
+        {
+          "model": "DR118",
+          "kind": "drum",
+          "claimed_yield_pages": 10000,
+          "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+        }
+      ],
+      "manufacturer_suggested_retail_cny": 1573,
+      "manufacturer_suggested_retail_url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "independent_durability_test": false
+    },
+    {
+      "model_id": "HP-Laser-108w",
+      "brand": "HP",
+      "category": "printer",
+      "name": "惠普 HP Laser 108w 黑白激光打印机",
+      "official_url": "https://support.hp.com/cn-zh/product/product-specs/hp-laser-100-printer-series/24494347",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp-laser-100-printer-series/24494347",
+          "note": "HP支持页面标注单色打印"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp-laser-100-printer-series/24494347",
+          "note": "单黑色碳粉盒"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp-laser-100-printer-series/24494347",
+          "note": "HP列举Wi-Fi Direct/无线连接"
+        },
+        "wechat_miniprogram": {
+          "value": null,
+          "source_url": null,
+          "note": "未在当前HP型号官方资料核对到微信小程序直接打印；普通Wi-Fi或HP App不等于微信直打"
+        },
+        "scan": {
+          "value": false,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp-laser-100-printer-series/24494347",
+          "note": "打印单功能"
+        }
+      },
+      "consumables": [
+        {
+          "model": "110A",
+          "kind": "toner",
+          "claimed_yield_pages": null,
+          "source_url": "https://support.hp.com/cn-zh/document/ish_2830398-2549426-16"
+        }
+      ],
+      "manufacturer_suggested_retail_cny": null,
+      "manufacturer_suggested_retail_url": null,
+      "independent_durability_test": false
+    },
+    {
+      "model_id": "HP-Laser-108a",
+      "brand": "HP",
+      "category": "printer",
+      "name": "惠普 HP Laser 108a 黑白激光打印机",
+      "official_url": "https://support.hp.com/cn-zh/product/product-specs/hp/24494359",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp/24494359",
+          "note": "HP官方规格显示单黑色碳粉盒"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp/24494359",
+          "note": "单色激光"
+        },
+        "wireless": {
+          "value": false,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp/24494359",
+          "note": "HP官方规格仅列高速USB2.0为标配端口；型号级无线不适用"
+        },
+        "wechat_miniprogram": {
+          "value": null,
+          "source_url": null,
+          "note": "无该型号微信小程序直打印的可靠官方出处；未知不等于不支持"
+        },
+        "scan": {
+          "value": false,
+          "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp/24494359",
+          "note": "单功能打印机"
+        }
+      },
+      "consumables": [
+        {
+          "model": "110A",
+          "kind": "toner",
+          "claimed_yield_pages": null,
+          "source_url": "https://support.hp.com/cn-zh/document/ish_2830398-2549426-16"
+        }
+      ],
+      "manufacturer_suggested_retail_cny": null,
+      "manufacturer_suggested_retail_url": null,
+      "independent_durability_test": false
+    }
+  ]
+}

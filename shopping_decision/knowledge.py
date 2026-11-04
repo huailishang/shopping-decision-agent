@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 from .evidence_policy import metadata_gate
+from .contracts import monthly_page_bounds
 
 CARDS_PATH = Path(__file__).resolve().parent.parent / "knowledge" / "printer_cards.json"
 
@@ -70,9 +71,11 @@ def card_applies(request, card: KnowledgeCard) -> bool:
     if c == "wireless":
         return bool(request.requires_wireless)
     if c == "high":
-        return request.monthly_pages is not None and request.monthly_pages >= 150
+        bounds = monthly_page_bounds(request)
+        return bounds is not None and bounds[0] >= 150
     if c == "high_bw":
-        return request.monthly_pages is not None and request.monthly_pages >= 150 and request.needs_color is False
+        bounds = monthly_page_bounds(request)
+        return bounds is not None and bounds[0] >= 150 and request.needs_color is False
     if c == "home_color":
         return request.needs_color is True and request.accepts_outsourced_color is False
     return False
