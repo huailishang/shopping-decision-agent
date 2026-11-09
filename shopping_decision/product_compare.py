@@ -11,6 +11,9 @@ from pathlib import Path
 
 from .contracts import PurchaseRequest
 from .evidence_policy import valid_https_url
+from .printer_conditions import printer_conditions
+from .retail import load_retail_checks, assess_quote
+from .printer_case import compare_case
 
 CATALOG_PATH = Path(__file__).resolve().parent.parent / "knowledge" / "printer_products_official.json"
 
@@ -53,6 +56,18 @@ def load_official_catalog(path: Path = CATALOG_PATH) -> dict:
                 raise ValueError("建议零售价缺少金额或官方来源")
         if item.get("marketplace_sku") or item.get("live_price_cny"):
             raise ValueError("官网快照不能夹带未经平台授权核实的SKU或实时报价")
+        for key in ('manufacturer_service', 'included_consumables_reference'):
+            reference = item.get(key)
+            if reference is not None:
+                if (not isinstance(reference, dict) or not valid_https_url(reference.get('source_url'))
+                        or not isinstance(reference.get('summary'), str) or not reference['summary'].strip()):
+                    raise ValueError('厂商耗材/服务资料缺少来源或说明')
+                try:
+                    captured = date.fromisoformat(reference['captured_on'])
+                    if captured > date.today():
+                        raise ValueError('资料获取日在未来')
+                except (KeyError, TypeError, ValueError) as exc:
+                    raise ValueError('厂商耗材/服务资料缺少有效获取日') from exc
     return data
 
 
@@ -159,27 +174,46 @@ def compare_printer_request(req: PurchaseRequest, *, path: Path = CATALOG_PATH) 
         return {"status": "unsupported_category", "candidates": []}
     if req.needs_color is None:
         return {"status": "requires_color_clarification", "candidates": []}
-    required = {"color_print": True} if req.needs_color else {"monochrome_print": True}
-    if req.requires_wireless is True:
-        required["wireless"] = True
-    if req.requires_scan is True:
-        required["scan"] = True
-    words = "；".join(req.requirements)
-    want_wechat = "微信" in words
-    must_mini = any(s in words for s in ("必须微信小程序", "必须从微信小程序", "必须用微信小程序"))
-    preferred = {}
-    if must_mini:
-        required["wechat_miniprogram"] = True
-    elif want_wechat:
-        preferred["wechat_miniprogram"] = True
-        # 无线连接只作为辅助偏好：不能代替微信兼容性证据。
-        preferred["wireless"] = True
-    result = compare_products(load_official_catalog(path), category="printer",
-                              required=required, preferred=preferred,
+    conditions = printer_conditions(req)
+    if conditions['conflicts']:
+        return {"status": "condition_conflict", "candidates": [], "questions": conditions['conflicts'],
+                "purchase_recommendation_approved": False, "transactions_enabled": False}
+    catalog = load_official_catalog(path)
+    result = compare_products(catalog, category="printer",
+                              required=conditions['required'], preferred=conditions['preferred'],
                               budget_max_cny=req.budget_max_cny,
                               target_region=req.market_region)
-    if want_wechat and not must_mini:
-        result["limitations"].append("用户只说希望微信打印：先作为偏好，不能代填必须使用官方小程序；若要求特定微信工作流需再确认。")
+    if result['status'] != 'facts_comparison_only':
+        return result
+    checks = load_retail_checks()
+    result['questions'] = conditions['questions']
+    result['unresolved_hard_conditions'] = conditions['unresolved_hard_conditions']
+    result['retail_check_status'] = checks.get('status', checks.get('provider_capability'))
+    for candidate in result['candidates']:
+        observations = [c for c in checks.get('checks', []) if c['model_id'] == candidate['model_id']]
+        candidate['retail_checks'] = observations
+        candidate['quote_assessment'] = assess_quote(None, model_id=candidate['model_id'],
+            delivery_region=req.delivery_region, budget_scope=req.budget_scope, budget_max_cny=req.budget_max_cny)
+        candidate['purchasable'] = False
+        candidate['budget_scope'] = req.budget_scope
+        candidate['delivery_region'] = req.delivery_region
+        candidate['unknowns'] += conditions['unresolved_hard_conditions']
+        candidate['unknowns'] += (["预算支出口径未确认"] if req.budget_scope == 'unknown' else [])
+        candidate['unknowns'] += (["收货地区未确认，不能判断库存与运费"] if not req.delivery_region else [])
+        candidate['supporting_evidence'] = [{"feature": key, "source_url": candidate['evidence_by_feature'][key],
+                                            "captured_on": result['catalog_recorded_on']}
+                                           for key in candidate['required_met'] + candidate['preferred_met']]
+        candidate['opposing_evidence'] = [{"feature": key, "source_url": candidate['evidence_by_feature'][key],
+                                          "captured_on": result['catalog_recorded_on']}
+                                         for key in candidate['required_failed'] + candidate['preferred_failed']]
+        candidate['cost_summary'] = {"device_delivered_minor": None, "extra_consumables_minor": None,
+                                     "lifetime_total_minor": None,
+                                     "limitation": "主机到手价与后续耗材分列；无期限/用量/价格假设，不计算精确单页或多年成本"}
+        original = next(p for p in catalog['products'] if p['model_id'] == candidate['model_id'])
+        candidate['manufacturer_service'] = original.get('manufacturer_service', {})
+        candidate['included_consumables_reference'] = original.get('included_consumables_reference', {})
+    result['limitations'].append("微信硬要求与工作流分别确认；原文未理解的硬要求进入每款候选未知项并阻止购买结论。")
+    result['case_comparison'] = compare_case(req, result['candidates'])
     return result
 
 

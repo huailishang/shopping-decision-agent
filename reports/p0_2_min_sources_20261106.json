@@ -1,0 +1,91 @@
+{
+  "operation": "fixed_public_reference_capture_no_business_api_calls",
+  "sources": [
+    {
+      "id": "B1238",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "retrieved_at": "2026-11-06T14:14:39.822471+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "final_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "response_sha256": "1de73f0c4c19a23c6a2ffe70c9e85f01cd265a7a289ba70da26a7363351b7a59",
+      "response_bytes": 86449,
+      "raw_snapshot": "data/raw/p0_2_min_comparison/1de73f0c4c19a23c6a2ffe70c9e85f01cd265a7a289ba70da26a7363351b7a59.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "B1228",
+      "url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "retrieved_at": "2026-11-06T14:14:40.501332+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "final_url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "response_sha256": "7a1ed4b7c117d9280040e93f733987804136c8211f2aff184be5ce24aa377b72",
+      "response_bytes": 82531,
+      "raw_snapshot": "data/raw/p0_2_min_comparison/7a1ed4b7c117d9280040e93f733987804136c8211f2aff184be5ce24aa377b72.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "BSETUP",
+      "url": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf",
+      "retrieved_at": "2026-11-06T14:14:40.713233+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "final_url": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf",
+      "response_sha256": "a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7",
+      "response_bytes": 2404380,
+      "raw_snapshot": "data/raw/p0_2_min_comparison/a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "HP108",
+      "url": "https://h30471.www3.hp.com/hpcn/attachments/hpcn/Printing/269090/1/108datesheet.pdf",
+      "retrieved_at": "2026-11-06T14:14:42.875203+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "final_url": "https://h30471.www3.hp.com/hpcn/attachments/hpcn/Printing/269090/1/108datesheet.pdf",
+      "response_sha256": "2d68edfff1be3b568d56ccc11b0b81f0c837c4eccbf2a573188498bbbfac6385",
+      "response_bytes": 634892,
+      "raw_snapshot": "data/raw/p0_2_min_comparison/2d68edfff1be3b568d56ccc11b0b81f0c837c4eccbf2a573188498bbbfac6385.pdf",
+      "content_type": "application/pdf;charset=UTF-8"
+    },
+    {
+      "id": "JOS_UNION",
+      "url": "https://jos.jd.com/jdunion",
+      "retrieved_at": "2026-11-06T14:14:46.447481+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "final_url": "https://jos.jd.com/jdunion",
+      "response_sha256": "9604bb9dc8eb10cf6f59a5a69bb876651e4caf5c8e47029c7b4d1569ba0667a7",
+      "response_bytes": 6425,
+      "raw_snapshot": "data/raw/p0_2_min_comparison/9604bb9dc8eb10cf6f59a5a69bb876651e4caf5c8e47029c7b4d1569ba0667a7.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "UNION_QUERY",
+      "url": "https://union.jd.com/openplatform/api/v2?apiName=jd.union.open.goods.query",
+      "retrieved_at": "2026-11-06T14:14:46.734456+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "final_url": "https://union.jd.com/openplatform/api/v2?apiName=jd.union.open.goods.query",
+      "response_sha256": "19dee87ad90c1074711be5e0e0c000c1e3691f709428529b09cafdd0f647b820",
+      "response_bytes": 14642,
+      "raw_snapshot": "data/raw/p0_2_min_comparison/19dee87ad90c1074711be5e0e0c000c1e3691f709428529b09cafdd0f647b820.html",
+      "content_type": "text/html"
+    },
+    {
+      "id": "UNION_BIGFIELD",
+      "url": "https://union.jd.com/openplatform/api/v2?apiName=jd.union.open.goods.bigfield.query",
+      "retrieved_at": "2026-11-06T14:14:46.869951+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "final_url": "https://union.jd.com/openplatform/api/v2?apiName=jd.union.open.goods.bigfield.query",
+      "response_sha256": "19dee87ad90c1074711be5e0e0c000c1e3691f709428529b09cafdd0f647b820",
+      "response_bytes": 14642,
+      "raw_snapshot": "data/raw/p0_2_min_comparison/19dee87ad90c1074711be5e0e0c000c1e3691f709428529b09cafdd0f647b820.html",
+      "content_type": "text/html"
+    }
+  ],
+  "browser_document_read": "Playwright browser busy; did not close or interrupt shared browser",
+  "account_or_transaction_operations": false
+}

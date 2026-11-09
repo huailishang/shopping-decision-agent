@@ -1,0 +1,29 @@
+{
+  "role": "executor",
+  "operation": "actual_python_bridge_subprocess_replay",
+  "new_human_trial": false,
+  "user_budget_scope_confirmed": true,
+  "budget_scope": "device_delivered",
+  "extra_consumables_in_budget": false,
+  "delivery_region_confirmed_granularity": "city",
+  "district_confirmed": false,
+  "personal_region_omitted_from_public_report": true,
+  "case_comparison_status": "limited_manual_case_comparison",
+  "case_models": [
+    "HL-L1238W",
+    "HP-Laser-108w",
+    "HL-L1228"
+  ],
+  "all_candidate_count": 5,
+  "recommendation_status": "defer",
+  "eligible_route_evidence_count": 0,
+  "questions": [],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "baseline_sha256": "078d7a8ae2d58aee816ed2682b52c0e62225d3a48013dafcaf7eb0ed34429898",
+  "full_response_private_path": "data/private/p0_2_min_original_bridge_20261106.json",
+  "full_response_bytes": 43166,
+  "full_response_sha256": "3a88ac405826eb58672fcabeea7bf1e296a586cb724149f0834ec81d2c20bd34",
+  "budget_verified_count": 0,
+  "evaluated_at": "2026-11-06T14:21:43.546005+00:00"
+}

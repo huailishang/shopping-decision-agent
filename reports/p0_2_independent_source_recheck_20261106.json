@@ -1,0 +1,32 @@
+{
+  "role": "independent_reviewer",
+  "source_checks": [
+    {
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "retrieved_at": "2026-11-06T13:25:39.273687+00:00",
+      "http_status": 200,
+      "bytes": 86449,
+      "sha256": "2ab4cfb5ac68decf888e58557fca97cd6e21f35005f00e1c5f4df9271fef0140",
+      "anchors": {
+        "hl-l1238w": true,
+        "TN118": true,
+        "DR118": true,
+        "1年保修": true
+      }
+    },
+    {
+      "url": "https://www.brother.cn/printer/prt/hl-l1808w",
+      "retrieved_at": "2026-11-06T13:25:40.452339+00:00",
+      "http_status": 200,
+      "bytes": 86445,
+      "sha256": "a192bd90f9da9f2e8048f46e8bcbbbac3ed33040d579d0f954a54ea86fa73580",
+      "anchors": {
+        "hl-l1808w": true,
+        "TN118": true,
+        "DR118": true,
+        "1年保修": true
+      }
+    }
+  ],
+  "meaning": "厂商型号/耗材/保修文字核对，非零售核价、耐用性或复用许可批准"
+}

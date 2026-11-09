@@ -83,6 +83,36 @@
       "region": "订单所在地",
       "license_note": "只读和标明条款版本；不触发交易",
       "freshness": "购买前核验当次生效条款"
+    },
+    {
+      "id": "jd_union_goods_discovery",
+      "purpose": "京东联盟推广商品发现及详情候选；不是全京东商品库",
+      "authority_scope": "需核实本应用权限、联盟ID/商城SKU及消费者比价用途；当前未接通",
+      "portal": "https://jos.jd.com/jdunion",
+      "region": "CN",
+      "reviewed_on": "2026-11-07",
+      "license_note": "只在官方认可的主体、用途、数据展示和保存条款内查询；不得视为已授权",
+      "freshness": "每次购买前核验所售配置、地区价格/库存/运费与刷新时间"
+    },
+    {
+      "id": "taobao_tbk_goods_discovery",
+      "purpose": "淘宝客推广物料搜索和详情；用于第二商品发现来源",
+      "authority_scope": "API标注不需要用户session授权不等于无需AppKey/准入；当前未接通",
+      "portal": "https://developer.alibaba.com/docs/api.htm?apiId=35896",
+      "region": "CN",
+      "reviewed_on": "2026-11-07",
+      "license_note": "需核当前应用资格、商用/比价/展示/存储条款，不直接当全淘宝/天猫库存",
+      "freshness": "核实推广物料时点、商品型号、具体SKU套餐与当前价格条件"
+    },
+    {
+      "id": "xiaohongshu_experience_evidence",
+      "purpose": "特定型号的个人体验、安装问题与反例线索（不是价格和故障率来源）",
+      "authority_scope": "账号开放scope仅basic_info已开放，read_notes规划中；未取得全站评论读取许可",
+      "portal": "https://openaccount.xiaohongshu.com/docs/scope",
+      "region": "CN",
+      "reviewed_on": "2026-11-07",
+      "license_note": "仅用明确获准/用户自愿提供的最小摘要；不批量复制笔记评论，不抓账号Cookie",
+      "freshness": "标明原发表与获取日期、使用时长、型号地区版本和重复/广告风险"
     }
   ]
 }

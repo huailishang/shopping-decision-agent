@@ -1,0 +1,291 @@
+{
+  "evaluated_on": "2026-11-06",
+  "role": "independent_evaluator",
+  "scope": "offline_synthetic_diagnostic_not_purchase_validation",
+  "cases": [
+    {
+      "id": "baseline",
+      "synthetic": true,
+      "description": "希望微信打印",
+      "recommendation_status": "defer",
+      "questions": [],
+      "constraints": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "candidate_count": 5,
+      "candidate_checks": [
+        {
+          "model_id": "HL-L1238W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1808W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1228",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        }
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "id": "must_wechat_general",
+      "synthetic": true,
+      "description": "必须微信打印",
+      "recommendation_status": "defer",
+      "questions": [],
+      "constraints": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "candidate_count": 5,
+      "candidate_checks": [
+        {
+          "model_id": "HL-L1238W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1808W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1228",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        }
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "id": "must_miniprogram",
+      "synthetic": true,
+      "description": "必须微信小程序",
+      "recommendation_status": "defer",
+      "questions": [],
+      "constraints": {
+        "required": {
+          "monochrome_print": true,
+          "wechat_miniprogram": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "candidate_count": 5,
+      "candidate_checks": [
+        {
+          "model_id": "HL-L1238W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1808W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1228",
+          "status": "needs_verification",
+          "required_unknown": [
+            "wechat_miniprogram"
+          ],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "status": "needs_verification",
+          "required_unknown": [
+            "wechat_miniprogram"
+          ],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "status": "needs_verification",
+          "required_unknown": [
+            "wechat_miniprogram"
+          ],
+          "required_failed": []
+        }
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "id": "negated_miniprogram",
+      "synthetic": true,
+      "description": "不是必须微信小程序，USB也可以",
+      "recommendation_status": "defer",
+      "questions": [],
+      "constraints": {
+        "required": {
+          "monochrome_print": true,
+          "wechat_miniprogram": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "candidate_count": 5,
+      "candidate_checks": [
+        {
+          "model_id": "HL-L1238W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1808W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1228",
+          "status": "needs_verification",
+          "required_unknown": [
+            "wechat_miniprogram"
+          ],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "status": "needs_verification",
+          "required_unknown": [
+            "wechat_miniprogram"
+          ],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "status": "needs_verification",
+          "required_unknown": [
+            "wechat_miniprogram"
+          ],
+          "required_failed": []
+        }
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "id": "must_auto_duplex",
+      "synthetic": true,
+      "description": "必须自动双面打印",
+      "recommendation_status": "defer",
+      "questions": [],
+      "constraints": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "candidate_count": 5,
+      "candidate_checks": [
+        {
+          "model_id": "HL-L1228",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1238W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HL-L1808W",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "status": "needs_verification",
+          "required_unknown": [],
+          "required_failed": []
+        }
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    }
+  ],
+  "original_case_bridge_replay": {
+    "input_provenance": "evaluator_replay_of_previously_confirmed_conditions_not_new_user_session",
+    "transport": "actual_python_desktop_bridge_subprocess",
+    "exit_code": 0,
+    "recommendation_status": "defer",
+    "approved_route_evidence_count": 0,
+    "candidate_count": 5,
+    "budget_statuses": [
+      "unverified_no_authorized_live_quote"
+    ],
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "product_catalog_sha256": "6f3762c634f538f22103cc6b0e2073483c989a4810f72b76e59d891e915cd52f"
+  },
+  "source_sha256": {
+    "shopping_decision\\product_compare.py": "500d12e7b2501bdf5f04c97a58dc772daf3d2bcd98c36829b9c72aace3aa5f27",
+    "shopping_decision\\web.py": "fc8952531867ddeef15cad90ed43d61e65e66fb77063a16326138078f84b3414",
+    "shopping_decision\\desktop_bridge.py": "51b7ed8988626a8213226fb2a3e039fb31106bb85cdd602695a66707765ec6e6"
+  }
+}

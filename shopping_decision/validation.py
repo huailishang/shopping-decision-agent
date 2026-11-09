@@ -1,6 +1,7 @@
 """结构化约束检查。只对明确支持的中文短语做安全冲突检查，不假装完成语义理解。"""
 from __future__ import annotations
 from .contracts import PurchaseRequest, Recommendation, monthly_page_bounds
+from .printer_conditions import printer_conditions, WORKFLOWS, BUDGET_SCOPES
 
 def validate_request(req: PurchaseRequest) -> Recommendation | None:
     for name in ("monthly_pages", "budget_max_cny", "idle_weeks"):
@@ -15,12 +16,20 @@ def validate_request(req: PurchaseRequest) -> Recommendation | None:
             return Recommendation("invalid", None, ("月印量范围必须是非负且下界不大于上界的整数区间",))
         if req.monthly_pages is not None:
             return Recommendation("invalid", None, ("月印量精确值与区间不能同时填写",))
-    for name in ("needs_color", "accepts_outsourced_color", "requires_wireless", "requires_scan"):
+    for name in ("needs_color", "accepts_outsourced_color", "requires_wireless", "requires_scan", "wechat_required", "requires_auto_duplex"):
         v = getattr(req, name)
         if v is not None and type(v) is not bool:
             return Recommendation("invalid", None, (f"{name} 必须是布尔值",))
     if not isinstance(req.requirements, tuple) or any(not isinstance(s,str) for s in req.requirements):
         return Recommendation("invalid", None, ("requirements 必须是文本元组",))
+    if (not isinstance(req.wechat_workflow, str) or req.wechat_workflow not in WORKFLOWS
+            or not isinstance(req.budget_scope, str) or req.budget_scope not in BUDGET_SCOPES):
+        return Recommendation("invalid", None, ("微信方式或预算口径取值不正确",))
+    if req.delivery_region is not None and (not isinstance(req.delivery_region, str) or not req.delivery_region.strip() or len(req.delivery_region) > 100):
+        return Recommendation("invalid", None, ("收货地区格式不正确",))
+    conditions = printer_conditions(req)
+    if conditions['conflicts']:
+        return Recommendation("clarify", None, ("硬条件与确认项冲突，先澄清。",), questions=tuple(conditions['conflicts']))
     terms = "；".join(req.requirements)
     must_home_color = any(s in terms for s in ("必须在家彩印", "必须在家打印彩色", "必须家用彩印", "必须彩色"))
     no_color = any(s in terms for s in ("不需要彩色", "不能彩印", "只打黑白", "只需要黑白", "只打印黑白", "仅需黑白", "仅打印黑白"))

@@ -1,0 +1,24 @@
+{
+  "role": "executor_not_independent_evaluator",
+  "checked_at": "2026-11-06T13:13:26.982112+00:00",
+  "normal_entry": "desktop/ShoppingDecisionDesktop.java",
+  "method": "Windows computer-use sky real input and modal file save",
+  "new_human_trial": false,
+  "steps": [
+    "original_request_entry",
+    "structured_range_budget_color_confirmation",
+    "backend_candidate_result",
+    "audit_preview_and_explicit_save",
+    "layout_full_width_and_result_starts_at_top_rechecked"
+  ],
+  "saved_record": "data/private/p0_2_gui_final_20261106.txt",
+  "saved_record_bytes": 27967,
+  "saved_record_sha256": "385234679ad84952a791fb75bc71e5c654462bd2ff0b756a963cf8745de8ef0b",
+  "parsed_full_backend_response": true,
+  "candidate_count": 5,
+  "recommendation_status": "defer",
+  "transactions_enabled": false,
+  "purchase_recommendation_approved": false,
+  "final_layout_screenshot": "reports/p0_2_gui_result_20261106.jpg",
+  "independent_gui_acceptance": "pending"
+}

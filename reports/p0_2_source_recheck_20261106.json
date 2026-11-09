@@ -1,0 +1,83 @@
+{
+  "operation": "fixed_public_source_capture",
+  "sources": [
+    {
+      "model_id": "HL-L1238W",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "retrieved_at": "2026-11-06T13:01:30.175051+00:00",
+      "http_status": 200,
+      "response_sha256": "12db765095e79167358f32c51e85f174390f4839996347f6bfa52fcc962401d4",
+      "response_bytes": 86449,
+      "raw_snapshot": "data/raw/p0_2_sources/12db765095e79167358f32c51e85f174390f4839996347f6bfa52fcc962401d4.html",
+      "anchors": {
+        "HL-L1238W": true,
+        "TN118": true,
+        "DR118": true,
+        "1年保修": true
+      },
+      "status": "captured"
+    },
+    {
+      "model_id": "HL-L1808W",
+      "url": "https://www.brother.cn/printer/prt/hl-l1808w",
+      "retrieved_at": "2026-11-06T13:01:32.359263+00:00",
+      "http_status": 200,
+      "response_sha256": "d649b3a5a28dbdf579df422a3fab5f80851fb1ff42b514928d1cae6c32500952",
+      "response_bytes": 86445,
+      "raw_snapshot": "data/raw/p0_2_sources/d649b3a5a28dbdf579df422a3fab5f80851fb1ff42b514928d1cae6c32500952.html",
+      "anchors": {
+        "HL-L1808W": true,
+        "TN118": true,
+        "DR118": true,
+        "1年保修": true
+      },
+      "status": "captured"
+    },
+    {
+      "model_id": "shared_setup",
+      "url": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf",
+      "retrieved_at": "2026-11-06T13:03:21.776324+00:00",
+      "http_status": 200,
+      "response_sha256": "a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7",
+      "response_bytes": 2404380,
+      "raw_snapshot": "data/raw/p0_2_sources/a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7.pdf",
+      "status": "captured",
+      "complete_pdf": true
+    },
+    {
+      "model_id": "retailer_guide",
+      "url": "https://dir.jd.com/guide/jd-geo-guide-xiong-di-da-yin-ji-v1",
+      "retrieved_at": "2026-11-06T13:01:35.189098+00:00",
+      "http_status": 200,
+      "response_sha256": "3cf0349886e7a15f560b5568f6f76dd7a3aa031e5ed62f3847aef8d45577d017",
+      "response_bytes": 37556,
+      "raw_snapshot": "data/raw/p0_2_sources/3cf0349886e7a15f560b5568f6f76dd7a3aa031e5ed62f3847aef8d45577d017.html",
+      "status": "captured"
+    },
+    {
+      "model_id": "toner_link_discovery",
+      "url": "https://www.jd.com/jiage/670d39abab4f820e793.html",
+      "retrieved_at": "2026-11-06T13:05:19.544442+00:00",
+      "status": "captured",
+      "http_status": 200,
+      "response_bytes": 303655,
+      "response_sha256": "716b1659d224a585d1425eeb98e6540dcce26c5bba18e99a2843085f2d01fd70",
+      "raw_snapshot": "data/raw/p0_2_sources/716b1659d224a585d1425eeb98e6540dcce26c5bba18e99a2843085f2d01fd70.html",
+      "has_link_100111044227": true,
+      "limitation": "只用于发现耗材链接，非价格/原装身份/兼容性/库存验证"
+    }
+  ],
+  "account_or_transaction_operations": false,
+  "limitations": [
+    "网页锚点只证明对应文字；厂商规格不代替耐用性对照评测",
+    "指南含参考价及AI整理声明，不是有效报价或独立评测；只用作商品链接发现",
+    "PDF仅作包装清单型号范围核对，不代表实际商家所售配置"
+  ],
+  "browser_read_only_check": {
+    "url": "https://item.jd.com/100126724020.html",
+    "observed_on": "2026-11-06",
+    "result": "redirected_to_passport.jd.com_login",
+    "login_attempted": false,
+    "limitation": "普通Playwright导航结果，未使用用户账号、未绕过限制"
+  }
+}

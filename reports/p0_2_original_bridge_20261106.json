@@ -1,0 +1,104 @@
+{
+  "role": "executor",
+  "evaluated_at": "2026-11-06T13:10:10.772558+00:00",
+  "operation": "real_python_bridge_subprocess_replay",
+  "new_human_trial": false,
+  "source_snapshot": "knowledge/printer_retail_checks.json",
+  "monthly_print_volume": [
+    0,
+    50
+  ],
+  "recommendation_status": "defer",
+  "eligible_route_evidence_count": 0,
+  "questions": [
+    "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+    "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+  ],
+  "candidate_count": 5,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "candidates": [
+    {
+      "model_id": "HL-L1238W",
+      "required_met": [
+        "monochrome_print"
+      ],
+      "required_failed": [],
+      "required_unknown": [],
+      "preferred_met": [
+        "wechat_miniprogram",
+        "wireless"
+      ],
+      "preferred_unknown": [],
+      "budget_status": "unverified_no_authorized_live_quote",
+      "purchasable": false,
+      "retail_check_count": 2
+    },
+    {
+      "model_id": "HL-L1808W",
+      "required_met": [
+        "monochrome_print"
+      ],
+      "required_failed": [],
+      "required_unknown": [],
+      "preferred_met": [
+        "wechat_miniprogram",
+        "wireless"
+      ],
+      "preferred_unknown": [],
+      "budget_status": "unverified_no_authorized_live_quote",
+      "purchasable": false,
+      "retail_check_count": 0
+    },
+    {
+      "model_id": "HP-Laser-108w",
+      "required_met": [
+        "monochrome_print"
+      ],
+      "required_failed": [],
+      "required_unknown": [],
+      "preferred_met": [
+        "wireless"
+      ],
+      "preferred_unknown": [
+        "wechat_miniprogram"
+      ],
+      "budget_status": "unverified_no_authorized_live_quote",
+      "purchasable": false,
+      "retail_check_count": 0
+    },
+    {
+      "model_id": "HL-L1228",
+      "required_met": [
+        "monochrome_print"
+      ],
+      "required_failed": [],
+      "required_unknown": [],
+      "preferred_met": [],
+      "preferred_unknown": [
+        "wechat_miniprogram"
+      ],
+      "budget_status": "unverified_no_authorized_live_quote",
+      "purchasable": false,
+      "retail_check_count": 0
+    },
+    {
+      "model_id": "HP-Laser-108a",
+      "required_met": [
+        "monochrome_print"
+      ],
+      "required_failed": [],
+      "required_unknown": [],
+      "preferred_met": [],
+      "preferred_unknown": [
+        "wechat_miniprogram"
+      ],
+      "budget_status": "unverified_no_authorized_live_quote",
+      "purchasable": false,
+      "retail_check_count": 0
+    }
+  ],
+  "full_response_private_path": "data/private/p0_2_original_bridge_20261106.json",
+  "full_response_sha256": "966c265db1bae2c6cca4c72052ace6f7617460fd1860f5e2bbf7cbf6878675bc",
+  "visible_result_includes_retail_missing_fields": true
+}

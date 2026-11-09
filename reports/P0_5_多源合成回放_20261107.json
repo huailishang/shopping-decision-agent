@@ -1,0 +1,104 @@
+{
+  "operation": "merge_unverified_marketplace_leads",
+  "status": "unverified_candidates_only",
+  "candidate_count": 2,
+  "rejected_count": 0,
+  "blocked_report_count": 0,
+  "candidates": [
+    {
+      "platform": "JD",
+      "platform_item_id": "100126724020",
+      "canonical_url": "https://item.jd.com/100126724020.html",
+      "model_hint": "HL-L1238W",
+      "model_hint_status": "title_anchor_only_unverified",
+      "title_hints": [
+        "兄弟HL-L1238W 黑白打印机"
+      ],
+      "provenance": [
+        {
+          "source_platform": "JD_UNION_IMPORT_UNVERIFIED",
+          "source_operation": "offline_jd_union_response_import",
+          "source_id": "jd_union_goods_query_snapshot:100126724020",
+          "observed_at": "2026-11-07T07:00:00+00:00",
+          "source_assurance": "unverified_imported_snapshot",
+          "status": "discovered_unverified"
+        },
+        {
+          "source_platform": "JD_PUBLIC_UNVERIFIED",
+          "source_operation": "user_selected_marketplace_link_review",
+          "source_id": "user_supplied_link",
+          "observed_at": "2026-11-07T08:00:00+00:00",
+          "source_assurance": "unverified_user_link",
+          "status": "discovered_unverified"
+        }
+      ],
+      "status": "unverified_sales_lead",
+      "identity_verified": false,
+      "quote_verified": false,
+      "live_price_cny": null,
+      "purchasable": false,
+      "within_budget": null,
+      "missing_fields": [
+        "product_kind",
+        "selected_variant",
+        "verified_seller",
+        "delivery_region",
+        "regional_stock",
+        "shipping_promotions",
+        "authorized_live_quote",
+        "warranty_and_compatibility"
+      ]
+    },
+    {
+      "platform": "TAOBAO",
+      "platform_item_id": "100126724020",
+      "canonical_url": "https://item.taobao.com/item.htm?id=100126724020",
+      "model_hint": "HL-L1238W",
+      "model_hint_status": "title_anchor_only_unverified",
+      "title_hints": [
+        "配件硒鼓适用HL-L1238W"
+      ],
+      "provenance": [
+        {
+          "source_platform": "TAOBAO_TBK_IMPORT_UNVERIFIED",
+          "source_operation": "offline_tbk_material_import",
+          "source_id": "tbk_material_snapshot:100126724020",
+          "observed_at": "2026-11-07T07:00:00+00:00",
+          "source_assurance": "unverified_imported_snapshot",
+          "status": "discovered_unverified"
+        }
+      ],
+      "status": "unverified_sales_lead",
+      "identity_verified": false,
+      "quote_verified": false,
+      "live_price_cny": null,
+      "purchasable": false,
+      "within_budget": null,
+      "missing_fields": [
+        "product_kind",
+        "selected_variant",
+        "verified_seller",
+        "delivery_region",
+        "regional_stock",
+        "shipping_promotions",
+        "authorized_live_quote",
+        "warranty_and_compatibility"
+      ]
+    }
+  ],
+  "verified_quote_count": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "同一个SKU的来源汇总不代表卖家、套餐、地区或价格已获核实",
+    "型号标题锚点仅帮助回查厂商规格；不证明是主机而非配件",
+    "京东和淘宝平台商品标识永远不互换",
+    "不同平台候选不构成价格/质量/销量排名，推荐门禁保持关闭"
+  ],
+  "fixture_type": "SYNTHETIC_ONLY_NOT_REAL_PLATFORM_PRODUCTS",
+  "source_labels": [
+    "synthetic_jd_union_response",
+    "synthetic_tbk_response",
+    "synthetic_user_pasted_jd_link"
+  ]
+}

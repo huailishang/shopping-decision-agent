@@ -7,6 +7,7 @@ from .evidence_policy import valid_https_url
 from .knowledge import KnowledgeCard, load_cards, screen_cards
 from .route_claims import load_route_claim_cards
 from .validation import validate_request
+from .printer_conditions import printer_conditions
 
 @dataclass(frozen=True)
 class DecisionRecord:
@@ -52,10 +53,13 @@ def decide(req: PurchaseRequest, *, knowledge_enabled: bool = True,
     bounds = monthly_page_bounds(req)
     unknowns = []
     if req.budget_max_cny is not None:
-        unknowns.append("预算是否覆盖实际机型、耗材与售后，尚未核实")
+        unknowns.append("主机含运费及必要支出能否在预算内尚未核实；额外耗材单列"
+                        if req.budget_scope == 'device_delivered' else
+                        "预算是否覆盖实际机型、耗材与售后，尚未核实")
     if req.requires_wireless:
         unknowns.append("具体机型的普通无线/手机打印能力尚未核验")
-    if any('微信' in text for text in req.requirements):
+    conditions = printer_conditions(req)
+    if any(key.startswith('wechat_') for group in (conditions['required'], conditions['preferred']) for key in group):
         unknowns.append("微信打印的具体方式与机型兼容性待确认；若要求从微信小程序直接打印，须另核实对应机型与绑定方法，普通Wi-Fi不代表支持微信打印")
     if req.requires_scan:
         unknowns.append("具体机型的扫描功能尚未核验")

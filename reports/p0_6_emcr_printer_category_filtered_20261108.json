@@ -1,0 +1,51 @@
+{
+  "query": "家用黑白激光打印机 无线 微信打印",
+  "source": "eMCR_fixed_retrieval_benchmark",
+  "corpus_size": 36722,
+  "category_scope": {
+    "include_any": [
+      "打印机"
+    ],
+    "exclude_any": [
+      "打印机配件",
+      "其他打印设备",
+      "办公用纸"
+    ]
+  },
+  "search_hits": [
+    {
+      "dataset_product_id": "d4ff4e860e4510912",
+      "title": "3D打印耗材TPU85A&amp;90A耐用柔韧软弹减震抗冲击软硬结合TOVII",
+      "category_hint": "办公设备/耗材/相关服务 >> 墨粉硒鼓耗材类 >> 3D打印机耗材",
+      "score": 17.6041,
+      "source": "public_benchmark_text",
+      "purchasable": false,
+      "quote_verified": false
+    },
+    {
+      "dataset_product_id": "d7be707880d5c24f6",
+      "title": "一拖二新款分体迎宾器 红外感应迎宾器 红外感应门铃 一感应两响",
+      "category_hint": "3C数码配件 >> 直播/摄影配件 >> 其他配件 >> 显示器/打印机色彩校正仪",
+      "score": 14.8786,
+      "source": "public_benchmark_text",
+      "purchasable": false,
+      "quote_verified": false
+    },
+    {
+      "dataset_product_id": "df7f8f83c2d2484f8",
+      "title": "出租 Calibrite DISPLAY PLUS HL 显示器校色仪 兰拓相机租赁",
+      "category_hint": "3C数码配件 >> 直播/摄影配件 >> 其他配件 >> 显示器/打印机色彩校正仪",
+      "score": 13.66499,
+      "source": "public_benchmark_text",
+      "purchasable": false,
+      "quote_verified": false
+    }
+  ],
+  "current_price_approved": false,
+  "purchasable": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "这是历史评测语料，类目仅为商品文本，非在售主机识别或实时价格",
+    "相关性分数不等于满足用户条件，所有商品需复核具体型号和配置"
+  ]
+}

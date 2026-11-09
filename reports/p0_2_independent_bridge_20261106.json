@@ -1,0 +1,20 @@
+{
+  "role": "independent_reviewer",
+  "operation": "real_bridge_subprocess",
+  "new_human_trial": false,
+  "volume": [
+    0,
+    50
+  ],
+  "status": "defer",
+  "candidate_count": 5,
+  "budget_statuses": [
+    "unverified_no_authorized_live_quote",
+    "unverified_no_authorized_live_quote",
+    "unverified_no_authorized_live_quote",
+    "unverified_no_authorized_live_quote",
+    "unverified_no_authorized_live_quote"
+  ],
+  "evidence_count": 0,
+  "transactions_enabled": false
+}

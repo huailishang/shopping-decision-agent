@@ -1,0 +1,174 @@
+{
+  "experiment": "emcr_text_lexical_baseline",
+  "retrieval_method": "CJK_bigrams_ASCII_words_BM25_no_model",
+  "corpus_products": 36722,
+  "gold_queries": 1399,
+  "k": 10,
+  "candidate_pool_rerank": {
+    "evaluated_queries_with_judged_positive": 1344,
+    "queries_without_judged_positive": 55,
+    "mean_ndcg_at_k": 0.68069,
+    "judged_hit_rate_at_k": 0.95312,
+    "candidate_pool_provided": true,
+    "cannot_claim_open_corpus_discovery": true
+  },
+  "full_corpus_search": {
+    "hash_frozen_query_count": 120,
+    "evaluated_queries_with_judged_positive": 117,
+    "mean_judged_ndcg_at_k": 0.59026,
+    "judged_hit_rate_at_k": 0.91453,
+    "mean_judged_recall_at_k": 0.55949,
+    "unjudged_products_count_as_zero_only_for_proxy_metric": true,
+    "samples": [
+      {
+        "query": "四川电信200元话费充值卡 即充即到 官方直充 快速到账 学生党必备",
+        "top_ids": [
+          "d9d2f83847eb9644f",
+          "de4f41d7497dca848",
+          "d13ffdcec555ec11c",
+          "d6def1db0cd0e92f1",
+          "d841e1c81a6ee6cab",
+          "d9b5e5701087fbd77",
+          "da48c4602bad07a0f",
+          "dc0ec8a5cce58e6b2",
+          "d54095d3f62c5cf69",
+          "d736eb66ccdd66eb6"
+        ],
+        "judged_positive_found": 0,
+        "judged_positive_total": 1
+      },
+      {
+        "query": "不想买含添加糖的宝宝酸奶，50元内无糖款有哪些推荐",
+        "top_ids": [
+          "d2a0c881b771ccb85",
+          "db9927d1114d42258",
+          "dfc50cd0b092fd886",
+          "d549046f4511b71f6",
+          "db74f7d9b74f4b045",
+          "d91349cb8ed686c6a",
+          "de96fad5a62e183e5",
+          "d9d5a33927bed07b4",
+          "d3f9b815ac8d1c669",
+          "d5933d58089076f06"
+        ],
+        "judged_positive_found": 2,
+        "judged_positive_total": 8
+      },
+      {
+        "query": "有没有像同里红这样用真桂花入酒的，但千万别是人工香精调出来的",
+        "top_ids": [
+          "debd3a430613e1ab8",
+          "d887175918815c725",
+          "d1faaf7565e886bea",
+          "dfdeb29763c02facc",
+          "d02504ea11c4029d2",
+          "da138c26157010e1e",
+          "dc3f3a0f2d2ab651a",
+          "d3cdc8c65772b11e8",
+          "d9af99a5511aa032f",
+          "da3ee7419b8adf090"
+        ],
+        "judged_positive_found": 1,
+        "judged_positive_total": 1
+      },
+      {
+        "query": "摩托车前叉防尘盖耐久性强的推荐",
+        "top_ids": [
+          "d2d9a786165754694",
+          "dfe560329aca1a4a8",
+          "d8b7bc77db266d297",
+          "d16cffd972e942ddb",
+          "d5904381b39f70c7d",
+          "d58248deeaad35c84",
+          "db1edd89ff22c6a67",
+          "d0dde73b95ce758c9",
+          "d3c96f14887bb1885",
+          "dac1317a8fff3c205"
+        ],
+        "judged_positive_found": 5,
+        "judged_positive_total": 6
+      },
+      {
+        "query": "女性全身体检套餐 不要瑞慈体检的 有没有其他品牌",
+        "top_ids": [
+          "d66e0a759a9ae5990",
+          "d7518a72df4df3289",
+          "d6b84ebc7d88a8ae7",
+          "d9e48a9feacbc7db0",
+          "dfb5e3ab7cd586240",
+          "d5204c7e38b33778c",
+          "df8dc615b845a6b6e",
+          "de87cfa044a428ee3",
+          "de020f1fdeae50874",
+          "d0271113f88b9e6bd"
+        ],
+        "judged_positive_found": 3,
+        "judged_positive_total": 13
+      },
+      {
+        "query": "阳江DS温泉酒店订房 亲水泳道自助早餐",
+        "top_ids": [
+          "d8ec3503b95123d33",
+          "d91f9bef8dc848184",
+          "d5528149fff643314",
+          "d57f68c95b6a5223a",
+          "da1a6ddc30e083b8d",
+          "da120b797ae37f222",
+          "d40d59b31c67d9375",
+          "dac0265fb575030b4",
+          "d9cdefb935cd3bd09",
+          "debbea6caf7f926f8"
+        ],
+        "judged_positive_found": 1,
+        "judged_positive_total": 1
+      },
+      {
+        "query": "爱路易航空托运包别选那种无轮子拖拽费力的款式要四轮万向轮能拉的",
+        "top_ids": [
+          "d46f71910bf618a94",
+          "dbc3bdbe6dca9bca7",
+          "d2eb45cdab4c6ee5f",
+          "d8253cb5f1a46a4ca",
+          "d3786438020b97a65",
+          "de98778f48fbf4783",
+          "d27112566fc96526b",
+          "d2a7a1a37d4a20e93",
+          "d3d0874b35ab406e2",
+          "d16f883af6089b8c3"
+        ],
+        "judged_positive_found": 4,
+        "judged_positive_total": 5
+      },
+      {
+        "query": "家长想买带管控功能的倾听者复读机给孩子课后用",
+        "top_ids": [
+          "d6ba374241929e60b",
+          "ddf242d08cd994c6f",
+          "dea7671bbbb918819",
+          "d505a788be17d978a",
+          "d6cde55fd715ddd79",
+          "d86c76702317e1f26",
+          "db628cbc3cc7b250c",
+          "d58ef7d3e1a2aa0ac",
+          "d99beb0bc70018224",
+          "dc1e9abc341a0bdd0"
+        ],
+        "judged_positive_found": 4,
+        "judged_positive_total": 4
+      }
+    ]
+  },
+  "source_kind": "static_public_retrieval_benchmark_not_current_retail",
+  "uses_images": false,
+  "relevance_gold_in_search_index": false,
+  "verified_current_quotes": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "候选池排序只证明约30条已给候选的排序能力，非全网商品发现",
+    "全库排名里未标注商品按零分计算代理NDCG，可能错判实际相关商品；只能对已标注商品计算命中",
+    "文本双字词基线无法保证否定/数量单位/隐性意图的正确理解",
+    "图片未下载，不做多模态评测",
+    "静态eMCR价格、销量、库存与当前购买结论不具实时资格"
+  ]
+}

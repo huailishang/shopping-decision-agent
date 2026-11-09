@@ -28,7 +28,8 @@ class H08BRangeTests(unittest.TestCase):
         self.assertEqual(data['normalized_constraints']['monthly_print_volume'], [0,50])
         self.assertEqual(data['normalized_constraints']['volume_type'], 'range')
         self.assertEqual(data['recommendation']['status'], 'defer')
-        self.assertEqual(data['recommendation']['questions'], ())
+        # P0.2可以补问零售预算口径/地区，但不得重复追问已确认的印量与彩印。
+        self.assertFalse(any('每月' in q or '是否必须彩印' in q for q in data['recommendation']['questions']))
         self.assertIn('0–50', '\n'.join(data['recommendation']['reasons']))
         self.assertTrue(any('微信小程序' in s for s in data['recommendation']['unknowns']))
         self.assertEqual(len(data['evidence']), 0)

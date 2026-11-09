@@ -18,3 +18,4 @@ runs/
 .h08-build/
 .serena/
 .spec-workflow/
+.playwright-mcp/

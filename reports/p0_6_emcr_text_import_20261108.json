@@ -1,0 +1,23 @@
+{
+  "operation": "offline_public_text_benchmark_import",
+  "source_kind": "fixed_benchmark_not_live_catalog",
+  "source_file": "emcr_benchmark.jsonl",
+  "source_sha256": "c33001d33a5536593bb4d5361437fed0e87d18b9dcbf29cf404d65d74c0fa622",
+  "scanned_rows": 42022,
+  "supported_rows": 36722,
+  "schema_unmapped": 0,
+  "conflicting_duplicate_ids": 0,
+  "relevance_labels_excluded": true,
+  "historic_price_is_live_quote": false,
+  "quote_verified_count": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "sha256_scope": "processed_rows_only",
+  "status": "text_candidates_unverified",
+  "limitations": [
+    "只用于许可允许的固定语料研究，未做实际电商/全市场发现",
+    "未读取商品图片，不能声明多模态指标",
+    "数据集文件格式支持需通过真实文件单独验收；纯合成单测不算实际接入",
+    "搜索相关性得分不等于商品质量、真实价格或购买资格"
+  ]
+}

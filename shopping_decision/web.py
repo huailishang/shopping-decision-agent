@@ -13,10 +13,11 @@ from .decision import decide
 from .knowledge import CARDS_PATH, load_cards
 from .route_claims import ROUTE_LEDGER_PATH, load_route_claim_cards
 from .product_compare import compare_printer_request, catalogue_sha256
+from .printer_conditions import printer_conditions, WORKFLOWS, BUDGET_SCOPES
 
 ROOT = Path(__file__).resolve().parent
 MAX_BODY = 20_000
-FIELDS = ('budget_max_cny', 'needs_color', 'accepts_outsourced_color', 'idle_weeks', 'requires_wireless', 'requires_scan')
+FIELDS = ('budget_max_cny', 'needs_color', 'accepts_outsourced_color', 'idle_weeks', 'requires_wireless', 'requires_scan', 'wechat_required', 'requires_auto_duplex')
 
 
 def parse_print_volume(data: dict) -> dict:
@@ -72,6 +73,15 @@ def build_request(data: dict) -> PurchaseRequest:
         raise ValueError('其他要求格式不正确')
     # 文本不会被自动解析。必须明确纳入待核对要求，以免忽略用户原始硬条件。
     reqs = [data['description'].strip(), *(r.strip() for r in reqs if r.strip())]
+    for name, allowed in (("wechat_workflow", WORKFLOWS), ("budget_scope", BUDGET_SCOPES)):
+        value = data.get(name, "unknown")
+        if not isinstance(value, str) or value not in allowed:
+            raise ValueError(name + " 取值不正确")
+        values[name] = value
+    region = data.get("delivery_region")
+    if region is not None and (not isinstance(region, str) or not region.strip() or len(region) > 100):
+        raise ValueError("收货地区请填省市区，未知留空")
+    values["delivery_region"] = region.strip() if region else None
     return PurchaseRequest(category='printer', requirements=tuple(reqs), **values)
 
 
@@ -94,16 +104,23 @@ def evaluate_input(data: dict) -> dict:
                  'budget_max_cny': req.budget_max_cny,
                  'wireless_required': req.requires_wireless,
                  'scan_required': req.requires_scan,
+                 'wechat_required': req.wechat_required, 'wechat_workflow': req.wechat_workflow,
+                 'auto_duplex_required': req.requires_auto_duplex, 'delivery_region': req.delivery_region,
+                 'budget_scope': req.budget_scope,
                  'original_text_and_extra_requirements': list(req.requirements)}
     # 商品事实比较独立于技术路线主张的决策批准：只列可核对候选，不修改defer或生成购买推荐。
     if record.recommendation.status in ('clarify', 'invalid', 'unsupported'):
         product_comparison = {'status': 'blocked_until_request_valid', 'candidates': []}
     else:
         product_comparison = compare_printer_request(req)
+    normalized['product_conditions'] = printer_conditions(req)
+    recommendation = asdict(record.recommendation)
+    recommendation['questions'] = tuple(dict.fromkeys((*recommendation['questions'], *product_comparison.get('questions', []))))
+    recommendation['unknowns'] = tuple(dict.fromkeys((*recommendation['unknowns'], *product_comparison.get('unresolved_hard_conditions', []))))
     return {'request': asdict(req), 'normalized_constraints': normalized,
              'product_comparison': product_comparison,
              'product_catalog_sha256': catalogue_sha256(),
-            'recommendation': asdict(record.recommendation),
+            'recommendation': recommendation,
             'evidence': evidence, 'rejected_evidence': record.rejected_evidence,
             'rejected_inputs': record.rejected_inputs,
             'evaluated_at': datetime.now(timezone.utc).isoformat(),

@@ -58,7 +58,19 @@
       ],
       "manufacturer_suggested_retail_cny": 1906,
       "manufacturer_suggested_retail_url": "https://www.brother.cn/printer/prt/hl-l1238w",
-      "independent_durability_test": false
+      "independent_durability_test": false,
+      "manufacturer_service": {
+        "summary": "厂商标注1年保修；耗材对应TN118粉盒、DR118硒鼓，标准容量不等于随机耗材量",
+        "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+        "captured_on": "2026-11-06",
+        "retail_seller_and_warranty_terms_verified": false
+      },
+      "included_consumables_reference": {
+        "summary": "官方安装指南包装清单列粉盒及硒鼓单元；随机印量及零售实际配置仍待核",
+        "source_url": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf",
+        "captured_on": "2026-11-06",
+        "retail_configuration_verified": false
+      }
     },
     {
       "model_id": "HL-L1808W",
@@ -109,7 +121,19 @@
       ],
       "manufacturer_suggested_retail_cny": 1976,
       "manufacturer_suggested_retail_url": "https://www.brother.cn/printer/prt/hl-l1808w",
-      "independent_durability_test": false
+      "independent_durability_test": false,
+      "manufacturer_service": {
+        "summary": "厂商标注1年保修；耗材对应TN118粉盒、DR118硒鼓，标准容量不等于随机耗材量",
+        "source_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+        "captured_on": "2026-11-06",
+        "retail_seller_and_warranty_terms_verified": false
+      },
+      "included_consumables_reference": {
+        "summary": "官方安装指南包装清单列粉盒及硒鼓单元；随机印量及零售实际配置仍待核",
+        "source_url": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf",
+        "captured_on": "2026-11-06",
+        "retail_configuration_verified": false
+      }
     },
     {
       "model_id": "HL-L1228",

@@ -1,0 +1,285 @@
+{
+  "role": "executor",
+  "type": "synthetic_regression_not_independent_evaluation",
+  "cases": [
+    {
+      "input": {
+        "confirmed": true,
+        "monthly_pages": "0–50",
+        "budget_max_cny": 1000,
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "description": "希望微信打印"
+      },
+      "synthetic": true,
+      "recommendation_status": "defer",
+      "questions": [
+        "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+        "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+      ],
+      "constraints": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "unresolved_hard_conditions": [],
+      "candidates": [
+        {
+          "model_id": "HL-L1238W",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1228",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        }
+      ],
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false
+    },
+    {
+      "input": {
+        "confirmed": true,
+        "monthly_pages": "0–50",
+        "budget_max_cny": 1000,
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "description": "必须微信打印"
+      },
+      "synthetic": true,
+      "recommendation_status": "defer",
+      "questions": [
+        "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+        "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+        "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+      ],
+      "constraints": {
+        "required": {
+          "monochrome_print": true,
+          "wechat_workflow_unconfirmed": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "unresolved_hard_conditions": [],
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        }
+      ],
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false
+    },
+    {
+      "input": {
+        "confirmed": true,
+        "monthly_pages": "0–50",
+        "budget_max_cny": 1000,
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "description": "不是必须微信小程序，USB也可以"
+      },
+      "synthetic": true,
+      "recommendation_status": "defer",
+      "questions": [
+        "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+        "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+      ],
+      "constraints": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "unresolved_hard_conditions": [],
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_unknown": [],
+          "required_failed": [],
+          "purchasable": false
+        }
+      ],
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false
+    },
+    {
+      "input": {
+        "confirmed": true,
+        "monthly_pages": "0–50",
+        "budget_max_cny": 1000,
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "description": "家里只打黑白，必须自动双面打印"
+      },
+      "synthetic": true,
+      "recommendation_status": "defer",
+      "questions": [
+        "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+        "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+      ],
+      "constraints": {
+        "required": {
+          "monochrome_print": true,
+          "auto_duplex": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "unresolved_hard_conditions": [],
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "purchasable": false
+        }
+      ],
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false
+    },
+    {
+      "input": {
+        "confirmed": true,
+        "monthly_pages": "0–50",
+        "budget_max_cny": 1000,
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "description": "必须微信打印，但确认项选否",
+        "wechat_required": false
+      },
+      "synthetic": true,
+      "recommendation_status": "clarify",
+      "questions": [
+        "原文微信硬要求与“微信不是必须”确认冲突，请修改原话或确认项"
+      ],
+      "constraints": null,
+      "unresolved_hard_conditions": [],
+      "candidates": [],
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false
+    }
+  ]
+}

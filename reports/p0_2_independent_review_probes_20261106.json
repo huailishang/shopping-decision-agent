@@ -1,0 +1,721 @@
+{
+  "role": "independent_reviewer",
+  "synthetic_diagnostics_not_acceptance_score": true,
+  "cases": [
+    {
+      "case": "original",
+      "description": "预算千元内、月打印0–50页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wechat_miniprogram",
+            "wireless"
+          ],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wechat_miniprogram",
+            "wireless"
+          ],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wireless"
+          ],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "hard_wechat",
+      "description": "必须微信打印",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true,
+          "wechat_workflow_unconfirmed": true
+        },
+        "preferred": {},
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wechat_workflow_unconfirmed"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "negated_mini",
+      "description": "不是必须微信小程序，USB也可以",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "hard_duplex",
+      "description": "必须自动双面打印",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true,
+          "auto_duplex": true
+        },
+        "preferred": {},
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "auto_duplex"
+          ],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "conflict_wechat",
+      "description": "必须微信打印",
+      "status": "clarify",
+      "conditions": {
+        "required": {
+          "monochrome_print": true,
+          "wechat_workflow_unconfirmed": true
+        },
+        "preferred": {},
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": [
+          "原文微信硬要求与“微信不是必须”确认冲突，请修改原话或确认项"
+        ]
+      },
+      "comparison_status": "blocked_until_request_valid",
+      "candidates": [],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "negated_need",
+      "description": "不需要微信打印，USB就行",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wechat_miniprogram",
+            "wireless"
+          ],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wechat_miniprogram",
+            "wireless"
+          ],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wireless"
+          ],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "leading_requirement",
+      "description": "要求自动双面打印",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "negated_suffix",
+      "description": "微信打印不是必须，USB也可以",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wechat_miniprogram",
+            "wireless"
+          ],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wechat_miniprogram",
+            "wireless"
+          ],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [
+            "wireless"
+          ],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [
+            "wechat_miniprogram"
+          ],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    },
+    {
+      "case": "negation_swallows",
+      "description": "不必扫描且必须自动双面打印",
+      "status": "defer",
+      "conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "unresolved_hard_conditions": [],
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "conflicts": []
+      },
+      "comparison_status": "facts_comparison_only",
+      "candidates": [
+        {
+          "model_id": "HL-L1228",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1238W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HL-L1808W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108a",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        },
+        {
+          "model_id": "HP-Laser-108w",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "preferred_met": [],
+          "preferred_unknown": [],
+          "purchasable": false
+        }
+      ],
+      "evidence_count": 0,
+      "transactions_enabled": false
+    }
+  ]
+}

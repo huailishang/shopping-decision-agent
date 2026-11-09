@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "case_id": "home_mono_0_50_budget_1000",
+  "status": "executor_research_comparison_not_approved",
+  "recorded_on": "2026-11-06",
+  "scope": "家庭每月0–50页、黑白、彩印外包、预算1000元；只作型号条件比较，不是购买/耐用性排名",
+  "sources": [
+    {
+      "id": "B1238",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "source_kind": "manufacturer_spec",
+      "models": [
+        "HL-L1238W"
+      ],
+      "captured_on": "2026-11-06",
+      "document_date": null,
+      "date_note": "发布日期未知",
+      "limit": "厂商功能资料，不是独立耐用性或实机兼容测试",
+      "content_sha256": "1de73f0c4c19a23c6a2ffe70c9e85f01cd265a7a289ba70da26a7363351b7a59"
+    },
+    {
+      "id": "B1228",
+      "url": "https://www.brother.cn/printer/prt/hl-l1228",
+      "source_kind": "manufacturer_spec",
+      "models": [
+        "HL-L1228"
+      ],
+      "captured_on": "2026-11-06",
+      "document_date": null,
+      "date_note": "发布日期未知",
+      "limit": "只取型号规格，不将网站通用小程序入口当兼容证明",
+      "content_sha256": "7a1ed4b7c117d9280040e93f733987804136c8211f2aff184be5ce24aa377b72"
+    },
+    {
+      "id": "BSETUP",
+      "url": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf",
+      "source_kind": "manufacturer_setup",
+      "models": [
+        "HL-L1238W",
+        "HL-L1228"
+      ],
+      "captured_on": "2026-11-06",
+      "document_date": null,
+      "date_note": "版权2024，发布日期未知",
+      "limit": "安装指南型号范围与首次绑定说明；未核商家实际配置、手机与路由器",
+      "content_sha256": "a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7"
+    },
+    {
+      "id": "HP108",
+      "url": "https://h30471.www3.hp.com/hpcn/attachments/hpcn/Printing/269090/1/108datesheet.pdf",
+      "source_kind": "manufacturer_spec",
+      "models": [
+        "HP-Laser-108w"
+      ],
+      "captured_on": "2026-11-06",
+      "document_date": "2020-02",
+      "date_note": "原厂规格PDF经HP社区附件承载；2019-04印刷、2020-02修改；发布/上传日未知",
+      "limit": "历史型号规格参考，不能证明2026年App/云服务/驱动可用、现售套餐或微信直打；未获独立决策用途批准",
+      "content_sha256": "2d68edfff1be3b568d56ccc11b0b81f0c837c4eccbf2a573188498bbbfac6385"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "HL-L1238W",
+      "notes": [
+        {
+          "topic": "workflow",
+          "kind": "source_fact",
+          "text": "厂商型号页描述微信小程序与无线，安装指南说明首次需绑定。",
+          "source_ids": [
+            "B1238",
+            "BSETUP"
+          ],
+          "condition": "准确型号为HL-L1238W；手机、路由器、网络和文件类型仍需实测",
+          "counterpoint": "功能描述不等于用户设备已能直接打印，不能由普通Wi-Fi替代具体工作流核验"
+        },
+        {
+          "topic": "tradeoff",
+          "kind": "conditional_interpretation",
+          "text": "若优先微信小程序操作，可先验证这款的绑定与文件打印；USB是否可接受仍按用户确认。",
+          "source_ids": [
+            "B1238",
+            "BSETUP"
+          ],
+          "condition": "微信方式是偏好或已确认的对应硬要求；其余硬条件必须另核",
+          "counterpoint": "核查优先次序不是购买批准，也不证明比其他机型便宜或耐用"
+        },
+        {
+          "topic": "consumables_service",
+          "kind": "source_fact",
+          "text": "厂商列TN118粉盒、DR118硒鼓及1年保修概述。",
+          "source_ids": [
+            "B1238"
+          ],
+          "condition": "仅厂商型号资料，零售随机耗材和具体保修条款尚未核对",
+          "counterpoint": "鼓粉分离及标称印量不能直接推出本案更省钱或寿命更长"
+        }
+      ]
+    },
+    {
+      "model_id": "HP-Laser-108w",
+      "notes": [
+        {
+          "topic": "workflow",
+          "kind": "source_fact",
+          "text": "历史原厂表按108w/4ZB80A列无线与移动App；没有证明微信小程序直打。",
+          "source_ids": [
+            "HP108"
+          ],
+          "condition": "只对108w型号作历史规格参考；当前App/手机系统兼容要重新核验",
+          "counterpoint": "资料修改于2020-02；不能把旧云服务、Wi-Fi或App描述升级为2026年微信打印已可用"
+        },
+        {
+          "topic": "tradeoff",
+          "kind": "conditional_interpretation",
+          "text": "仅在用户接受并实测App工作流时，保留为无线替代；小程序为硬要求时先补兼容证据。",
+          "source_ids": [
+            "HP108"
+          ],
+          "condition": "不得替用户接受文件转存或App方式，也不得覆盖逐候选硬条件未知",
+          "counterpoint": "没有与兄弟同条件的独立耐用性、维护或价格对照"
+        },
+        {
+          "topic": "consumables_service",
+          "kind": "source_fact",
+          "text": "历史规格列W1110A耗材及1年有限硬件保修。",
+          "source_ids": [
+            "HP108"
+          ],
+          "condition": "历史规格参考，当前销售配置、兼容耗材价格、服务主体及地区覆盖待核",
+          "counterpoint": "标准/随机印量不等于0–50页家庭实耗，不能据此制造精确成本"
+        }
+      ]
+    },
+    {
+      "model_id": "HL-L1228",
+      "notes": [
+        {
+          "topic": "workflow",
+          "kind": "source_fact",
+          "text": "型号页列USB，安装指南注明无线部分不适用此型号。",
+          "source_ids": [
+            "B1228",
+            "BSETUP"
+          ],
+          "condition": "准确型号为HL-L1228，电脑/驱动/USB连接仍需确认",
+          "counterpoint": "网站通用微信入口不证明本型号直接支持；通过电脑中转的微信文件方案未验证"
+        },
+        {
+          "topic": "tradeoff",
+          "kind": "conditional_interpretation",
+          "text": "只有接受电脑USB连接时才继续核价；无线为硬条件时应排除。",
+          "source_ids": [
+            "B1228",
+            "BSETUP"
+          ],
+          "condition": "明确接受连接取舍，不能静默替用户放弃微信偏好",
+          "counterpoint": "没有真实报价，不能称USB款更便宜；无长期耐用性对照"
+        },
+        {
+          "topic": "consumables_service",
+          "kind": "source_fact",
+          "text": "厂商列TN118/DR118及1年保修概述。",
+          "source_ids": [
+            "B1228"
+          ],
+          "condition": "实际零售套餐、耗材补充价格和商家条款待核",
+          "counterpoint": "与同系列使用相同耗材，不等于机器寿命或长期总成本相同"
+        }
+      ]
+    }
+  ],
+  "shared_unknowns": [
+    "没有三型号针对0–50页家庭长期闲置的独立耐用性/故障率对照",
+    "没有合格主机到手报价、地区库存及运费，不能判断1000元能否覆盖",
+    "额外耗材另列；缺使用期限、实际耗材量与价格假设，不算精确单页或多年成本",
+    "未采集可用社区体验样本，不能编造用户反馈或以评论数量代替统计"
+  ],
+  "low_volume_interpretation": "HP历史规格的建议月量100–1500页不是最低可用量或0–50页必然损坏的证据；三款低频适用性仍缺独立对照。",
+  "low_volume_source_ids": [
+    "HP108"
+  ]
+}

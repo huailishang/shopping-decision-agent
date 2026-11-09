@@ -1,0 +1,23 @@
+{
+  "query": "家用黑白激光打印机 无线 微信打印",
+  "source": "eMCR_fixed_retrieval_benchmark",
+  "corpus_size": 36722,
+  "category_scope": {
+    "include_any": [],
+    "exclude_any": [],
+    "category_leaf_any": [
+      "打印机",
+      "激光打印机",
+      "黑白激光打印机"
+    ]
+  },
+  "search_hits": [],
+  "status": "no_category_qualified_candidates",
+  "current_price_approved": false,
+  "purchasable": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "这是历史评测语料，类目仅为商品文本，非在售主机识别或实时价格",
+    "相关性分数不等于满足用户条件，所有商品需复核具体型号和配置"
+  ]
+}

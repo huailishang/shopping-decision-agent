@@ -33,6 +33,12 @@ class PurchaseRequest:
     model_id: str | None = None
     # 精确 monthly_pages 与范围 monthly_pages_range 互斥，保留老调用兼容。
     monthly_pages_range: tuple[int, int] | None = None
+    # P0.2：用户逐项确认；未知保留，不由报价或商品文案代填。
+    wechat_required: bool | None = None
+    wechat_workflow: str = "unknown"
+    requires_auto_duplex: bool | None = None
+    delivery_region: str | None = None
+    budget_scope: str = "unknown"
 
 
 def monthly_page_bounds(request: PurchaseRequest) -> tuple[int, int] | None:

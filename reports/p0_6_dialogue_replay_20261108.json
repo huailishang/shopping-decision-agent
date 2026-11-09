@@ -1,0 +1,190 @@
+{
+  "experiment": "P0.6_manual_structured_dialogue_replay",
+  "evidence_scope": "historical_manufacturer_index_not_live_marketplace",
+  "is_real_user_input": false,
+  "is_llm_autonomous": false,
+  "turn_count": 3,
+  "records": [
+    {
+      "version": 1,
+      "manual_structured_turn": {
+        "text": "家庭打印，黑白为主，每月0到50页，1000元内，必须无线和微信小程序",
+        "answers": {
+          "category": "printer",
+          "usage": "家庭作业打印",
+          "needs_color": false,
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "requires_wireless": true,
+          "wechat_required": true,
+          "wechat_workflow": "miniprogram"
+        }
+      },
+      "questions_next": [
+        {
+          "field": "accepts_outsourced_color",
+          "question": "偶尔要彩印时，可以去打印店解决吗？",
+          "why": "决定是否只比较黑白打印机",
+          "status": "user_confirmation_needed"
+        },
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "status": "model_facts_only_not_purchase",
+      "source": "https://www.brother.cn/printer/prt",
+      "source_observed_at": "2026-11-07T04:02:48.452475+00:00",
+      "candidate_count": 9,
+      "sample_model_checks": {
+        "HL-L1238W": {
+          "status": "needs_verification",
+          "met": [
+            "monochrome_print",
+            "wireless",
+            "wechat_miniprogram"
+          ],
+          "failed": [],
+          "unknown": []
+        },
+        "HL-10W": {
+          "status": "needs_verification",
+          "met": [
+            "monochrome_print"
+          ],
+          "failed": [],
+          "unknown": [
+            "wireless",
+            "wechat_miniprogram"
+          ]
+        },
+        "HL-L1228": {
+          "status": "excluded_by_verified_spec",
+          "met": [
+            "monochrome_print"
+          ],
+          "failed": [
+            "wireless"
+          ],
+          "unknown": [
+            "wechat_miniprogram"
+          ]
+        }
+      },
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "version": 2,
+      "manual_structured_turn": {
+        "text": "改成无线和微信都不是必须，能USB连接也行",
+        "answers": {
+          "requires_wireless": false,
+          "wechat_required": false
+        }
+      },
+      "questions_next": [
+        {
+          "field": "accepts_outsourced_color",
+          "question": "偶尔要彩印时，可以去打印店解决吗？",
+          "why": "决定是否只比较黑白打印机",
+          "status": "user_confirmation_needed"
+        },
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "status": "model_facts_only_not_purchase",
+      "source": "https://www.brother.cn/printer/prt",
+      "source_observed_at": "2026-11-07T04:02:48.452475+00:00",
+      "candidate_count": 9,
+      "sample_model_checks": {
+        "HL-10W": {
+          "status": "needs_verification",
+          "met": [
+            "monochrome_print"
+          ],
+          "failed": [],
+          "unknown": []
+        },
+        "HL-L1228": {
+          "status": "needs_verification",
+          "met": [
+            "monochrome_print"
+          ],
+          "failed": [],
+          "unknown": []
+        },
+        "HL-L1238W": {
+          "status": "needs_verification",
+          "met": [
+            "monochrome_print"
+          ],
+          "failed": [],
+          "unknown": []
+        }
+      },
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "version": 3,
+      "manual_structured_turn": {
+        "text": "改变主意，必须在家打印彩色",
+        "answers": {
+          "needs_color": true
+        }
+      },
+      "questions_next": [
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "status": "model_facts_only_not_purchase",
+      "source": "https://www.brother.cn/printer/prt",
+      "source_observed_at": "2026-11-07T04:02:48.452475+00:00",
+      "candidate_count": 9,
+      "sample_model_checks": {
+        "HL-10W": {
+          "status": "excluded_by_verified_spec",
+          "met": [],
+          "failed": [
+            "color_print"
+          ],
+          "unknown": []
+        },
+        "HL-L1228": {
+          "status": "excluded_by_verified_spec",
+          "met": [],
+          "failed": [
+            "color_print"
+          ],
+          "unknown": []
+        },
+        "HL-L1238W": {
+          "status": "excluded_by_verified_spec",
+          "met": [],
+          "failed": [
+            "color_print"
+          ],
+          "unknown": []
+        }
+      },
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    }
+  ],
+  "source_is_not_live_quote": true,
+  "independent_content_review": "pending"
+}
