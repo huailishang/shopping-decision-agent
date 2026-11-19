@@ -1,0 +1,22 @@
+[
+  {
+    "path": "shopping_decision/evidence_comparison.py",
+    "sha256": "a69c7ef53d2166453007deb8ce54ea443b693ac9b9176e3f09c83f18ec0ed5a4"
+  },
+  {
+    "path": "shopping_decision/model_comparison.py",
+    "sha256": "dd52a24c4d5d8fceeab08af84b90770a9e04d0e4d3686f491e0f63612de2e1e1"
+  },
+  {
+    "path": "scripts/run_model_comparison_experiment.py",
+    "sha256": "c1929a56fdf15995030e4d0699bd1e025f4c3dc88c332f127bc3be60e1cd6d28"
+  },
+  {
+    "path": "tests/test_model_comparison.py",
+    "sha256": "668e3715fb12b4e8bc90e7ff31a72745a5af88e0b3de0669adaf2780b8494e78"
+  },
+  {
+    "path": "docs/01_核心能力与架构.md",
+    "sha256": "1aab02e16d9959384b2515d95e9ae55955b69825ac6d1ff095ec7e1f62e68b13"
+  }
+]

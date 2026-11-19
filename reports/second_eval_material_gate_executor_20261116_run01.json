@@ -1,0 +1,89 @@
+{
+  "schema_version": "shopping_second_eval_material_gate_executor_v1",
+  "date": "2026-11-16",
+  "role": "executor",
+  "trigger": "second_independent_evaluator_handoff",
+  "source_checks": [
+    {
+      "path": "reports/haina_local_smoke_20261110.json",
+      "sha256": "77743021c55fc32a90d8815cd1abe4b8c3be95a578fe815652501347e9439d8c"
+    },
+    {
+      "path": "reports/supplier_haina_product_docs_20261109.json",
+      "sha256": "9fd7650a87db6b8bd52f200f0c90ad29a9b260c864da062a43fdeacfbd99c94e"
+    },
+    {
+      "path": "reports/打印机两型号公开证据比较_20261115.md",
+      "sha256": "dfdb1a415c0f5df4341e823331129139edd50001ac837600a9a459f9f83e9f2d"
+    },
+    {
+      "path": "reports/低频打印耗材新资料_独立复核报告_20261116.md",
+      "sha256": "f1f345783ce229b6498ef559388e6180a1db5b1fd859b190f030d9476d0fd4eb"
+    },
+    {
+      "path": "evaluation/printer_henan_proxy_sample_20261116.json",
+      "sha256": "c87fa2105a84c813f33b2dbfc39e712cf1437fbc17d2b66b17991d3f1fad9a6b"
+    },
+    {
+      "path": "reports/购物智能体二次独立评估_原生GUI审计核闭_20261116.md",
+      "sha256": "f597e71d5b41c19d5adc06cd0f9f32c6843210242f6871531711325d7a09bea9"
+    },
+    {
+      "path": "handoffs/购物智能体二次独立评估_收口交接_20261116.md",
+      "sha256": "58ea5b9799cba6c0c8902531a018f90b6992b9eed1e97a806bc167c4754dabed"
+    }
+  ],
+  "observed_prior_local_smoke_summary": {
+    "historical_haina_rows": 5,
+    "row_title_target_model_hits": {
+      "HL-L1238W": 0,
+      "M232dw": 0
+    },
+    "returned_platform_item_id_count": 0,
+    "returned_sku_id_count": 0,
+    "rows_with_union_spec": 3,
+    "rows_with_affiliate_click_host": 5,
+    "raw_response_saved": false,
+    "data_timestamp": "2026-11-10T13:39:42.417553+00:00"
+  },
+  "sample": {
+    "region": "中国大陆河南省",
+    "first_setup_accepted": true,
+    "wechat_required": "not_confirmed",
+    "budget_max_cny": 1000,
+    "monthly_pages_range": [
+      0,
+      50
+    ]
+  },
+  "evidence_acceptance": {
+    "manufacturer_printer_specs": "limited_model_research_existing_not_new",
+    "wechat_first_pair_and_reuse_in_henan": "not_tested",
+    "platform_sale_identity": "0/2",
+    "current_region_delivered_quotes": 0,
+    "haina_use_rights": "BLOCKED",
+    "two_target_model_original_source_rows": 0,
+    "low_frequency_comparable_long_term_reliability": "unavailable",
+    "fair_cognition_effect": "undetermined"
+  },
+  "public_retrieval_budget": {
+    "historical_remaining": "unverifiable",
+    "prior_evaluator_overrun": "9_queries_exceeds_limit_6_per_earlier_record",
+    "new_public_network_actions": 0,
+    "decision": "no_new_external_calls_under_unknown_budget"
+  },
+  "new_code_changes": 0,
+  "new_product_rule_changes": 0,
+  "new_test_runs": 0,
+  "credentials_read": 0,
+  "real_product_api_calls": 0,
+  "account_actions": 0,
+  "transactions": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "formal_36_scenarios_started": false,
+  "git_commit": false,
+  "git_push": false,
+  "status": "STOP_EXTERNAL_EVIDENCE_BRANCH_PENDING_AUTHORIZED_NEW_MATERIAL",
+  "overall": "NOT_PASS"
+}

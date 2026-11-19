@@ -1,0 +1,22 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "RV-EV-04",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "-m",
+    "handoffs.evaluator_executor.HNA-LAYERS-REVIEW-20261116.audit_archives"
+  ],
+  "command_display": "python -X utf8 -m handoffs.evaluator_executor.HNA-LAYERS-REVIEW-20261116.audit_archives",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-16T13:39:23.915911+00:00",
+  "finished_at_utc": "2026-11-16T13:39:24.267710+00:00",
+  "exit_code": 0,
+  "stdout_path": "RV-EV-04.stdout.log",
+  "stderr_path": "RV-EV-04.stderr.log",
+  "stdout_bytes": 10954,
+  "stderr_bytes": 0,
+  "stdout_sha256": "35d6f6427170f53a0c69bbfdf84504a688deb0a86bc063fccf76716013060bd0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

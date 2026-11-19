@@ -1,0 +1,167 @@
+{
+  "task_id": "PRINTER-MIN-CONDITIONS-REPAIR-20261117",
+  "basis": "independent offline normal-entry counterexamples; not recommendation accuracy",
+  "checks": [
+    {
+      "id": "requires_scan_conflict",
+      "expected": "selected research must preserve the normal path condition conflict",
+      "observed_normal_status": "condition_conflict",
+      "observed_normal_conflicts": [
+        "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项"
+      ],
+      "observed_selected_conflicts": [],
+      "observed_candidate_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "meets_expectation": false
+    },
+    {
+      "id": "requires_auto_duplex_conflict",
+      "expected": "selected research must preserve the normal path condition conflict",
+      "observed_normal_status": "condition_conflict",
+      "observed_normal_conflicts": [
+        "原文auto_duplex硬要求与“不要求”确认冲突，请修改原话或确认项"
+      ],
+      "observed_selected_conflicts": [],
+      "observed_candidate_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "meets_expectation": false
+    },
+    {
+      "id": "requires_wireless_conflict",
+      "expected": "selected research must preserve the normal path condition conflict",
+      "observed_normal_status": "condition_conflict",
+      "observed_normal_conflicts": [
+        "原文wireless硬要求与“不要求”确认冲突，请修改原话或确认项"
+      ],
+      "observed_selected_conflicts": [],
+      "observed_candidate_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "meets_expectation": false
+    },
+    {
+      "id": "wireless_entry_parity",
+      "expected": "CLI and web selected research must preserve the same explicit wireless requirement",
+      "normal_web_required": {
+        "monochrome_print": true,
+        "wireless": true
+      },
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "meets_expectation": false
+    },
+    {
+      "id": "chat_scan_conflict",
+      "normal_required": {
+        "monochrome_print": true,
+        "scan": true
+      },
+      "normal_conflicts": [
+        "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项"
+      ],
+      "selected_conflicts": [],
+      "selected_wechat_status": "unconfirmed",
+      "candidate_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "visible_text": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量0—50页，黑白为主；首次App/扫码设置：接受。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态保留研究。\nHP M232dw：本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态保留研究。\n微信是否必须仍是未答目标：若必须，先核准确型号的后续微信复用；若只是偏好，可继续有限型号研究。两种情况均不能当成本人新确认。\n当前可继续作有限研究，不必因为价格、微信二次复用或用户反馈缺席而停下全部研究。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。\n本轮仅做有限研究：尚未核价，未批准购买或交易。",
+      "meets_expectation": false
+    },
+    {
+      "id": "chat_duplex_conflict",
+      "normal_required": {
+        "monochrome_print": true,
+        "auto_duplex": true
+      },
+      "normal_conflicts": [
+        "原文auto_duplex硬要求与“不要求”确认冲突，请修改原话或确认项"
+      ],
+      "selected_conflicts": [],
+      "selected_wechat_status": "unconfirmed",
+      "candidate_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "visible_text": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量0—50页，黑白为主；首次App/扫码设置：接受。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态保留研究。\nHP M232dw：本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态保留研究。\n微信是否必须仍是未答目标：若必须，先核准确型号的后续微信复用；若只是偏好，可继续有限型号研究。两种情况均不能当成本人新确认。\n当前可继续作有限研究，不必因为价格、微信二次复用或用户反馈缺席而停下全部研究。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。\n本轮仅做有限研究：尚未核价，未批准购买或交易。",
+      "meets_expectation": false
+    },
+    {
+      "id": "chat_wechat_raw",
+      "normal_required": {
+        "monochrome_print": true,
+        "wechat_transfer_to_app": true
+      },
+      "normal_conflicts": [],
+      "selected_conflicts": [],
+      "selected_wechat_status": "unconfirmed",
+      "candidate_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "visible_text": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量0—50页，黑白为主；首次App/扫码设置：接受。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态保留研究。\nHP M232dw：本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态保留研究。\n微信是否必须仍是未答目标：若必须，先核准确型号的后续微信复用；若只是偏好，可继续有限型号研究。两种情况均不能当成本人新确认。\n当前可继续作有限研究，不必因为价格、微信二次复用或用户反馈缺席而停下全部研究。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。\n本轮仅做有限研究：尚未核价，未批准购买或交易。",
+      "meets_expectation": false
+    },
+    {
+      "id": "chat_unresolved_hard",
+      "normal_required": {
+        "monochrome_print": true,
+        "unresolved_hard_condition_1": true
+      },
+      "normal_conflicts": [],
+      "selected_conflicts": [],
+      "selected_wechat_status": "unconfirmed",
+      "candidate_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "visible_text": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量0—50页，黑白为主；首次App/扫码设置：接受。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态保留研究。\nHP M232dw：本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态保留研究。\n微信是否必须仍是未答目标：若必须，先核准确型号的后续微信复用；若只是偏好，可继续有限型号研究。两种情况均不能当成本人新确认。\n当前可继续作有限研究，不必因为价格、微信二次复用或用户反馈缺席而停下全部研究。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。\n本轮仅做有限研究：尚未核价，未批准购买或交易。",
+      "meets_expectation": false
+    },
+    {
+      "id": "setup_refused",
+      "meets_expectation": true
+    },
+    {
+      "id": "wechat_conflict",
+      "meets_expectation": true
+    },
+    {
+      "id": "foreign_scope",
+      "meets_expectation": true
+    },
+    {
+      "id": "baseline_keep",
+      "meets_expectation": true
+    },
+    {
+      "id": "explicit_scan_false",
+      "meets_expectation": true
+    },
+    {
+      "id": "requires_scan_hard_equivalence",
+      "meets_expectation": false
+    },
+    {
+      "id": "requires_auto_duplex_hard_equivalence",
+      "meets_expectation": false
+    },
+    {
+      "id": "chat_retract_hard",
+      "meets_expectation": true
+    }
+  ],
+  "passed": 6,
+  "total": 16
+}

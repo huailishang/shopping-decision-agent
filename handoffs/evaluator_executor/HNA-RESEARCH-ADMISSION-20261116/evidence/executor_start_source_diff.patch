@@ -1,0 +1,1427 @@
+diff --git a/desktop/P04MarketplaceRegression.java b/desktop/P04MarketplaceRegression.java
+index a2a07fc..d6e3cc3 100644
+--- a/desktop/P04MarketplaceRegression.java
++++ b/desktop/P04MarketplaceRegression.java
+@@ -19,6 +19,13 @@ public final class P04MarketplaceRegression {
+             command.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
+         return DesktopBridgeClient.invoke(new ProcessBuilder(command), 10_000);
+     }
++    private static Map<String,String> invoke(String python, String query, String links, String platform) throws Exception {
++        List<String> command = new ArrayList<>();
++        command.add(python); command.add("-m"); command.add("shopping_decision.discovery_bridge");
++        for (String value : List.of(query, links, platform))
++            command.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
++        return DesktopBridgeClient.invoke(new ProcessBuilder(command), 10_000);
++    }
+     public static void main(String[] args) throws Exception {
+         if (args.length != 1) throw new IllegalArgumentException("Usage: P04MarketplaceRegression <python>");
+         URI search = ShoppingDecisionDesktop.marketplaceSearchUri("冰箱 500L");
+@@ -48,6 +55,18 @@ public final class P04MarketplaceRegression {
+         Map<String,String> wrong = invoke(args[0], "冰箱", "https://item.jd.com.evil.net/100126724020.html");
+         check("no_valid_candidates".equals(wrong.get("status")), "spoofed host must be rejected");
+         System.out.println("PASS spoofed URL rejected");
+-        System.out.println("P04 Java marketplace regression: 4/4 PASS");
++        URI taobao = ShoppingDecisionDesktop.marketplaceSearchUri("打印机 微信", "taobao");
++        check("s.taobao.com".equals(taobao.getHost()), "taobao search host must be official");
++        System.out.println("PASS Taobao browser search URL");
++
++        Map<String,String> tb = invoke(args[0], "打印机",
++                "https://item.taobao.com/item.htm?id=1234567890", "taobao");
++        check("candidates_unverified".equals(tb.get("status")), "Taobao candidate status wrong");
++        check(tb.getOrDefault("candidate_urls", "").equals("https://item.taobao.com/item.htm?id=1234567890"),
++              "candidate link was not normalized by Python");
++        String forbidden = Character.toString((char)34) + "transactions_enabled" + Character.toString((char)34) + ": false";
++        check(tb.getOrDefault("report_json", "").contains(forbidden), "must not trade");
++        System.out.println("PASS Java->Python Taobao user link validation");
++        System.out.println("P04 Java marketplace regression: 6/6 PASS");
+     }
+ }
+diff --git a/desktop/ShoppingDecisionDesktop.java b/desktop/ShoppingDecisionDesktop.java
+index c3e05d5..e15476b 100644
+--- a/desktop/ShoppingDecisionDesktop.java
++++ b/desktop/ShoppingDecisionDesktop.java
+@@ -1,4 +1,5 @@
+ import javax.swing.*;
++import javax.swing.filechooser.FileNameExtensionFilter;
+ import java.awt.*;
+ import java.io.*;
+ import java.nio.file.*;
+@@ -22,6 +23,9 @@ public final class ShoppingDecisionDesktop {
+     private final JComboBox<String> wechatWorkflow = new JComboBox<>(new String[]{"待确认", "微信小程序直接打印", "文件转存到厂商App后打印"});
+     private final JComboBox<String> budgetScope = new JComboBox<>(new String[]{"待确认", "主机含运费及必要支出", "还包括本次额外购买的耗材"});
+     private final JTextField deliveryRegion = new JTextField();
++    private final JTextField deviceDeploymentRegion = new JTextField();
++    private Path hainaMcpReport = null;
++    private final JLabel hainaMcpReportStatus = new JLabel("未选择；普通判断不会读取海纳文件");
+     private final JButton calculate = new JButton("确认并调用后端判断");
+     private final JLabel status = new JLabel("仅本机运行，不下单、不查询实时价格。所有条件必须由用户确认。");
+     private String lastReport = "";
+@@ -29,17 +33,27 @@ public final class ShoppingDecisionDesktop {
+     private SwingWorker<Map<String,String>,Void> pendingWorker;
+     private String[] captured;
+     private final String python;
++    // 新对话入口与旧表单共用后端和请求版本保护；参考按钮只编辑草稿。
++    private final JTextArea chatTranscript = area(15), chatInput = area(3);
++    private final JTextArea chatUnderstanding = area(10), chatOutcome = area(12);
++    private final JLabel chatPrompt = new JLabel("正在加载本机问题...");
++    private final JPanel chatReferences = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 4));
++    private final JPanel chatEdits = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 4));
++    private final JButton chatSend = new JButton("发送并确认"), chatPreview = new JButton("预览/另存审计");
++    private String chatState = "", chatPromptField = "", chatReport = "";
++    private SwingWorker<Map<String,String>,Void> chatWorker;
+ 
+     private ShoppingDecisionDesktop(String python) {
+         this.python = python;
+         description.setText("");
++        body.add(chatPage(), "chat");
+         body.add(pageOne(), "one");
+         body.add(pageTwo(), "two");
+         body.add(pageThree(), "three");
+         body.add(pageFour(), "four");
+         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         frame.setLayout(new BorderLayout(12,12));
+-        JLabel title = new JLabel("  家用打印机决策 · H08 本机试用");
++        JLabel title = new JLabel("  购物智能体 · 对话需求判断（本机只读）");
+         title.setFont(title.getFont().deriveFont(Font.BOLD,20f));
+         frame.add(title, BorderLayout.NORTH);
+         frame.add(body, BorderLayout.CENTER);
+@@ -47,7 +61,182 @@ public final class ShoppingDecisionDesktop {
+         frame.setSize(850,850);
+         frame.setLocationRelativeTo(null);
+         frame.setVisible(true);
+-        show("one");
++        show("chat");
++        updateChat("", "", "");
++    }
++    /** 新主入口：参考答案只填文本，不进入后端；发送后才更新显式条件。 */
++    private JPanel chatPage() {
++        JPanel panel = new JPanel(new BorderLayout(8, 8));
++        panel.setBorder(BorderFactory.createEmptyBorder(12, 16, 12, 16));
++        chatTranscript.setEditable(false);
++        chatUnderstanding.setEditable(false);
++        chatOutcome.setEditable(false);
++        chatTranscript.setText("助手：请先明确商品品类。这里不会自动替你确认默认值，也不会查询或购买商品。\n");
++        JTabbedPane details = new JTabbedPane();
++        JPanel understandingPanel = new JPanel(new BorderLayout(4, 4));
++        understandingPanel.add(new JScrollPane(chatUnderstanding), BorderLayout.CENTER);
++        JPanel edits = new JPanel(new BorderLayout());
++        edits.add(new JLabel("已确认/待补条件：点击字段可修改，发送才生效"), BorderLayout.NORTH);
++        chatEdits.setLayout(new FlowLayout(FlowLayout.LEFT, 4, 2));
++        edits.add(new JScrollPane(chatEdits), BorderLayout.CENTER);
++        edits.setPreferredSize(new Dimension(300, 125));
++        understandingPanel.add(edits, BorderLayout.SOUTH);
++        details.addTab("目前理解/修改", understandingPanel);
++        details.addTab("证据与下一步", new JScrollPane(chatOutcome));
++        JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
++                new JScrollPane(chatTranscript), details);
++        split.setResizeWeight(0.58);
++        panel.add(split, BorderLayout.CENTER);
++
++        JPanel inputArea = new JPanel(new BorderLayout(4, 4));
++        JPanel promptPanel = new JPanel(new BorderLayout(4, 4));
++        promptPanel.add(chatPrompt, BorderLayout.NORTH);
++        chatReferences.setLayout(new FlowLayout(FlowLayout.LEFT, 4, 2));
++        promptPanel.add(new JScrollPane(chatReferences), BorderLayout.CENTER);
++        promptPanel.setPreferredSize(new Dimension(700, 96));
++        inputArea.add(promptPanel, BorderLayout.NORTH);
++        inputArea.add(new JScrollPane(chatInput), BorderLayout.CENTER);
++        JPanel actions = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 2));
++        chatSend.addActionListener(e -> {
++            String text = chatInput.getText().trim();
++            if (chatPromptField.isBlank() || text.isBlank()) {
++                error("请先选择当前问题并填写明确答复；“暂不确定”也可发送");
++            } else {
++                updateChat(chatPromptField, text, chatPrompt.getText());
++            }
++        });
++        chatPreview.addActionListener(e -> {
++            if (chatReport.isBlank()) {
++                error("当前没有可预览的会话审计");
++            } else {
++                lastReport = chatReport;
++                previewReport();
++            }
++        });
++        JButton newSession = new JButton("新建空白会话");
++        newSession.addActionListener(e -> {
++            requestGate.invalidate();
++            if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++            chatState = "";
++            chatPromptField = "";
++            chatReport = "";
++            chatInput.setText("");
++            chatTranscript.setText("助手：已开启空白会话。原会话不会自动带入；没有保存到磁盘。\n");
++            chatSend.setEnabled(true);
++            updateChat("", "", "");
++        });
++        JButton oldForm = new JButton("旧表单回退（实验）");
++        oldForm.addActionListener(e -> show("one"));
++        JButton bulk = new JButton("批量补充/修改");
++        bulk.addActionListener(e -> {
++            requestGate.invalidate();
++            if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++            chatSend.setEnabled(true);
++            chatPromptField = "batch";
++            chatPrompt.setText("批量答复：每行“字段名：答案”，最多8行；只有发送才确认。");
++            chatReferences.removeAll();
++            chatReferences.revalidate();
++            chatReferences.repaint();
++            chatInput.setText("");
++            chatInput.requestFocusInWindow();
++        });
++        actions.add(chatSend);
++        actions.add(bulk);
++        actions.add(chatPreview);
++        actions.add(newSession);
++        actions.add(oldForm);
++        inputArea.add(actions, BorderLayout.SOUTH);
++        inputArea.setPreferredSize(new Dimension(700, 255));
++        panel.add(inputArea, BorderLayout.SOUTH);
++        return panel;
++    }
++
++    /** 所有轮次走统一Python受控规则与现有Web共享研究；Java不解析自由文字。 */
++    private void updateChat(String field, String submitted, String previousPrompt) {
++        if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++        final String snapshot = chatState;
++        final String changedField = field;
++        final String raw = submitted;
++        final long version = requestGate.next();
++        chatSend.setEnabled(false);
++        status.setText("本机正在核对本轮显式答复；不会自动访问商城...");
++        SwingWorker<Map<String,String>,Void> worker = new SwingWorker<Map<String,String>,Void>() {
++            @Override protected Map<String,String> doInBackground() throws Exception {
++                List<String> cmd = new ArrayList<>();
++                cmd.add(python);
++                cmd.add("-m");
++                cmd.add("shopping_decision.chat_bridge");
++                for (String value : new String[]{snapshot, changedField, raw}) {
++                    cmd.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
++                }
++                return DesktopBridgeClient.invoke(new ProcessBuilder(cmd), 20_000);
++            }
++            @Override protected void done() {
++                if (!requestGate.accepts(version)) return;
++                chatWorker = null;
++                chatSend.setEnabled(true);
++                try {
++                    Map<String,String> out = get();
++                    if (out.containsKey("error")) throw new IllegalArgumentException(out.get("error"));
++                    if (!out.containsKey("state_json") || !out.containsKey("report_json")) {
++                        throw new IllegalArgumentException("对话结果缺少版本/审计");
++                    }
++                    chatState = out.get("state_json");
++                    chatReport = out.get("report_json");
++                    if (!raw.isBlank()) {
++                        chatTranscript.append("\n用户（" + previousPrompt + "）：" + raw + "\n");
++                    }
++                    chatPromptField = out.getOrDefault("prompt_field", "");
++                    String next = out.getOrDefault("prompt", "本轮已完成");
++                    chatPrompt.setText(next.length() > 80 ? next.substring(0, 80) + "…" : next);
++                    chatTranscript.append("助手：" + next + "\n");
++                    chatTranscript.setCaretPosition(chatTranscript.getDocument().getLength());
++                    chatUnderstanding.setText(out.getOrDefault("understanding", ""));
++                    chatUnderstanding.setCaretPosition(0);
++                    chatOutcome.setText(out.getOrDefault("result_text", ""));
++                    chatOutcome.setCaretPosition(0);
++                    chatInput.setText("");
++                    chatReferences.removeAll();
++                    for (String row : out.getOrDefault("choices", "").split("\\R")) {
++                        if (row.isBlank()) continue;
++                        String[] items = row.split("\\t", 2);
++                        if (items.length != 2) continue;
++                        JButton reference = new JButton(items[0]);
++                        // 不调用 updateChat：点击参考答案仅把草稿送入可编辑文本框。
++                        reference.addActionListener(e -> { chatInput.setText(items[1]); chatInput.requestFocusInWindow(); });
++                        chatReferences.add(reference);
++                    }
++                    chatReferences.revalidate();
++                    chatReferences.repaint();
++                    chatEdits.removeAll();
++                    for (String row : out.getOrDefault("editable", "").split("\\R")) {
++                        String[] items = row.split("\\t", 3);
++                        if (items.length < 3) continue;
++                        JButton edit = new JButton(items[1]);
++                        edit.addActionListener(e -> {
++                            requestGate.invalidate();
++                            if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++                            chatSend.setEnabled(true);
++                            chatPromptField = items[0];
++                            chatPrompt.setText("修改 " + items[1] + "（当前值：" + items[2] + "；发送后才生效）");
++                            chatInput.setText("");
++                            chatInput.requestFocusInWindow();
++                        });
++                        chatEdits.add(edit);
++                    }
++                    chatEdits.revalidate();
++                    chatEdits.repaint();
++                    status.setText("对话版本 " + out.getOrDefault("session_version", "0")
++                            + " · 本机只读研究 · 不批准购买/交易");
++                } catch (Exception ex) {
++                    status.setText("本轮未确认，原条件保留：" + ex.getMessage());
++                    JOptionPane.showMessageDialog(frame, "本轮答复未保存：" + ex.getMessage(),
++                            "请检查", JOptionPane.WARNING_MESSAGE);
++                }
++            }
++        };
++        chatWorker = worker;
++        worker.execute();
+     }
+     private static JTextArea area(int rows) { JTextArea a = new JTextArea(rows,55); a.setLineWrap(true); a.setWrapStyleWord(true); return a; }
+     private static JComboBox<String> choices() { return new JComboBox<>(new String[]{"不确定","是","否"}); }
+@@ -59,8 +248,9 @@ public final class ShoppingDecisionDesktop {
+     private JPanel pageOne() {
+         JPanel p=vertical();p.add(new JLabel("第一步 · 一句话说明打印机需求（不会自动猜测条件）"));p.add(scroll(description));
+         JButton next=new JButton("下一步：补充条件");next.addActionListener(e->{if(description.getText().isBlank())error("请先填写需求");else show("two");});
+-        JButton discovery = new JButton("京东商城商品发现（只读实验）");discovery.addActionListener(e->openMarketplaceTool());
+-        p.add(buttons(next,discovery));return p;
++        JButton discovery = new JButton("京东 / 淘宝商品发现（只读实验）");discovery.addActionListener(e->openMarketplaceTool());
++        JButton chat = new JButton("返回对话主入口");chat.addActionListener(e->show("chat"));
++        p.add(buttons(next,discovery,chat));return p;
+     }
+     private JPanel pageTwo() {
+         JPanel p=vertical();p.add(new JLabel("第二步 · 不确定请留空或选“不确定”"));
+@@ -69,6 +259,7 @@ public final class ShoppingDecisionDesktop {
+         p.add(line("微信打印是必须条件",wechatRequired));p.add(line("可接受的微信方式",wechatWorkflow));
+         p.add(line("必须自动双面打印",autoDuplex));p.add(line("预算支出口径",budgetScope));
+         p.add(line("收货省市区（未知留空，无需详细地址）",deliveryRegion));
++        p.add(line("设备实际部署国家/地区（与收货地可能不同）",deviceDeploymentRegion));
+         p.add(new JLabel("其他硬要求（微信打印不等于普通Wi-Fi），每行一条"));p.add(scroll(other));
+         JButton back=new JButton("返回原话"),next=new JButton("核对我的理解");back.addActionListener(e->show("one"));next.addActionListener(e->review());p.add(buttons(back,next));
+         JPanel wrapper = new JPanel(new BorderLayout());wrapper.add(new JScrollPane(p), BorderLayout.CENTER);return wrapper;
+@@ -87,47 +278,109 @@ public final class ShoppingDecisionDesktop {
+         return s;
+     }
+     private static String bool(JComboBox<String> b) {int i=b.getSelectedIndex();return i==0?"":i==1?"true":"false";}
+-    private String[] gather() {return new String[]{description.getText().trim(),printVolume(),number(budget,"预算"),number(idle,"闲置周数"),bool(color),bool(outsourced),bool(wireless),bool(scan),other.getText().trim(),bool(wechatRequired),new String[]{"unknown","miniprogram","transfer_to_app"}[wechatWorkflow.getSelectedIndex()],bool(autoDuplex),deliveryRegion.getText().trim(),new String[]{"unknown","device_delivered","device_and_extra_consumables"}[budgetScope.getSelectedIndex()]};}
++    private String[] gather() {return new String[]{description.getText().trim(),printVolume(),number(budget,"预算"),number(idle,"闲置周数"),bool(color),bool(outsourced),bool(wireless),bool(scan),other.getText().trim(),bool(wechatRequired),new String[]{"unknown","miniprogram","transfer_to_app"}[wechatWorkflow.getSelectedIndex()],bool(autoDuplex),deliveryRegion.getText().trim(),new String[]{"unknown","device_delivered","device_and_extra_consumables"}[budgetScope.getSelectedIndex()],deviceDeploymentRegion.getText().trim()};}
+     private void review() {try {invalidatePending();captured=gather();lastReport="";result.setText("");
+-        summary.setText("第三步 · 请确认整理后的条件（未知不代表否）\n\n原始需求："+captured[0]+"\n每月张数："+display(captured[1])+"\n预算："+display(captured[2])+"\n闲置周数："+display(captured[3])+"\n彩印："+display(captured[4])+"\n外包彩印："+display(captured[5])+"\n无线："+display(captured[6])+"\n扫描："+display(captured[7])+"\n微信是必须条件："+display(captured[9])+"\n微信方式："+wechatWorkflow.getSelectedItem()+"\n必须自动双面："+display(captured[11])+"\n收货地区："+display(captured[12])+"\n预算口径："+budgetScope.getSelectedItem()+"\n待核对原话与其他要求：\n"+captured[0]+"\n"+captured[8]);show("three");
++        summary.setText("第三步 · 请确认整理后的条件（未知不代表否）\n\n原始需求："+captured[0]+"\n每月张数："+display(captured[1])+"\n预算："+display(captured[2])+"\n闲置周数："+display(captured[3])+"\n彩印："+display(captured[4])+"\n外包彩印："+display(captured[5])+"\n无线："+display(captured[6])+"\n扫描："+display(captured[7])+"\n微信是必须条件："+display(captured[9])+"\n微信方式："+wechatWorkflow.getSelectedItem()+"\n必须自动双面："+display(captured[11])+"\n收货地区："+display(captured[12])+"\n设备实际部署地区："+display(captured[14])+"\n预算口径："+budgetScope.getSelectedItem()+"\n待核对原话与其他要求：\n"+captured[0]+"\n"+captured[8]);show("three");
+     }catch(IllegalArgumentException ex){error(ex.getMessage());}}
+     private static String display(String s) {return s.isEmpty()?"未知":s.equals("true")?"是":s.equals("false")?"否":s;}
+-    private JPanel pageThree() { JPanel p=vertical();summary.setEditable(false);p.add(scroll(summary));JButton back=new JButton("修改条件");back.addActionListener(e->show("two"));calculate.addActionListener(e->calculate());p.add(buttons(back,calculate));return p; }
+-    private JPanel pageFour() {JPanel p=vertical();result.setEditable(false);p.add(scroll(result));JButton edit=new JButton("修改后重新判断"),preview=new JButton("预览本地评审记录");edit.addActionListener(e->{lastReport="";result.setText("");show("two");});preview.addActionListener(e->previewReport());JButton discovery=new JButton("打开京东商品发现（只读）");discovery.addActionListener(e->openMarketplaceTool());p.add(buttons(edit,preview,discovery));return p; }
++    private JPanel pageThree() {
++        JPanel p=vertical();
++        summary.setEditable(false);
++        p.add(scroll(summary));
++        p.add(new JLabel("可选：只加载本机海纳MCP合成测试报告，不会联网。真实响应在用途许可核准前会被阻断。"));
++        p.add(hainaMcpReportStatus);
++        JButton chooseResearch = new JButton("选择本机合成测试报告");
++        JButton clearResearch = new JButton("清除研究材料");
++        chooseResearch.addActionListener(e -> chooseHainaMcpReport());
++        clearResearch.addActionListener(e -> {
++            hainaMcpReport = null;
++            hainaMcpReportStatus.setText("未选择；普通判断不会读取海纳文件");
++        });
++        JButton back=new JButton("修改条件");
++        back.addActionListener(e->show("two"));
++        calculate.addActionListener(e->calculate());
++        p.add(buttons(chooseResearch, clearResearch));
++        p.add(buttons(back,calculate));
++        return p;
++    }
++
++    private void chooseHainaMcpReport() {
++        Path expected = Path.of("tests", "fixtures", "haina_mcp_synthetic_bundle.json")
++                .toAbsolutePath().normalize();
++        JFileChooser chooser = new JFileChooser(expected.getParent().toFile());
++        chooser.setDialogTitle("选择仓库内固定哈希的海纳MCP合成测试夹具");
++        chooser.setFileFilter(new FileNameExtensionFilter("固定合成测试包 (haina_mcp_synthetic_bundle.json)", "json"));
++        chooser.setSelectedFile(expected.toFile());
++        if (chooser.showOpenDialog(frame) != JFileChooser.APPROVE_OPTION) return;
++        Path chosen = chooser.getSelectedFile().toPath().toAbsolutePath().normalize();
++        try {
++            if (!chosen.equals(expected)) {
++                throw new IOException("只允许加载仓库内固定哈希的tests/fixtures/haina_mcp_synthetic_bundle.json；任意文件即使自标synthetic_test也会被阻断");
++            }
++            long size = Files.size(chosen);
++            if (size < 1 || size > 200_000) throw new IOException("文件大小必须在1至200000字节之间");
++            hainaMcpReport = chosen;
++            hainaMcpReportStatus.setText("已选择固定哈希夹具：" + chosen.getFileName()
++                    + "；仅作接线测试，不代表真实商品证据");
++        } catch (IOException ex) {
++            error("无法选择本机研究材料：" + ex.getMessage());
++        }
++    }
++    private JPanel pageFour() {JPanel p=vertical();result.setEditable(false);p.add(scroll(result));JButton edit=new JButton("修改后重新判断"),preview=new JButton("预览本地评审记录");edit.addActionListener(e->{lastReport="";result.setText("");show("two");});preview.addActionListener(e->previewReport());JButton discovery=new JButton("打开京东 / 淘宝商品发现（只读）");discovery.addActionListener(e->openMarketplaceTool());p.add(buttons(edit,preview,discovery));return p; }
+     /** 只构造官方商品搜索页 URL；实际打开必须由用户点击，绝不传输账号登录信息。 */
+     static URI marketplaceSearchUri(String query) {
++        return marketplaceSearchUri(query, "jd");
++    }
++    static URI marketplaceSearchUri(String query, String platform) {
+         if (query == null || query.isBlank() || query.length() > 100
+                 || query.chars().anyMatch(c -> c < 32 || c == 127)) {
+             throw new IllegalArgumentException("搜索词必须为1至100字且不含控制字符");
+         }
+-        return URI.create("https://search.jd.com/Search?keyword="
+-                + URLEncoder.encode(query.trim(), StandardCharsets.UTF_8));
++        String base = switch (platform) {
++            case "jd" -> "https://search.jd.com/Search?keyword=";
++            case "taobao" -> "https://s.taobao.com/search?q=";
++            default -> throw new IllegalArgumentException("不支持的商城");
++        };
++        return URI.create(base + URLEncoder.encode(query.trim(), StandardCharsets.UTF_8));
+     }
+ 
+     /** 独立商品发现窗口，不影响打印机需求与购买批准的状态。 */
+     private void openMarketplaceTool() {
+-        JDialog dialog = new JDialog(frame, "京东商品发现｜用户自选商品｜只读", false);
++        JDialog dialog = new JDialog(frame, "京东 / 淘宝商品发现｜用户自选商品｜只读", false);
+         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+         JPanel p = vertical();
+-        p.add(new JLabel("输入任意品类搜索词 → 用户主动打开京东 → 粘贴1～5条商品详情链接"));
++        p.add(new JLabel("输入搜索词 → 自己选择京东或淘宝并登录 → 粘贴1～5条商品详情链接"));
++        JComboBox<String> marketplace = new JComboBox<>(new String[]{"京东", "淘宝 / 天猫"});
++        p.add(line("选择商城", marketplace));
+         JTextField keyword = new JTextField(description.getText().isBlank()
+                 ? "" : description.getText().trim().substring(0, Math.min(100, description.getText().trim().length())));
+-        p.add(line("京东搜索词", keyword));
+-        p.add(new JLabel("选中的商品链接（每行一个 https://item.jd.com/数字.html；不填写账号和密码）"));
++        p.add(line("商品搜索词", keyword));
++        JLabel linkHelp = new JLabel("完整商品链接：京东 item.jd.com/数字.html；淘宝 item.taobao.com/item.htm?id=数字");
++        p.add(linkHelp);
++        p.add(new JLabel("每行一个链接，不填写账号和密码，不接受需跳转的短链接"));
+         JTextArea links = area(6);p.add(scroll(links));
+         p.add(new JLabel("核验记录（仅为商品线索，不能证明价格、库存或型号）"));
+         JTextArea outcome = area(11);outcome.setEditable(false);p.add(scroll(outcome));
+-        JButton open = new JButton("在本机浏览器打开京东搜索");
++        JButton open = new JButton("打开选中商城搜索");
+         JButton review = new JButton("校验粘贴的链接（不联网）");
++        JComboBox<String> verifiedLinks = new JComboBox<>();
++        JButton openVerified = new JButton("打开已校验商品链接");
++        openVerified.setEnabled(false);
++        p.add(line("校验通过的商品（仅网址）", verifiedLinks));
++        marketplace.addActionListener(e -> {
++            verifiedLinks.removeAllItems();
++            openVerified.setEnabled(false);
++        });
+         JButton close = new JButton("关闭");
+         open.addActionListener(e -> {
+             try {
+-                URI destination = marketplaceSearchUri(keyword.getText());
++                String site = marketplace.getSelectedIndex() == 0 ? "jd" : "taobao";
++                URI destination = marketplaceSearchUri(keyword.getText(), site);
+                 if (!Desktop.isDesktopSupported() || !Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                     throw new IllegalStateException("当前系统不支持打开默认浏览器");
+                 }
+                 Desktop.getDesktop().browse(destination);
+-                outcome.setText("浏览器已尝试打开京东公开搜索页。请自行决定是否登录并手动复制商品链接。\n"
++                outcome.setText("浏览器已尝试打开所选商城的搜索页。请自行决定是否登录并手动复制商品链接。\n"
+                         + "本机购物智能体不读取 Cookie、登录状态、商品页内容或支付信息。");
+             } catch (Exception ex) {
+                 JOptionPane.showMessageDialog(dialog, "无法打开浏览器：" + ex.getMessage(),
+@@ -137,12 +390,16 @@ public final class ShoppingDecisionDesktop {
+         review.addActionListener(e -> {
+             try {
+                 // 与 Python 校验一致，拒绝模糊/过长搜索词，避免用户误以为打开了不可信站点。
+-                marketplaceSearchUri(keyword.getText());
++                String site = marketplace.getSelectedIndex() == 0 ? "jd" : "taobao";
++                marketplaceSearchUri(keyword.getText(), site);
+                 String rawLinks = links.getText();
+                 if (rawLinks.isBlank() || rawLinks.length() > 12000) {
+-                    throw new IllegalArgumentException("请粘贴1至5条京东详情链接");
++                    throw new IllegalArgumentException("请粘贴1至5条当前商城的完整商品详情链接");
+                 }
+                 final String query = keyword.getText().trim();
++                final String chosenPlatform = site;
++                verifiedLinks.removeAllItems();
++                openVerified.setEnabled(false);
+                 review.setEnabled(false);
+                 outcome.setText("仅本机校验用户选取的商品链接，不会访问外部 API ...");
+                 SwingWorker<Map<String,String>,Void> worker = new SwingWorker<Map<String,String>,Void>() {
+@@ -151,6 +408,7 @@ public final class ShoppingDecisionDesktop {
+                         cmd.add(python);cmd.add("-m");cmd.add("shopping_decision.discovery_bridge");
+                         cmd.add(Base64.getEncoder().encodeToString(query.getBytes(StandardCharsets.UTF_8)));
+                         cmd.add(Base64.getEncoder().encodeToString(rawLinks.getBytes(StandardCharsets.UTF_8)));
++                        cmd.add(Base64.getEncoder().encodeToString(chosenPlatform.getBytes(StandardCharsets.UTF_8)));
+                         return DesktopBridgeClient.invoke(new ProcessBuilder(cmd), 15_000);
+                     }
+                     @Override protected void done() {
+@@ -158,7 +416,14 @@ public final class ShoppingDecisionDesktop {
+                         review.setEnabled(true);
+                         try {
+                             Map<String,String> checked = get();
++                            if (!chosenPlatform.equals(marketplace.getSelectedIndex() == 0 ? "jd" : "taobao")) {
++                                outcome.setText("商城选择已变更，请重新校验所选平台的链接");
++                                return;
++                            }
+                             if (checked.containsKey("error")) throw new IllegalArgumentException(checked.get("error"));
++                            String[] urls = checked.getOrDefault("candidate_urls", "").split("\\n");
++                            for (String url : urls) if (!url.isBlank()) verifiedLinks.addItem(url);
++                            openVerified.setEnabled(verifiedLinks.getItemCount() > 0);
+                             outcome.setText(checked.getOrDefault("summary", "无候选")
+                                     + "\n\n核验记录（未批准购买）：\n"
+                                     + checked.getOrDefault("report_json", "{}"));
+@@ -173,8 +438,24 @@ public final class ShoppingDecisionDesktop {
+                 JOptionPane.showMessageDialog(dialog, ex.getMessage(), "链接格式不正确", JOptionPane.WARNING_MESSAGE);
+             }
+         });
++        openVerified.addActionListener(e -> {
++            try {
++                String chosen = (String) verifiedLinks.getSelectedItem();
++                if (chosen == null) return;
++                URI itemUri = URI.create(chosen);
++                String host = itemUri.getHost();
++                if (!"https".equals(itemUri.getScheme()) ||
++                        !Set.of("item.jd.com", "item.taobao.com", "detail.tmall.com").contains(host))
++                    throw new IllegalArgumentException("不是已校验的官方商品详情页");
++                if (!Desktop.isDesktopSupported() || !Desktop.getDesktop().isSupported(Desktop.Action.BROWSE))
++                    throw new IllegalStateException("当前系统不支持浏览器");
++                Desktop.getDesktop().browse(itemUri);
++            } catch (Exception ex) {
++                JOptionPane.showMessageDialog(dialog, "无法打开商品：" + ex.getMessage(), "打开失败", JOptionPane.WARNING_MESSAGE);
++            }
++        });
+         close.addActionListener(e -> dialog.dispose());
+-        p.add(buttons(open, review, close));
++        p.add(buttons(open, review, openVerified, close));
+         dialog.add(new JScrollPane(p));
+         dialog.setSize(880,720);
+         dialog.setLocationRelativeTo(frame);
+@@ -210,6 +491,10 @@ public final class ShoppingDecisionDesktop {
+         SwingWorker<Map<String,String>,Void> worker = new SwingWorker<Map<String,String>,Void>() {
+             protected Map<String,String> doInBackground() throws Exception {
+                 List<String> cmd=new ArrayList<>();cmd.add(python);cmd.add("-m");cmd.add("shopping_decision.desktop_bridge");
++                if (hainaMcpReport != null) {
++                    cmd.add("--haina-mcp-report");
++                    cmd.add(hainaMcpReport.toString());
++                }
+                 for(String s:snapshot)cmd.add(Base64.getEncoder().encodeToString(s.getBytes(StandardCharsets.UTF_8)));
+                 return DesktopBridgeClient.invoke(new ProcessBuilder(cmd), 20_000);
+             }
+diff --git a/shopping_decision/desktop_bridge.py b/shopping_decision/desktop_bridge.py
+index 5b8189e..cf01a31 100644
+--- a/shopping_decision/desktop_bridge.py
++++ b/shopping_decision/desktop_bridge.py
+@@ -5,6 +5,7 @@ import json
+ import re
+ import os
+ import time
++from pathlib import Path
+ from .web import evaluate_input
+ 
+ NAMES = ('monthly_pages','budget_max_cny','idle_weeks','needs_color','accepts_outsourced_color','requires_wireless','requires_scan')
+@@ -27,18 +28,29 @@ def encode(s):
+ 
+ def main():
+     try:
+-        raw = [base64.b64decode(v, validate=True).decode('utf-8') for v in sys.argv[1:]]
+-        if len(raw) not in (9, 14):
++        argv = sys.argv[1:]
++        haina_mcp_report_path = None
++        if argv and argv[0] == '--haina-mcp-report':
++            if len(argv) < 3:
++                raise ValueError('海纳研究材料参数不完整')
++            haina_mcp_report_path = Path(argv[1])
++            argv = argv[2:]
++        if any(value == '--haina-mcp-report' for value in argv):
++            raise ValueError('海纳研究材料参数位置不正确')
++        raw = [base64.b64decode(v, validate=True).decode('utf-8') for v in argv]
++        if len(raw) not in (9, 14, 15):
+             raise ValueError('条件数量不正确')
+         data = {'description':raw[0], 'confirmed': True, 'requirements':raw[8].splitlines() if raw[8] else []}
+-        if len(raw) == 14:
+-            for name, value in zip(('wechat_required', 'wechat_workflow', 'requires_auto_duplex', 'delivery_region', 'budget_scope'), raw[9:]):
++        if len(raw) >= 14:
++            for name, value in zip(('wechat_required', 'wechat_workflow', 'requires_auto_duplex', 'delivery_region', 'budget_scope'), raw[9:14]):
+                 if name in ('wechat_required', 'requires_auto_duplex'):
+                     if value not in ('', 'true', 'false'):
+                         raise ValueError(name + ' 必须是true、false或未知')
+                     data[name] = None if value == '' else value == 'true'
+                 else:
+                     data[name] = (value or None) if name == 'delivery_region' else (value or 'unknown')
++        if len(raw) == 15:
++            data['device_deployment_region'] = raw[14] or None
+         for k,v in zip(NAMES,raw[1:8]):
+             if k in NAMES[3:] and v not in ('', 'true', 'false'):
+                 raise ValueError(k + ' 必须是true、false或未知')
+@@ -47,7 +59,7 @@ def main():
+                        (int(v) if k == 'monthly_pages' and re.fullmatch(r'[0-9]+', v) else
+                         v if k == 'monthly_pages' else
+                         (v == 'true' if k in NAMES[3:] else int(v))))
+-        result = evaluate_input(data)
++        result = evaluate_input(data, haina_mcp_report_path=haina_mcp_report_path)
+         if os.environ.get("SHOPPING_H09_TEST_DELAY_MS"):
+             time.sleep(min(5, int(os.environ["SHOPPING_H09_TEST_DELAY_MS"])/1000))
+         rec = result['recommendation']
+@@ -98,6 +110,133 @@ def main():
+                     preview.append('  零售渠道：尚无该型号已核实销售项')
+                 preview.append('  官方资料：' + item['official_url'] + '；获取日：' + comparison['catalog_recorded_on'])
+             preview.append('任何一款均未证明符合预算或耐用性领先；缺报价/库存/销售配置时继续暂缓。')
++        case_research = result.get('real_printer_case_research')
++        if isinstance(case_research, dict):
++            shared = case_research.get('shared_research_snapshot', {})
++            if shared.get('status') == 'research_snapshot_only_not_purchase':
++                preview.append('【共享研究结果｜计算全部候选，仅展示前三项；不含购买许可】')
++                preview.append('已计算候选：' + str(shared['total_candidate_count'])
++                               + '；下一动作：' + str(shared['next_action']))
++                for candidate in shared.get('displayed_candidates', []):
++                    preview.append('  ' + str(candidate['model_id']) + '：'
++                                   + str(candidate['eligibility']))
++                if shared.get('hidden_candidates'):
++                    preview.append('其余已计算但未展示：' + '、'.join(
++                        str(item['model_id']) for item in shared['hidden_candidates']))
++                for question in shared.get('necessary_user_questions', []):
++                    preview.append('待本人确认：' + str(question))
++            comparison = case_research.get('model_comparison', {})
++            effects = case_research.get('decision_effects', {})
++            if effects.get('status') == 'source_limited_development_not_independent_effect':
++                preview.append('【认知增量与关键缺件｜仅型号研究，未通过独立效果验收】')
++                for effect in effects.get('judgments', [])[:4]:
++                    preview.append(str(effect['id']) + '：' + str(effect['claim'])
++                                   + '；对判断的作用：' + str(effect['decision_effect']))
++                    preview.append('  仍缺：' + '、'.join(effect.get('missing', []))
++                                   + '；来源：' + '、'.join(ref.get('url', '')
++                                       for ref in effect.get('source_refs', [])))
++                for question in effects.get('questions', []):
++                    preview.append('关键补问：' + question)
++                preview.append('候选路线（不含购买资格）：' + '、'.join(
++                    str(route.get('name')) + ('（条件冲突，暂停判断）'
++                        if route.get('eligibility') == 'blocked_by_user_condition_conflict' else '')
++                    for route in effects.get('routes', [])))
++            preview.append('【公开厂家资料的两型号比较｜不是海纳数据，也不是平台在售核验】')
++            for item in case_research.get('reasons', [])[:9]:
++                preview.append(str(item.get('id')) + '：' + str(item.get('reason'))
++                               + '；限制：' + str(item.get('counter_evidence')))
++            selection = case_research.get('criteria_comparison', {})
++            if selection.get('status') == 'criteria_driven_research_not_purchase':
++                preview.append('【本轮条件驱动的型号资格｜依据版本：' +
++                               str(selection.get('criteria_version')) + '】')
++                preview.append('当前依据 SHA-256：' + str(selection.get('criteria_sha256')))
++                preview.append('本轮规范化硬要求：' + str(selection.get('normalized_required', {}))
++                               + '；未识别：' + str(selection.get('unresolved_hard_conditions', []))
++                               + '；未建准则：' + str(selection.get('unmodeled_hard_requirements', [])))
++                relation_names = {
++                    'match': '符合', 'mismatch': '不符合',
++                    'unknown': '未核', 'at_or_below': '不高于',
++                    'above': '高于', 'below': '低于建议区间',
++                    'within': '位于建议区间', 'equal': '等于建议区间',
++                    'contains': '覆盖建议区间', 'overlap': '与建议区间部分重叠',
++                    'workflow_unconfirmed': '微信打印流程未确认',
++                    'other_workflow_unverified': 'App替代流程待实测',
++                    'deployment_region_unconfirmed': '设备部署地未知，微信服务未核',
++                    'deployment_outside_verified_scope': '境外微信服务缺有效适用证据',
++                }
++                for model in selection.get('models', []):
++                    state_label = {
++                        'excluded_by_hard_condition': '本轮硬条件排除',
++                        'pending_hard_evidence': '存在硬条件未知，暂不能判满足',
++                        'model_spec_research_only': '规格研究候选，不是购买批准',
++                        'blocked_by_user_condition_conflict': '本人确认与原文硬条件冲突，暂停入选',
++                    }.get(model.get('eligibility'), '研究状态待核')
++                    preview.append(str(model.get('model_id')) + '：' + state_label)
++                    for check in model.get('checks', []):
++                        name = str(check.get('criterion_id'))
++                        relation = relation_names.get(check.get('relation'), '未核')
++                        preview.append('  ' + name + ' ' + relation + '；用户：' +
++                                       str(check.get('user_value')) + '；型号事实：' +
++                                       str(check.get('product_value')) + ' ' +
++                                       str(check.get('unit')) + '；来源：' +
++                                       '、'.join(check.get('source_ids', [])) + '；证据状态：' +
++                                        str(check.get('evidence_state', 'unknown')) + '；局限：' +
++                                       str(check.get('unknown_or_counter', '')))
++                    preview.append('  地区到手价、购买资格与平台销售身份：未核，不可购买')
++                for question in selection.get('questions', [])[:6]:
++                    preview.append('待核：' + str(question))
++                preview.append('【依据来源与适用限制】')
++                for source_id, source in selection.get('source_registry', {}).items():
++                    preview.append(str(source_id) + ' (' +
++                                   str(source.get('type', 'unknown')) + ')：' +
++                                   str(source.get('url', '')) + '；限制：' +
++                                   str(source.get('limit', '')))
++            for item in comparison.get('comparisons', [])[:8]:
++                preview.append(str(item.get('dimension')) + '：' + str(item.get('result'))
++                               + '（来源：' + '、'.join(item.get('source_ids', [])) + '）')
++            for item in comparison.get('active_conditional_decisions', [])[:3]:
++                preview.append('当前条件触发的取舍：' + str(item.get('when')) + ' → ' + str(item.get('model'))
++                               + '；' + str(item.get('reason')) + '（未批准购买）')
++            for item in comparison.get('unknown_conditional_decisions', [])[:3]:
++                preview.append('条件尚未确认：' + str(item.get('when')) + '；需补：'
++                               + '；'.join(item.get('conditions_before_purchase', [])))
++            preview.append('部署地区范围：' + str(comparison.get('deployment_region_scope', 'unknown'))
++                           + '；是否已提供部署地：' + str(comparison.get('deployment_region_provided', False)))
++            preview.append('当前平台商品身份：'
++                           + str(comparison.get('real_sale_identity_verified_count', 0))
++                           + '；地区有效报价：'
++                           + str(comparison.get('regional_live_quote_count', 0))
++                           + '；购买批准：否。')
++        haina_mcp = result.get('haina_mcp_research')
++        if isinstance(haina_mcp, dict):
++            preview.append('【海纳MCP研究材料｜显式本机文件；当前仅允许合成接线测试】')
++            preview.append('材料状态：' + str(haina_mcp.get('status', 'unknown'))
++                           + '；实体数：' + str(haina_mcp.get('entity_count', 0))
++                           + '；平台身份核实：' + str(haina_mcp.get('platform_identity_verified_count', 0))
++                           + '；有效报价：' + str(haina_mcp.get('quote_verified_count', 0)))
++            if haina_mcp.get('error'):
++                preview.append('材料拒绝/错误原因：' + str(haina_mcp.get('error')))
++            for entity in haina_mcp.get('entities', [])[:3]:
++                preview.append('实体线索：' + str(entity.get('entity_name', '未命名'))
++                               + '；型号候选：' + '、'.join(entity.get('model_candidates', []))
++                               + '；销售线索数：' + str(entity.get('sale_lead_count', 0)))
++                for lead in entity.get('sale_leads', [])[:2]:
++                    preview.append('  销售线索：' + str(lead.get('title') or '未返回商品标题')
++                                   + '；身份：' + str(lead.get('identity_status'))
++                                   + '；商城：' + str(lead.get('mall_hint') or '未知')
++                                   + '；店铺：' + str(lead.get('seller_hint') or '未知')
++                                   + '；链接域名：' + str(lead.get('link_host') or '未知')
++                                   + '；供方价格线索：' + str(lead.get('supplier_price_hint') or '无')
++                                   + '（未核验，不是到手价）')
++                for parameter in entity.get('parameters', [])[:5]:
++                    preview.append('  参数线索：' + str(parameter.get('name') or '未命名')
++                                   + ' = ' + str(parameter.get('value') or parameter.get('description') or '未知')
++                                   + '（供应商返回，待核）')
++                for opinion in entity.get('opinion_summaries', [])[:3]:
++                    preview.append('  评价摘要线索：' + str(opinion.get('attribute_name') or '未命名')
++                                   + ' / ' + str(opinion.get('attribute_value') or '未知')
++                                   + '（供应商聚合，非独立评测）')
++            preview.append('本材料不提升平台商品ID、地区报价、预算通过或购买批准；合成内容不代表真实商品。')
+         visible_reasons = '\n'.join((*rec['reasons'], *preview))
+         output = [('status',rec['status']),('route',rec['recommended_route'] or ''),('reasons',visible_reasons),('questions','\n'.join(rec['questions'])),('unknowns','\n'.join(rec['unknowns'])),('evidence','\n'.join(e['id']+' '+e['source']+' '+e['published_on'] for e in result['evidence'])),('card_version',result['card_sha256']),('time',result['evaluated_at']),('report_json',json.dumps(result,ensure_ascii=False,indent=2))]
+     except (ValueError,TypeError) as exc:
+diff --git a/shopping_decision/dialogue_flow.py b/shopping_decision/dialogue_flow.py
+index 1b5ea4a..fe414f8 100644
+--- a/shopping_decision/dialogue_flow.py
++++ b/shopping_decision/dialogue_flow.py
+@@ -12,16 +12,18 @@ import sys
+ from .contracts import PurchaseRequest
+ from .printer_conditions import printer_conditions
+ from .public_catalog import compare_public_snapshot
++from .product_compare import compare_products
++from .p0_7_official_details import load_reviewed_local_replay
+ 
+ _FIELDS = {
+     "category", "usage", "budget_max_cny", "budget_scope", "monthly_pages_range",
+     "needs_color", "accepts_outsourced_color", "requires_wireless", "requires_scan",
+     "requires_auto_duplex", "wechat_required", "wechat_workflow",
+-    "delivery_region", "requirements",
++    "delivery_region", "device_deployment_region", "accepts_initial_setup", "requirements",
+ }
+ _BOOLEAN = {
+     "needs_color", "accepts_outsourced_color", "requires_wireless",
+-    "requires_scan", "requires_auto_duplex", "wechat_required",
++    "requires_scan", "requires_auto_duplex", "wechat_required", "accepts_initial_setup",
+ }
+ _MAX_TEXT = 350
+ 
+@@ -133,7 +135,7 @@ def next_questions(state: dict, *, limit: int = 2) -> list[dict]:
+     return questions[:limit]
+ 
+ 
+-def compare_dialogue(state: dict) -> dict:
++def compare_dialogue(state: dict, *, catalog_override: dict | None = None) -> dict:
+     v = _values(state)
+     base = {"session_version": state["version"],
+             "purchase_recommendation_approved": False, "transactions_enabled": False}
+@@ -160,24 +162,174 @@ def compare_dialogue(state: dict) -> dict:
+     if conditions["conflicts"]:
+         return {**base, "status": "condition_conflict",
+                 "conflicts": conditions["conflicts"]}
+-    result = compare_public_snapshot(required=conditions["required"],
+-                                     preferred=conditions["preferred"],
+-                                     budget_max_cny=req.budget_max_cny)
++    source_mode = "caller_injected_manufacturer_facts"
++    source_warning = None
++    if catalog_override is None:
++        try:
++            catalog_override = load_reviewed_local_replay()
++            source_mode = "recorded_manufacturer_detail_replay_no_network"
++        except (FileNotFoundError, OSError, ValueError):
++            # 原文缺失或完整性检查失败时，只能降级为旧目录快照；绝不回退到旧详情摘要。
++            source_mode = "older_manufacturer_directory_snapshot_only"
++            source_warning = "本机型号详情原文缺失或完整性校验失败，已降级为旧目录快照；未使用旧详情摘要。"
++    if catalog_override is None:
++        result = compare_public_snapshot(required=conditions["required"],
++                                         preferred=conditions["preferred"],
++                                         budget_max_cny=req.budget_max_cny)
++    else:
++        # 仅供内部已核对厂商事实实验调用；不能接受用户输入任意商品事实。
++        fact_result = compare_products(
++            catalog_override, category="printer", required=conditions["required"],
++            preferred=conditions["preferred"], budget_max_cny=req.budget_max_cny,
++            target_region="CN")
++        result = {"operation": "injected_manufacturer_facts_only",
++                  "comparison": fact_result, "approved_purchase_count": 0,
++                  "purchase_recommendation_approved": False, "transactions_enabled": False}
+     return {**base, "status": "model_facts_only_not_purchase",
++            "source_mode": source_mode,
++            **({"source_warning": source_warning} if source_warning else {}),
+             "questions": conditions["questions"],
++            "unresolved_actions": [{"issue": q, "state": "optional_confirmation_or_defer"}
++                                    for q in conditions["questions"]],
+             "comparison": result, "unknowns": conditions["unresolved_hard_conditions"]}
+ 
+ 
+ def main() -> None:
+     """一行JSON为一轮用户显式确认，例如 {"text":"黑白就够","answers":{"needs_color":false}}。"""
++    import argparse
++    from pathlib import Path
++    from .discovery_pool import build_discovery_pool
++
++    parser = argparse.ArgumentParser()
++    parser.add_argument("--haina-report", type=Path,
++                        help="仅用于接入测试的海纳离线导入报告；真实响应须先获用途许可")
++    parser.add_argument("--haina-mcp-report", type=Path,
++                        help="显式加载本机MCP合成测试包；真实响应在用途许可核准前阻断")
++    parser.add_argument("--sale-evidence-report", type=Path,
++                        help="P0.9-B销售配置离线合同测试；仅synthetic_test，非真实身份核验")
++    parser.add_argument("--real-printer-case", action="store_true",
++                        help="H08真实需求公开来源研究比较（仅待审理由，不接真实销售SKU/报价）")
++    args = parser.parse_args()
++    discovery_context = None
++    haina_mcp_context = None
++    sale_context = None
++    sale_report = None
++    if args.haina_mcp_report is not None:
++        from .haina_mcp_ingest import load_haina_mcp_report
++        haina_mcp_context = load_haina_mcp_report(args.haina_mcp_report)
++    if args.sale_evidence_report is not None:
++        try:
++            if (not args.sale_evidence_report.is_file()
++                    or args.sale_evidence_report.stat().st_size > 200_000):
++                raise ValueError("sale_evidence_missing_or_too_large")
++            sale_report = json.loads(args.sale_evidence_report.read_text(encoding="utf-8"))
++            sale_context = build_discovery_pool(
++                [], sale_configuration_report=sale_report)["sale_configuration_evidence"]
++        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
++            sale_context = {
++                "status": "sale_evidence_unavailable",
++                "error": type(exc).__name__,
++                "configuration_count": 0, "configurations": [],
++                "real_identity_verified_count": 0,
++                "purchase_recommendation_approved": False,
++                "transactions_enabled": False,
++            }
++    if args.haina_report is not None:
++        try:
++            if not args.haina_report.is_file() or args.haina_report.stat().st_size > 200_000:
++                raise ValueError("haina_report_missing_or_too_large")
++            report = json.loads(args.haina_report.read_text(encoding="utf-8"))
++            discovery_context = build_discovery_pool([report])
++            leads = discovery_context.get("unverified_source_leads", [])
++            discovery_context["total_unverified_source_lead_count"] = len(leads)
++            discovery_context["displayed_source_lead_count"] = min(3, len(leads))
++            discovery_context["unverified_source_leads"] = leads[:3]
++        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
++            discovery_context = {
++                "status": "discovery_report_unavailable",
++                "error": type(exc).__name__,
++                "candidate_count": 0,
++                "unverified_source_lead_count": 0,
++                "unverified_source_leads": [],
++                "purchase_recommendation_approved": False,
++                "transactions_enabled": False,
++            }
++
++    # Windows 管道默认可能使用 GBK；文本 JSONL 契约固定 UTF-8，避免父子进程误解码。
++    if hasattr(sys.stdin, "reconfigure"):
++        sys.stdin.reconfigure(encoding="utf-8")
++    if hasattr(sys.stdout, "reconfigure"):
++        sys.stdout.reconfigure(encoding="utf-8")
+     state = new_dialogue()
+     print(json.dumps({"status": "ready", "questions": next_questions(state)}, ensure_ascii=False), flush=True)
+     for raw in sys.stdin:
+         try:
+             turn = json.loads(raw)
+             state = apply_turn(state, turn["answers"], raw_text=turn["text"])
++            comparison = compare_dialogue(state)
++            fact_result = comparison.get("comparison", {}).get("comparison", {})
++            candidates = fact_result.get("candidates") if isinstance(fact_result, dict) else None
++            if isinstance(candidates, list):
++                fact_result["total_candidate_count"] = len(candidates)
++                displayed = candidates[:3]
++                excluded = next((x for x in candidates
++                                 if x.get("status") == "excluded_by_verified_spec"), None)
++                if excluded and all(x.get("model_id") != excluded.get("model_id") for x in displayed):
++                    displayed = candidates[:2] + [excluded]
++                fact_result["displayed_candidate_count"] = len(displayed)
++                fact_result["candidates"] = displayed
+             out = {"version": state["version"], "questions": next_questions(state),
+-                   "comparison": compare_dialogue(state), "history": state["history"][-1]}
++                   "comparison": comparison, "history": state["history"][-1]}
++            if haina_mcp_context is not None:
++                out["haina_mcp_research"] = haina_mcp_context
++            if args.real_printer_case:
++                from .real_printer_case import compare_case_research
++                # 此处仅按本轮已显式确认条件筛研究理由，绝不代替平台SKU证据。
++                out["real_printer_case_research"] = compare_case_research(_values(state))
++            if discovery_context is not None:
++                out["discovery_pool"] = discovery_context
++            if sale_report is not None:
++                # 每轮按当前时刻重新核验原观察事件，绝不刷新原来源时间。
++                # 兼容受控模拟钟：时间来自门禁模块，而不是CLI启动缓存。
++                from . import sale_configuration_evidence as sale_gate
++                current = sale_gate.datetime.now(sale_gate.timezone.utc)
++                try:
++                    sale_context = build_discovery_pool(
++                        [], now=current, sale_configuration_report=sale_report
++                    )["sale_configuration_evidence"]
++                except (ValueError, TypeError, OSError) as exc:
++                    sale_context = {
++                        "status": "sale_evidence_unavailable",
++                        "error": type(exc).__name__, "configuration_count": 0,
++                        "configurations": [], "real_identity_verified_count": 0,
++                        "purchase_recommendation_approved": False,
++                        "transactions_enabled": False,
++                    }
++            if sale_context is not None:
++                # 按用户本轮最新条件，仅关联已核的厂商型号规格；平台所售配置
++                # 仍是合成合同测试，绝不提升真实身份、预算或购买批准。
++                view = deepcopy(sale_context)
++                matched = {x.get("model_id"): x for x in candidates or []
++                           if isinstance(x, dict)}
++                details = []
++                for config in view.get("configurations", [])[:3]:
++                    detail = dict(config)
++                    matched_row = (matched.get(detail["selected_model_id"])
++                                   if detail.get("status") == "synthetic_field_binding_test_only"
++                                   else None)
++                    detail["manufacturer_model_fact_status"] = (
++                        "manufacturer_facts_comparison_available"
++                        if matched_row else "manufacturer_facts_not_compared")
++                    detail["required_met"] = matched_row.get("required_met", []) if matched_row else []
++                    detail["required_unknown"] = matched_row.get("required_unknown", []) if matched_row else []
++                    detail["required_failed"] = matched_row.get("required_failed", []) if matched_row else []
++                    detail["next_verification"] = (
++                        "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
++                    )
++                    details.append(detail)
++                view["displayed_configuration_count"] = len(details)
++                view["configurations"] = details
++                out["sale_configuration_evidence"] = view
+         except (ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
+             out = {"status": "invalid_turn", "error": str(exc)}
+         print(json.dumps(out, ensure_ascii=False), flush=True)
+diff --git a/shopping_decision/discovery_bridge.py b/shopping_decision/discovery_bridge.py
+index d531d46..5952bfe 100644
+--- a/shopping_decision/discovery_bridge.py
++++ b/shopping_decision/discovery_bridge.py
+@@ -1,6 +1,6 @@
+ """从本机 Swing 手动商城发现窗导入用户选择的商品链接（完全离线）。
+ 
+-只能构造官方公开搜索 URL，并校验用户粘贴的 JD 商品详情链接。
++只能构造官方公开搜索 URL，并离线校验用户粘贴的京东或淘宝商品详情链接。
+ 不接管浏览器登录状态、无平台 API、无页面抓取、无自动下单。
+ """
+ from __future__ import annotations
+@@ -11,7 +11,7 @@ import json
+ import sys
+ from urllib.parse import quote
+ 
+-from .discovery_ingest import ingest_user_jd_item_link
++from .discovery_ingest import ingest_user_jd_item_link, ingest_user_taobao_item_link
+ 
+ MAX_QUERY_CHARS = 100
+ MAX_LINKS = 5
+@@ -30,22 +30,24 @@ def shop_search_url(query: str, *, platform: str = "jd") -> str:
+     raise ValueError("不支持的商城")
+ 
+ 
+-def review_user_links(query: str, pasted: str, *, now: datetime | None = None) -> dict:
++def review_user_links(query: str, pasted: str, *, platform: str = "jd",
++                      now: datetime | None = None) -> dict:
+     """只读整理链接，禁止使用网页价格或 URL 编号作购买依据。"""
+-    url = shop_search_url(query)
++    url = shop_search_url(query, platform=platform)
+     if not isinstance(pasted, str) or len(pasted) > 12000:
+         raise ValueError("商品链接文本过长")
+     lines = [s.strip() for s in pasted.splitlines() if s.strip()]
+     if not 1 <= len(lines) <= MAX_LINKS:
+-        raise ValueError("请粘贴1至5条京东商品详情页链接（每行一条）")
++        raise ValueError("请粘贴1至5条当前所选平台的完整商品详情链接（每行一条）")
+     current = now or datetime.now(timezone.utc)
+     seen = set()
+     entries = []
+     rejected = []
+     for idx, line in enumerate(lines, 1):
+-        result = ingest_user_jd_item_link(line, observed_at=current.isoformat(), now=current)
++        ingest = ingest_user_jd_item_link if platform == "jd" else ingest_user_taobao_item_link
++        result = ingest(line, observed_at=current.isoformat(), now=current)
+         if result.get("status") != "discovered_unverified":
+-            rejected.append({"line": idx, "reason": "not_verified_jd_product_url"})
++            rejected.append({"line": idx, "reason": "invalid_or_wrong_platform_product_url"})
+             continue
+         key = (result["platform"], result["platform_item_id"])
+         if key in seen:
+@@ -58,11 +60,12 @@ def review_user_links(query: str, pasted: str, *, now: datetime | None = None) -
+         "status": "candidates_unverified" if entries else "no_valid_candidates",
+         "operation": "user_selected_marketplace_link_review",
+         "search_query": query.strip(), "search_url": url,
++        "marketplace_platform": platform,
+         "candidate_count": len(entries), "rejected_count": len(rejected),
+         "candidates": entries, "rejected": rejected,
+         "limitations": [
+-            "这是用户自己打开商城搜索后选取的链接，系统未调用京东官方搜索API",
+-            "仅从网址抽取可能的京东商品编号，未证明真实在售、准确型号和商品类别",
++            "这是用户自己打开商城搜索后选取的链接，系统未调用任何平台官方搜索API",
++            "仅从官方商品网址抽取候选编号，未证明真实在售、准确型号和商品类别",
+             "卖家、选中套餐、地区库存、券后价、运费及售后均待平台核验",
+             "此结果不进入原购买批准门禁，不会产生订单或支付操作",
+         ],
+@@ -78,16 +81,17 @@ def _output(values: dict[str, str]) -> None:
+ 
+ def main() -> None:
+     try:
+-        if len(sys.argv) != 3:
+-            raise ValueError("需要两个Base64参数：搜索词、商品链接")
++        if len(sys.argv) not in (3, 4):
++            raise ValueError("需要Base64参数：搜索词、商品链接、可选平台")
+         raw = [base64.b64decode(s, validate=True).decode("utf-8") for s in sys.argv[1:]]
+-        result = review_user_links(raw[0], raw[1])
++        result = review_user_links(raw[0], raw[1], platform=raw[2] if len(raw) == 3 else "jd")
+         msg = [f"状态：{result['status']}", f"商品线索：{result['candidate_count']}条",
+                f"拒绝/重复：{result['rejected_count']}条"]
+         for item in result["candidates"]:
+-            msg.append(f"京东商品编号（未核）：{item['platform_item_id']}  {item['canonical_url']}")
++            msg.append(f"{result['marketplace_platform']} 商品编号（未核）：{item['platform_item_id']}  {item['canonical_url']}")
+         msg.append("实际价格/库存/店铺/型号均未核实；暂不构成购买建议。")
+         _output({"status": result["status"], "summary": "\n".join(msg),
++                 "candidate_urls": "\n".join(x["canonical_url"] for x in result["candidates"]),
+                  "report_json": json.dumps(result, ensure_ascii=False, indent=2)})
+     except (ValueError, UnicodeError) as exc:
+         _output({"error": str(exc)})
+diff --git a/shopping_decision/discovery_ingest.py b/shopping_decision/discovery_ingest.py
+index 43105d2..4050161 100644
+--- a/shopping_decision/discovery_ingest.py
++++ b/shopping_decision/discovery_ingest.py
+@@ -8,7 +8,7 @@ from __future__ import annotations
+ 
+ from datetime import datetime, timezone
+ import re
+-from urllib.parse import urlsplit
++from urllib.parse import parse_qs, urlsplit
+ 
+ 
+ _JD_ID = re.compile(r"^[0-9]{5,20}$")
+@@ -67,6 +67,38 @@ def parse_jd_item_url(value: str) -> dict | None:
+         return None
+ 
+ 
++def parse_taobao_item_url(value: str) -> dict | None:
++    """用户主动提供的淘宝/天猫完整商品链接。拒绝短链/跳转，URL不证明商品事实。"""
++    if not isinstance(value, str) or not value or len(value) > 2048:
++        return None
++    try:
++        parsed = urlsplit(value)
++        if (parsed.scheme != "https" or parsed.hostname not in ("item.taobao.com", "detail.tmall.com")
++                or parsed.username is not None or parsed.password is not None
++                or parsed.port is not None or parsed.path != "/item.htm"):
++            return None
++        ids = parse_qs(parsed.query, keep_blank_values=True).get("id", [])
++        if len(ids) != 1 or _JD_ID.fullmatch(ids[0]) is None:
++            return None
++        ident = ids[0]
++        return {"platform": "TAOBAO_PUBLIC_UNVERIFIED", "platform_item_id": ident,
++                "canonical_url": f"https://{parsed.hostname}/item.htm?id={ident}"}
++    except ValueError:
++        return None
++
++
++def ingest_user_taobao_item_link(url: str, *, observed_at: str,
++                                 now: datetime | None = None) -> dict:
++    current = now or datetime.now(timezone.utc)
++    parsed = parse_taobao_item_url(url)
++    moment = _valid_time(observed_at, current) if current.tzinfo else None
++    if parsed is None or moment is None:
++        return {"status": "invalid_input", "purchasable": False}
++    return {**parsed, "source_id": "user_supplied_link", "observed_at": moment,
++            "status": "discovered_unverified", "identity_verified": False,
++            "quote_verified": False, "purchasable": False, "transactions_enabled": False}
++
++
+ def _valid_time(value: object, now: datetime) -> str | None:
+     if not isinstance(value, str):
+         return None
+diff --git a/shopping_decision/discovery_pool.py b/shopping_decision/discovery_pool.py
+index 77af03a..ff4a857 100644
+--- a/shopping_decision/discovery_pool.py
++++ b/shopping_decision/discovery_pool.py
+@@ -9,7 +9,8 @@ from datetime import datetime, timezone
+ import re
+ 
+ from .listing_identity import _has_exact_anchor
+-from .discovery_ingest import parse_jd_item_url
++from .discovery_ingest import parse_jd_item_url, parse_taobao_item_url
++from .model_identifiers import is_model_token
+ 
+ ID_RE = re.compile(r"[0-9]{5,20}")
+ FORMATS = {
+@@ -29,6 +30,75 @@ def _is_recent_timestamp(value: object, now: datetime) -> bool:
+         return False
+ 
+ 
++_HAINA_LEAD_FIELDS = frozenset((
++    "source_id", "source_mode", "source_kind", "observed_at", "displayed_title",
++    "brand_hint", "mall_hint", "mall_id_hint", "seller_hint", "seller_type_hint",
++    "link_kind", "category_hint", "product_kind_status", "title_model_candidates",
++    "spec_model_candidates", "spec_parse_status", "identity_status",
++    "used_or_refurbished_hint", "bundle_or_variant_ambiguous_hint",
++    "platform_item_id", "canonical_url", "status", "identity_verified",
++    "quote_verified", "purchasable", "missing_fields",
++))
++_HAINA_HINT_FIELDS = ("brand_hint", "mall_hint", "seller_hint", "seller_type_hint", "category_hint", "mall_id_hint")
++# 线索标签只允许描述文字，不能作为推广链接/追踪参数的透传通道。
++_HAINA_LINK_TEXT = re.compile(
++    r"(?:https?://|(?<!\w)www\.|(?<!\w)(?:s\.click\.taobao\.com|union-click\.jd\.com)|"
++    r"[?&](?:utm_[\w]+|tracking|click_id|aff_id)=|%3a%2f%2f)", re.IGNORECASE
++)
++_HAINA_LINK_KINDS = frozenset((
++    "missing", "invalid", "jd_promotion_redirect", "taobao_promotion_redirect",
++    "platform_detail_host_only_unverified", "other_or_unknown_host",
++))
++_HAINA_PRODUCT_STATUSES = frozenset((
++    "likely_accessory_or_consumable", "printer_host_candidate",
++    "printer_host_title_category_unconfirmed", "product_kind_unknown",
++))
++_HAINA_IDENTITY_STATUSES = frozenset((
++    "title_spec_model_conflict", "multiple_model_or_option_ambiguous",
++    "manufacturer_model_candidate_only", "spec_model_only_title_unconfirmed",
++    "title_model_only_unverified", "model_not_confirmed",
++))
++def _valid_haina_lead(row: dict, now: datetime) -> bool:
++    """导入报告也属于不可信输入；逐字段验证，拒绝嵌套对象与越界值。"""
++    if not set(row).issubset(_HAINA_LEAD_FIELDS):
++        return False
++    if (row.get("source_mode") != "synthetic_test"
++            or row.get("source_kind") != "haina_product_search_pro"
++            or row.get("status") != "source_lead_only"
++            or row.get("platform_item_id") is not None
++            or row.get("canonical_url") is not None
++            or row.get("identity_verified") is not False
++            or row.get("quote_verified") is not False
++            or row.get("purchasable") is not False
++            or not _is_recent_timestamp(row.get("observed_at"), now)):
++        return False
++    if (not isinstance(row.get("source_id"), str)
++            or re.fullmatch(r"haina-synthetic-row:[0-9]{3}", row["source_id"]) is None
++            or not isinstance(row.get("displayed_title"), str)
++            or not row["displayed_title"].strip()
++            or len(row["displayed_title"]) > 500
++            or _HAINA_LINK_TEXT.search(row["displayed_title"])):
++        return False
++    if any(row.get(k) is not None and (
++        not isinstance(row[k], str) or len(row[k]) > 120 or _HAINA_LINK_TEXT.search(row[k])
++    ) for k in _HAINA_HINT_FIELDS):
++        return False
++    if (not isinstance(row.get("link_kind"), str)
++            or not isinstance(row.get("product_kind_status"), str)
++            or not isinstance(row.get("identity_status"), str)
++            or row["link_kind"] not in _HAINA_LINK_KINDS
++            or row["product_kind_status"] not in _HAINA_PRODUCT_STATUSES
++            or row["identity_status"] not in _HAINA_IDENTITY_STATUSES):
++        return False
++    for key in ("title_model_candidates", "spec_model_candidates"):
++        items = row.get(key)
++        if (not isinstance(items, list) or len(items) > 10
++                or any(not is_model_token(x) for x in items)):
++            return False
++    return (type(row.get("used_or_refurbished_hint")) is bool
++            and type(row.get("bundle_or_variant_ambiguous_hint")) is bool)
++
++
+ def _known_title_models(titles: list[str], known_aliases: dict) -> tuple[str | None, str]:
+     if not titles:
+         return None, "no_title_source"
+@@ -49,7 +119,8 @@ def _known_title_models(titles: list[str], known_aliases: dict) -> tuple[str | N
+ 
+ def build_discovery_pool(
+     reports: list[dict], *, known_aliases: dict | None = None,
+-    now: datetime | None = None, max_candidates: int = 30
++    now: datetime | None = None, max_candidates: int = 30,
++    sale_configuration_report: dict | None = None
+ ) -> dict:
+     """去重并关联型号候选。不会批准价格、库存、图片或交易。"""
+     current = now or datetime.now(timezone.utc)
+@@ -62,11 +133,52 @@ def build_discovery_pool(
+     grouped = {}
+     rejected = 0
+     blocked_reports = 0
++    unverified_source_leads = []
+     for report in reports:
+         if not isinstance(report, dict):
+             blocked_reports += 1
+             continue
++        if report.get("operation") == "haina_product_search_offline_ingest":
++            if (report.get("source") != "haina_product_search_pro"
++                    or report.get("source_mode") != "synthetic_test"
++                    or report.get("status") != "source_leads_unverified"):
++                blocked_reports += 1
++                continue
++            rows = report.get("items")
++            if not isinstance(rows, list) or len(rows) > 20:
++                blocked_reports += 1
++                continue
++            for row in rows:
++                if not isinstance(row, dict) or not _valid_haina_lead(row, current):
++                    rejected += 1
++                    continue
++                title = row["displayed_title"]
++                unverified_source_leads.append({
++                    "source_id": row.get("source_id"),
++                    "source_mode": "synthetic_test",
++                    "displayed_title": title,
++                    "brand_hint": row.get("brand_hint"),
++                    "mall_hint": row.get("mall_hint"),
++                    "seller_hint": row.get("seller_hint"),
++                    "seller_type_hint": row.get("seller_type_hint"),
++                    "link_kind": row.get("link_kind"),
++                    "product_kind_status": row.get("product_kind_status"),
++                    "title_model_candidates": row.get("title_model_candidates", []),
++                    "spec_model_candidates": row.get("spec_model_candidates", []),
++                    "identity_status": row.get("identity_status"),
++                    "used_or_refurbished_hint": bool(row.get("used_or_refurbished_hint")),
++                    "bundle_or_variant_ambiguous_hint": bool(row.get("bundle_or_variant_ambiguous_hint")),
++                    "observed_at": row.get("observed_at"),
++                    "status": "source_lead_only_not_platform_candidate",
++                    "platform_item_id": None,
++                    "identity_verified": False,
++                    "quote_verified": False,
++                    "purchasable": False,
++                })
++            continue
+         mode = FORMATS.get(report.get("operation"))
++        if report.get("operation") == "user_selected_marketplace_link_review" and report.get("marketplace_platform") == "taobao":
++            mode = ("TAOBAO_PUBLIC_UNVERIFIED", "TAOBAO")
+         if mode is None or report.get("status") != "candidates_unverified":
+             blocked_reports += 1
+             continue
+@@ -91,7 +203,12 @@ def build_discovery_pool(
+                     rejected += 1
+                     continue
+             else:
+-                if item.get("canonical_url") != f"https://item.taobao.com/item.htm?id={product_id}":
++                if required_platform == "TAOBAO_PUBLIC_UNVERIFIED":
++                    link = parse_taobao_item_url(item.get("canonical_url"))
++                    if link is None or link["platform_item_id"] != product_id:
++                        rejected += 1
++                        continue
++                elif item.get("canonical_url") != f"https://item.taobao.com/item.htm?id={product_id}":
+                     rejected += 1
+                     continue
+             key = (shared_platform, product_id)
+@@ -133,17 +250,26 @@ def build_discovery_pool(
+                                     "conflicting_sources_unverified")
+                     for p in item["provenance"])):
+             item["status"] = "needs_identity_conflict_review"
+-    return {
++    result = {
+         "operation": "merge_unverified_marketplace_leads",
+         "status": "unverified_candidates_only",
+         "candidate_count": len(items), "rejected_count": rejected,
+         "blocked_report_count": blocked_reports, "candidates": items,
++        "unverified_source_lead_count": len(unverified_source_leads),
++        "unverified_source_leads": unverified_source_leads,
+         "verified_quote_count": 0, "purchase_recommendation_approved": False,
+         "transactions_enabled": False,
+         "limitations": [
+             "同一个SKU的来源汇总不代表卖家、套餐、地区或价格已获核实",
+             "型号标题锚点仅帮助回查厂商规格；不证明是主机而非配件",
+             "京东和淘宝平台商品标识永远不互换",
++            "无平台商品ID的海纳线索单独展示，不进入平台候选池或价格比较",
+             "不同平台候选不构成价格/质量/销量排名，推荐门禁保持关闭",
+         ],
+     }
++    if sale_configuration_report is not None:
++        # 合成配置证据在池中另设隔离区，不计入已核平台候选或报价。
++        from .sale_configuration_evidence import assess_sale_evidence_report
++        result["sale_configuration_evidence"] = assess_sale_evidence_report(
++            sale_configuration_report, now=current)
++    return result
+diff --git a/shopping_decision/printer_conditions.py b/shopping_decision/printer_conditions.py
+index f76d99a..157091e 100644
+--- a/shopping_decision/printer_conditions.py
++++ b/shopping_decision/printer_conditions.py
+@@ -59,6 +59,10 @@ def printer_conditions(req: PurchaseRequest) -> dict:
+                 break
+             if consumed:
+                 unresolved.append(clause.strip())
++    if req.needs_color is False and required.get("color_print") is True:
++        conflicts.append("用户确认只需黑白，与原文必须彩色打印冲突，请明确最新条件")
++    if req.needs_color is True and required.get("monochrome_print") is True:
++        conflicts.append("用户确认必须彩色，与原文只需黑白冲突，请明确最新条件")
+     if hard_mini:
+         hard_wechat = True
+     if hard_wechat and req.wechat_required is False:
+diff --git a/shopping_decision/product_compare.py b/shopping_decision/product_compare.py
+index 153a34d..74d2bf2 100644
+--- a/shopping_decision/product_compare.py
++++ b/shopping_decision/product_compare.py
+@@ -6,7 +6,7 @@ from __future__ import annotations
+ 
+ import hashlib
+ import json
+-from datetime import date
++from datetime import date, datetime, timezone
+ from pathlib import Path
+ 
+ from .contracts import PurchaseRequest
+@@ -98,11 +98,38 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+         if item.get("category") != category:
+             continue
+         facts = item["facts"]
++        detail = item.get("manufacturer_detail_evidence")
++        detail_age_days = None
++        if detail is not None:
++            if (not isinstance(detail, dict)
++                    or detail.get("source_url") != item.get("official_url")
++                    or not isinstance(detail.get("response_sha256"), str)
++                    or len(detail["response_sha256"]) != 64
++                    or detail.get("billing_model") not in ("unknown", "buy_print_pages_to_claim_consumables")):
++                raise ValueError("invalid_manufacturer_detail_evidence")
++            try:
++                observed = datetime.fromisoformat(detail["observed_at"].replace("Z", "+00:00"))
++            except (KeyError, TypeError, ValueError, AttributeError) as exc:
++                raise ValueError("invalid_manufacturer_detail_observation") from exc
++            if (observed.tzinfo is None or observed > datetime.now(timezone.utc)
++                    or observed.date() > today or observed.year < 2020):
++                raise ValueError("future_or_invalid_manufacturer_detail_observation")
++            detail_age_days = (today - observed.date()).days
++        detail_stale = detail_age_days is not None and detail_age_days > 30
++
++        def current_fact_value(key: str):
++            field = facts.get(key, {})
++            # 逐型号详情超过30天后，来自该详情页的当前功能判断全部降级为未知；
++            # 不改写目录原始事实，历史记录仍可审计。
++            if detail_stale and detail and field.get("source_url") == detail.get("source_url"):
++                return None
++            return field.get("value")
++
+         failed, unknown, met, preference_met, preference_unknown, preference_unmet = [], [], [], [], [], []
+         evidence = {}
+         for key, expected in required.items():
+             field = facts.get(key, {})
+-            actual = field.get("value")
++            actual = current_fact_value(key)
+             if actual is None:
+                 unknown.append(key)
+             elif actual is expected:
+@@ -113,7 +140,7 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+                 evidence[key] = field["source_url"]
+         for key, expected in preferred.items():
+             field = facts.get(key, {})
+-            actual = field.get("value")
++            actual = current_fact_value(key)
+             if actual is None:
+                 preference_unknown.append(key)
+             elif actual is expected:
+@@ -125,7 +152,7 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+         budget_status = "not_checked" if budget_max_cny is None else "unverified_no_authorized_live_quote"
+         if failed:
+             state = "excluded_by_verified_spec"
+-        elif unknown or budget_max_cny is not None or stale_days > 30:
++        elif unknown or budget_max_cny is not None or stale_days > 30 or detail_stale:
+             state = "needs_verification"
+         else:
+             state = "specs_matched_not_purchase_approved"
+@@ -138,12 +165,22 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+             "budget_status": budget_status, "live_price_cny": None, "marketplace_sku": None,
+             "manufacturer_suggested_retail_cny": item.get("manufacturer_suggested_retail_cny"),
+             "manufacturer_suggested_retail_is_live_price": False,
+-            "consumables": item.get("consumables", []),
++            # 过期逐型号详情只能作为历史审计，不能继续展示为当期耗材配置。
++            "consumables": [] if detail_stale else item.get("consumables", []),
++            "manufacturer_detail_evidence": detail,
++            "manufacturer_detail_age_days": detail_age_days,
++            "manufacturer_detail_is_stale": detail_stale,
++            "billing_model": (detail.get("billing_model") if detail and not detail_stale else "unknown"),
+             "durability_independently_verified": bool(item.get("independent_durability_test", False)),
+             "unknowns": (
+                 (["实际到手价、库存及预算匹配尚无授权实时核验"] if budget_max_cny is not None else [])
+                 + (["独立耐用性/故障率未核实"] if not item.get("independent_durability_test") else [])
+                 + (["官网产品事实已超过30天，请复核"] if stale_days > 30 else [])
++                + (["逐型号详情证据已超过30天，请重新核对"] if detail_age_days is not None and detail_age_days > 30 else [])
++                + (["此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"]
++                    if detail and not detail_stale and detail.get("billing_model") == "buy_print_pages_to_claim_consumables" else [])
++                + (["历史详情曾记载页数套餐或耗材，超过30天的内容不构成当前有效套餐/耗材配置"]
++                    if detail_stale and detail and (detail.get("billing_model") != "unknown" or item.get("consumables")) else [])
+             ),
+         })
+     # 这是“下一步核查优先次序”，不是购买榜单或官方性价比评分。
+diff --git a/shopping_decision/web.py b/shopping_decision/web.py
+index 686cd3e..7deca3f 100644
+--- a/shopping_decision/web.py
++++ b/shopping_decision/web.py
+@@ -85,7 +85,7 @@ def build_request(data: dict) -> PurchaseRequest:
+     return PurchaseRequest(category='printer', requirements=tuple(reqs), **values)
+ 
+ 
+-def evaluate_input(data: dict) -> dict:
++def evaluate_input(data: dict, *, haina_mcp_report_path: Path | None = None) -> dict:
+     req = build_request(data)
+     record = decide(req)
+     cards = {c.id: c for c in load_cards() + load_route_claim_cards()}
+@@ -117,18 +117,43 @@ def evaluate_input(data: dict) -> dict:
+     recommendation = asdict(record.recommendation)
+     recommendation['questions'] = tuple(dict.fromkeys((*recommendation['questions'], *product_comparison.get('questions', []))))
+     recommendation['unknowns'] = tuple(dict.fromkeys((*recommendation['unknowns'], *product_comparison.get('unresolved_hard_conditions', []))))
+-    return {'request': asdict(req), 'normalized_constraints': normalized,
+-             'product_comparison': product_comparison,
+-             'product_catalog_sha256': catalogue_sha256(),
+-            'recommendation': recommendation,
+-            'evidence': evidence, 'rejected_evidence': record.rejected_evidence,
+-            'rejected_inputs': record.rejected_inputs,
+-            'evaluated_at': datetime.now(timezone.utc).isoformat(),
+-            'engine': 'shopping_decision.decision.decide',
+-            'card_sha256': hashlib.sha256(CARDS_PATH.read_bytes()).hexdigest(),
+-            'research_ledger_sha256': (hashlib.sha256(ROUTE_LEDGER_PATH.read_bytes()).hexdigest()
+-                                     if ROUTE_LEDGER_PATH.is_file() else None),
+-            'real_time_prices': False, 'transactions_enabled': False}
++    result = {'request': asdict(req), 'normalized_constraints': normalized,
++              'product_comparison': product_comparison,
++              'product_catalog_sha256': catalogue_sha256(),
++              'recommendation': recommendation,
++              'evidence': evidence, 'rejected_evidence': record.rejected_evidence,
++              'rejected_inputs': record.rejected_inputs,
++              'evaluated_at': datetime.now(timezone.utc).isoformat(),
++              'engine': 'shopping_decision.decision.decide',
++              'card_sha256': hashlib.sha256(CARDS_PATH.read_bytes()).hexdigest(),
++              'research_ledger_sha256': (hashlib.sha256(ROUTE_LEDGER_PATH.read_bytes()).hexdigest()
++                                         if ROUTE_LEDGER_PATH.is_file() else None),
++              'real_time_prices': False, 'transactions_enabled': False}
++    if req.category == 'printer':
++        from .real_printer_case import compare_case_research
++        research_values = {
++            'category': 'printer',
++            'needs_color': req.needs_color,
++            'accepts_outsourced_color': req.accepts_outsourced_color,
++            'budget_max_cny': req.budget_max_cny,
++            'budget_scope': req.budget_scope,
++            'monthly_pages_range': (list(req.monthly_pages_range)
++                                    if req.monthly_pages_range is not None else
++                                    [req.monthly_pages, req.monthly_pages]
++                                    if req.monthly_pages is not None else None),
++            'wechat_required': req.wechat_required,
++            'wechat_workflow': req.wechat_workflow,
++            'delivery_region': req.delivery_region,
++            'device_deployment_region': data.get('device_deployment_region'),
++            'requirements': list(req.requirements),
++            'requires_scan': req.requires_scan,
++            'requires_auto_duplex': req.requires_auto_duplex,
++        }
++        result['real_printer_case_research'] = compare_case_research(research_values)
++    if haina_mcp_report_path is not None:
++        from .haina_mcp_ingest import load_haina_mcp_report
++        result['haina_mcp_research'] = load_haina_mcp_report(haina_mcp_report_path)
++    return result
+ 
+ 
+ class Handler(BaseHTTPRequestHandler):
+diff --git a/tests/test_dialogue_flow.py b/tests/test_dialogue_flow.py
+index e0874b2..0a92a28 100644
+--- a/tests/test_dialogue_flow.py
++++ b/tests/test_dialogue_flow.py
+@@ -45,7 +45,12 @@ class DialogueFlowTests(unittest.TestCase):
+         self.assertEqual(len(records), 9)
+         self.assertEqual(records["HL-L1238W"]["required_failed"], [])
+         self.assertIn("wireless", records["HL-L1228"]["required_failed"])
+-        self.assertIn("wechat_miniprogram", records["HL-10W"]["required_unknown"])
++        # 本机有2026-11-09已核对官网详情时，普通对话使用该记录回放；
++        # 另一台没有现场记录的机器仍保守退回历史目录，不能编造功能。
++        if result["source_mode"] == "recorded_manufacturer_detail_replay_no_network":
++            self.assertIn("wechat_miniprogram", records["HL-10W"]["required_met"])
++        else:
++            self.assertIn("wechat_miniprogram", records["HL-10W"]["required_unknown"])
+         self.assertFalse(result["purchase_recommendation_approved"])
+         self.assertFalse(result["transactions_enabled"])
+ 

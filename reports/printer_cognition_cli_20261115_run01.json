@@ -1,0 +1,122 @@
+{
+  "returncode": 0,
+  "version": 1,
+  "ids": [
+    "E-WECHAT-SETUP",
+    "E-VOLUME-NOT-MINIMUM",
+    "E-DEFER-OR-OUTSOURCE",
+    "E-RELIABILITY-UNKNOWN"
+  ],
+  "effects": {
+    "status": "source_limited_development_not_independent_effect",
+    "judgments": [
+      {
+        "id": "E-WECHAT-SETUP",
+        "status": "source_supported_with_user_environment_unknown",
+        "claim": "Brother HL-L1238W首次启用微信畅享印需要Brother Mobile Connect配置；HP M232系列先连Wi-Fi，再用信息页二维码绑定惠普云打印。",
+        "decision_effect": "无线或微信功能标签不等于开箱即用；增加首次配置与真实地区核验，而不是据此给品牌加分。",
+        "source_refs": [
+          {
+            "source_id": "R7",
+            "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+            "source_group": "brother_cn",
+            "scope": "支持页明确列出的HL-L1238W/HL-L1808W",
+            "audit": "public_page_open_2026-11-15_lines_11_32",
+            "counter": "厂家流程说明不等于用户家庭网络实测；首次设置并非零步骤；代理网络和本地环境可能影响使用。"
+          },
+          {
+            "source_id": "R10",
+            "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+            "source_group": "hp_cn",
+            "scope": "HP LaserJet MFP M232-M237系列安装指南",
+            "audit": "public_pdf_open_2026-11-15_lines_48_62",
+            "counter": "指南标注微信打印为可选设置；没有在用户设备/地区实测；需要完成前置Wi-Fi设置和扫码绑定。"
+          }
+        ],
+        "missing": [
+          "设备部署地区与本地网络",
+          "本人能否接受首次配置",
+          "实际连通验证"
+        ],
+        "needs_user_answer_now": false
+      },
+      {
+        "id": "E-VOLUME-NOT-MINIMUM",
+        "status": "source_supported_informational_only",
+        "claim": "本案月印量低于HP M232系列建议的200—2000页/月；建议区间不等于最低使用量，也不证明低频易损坏。",
+        "decision_effect": "阻止按建议月印量直接淘汰HP；低频真正的长期成本和闲置可靠性仍需独立证据。",
+        "source_refs": [
+          {
+            "source_id": "R11",
+            "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+            "source_group": "hp_global",
+            "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+            "audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226",
+            "counter": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。"
+          }
+        ],
+        "missing": [
+          "准确耗材现价",
+          "真实覆盖页数",
+          "长期闲置维护实测"
+        ],
+        "needs_user_answer_now": false
+      },
+      {
+        "id": "E-DEFER-OR-OUTSOURCE",
+        "status": "user_condition_only_not_product_fact",
+        "claim": "已确认家中黑白、偶尔彩印可以外包；外包或暂缓购买是可讨论的路线，不是已核实更便宜的方案。",
+        "decision_effect": "避免为凑三台机器虚构商品；在现价/耗材价未知时保留暂缓选择。",
+        "source_refs": [],
+        "missing": [
+          "实际外包单价与频次",
+          "家用机器总成本"
+        ],
+        "needs_user_answer_now": false
+      },
+      {
+        "id": "E-RELIABILITY-UNKNOWN",
+        "status": "independent_model_comparison_missing",
+        "claim": "现有厂家功能、建议印量与少量历史方法资料，不能给这两款型号做长期耐用性胜负排名。",
+        "decision_effect": "保留耐用性待核，不以营销防卡纸卖点或未发现投诉代替长期故障率。",
+        "source_refs": [],
+        "missing": [
+          "同型号可迁移的长期故障/返修数据及样本方法"
+        ],
+        "needs_user_answer_now": false
+      }
+    ],
+    "questions": [],
+    "routes": [
+      {
+        "name": "HL-L1238W",
+        "route": "manufacturer_model_research",
+        "eligibility": "model_spec_research_only",
+        "platform_identity_verified": false,
+        "regional_live_price_verified": false
+      },
+      {
+        "name": "M232dw",
+        "route": "manufacturer_model_research",
+        "eligibility": "model_spec_research_only",
+        "platform_identity_verified": false,
+        "regional_live_price_verified": false
+      },
+      {
+        "name": "暂缓购买/按需外包",
+        "route": "non_purchase_alternative",
+        "eligibility": "requires_actual_cost_and_convenience_comparison",
+        "platform_identity_verified": false,
+        "regional_live_price_verified": false
+      }
+    ],
+    "supported_context_count": 2,
+    "independent_reliability_rank_available": false,
+    "numeric_total_cost_available": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "note": "普通筛选组与认知组须共享同一资格、型号事实、候选范围和价格未知；这里不是推荐效果分数。"
+  },
+  "approved": false,
+  "transactions": false
+}

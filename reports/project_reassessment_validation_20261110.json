@@ -1,0 +1,17 @@
+{
+  "date_local": "2026-11-10",
+  "timezone": "Asia/Shanghai",
+  "role": "independent_reviewer",
+  "python": {"version": "3.12.3", "tests": 298, "passed": 298, "elapsed_seconds": 18.013},
+  "h05": {"tests": 8, "passed": 8, "record": "reports/project_reassessment_h05_20261110.json"},
+  "java": {"compiler_version": "21.0.7", "release_target": 17, "compilation_passed": true, "marketplace_passed": 6, "marketplace_total": 6, "subprocess_passed": 6, "subprocess_total": 6, "gui_verified_this_round": false, "initial_invocation_failure": "PowerShell split unquoted -D property; corrected with quoted argument"},
+  "diagnostics": {"record": "reports/project_reassessment_probes_20261110.json", "reused_exposed_probes": true, "original_faults_passed": 4, "original_faults_total": 4, "adversarial_variants_failed": 4, "adversarial_variants_total": 4, "positive_control_passed": true, "raw_archive_replays_matching": 3, "normal_output_raw_provenance_missing": 3, "future_detail_rejected": true, "expired_detail_still_marked_specs_matched": true},
+  "supplier_evidence": {"basis": "existing_user_response_summary_and_hash_not_raw_response_reinspection", "new_business_calls": 0, "public_docs_recheck": "workbench_no_readable_body_and_product_docs_inaccessible", "usage_permission_approved": false},
+  "business_implementation_changed": false,
+  "real_evidence_approval_changed": false,
+  "new_verified_regional_quotes": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "git_committed": false,
+  "git_pushed": false
+}

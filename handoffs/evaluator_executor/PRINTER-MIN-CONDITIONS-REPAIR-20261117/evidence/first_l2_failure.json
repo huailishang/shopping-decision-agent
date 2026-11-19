@@ -1,0 +1,19 @@
+{
+  "task_id": "PRINTER-MIN-CONDITIONS-REPAIR-20261117",
+  "record_type": "executor_reproduced_intermediate_failure_summary",
+  "status": "RESOLVED_IN_SCOPE",
+  "initial_l2_result": "FAIL",
+  "initial_l2_mandatory_failures": 1,
+  "initial_l2_passed": 5,
+  "initial_l2_failed_check": "VP-05",
+  "initial_l2_failed_test": "test_haina_mcp_ingest.HainaMcpIngestTests.test_java_desktop_bridge_uses_same_pinned_fixture_and_marks_synthetic",
+  "original_failure_excerpt": "AssertionError: '跨地区配置核验' not found in decoded['reasons']",
+  "confirmed_cause": "requires_wireless had been added to research_values before the existing compare_case_research call; this changed the legacy no-research_context behavior of Java/Haina bridge",
+  "scoped_fix": "web.py now transfers requires_wireless only inside research_context branch used by build_research_case",
+  "targeted_retest": "16 Haina MCP tests PASS, 16 frozen counterexamples PASS",
+  "final_l2": "PASS 6/6 mandatory=0, final full regression 464 PASS",
+  "historical_raw_log_caveat": "The official L2 runner reuses EV-05 log path on rerun; the initial failure was observed in tool output and this is a retrospective evidence summary, not the original raw EV-05 file.",
+  "external_calls": 0,
+  "git_commit": false,
+  "git_push": false
+}

@@ -1,0 +1,153 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "baseline_sha256": "a6d2af8b76a9177e0db6a52b180083d85f796f6aa3059302c08a7481cb939ffd",
+  "same_inputs_and_old_facts": true,
+  "before_observation": [
+    {
+      "id": "original_proxy",
+      "basis": "project_owner_proxy_replay",
+      "cli_exit_code": 0,
+      "cli_next_action": "clarify_user_conditions",
+      "cli_primary_questions": [
+        "预算是否包含运费和本次需另购的耗材？"
+      ],
+      "chat_prompt_field": "wechat_required",
+      "conditional_plan_present": false,
+      "stdout_sha256": "a6d2af8b76a9177e0db6a52b180083d85f796f6aa3059302c08a7481cb939ffd"
+    },
+    {
+      "id": "hypothetical_wechat_required",
+      "basis": "hypothetical_branch_not_user_confirmation",
+      "cli_exit_code": 0,
+      "cli_next_action": "clarify_user_conditions",
+      "cli_primary_questions": [
+        "预算是否包含运费和本次需另购的耗材？"
+      ],
+      "chat_prompt_field": "",
+      "conditional_plan_present": false,
+      "stdout_sha256": "f59d48759234730c76a71b8b370992db9dfef951efcd7d66d0dfa2a6c73f4d41"
+    },
+    {
+      "id": "hypothetical_wechat_optional",
+      "basis": "hypothetical_branch_not_user_confirmation",
+      "cli_exit_code": 0,
+      "cli_next_action": "clarify_user_conditions",
+      "cli_primary_questions": [
+        "预算是否包含运费和本次需另购的耗材？"
+      ],
+      "chat_prompt_field": "",
+      "conditional_plan_present": false,
+      "stdout_sha256": "52f6f8b22cfb42cecff3817383828779107f7905ad9cf32cdeeadc39cf0f059e"
+    }
+  ],
+  "after_observation": [
+    {
+      "case_id": "original_proxy",
+      "basis": "project_owner_proxy_replay",
+      "cli_normal_entry_stdout_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_behavior/original_proxy.stdout.jsonl",
+      "cli_stdout_sha256": "9b6294b3aad950ab6cb43fb44c5a37e8b193437b6bf36ec0061c882fa808ca36",
+      "chat_normal_entry_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_behavior/original_proxy.chat.json",
+      "legacy_next_action_unchanged": "clarify_user_conditions",
+      "new_current_path": "clarify_wechat_requirement",
+      "new_primary_question": {
+        "field": "wechat_required",
+        "status": "unconfirmed",
+        "question": "微信打印是必须条件，还是可选偏好？",
+        "why": "答案决定应优先核实后续微信复用，还是可继续现有型号研究"
+      },
+      "both_model_ids": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "purchase_approved": false,
+      "transaction_enabled": false,
+      "visible_chat_same": true
+    },
+    {
+      "case_id": "hypothetical_wechat_required",
+      "basis": "hypothetical_branch_not_user_confirmation",
+      "cli_normal_entry_stdout_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_behavior/hypothetical_wechat_required.stdout.jsonl",
+      "cli_stdout_sha256": "d48713b600b6e4e0baf5a2db425d1d33886f3ac6b9cb71a95046142499567d99",
+      "chat_normal_entry_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_behavior/hypothetical_wechat_required.chat.json",
+      "legacy_next_action_unchanged": "clarify_user_conditions",
+      "new_current_path": "verify_wechat_reuse",
+      "new_primary_question": null,
+      "both_model_ids": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "purchase_approved": false,
+      "transaction_enabled": false,
+      "visible_chat_same": true
+    },
+    {
+      "case_id": "hypothetical_wechat_optional",
+      "basis": "hypothetical_branch_not_user_confirmation",
+      "cli_normal_entry_stdout_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_behavior/hypothetical_wechat_optional.stdout.jsonl",
+      "cli_stdout_sha256": "cbe7d2d29d398d9dcd13bd58cc7f0ec22201376d178aacebfc5882865d867c45",
+      "chat_normal_entry_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_behavior/hypothetical_wechat_optional.chat.json",
+      "legacy_next_action_unchanged": "clarify_user_conditions",
+      "new_current_path": "continue_model_research",
+      "new_primary_question": null,
+      "both_model_ids": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "purchase_approved": false,
+      "transaction_enabled": false,
+      "visible_chat_same": true
+    }
+  ],
+  "actual_change": [
+    {
+      "case_id": "original_proxy",
+      "before_shared_next_action": "clarify_user_conditions",
+      "after_conditional_current_path": "clarify_wechat_requirement",
+      "assessment": "new_explicit_role_and_material_next_step_in_normal_cli_and_chat; legacy generic next_action kept for compatibility"
+    },
+    {
+      "case_id": "hypothetical_wechat_required",
+      "before_shared_next_action": "clarify_user_conditions",
+      "after_conditional_current_path": "verify_wechat_reuse",
+      "assessment": "new_explicit_role_and_material_next_step_in_normal_cli_and_chat; legacy generic next_action kept for compatibility"
+    },
+    {
+      "case_id": "hypothetical_wechat_optional",
+      "before_shared_next_action": "clarify_user_conditions",
+      "after_conditional_current_path": "continue_model_research",
+      "assessment": "new_explicit_role_and_material_next_step_in_normal_cli_and_chat; legacy generic next_action kept for compatibility"
+    }
+  ],
+  "unchanged_external_gaps": [
+    "微信二次复用/长期稳定性未实测",
+    "Brother/HP真实平台所售型号身份0/2",
+    "河南有效地区到手价0",
+    "海纳数据用途未获核准",
+    "真实使用者本人新确认0",
+    "新外部商品事实0"
+  ],
+  "effect_claim_limit": "原代理样本+两条合成分支，共3个开发题；用户效果、真实购买结果、正式36条仍未知，字段变多不自动算收益",
+  "actual_cost": {
+    "new_external_search": 0,
+    "new_web_reads": 0,
+    "new_business_api_calls": 0,
+    "new_credentials": 0,
+    "new_paid_calls": 0,
+    "outbound_messages": 0,
+    "orders": 0,
+    "git_commits": 0,
+    "git_pushes": 0,
+    "l1_business_tests_passed": 9,
+    "l1_full_unittest_passed": 443
+  },
+  "negative_evidence_paths": [
+    "tests/test_printer_decision_plan.py",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_unittest.stderr.log",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/l1_behavior/behavior_summary.json"
+  ],
+  "new_external_material_count": 0,
+  "real_user_feedback_collected": false,
+  "formal_36_started": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

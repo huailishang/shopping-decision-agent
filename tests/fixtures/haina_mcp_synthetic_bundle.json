@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "operation": "haina_mcp_synthetic_bundle",
+  "source_mode": "synthetic_test",
+  "calls": [
+    {
+      "tool": "product_sku_search",
+      "query": "兄弟 HL-L1238W",
+      "observed_at": "2026-11-15T03:59:00Z",
+      "payload": {
+        "error_code": 0,
+        "data": [
+          {
+            "entity_name": "兄弟 HL-L1238W 打印机",
+            "sku_result": {
+              "spu_id": "",
+              "spu_name": "兄弟 HL-L1238W 打印机",
+              "sku_count": 2,
+              "sku_list": [
+                {
+                  "sku_id": "",
+                  "sku_axes": {},
+                  "sku_products_count": 1,
+                  "sku_products": [
+                    {
+                      "title": "Brother HL-L1238W 黑白激光打印机",
+                      "url": "https://uland.taobao.com/item?id=998877&tracking=secret",
+                      "mall_name": "天猫精选",
+                      "shop_name": "合成示例店铺甲",
+                      "shop_type": "其他第三方",
+                      "final_price": "¥899",
+                      "sku_prop": ""
+                    }
+                  ]
+                },
+                {
+                  "sku_id": null,
+                  "sku_axes": {},
+                  "sku_products_count": 1,
+                  "sku_products": [
+                    {
+                      "title": "Brother HL-L1238W 无线激光打印机",
+                      "url": "https://uland.taobao.com/item?id=998878",
+                      "mall_name": "天猫精选",
+                      "shop_name": "合成示例店铺乙",
+                      "shop_type": "其他第三方",
+                      "final_price": "¥909",
+                      "sku_prop": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "product_sku_search",
+      "query": "惠普 M232dw",
+      "observed_at": "2026-11-15T03:59:00Z",
+      "payload": {
+        "error_code": 0,
+        "data": [
+          {
+            "entity_name": "惠普 M232dw 黑白双面激光一体机",
+            "sku_result": {
+              "spu_id": "supplier-spu-hp-1",
+              "spu_name": "惠普 M232dw",
+              "sku_count": 2,
+              "sku_list": [
+                {
+                  "sku_id": "supplier-sku-hp-1",
+                  "sku_axes": {
+                    "型号变体": "M232dw"
+                  },
+                  "sku_products_count": 2,
+                  "sku_products": [
+                    {
+                      "id": "supplier-item-hp",
+                      "title": "惠普 M232dw 黑白激光打印机",
+                      "url": "https://item.jd.com/654321.html",
+                      "mall_name": "京东",
+                      "shop_name": "合成示例店铺甲",
+                      "final_price": "¥999"
+                    },
+                    {
+                      "id": "supplier-item-hp-c",
+                      "title": "惠普 M232dwc 黑白激光打印机",
+                      "url": "https://item.jd.com/123456.html",
+                      "mall_name": "京东",
+                      "shop_name": "合成示例店铺乙",
+                      "final_price": "¥888"
+                    }
+                  ]
+                },
+                {
+                  "sku_id": "supplier-sku-hp-2",
+                  "sku_axes": {
+                    "型号变体": "M232dwc"
+                  },
+                  "sku_products_count": 2,
+                  "sku_products": [
+                    {
+                      "id": "supplier-item-hp-c2",
+                      "title": "惠普 M232dwc 自动双面一体机",
+                      "url": "https://item.jd.com/123457.html",
+                      "mall_name": "京东",
+                      "shop_name": "合成示例店铺丙",
+                      "final_price": "¥889"
+                    },
+                    {
+                      "id": "supplier-item-hp2",
+                      "title": "惠普 M232dw 家用一体机",
+                      "url": "https://item.jd.com/654322.html",
+                      "mall_name": "京东",
+                      "shop_name": "合成示例店铺丁",
+                      "final_price": "¥1009"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "product_basic_search",
+      "query": "兄弟 HL-L1238W",
+      "observed_at": "2026-11-15T03:59:00Z",
+      "payload": {
+        "error_code": 0,
+        "data": [
+          {
+            "entity_name": "兄弟 HL-L1238W 打印机",
+            "brand": "Brother",
+            "entity_type": "黑白激光打印机",
+            "entity_description": "合成测试基础描述，不代表真实商品事实。",
+            "features": [
+              "黑白激光",
+              "无线连接"
+            ],
+            "picture": {
+              "主图": [
+                "https://images.example.test/1.jpg"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tool": "product_parameter_search",
+      "query": "兄弟 HL-L1238W",
+      "observed_at": "2026-11-15T03:59:00Z",
+      "payload": {
+        "error_code": 0,
+        "data": [
+          {
+            "entity_name": "兄弟 HL-L1238W 打印机",
+            "entity_parameter": [
+              {
+                "key": "打印方式",
+                "value": "黑白激光",
+                "parameter_description": "黑白激光打印",
+                "confidence": "0.91"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tool": "product_comment_search",
+      "query": "兄弟 HL-L1238W",
+      "observed_at": "2026-11-15T03:59:00Z",
+      "payload": {
+        "error_code": 0,
+        "data": [
+          {
+            "entity_name": "兄弟 HL-L1238W 打印机",
+            "entity_comments": [
+              {
+                "entity_name_std": "兄弟 HL-L1238W",
+                "attribute_name": "安装体验",
+                "attribute_value": "较方便",
+                "dimension": "安装",
+                "attribute_description": [
+                  "合成评论摘要一",
+                  "合成评论摘要二"
+                ],
+                "count": 12,
+                "list_link": [
+                  {
+                    "title": "合成来源标题",
+                    "link": "https://example.test/review/1?track=x"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

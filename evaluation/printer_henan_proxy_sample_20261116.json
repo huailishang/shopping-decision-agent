@@ -1,0 +1,81 @@
+{
+  "schema_version": "printer_proxy_sample_input_v1",
+  "sample_id": "PRINTER-HENAN-FAMILY-20261116",
+  "captured_at": "2026-11-16T19:38:52+08:00",
+  "source": {
+    "type": "project_owner_proxy_report_in_chat",
+    "is_direct_device_user_confirmation": false,
+    "is_live_device_test": false,
+    "comment": "项目负责人为亲戚家庭提供试验样本条件；不是亲戚在实际应用中的逐项确认或设备测试结果"
+  },
+  "inherited_requirements": {
+    "budget_max_cny": 1000,
+    "monthly_pages_range": [
+      0,
+      50
+    ],
+    "needs_color": false,
+    "accepts_outsourced_color": true,
+    "reliability_priority": "high",
+    "preferred_brands": [
+      "Brother",
+      "HP"
+    ]
+  },
+  "newly_stated": {
+    "device_deployment_region": "中国大陆河南省",
+    "precise_city_or_county": "unknown_not_supplied",
+    "accepts_initial_setup": true,
+    "initial_setup_methods_allowed": [
+      "manufacturer_mobile_app",
+      "qr_scan"
+    ],
+    "wechat_goal": "首次设置完成后，希望以后能复用绑定并从微信发起打印",
+    "regional_or_device_success_verified": false
+  },
+  "explicit_ambiguities": {
+    "wechat_hard_required": "not_explicitly_decided_by_project_owner",
+    "wechat_workflow": "WeChat initiated print desired; direct-miniprogram versus other vendor handoff still unconfirmed",
+    "setup_reuse_verified": false,
+    "delivery_region": "not_supplied_do_not_infer_from_deployment",
+    "budget_scope": "unknown_until_live_quote",
+    "relative_direct_feedback": "not_collected"
+  },
+  "normalized_project_owner_proxy_fields": {
+    "category": "printer",
+    "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+    "budget_max_cny": 1000,
+    "monthly_pages_range": [
+      0,
+      50
+    ],
+    "needs_color": false,
+    "accepts_outsourced_color": true,
+    "accepts_initial_setup": true,
+    "device_deployment_region": "中国大陆河南省",
+    "wechat_required": null,
+    "wechat_workflow": "unknown",
+    "requires_scan": null,
+    "requires_auto_duplex": null
+  },
+  "conditional_development_test_not_user_confirmation": {
+    "wechat_required": true,
+    "wechat_workflow": "miniprogram",
+    "reason": "以微信小程序直接打印作为严格验收情形检查现有候选和地区逻辑；不当作被试本人直接硬约束确认"
+  },
+  "future_physical_test_checklist": [
+    "核销售所选准确SKU确实支持在中国大陆河南的微信打印流程",
+    "用厂商官方说明初次完成Wi-Fi或App/扫码绑定",
+    "首次从微信发起打印并记录输出成功/失败与操作步骤",
+    "关闭并重新打开微信或隔日再次打印，验证是否需要重新绑定",
+    "打印机较长时间闲置后重试，记录首张输出和故障",
+    "报价、耗材与当地售后另作真实性验证，不以微信功能测试代替"
+  ],
+  "safety": {
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "observed_platform_identity_count": 0,
+    "observed_region_live_price_count": 0,
+    "overall": "NOT_PASS"
+  }
+}

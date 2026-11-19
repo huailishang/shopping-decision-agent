@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "scope": "printer_minimal_evidence_walkthrough",
+  "packs": {
+    "setup_two": {
+      "schema_version": 1,
+      "basis": "existing_attributed_manufacturer_summary",
+      "local_packaged_on": "2026-11-17",
+      "source_revalidated_online": false,
+      "allowed_use": "local_source_attributed_model_research_only",
+      "sources": {
+        "R7": {
+          "type": "manufacturer_setup",
+          "group": "brother_cn",
+          "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+          "checked_on": "2026-11-15",
+          "limit": "厂商流程非实机成功证明"
+        },
+        "R10": {
+          "type": "manufacturer_setup",
+          "group": "hp_cn",
+          "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+          "checked_on": "2026-11-15",
+          "limit": "系列安装指南，具体销售版本需复核"
+        }
+      },
+      "claims": [
+        {
+          "id": "BROTHER-FIRST-SETUP",
+          "model_id": "HL-L1238W",
+          "kind": "manufacturer_workflow",
+          "source_ids": [
+            "R7"
+          ],
+          "statement": "既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。",
+          "counter": "这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。",
+          "observed_on": "2026-11-15",
+          "scope": "HL-L1238W在旧流程明确列出的中国区研究范围",
+          "supports_only": [
+            "initial_setup"
+          ]
+        },
+        {
+          "id": "HP-FIRST-SETUP",
+          "model_id": "M232dw",
+          "kind": "manufacturer_workflow",
+          "source_ids": [
+            "R10"
+          ],
+          "statement": "既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。",
+          "counter": "这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。",
+          "observed_on": "2026-11-15",
+          "scope": "M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验",
+          "supports_only": [
+            "initial_setup"
+          ]
+        }
+      ],
+      "new_external_fact_count": 0,
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "pack_id": "setup_two"
+    },
+    "setup_one": {
+      "schema_version": 1,
+      "basis": "existing_attributed_manufacturer_summary",
+      "local_packaged_on": "2026-11-17",
+      "source_revalidated_online": false,
+      "allowed_use": "local_source_attributed_model_research_only",
+      "sources": {
+        "R7": {
+          "type": "manufacturer_setup",
+          "group": "brother_cn",
+          "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+          "checked_on": "2026-11-15",
+          "limit": "厂商流程非实机成功证明"
+        }
+      },
+      "claims": [
+        {
+          "id": "BROTHER-FIRST-SETUP",
+          "model_id": "HL-L1238W",
+          "kind": "manufacturer_workflow",
+          "source_ids": [
+            "R7"
+          ],
+          "statement": "既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。",
+          "counter": "这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。",
+          "observed_on": "2026-11-15",
+          "scope": "HL-L1238W在旧流程明确列出的中国区研究范围",
+          "supports_only": [
+            "initial_setup"
+          ]
+        }
+      ],
+      "new_external_fact_count": 0,
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "pack_id": "setup_one"
+    },
+    "setup_empty": {
+      "schema_version": 1,
+      "basis": "existing_attributed_manufacturer_summary",
+      "local_packaged_on": "2026-11-17",
+      "source_revalidated_online": false,
+      "allowed_use": "local_source_attributed_model_research_only",
+      "sources": {},
+      "claims": [],
+      "new_external_fact_count": 0,
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "pack_id": "setup_empty"
+    }
+  },
+  "provenance": {
+    "source_map_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/claim_source_map.json",
+    "source_map_sha256": "151c16a0875998b50d65a384bce7301859b7931ce9802931e843fbdd4972047e",
+    "note": "Local packaging of already limited-attributed summaries; no new remote fetch, data license or device result."
+  }
+}

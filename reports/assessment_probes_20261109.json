@@ -1,0 +1,199 @@
+{
+  "role": "independent_reviewer",
+  "date": "2026-11-09",
+  "pairwise_recomputed": {
+    "case_count": 16,
+    "comparison_units": 48,
+    "matching_units": 48,
+    "mismatches": []
+  },
+  "refetched_source_comparison": [
+    {
+      "model_id": "HL-10W",
+      "same_fact_values_as_executor": true,
+      "same_consumable_ids": true
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "same_fact_values_as_executor": true,
+      "same_consumable_ids": true
+    },
+    {
+      "model_id": "HL-B2158W",
+      "same_fact_values_as_executor": true,
+      "same_consumable_ids": true
+    }
+  ],
+  "new_adversarial_extraction_probes": [
+    {
+      "id": "negated_wireless",
+      "input_kind": "synthetic_adversarial_html",
+      "input": "本机不支持无线网络连接，仅支持USB打印。",
+      "feature": "wireless",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "negated_wechat",
+      "input_kind": "synthetic_adversarial_html",
+      "input": "本机不支持微信小程序直连，支持远程打印的是其他型号。",
+      "feature": "wechat_miniprogram",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "other_model_duplex",
+      "input_kind": "synthetic_adversarial_html",
+      "input": "HL-B2188DW 标配A4自动双面打印；HL-10W不支持自动双面打印。",
+      "feature": "auto_duplex",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "script_only_wireless",
+      "input_kind": "synthetic_adversarial_html",
+      "input": "<script>var otherModelText=\"支持无线网络连接\";</script>本机仅支持USB。",
+      "feature": "wireless",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    }
+  ],
+  "ordinary_vs_injected": [
+    {
+      "path": "ordinary_text_path",
+      "status": "model_facts_only_not_purchase",
+      "candidate_count": 9,
+      "three_new_models": [
+        {
+          "model_id": "HL-10W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wireless",
+            "wechat_miniprogram"
+          ]
+        },
+        {
+          "model_id": "HL-B2188DW",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wireless",
+            "wechat_miniprogram"
+          ]
+        },
+        {
+          "model_id": "HL-B2158W",
+          "required_met": [
+            "monochrome_print"
+          ],
+          "required_unknown": [
+            "wireless",
+            "wechat_miniprogram"
+          ]
+        }
+      ],
+      "purchase_recommendation_approved": false
+    },
+    {
+      "path": "internal_catalog_injection",
+      "status": "model_facts_only_not_purchase",
+      "candidate_count": 9,
+      "three_new_models": [
+        {
+          "model_id": "HL-10W",
+          "required_met": [
+            "monochrome_print",
+            "wireless",
+            "wechat_miniprogram"
+          ],
+          "required_unknown": []
+        },
+        {
+          "model_id": "HL-B2188DW",
+          "required_met": [
+            "monochrome_print",
+            "wireless",
+            "wechat_miniprogram"
+          ],
+          "required_unknown": []
+        },
+        {
+          "model_id": "HL-B2158W",
+          "required_met": [
+            "monochrome_print",
+            "wireless",
+            "wechat_miniprogram"
+          ],
+          "required_unknown": []
+        }
+      ],
+      "purchase_recommendation_approved": false
+    }
+  ],
+  "unknown_answer_question_probe": {
+    "next_question_fields": [],
+    "comparison_questions": [
+      "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+      "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+      "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+    ],
+    "expected": "未决事项保留并给出可操作的下一问或明确暂停状态",
+    "observation": "next_questions空，但比较内部仍有微信方式/预算/地区问题"
+  },
+  "color_conflict_probe": {
+    "status": "model_facts_only_not_purchase",
+    "expected": "condition_conflict",
+    "expectation_met": false
+  },
+  "future_detail_probe": {
+    "expected": "reject_future_detail_time",
+    "rejected": false,
+    "statuses": {
+      "HL-10W": "specs_matched_not_purchase_approved",
+      "HL-B2158W": "specs_matched_not_purchase_approved",
+      "HL-B2188DW": "specs_matched_not_purchase_approved"
+    }
+  },
+  "billing_propagation_probe": {
+    "detail_billing_model": "buy_print_pages_to_claim_consumables",
+    "comparison_has_billing_model": false,
+    "comparison_has_detail_provenance": false,
+    "candidate_unknowns": [
+      "独立耐用性/故障率未核实"
+    ]
+  },
+  "original_case_bridge_replay": {
+    "operation": "real_python_desktop_bridge_subprocess_replay",
+    "new_human_trial": false,
+    "returncode": 0,
+    "recommendation_status": "defer",
+    "eligible_evidence_count": 0,
+    "candidate_count": 5,
+    "questions": [
+      "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+      "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+    ],
+    "candidate_budget_statuses": {
+      "HL-L1238W": "unverified_no_authorized_live_quote",
+      "HL-L1808W": "unverified_no_authorized_live_quote",
+      "HP-Laser-108w": "unverified_no_authorized_live_quote",
+      "HL-L1228": "unverified_no_authorized_live_quote",
+      "HP-Laser-108a": "unverified_no_authorized_live_quote"
+    },
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "limitations": [
+    "新诊断是合成故障探针，不能与旧单测合并成推荐通过率。",
+    "本轮没有Java GUI操作、平台API授权或真实报价。"
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

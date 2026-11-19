@@ -1,0 +1,62 @@
+{
+  "task_id": "PRINTER-MIN-E2E-20261117",
+  "stages": [
+    {
+      "stage": "requirements",
+      "status": "completed",
+      "observation": "CLI实际使用代理需求/改答，微信是否必须仍未知",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_run/main_two_facts.input.jsonl",
+        "sha256": "3abf506daeddbc02120009d776b2947c2b8172d0a877cc185ba76363b22a75b8"
+      }
+    },
+    {
+      "stage": "evidence",
+      "status": "completed_with_two_existing_sources",
+      "observation": "准确选用setup_two的R7/R10且保留2026-11-15来源和限制",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/main_two_facts.stdout.jsonl",
+        "sha256": "a6adbada71d9222a582171dce4630fda7d4dd15779e4146dc9a39204564f8faa"
+      }
+    },
+    {
+      "stage": "comparison",
+      "status": "research_only",
+      "observation": "两款逐型号映射各一条首次设置事实；没有购物排名；1/0条降级通过",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/summary.json",
+        "sha256": "e4b764dd9dff81fa9e6b473033894fd4348ffdda0d13d580c41a6bb1b836243a"
+      }
+    },
+    {
+      "stage": "explanation",
+      "status": "visible_same_as_cli",
+      "observation": "聊天result_text可见所选2条旧事实有限比较，审计与CLI同源",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/main_two_facts.chat.json",
+        "sha256": "b513b25820a8d4300acc9779fc4cc9c0704d687b999479110cb66497399b7c4b"
+      }
+    },
+    {
+      "stage": "feedback",
+      "status": "not_collected",
+      "observation": "没有联系亲戚，真实反馈0；准备3句未发送问题并继续评测",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_walkthrough.json",
+        "sha256": "63fe3e374cf73f51761c8f4b9197b08742476c4556984d482c82502b43d67eb6"
+      }
+    },
+    {
+      "stage": "evaluation",
+      "status": "completed_with_limits",
+      "observation": "RQ01~03来源使用工程题可判；用户实际效果不可判，公平双组不能成立",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/assessment.json",
+        "sha256": "4e80fa21c7826ea43f0d45a12e989406254a0b93e6bf494804c1b45b59d5ca4d"
+      }
+    }
+  ],
+  "new_external_fact_count": 0,
+  "real_user_feedback_collected": false,
+  "scope": "有限旧事实研究端到端，真实购买和用户收益未知"
+}

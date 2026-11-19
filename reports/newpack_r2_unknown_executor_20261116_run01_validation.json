@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-16",
+  "role": "executor",
+  "active_package": "handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md",
+  "work": "R2_unknown_region_missing_input_normalization_only",
+  "R1": "previous_independent_review_closed_untouched",
+  "previous_adjacent": {
+    "passed": 8,
+    "total": 12,
+    "failed": [
+      "A08",
+      "A09",
+      "A10",
+      "A11"
+    ]
+  },
+  "current_adjacent": {
+    "passed": 12,
+    "total": 12,
+    "failed_ids": [],
+    "path": "reports/newpack_r2_unknown_executor_20261116_run01_adjacent.json"
+  },
+  "current_original": {
+    "passed": 12,
+    "total": 12,
+    "failed_ids": [],
+    "path": "reports/newpack_r2_unknown_executor_20261116_run01_known12.json"
+  },
+  "prior_six_open_development_task_outputs_unchanged": true,
+  "related_unittest": {
+    "passed": 31,
+    "total": 31
+  },
+  "python_full": {
+    "passed": 420,
+    "total": 420
+  },
+  "h05_explicit_2026_11_16": {
+    "passed": 8,
+    "total": 8
+  },
+  "native_GUI_new_run": false,
+  "java_recompile": false,
+  "p04_replay": false,
+  "new_external_search": 0,
+  "new_external_product_API_calls": 0,
+  "read_secrets": false,
+  "git_commit": false,
+  "git_push": false,
+  "real_sale_identity_verified": 0,
+  "regional_live_prices_verified": 0,
+  "purchase_approved": false,
+  "transactions_enabled": false,
+  "formal_36_holdout_run": false,
+  "project_overall": "NOT_PASS",
+  "next_role": "independent_evaluator",
+  "file_sha256": {
+    "shopping_decision/selection_criteria.py": "949bd9e4b2ea733eacbae910dd52f4f12a0ac9e02001561c31509dc8ed3c6594",
+    "tests/test_research_snapshot.py": "9c78bebb5301ca5316f9f9f8ec34c118ceada2268f34ddb11424d23462733e5e",
+    "reports/newpack_r2_unknown_executor_20261116_run01_adjacent.json": "596b2b05ce699da30e3b1718b4489c89762e7326c2a23511845189dd240186f0",
+    "reports/newpack_r2_unknown_executor_20261116_run01_known12.json": "3da00f43bf4f2e295cb663c824ce2786751cfaa9a9b07a12ad001355a029c580",
+    "reports/真实打印机通用接口R2未知部署地_执行者修复报告_20261116.md": "0300196960db363d7671dfe5143163384d9e29b7c6b50036064dcd57e357bd30"
+  }
+}

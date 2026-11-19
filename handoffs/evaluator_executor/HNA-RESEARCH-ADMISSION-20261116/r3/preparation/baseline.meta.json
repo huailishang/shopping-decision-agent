@@ -1,0 +1,22 @@
+{
+  "command_argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "shopping_decision.dialogue_flow",
+    "--real-printer-case"
+  ],
+  "exit_code": 0,
+  "started_at_utc": "2026-11-17T08:01:02.392661+00:00",
+  "finished_at_utc": "2026-11-17T08:01:03.494067+00:00",
+  "input_sha256": "cef1f1e069e0f3e39b7022f6c503dd42561864142e570e3010115ab9d10f41cd",
+  "stdout_sha256": "a6d2af8b76a9177e0db6a52b180083d85f796f6aa3059302c08a7481cb939ffd",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "next_action": "clarify_user_conditions",
+  "necessary_user_questions": [
+    "预算是否包含运费和本次需另购的耗材？"
+  ],
+  "has_decision_plan": false,
+  "source_note": "Actual current normal CLI baseline; not a new real-world material or effect test."
+}

@@ -1,0 +1,115 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: HNA-RESEARCH-ADMISSION-20261116
+checks:
+- id: VP-01
+  ac:
+  - AC-01
+  - AC-06
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py
+  - --check
+  - frozen
+  - --frozen-sha
+  - fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-02
+  ac:
+  - AC-01
+  - AC-02
+  - AC-04
+  - AC-06
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/test_checker.py
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-03
+  ac:
+  - AC-01
+  - AC-02
+  - AC-03
+  - AC-05
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py
+  - --check
+  - behavior
+  - --frozen-sha
+  - fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832
+  - --out
+  - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/executor_behavior
+  expected_exit_code: 0
+  mandatory: true
+  evaluator_command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py
+  - --check
+  - behavior
+  - --frozen-sha
+  - fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832
+  - --out
+  - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/evaluator_behavior
+- id: VP-04
+  ac:
+  - AC-02
+  - AC-03
+  - AC-04
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - -c
+  - import sys,unittest; s=unittest.defaultTestLoader.discover('tests',pattern='test_printer_decision_plan.py');
+    assert s.countTestCases() >= 6, 'new business and guard tests missing'; r=unittest.TextTestRunner(verbosity=2).run(s);
+    sys.exit(0 if r.wasSuccessful() else 1)
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-05
+  ac:
+  - AC-03
+  - AC-04
+  - AC-06
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - -m
+  - unittest
+  - discover
+  - -s
+  - tests
+  - -v
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-06
+  ac:
+  - AC-01
+  - AC-05
+  - AC-06
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py
+  - --check
+  - submission
+  - --frozen-sha
+  - fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832
+  expected_exit_code: 0
+  mandatory: true

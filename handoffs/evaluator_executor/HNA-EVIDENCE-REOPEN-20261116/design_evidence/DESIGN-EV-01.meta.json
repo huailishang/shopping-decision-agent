@@ -1,0 +1,22 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "DESIGN-EV-01",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/test_check_delivery.py",
+    "-v"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/test_check_delivery.py -v",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-17T01:32:30.024460+00:00",
+  "finished_at_utc": "2026-11-17T01:32:30.645396+00:00",
+  "exit_code": 0,
+  "stdout_path": "DESIGN-EV-01.stdout.log",
+  "stderr_path": "DESIGN-EV-01.stderr.log",
+  "stdout_bytes": 0,
+  "stderr_bytes": 2044,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "a448985986bedd5004569c6729f5af7aafff87ea653aa5d4fbe054205b18acc6"
+}

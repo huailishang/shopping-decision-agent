@@ -1,0 +1,21 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-MODEL-COMPARE-20261118
+checks:
+- id: VP-01
+  ac: [AC-01, AC-02, AC-04]
+  cwd: .
+  command: [python, -X, utf8, -m, unittest, discover, -s, tests, -p, test_model_comparison.py, -v]
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-02
+  ac: [AC-01, AC-02, AC-03, AC-04]
+  cwd: .
+  command: [python, -X, utf8, scripts/run_model_comparison_experiment.py, --audit, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-03
+  ac: [AC-04]
+  cwd: .
+  command: [python, -X, utf8, -m, unittest, discover, -s, tests, -q]
+  expected_exit_code: 0
+  mandatory: true

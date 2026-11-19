@@ -1,0 +1,195 @@
+{
+  "basis": "independent offline adjacent checks, not user-effect evaluation",
+  "total": 13,
+  "passed": 13,
+  "checks": [
+    {
+      "id": "raw_wifi_alias",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "compound_hard",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "unresolved_conflict",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [
+        "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项"
+      ],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "false_flags",
+      "passed": true,
+      "cli_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "web_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "conflicts": [],
+      "expected": "keep_for_research"
+    },
+    {
+      "id": "true_after_conflict",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "known_wechat_unselected",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "explicit_wechat_conflict",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [
+        "原文微信硬要求与“微信不是必须”确认冲突，请修改原话或确认项"
+      ],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "mini_vs_transfer",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [
+        "原文必须微信小程序与确认的转存App方式冲突"
+      ],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "wechat_optional",
+      "passed": true,
+      "cli_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "web_states": [
+        "keep_for_research",
+        "keep_for_research"
+      ],
+      "conflicts": [],
+      "expected": "keep_for_research"
+    },
+    {
+      "id": "color_conflict",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [
+        "用户确认只需黑白，与原文必须彩色打印冲突，请明确最新条件"
+      ],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "empty_unsupported",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "setup_refused_with_hard",
+      "passed": true,
+      "cli_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "web_states": [
+        "pending_evidence",
+        "pending_evidence"
+      ],
+      "conflicts": [
+        "已明确拒绝首次App/扫码设置；现有资料只描述首次设置流程，不能按已满足处理"
+      ],
+      "expected": "pending_evidence"
+    },
+    {
+      "id": "chat_false_true_clear",
+      "passed": true
+    }
+  ],
+  "nonblocking_notes": [
+    {
+      "priority": "P3",
+      "finding": "explicit optional WeChat answer is preserved in status but next action wording asks it again; inherited non-blocking wording issue"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+java17 compile:PASS
+PASS known-color real backend; full audit chars=61106
+PASS short real backend clarification
+PASS 128KiB output drained
+PASS nonzero exit
+PASS real timeout and cleanup
+PASS changed conditions invalidate delayed old result
+H10 Java subprocess regression: 6/6 PASS
+PASS official browser search URL
+PASS malformed search query refused
+PASS Java->Python subprocess 3 candidate URLs, zero quotes
+PASS spoofed URL rejected
+PASS Taobao browser search URL
+PASS Java->Python Taobao user link validation
+P04 Java marketplace regression: 6/6 PASS

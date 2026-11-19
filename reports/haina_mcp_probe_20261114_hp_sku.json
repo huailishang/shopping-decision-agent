@@ -1,0 +1,160 @@
+{
+  "operation": "mcp_tool_call_once",
+  "case": "hp_sku",
+  "tool": "product_sku_search",
+  "input_query": "惠普 M232dw",
+  "observed_at": "2026-11-14T02:54:21.330863+00:00",
+  "initialization_http": 200,
+  "initialization_success": true,
+  "raw_response_saved": false,
+  "credential_logged": false,
+  "full_product_url_saved": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "attempted_business_tool_calls": 1,
+  "automatic_retries": 0,
+  "initialized_notification_http": 202,
+  "rpc_http": 200,
+  "response_len": 13125,
+  "response_sha256": "9e85554d0c2eb2d6a4ad4886fb6ab6bc4ffc97a9e79b0c6e71fd4ec39c18eb7c",
+  "rpc_is_error": false,
+  "rpc_error_present": false,
+  "parsed_result_type": "dict",
+  "business_code": 0,
+  "structure": [
+    {
+      "path": "error_code",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "error_msg",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "requestid",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "domain",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data",
+      "type": "list",
+      "length": 1
+    },
+    {
+      "path": "data[].entity_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result",
+      "type": "dict",
+      "length": 4
+    },
+    {
+      "path": "data[].sku_result.spu_id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.spu_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_count",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list",
+      "type": "list",
+      "length": 2
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_axes",
+      "type": "dict",
+      "length": 1
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products_count",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products",
+      "type": "list",
+      "length": 2
+    }
+  ],
+  "identity_field_occurrences": [
+    {
+      "field": "data[].sku_result.spu_id",
+      "kind": "str",
+      "len": 32,
+      "sha256": "d763b895d2e07420a0acdb96010735112e4f9b376b0e58f221b2a4af362146b9"
+    },
+    {
+      "field": "data[].sku_result.spu_name",
+      "kind": "str",
+      "len": 19,
+      "sha256": "870dcac5e4c93abbc07cb1d47fc60a4a1a3eb0e9408e339022be2464dcf7fa89"
+    },
+    {
+      "field": "data[].sku_result.sku_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_id",
+      "kind": "str",
+      "len": 32,
+      "sha256": "063c7b15b8483f17bc38c44254bcf63a164f7bccd3ae42977735624f5677375a"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_id",
+      "kind": "str",
+      "len": 32,
+      "sha256": "484866704bf6bf70d57015b5d586aff33e075381b98db16256d92c13a966db84"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products[].sku_prop",
+      "kind": "str",
+      "len": 18,
+      "sha256": "21c865475f394cf30d331b78a8665c63a0df2ef772f159cef34a202f231b9086"
+    }
+  ],
+  "title_brand_store_excerpts": [],
+  "business_container_keys": [
+    "error_code",
+    "error_msg",
+    "requestid",
+    "domain",
+    "data"
+  ],
+  "elapsed_seconds": 1.497
+}

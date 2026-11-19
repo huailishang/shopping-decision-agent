@@ -1,0 +1,125 @@
+{
+  "schema": "trusted-decision-validation/v1",
+  "task_id": "PRINTER-TRUSTED-DECISION-20261119",
+  "verified_at_utc": "2026-11-19T07:26:26.876595+00:00",
+  "VP-01": {
+    "command": "python3 -X utf8 -m unittest discover -s tests -p test_model_comparison.py -v",
+    "exit_code": 0,
+    "observed_tests": 21,
+    "passed": 21,
+    "capture_note": "Original connector command reported 21/21 and exit 0; raw console output not separately saved to workspace during Stage 0.",
+    "additional_classifier_assertions": {
+      "R1_true_rejected": true,
+      "R1_false_rejected": true,
+      "R1_valid_accepted": true,
+      "R2_string_item_flagged": true,
+      "R2_missing_item_flagged": true,
+      "R2_missing_type_flagged": true,
+      "real_tool_rejected": true,
+      "provider_error_not_tool": true
+    }
+  },
+  "VP-02": {
+    "name": "VP-02",
+    "started_at_utc": "2026-11-19T07:24:49.774784+00:00",
+    "finished_at_utc": "2026-11-19T07:25:24.626212+00:00",
+    "duration_sec": 34.87,
+    "argv": [
+      "/usr/bin/python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-q"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "c7928fe602fe2b4034d1574bb9f6cfbd8dec09f14bc632cd12f6bfc1bca64e38",
+    "observed_stderr_tail": "127.0.0.1 - - [19/Nov/2026 15:24:58] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [19/Nov/2026 15:24:58] \"POST /api/decide HTTP/1.1\" 200 -\n127.0.0.1 - - [19/Nov/2026 15:24:58] \"POST /api/decide HTTP/1.1\" 400 -\n----------------------------------------------------------------------\nRan 485 tests in 32.989s\n\nOK\n",
+    "observed_stdout_tail": "",
+    "pass_expected_exit": true
+  },
+  "VP-03": {
+    "name": "VP-03",
+    "started_at_utc": "2026-11-19T07:25:24.643566+00:00",
+    "finished_at_utc": "2026-11-19T07:25:37.426678+00:00",
+    "duration_sec": 12.743,
+    "argv": [
+      "/usr/bin/python3",
+      "-X",
+      "utf8",
+      "scripts/run_model_comparison_experiment.py",
+      "--audit",
+      "--task",
+      "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "stdout_sha256": "98582b6616cc6e4f37d1474da28fe7bf78b7902f51d062284b75a078c8e51317",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "observed_stderr_tail": "",
+    "observed_stdout_tail": "{\"status\": \"failed\", \"reason\": \"model cases not attempted: C05,C06,C07\"}\n",
+    "pass_expected_exit": true
+  },
+  "VP-04": {
+    "method": "executor_manual_source_review_only; evaluator must independently verify",
+    "matrix_exists": true,
+    "comparison_exists": true,
+    "source_count": 5,
+    "candidate_count": 2,
+    "henan_effective_price_verified_count": 0,
+    "search_budget": {
+      "search_total": 4,
+      "page_reads_total": 7,
+      "official_page_reads": 5,
+      "public_listing_reads": 2,
+      "queries_remaining": 0,
+      "page_reads_remaining": 1,
+      "scheduled_first_proven": false,
+      "recording_limitation": "Web research calls were made before writing local log; pair records reconstructed transparently after calls. Original exact UTC start/end times and full-content SHA unavailable; independent evaluator should mark this audit subcheck incomplete."
+    },
+    "source_full_hash_available": false,
+    "source_read_limit_met": true,
+    "scheduled_before_request_proven": false,
+    "scope_warning": "Search/open calls executed before local attempt log was written; UTC and full raw hashes unknown. AC-05 contemporaneous audit subcheck not met."
+  },
+  "VP-05": {
+    "baseline_sha256_expected": "2888bc4f3b08df1befe847b187973e112c38591d5d231fd2f349577fe00b9b07",
+    "baseline_sha256_actual": "2888bc4f3b08df1befe847b187973e112c38591d5d231fd2f349577fe00b9b07",
+    "baseline_sha_match": true,
+    "immutable_files_checked": 16,
+    "immutable_mismatches": [],
+    "historical_ledger_sha_expected": "dc0f8631caa98df123206ef751312f42998e3f55614ac81b730bd7dbfe372026",
+    "historical_ledger_sha_actual": "dc0f8631caa98df123206ef751312f42998e3f55614ac81b730bd7dbfe372026",
+    "ledger_preserved": true,
+    "scheduled_and_completed": {
+      "scheduled": 6,
+      "completed": 6
+    },
+    "previous_git_status_rows": 1220,
+    "current_git_status_rows": 1229,
+    "added_status_lines": [
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/BASELINE.json",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/BASELINE.sha256",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/COMPARISON.md",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-02.meta.json",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-03.meta.json",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/attempts.jsonl",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/decision_matrix.json",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/research_budget.json",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/sources.json"
+    ],
+    "removed_status_lines": [],
+    "unexpected_added_status_lines": [],
+    "git_commit": false,
+    "git_push": false,
+    "new_model_inference_calls": 0,
+    "private_business_api_calls": 0,
+    "transactions": 0
+  },
+  "new_source_decision_gain": "only exact HP SKU identity confirmed; price/reuse/real-world effect unknown"
+}

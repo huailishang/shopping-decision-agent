@@ -19,3 +19,7 @@ runs/
 .serena/
 .spec-workflow/
 .playwright-mcp/
+# Generated binaries captured by local review/test work
+*.class
+**/evidence/toolchain/python
+**/evidence/.python-cli/python

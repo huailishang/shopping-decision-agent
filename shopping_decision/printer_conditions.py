@@ -59,6 +59,10 @@ def printer_conditions(req: PurchaseRequest) -> dict:
                 break
             if consumed:
                 unresolved.append(clause.strip())
+    if req.needs_color is False and required.get("color_print") is True:
+        conflicts.append("用户确认只需黑白，与原文必须彩色打印冲突，请明确最新条件")
+    if req.needs_color is True and required.get("monochrome_print") is True:
+        conflicts.append("用户确认必须彩色，与原文只需黑白冲突，请明确最新条件")
     if hard_mini:
         hard_wechat = True
     if hard_wechat and req.wechat_required is False:

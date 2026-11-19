@@ -1,0 +1,228 @@
+{
+  "checked_date": "2026-11-15",
+  "review_type": "public_documentation_and_static_source_review",
+  "third_party_software_installed_or_run": false,
+  "third_party_source_or_data_copied_to_repository": false,
+  "production_or_real_shopping_effectiveness_verified": false,
+  "business_code_changed": false,
+  "selection_limit": "Purposeful sample; no exhaustive absence claim about all shopping agents",
+  "repositories": [
+    {
+      "repository": "cinderline/northcinder",
+      "observed_main_commit": "d1343096a7afff58e0aee4fbf608daf2fa28dc03",
+      "commit_date": "2026-08-22T12:01:04Z",
+      "license_review": "MIT (LICENSE read)",
+      "archived": false,
+      "review_scope": "bounded product research, structured evidence and deterministic readiness; not qualified for routine research by author's own README",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/README.md",
+          "github_blob_sha": "a699e2e4548d708291ab01ee2902dc2bd10c0b6a"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/LICENSE",
+          "github_blob_sha": "54a6f71bb6204777a44df46ba4b4a3a33c7011ce"
+        },
+        {
+          "path": "client/research-skills/product-research/SKILL.md",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/client/research-skills/product-research/SKILL.md",
+          "github_blob_sha": "ab733c5f70c26ce7b9b6566a934f56e1bf748358"
+        },
+        {
+          "path": "client/src/server.ts",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/client/src/server.ts",
+          "github_blob_sha": "63c1df9eea0fe30b8c25bf2480f58e97cd76ff1c"
+        },
+        {
+          "path": "client/src/research-skills.ts",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/client/src/research-skills.ts",
+          "github_blob_sha": "24ec9b303194778029f3a47b82423e139bca5fcb"
+        },
+        {
+          "path": "client/src/decision-evidence.ts",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/client/src/decision-evidence.ts",
+          "github_blob_sha": "5e1d126bd45bf29aef5bc78b27614955183da32e"
+        },
+        {
+          "path": "docs/RANKING.md",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/docs/RANKING.md",
+          "github_blob_sha": "a336f2e0b716ae7200c7328384f09cd6ce963f63"
+        },
+        {
+          "path": "packages/protocol/src/ranking/rank.ts",
+          "url": "https://github.com/cinderline/northcinder/blob/d1343096a7afff58e0aee4fbf608daf2fa28dc03/packages/protocol/src/ranking/rank.ts",
+          "github_blob_sha": "5f1e20f8d028fe34a2e3d5c729826c755b05ac6c"
+        }
+      ]
+    },
+    {
+      "repository": "NVIDIA-AI-Blueprints/retail-shopping-assistant",
+      "observed_main_commit": "3eca0719c130ecd840ece67b8f285b15a795312b",
+      "commit_date": "2026-11-04T20:50:50Z",
+      "license_review": "Apache-2.0 (LICENSE read); data/model/deployment terms separate",
+      "archived": false,
+      "review_scope": "catalogue schema, capability discovery and deterministic filtering; does not establish independent category evidence acquisition",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/retail-shopping-assistant/blob/3eca0719c130ecd840ece67b8f285b15a795312b/LICENSE",
+          "github_blob_sha": "f13d24c3fa482d61605d600e5ac1248799bd4107"
+        },
+        {
+          "path": "docs/CATALOG_ARCHITECTURE.md",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/retail-shopping-assistant/blob/3eca0719c130ecd840ece67b8f285b15a795312b/docs/CATALOG_ARCHITECTURE.md",
+          "github_blob_sha": "f135a387beb24ba249952d90055cf68ce04efb97"
+        },
+        {
+          "path": "shared/data/enriched_products.schema.yaml",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/retail-shopping-assistant/blob/3eca0719c130ecd840ece67b8f285b15a795312b/shared/data/enriched_products.schema.yaml",
+          "github_blob_sha": "13404f6e99658119f67df3ab7ee1dd8e2762299d"
+        },
+        {
+          "path": "catalog_retriever/src/capabilities.py",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/retail-shopping-assistant/blob/3eca0719c130ecd840ece67b8f285b15a795312b/catalog_retriever/src/capabilities.py",
+          "github_blob_sha": "8ab58cb941dc7de207d60e9e4d5409ef2848c49f"
+        },
+        {
+          "path": "catalog_retriever/src/retriever.py",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/retail-shopping-assistant/blob/3eca0719c130ecd840ece67b8f285b15a795312b/catalog_retriever/src/retriever.py",
+          "github_blob_sha": "4026317f1876c592e569924b7ddb9070b7ce83d1"
+        },
+        {
+          "path": "orchestrator/skills/shopper/product-discovery/SKILL.md",
+          "url": "https://github.com/NVIDIA-AI-Blueprints/retail-shopping-assistant/blob/3eca0719c130ecd840ece67b8f285b15a795312b/orchestrator/skills/shopper/product-discovery/SKILL.md",
+          "github_blob_sha": "202042d1965ceb4587cb98268794212940d57e0b"
+        }
+      ]
+    },
+    {
+      "repository": "pingfangww/qiuqiu-rag-shopping-agent",
+      "observed_main_commit": "a0ac29eeb596ae06d4c71e29b4600ce6973e21de",
+      "commit_date": "2026-07-04T07:46:01Z",
+      "license_review": "No standalone license file found in inspected complete tree; not approved for code/data reuse",
+      "review_scope": "prompt-based category education, clarification and local catalogue/review retrieval",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/pingfangww/qiuqiu-rag-shopping-agent/blob/a0ac29eeb596ae06d4c71e29b4600ce6973e21de/README.md",
+          "github_blob_sha": "93283981651c627dd726b80fa284b52fd4b4cf1c"
+        },
+        {
+          "path": "server/agent/prompts/system_prompt.md",
+          "url": "https://github.com/pingfangww/qiuqiu-rag-shopping-agent/blob/a0ac29eeb596ae06d4c71e29b4600ce6973e21de/server/agent/prompts/system_prompt.md",
+          "github_blob_sha": "c5784613cb2a62a35d15521deee85af34e788032"
+        },
+        {
+          "path": "server/agent/orchestrator.py",
+          "url": "https://github.com/pingfangww/qiuqiu-rag-shopping-agent/blob/a0ac29eeb596ae06d4c71e29b4600ce6973e21de/server/agent/orchestrator.py",
+          "github_blob_sha": "d48edb3a325b4d15ef2a3beeba0c59e045a4e1ee"
+        },
+        {
+          "path": "server/rag/retriever.py",
+          "url": "https://github.com/pingfangww/qiuqiu-rag-shopping-agent/blob/a0ac29eeb596ae06d4c71e29b4600ce6973e21de/server/rag/retriever.py",
+          "github_blob_sha": "e06f2109e11f967d9615dbcead05e8f4f02e6a8f"
+        }
+      ]
+    },
+    {
+      "repository": "raghav-malik/ShopSense",
+      "observed_main_commit": "f7ba10af8c0251146449c90b28816a6be867996e",
+      "commit_date": "2026-10-06T11:29:49Z",
+      "license_review": "No standalone license file found in inspected complete tree; no license declaration observed in inspected pyproject",
+      "review_scope": "web-search shopping loop, preferences/budget and product page price checking; no verified authority-to-category-rule contract",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/raghav-malik/ShopSense/blob/f7ba10af8c0251146449c90b28816a6be867996e/README.md",
+          "github_blob_sha": "a5d545563b47593dea6f3107518702f632f7dd0f"
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://github.com/raghav-malik/ShopSense/blob/f7ba10af8c0251146449c90b28816a6be867996e/pyproject.toml",
+          "github_blob_sha": "869f6e4ef0967a520dead548191611949be70ee1"
+        },
+        {
+          "path": "app/agent/prompts.py",
+          "url": "https://github.com/raghav-malik/ShopSense/blob/f7ba10af8c0251146449c90b28816a6be867996e/app/agent/prompts.py",
+          "github_blob_sha": "17c3470cf42a2f92c66c9b175d4155a0431da693"
+        },
+        {
+          "path": "app/agent/core.py",
+          "url": "https://github.com/raghav-malik/ShopSense/blob/f7ba10af8c0251146449c90b28816a6be867996e/app/agent/core.py",
+          "github_blob_sha": "4529aa9c9129c868f8db9f617e01640f4f9d4ed5"
+        },
+        {
+          "path": "app/tools/search.py",
+          "url": "https://github.com/raghav-malik/ShopSense/blob/f7ba10af8c0251146449c90b28816a6be867996e/app/tools/search.py",
+          "github_blob_sha": "a0d55aa63653dbd93d6c16504976418150adae57"
+        },
+        {
+          "path": "app/tools/compare.py",
+          "url": "https://github.com/raghav-malik/ShopSense/blob/f7ba10af8c0251146449c90b28816a6be867996e/app/tools/compare.py",
+          "github_blob_sha": "1bc5d9cbc860a2ce4e43058cc086680826c313dd"
+        }
+      ]
+    },
+    {
+      "repository": "langchain-ai/open_deep_research",
+      "observed_main_commit": "1b7d2e80db9faa586165c60e09096dbbfd483a64",
+      "commit_date": "2026-08-10T18:13:29Z",
+      "license_review": "MIT (LICENSE read)",
+      "archived": true,
+      "review_scope": "general deep research method reference, not a shopping implementation",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/langchain-ai/open_deep_research/blob/1b7d2e80db9faa586165c60e09096dbbfd483a64/LICENSE",
+          "github_blob_sha": "82dc7c43f7ba98b72ac619ebfe7599576dc3ce7f"
+        },
+        {
+          "path": "src/open_deep_research/prompts.py",
+          "url": "https://github.com/langchain-ai/open_deep_research/blob/1b7d2e80db9faa586165c60e09096dbbfd483a64/src/open_deep_research/prompts.py",
+          "github_blob_sha": "1d9f5d996a5999e16c6fa2446be179e3aee45bb8"
+        },
+        {
+          "path": "src/open_deep_research/deep_researcher.py",
+          "url": "https://github.com/langchain-ai/open_deep_research/blob/1b7d2e80db9faa586165c60e09096dbbfd483a64/src/open_deep_research/deep_researcher.py",
+          "github_blob_sha": "279dbffd9e49e07962fb4e1cfeff79e45adc43e9"
+        }
+      ]
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+      "role": "comparative test dimensions; historical sample, not current regional recommendation",
+      "read_status": "article body read"
+    },
+    {
+      "url": "https://www.samr.gov.cn/zljds/jdcc/art/2023/art_1036ff5727d248e18dc2bcd58f7e5d4b.html",
+      "role": "printer quality inspection, historical batch and safety/EMC scope",
+      "read_status": "article body read",
+      "published_date": "2023-04-04"
+    },
+    {
+      "url": "https://datasearch.nmpa.gov.cn/datasearch/search-help.html",
+      "role": "registration/filing query entry types, applicable regulated categories only",
+      "read_status": "official search-index excerpt observed; direct open timed out; no live product record or API verified"
+    },
+    {
+      "url": "https://www.nmpa.gov.cn/hzhp/index.html",
+      "role": "official cosmetics query entry",
+      "read_status": "official search-index excerpt observed; direct open returned 412"
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.23716",
+      "role": "ProductResearch research method; no author-maintained reusable implementation established in this review",
+      "read_status": "abstract and HTML paper reviewed"
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.12315",
+      "role": "AgenticShop evaluation paper; not a deployed shopping agent",
+      "read_status": "abstract and HTML paper reviewed"
+    }
+  ],
+  "project_effect": "Research only. Existing F1-F4 defects, real Haina evidence/use-rights gaps, sales-identity 0/2, current regional quote 0, recommendation/purchase and transaction gates remain unchanged."
+}

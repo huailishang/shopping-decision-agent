@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "run_id": "printer_low_use_source_delta_20261116_run02",
+  "date": "2026-11-16",
+  "role": "executor",
+  "task": "existing long package S1 evidence gap; no new mandatory code task",
+  "baseline": "E1 independent 2026-11-16: 406/406 Python; development strict completeness baseline 13/15 cognition 14/15; overall NOT PASS",
+  "source_method": "read-only public web result and retrieved page text; no provider API, login, user data, commerce action",
+  "case": {
+    "budget_cny_max": 1000,
+    "monthly_pages_min": 0,
+    "monthly_pages_max": 50,
+    "category": "black-and-white home printer",
+    "models": [
+      "Brother HL-L1238W",
+      "HP LaserJet MFP M232dw"
+    ],
+    "delivery_region_confirmed": false,
+    "max_idle_duration_confirmed": false
+  },
+  "sources": [
+    {
+      "id": "L16-01",
+      "kind": "manufacturer exact model user manual",
+      "group": "brother",
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-B6E8FEAE-BE0B-4CB3-8F23-55767185E30B_1.html",
+      "retrieved_on": "2026-11-16",
+      "claim": "Brother HL-L1238W included (inbox) toner approx 1500 ISO/IEC19752 pages; TN118 replacement approx 1500, DR118 drum approx 10000 at one page/job",
+      "scope": "HL-L1238W, CN Chinese manual",
+      "limitations": [
+        "page yields are standardized approximations",
+        "does not give price or realized lifetime"
+      ]
+    },
+    {
+      "id": "L16-02",
+      "kind": "manufacturer general storage guidance",
+      "group": "hp",
+      "url": "https://support.hp.com/ph-en/document/ish_9364723-9363932-16",
+      "retrieved_on": "2026-11-16",
+      "claim": "HP LaserJet packaged cartridge storage guidance includes total storage plus use time <=2.5 years, based on cartridge date code",
+      "scope": "General LaserJet storage conditions, not verified M232dw/137A model rule",
+      "limitations": [
+        "not product shelf life/failure test",
+        "not automatic discarding rule",
+        "no basis for comparing Brother longevity"
+      ]
+    },
+    {
+      "id": "L16-03",
+      "kind": "HP manufacturer series setup and China storefront box list; storefront affiliation not separately verified",
+      "group": "hp",
+      "url": "https://support.hp.com/rs-en/document/ish_12019633-12019817-16",
+      "secondary_url": "https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html",
+      "retrieved_on": "2026-11-16",
+      "claim": "M232-M237 shipped with prepared toner; China M232dw 9YF97A listing includes black toner in box",
+      "scope": "Series-level HP support plus exact model China storefront listing; affiliation not independently verified",
+      "limitations": [
+        "China SKU starter yield not confirmed",
+        "store page does not verify current sale price"
+      ]
+    },
+    {
+      "id": "L16-04",
+      "kind": "manufacturer China consumables warranty policy",
+      "group": "hp",
+      "url": "https://support.hp.com/cn-zh/document/ish_11838799-11926070-16",
+      "retrieved_on": "2026-11-16",
+      "claim": "China genuine toner/warranty has time conditions based on invoice and production date",
+      "scope": "China warranty policy, verify exact toner applicability before use",
+      "limitations": [
+        "warranty period is not usable lifetime",
+        "not a model-level recommendation"
+      ]
+    }
+  ],
+  "calculation_example": {
+    "scenario": "exactly 50 sheets per month continuously",
+    "brother_nominal_inbox_pages": 1500,
+    "theoretical_months": 30,
+    "formula": "1500 / 50",
+    "is_estimated_actual_replacement_period": false
+  },
+  "delta": {
+    "inbox_cartridge_confirmation": "Brother model-specific new evidence",
+    "time_dependent_cost_dimension": "HP general guidance only",
+    "price_confidence": "none",
+    "durability_comparison_supported": false,
+    "ranking_changed": false,
+    "ability_to_assess_total_ownership_cost": false,
+    "independent_effect_gain": null
+  },
+  "remaining": {
+    "h1": "BLOCKED: permission and auditable raw two model fields",
+    "h2": "0/2 verified live sale identities, prior 0/20 checks",
+    "h3": "0 regional valid prices",
+    "new_user_answers": 0,
+    "formal_holdout_evaluated": 0
+  },
+  "write_scope": [
+    "reports/低频打印耗材起始量与存放限制_新增公开资料核验_执行者_20261116_run02.md",
+    "reports/low_frequency_printer_source_delta_20261116_run02.json",
+    "CURRENT.md"
+  ],
+  "not_changed": [
+    "knowledge",
+    "shopping_decision",
+    "tests",
+    "historical failed reviews",
+    "formal 36 holdout"
+  ],
+  "authorization": {
+    "git_commit": false,
+    "git_push": false,
+    "provider_api": false,
+    "shopping_actions": false,
+    "payment": false
+  },
+  "verdict": "PUBLIC_SOURCE_DELTA_FOUND; NO_RANKING_GAIN_PROVEN; PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,215 @@
+{
+  "role": "independent_evaluator",
+  "date": "2026-11-16",
+  "scope": "six_bounded_e1_neighbors_not_accuracy_or_holdout",
+  "checks": [
+    {
+      "id": "V1_other_interval",
+      "pass": true,
+      "expected": "a second valid synthetic interval propagates without the old fixed number",
+      "actual": {
+        "id": "E-VOLUME-NOT-MINIMUM",
+        "status": "source_supported_informational_only",
+        "claim": "本案月印量低于HP M232系列建议的91—913页/月；建议区间不等于最低使用量，也不证明低频易损坏。",
+        "current_check": {
+          "criterion_id": "C-VOLUME",
+          "why": "区间关系区分低于/重叠/覆盖/相等/高于；厂家建议印量不是最低门槛",
+          "kind": "informational",
+          "user_field": "monthly_pages_range",
+          "user_value": [
+            9,
+            37
+          ],
+          "product_field": "manufacturer_recommended_monthly_pages",
+          "product_value": [
+            91,
+            913
+          ],
+          "unit": "pages_per_month",
+          "product_unit": "pages_per_month",
+          "op": "interval_relation",
+          "relation": "below",
+          "source_ids": [
+            "R11"
+          ],
+          "method_source_ids": [
+            "C-598",
+            "R11"
+          ],
+          "unknown_or_counter": "建议区间缺失不等于不适合低频使用",
+          "evidence_state": "manufacturer_fact_research_only",
+          "deployment_region_scope": null,
+          "source_region_research_applicable": null,
+          "regional_service_verified": null,
+          "budget_live_verified": null
+        },
+        "decision_effect": "阻止按建议月印量直接淘汰HP；低频真正的长期成本和闲置可靠性仍需独立证据。",
+        "source_refs": [
+          {
+            "source_id": "R11",
+            "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+            "source_group": "hp_global",
+            "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+            "audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226",
+            "counter": "synthetic memory only",
+            "captured_on": "2026-11-15",
+            "validity": "dated_research_summary_no_live_validity_verified"
+          }
+        ],
+        "missing": [
+          "准确耗材现价",
+          "真实覆盖页数",
+          "长期闲置维护实测"
+        ],
+        "needs_user_answer_now": false
+      }
+    },
+    {
+      "id": "V2_missing_or_wrong_unit",
+      "pass": true,
+      "expected": "invalid current values do not generate a fallback volume assertion",
+      "actual": [
+        {
+          "kind": "missing",
+          "present": false
+        },
+        {
+          "kind": "unit_mismatch",
+          "present": false
+        }
+      ]
+    },
+    {
+      "id": "V3_future_source_validity_rejected",
+      "pass": true,
+      "expected": "the declared unsupported validity contract is rejected even for a future date",
+      "actual": "unsupported_model_comparison_source_validity:R11"
+    },
+    {
+      "id": "V4_normal_cli_clear_conflict",
+      "pass": true,
+      "expected": "normal CLI conflict blocks related premise then clears without stale blocking",
+      "actual": {
+        "exit": 0,
+        "inputs": [
+          {
+            "text": "独立合成彩印冲突",
+            "answers": {
+              "category": "printer",
+              "needs_color": false,
+              "accepts_outsourced_color": true,
+              "monthly_pages_range": [
+                9,
+                37
+              ],
+              "budget_max_cny": 1000,
+              "requirements": [
+                "必须在家彩印"
+              ]
+            }
+          },
+          {
+            "text": "独立合成仅撤销彩印原话",
+            "answers": {
+              "requirements": [
+                "希望微信打印"
+              ]
+            }
+          }
+        ],
+        "effects": [
+          {
+            "id": "E-DEFER-OR-OUTSOURCE",
+            "status": "blocked_by_user_condition_conflict",
+            "claim": "家中彩印原话与黑白确认存在冲突；外包路线暂停判断，须先明确最新彩印要求。",
+            "decision_effect": "暂缓购买可以保留；不能把有争议的黑白/外包前提视为已确认。",
+            "source_refs": [],
+            "missing": [
+              "实际外包单价与频次",
+              "家用机器总成本"
+            ],
+            "needs_user_answer_now": true
+          },
+          {
+            "id": "E-DEFER-OR-OUTSOURCE",
+            "status": "user_condition_only_not_product_fact",
+            "claim": "已确认家中黑白、偶尔彩印可以外包；外包或暂缓购买是可讨论的路线，不是已核实更便宜的方案。",
+            "decision_effect": "避免为凑三台机器虚构商品；在现价/耗材价未知时保留暂缓选择。",
+            "source_refs": [],
+            "missing": [
+              "实际外包单价与频次",
+              "家用机器总成本"
+            ],
+            "needs_user_answer_now": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "V5_unrelated_scan_conflict",
+      "pass": true,
+      "expected": "unrelated scan conflict does not erase an independently confirmed color/outsource background",
+      "actual": {
+        "id": "E-DEFER-OR-OUTSOURCE",
+        "status": "user_condition_only_not_product_fact",
+        "claim": "已确认家中黑白、偶尔彩印可以外包；外包或暂缓购买是可讨论的路线，不是已核实更便宜的方案。",
+        "decision_effect": "避免为凑三台机器虚构商品；在现价/耗材价未知时保留暂缓选择。",
+        "source_refs": [],
+        "missing": [
+          "实际外包单价与频次",
+          "家用机器总成本"
+        ],
+        "needs_user_answer_now": false
+      }
+    },
+    {
+      "id": "V6_wechat_conflict_not_reasked",
+      "pass": true,
+      "expected": "known WeChat workflow conflict generates conflict resolution, not a new intensity question",
+      "actual": {
+        "effect": {
+          "id": "E-WECHAT-SETUP",
+          "status": "source_supported_with_user_condition_conflict",
+          "claim": "Brother HL-L1238W首次启用微信畅享印需要Brother Mobile Connect配置；HP M232系列先连Wi-Fi，再用信息页二维码绑定惠普云打印。",
+          "decision_effect": "微信硬要求与确认项存在冲突，先解决冲突；不能把当前流程视为已确认。",
+          "source_refs": [
+            {
+              "source_id": "R7",
+              "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+              "source_group": "brother_cn",
+              "scope": "支持页明确列出的HL-L1238W/HL-L1808W",
+              "audit": "public_page_open_2026-11-15_lines_11_32",
+              "counter": "厂家流程说明不等于用户家庭网络实测；首次设置并非零步骤；代理网络和本地环境可能影响使用。",
+              "captured_on": "2026-11-15",
+              "validity": "dated_research_summary_no_live_validity_verified"
+            },
+            {
+              "source_id": "R10",
+              "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+              "source_group": "hp_cn",
+              "scope": "HP LaserJet MFP M232-M237系列安装指南",
+              "audit": "public_pdf_open_2026-11-15_lines_48_62",
+              "counter": "指南标注微信打印为可选设置；没有在用户设备/地区实测；需要完成前置Wi-Fi设置和扫码绑定。",
+              "captured_on": "2026-11-15",
+              "validity": "dated_research_summary_no_live_validity_verified"
+            }
+          ],
+          "missing": [
+            "设备部署地区与本地网络",
+            "本人能否接受首次配置",
+            "实际连通验证"
+          ],
+          "needs_user_answer_now": false
+        },
+        "questions": [
+          "原文必须微信小程序与确认的转存App方式冲突"
+        ]
+      }
+    }
+  ],
+  "total": 6,
+  "passed": 6,
+  "formal_holdout_started": false,
+  "business_calls": 0,
+  "credential_reads": 0
+}

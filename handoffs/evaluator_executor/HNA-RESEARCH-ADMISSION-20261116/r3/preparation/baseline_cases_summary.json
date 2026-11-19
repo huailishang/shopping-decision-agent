@@ -1,0 +1,38 @@
+[
+  {
+    "id": "original_proxy",
+    "basis": "project_owner_proxy_replay",
+    "cli_exit_code": 0,
+    "cli_next_action": "clarify_user_conditions",
+    "cli_primary_questions": [
+      "预算是否包含运费和本次需另购的耗材？"
+    ],
+    "chat_prompt_field": "wechat_required",
+    "conditional_plan_present": false,
+    "stdout_sha256": "a6d2af8b76a9177e0db6a52b180083d85f796f6aa3059302c08a7481cb939ffd"
+  },
+  {
+    "id": "hypothetical_wechat_required",
+    "basis": "hypothetical_branch_not_user_confirmation",
+    "cli_exit_code": 0,
+    "cli_next_action": "clarify_user_conditions",
+    "cli_primary_questions": [
+      "预算是否包含运费和本次需另购的耗材？"
+    ],
+    "chat_prompt_field": "",
+    "conditional_plan_present": false,
+    "stdout_sha256": "f59d48759234730c76a71b8b370992db9dfef951efcd7d66d0dfa2a6c73f4d41"
+  },
+  {
+    "id": "hypothetical_wechat_optional",
+    "basis": "hypothetical_branch_not_user_confirmation",
+    "cli_exit_code": 0,
+    "cli_next_action": "clarify_user_conditions",
+    "cli_primary_questions": [
+      "预算是否包含运费和本次需另购的耗材？"
+    ],
+    "chat_prompt_field": "",
+    "conditional_plan_present": false,
+    "stdout_sha256": "52f6f8b22cfb42cecff3817383828779107f7905ad9cf32cdeeadc39cf0f059e"
+  }
+]

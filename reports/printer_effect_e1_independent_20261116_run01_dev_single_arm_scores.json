@@ -1,0 +1,415 @@
+{
+  "role": "independent_evaluator",
+  "status": "open_development_single_arm_reading_not_strict_blind",
+  "rubric": "evaluation\\printer_cognition_dev_independent_rubric_20261116.json",
+  "packet_file": "reports\\printer_effect_executor_recheck_20261116_run01_dev_review_packets.json",
+  "rubric_sha256": "2730bf819d73af83db95ed7ff8a96067e56a02f6c932021ab4023a75001561d0",
+  "packets_sha256": "b2a1c22a411f58bf5ac774cc8a6988a66f62f1eb502f325a4b3c7d6134e27127",
+  "annotations": [
+    {
+      "packet_id": "07e6e8c91296dce7",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T1",
+      "reference_acceptance": "两型号保持规格研究/待核购买；明确没有预算或地区实价通过，不作当前可买承诺。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "两款路线仍为厂家规格研究，地区实价/预算未核且禁止购买，未承诺千元可买。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "07e6e8c91296dce7",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T2",
+      "reference_acceptance": "对两款分别给出首次联网/App或扫码绑定前提；models已有设置文字也认可；不能只用无线/微信标签替代流程。",
+      "judgment": "pass",
+      "locations": [
+        "/output/models/0/wechat_setup",
+        "/output/models/1/wechat_setup"
+      ],
+      "reason": "两款models.wechat_setup已有Mobile Connect首次配置与Wi-Fi/二维码绑定说明；基线已有内容同等认可。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "07e6e8c91296dce7",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T3",
+      "reference_acceptance": "HP低于建议印量仍是研究对象而非低频淘汰；C-VOLUME信息性状态且无该硬淘汰可满足操作性判断，不强求额外解释模板。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/3/current_check",
+        "/output/models/1/eligibility",
+        "/output/task_output/questions"
+      ],
+      "reason": "HP建议印量为informational，低于区间未造成硬淘汰，HP仍可规格研究；不以额外解释条数计分。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "07e6e8c91296dce7",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T4",
+      "reference_acceptance": "明确说明现有资料不足以做两型号长期耐用对比，且地区实际成本/报价未核；复合任务缺一项记partial。",
+      "judgment": "pass",
+      "locations": [
+        "/output/known_limits/2",
+        "/output/task_output/questions",
+        "/output/task_output/answers/7"
+      ],
+      "reason": "明确说现有资料不能给两款长期耐用排名，同时标出地区/耗材实际成本待核；完成复合参考。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "12ce590a1d4571e5",
+      "case_id": "D03-color-hard",
+      "task_id": "D03-color-hard:T1",
+      "reference_acceptance": "两款黑白型号均排除；功能说明或额外判断不复活为适用候选。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0/current_check",
+        "/output/task_output/answers/3/current_check",
+        "/output/task_output/routes"
+      ],
+      "reason": "两个color_print=false型号均excluded_by_hard_condition，展示的资料不复活为当前适用型号。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "12ce590a1d4571e5",
+      "case_id": "D03-color-hard",
+      "task_id": "D03-color-hard:T2",
+      "reference_acceptance": "购买批准false，无当前可买陈述。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "purchase_recommendation_approved=false，未给可买承诺。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "176a60646c0c9aab",
+      "case_id": "D06-higher-volume",
+      "task_id": "D06-higher-volume:T1",
+      "reference_acceptance": "印量范围内仍为信息性检查，明确不能据此证明运行可靠或成本最低；若只报within而没有相关限缩，记partial。",
+      "judgment": "partial",
+      "locations": [
+        "/output/task_output/answers/3/current_check",
+        "/output/models/1/eligibility",
+        "/output/task_output/questions"
+      ],
+      "reason": "报告within且信息性，无可靠/最低成本强断言；未明确说明建议区间内不证明耐用/成本最低。按事前完整回答口径记部分，不当作错误选型。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "176a60646c0c9aab",
+      "case_id": "D06-higher-volume",
+      "task_id": "D06-higher-volume:T2",
+      "reference_acceptance": "未要求微信时没有新增微信设置/工作流补问；源快照含微信资料不等于主动追问。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/questions"
+      ],
+      "reason": "questions无微信工作流补问；源档里保留微信资料不算主动追问。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "2dcb279a86ac1b54",
+      "case_id": "D02-miniprogram-outside",
+      "task_id": "D02-miniprogram-outside:T1",
+      "reference_acceptance": "两款均待核且小程序地区要求不为match；没有境外服务成功或实机验证承诺。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0/current_check",
+        "/output/task_output/answers/3/current_check"
+      ],
+      "reason": "两款均pending，当前C-WECHAT关系deployment_outside_verified_scope，不承诺日本或实机可用。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "2dcb279a86ac1b54",
+      "case_id": "D02-miniprogram-outside",
+      "task_id": "D02-miniprogram-outside:T2",
+      "reference_acceptance": "地区价与购买仍未核/关闭，不因功能文档转可买。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "两款地区报价标志为false、购买关闭，未由中国区功能升级可购。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "3984d138633b60e6",
+      "case_id": "D05-budget-raised",
+      "task_id": "D05-budget-raised:T1",
+      "reference_acceptance": "1906仅manufacturer_suggested_retail_cny/信息性关系，live budget未通过；不是成交价。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0"
+      ],
+      "reason": "C-BUDGET明确读manufacturer_suggested_retail_cny，kind=informational及budget_live_verified=false，来源反证说明非成交价。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "3984d138633b60e6",
+      "case_id": "D05-budget-raised",
+      "task_id": "D05-budget-raised:T2",
+      "reference_acceptance": "预算3000不产生地区报价或购买资格。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "3000元只改变建议价关系；路线实价未核、购买关闭，没有凭空出现地区报价。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "4e11654a5ce07ee6",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T1",
+      "reference_acceptance": "两型号保持规格研究/待核购买；明确没有预算或地区实价通过，不作当前可买承诺。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "两款路线仍为厂家规格研究，地区实价/预算未核且禁止购买，未承诺千元可买。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "4e11654a5ce07ee6",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T2",
+      "reference_acceptance": "对两款分别给出首次联网/App或扫码绑定前提；models已有设置文字也认可；不能只用无线/微信标签替代流程。",
+      "judgment": "pass",
+      "locations": [
+        "/output/models/0/wechat_setup",
+        "/output/models/1/wechat_setup"
+      ],
+      "reason": "两款models.wechat_setup已有Mobile Connect首次配置与Wi-Fi/二维码绑定说明；基线已有内容同等认可。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "4e11654a5ce07ee6",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T3",
+      "reference_acceptance": "HP低于建议印量仍是研究对象而非低频淘汰；C-VOLUME信息性状态且无该硬淘汰可满足操作性判断，不强求额外解释模板。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/3/current_check",
+        "/output/models/1/eligibility",
+        "/output/task_output/questions"
+      ],
+      "reason": "HP建议印量为informational，低于区间未造成硬淘汰，HP仍可规格研究；不以额外解释条数计分。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "4e11654a5ce07ee6",
+      "case_id": "D01-original",
+      "task_id": "D01-original:T4",
+      "reference_acceptance": "明确说明现有资料不足以做两型号长期耐用对比，且地区实际成本/报价未核；复合任务缺一项记partial。",
+      "judgment": "partial",
+      "locations": [
+        "/output/known_limits/2",
+        "/output/task_output/questions",
+        "/output/task_output/answers/0/source_refs/0/counter"
+      ],
+      "reason": "地区报价/成本未核已说明；没有明确形成两型号长期耐用对比不足的判断。R6反证仅说耗材页数不是可靠性数据，不能替本组补出整体长期比较结论。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "6ed1a80c8fe360d6",
+      "case_id": "D06-higher-volume",
+      "task_id": "D06-higher-volume:T1",
+      "reference_acceptance": "印量范围内仍为信息性检查，明确不能据此证明运行可靠或成本最低；若只报within而没有相关限缩，记partial。",
+      "judgment": "partial",
+      "locations": [
+        "/output/task_output/answers/3/current_check",
+        "/output/models/1/eligibility",
+        "/output/task_output/questions"
+      ],
+      "reason": "报告within且信息性，无可靠/最低成本强断言；未明确说明建议区间内不证明耐用/成本最低。与另一包同尺度记部分，不按组别加分。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "6ed1a80c8fe360d6",
+      "case_id": "D06-higher-volume",
+      "task_id": "D06-higher-volume:T2",
+      "reference_acceptance": "未要求微信时没有新增微信设置/工作流补问；源快照含微信资料不等于主动追问。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/questions"
+      ],
+      "reason": "questions无微信工作流补问；源档里保留微信资料不算主动追问。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "83acb70b65728d71",
+      "case_id": "D02-miniprogram-outside",
+      "task_id": "D02-miniprogram-outside:T1",
+      "reference_acceptance": "两款均待核且小程序地区要求不为match；没有境外服务成功或实机验证承诺。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0/current_check",
+        "/output/task_output/answers/3/current_check"
+      ],
+      "reason": "两款均pending，当前C-WECHAT关系deployment_outside_verified_scope，不承诺日本或实机可用。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "83acb70b65728d71",
+      "case_id": "D02-miniprogram-outside",
+      "task_id": "D02-miniprogram-outside:T2",
+      "reference_acceptance": "地区价与购买仍未核/关闭，不因功能文档转可买。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "两款地区报价标志为false、购买关闭，未由中国区功能升级可购。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "9a78a11f974c7a7f",
+      "case_id": "D04-scan-hard",
+      "task_id": "D04-scan-hard:T1",
+      "reference_acceptance": "HP扫描的当前检查match且有型号来源，允许规格研究，不扩成已核销售SKU。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/3",
+        "/output/task_output/routes"
+      ],
+      "reason": "HP当前C-SCAN为match，引用R9，限定厂家型号研究。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "9a78a11f974c7a7f",
+      "case_id": "D04-scan-hard",
+      "task_id": "D04-scan-hard:T2",
+      "reference_acceptance": "Brother扫描未知/待核，不能把缺证写成确定不支持。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0",
+        "/output/task_output/routes"
+      ],
+      "reason": "Brother当前scan为unknown/not_established且待核，未断言不支持。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "9a78a11f974c7a7f",
+      "case_id": "D04-scan-hard",
+      "task_id": "D04-scan-hard:T3",
+      "reference_acceptance": "型号身份与地区价仍未核，保留禁止购买。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "两型号平台身份和地区价仍false，购买关闭。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "c5fc87ee188a9db9",
+      "case_id": "D03-color-hard",
+      "task_id": "D03-color-hard:T1",
+      "reference_acceptance": "两款黑白型号均排除；功能说明或额外判断不复活为适用候选。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0/current_check",
+        "/output/task_output/answers/3/current_check",
+        "/output/task_output/routes"
+      ],
+      "reason": "两个color_print=false型号均excluded_by_hard_condition，展示的资料不复活为当前适用型号。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "c5fc87ee188a9db9",
+      "case_id": "D03-color-hard",
+      "task_id": "D03-color-hard:T2",
+      "reference_acceptance": "购买批准false，无当前可买陈述。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "purchase_recommendation_approved=false，未给可买承诺。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "fc000ded23cbc48a",
+      "case_id": "D05-budget-raised",
+      "task_id": "D05-budget-raised:T1",
+      "reference_acceptance": "1906仅manufacturer_suggested_retail_cny/信息性关系，live budget未通过；不是成交价。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0"
+      ],
+      "reason": "C-BUDGET明确读manufacturer_suggested_retail_cny，kind=informational及budget_live_verified=false，来源反证说明非成交价。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "fc000ded23cbc48a",
+      "case_id": "D05-budget-raised",
+      "task_id": "D05-budget-raised:T2",
+      "reference_acceptance": "预算3000不产生地区报价或购买资格。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "3000元只改变建议价关系；路线实价未核、购买关闭，没有凭空出现地区报价。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "fdcf67536d673a54",
+      "case_id": "D04-scan-hard",
+      "task_id": "D04-scan-hard:T1",
+      "reference_acceptance": "HP扫描的当前检查match且有型号来源，允许规格研究，不扩成已核销售SKU。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/3",
+        "/output/task_output/routes"
+      ],
+      "reason": "HP当前C-SCAN为match，引用R9，限定厂家型号研究。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "fdcf67536d673a54",
+      "case_id": "D04-scan-hard",
+      "task_id": "D04-scan-hard:T2",
+      "reference_acceptance": "Brother扫描未知/待核，不能把缺证写成确定不支持。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/answers/0",
+        "/output/task_output/routes"
+      ],
+      "reason": "Brother当前scan为unknown/not_established且待核，未断言不支持。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    },
+    {
+      "packet_id": "fdcf67536d673a54",
+      "case_id": "D04-scan-hard",
+      "task_id": "D04-scan-hard:T3",
+      "reference_acceptance": "型号身份与地区价仍未核，保留禁止购买。",
+      "judgment": "pass",
+      "locations": [
+        "/output/task_output/routes",
+        "/output/task_output/purchase_recommendation_approved",
+        "/output/known_limits"
+      ],
+      "reason": "两型号平台身份和地区价仍false，购买关闭。",
+      "blind_arm_label_not_consulted_for_this_annotation": true
+    }
+  ],
+  "formal_holdout_started": false
+}

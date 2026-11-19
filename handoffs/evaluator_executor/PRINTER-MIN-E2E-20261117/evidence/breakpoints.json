@@ -1,0 +1,32 @@
+{
+  "task_id": "PRINTER-MIN-E2E-20261117",
+  "observed_main_flow_blocking_breakpoints": [],
+  "resolved_in_this_task": [
+    "选定两条/单条/零条厂家资料进入正常研究入口",
+    "普通CLI、聊天可见文本、审计使用同一选包判断",
+    "反馈缺席后仍执行研究复核与交接",
+    "改答预算/印量及额外硬条件后报告同步"
+  ],
+  "still_unresolved": [
+    {
+      "id": "B01",
+      "type": "external_facts",
+      "detail": "缺准确在售身份、河南实时报价及实际复用/长期可靠性；本轮仅消费本机旧摘要",
+      "is_whole_flow_blocker": false
+    },
+    {
+      "id": "B05-USER",
+      "type": "real_human_evidence",
+      "detail": "本轮未联系亲戚，无真正使用反馈或实机",
+      "is_whole_flow_blocker": false
+    },
+    {
+      "id": "FAIR-PAIR",
+      "type": "evaluation",
+      "detail": "旧普通筛选不能按所选最小包隔离证据，无法同证据公平双组对照",
+      "is_whole_flow_blocker": false
+    }
+  ],
+  "network": "本轮没有开展外网检索/API/账号操作；远程本地开发连接曾间歇中断并恢复",
+  "prior_artifacts_untouched": true
+}

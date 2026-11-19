@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "status": "open_development_cases_not_independent_holdout",
+  "authored_on": "2026-11-15",
+  "common_terms": "两组共享同一原始条件、型号事实、候选、地区与报价未知。人工参考判断在运行前独立于被测函数书写；本文件公开，仅用于开发诊断。",
+  "cases": [
+    {
+      "id": "D01-original",
+      "origin": "one_real_user_case_with_unanswered_conditions",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "wechat_required": null,
+        "wechat_workflow": "unknown",
+        "requires_scan": null,
+        "requires_auto_duplex": null,
+        "device_deployment_region": null,
+        "requirements": [
+          "希望微信打印",
+          "重视可靠耐用"
+        ]
+      },
+      "reference_from_sources": [
+        "两款仅可做规格研究，不签千元内可买",
+        "微信应区分初次绑定流程",
+        "低频不能据HP建议月印量淘汰",
+        "缺长期耐用对比与地区成本"
+      ]
+    },
+    {
+      "id": "D02-miniprogram-outside",
+      "origin": "simulated_confirmed_answers",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "wechat_required": true,
+        "wechat_workflow": "miniprogram",
+        "device_deployment_region": "日本",
+        "requirements": [
+          "必须用微信小程序直接打印"
+        ]
+      },
+      "reference_from_sources": [
+        "境外真实微信服务不能据中国区功能页判符合",
+        "不报地区价与可买性"
+      ]
+    },
+    {
+      "id": "D03-color-hard",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": true,
+        "accepts_outsourced_color": false,
+        "requirements": [
+          "必须在家彩印"
+        ]
+      },
+      "reference_from_sources": [
+        "两款均黑白规格，不应重新因扫描/微信功能入选",
+        "不批准购买"
+      ]
+    },
+    {
+      "id": "D04-scan-hard",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "requires_scan": true,
+        "requirements": [
+          "必须扫描"
+        ]
+      },
+      "reference_from_sources": [
+        "惠普M232dw有厂家扫描规格",
+        "兄弟扫描缺有效型号证据不能凭空判不支持",
+        "商品与现价仍待核"
+      ]
+    },
+    {
+      "id": "D05-budget-raised",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 3000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "requirements": [
+          "预算放宽到3000元"
+        ]
+      },
+      "reference_from_sources": [
+        "Brother的1906元是厂商建议价不是成交价",
+        "更高预算不产生地区有效成交价或购买资格"
+      ]
+    },
+    {
+      "id": "D06-higher-volume",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          300,
+          400
+        ],
+        "needs_color": false,
+        "wechat_required": false,
+        "requirements": [
+          "每月打印300到400页"
+        ]
+      },
+      "reference_from_sources": [
+        "HP建议印量内不等于运行可靠与成本最低",
+        "没有微信诉求不应人为新增微信绑定补问"
+      ]
+    }
+  ]
+}

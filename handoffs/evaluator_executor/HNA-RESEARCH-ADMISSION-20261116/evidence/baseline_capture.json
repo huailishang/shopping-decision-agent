@@ -1,0 +1,390 @@
+{
+  "captured_at": "2026-11-16T22:17:29.123977+08:00",
+  "sample_path": "evaluation/printer_henan_proxy_sample_20261116.json",
+  "sample_sha256": "c87fa2105a84c813f33b2dbfc39e712cf1437fbc17d2b66b17991d3f1fad9a6b",
+  "input_sha256": "3cf8b018c27ccac39b9f1bb5d8596a9e0a8a68cbfe7e107009f619dcf1ca0b0a",
+  "stdout_sha256": "e3303dfb617554f8a60ef70c4b823b90a42391adccba66e52d3173ba89e38dab",
+  "exit_code": 0,
+  "research_status": "research_context_pending_independent_review",
+  "questions": [
+    {
+      "field": "budget_scope",
+      "question": "预算包含运费及额外耗材吗？",
+      "why": "不同预算口径影响最终购买资格",
+      "status": "user_confirmation_needed"
+    }
+  ],
+  "snapshot": {
+    "schema_version": 1,
+    "status": "research_snapshot_only_not_purchase",
+    "category": "printer",
+    "category_binding": "material_explicit",
+    "criteria_version": "2026-11-15-r1",
+    "criteria_sha256": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+    "fact_captured_on": "2026-11-15",
+    "evaluated_at": "2026-11-16",
+    "total_candidate_count": 2,
+    "displayed_candidates": [
+      {
+        "model_id": "HL-L1238W",
+        "brand": "Brother",
+        "eligibility": "model_spec_research_only",
+        "hard_failed": [],
+        "hard_unknown": [],
+        "checks": [
+          {
+            "criterion_id": "C-BUDGET",
+            "user_field": "budget_max_cny",
+            "user_value": 1000,
+            "product_field": "manufacturer_suggested_retail_cny",
+            "product_value": 1906,
+            "unit": "CNY",
+            "relation": "above",
+            "kind": "informational",
+            "evidence_state": "manufacturer_fact_research_only",
+            "source_refs": [
+              {
+                "id": "R6",
+                "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_group": "brother_cn",
+                "type": "manufacturer",
+                "checked_on": "2026-11-15",
+                "published_on": null,
+                "limit": "厂家页面搜索摘录；直接打开403，1906为建议价"
+              }
+            ],
+            "has_applicable_model_fact": true,
+            "counter": "地区平台实价、优惠、运费与库存未核"
+          },
+          {
+            "criterion_id": "C-VOLUME",
+            "user_field": "monthly_pages_range",
+            "user_value": [
+              0,
+              50
+            ],
+            "product_field": "manufacturer_recommended_monthly_pages",
+            "product_value": null,
+            "unit": "pages_per_month",
+            "relation": "unknown",
+            "kind": "informational",
+            "evidence_state": "not_established",
+            "source_refs": [],
+            "has_applicable_model_fact": false,
+            "counter": "建议区间缺失不等于不适合低频使用"
+          }
+        ],
+        "platform_identity_verified": false,
+        "regional_live_price_verified": false,
+        "purchase_recommendation_approved": false
+      },
+      {
+        "model_id": "M232dw",
+        "brand": "HP",
+        "eligibility": "model_spec_research_only",
+        "hard_failed": [],
+        "hard_unknown": [],
+        "checks": [
+          {
+            "criterion_id": "C-BUDGET",
+            "user_field": "budget_max_cny",
+            "user_value": 1000,
+            "product_field": "manufacturer_suggested_retail_cny",
+            "product_value": null,
+            "unit": "CNY",
+            "relation": "unknown",
+            "kind": "informational",
+            "evidence_state": "not_established",
+            "source_refs": [],
+            "has_applicable_model_fact": false,
+            "counter": "地区平台实价、优惠、运费与库存未核"
+          },
+          {
+            "criterion_id": "C-VOLUME",
+            "user_field": "monthly_pages_range",
+            "user_value": [
+              0,
+              50
+            ],
+            "product_field": "manufacturer_recommended_monthly_pages",
+            "product_value": [
+              200,
+              2000
+            ],
+            "unit": "pages_per_month",
+            "relation": "below",
+            "kind": "informational",
+            "evidence_state": "manufacturer_fact_research_only",
+            "source_refs": [
+              {
+                "id": "R11",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_group": "hp_global",
+                "type": "manufacturer_datasheet",
+                "checked_on": "2026-11-15",
+                "published_on": null,
+                "limit": "HP建议200—2000不是最低使用门槛；系列资料"
+              }
+            ],
+            "has_applicable_model_fact": true,
+            "counter": "建议区间缺失不等于不适合低频使用"
+          }
+        ],
+        "platform_identity_verified": false,
+        "regional_live_price_verified": false,
+        "purchase_recommendation_approved": false
+      }
+    ],
+    "hidden_candidates": [],
+    "all_candidates": [
+      {
+        "model_id": "HL-L1238W",
+        "brand": "Brother",
+        "eligibility": "model_spec_research_only",
+        "hard_failed": [],
+        "hard_unknown": [],
+        "checks": [
+          {
+            "criterion_id": "C-BUDGET",
+            "user_field": "budget_max_cny",
+            "user_value": 1000,
+            "product_field": "manufacturer_suggested_retail_cny",
+            "product_value": 1906,
+            "unit": "CNY",
+            "relation": "above",
+            "kind": "informational",
+            "evidence_state": "manufacturer_fact_research_only",
+            "source_refs": [
+              {
+                "id": "R6",
+                "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_group": "brother_cn",
+                "type": "manufacturer",
+                "checked_on": "2026-11-15",
+                "published_on": null,
+                "limit": "厂家页面搜索摘录；直接打开403，1906为建议价"
+              }
+            ],
+            "has_applicable_model_fact": true,
+            "counter": "地区平台实价、优惠、运费与库存未核"
+          },
+          {
+            "criterion_id": "C-VOLUME",
+            "user_field": "monthly_pages_range",
+            "user_value": [
+              0,
+              50
+            ],
+            "product_field": "manufacturer_recommended_monthly_pages",
+            "product_value": null,
+            "unit": "pages_per_month",
+            "relation": "unknown",
+            "kind": "informational",
+            "evidence_state": "not_established",
+            "source_refs": [],
+            "has_applicable_model_fact": false,
+            "counter": "建议区间缺失不等于不适合低频使用"
+          }
+        ],
+        "platform_identity_verified": false,
+        "regional_live_price_verified": false,
+        "purchase_recommendation_approved": false
+      },
+      {
+        "model_id": "M232dw",
+        "brand": "HP",
+        "eligibility": "model_spec_research_only",
+        "hard_failed": [],
+        "hard_unknown": [],
+        "checks": [
+          {
+            "criterion_id": "C-BUDGET",
+            "user_field": "budget_max_cny",
+            "user_value": 1000,
+            "product_field": "manufacturer_suggested_retail_cny",
+            "product_value": null,
+            "unit": "CNY",
+            "relation": "unknown",
+            "kind": "informational",
+            "evidence_state": "not_established",
+            "source_refs": [],
+            "has_applicable_model_fact": false,
+            "counter": "地区平台实价、优惠、运费与库存未核"
+          },
+          {
+            "criterion_id": "C-VOLUME",
+            "user_field": "monthly_pages_range",
+            "user_value": [
+              0,
+              50
+            ],
+            "product_field": "manufacturer_recommended_monthly_pages",
+            "product_value": [
+              200,
+              2000
+            ],
+            "unit": "pages_per_month",
+            "relation": "below",
+            "kind": "informational",
+            "evidence_state": "manufacturer_fact_research_only",
+            "source_refs": [
+              {
+                "id": "R11",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_group": "hp_global",
+                "type": "manufacturer_datasheet",
+                "checked_on": "2026-11-15",
+                "published_on": null,
+                "limit": "HP建议200—2000不是最低使用门槛；系列资料"
+              }
+            ],
+            "has_applicable_model_fact": true,
+            "counter": "建议区间缺失不等于不适合低频使用"
+          }
+        ],
+        "platform_identity_verified": false,
+        "regional_live_price_verified": false,
+        "purchase_recommendation_approved": false
+      }
+    ],
+    "judgments": [
+      {
+        "model_id": "HL-L1238W",
+        "criterion_id": "C-BUDGET",
+        "relation": "above",
+        "user_value": 1000,
+        "product_value": 1906,
+        "unit": "CNY",
+        "source_refs": [
+          {
+            "id": "R6",
+            "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+            "source_group": "brother_cn",
+            "type": "manufacturer",
+            "checked_on": "2026-11-15",
+            "published_on": null,
+            "limit": "厂家页面搜索摘录；直接打开403，1906为建议价"
+          }
+        ],
+        "counter": "地区平台实价、优惠、运费与库存未核",
+        "status": "attributed_model_fact_for_research_only"
+      },
+      {
+        "model_id": "M232dw",
+        "criterion_id": "C-VOLUME",
+        "relation": "below",
+        "user_value": [
+          0,
+          50
+        ],
+        "product_value": [
+          200,
+          2000
+        ],
+        "unit": "pages_per_month",
+        "source_refs": [
+          {
+            "id": "R11",
+            "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+            "source_group": "hp_global",
+            "type": "manufacturer_datasheet",
+            "checked_on": "2026-11-15",
+            "published_on": null,
+            "limit": "HP建议200—2000不是最低使用门槛；系列资料"
+          }
+        ],
+        "counter": "建议区间缺失不等于不适合低频使用",
+        "status": "attributed_model_fact_for_research_only"
+      }
+    ],
+    "next_action": "clarify_user_conditions",
+    "necessary_user_questions": [
+      "预算是否包含运费和本次需另购的耗材？"
+    ],
+    "question_items": [
+      {
+        "text": "预算是否包含运费和本次需另购的耗材？",
+        "kind": "user_input",
+        "field": "budget_scope"
+      },
+      {
+        "text": "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型",
+        "kind": "external_evidence",
+        "field": "low_volume_reliability"
+      }
+    ],
+    "evidence_missing": [
+      "HL-L1238W:C-VOLUME",
+      "M232dw:C-BUDGET"
+    ],
+    "evidence_limitations": [
+      "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+    ],
+    "source_registry": {
+      "C-598": {
+        "type": "independent_consumer_test_method",
+        "group": "HK_Consumer_Council_ICRT_598",
+        "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+        "published_on": "2026-08",
+        "checked_on": "2026-11-15",
+        "method": "打印/扫描/复印质速、休眠唤醒、安装便利、耗材每页成本分别评价",
+        "limit": "香港2026年彩色多功能样本；仅用于选择维度，不支持本案型号性能排名"
+      },
+      "R6": {
+        "type": "manufacturer",
+        "group": "brother_cn",
+        "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+        "checked_on": "2026-11-15",
+        "limit": "厂家页面搜索摘录；直接打开403，1906为建议价"
+      },
+      "R7": {
+        "type": "manufacturer_setup",
+        "group": "brother_cn",
+        "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+        "checked_on": "2026-11-15",
+        "limit": "厂商流程非实机成功证明"
+      },
+      "R9": {
+        "type": "manufacturer",
+        "group": "hp_cn",
+        "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+        "checked_on": "2026-11-15",
+        "limit": "厂家产品页不是平台现货"
+      },
+      "R10": {
+        "type": "manufacturer_setup",
+        "group": "hp_cn",
+        "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+        "checked_on": "2026-11-15",
+        "limit": "系列安装指南，具体销售版本需复核"
+      },
+      "R11": {
+        "type": "manufacturer_datasheet",
+        "group": "hp_global",
+        "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+        "checked_on": "2026-11-15",
+        "limit": "HP建议200—2000不是最低使用门槛；系列资料"
+      },
+      "R14": {
+        "type": "manufacturer_support_forum",
+        "group": "hp_cn_support_forum",
+        "url": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/qing-wen-zai-zhong-guo-nei-de-gou-mai-de-da-yin-ji-wu-xian-gong-neng-zai-zhong-guo-nei-de-yi-wai-de-qu-shi-bu-shi-ye-neng-yong/m-p/1313371/highlight/true",
+        "checked_on": "2026-11-15",
+        "limit": "2024支持员工答复；非当前服务承诺"
+      },
+      "R15": {
+        "type": "manufacturer_faq",
+        "group": "brother_cn",
+        "url": "https://www.brother.cn/minisite/bcnactivity/new-question00.html",
+        "checked_on": "2026-11-15",
+        "limit": "中国区清单，境外适用性未核"
+      }
+    },
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "verified_platform_identity_count": 0,
+    "verified_live_quote_count": 0,
+    "note": "研究投影只复述本轮有效检查；来源/型号事实不等于所售配置、当前价或购买许可"
+  },
+  "note": "pre-change actual normal CLI output only; no new-material answers or paired generation"
+}

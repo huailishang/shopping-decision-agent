@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "task_id": "P0.9-C-REAL-SKU-20261114",
+  "role": "executor",
+  "review_date": "2026-11-14",
+  "current_state": "blocked_missing_qualified_real_sale_original_and_permitted_uses",
+  "baseline": {
+    "head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+    "branch": "main",
+    "dirty_worktree": true,
+    "prior_original_brother_count": 20,
+    "prior_original_reviewed": 0,
+    "prior_deep_reviewed": 0,
+    "real_distinct_models_verified": 0,
+    "target_distinct_models": 2,
+    "valid_regional_quotes": 0
+  },
+  "source_code_sha256": {
+    "CURRENT.md": "77d4b609c3a65daf6f0a9f8a242ffcb5e175d8296a8f663f36444b660465493f",
+    "shopping_decision/sale_configuration_evidence.py": "a3f6cd26af6eae94c37920eb2358e978e7a2ce1e0c7dc6e51a978c6cd3f30916",
+    "shopping_decision/dialogue_flow.py": "dfdcdaa88be79c34f4efd4e33ca350ae2e5a553553d0500a05bbf5729a5ae7b5",
+    "shopping_decision/real_printer_case.py": "265e761587602a603003147ca9e2a1135abae332deafd1c3094b5068fbb420c7",
+    "knowledge/real_printer_case_research_20261113.json": "f116da6d519076f91b2bb64acc516578de865376b37d812be1898c6b88a3629f"
+  },
+  "public_actions": [
+    {
+      "n": 1,
+      "type": "search",
+      "target": "site:item.jd.com 兄弟 HL-L1238W 京东自营 商品 打印机",
+      "outcome": "no qualified selected sale"
+    },
+    {
+      "n": 2,
+      "type": "search",
+      "target": "site:item.jd.com 惠普 M232dw 京东自营 商品 打印机",
+      "outcome": "mixed variant and used leads, no qualified selected sale"
+    },
+    {
+      "n": 3,
+      "type": "search",
+      "target": "京东 兄弟 HL-L1238W 100 商品 自营 item.jd.com 2026",
+      "outcome": "JD category page with listing"
+    },
+    {
+      "n": 4,
+      "type": "search",
+      "target": "京东 惠普 M232dw 100 商品 自营 item.jd.com 2026",
+      "outcome": "JD category page with listing"
+    },
+    {
+      "n": 5,
+      "type": "open",
+      "target": "https://www.jd.com/brand/6706d64a3cce0e44071.html",
+      "outcome": "catalog page showed HP model and self-operated label"
+    },
+    {
+      "n": 6,
+      "type": "open",
+      "target": "https://www.jd.com/brand/6705c2f11ec8b8efc05.html",
+      "outcome": "cache_miss"
+    },
+    {
+      "n": 7,
+      "type": "find",
+      "target": "HL-L1238W in https://www.jd.com/brand/6706d64a3cce0e44071.html",
+      "outcome": "no_match"
+    },
+    {
+      "n": 8,
+      "type": "click",
+      "target": "JD category HP M232dw item link",
+      "outcome": "risk_verification_redirect",
+      "result_url": "https://item.jd.com/100019179990.html"
+    },
+    {
+      "n": 9,
+      "type": "open",
+      "target": "https://www.jd.com/brand/6708bad8450c6c4662d.html",
+      "outcome": "catalog page showed Brother model and self-operated label"
+    },
+    {
+      "n": 10,
+      "type": "click",
+      "target": "Brother HL-L1238W product from JD brand listing",
+      "outcome": "partial_product_page",
+      "result_url": "https://item.jd.com/100126724020.html"
+    },
+    {
+      "n": 11,
+      "type": "click",
+      "target": "second HP M232dw entry on JD category page",
+      "outcome": "risk_verification_redirect",
+      "result_url": "https://item.jd.com/100305252506.html"
+    },
+    {
+      "n": 12,
+      "type": "open",
+      "target": "https://item.jd.com/100019179990.html",
+      "outcome": "risk_verification_redirect_again_stopped"
+    }
+  ],
+  "action_budget": {
+    "public_search_open_find_click": 12,
+    "max": 12,
+    "actions_remaining": 0,
+    "per_entry_max": 2,
+    "underlying_http_requests": "unknown",
+    "maximum_parallelism_observed": 1
+  },
+  "case_funnel": {
+    "new_cases_frozen": 3,
+    "deep_item_page_review_attempts": 3,
+    "complete_licensed_originals": 0,
+    "full_platform_selected_sale_binding": 0,
+    "distinct_real_models_verified": 0,
+    "unverified_or_partial_cases": 3,
+    "search_result_negatives_not_advanced_to_reviewed_cases": 2,
+    "historic_original_count_unchanged": 20,
+    "historic_reviewed_unchanged": 0,
+    "prior_deep_reviewed_unchanged": 0,
+    "real_contradiction_with_complete_original_count": 0
+  },
+  "candidates": [
+    {
+      "case_id": "P09C-BR-01",
+      "platform": "jd",
+      "url": "https://item.jd.com/100126724020.html",
+      "platform_item_id": "100126724020",
+      "id_status": "numeric_canonical_page_address_only",
+      "brand": "Brother",
+      "manufacturer_model": "HL-L1238W",
+      "model_title_visible": true,
+      "model_authoritative_reference": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "store_display_name": "兄弟京东自营旗舰店",
+      "store_name_anchor": "product page visible store link at line 56",
+      "selected_sku": null,
+      "platform_single_configuration_proven": false,
+      "sale_page_has_single_purchase_tab": true,
+      "new_unit_proven": false,
+      "host_product_vs_supplies": "title indicates printer host; actual selected bundle unspecified",
+      "platform_original_page_bytes_sha256": null,
+      "field_anchor": "public product page heading lines 54-56 and purchase-mode lines 64-100",
+      "source_original_observed_at": null,
+      "public_review_on": "2026-11-14",
+      "source_public_crawl_age": "reported cached; original observation time unavailable",
+      "local_parse_display_audit_rights": "not_verified",
+      "seller_legal_entity": "unknown",
+      "quote_status": "not_valid",
+      "review": "partial_lead_only",
+      "blockers": [
+        "selected SKU or platform-proven single configuration absent",
+        "new host and bundle selected details not established",
+        "original observation time and raw evidence bytes absent",
+        "actual permitted local parsing/display/minimal audit scope not established"
+      ]
+    },
+    {
+      "case_id": "P09C-HP-01",
+      "platform": "jd",
+      "url": "https://item.jd.com/100019179990.html",
+      "platform_item_id": "100019179990",
+      "id_status": "canonical_item_link_in_category_redirect_only",
+      "brand": "HP",
+      "manufacturer_model": "M232dw",
+      "store_display_name": "self-operated label on JD category, concrete seller unverified",
+      "selected_sku": null,
+      "new_unit_proven": false,
+      "platform_single_configuration_proven": false,
+      "source_original_observed_at": null,
+      "platform_original_page_bytes_sha256": null,
+      "public_review_on": "2026-11-14",
+      "local_parse_display_audit_rights": "not_verified",
+      "review": "risk_wall_blocked",
+      "blockers": [
+        "JD risk verification on first link and allowed retry",
+        "selected variant and seller unavailable",
+        "full original and allowed use absent"
+      ]
+    },
+    {
+      "case_id": "P09C-HP-02",
+      "platform": "jd",
+      "url": "https://item.jd.com/100305252506.html",
+      "platform_item_id": "100305252506",
+      "id_status": "canonical_item_link_in_category_redirect_only",
+      "brand": "HP",
+      "manufacturer_model": "M232dw",
+      "store_display_name": "self-operated label on JD category, concrete seller unverified",
+      "selected_sku": null,
+      "new_unit_proven": false,
+      "platform_single_configuration_proven": false,
+      "source_original_observed_at": null,
+      "platform_original_page_bytes_sha256": null,
+      "public_review_on": "2026-11-14",
+      "local_parse_display_audit_rights": "not_verified",
+      "review": "risk_wall_blocked",
+      "blockers": [
+        "JD risk verification on item click",
+        "selected variant and seller unavailable",
+        "full original and allowed use absent"
+      ]
+    }
+  ],
+  "preliminary_search_rejections": [
+    {
+      "source_url": "https://item.jd.com/product/Qav1bZMPSt5KYUw5pcGcDQ.html",
+      "reason": "search title explicitly describes 9成新 M232dw, violates new printer host expectation; not independently audited full original",
+      "status": "search_result_only"
+    },
+    {
+      "source_url": "https://item.jd.com/product/sJavNkZmokTRjfLnukCPGg.html",
+      "reason": "multi-model 232dwc/233sdw title and source detail says 232dwc while selection 233sdw; no one-to-one model binding; not independently audited full original",
+      "status": "search_result_only"
+    }
+  ],
+  "permissions": {
+    "business_api_calls": 0,
+    "api_keys_read": 0,
+    "paid_calls": 0,
+    "account_logins": 0,
+    "automated_account_actions": 0,
+    "orders": 0,
+    "payments": 0,
+    "outbound_messages": 0,
+    "git_commits": 0,
+    "git_pushes": 0,
+    "real_sale_gate_enabled": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "labor": {
+    "effective_hours": "not_instrumented_unknown",
+    "budget_max_hours": 12,
+    "budget_remaining": "unknown_not_asserted"
+  },
+  "testing": {
+    "business_code_modified": false,
+    "new_tests_run": 0,
+    "full_historic_regression_not_repeated": true
+  },
+  "acceptance": {
+    "AC1": "blocked_no_usable_original_or_proven_local_usage_rights",
+    "AC2": "blocked_0_of_2",
+    "AC3": "not_applicable_real_binding_absent_and_synthetic_existing",
+    "AC4": "blocked_0_of_2_real_bindings",
+    "AC5": "passed_by_nonexecution_no_side_effect",
+    "AC6": "handoff_reproducible_material_missing",
+    "AC7": "passed_by_no_current_regional_quote_claim",
+    "overall": "BLOCKED_NOT_PASS"
+  },
+  "next_required": {
+    "owner": "authorized marketplace content holder or permitted user-initiated export",
+    "brother": "selected item 100126724020 actual variant or single configuration proof, seller, new host status, source capture observed_at, field anchors, authorized local parse/display/audit scope",
+    "hp": "authorized full HP M232dw (or other distinct model) selected product/SKU, seller, new printer status and same source/usage fields; current public canonical page risk wall",
+    "alternative_haina": "current basic information/SKU method and field contract, permitted raw response, local parser/display/minimal audit authorization; no new API until granted"
+  }
+}

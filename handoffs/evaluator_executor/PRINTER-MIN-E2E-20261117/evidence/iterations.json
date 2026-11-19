@@ -1,0 +1,41 @@
+{
+  "task_id": "PRINTER-MIN-E2E-20261117",
+  "execution_mode": "SEQUENTIAL",
+  "bounded_product_iterations": 2,
+  "contract_max_iterations": 2,
+  "total_effective_work_time": "未独立计时，不填写推算值",
+  "events": [
+    {
+      "attempt": 1,
+      "name": "first_coarse_real_local_flow",
+      "result": "3/3 normal CLI-chat pack variants passed",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_run/summary.json",
+        "sha256": "e4b764dd9dff81fa9e6b473033894fd4348ffdda0d13d580c41a6bb1b836243a"
+      },
+      "new_external_calls": 0,
+      "note": "粗完整走读，包含反馈缺席和最小参考检查；首轮原件原样保留"
+    },
+    {
+      "attempt": 2,
+      "name": "focused_input_update_guardrail_and_replay",
+      "result": "3/3 selected pack replay passed after input/scope guard changes",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/summary.json",
+        "sha256": "e4b764dd9dff81fa9e6b473033894fd4348ffdda0d13d580c41a6bb1b836243a"
+      },
+      "new_external_calls": 0,
+      "note": "合同内集中修复：改答同步、额外硬条件/地区边界；专项测试另运行"
+    }
+  ],
+  "external_search": 0,
+  "online_read": 0,
+  "business_api": 0,
+  "credentials": 0,
+  "paid_calls": 0,
+  "messages_sent": 0,
+  "device_operations": 0,
+  "transactions": 0,
+  "git_commit": 0,
+  "git_push": 0
+}

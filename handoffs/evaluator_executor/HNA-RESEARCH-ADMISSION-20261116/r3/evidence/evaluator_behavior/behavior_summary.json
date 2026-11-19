@@ -1,0 +1,41 @@
+{
+  "cases_checked": 3,
+  "passed": 3,
+  "results": [
+    {
+      "case": "original_proxy",
+      "current_path": "clarify_wechat_requirement",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "reuse_verified": false,
+      "claims": "research_only_no_new_external_facts",
+      "chat_visible_and_same": true
+    },
+    {
+      "case": "hypothetical_wechat_required",
+      "current_path": "verify_wechat_reuse",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "reuse_verified": false,
+      "claims": "research_only_no_new_external_facts",
+      "chat_visible_and_same": true
+    },
+    {
+      "case": "hypothetical_wechat_optional",
+      "current_path": "continue_model_research",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "reuse_verified": false,
+      "claims": "research_only_no_new_external_facts",
+      "chat_visible_and_same": true
+    }
+  ],
+  "errors": [],
+  "limit": "Normal local entry behavior, not new material acquisition or real-user effectiveness."
+}

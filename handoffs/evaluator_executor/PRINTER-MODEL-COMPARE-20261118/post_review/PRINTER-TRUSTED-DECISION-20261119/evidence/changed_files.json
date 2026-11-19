@@ -1,0 +1,97 @@
+{
+  "schema": "trusted-decision-changed-files/v1",
+  "assembled_at_utc": "2026-11-19T07:28:23.217782+00:00",
+  "task_id": "PRINTER-TRUSTED-DECISION-20261119",
+  "changed_or_created_by_this_executor": [
+    {
+      "path": "shopping_decision/model_comparison.py",
+      "sha256": "b4d4755648bca43b7c22ba7c82bad6c3daf70112287e80b16e1c51d84d5634bb",
+      "bytes": 9340
+    },
+    {
+      "path": "tests/test_model_comparison.py",
+      "sha256": "346445be06bfb0216a3f7e0105c8988808033fbc3b76100a620a43bef2d85007",
+      "bytes": 17888
+    },
+    {
+      "path": "CURRENT.md",
+      "sha256": "87b602d496c7388878789525ecf2ff651c7189c30f49699f6e15a8d88f4646d2",
+      "bytes": 8254
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/COMPARISON.md",
+      "sha256": "0215d8e7fa87e13cd62c0a1331390242270e3c01f00f38586e6265a64850bcaa",
+      "bytes": 7089
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/REPORT.md",
+      "sha256": "095be5625d2ab8c7d12910637bfab2b9a2bc2ca4c0c6e1c179e65ee2c3f9f3ef",
+      "bytes": 9343
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-02.meta.json",
+      "sha256": "ed34b21f46d0c541a0b7af1a48fd4130e284feacfd9cdc264b1d5decb73e84eb",
+      "bytes": 920
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-02.stderr.log",
+      "sha256": "c7928fe602fe2b4034d1574bb9f6cfbd8dec09f14bc632cd12f6bfc1bca64e38",
+      "bytes": 302
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-02.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-03.meta.json",
+      "sha256": "b572557fcc57dd8d36baa4a4730f1ebae18245d32baeb0ad6369fc00b0b835a0",
+      "bytes": 758
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-03.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/VP-03.stdout.log",
+      "sha256": "98582b6616cc6e4f37d1474da28fe7bf78b7902f51d062284b75a078c8e51317",
+      "bytes": 73
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/attempts.jsonl",
+      "sha256": "6732ae03972fcf4e09ac895e6f9ef5ebbc855ac3ffa382b39c0687579327a142",
+      "bytes": 10331
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/decision_matrix.json",
+      "sha256": "2a8353930356a7d183ddb21f72ba0016d27b90ab88272401c2c0ac5831b9ae9c",
+      "bytes": 14582
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/research_budget.json",
+      "sha256": "70ceb81d38d0aab91337a9f002d87ca44cf8c29764eb4fb2d1ad51e75f76a60f",
+      "bytes": 469
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/sources.json",
+      "sha256": "d897511f208dcec9af5a2b68158668f12018de3e074a0fe07c0e23b406b0adc7",
+      "bytes": 4780
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/validation_summary.json",
+      "sha256": "e73c5b729dcc68afea7614a45a6e658b9984d7abcb3bee577ca263ff94ba8f90",
+      "bytes": 6007
+    }
+  ],
+  "preexisting_worktree_untouched": "Prior dirty/untracked files outside allowed scope not reset, cleaned or pushed.",
+  "old_protected_16_files_match": true,
+  "historical_attempts_sha_match": true,
+  "new_real_model_calls": 0,
+  "new_business_api_calls": 0,
+  "login_actions": 0,
+  "payments": 0,
+  "git_commits": 0,
+  "git_pushes": 0,
+  "scope_exception": "The public web request ledger was retrospectively documented, not contemporaneously scheduled; full HTTP response SHA and exact UTC timestamps unavailable."
+}

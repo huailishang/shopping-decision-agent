@@ -1,0 +1,19 @@
+{
+  "url": "https://ai.zhidemai.com/haina-platform/product_search_pro",
+  "title": "商品检索 Pro API 文档 · 海纳开放平台 · 什么值得买 AI",
+  "text": "反馈\n海纳开放平台目前处于 Beta 测试阶段，接口能力、调用限制及服务策略可能持续调整。\n查看详情\n×\n什么值得买 · 海纳\n海纳 Agent\n海纳开放平台\n联系商务\n登录 / 注册\n概览API Key 管理使用统计\n海纳能力列表\n▾\n内容检索\nAPI\n内容检索 Pro\nAPI\n图搜商品\nAPI\n商品检索 Pro\nAPI\n好价检索 Pro\nAPI\n知识图谱检索\nAPI\n海纳 MCP\nMCP\n商品检索 Pro\n\n按商品词召回商品，支持商城、品牌、类目、整数价格区间、排序和字段裁剪。\n\n文档与示例\n在线调试\n公网调用地址\nPOST\nhttps://gw-openapi.zhidemai.com/product/v1\n复制\n建议超时\n30s\n价格区间仅支持整数；max_price 必须大于 min_price\n请求参数\n以下为当前接口的参数说明。\n参数\t类型\t必填\t示例值\t说明\nproduct_query\tstring\t是\tiphone16\t商品搜索词\nrequest_from\tstring\t是\ttest_client\t调用方标识\nquestion_id\tstring\t是\tdebug\t请求唯一 ID\nquery_process\tnumber\t否\t1\t是否进行 query 处理\nsize\tnumber\t否\t20\t返回商品数\nmall_id\tstring\t否\t-\t商城 ID；多个值文档说明用英文分号分隔，如 183;243;247\nbrand_name\tstring\t否\t-\t品牌筛选\ncategory_name\tstring\t否\t-\t品类筛选\nmin_price\tnumber\t否\t-\t最低价，仅支持整数\nmax_price\tnumber\t否\t-\t最高价，必须大于最低价\nsort\tstring\t否\t-\t排序方式\nfields\tstring\t否\t-\t返回字段，英文逗号分隔\n响应字段\n字段\t说明\nerror_code / error_msg\t调用状态\ndata.rows[]\t商品列表\n商品字段\tproduct_query / title / url / main_picture / pictures\n价格字段\tpage_price / price / price_tags / price_info_180_days\n商城品牌\tmall_id / mall_name / brand_id / brand_name / shop_name\n销量评价\tsales_cnt / comment_cnt / good_comments_share / standard_month_sale_qty\n响应示例\n常见错误\n返回\t原因与处理\n401\t缺少 x-api-key 或 Key 无效：检查请求头与 Key 是否复制完整\n403\tKey 未开通该能力，或 Key 已暂停使用 / 被平台停用：到「API Key 管理」中确认状态\n422\t参数校验失败：响应中的 detail 会指出缺少或格式错误的字段\n429\t超过 QPS 上限（稍后重试并控制频率），或开发 Key 调用额度已用完（联系商务）\n502 / 504\t服务暂时不可用或响应超时：稍后重试，超时时间建议不低于文档中的「建议超时」\npython\ncurl\nphp\njava\ngo\n填入我的 API Key\n暂无有效 API Key\n登录并申请 API Key 后，可直接填入示例代码\n复制\nimport requests\n\nurl = \"https://gw-openapi.zhidemai.com/product/v1\"\nheaders = {\n    \"x-api-key\": \"your_api_key\",\n    \"Content-Type\": \"application/json\",\n}\npayload = {\n  \"request_from\": \"test_client\",\n  \"question_id\": \"debug\",\n  \"product_query\": \"iphone16\",\n  \"query_process\": 1,\n  \"size\": 20,\n  \"mall_id\": \"\",\n  \"brand_name\": \"\",\n  \"category_name\": \"\",\n  \"min_price\": None,\n  \"max_price\": None,\n  \"sort\": \"\",\n  \"fields\": \"\"\n}\nresp = requests.post(url, headers=headers, json=payload, timeout=30)\nresp.raise_for_status()\nprint(resp.json())",
+  "links": [
+    {
+      "text": "什么值得买 · 海纳",
+      "url": "https://ai.zhidemai.com/"
+    },
+    {
+      "text": "海纳 Agent",
+      "url": "https://ai.zhidemai.com/haina"
+    },
+    {
+      "text": "海纳开放平台",
+      "url": "https://ai.zhidemai.com/haina-platform"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "cases_checked": 3,
+  "passed": 3,
+  "results": [
+    {
+      "case": "main_two_facts",
+      "role": "primary_proxy_walkthrough",
+      "used_claim_count": 2,
+      "flow_status": "research_delivered_with_limits",
+      "chat_visible_and_same": true
+    },
+    {
+      "case": "thin_one_fact",
+      "role": "sparse_evidence_regression",
+      "used_claim_count": 1,
+      "flow_status": "research_delivered_with_limits",
+      "chat_visible_and_same": true
+    },
+    {
+      "case": "empty_evidence",
+      "role": "negative_missing_evidence",
+      "used_claim_count": 0,
+      "flow_status": "research_delivered_with_limits",
+      "chat_visible_and_same": true
+    }
+  ],
+  "errors": [],
+  "limit": "One proxy walkthrough plus sparse/empty engineering variants, not three user trials."
+}

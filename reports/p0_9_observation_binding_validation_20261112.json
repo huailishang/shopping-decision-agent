@@ -1,0 +1,85 @@
+{
+  "task": "P0.9_frozen_observation_time_repair",
+  "date": "2026-11-12",
+  "role": "executor",
+  "status": "implemented_self_test_passed_pending_independent_review",
+  "source_issue": "reports/P0_9_R1R2_第二轮独立复核报告_20261111.md",
+  "source_event_times_utc": {
+    "HL-10W": "2026-11-09T14:01:03.133068+00:00",
+    "HL-B2188DW": "2026-11-09T14:01:03.875727+00:00",
+    "HL-B2158W": "2026-11-09T14:01:04.511646+00:00"
+  },
+  "modified_business_code": [
+    "shopping_decision/p0_7_official_details.py"
+  ],
+  "new_tests": [
+    "tests/test_p0_9_observed_at_binding.py"
+  ],
+  "validation": {
+    "targeted_python": {
+      "count": 25,
+      "passed": 25
+    },
+    "wsl_python_3_12_3": {
+      "command": "python3 -m unittest discover -s tests -q",
+      "total": 328,
+      "passed": 328,
+      "exit_code": 0
+    },
+    "windows_native_python_3_12_3": {
+      "command": "/mnt/d/SoftWare/Python/install/python.exe -m unittest discover -s tests -q",
+      "total": 328,
+      "passed": 328,
+      "exit_code": 0
+    },
+    "java17_compile": "PASS",
+    "java_p04": {
+      "total": 6,
+      "passed": 6
+    },
+    "java_h10": {
+      "total": 6,
+      "passed": 6
+    },
+    "h05": {
+      "total": 8,
+      "passed": 8,
+      "source": "reports/p0_9_observation_h05_20261112.json"
+    },
+    "diff_check": "PASS",
+    "cli": {
+      "exit_code": 0,
+      "version": 1,
+      "candidates": 3,
+      "status": "model_facts_only_not_purchase"
+    },
+    "manual_gui": "not_run"
+  },
+  "new_regression_assertions": {
+    "manifest_timestamp_shift_rejected": 9,
+    "direct_reviewed_timestamp_shift_rejected": 6,
+    "equivalent_timezone_variants_accepted_per_path": 9,
+    "paths": 2,
+    "original_sources_retained": 3,
+    "stale_day30": false,
+    "stale_day31": true,
+    "future_timestamp_rejected": true,
+    "unreviewed_remains_pending": true
+  },
+  "boundaries": {
+    "new_haina_business_api_calls": 0,
+    "paid_calls": 0,
+    "credential_reads": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "git_commit": false,
+    "git_push": false
+  },
+  "limitations": [
+    "Not a cryptographically notarized timestamp",
+    "Independent reviewer has not approved AC1/P0.9-A",
+    "Real commerce SKU identity and region quote remain unverified",
+    "No Windows GUI manual acceptance"
+  ],
+  "report": "reports/P0_9_原始观察时间绑定_执行者报告_20261112.md"
+}

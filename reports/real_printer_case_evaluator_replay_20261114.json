@@ -1,0 +1,1844 @@
+{
+  "case_id": "REAL-PRINTER-H08B-20261113",
+  "role": "executor",
+  "test_kind": "real_CLI_subprocess_with_offline_research_not_live_SKU",
+  "original_provenance": "H08 recorded real user requirements, no new actual confirmation",
+  "scenario_change_provenance": "synthetic only; no real user confirmation",
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "shopping_decision.dialogue_flow",
+    "--real-printer-case"
+  ],
+  "turns": [
+    {
+      "text": "H08原案与既有补答结构化回放（非本轮真人再确认）",
+      "answers": {
+        "category": "printer",
+        "usage": "家用",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "wechat_required": true
+      }
+    },
+    {
+      "text": "技术变体验证：假设要求自动双面（非用户新确认）",
+      "answers": {
+        "requires_auto_duplex": true
+      }
+    },
+    {
+      "text": "技术变体验证：假设家中要彩色（非用户新确认）",
+      "answers": {
+        "needs_color": true
+      }
+    },
+    {
+      "text": "技术变体验证：假设不强求微信打印（非用户新确认）",
+      "answers": {
+        "wechat_required": false
+      }
+    },
+    {
+      "text": "技术变体验证：假设必须扫描（非用户新确认）",
+      "answers": {
+        "requires_scan": true
+      }
+    }
+  ],
+  "checks": [
+    {
+      "round": 1,
+      "expected_reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03"
+      ],
+      "actual_reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03"
+      ],
+      "safe": true,
+      "pass": true,
+      "kind": "recorded_original_replay"
+    },
+    {
+      "round": 2,
+      "expected_reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-05"
+      ],
+      "actual_reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-05"
+      ],
+      "safe": true,
+      "pass": true,
+      "kind": "synthetic_change_only"
+    },
+    {
+      "round": 3,
+      "expected_reason_ids": [
+        "CASE-02",
+        "CASE-03",
+        "CASE-05"
+      ],
+      "actual_reason_ids": [
+        "CASE-02",
+        "CASE-03",
+        "CASE-05"
+      ],
+      "safe": true,
+      "pass": true,
+      "kind": "synthetic_change_only"
+    },
+    {
+      "round": 4,
+      "expected_reason_ids": [
+        "CASE-03",
+        "CASE-05"
+      ],
+      "actual_reason_ids": [
+        "CASE-03",
+        "CASE-05"
+      ],
+      "safe": true,
+      "pass": true,
+      "kind": "synthetic_change_only"
+    },
+    {
+      "round": 5,
+      "expected_reason_ids": [
+        "CASE-03",
+        "CASE-04",
+        "CASE-05"
+      ],
+      "actual_reason_ids": [
+        "CASE-03",
+        "CASE-04",
+        "CASE-05"
+      ],
+      "safe": true,
+      "pass": true,
+      "kind": "synthetic_change_only"
+    }
+  ],
+  "passed": 5,
+  "total": 5,
+  "outputs": [
+    {
+      "version": 1,
+      "questions": [
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        },
+        {
+          "field": "wechat_workflow",
+          "question": "必须微信小程序直接打印，还是可以通过厂商App？",
+          "why": "连接方式不同会改变候选可用性",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "comparison": {
+        "session_version": 1,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "status": "model_facts_only_not_purchase",
+        "source_mode": "recorded_manufacturer_detail_replay_no_network",
+        "questions": [
+          "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "unresolved_actions": [
+          {
+            "issue": "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+            "state": "optional_confirmation_or_defer"
+          }
+        ],
+        "comparison": {
+          "operation": "injected_manufacturer_facts_only",
+          "comparison": {
+            "status": "facts_comparison_only",
+            "category": "printer",
+            "catalog_recorded_on": "2026-11-04",
+            "catalog_age_days": 10,
+            "catalog_source_kind": "manufacturer_public_pages",
+            "searched_models": 9,
+            "purchase_recommendation_approved": false,
+            "all_prices_real_time_verified": false,
+            "transactions_enabled": false,
+            "constraints": {
+              "required": {
+                "monochrome_print": true,
+                "wechat_workflow_unconfirmed": true
+              },
+              "preferred": {},
+              "budget_max_cny": 1000
+            },
+            "candidates": [
+              {
+                "model_id": "HL-10W",
+                "brand": "Brother",
+                "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+                "status": "needs_verification",
+                "required_met": [
+                  "monochrome_print"
+                ],
+                "required_unknown": [
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "monochrome_print": "https://www.brother.cn/printer/prt/hl-10w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.133068+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+                  "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+                  "billing_model": "buy_print_pages_to_claim_consumables",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "buy_print_pages_to_claim_consumables",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实",
+                  "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+                ]
+              },
+              {
+                "model_id": "HL-B2158W",
+                "brand": "Brother",
+                "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                "status": "needs_verification",
+                "required_met": [
+                  "monochrome_print"
+                ],
+                "required_unknown": [
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2158w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:04.511646+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                  "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              },
+              {
+                "model_id": "HL-B2188DW",
+                "brand": "Brother",
+                "name": "Brother HL-B2188DW（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                "status": "needs_verification",
+                "required_met": [
+                  "monochrome_print"
+                ],
+                "required_unknown": [
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2188dw"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.875727+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "response_sha256": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              }
+            ],
+            "limitations": [
+              "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+              "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+              "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+              "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+            ],
+            "total_candidate_count": 9,
+            "displayed_candidate_count": 3
+          },
+          "approved_purchase_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false
+        },
+        "unknowns": []
+      },
+      "history": {
+        "version": 1,
+        "raw_text": "H08原案与既有补答结构化回放（非本轮真人再确认）",
+        "changed_fields": [
+          "category",
+          "usage",
+          "budget_max_cny",
+          "monthly_pages_range",
+          "needs_color",
+          "accepts_outsourced_color",
+          "wechat_required"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      "real_printer_case_research": {
+        "case_id": "REAL-PRINTER-H08B-20261113",
+        "status": "research_context_pending_independent_review",
+        "source_mode": "dated_public_source_summary_offline_not_current_marketplace",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "real_sale_identity_verified_count": 0,
+        "regional_live_quote_count": 0,
+        "research_captured_on": "2026-11-13",
+        "usage_limit": "short_source_attributed_research_summary_only; no licensed marketplace feed, model training, scraped content reuse, price approval, or buying decisions",
+        "reasons": [
+          {
+            "id": "CASE-01",
+            "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。",
+            "applies_when": "needs_color=false and accepts_outsourced_color=true",
+            "basis": "user_explicit_constraints",
+            "counter_evidence": "一旦改答要求家中彩印，这个取舍应立即撤销",
+            "evidence": [],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-02",
+            "reason": "微信打印要核对具体型号的小程序/绑定流程，不能以Wi-Fi或品牌概述替代；已发现兄弟HL-L1238W、惠普M232dw有厂家功能介绍。",
+            "applies_when": "wechat_required=true",
+            "basis": "limited_manufacturer_facts",
+            "counter_evidence": "未进行本地设备实测，微信工作流是否必须小程序尚未真人确认；两型号的在售状态未知",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R4",
+                "source_group": "brother_cn",
+                "source_url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+                "source_fact": "2026-10-20更新的微信畅享印指南要求首次打印前绑定设备，适用机型清单包括HL-L1238W等。",
+                "source_limit": "微信小程序需绑定和实际网络环境，官网名单不能等同用户手边成功联机；不得与另一版清单混同。",
+                "scope": "中国Brother畅享印指定机型列表",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-03",
+            "reason": "低频使用时需分别算主机、粉盒/硒鼓和页数套餐费用；HL-10W页数套餐与HL-L1238W传统鼓粉耗材不能当同一个成本模式。",
+            "applies_when": "monthly_pages_range available",
+            "basis": "manufacturer_terms_and_historical_cost_context",
+            "counter_evidence": "无实际机价/套餐价/未来费用，不能计算本例总成本或断言哪个更便宜",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R2",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+                "source_fact": "HL-10W打印页数套餐，套餐用尽后需再购买才可继续打印；双面每面计页。",
+                "source_limit": "仅适用于厂商协议所列套餐机型，不能推广到HL-L1238W、惠普或一般激光；实际套餐金额/优惠未核验。",
+                "scope": "协议列明的HL-10W等页数套餐商品",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R5",
+                "source_group": "hk_consumers",
+                "source_url": "https://www.consumer.org.hk/sc/article/492-4445",
+                "source_fact": "香港消委会2017年历史比较显示部分家用喷墨设备的长期墨水支出可能超过购机成本，提示应核算总拥有成本。",
+                "source_limit": "2017年香港喷墨样本不代表2026大陆黑白激光SKU或实际品牌排名；不能借历史价格推本次到手价。",
+                "scope": "历史香港喷墨比较，非两个目标型号的横评",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          }
+        ],
+        "reason_count": 3,
+        "limits": [
+          "这是原案研究取舍，不是完成独立审批的推荐依据",
+          "只有厂家型号和有限历史研究事实，真实平台商品/所选配置绑定仍为0",
+          "没有地区有效成交价、券/库存/运费，也没有实际设备微信连接验证",
+          "本轮答案改变后重新生成理由，不从历史轮次继承失效理由"
+        ]
+      }
+    },
+    {
+      "version": 2,
+      "questions": [
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        },
+        {
+          "field": "wechat_workflow",
+          "question": "必须微信小程序直接打印，还是可以通过厂商App？",
+          "why": "连接方式不同会改变候选可用性",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "comparison": {
+        "session_version": 2,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "status": "model_facts_only_not_purchase",
+        "source_mode": "recorded_manufacturer_detail_replay_no_network",
+        "questions": [
+          "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "unresolved_actions": [
+          {
+            "issue": "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+            "state": "optional_confirmation_or_defer"
+          }
+        ],
+        "comparison": {
+          "operation": "injected_manufacturer_facts_only",
+          "comparison": {
+            "status": "facts_comparison_only",
+            "category": "printer",
+            "catalog_recorded_on": "2026-11-04",
+            "catalog_age_days": 10,
+            "catalog_source_kind": "manufacturer_public_pages",
+            "searched_models": 9,
+            "purchase_recommendation_approved": false,
+            "all_prices_real_time_verified": false,
+            "transactions_enabled": false,
+            "constraints": {
+              "required": {
+                "monochrome_print": true,
+                "auto_duplex": true,
+                "wechat_workflow_unconfirmed": true
+              },
+              "preferred": {},
+              "budget_max_cny": 1000
+            },
+            "candidates": [
+              {
+                "model_id": "HL-B2188DW",
+                "brand": "Brother",
+                "name": "Brother HL-B2188DW（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                "status": "needs_verification",
+                "required_met": [
+                  "monochrome_print",
+                  "auto_duplex"
+                ],
+                "required_unknown": [
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "auto_duplex": "https://www.brother.cn/printer/prt/hl-b2188dw"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.875727+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "response_sha256": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              },
+              {
+                "model_id": "HL-10W",
+                "brand": "Brother",
+                "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+                "status": "needs_verification",
+                "required_met": [
+                  "monochrome_print"
+                ],
+                "required_unknown": [
+                  "auto_duplex",
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "monochrome_print": "https://www.brother.cn/printer/prt/hl-10w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.133068+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+                  "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+                  "billing_model": "buy_print_pages_to_claim_consumables",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "buy_print_pages_to_claim_consumables",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实",
+                  "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+                ]
+              },
+              {
+                "model_id": "HL-B2158W",
+                "brand": "Brother",
+                "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                "status": "needs_verification",
+                "required_met": [
+                  "monochrome_print"
+                ],
+                "required_unknown": [
+                  "auto_duplex",
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2158w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:04.511646+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                  "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              }
+            ],
+            "limitations": [
+              "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+              "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+              "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+              "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+            ],
+            "total_candidate_count": 9,
+            "displayed_candidate_count": 3
+          },
+          "approved_purchase_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false
+        },
+        "unknowns": []
+      },
+      "history": {
+        "version": 2,
+        "raw_text": "技术变体验证：假设要求自动双面（非用户新确认）",
+        "changed_fields": [
+          "requires_auto_duplex"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      "real_printer_case_research": {
+        "case_id": "REAL-PRINTER-H08B-20261113",
+        "status": "research_context_pending_independent_review",
+        "source_mode": "dated_public_source_summary_offline_not_current_marketplace",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "real_sale_identity_verified_count": 0,
+        "regional_live_quote_count": 0,
+        "research_captured_on": "2026-11-13",
+        "usage_limit": "short_source_attributed_research_summary_only; no licensed marketplace feed, model training, scraped content reuse, price approval, or buying decisions",
+        "reasons": [
+          {
+            "id": "CASE-01",
+            "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。",
+            "applies_when": "needs_color=false and accepts_outsourced_color=true",
+            "basis": "user_explicit_constraints",
+            "counter_evidence": "一旦改答要求家中彩印，这个取舍应立即撤销",
+            "evidence": [],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-02",
+            "reason": "微信打印要核对具体型号的小程序/绑定流程，不能以Wi-Fi或品牌概述替代；已发现兄弟HL-L1238W、惠普M232dw有厂家功能介绍。",
+            "applies_when": "wechat_required=true",
+            "basis": "limited_manufacturer_facts",
+            "counter_evidence": "未进行本地设备实测，微信工作流是否必须小程序尚未真人确认；两型号的在售状态未知",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R4",
+                "source_group": "brother_cn",
+                "source_url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+                "source_fact": "2026-10-20更新的微信畅享印指南要求首次打印前绑定设备，适用机型清单包括HL-L1238W等。",
+                "source_limit": "微信小程序需绑定和实际网络环境，官网名单不能等同用户手边成功联机；不得与另一版清单混同。",
+                "scope": "中国Brother畅享印指定机型列表",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-03",
+            "reason": "低频使用时需分别算主机、粉盒/硒鼓和页数套餐费用；HL-10W页数套餐与HL-L1238W传统鼓粉耗材不能当同一个成本模式。",
+            "applies_when": "monthly_pages_range available",
+            "basis": "manufacturer_terms_and_historical_cost_context",
+            "counter_evidence": "无实际机价/套餐价/未来费用，不能计算本例总成本或断言哪个更便宜",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R2",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+                "source_fact": "HL-10W打印页数套餐，套餐用尽后需再购买才可继续打印；双面每面计页。",
+                "source_limit": "仅适用于厂商协议所列套餐机型，不能推广到HL-L1238W、惠普或一般激光；实际套餐金额/优惠未核验。",
+                "scope": "协议列明的HL-10W等页数套餐商品",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R5",
+                "source_group": "hk_consumers",
+                "source_url": "https://www.consumer.org.hk/sc/article/492-4445",
+                "source_fact": "香港消委会2017年历史比较显示部分家用喷墨设备的长期墨水支出可能超过购机成本，提示应核算总拥有成本。",
+                "source_limit": "2017年香港喷墨样本不代表2026大陆黑白激光SKU或实际品牌排名；不能借历史价格推本次到手价。",
+                "scope": "历史香港喷墨比较，非两个目标型号的横评",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-05",
+            "reason": "如果自动双面变成硬条件，需重新核验所售配置的双面能力。惠普官网只对M232dw等具体型号宣称自动双面，不能外推整个品牌。",
+            "applies_when": "requires_auto_duplex=true",
+            "basis": "manufacturer_model_specific",
+            "counter_evidence": "此处还没有所选销售项、预算及实际售后报价；其他型号能力未知。",
+            "evidence": [
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          }
+        ],
+        "reason_count": 4,
+        "limits": [
+          "这是原案研究取舍，不是完成独立审批的推荐依据",
+          "只有厂家型号和有限历史研究事实，真实平台商品/所选配置绑定仍为0",
+          "没有地区有效成交价、券/库存/运费，也没有实际设备微信连接验证",
+          "本轮答案改变后重新生成理由，不从历史轮次继承失效理由"
+        ]
+      }
+    },
+    {
+      "version": 3,
+      "questions": [
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        },
+        {
+          "field": "wechat_workflow",
+          "question": "必须微信小程序直接打印，还是可以通过厂商App？",
+          "why": "连接方式不同会改变候选可用性",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "comparison": {
+        "session_version": 3,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "status": "model_facts_only_not_purchase",
+        "source_mode": "recorded_manufacturer_detail_replay_no_network",
+        "questions": [
+          "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "unresolved_actions": [
+          {
+            "issue": "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+            "state": "optional_confirmation_or_defer"
+          }
+        ],
+        "comparison": {
+          "operation": "injected_manufacturer_facts_only",
+          "comparison": {
+            "status": "facts_comparison_only",
+            "category": "printer",
+            "catalog_recorded_on": "2026-11-04",
+            "catalog_age_days": 10,
+            "catalog_source_kind": "manufacturer_public_pages",
+            "searched_models": 9,
+            "purchase_recommendation_approved": false,
+            "all_prices_real_time_verified": false,
+            "transactions_enabled": false,
+            "constraints": {
+              "required": {
+                "color_print": true,
+                "auto_duplex": true,
+                "wechat_workflow_unconfirmed": true
+              },
+              "preferred": {},
+              "budget_max_cny": 1000
+            },
+            "candidates": [
+              {
+                "model_id": "HL-B2188DW",
+                "brand": "Brother",
+                "name": "Brother HL-B2188DW（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                "status": "excluded_by_verified_spec",
+                "required_met": [
+                  "auto_duplex"
+                ],
+                "required_unknown": [
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "auto_duplex": "https://www.brother.cn/printer/prt/hl-b2188dw"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.875727+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "response_sha256": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              },
+              {
+                "model_id": "HL-10W",
+                "brand": "Brother",
+                "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+                "status": "excluded_by_verified_spec",
+                "required_met": [],
+                "required_unknown": [
+                  "auto_duplex",
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-10w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.133068+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+                  "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+                  "billing_model": "buy_print_pages_to_claim_consumables",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "buy_print_pages_to_claim_consumables",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实",
+                  "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+                ]
+              },
+              {
+                "model_id": "HL-B2158W",
+                "brand": "Brother",
+                "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                "status": "excluded_by_verified_spec",
+                "required_met": [],
+                "required_unknown": [
+                  "auto_duplex",
+                  "wechat_workflow_unconfirmed"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-b2158w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:04.511646+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                  "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              }
+            ],
+            "limitations": [
+              "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+              "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+              "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+              "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+            ],
+            "total_candidate_count": 9,
+            "displayed_candidate_count": 3
+          },
+          "approved_purchase_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false
+        },
+        "unknowns": []
+      },
+      "history": {
+        "version": 3,
+        "raw_text": "技术变体验证：假设家中要彩色（非用户新确认）",
+        "changed_fields": [
+          "needs_color"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      "real_printer_case_research": {
+        "case_id": "REAL-PRINTER-H08B-20261113",
+        "status": "research_context_pending_independent_review",
+        "source_mode": "dated_public_source_summary_offline_not_current_marketplace",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "real_sale_identity_verified_count": 0,
+        "regional_live_quote_count": 0,
+        "research_captured_on": "2026-11-13",
+        "usage_limit": "short_source_attributed_research_summary_only; no licensed marketplace feed, model training, scraped content reuse, price approval, or buying decisions",
+        "reasons": [
+          {
+            "id": "CASE-02",
+            "reason": "微信打印要核对具体型号的小程序/绑定流程，不能以Wi-Fi或品牌概述替代；已发现兄弟HL-L1238W、惠普M232dw有厂家功能介绍。",
+            "applies_when": "wechat_required=true",
+            "basis": "limited_manufacturer_facts",
+            "counter_evidence": "未进行本地设备实测，微信工作流是否必须小程序尚未真人确认；两型号的在售状态未知",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R4",
+                "source_group": "brother_cn",
+                "source_url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+                "source_fact": "2026-10-20更新的微信畅享印指南要求首次打印前绑定设备，适用机型清单包括HL-L1238W等。",
+                "source_limit": "微信小程序需绑定和实际网络环境，官网名单不能等同用户手边成功联机；不得与另一版清单混同。",
+                "scope": "中国Brother畅享印指定机型列表",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-03",
+            "reason": "低频使用时需分别算主机、粉盒/硒鼓和页数套餐费用；HL-10W页数套餐与HL-L1238W传统鼓粉耗材不能当同一个成本模式。",
+            "applies_when": "monthly_pages_range available",
+            "basis": "manufacturer_terms_and_historical_cost_context",
+            "counter_evidence": "无实际机价/套餐价/未来费用，不能计算本例总成本或断言哪个更便宜",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R2",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+                "source_fact": "HL-10W打印页数套餐，套餐用尽后需再购买才可继续打印；双面每面计页。",
+                "source_limit": "仅适用于厂商协议所列套餐机型，不能推广到HL-L1238W、惠普或一般激光；实际套餐金额/优惠未核验。",
+                "scope": "协议列明的HL-10W等页数套餐商品",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R5",
+                "source_group": "hk_consumers",
+                "source_url": "https://www.consumer.org.hk/sc/article/492-4445",
+                "source_fact": "香港消委会2017年历史比较显示部分家用喷墨设备的长期墨水支出可能超过购机成本，提示应核算总拥有成本。",
+                "source_limit": "2017年香港喷墨样本不代表2026大陆黑白激光SKU或实际品牌排名；不能借历史价格推本次到手价。",
+                "scope": "历史香港喷墨比较，非两个目标型号的横评",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-05",
+            "reason": "如果自动双面变成硬条件，需重新核验所售配置的双面能力。惠普官网只对M232dw等具体型号宣称自动双面，不能外推整个品牌。",
+            "applies_when": "requires_auto_duplex=true",
+            "basis": "manufacturer_model_specific",
+            "counter_evidence": "此处还没有所选销售项、预算及实际售后报价；其他型号能力未知。",
+            "evidence": [
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          }
+        ],
+        "reason_count": 3,
+        "limits": [
+          "这是原案研究取舍，不是完成独立审批的推荐依据",
+          "只有厂家型号和有限历史研究事实，真实平台商品/所选配置绑定仍为0",
+          "没有地区有效成交价、券/库存/运费，也没有实际设备微信连接验证",
+          "本轮答案改变后重新生成理由，不从历史轮次继承失效理由"
+        ]
+      }
+    },
+    {
+      "version": 4,
+      "questions": [
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "comparison": {
+        "session_version": 4,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "status": "model_facts_only_not_purchase",
+        "source_mode": "recorded_manufacturer_detail_replay_no_network",
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "unresolved_actions": [
+          {
+            "issue": "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+            "state": "optional_confirmation_or_defer"
+          }
+        ],
+        "comparison": {
+          "operation": "injected_manufacturer_facts_only",
+          "comparison": {
+            "status": "facts_comparison_only",
+            "category": "printer",
+            "catalog_recorded_on": "2026-11-04",
+            "catalog_age_days": 10,
+            "catalog_source_kind": "manufacturer_public_pages",
+            "searched_models": 9,
+            "purchase_recommendation_approved": false,
+            "all_prices_real_time_verified": false,
+            "transactions_enabled": false,
+            "constraints": {
+              "required": {
+                "color_print": true,
+                "auto_duplex": true
+              },
+              "preferred": {},
+              "budget_max_cny": 1000
+            },
+            "candidates": [
+              {
+                "model_id": "HL-B2188DW",
+                "brand": "Brother",
+                "name": "Brother HL-B2188DW（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                "status": "excluded_by_verified_spec",
+                "required_met": [
+                  "auto_duplex"
+                ],
+                "required_unknown": [],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "auto_duplex": "https://www.brother.cn/printer/prt/hl-b2188dw"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.875727+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "response_sha256": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              },
+              {
+                "model_id": "HL-10W",
+                "brand": "Brother",
+                "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+                "status": "excluded_by_verified_spec",
+                "required_met": [],
+                "required_unknown": [
+                  "auto_duplex"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-10w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.133068+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+                  "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+                  "billing_model": "buy_print_pages_to_claim_consumables",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "buy_print_pages_to_claim_consumables",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实",
+                  "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+                ]
+              },
+              {
+                "model_id": "HL-B2158W",
+                "brand": "Brother",
+                "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                "status": "excluded_by_verified_spec",
+                "required_met": [],
+                "required_unknown": [
+                  "auto_duplex"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-b2158w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:04.511646+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                  "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              }
+            ],
+            "limitations": [
+              "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+              "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+              "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+              "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+            ],
+            "total_candidate_count": 9,
+            "displayed_candidate_count": 3
+          },
+          "approved_purchase_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false
+        },
+        "unknowns": []
+      },
+      "history": {
+        "version": 4,
+        "raw_text": "技术变体验证：假设不强求微信打印（非用户新确认）",
+        "changed_fields": [
+          "wechat_required"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      "real_printer_case_research": {
+        "case_id": "REAL-PRINTER-H08B-20261113",
+        "status": "research_context_pending_independent_review",
+        "source_mode": "dated_public_source_summary_offline_not_current_marketplace",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "real_sale_identity_verified_count": 0,
+        "regional_live_quote_count": 0,
+        "research_captured_on": "2026-11-13",
+        "usage_limit": "short_source_attributed_research_summary_only; no licensed marketplace feed, model training, scraped content reuse, price approval, or buying decisions",
+        "reasons": [
+          {
+            "id": "CASE-03",
+            "reason": "低频使用时需分别算主机、粉盒/硒鼓和页数套餐费用；HL-10W页数套餐与HL-L1238W传统鼓粉耗材不能当同一个成本模式。",
+            "applies_when": "monthly_pages_range available",
+            "basis": "manufacturer_terms_and_historical_cost_context",
+            "counter_evidence": "无实际机价/套餐价/未来费用，不能计算本例总成本或断言哪个更便宜",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R2",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+                "source_fact": "HL-10W打印页数套餐，套餐用尽后需再购买才可继续打印；双面每面计页。",
+                "source_limit": "仅适用于厂商协议所列套餐机型，不能推广到HL-L1238W、惠普或一般激光；实际套餐金额/优惠未核验。",
+                "scope": "协议列明的HL-10W等页数套餐商品",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R5",
+                "source_group": "hk_consumers",
+                "source_url": "https://www.consumer.org.hk/sc/article/492-4445",
+                "source_fact": "香港消委会2017年历史比较显示部分家用喷墨设备的长期墨水支出可能超过购机成本，提示应核算总拥有成本。",
+                "source_limit": "2017年香港喷墨样本不代表2026大陆黑白激光SKU或实际品牌排名；不能借历史价格推本次到手价。",
+                "scope": "历史香港喷墨比较，非两个目标型号的横评",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-05",
+            "reason": "如果自动双面变成硬条件，需重新核验所售配置的双面能力。惠普官网只对M232dw等具体型号宣称自动双面，不能外推整个品牌。",
+            "applies_when": "requires_auto_duplex=true",
+            "basis": "manufacturer_model_specific",
+            "counter_evidence": "此处还没有所选销售项、预算及实际售后报价；其他型号能力未知。",
+            "evidence": [
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          }
+        ],
+        "reason_count": 2,
+        "limits": [
+          "这是原案研究取舍，不是完成独立审批的推荐依据",
+          "只有厂家型号和有限历史研究事实，真实平台商品/所选配置绑定仍为0",
+          "没有地区有效成交价、券/库存/运费，也没有实际设备微信连接验证",
+          "本轮答案改变后重新生成理由，不从历史轮次继承失效理由"
+        ]
+      }
+    },
+    {
+      "version": 5,
+      "questions": [
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "comparison": {
+        "session_version": 5,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "status": "model_facts_only_not_purchase",
+        "source_mode": "recorded_manufacturer_detail_replay_no_network",
+        "questions": [
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+        ],
+        "unresolved_actions": [
+          {
+            "issue": "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+            "state": "optional_confirmation_or_defer"
+          },
+          {
+            "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+            "state": "optional_confirmation_or_defer"
+          }
+        ],
+        "comparison": {
+          "operation": "injected_manufacturer_facts_only",
+          "comparison": {
+            "status": "facts_comparison_only",
+            "category": "printer",
+            "catalog_recorded_on": "2026-11-04",
+            "catalog_age_days": 10,
+            "catalog_source_kind": "manufacturer_public_pages",
+            "searched_models": 9,
+            "purchase_recommendation_approved": false,
+            "all_prices_real_time_verified": false,
+            "transactions_enabled": false,
+            "constraints": {
+              "required": {
+                "color_print": true,
+                "scan": true,
+                "auto_duplex": true
+              },
+              "preferred": {},
+              "budget_max_cny": 1000
+            },
+            "candidates": [
+              {
+                "model_id": "HL-B2188DW",
+                "brand": "Brother",
+                "name": "Brother HL-B2188DW（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                "status": "excluded_by_verified_spec",
+                "required_met": [
+                  "auto_duplex"
+                ],
+                "required_unknown": [
+                  "scan"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "auto_duplex": "https://www.brother.cn/printer/prt/hl-b2188dw"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.875727+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+                  "response_sha256": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              },
+              {
+                "model_id": "HL-10W",
+                "brand": "Brother",
+                "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+                "status": "excluded_by_verified_spec",
+                "required_met": [],
+                "required_unknown": [
+                  "scan",
+                  "auto_duplex"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-10w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:03.133068+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+                  "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+                  "billing_model": "buy_print_pages_to_claim_consumables",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "buy_print_pages_to_claim_consumables",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实",
+                  "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+                ]
+              },
+              {
+                "model_id": "HL-B2158W",
+                "brand": "Brother",
+                "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+                "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                "status": "excluded_by_verified_spec",
+                "required_met": [],
+                "required_unknown": [
+                  "scan",
+                  "auto_duplex"
+                ],
+                "required_failed": [
+                  "color_print"
+                ],
+                "preferred_met": [],
+                "preferred_unknown": [],
+                "preferred_failed": [],
+                "evidence_by_feature": {
+                  "color_print": "https://www.brother.cn/printer/prt/hl-b2158w"
+                },
+                "budget_status": "unverified_no_authorized_live_quote",
+                "live_price_cny": null,
+                "marketplace_sku": null,
+                "manufacturer_suggested_retail_cny": null,
+                "manufacturer_suggested_retail_is_live_price": false,
+                "consumables": [
+                  {
+                    "model": "TNB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  },
+                  {
+                    "model": "DRB020",
+                    "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                    "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                  }
+                ],
+                "manufacturer_detail_evidence": {
+                  "observed_at": "2026-11-09T14:01:04.511646+00:00",
+                  "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                  "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+                  "billing_model": "unknown",
+                  "admission": "frozen_p0_8_local_field_review"
+                },
+                "manufacturer_detail_age_days": 5,
+                "manufacturer_detail_is_stale": false,
+                "billing_model": "unknown",
+                "durability_independently_verified": false,
+                "unknowns": [
+                  "实际到手价、库存及预算匹配尚无授权实时核验",
+                  "独立耐用性/故障率未核实"
+                ]
+              }
+            ],
+            "limitations": [
+              "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+              "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+              "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+              "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+            ],
+            "total_candidate_count": 9,
+            "displayed_candidate_count": 3
+          },
+          "approved_purchase_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false
+        },
+        "unknowns": []
+      },
+      "history": {
+        "version": 5,
+        "raw_text": "技术变体验证：假设必须扫描（非用户新确认）",
+        "changed_fields": [
+          "requires_scan"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      "real_printer_case_research": {
+        "case_id": "REAL-PRINTER-H08B-20261113",
+        "status": "research_context_pending_independent_review",
+        "source_mode": "dated_public_source_summary_offline_not_current_marketplace",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "real_sale_identity_verified_count": 0,
+        "regional_live_quote_count": 0,
+        "research_captured_on": "2026-11-13",
+        "usage_limit": "short_source_attributed_research_summary_only; no licensed marketplace feed, model training, scraped content reuse, price approval, or buying decisions",
+        "reasons": [
+          {
+            "id": "CASE-03",
+            "reason": "低频使用时需分别算主机、粉盒/硒鼓和页数套餐费用；HL-10W页数套餐与HL-L1238W传统鼓粉耗材不能当同一个成本模式。",
+            "applies_when": "monthly_pages_range available",
+            "basis": "manufacturer_terms_and_historical_cost_context",
+            "counter_evidence": "无实际机价/套餐价/未来费用，不能计算本例总成本或断言哪个更便宜",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R2",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+                "source_fact": "HL-10W打印页数套餐，套餐用尽后需再购买才可继续打印；双面每面计页。",
+                "source_limit": "仅适用于厂商协议所列套餐机型，不能推广到HL-L1238W、惠普或一般激光；实际套餐金额/优惠未核验。",
+                "scope": "协议列明的HL-10W等页数套餐商品",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R5",
+                "source_group": "hk_consumers",
+                "source_url": "https://www.consumer.org.hk/sc/article/492-4445",
+                "source_fact": "香港消委会2017年历史比较显示部分家用喷墨设备的长期墨水支出可能超过购机成本，提示应核算总拥有成本。",
+                "source_limit": "2017年香港喷墨样本不代表2026大陆黑白激光SKU或实际品牌排名；不能借历史价格推本次到手价。",
+                "scope": "历史香港喷墨比较，非两个目标型号的横评",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-04",
+            "reason": "如果必须扫描复印，需要优先核实具多功能的型号，例如惠普M232dw；打印单功能与一体机不能只比较无线和价格。",
+            "applies_when": "requires_scan=true",
+            "basis": "manufacturer_model_specific",
+            "counter_evidence": "是否需要扫描仍未真人确认，且两个型号都没有真实SKU/地区报价",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-05",
+            "reason": "如果自动双面变成硬条件，需重新核验所售配置的双面能力。惠普官网只对M232dw等具体型号宣称自动双面，不能外推整个品牌。",
+            "applies_when": "requires_auto_duplex=true",
+            "basis": "manufacturer_model_specific",
+            "counter_evidence": "此处还没有所选销售项、预算及实际售后报价；其他型号能力未知。",
+            "evidence": [
+              {
+                "source_id": "R3",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+                "scope": "HP M232dw厂家中国区产品概览",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          }
+        ],
+        "reason_count": 3,
+        "limits": [
+          "这是原案研究取舍，不是完成独立审批的推荐依据",
+          "只有厂家型号和有限历史研究事实，真实平台商品/所选配置绑定仍为0",
+          "没有地区有效成交价、券/库存/运费，也没有实际设备微信连接验证",
+          "本轮答案改变后重新生成理由，不从历史轮次继承失效理由"
+        ]
+      }
+    }
+  ],
+  "real_sale_identity_verified": 0,
+  "regional_quotes_verified": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

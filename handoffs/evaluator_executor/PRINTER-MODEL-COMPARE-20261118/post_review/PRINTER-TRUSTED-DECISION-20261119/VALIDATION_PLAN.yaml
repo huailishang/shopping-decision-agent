@@ -1,0 +1,83 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-TRUSTED-DECISION-20261119
+run_mode: offline_tests_plus_bounded_public_read_only_research
+mandatory: true
+checks:
+  - id: VP-01
+    title: adapter_two_regressions
+    ac: [AC-01, AC-04]
+    cwd: .
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_model_comparison.py, -v]
+    expected_exit_code: 0
+    mandatory: true
+    supplementary_negative_probes:
+      - input_tokens_true_rejected
+      - output_tokens_false_rejected
+      - missing_item_rejected
+      - string_item_rejected
+      - item_without_type_rejected
+      - known_actual_tool_event_rejected
+      - provider_error_not_misclassified_as_tool
+      - valid_synthetic_completion_remains_valid_offline
+  - id: VP-02
+    title: project_full_regression
+    ac: [AC-01, AC-04, AC-05]
+    cwd: .
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    title: immutable_old_model_audit_remains_honestly_failed
+    ac: [AC-05]
+    cwd: .
+    command: [python3, -X, utf8, scripts/run_model_comparison_experiment.py, --audit, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 1
+    expected_reason_contains: "model cases not attempted: C05,C06,C07"
+    note: This is a historical preservation check, not an overall PASS for the old model experiment
+    mandatory: true
+  - id: VP-04
+    title: b01_primary_fact_and_decision_manual_independent_review
+    ac: [AC-02, AC-03, AC-04]
+    method: independent_source_inspection
+    required_artifacts:
+      - evidence/attempts.jsonl
+      - evidence/decision_matrix.json
+      - COMPARISON.md
+    required_checks:
+      - sources_record_request_utc_final_url_scope_model_and_short_excerpt
+      - official_model_mapping_precise_for_HL-L1238W_and_M232dw
+      - wechat_initiation_distinct_from_first_setup_and_later_reuse
+      - mini_program_distinct_from_switch_to_vendor_app
+      - listing_sku_not_equated_with_product_family_or_search_result
+      - henan_effective_price_unknown_without_merchant_sku_region_timestamp_and_conditions
+      - pre_post_action_difference_grounded_in_new_evidence_or_clearly_unchanged
+      - no_unverified_recommendation_or_transaction
+      - missing_and_conflicting_information_represented_as_unknown_or_conflict
+      - public_query_count_at_most_4_and_page_read_count_at_most_8
+    mandatory: true
+  - id: VP-05
+    title: scope_budget_integrity
+    ac: [AC-05]
+    method: independent_baseline_comparison
+    required_artifacts:
+      - BASELINE.json
+      - BASELINE.sha256
+      - evidence/changed_files.json
+      - evidence/validation_summary.json
+    required_checks:
+      - sha_of_baseline_manifest_matches_baseline_sha256
+      - historic_attempts_ledger_sha_and_scheduled_completed_count_unchanged
+      - old_contract_cases_and_frozen_manifest_unchanged
+      - no_unapproved_code_or_docs_modifications
+      - actual_git_changes_compared_against_captured_preexisting_status
+      - no_api_model_inference_or_purchase
+      - no_git_commit_push_history_rewrite
+      - failures_and_unknown_costs_reported_honestly
+    mandatory: true
+review_rules:
+  - Engineer tests can PASS while source quality or decision improvement is UNKNOWN
+  - Public source fact quality must be assessed from primary content, not just hashes or model-produced summaries
+  - Any invalid token usage or malformed item accepted means AC-01 FAIL
+  - Any bad claim that suggests current price or WeChat reuse without evidence means AC-02/AC-03 FAIL
+  - No real product price is required for honest completion; mark missing evidence as UNKNOWN and no demonstrated decision gain
+  - Evaluator must replay and inspect independently, not accept executor-only pass labels

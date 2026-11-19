@@ -1,0 +1,320 @@
+{
+  "role": "independent_evaluator",
+  "scope": "six_bounded_same_session_synthetic_combinations_not_accuracy",
+  "inputs": [
+    {
+      "text": "独立合成同会话组合N1",
+      "answers": {
+        "category": "printer",
+        "usage": "独立合成复核",
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "monthly_pages_range": [
+          203,
+          379
+        ],
+        "budget_max_cny": 1907,
+        "requires_scan": true,
+        "requires_auto_duplex": true,
+        "requirements": [
+          "必须微信打印"
+        ],
+        "wechat_workflow": "transfer_to_app",
+        "device_deployment_region": "中国大陆"
+      }
+    },
+    {
+      "text": "独立合成同会话组合N2",
+      "answers": {
+        "wechat_required": true
+      }
+    },
+    {
+      "text": "独立合成同会话组合N3",
+      "answers": {
+        "wechat_required": false
+      }
+    },
+    {
+      "text": "独立合成同会话组合N4",
+      "answers": {
+        "requirements": []
+      }
+    },
+    {
+      "text": "独立合成同会话组合N5",
+      "answers": {
+        "requirements": [
+          "必须微信小程序打印"
+        ],
+        "wechat_required": null,
+        "wechat_workflow": "miniprogram",
+        "device_deployment_region": "日本"
+      }
+    },
+    {
+      "text": "独立合成同会话组合N6",
+      "answers": {
+        "requirements": [],
+        "wechat_required": false,
+        "requires_scan": null,
+        "requires_auto_duplex": null
+      }
+    }
+  ],
+  "cli_exit_code": 0,
+  "stderr": "",
+  "checks": [
+    {
+      "id": "N01_raw_app_with_scan_duplex",
+      "pass": true
+    },
+    {
+      "id": "N02_extra_confirmation_equivalent",
+      "pass": true
+    },
+    {
+      "id": "N03_explicit_denial_is_conflict",
+      "pass": true
+    },
+    {
+      "id": "N04_withdraw_wechat_preserves_other_hard_conditions",
+      "pass": true
+    },
+    {
+      "id": "N05_switch_to_miniprogram_Japan_stays_pending",
+      "pass": true
+    },
+    {
+      "id": "N06_clear_all_hard_conditions_restores_research",
+      "pass": true
+    }
+  ],
+  "summaries": [
+    {
+      "eligible": [],
+      "pending": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "conflicts": [],
+      "normalized_required": {
+        "monochrome_print": true,
+        "scan": true,
+        "auto_duplex": true,
+        "wechat_transfer_to_app": true
+      },
+      "models": {
+        "HL-L1238W": {
+          "eligibility": "pending_hard_evidence",
+          "checks": {
+            "C-SCAN": "unknown",
+            "C-DUPLEX": "unknown",
+            "C-WECHAT": "other_workflow_unverified",
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        "M232dw": {
+          "eligibility": "pending_hard_evidence",
+          "checks": {
+            "C-SCAN": "match",
+            "C-DUPLEX": "match",
+            "C-WECHAT": "other_workflow_unverified",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      },
+      "active_models": [],
+      "purchase": false,
+      "transactions": false
+    },
+    {
+      "eligible": [],
+      "pending": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "conflicts": [],
+      "normalized_required": {
+        "monochrome_print": true,
+        "scan": true,
+        "auto_duplex": true,
+        "wechat_transfer_to_app": true
+      },
+      "models": {
+        "HL-L1238W": {
+          "eligibility": "pending_hard_evidence",
+          "checks": {
+            "C-SCAN": "unknown",
+            "C-DUPLEX": "unknown",
+            "C-WECHAT": "other_workflow_unverified",
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        "M232dw": {
+          "eligibility": "pending_hard_evidence",
+          "checks": {
+            "C-SCAN": "match",
+            "C-DUPLEX": "match",
+            "C-WECHAT": "other_workflow_unverified",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      },
+      "active_models": [],
+      "purchase": false,
+      "transactions": false
+    },
+    {
+      "eligible": [],
+      "pending": [],
+      "conflicts": [
+        "原文微信硬要求与“微信不是必须”确认冲突，请修改原话或确认项"
+      ],
+      "normalized_required": {
+        "monochrome_print": true,
+        "scan": true,
+        "auto_duplex": true,
+        "wechat_transfer_to_app": true
+      },
+      "models": {
+        "HL-L1238W": {
+          "eligibility": "blocked_by_user_condition_conflict",
+          "checks": {
+            "C-SCAN": "unknown",
+            "C-DUPLEX": "unknown",
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        "M232dw": {
+          "eligibility": "blocked_by_user_condition_conflict",
+          "checks": {
+            "C-SCAN": "match",
+            "C-DUPLEX": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      },
+      "active_models": [],
+      "purchase": false,
+      "transactions": false
+    },
+    {
+      "eligible": [
+        "M232dw"
+      ],
+      "pending": [
+        "HL-L1238W"
+      ],
+      "conflicts": [],
+      "normalized_required": {
+        "monochrome_print": true,
+        "scan": true,
+        "auto_duplex": true
+      },
+      "models": {
+        "HL-L1238W": {
+          "eligibility": "pending_hard_evidence",
+          "checks": {
+            "C-SCAN": "unknown",
+            "C-DUPLEX": "unknown",
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        "M232dw": {
+          "eligibility": "model_spec_research_only",
+          "checks": {
+            "C-SCAN": "match",
+            "C-DUPLEX": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      },
+      "active_models": [
+        "M232dw"
+      ],
+      "purchase": false,
+      "transactions": false
+    },
+    {
+      "eligible": [],
+      "pending": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "conflicts": [],
+      "normalized_required": {
+        "monochrome_print": true,
+        "scan": true,
+        "auto_duplex": true,
+        "wechat_miniprogram": true
+      },
+      "models": {
+        "HL-L1238W": {
+          "eligibility": "pending_hard_evidence",
+          "checks": {
+            "C-SCAN": "unknown",
+            "C-DUPLEX": "unknown",
+            "C-WECHAT": "deployment_outside_verified_scope",
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        "M232dw": {
+          "eligibility": "pending_hard_evidence",
+          "checks": {
+            "C-SCAN": "match",
+            "C-DUPLEX": "match",
+            "C-WECHAT": "deployment_outside_verified_scope",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      },
+      "active_models": [],
+      "purchase": false,
+      "transactions": false
+    },
+    {
+      "eligible": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "pending": [],
+      "conflicts": [],
+      "normalized_required": {
+        "monochrome_print": true
+      },
+      "models": {
+        "HL-L1238W": {
+          "eligibility": "model_spec_research_only",
+          "checks": {
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        "M232dw": {
+          "eligibility": "model_spec_research_only",
+          "checks": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      },
+      "active_models": [],
+      "purchase": false,
+      "transactions": false
+    }
+  ],
+  "total": 6,
+  "passed": 6,
+  "all_rounds_purchase_and_transactions_false": true
+}

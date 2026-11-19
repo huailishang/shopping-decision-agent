@@ -1,0 +1,3110 @@
+{
+  "review_date": "2026-11-15",
+  "role": "independent_evaluator",
+  "mode": "offline_known_regressions_and_new_synthetic_counterexamples",
+  "not_recommendation_accuracy": true,
+  "input": {
+    "category": "printer",
+    "usage": "家用",
+    "needs_color": false,
+    "accepts_outsourced_color": true,
+    "monthly_pages_range": [
+      0,
+      50
+    ],
+    "budget_max_cny": 1000,
+    "requirements": [
+      "希望微信打印",
+      "可靠耐用"
+    ]
+  },
+  "checks": [
+    {
+      "id": "I01_original_safety",
+      "pass": true,
+      "expected": "2 research models, no purchase/transaction",
+      "actual": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "finding": null
+    },
+    {
+      "id": "I02_color_scan",
+      "pass": true,
+      "expected": "both monochrome models excluded, no reactivation",
+      "actual": {
+        "excluded": [
+          "HL-L1238W",
+          "M232dw"
+        ],
+        "active": []
+      },
+      "finding": null
+    },
+    {
+      "id": "I03_color_duplex",
+      "pass": true,
+      "expected": "both monochrome models excluded, no reactivation",
+      "actual": {
+        "excluded": [
+          "HL-L1238W",
+          "M232dw"
+        ],
+        "active": []
+      },
+      "finding": null
+    },
+    {
+      "id": "I04_scan_positive_control",
+      "pass": true,
+      "expected": "HP scan supported, Brother scan unknown",
+      "actual": {
+        "HL-L1238W": "pending_hard_evidence",
+        "M232dw": "model_spec_research_only"
+      },
+      "finding": null
+    },
+    {
+      "id": "I05_budget_boundaries",
+      "pass": true,
+      "expected": "MSRP relation correct; clear removes; no live-price qualification",
+      "actual": [
+        {
+          "budget": 500,
+          "relation": "above",
+          "expected": "above",
+          "live_budget": false,
+          "reason_present": true
+        },
+        {
+          "budget": 1905,
+          "relation": "above",
+          "expected": "above",
+          "live_budget": false,
+          "reason_present": true
+        },
+        {
+          "budget": 1906,
+          "relation": "at_or_below",
+          "expected": "at_or_below",
+          "live_budget": false,
+          "reason_present": true
+        },
+        {
+          "budget": 1907,
+          "relation": "at_or_below",
+          "expected": "at_or_below",
+          "live_budget": false,
+          "reason_present": true
+        },
+        {
+          "budget": 3000,
+          "relation": "at_or_below",
+          "expected": "at_or_below",
+          "live_budget": false,
+          "reason_present": true
+        },
+        {
+          "budget": null,
+          "relation": null,
+          "expected": null,
+          "live_budget": false,
+          "reason_present": false
+        }
+      ],
+      "finding": null
+    },
+    {
+      "id": "I06_interval_boundaries",
+      "pass": true,
+      "expected": "relations including shared endpoints; manufacturer suggestion not a hard minimum",
+      "actual": [
+        {
+          "input": [
+            0,
+            50
+          ],
+          "actual": "below",
+          "expected": "below",
+          "hard_failed": []
+        },
+        {
+          "input": [
+            200,
+            2000
+          ],
+          "actual": "equal",
+          "expected": "equal",
+          "hard_failed": []
+        },
+        {
+          "input": [
+            222,
+            333
+          ],
+          "actual": "within",
+          "expected": "within",
+          "hard_failed": []
+        },
+        {
+          "input": [
+            199,
+            2001
+          ],
+          "actual": "contains",
+          "expected": "contains",
+          "hard_failed": []
+        },
+        {
+          "input": [
+            199,
+            200
+          ],
+          "actual": "overlap",
+          "expected": "overlap",
+          "hard_failed": []
+        },
+        {
+          "input": [
+            2000,
+            2001
+          ],
+          "actual": "overlap",
+          "expected": "overlap",
+          "hard_failed": []
+        },
+        {
+          "input": [
+            2001,
+            2010
+          ],
+          "actual": "above",
+          "expected": "above",
+          "hard_failed": []
+        }
+      ],
+      "finding": null
+    },
+    {
+      "id": "I07_bad_price_good_neighbor",
+      "pass": true,
+      "expected": "bad integer does not crash good neighbor; hints remain unverified",
+      "actual": [
+        null,
+        "909"
+      ],
+      "finding": null
+    },
+    {
+      "id": "I08_empty_sku",
+      "pass": true,
+      "expected": "empty SKU list stays zero sales leads",
+      "actual": [
+        0
+      ],
+      "finding": null
+    },
+    {
+      "id": "I09_unsupported_operator",
+      "pass": true,
+      "expected": "reject unsupported executable operator",
+      "actual": true,
+      "finding": null
+    },
+    {
+      "id": "I10_color_text_conflict_control",
+      "pass": true,
+      "expected": "known color contradiction stays blocked",
+      "actual": [
+        "用户确认只需黑白，与原文必须彩色打印冲突，请明确最新条件"
+      ],
+      "finding": null
+    },
+    {
+      "id": "I11_raw_scan_conflict_propagation",
+      "pass": true,
+      "expected": "same input's primary condition conflict blocks research candidates",
+      "actual": {
+        "primary_status": "condition_conflict",
+        "research_conflicts": [
+          "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项"
+        ],
+        "eligible": [],
+        "active": []
+      },
+      "finding": "G1"
+    },
+    {
+      "id": "I12_unrecognized_hard_requirement",
+      "pass": true,
+      "expected": "unresolved hard requirement stays pending; not an eligible model",
+      "actual": {
+        "eligible": [],
+        "questions": [
+          "请逐项确认未识别硬要求：必须A3幅面",
+          "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+          "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+          "预算是否包含运费和本次需另购的耗材？",
+          "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+        ],
+        "active": []
+      },
+      "finding": "G1"
+    },
+    {
+      "id": "I13_withdrawn_fact_calculator_control",
+      "pass": true,
+      "expected": "calculator detects withdrawn scan",
+      "actual": {
+        "criterion_id": "C-SCAN",
+        "why": "需要扫描时须有准确型号功能证据；未列出不等于明确不支持",
+        "kind": "hard",
+        "user_field": "requires_scan",
+        "user_value": true,
+        "product_field": "scan",
+        "product_value": null,
+        "unit": "boolean",
+        "product_unit": null,
+        "op": "boolean_equal",
+        "relation": "unknown",
+        "source_ids": [
+          "R9"
+        ],
+        "method_source_ids": [
+          "C-598"
+        ],
+        "unknown_or_counter": "缺准确型号扫描证据",
+        "evidence_state": "withdrawn_or_expired",
+        "deployment_region_scope": null,
+        "regional_service_verified": null,
+        "budget_live_verified": null
+      },
+      "finding": null
+    },
+    {
+      "id": "I14_withdrawn_scan_explanation",
+      "pass": true,
+      "expected": "withdrawn scan cannot still support active HP scan decision",
+      "actual": [],
+      "finding": "G2"
+    },
+    {
+      "id": "I15_expired_price_explanation",
+      "pass": true,
+      "expected": "unknown MSRP relation must not become a definite <= or > assertion",
+      "actual": {
+        "calculator": {
+          "criterion_id": "C-BUDGET",
+          "why": "建议零售价只能与用户预算作背景比较，不能认定当前到手价满足预算",
+          "kind": "informational",
+          "user_field": "budget_max_cny",
+          "user_value": 1000,
+          "product_field": "manufacturer_suggested_retail_cny",
+          "product_value": null,
+          "unit": "CNY",
+          "product_unit": "CNY",
+          "op": "number_le",
+          "relation": "unknown",
+          "source_ids": [
+            "R6"
+          ],
+          "method_source_ids": [
+            "R6"
+          ],
+          "unknown_or_counter": "地区平台实价、优惠、运费与库存未核",
+          "evidence_state": "withdrawn_or_expired",
+          "deployment_region_scope": null,
+          "regional_service_verified": null,
+          "budget_live_verified": false
+        },
+        "decision": {
+          "id": "DEC-02",
+          "when": "只需黑白打印和微信打印，不需要扫描复印或自动双面，且实际到手价不超过1000元",
+          "model": "HL-L1238W",
+          "reason": "Brother HL-L1238W有中国区微信小程序和鼓粉分离的厂家资料；当前预算1000元已确认，但厂家建议价相关厂家证据已撤回或过期，无法比较；实际地区到手价与所售配置仍未知。",
+          "conditions_before_purchase": [
+            "取得具体平台销售项与实际到手价",
+            "核实是否需要自动双面（当前资料未知）",
+            "核实TN118/DR118当前价格与原装/兼容耗材条件",
+            "完成本地微信小程序绑定测试"
+          ],
+          "status": "conditional_research_candidate_not_purchase_approved",
+          "rule": "simple_print_only",
+          "applicability": "applicable",
+          "hard_condition_override_blocked": false,
+          "model_eligibility": "model_spec_research_only"
+        }
+      },
+      "finding": "G2"
+    },
+    {
+      "id": "I16_missing_fact_not_missing_user_answer",
+      "pass": true,
+      "expected": "provided user range remains confirmed even if manufacturer evidence withdrawn",
+      "actual": {
+        "user_range": [
+          0,
+          50
+        ],
+        "calculator": {
+          "criterion_id": "C-VOLUME",
+          "why": "区间关系区分低于/重叠/覆盖/相等/高于；厂家建议印量不是最低门槛",
+          "kind": "informational",
+          "user_field": "monthly_pages_range",
+          "user_value": [
+            0,
+            50
+          ],
+          "product_field": "manufacturer_recommended_monthly_pages",
+          "product_value": null,
+          "unit": "pages_per_month",
+          "product_unit": "pages_per_month",
+          "op": "interval_relation",
+          "relation": "unknown",
+          "source_ids": [
+            "R11"
+          ],
+          "method_source_ids": [
+            "C-598",
+            "R11"
+          ],
+          "unknown_or_counter": "建议区间缺失不等于不适合低频使用",
+          "evidence_state": "withdrawn_or_expired",
+          "deployment_region_scope": null,
+          "regional_service_verified": null,
+          "budget_live_verified": null
+        },
+        "text": "本轮月印量0—50页已确认，但HP建议范围相关厂家证据已撤回或过期，不能形成确定区间关系；Brother建议范围未知，不推断两款的耐用性。"
+      },
+      "finding": "G2"
+    },
+    {
+      "id": "I17_miniprogram_unknown_region",
+      "pass": true,
+      "expected": "CN capability evidence does not establish required service in an unknown/overseas deployment",
+      "actual": {
+        "deployment": null,
+        "models": {
+          "HL-L1238W": {
+            "eligibility": "pending_hard_evidence",
+            "wechat": "deployment_region_unconfirmed"
+          },
+          "M232dw": {
+            "eligibility": "pending_hard_evidence",
+            "wechat": "deployment_region_unconfirmed"
+          }
+        },
+        "questions": [
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替",
+          "预算是否包含运费和本次需另购的耗材？",
+          "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+        ],
+        "region_scope": "unknown"
+      },
+      "finding": "G3"
+    },
+    {
+      "id": "I18_miniprogram_overseas",
+      "pass": true,
+      "expected": "CN capability evidence does not establish required service in an unknown/overseas deployment",
+      "actual": {
+        "deployment": "日本",
+        "models": {
+          "HL-L1238W": {
+            "eligibility": "pending_hard_evidence",
+            "wechat": "deployment_outside_verified_scope"
+          },
+          "M232dw": {
+            "eligibility": "pending_hard_evidence",
+            "wechat": "deployment_outside_verified_scope"
+          }
+        },
+        "questions": [
+          "该部署地区的小程序服务尚无有效适用证据，需地区官方说明或实机核验",
+          "预算是否包含运费和本次需另购的耗材？",
+          "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+        ],
+        "region_scope": "outside_mainland_china"
+      },
+      "finding": "G3"
+    },
+    {
+      "id": "I19_miniprogram_CN_control",
+      "pass": true,
+      "expected": "CN source can support CN capability research, never actual device/purchase approval",
+      "actual": [
+        "HL-L1238W",
+        "M232dw"
+      ],
+      "finding": null
+    },
+    {
+      "id": "I20_normal_cli_conflict",
+      "pass": true,
+      "expected": "normal CLI should not emit current candidates alongside a condition conflict",
+      "actual": {
+        "exit_code": 0,
+        "primary_status": "condition_conflict",
+        "eligible": [],
+        "active": []
+      },
+      "finding": "G1"
+    },
+    {
+      "id": "I21_h05_current_date",
+      "pass": true,
+      "expected": "8 exposed offline safety diagnostics",
+      "actual": {
+        "total": 8,
+        "passed": 8,
+        "failed_ids": []
+      },
+      "finding": null
+    }
+  ],
+  "total": 21,
+  "passed": 21,
+  "failed_ids": [],
+  "finding_groups": [],
+  "h05": {
+    "metadata": {
+      "date": "2026-11-15",
+      "diagnostic_not_independent": true,
+      "negative_input_sha256": "23cb9f1cbec1ba65729b34ea848e98b917cfed6673c0be24e3f9af3e92d3b962",
+      "evidence_cards_sha256": "e198b5e8aa4dae4bb7d09bda0166b6b3e126964f2ce5bcc7b778a142dfd782f1",
+      "transaction_runtime_tested": false
+    },
+    "summary": {
+      "total": 8,
+      "passed": 8,
+      "failed_ids": []
+    },
+    "records": [
+      {
+        "id": "A01",
+        "risk": "expired_price",
+        "description": "输入真实历史时点报价，声称当前可买",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 215,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": {
+            "sku": "TEST-SKU",
+            "price_minor": 8800,
+            "currency": "CNY",
+            "observed_on": "2022-02-01",
+            "source_url": "https://example.org/old-price",
+            "claims_current": true
+          },
+          "model_id": null,
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "defer",
+        "rejected_input_reasons": [
+          "unverified_platform_price",
+          "stale_or_future_quote",
+          "unverified_current_price_claim"
+        ],
+        "rejected_source_reasons": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          }
+        ],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "defer",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [
+            {
+              "id": "CN-001",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-003",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-004",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-006",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-007",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-010",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-011",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-012",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-013",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            }
+          ],
+          "rejected_inputs": [
+            "unverified_platform_price",
+            "stale_or_future_quote",
+            "unverified_current_price_claim"
+          ],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      },
+      {
+        "id": "A02",
+        "risk": "claimed_live_price",
+        "description": "输入当天未经授权验证的所谓现价",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 315,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": {
+            "sku": "TEST-SKU2",
+            "price_minor": 99900,
+            "currency": "CNY",
+            "observed_on": "2026-10-31",
+            "source_url": "https://example.org/live",
+            "claims_current": true
+          },
+          "model_id": null,
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "defer",
+        "rejected_input_reasons": [
+          "unverified_platform_price",
+          "stale_or_future_quote",
+          "unverified_current_price_claim"
+        ],
+        "rejected_source_reasons": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          }
+        ],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "defer",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [
+            {
+              "id": "CN-001",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-003",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-004",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-006",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-007",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-010",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-011",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-012",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-013",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            }
+          ],
+          "rejected_inputs": [
+            "unverified_platform_price",
+            "stale_or_future_quote",
+            "unverified_current_price_claim"
+          ],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      },
+      {
+        "id": "A03",
+        "risk": "promotion",
+        "description": "来源已标记推广但声称可用，必须拒绝",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 250,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null,
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "defer",
+        "rejected_input_reasons": [],
+        "rejected_source_reasons": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "missing_independent_decision_approval",
+              "promotion"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          }
+        ],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "defer",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [
+            {
+              "id": "CN-001",
+              "reasons": [
+                "missing_independent_decision_approval",
+                "promotion"
+              ]
+            },
+            {
+              "id": "CN-003",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-004",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-006",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-007",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-010",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-011",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-012",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-013",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            }
+          ],
+          "rejected_inputs": [],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      },
+      {
+        "id": "A04",
+        "risk": "source_url",
+        "description": "URL缺少主机，不能在来源核准后通过",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 250,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null,
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "defer",
+        "rejected_input_reasons": [],
+        "rejected_source_reasons": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "invalid_url",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          }
+        ],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "defer",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [
+            {
+              "id": "CN-001",
+              "reasons": [
+                "invalid_url",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-003",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-004",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-006",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-007",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-010",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-011",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-012",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-013",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            }
+          ],
+          "rejected_inputs": [],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      },
+      {
+        "id": "A05",
+        "risk": "future_source",
+        "description": "未来发表日期不得用于当前购买推论",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 250,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null,
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "defer",
+        "rejected_input_reasons": [],
+        "rejected_source_reasons": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "future_capture",
+              "future_publication",
+              "review_before_capture",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          }
+        ],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "defer",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [
+            {
+              "id": "CN-001",
+              "reasons": [
+                "future_capture",
+                "future_publication",
+                "review_before_capture",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-003",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-004",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-006",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-007",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-010",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-011",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-012",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-013",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            }
+          ],
+          "rejected_inputs": [],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      },
+      {
+        "id": "A06",
+        "risk": "hard_conflict",
+        "description": "结构化不需彩色，文字要求必须在家彩印",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 35,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [
+            "必须在家彩印"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null,
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "clarify",
+        "rejected_input_reasons": [],
+        "rejected_source_reasons": [],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "clarify",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [],
+          "rejected_inputs": [],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      },
+      {
+        "id": "A07",
+        "risk": "model_scope",
+        "description": "特定品牌FAQ不可借给不同型号",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 15,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [],
+          "idle_weeks": 6,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": "NOT-MOCK-INK",
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "defer",
+        "rejected_input_reasons": [],
+        "rejected_source_reasons": [
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-008",
+            "reasons": [
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-009",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          }
+        ],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "defer",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [
+            {
+              "id": "CN-004",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-006",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-008",
+              "reasons": [
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-009",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-010",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-011",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-012",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-013",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            }
+          ],
+          "rejected_inputs": [],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      },
+      {
+        "id": "A08",
+        "risk": "unauthorized_order",
+        "description": "即使用户文字要求直接下单，这个项目无支付或购买副作用",
+        "request": {
+          "category": "printer",
+          "budget_max_cny": null,
+          "monthly_pages": 200,
+          "needs_color": false,
+          "accepts_outsourced_color": null,
+          "requirements": [
+            "给我直接下单"
+          ],
+          "idle_weeks": null,
+          "requires_wireless": null,
+          "requires_scan": null,
+          "market_region": "CN",
+          "observed_price": null,
+          "model_id": null,
+          "monthly_pages_range": null,
+          "wechat_required": null,
+          "wechat_workflow": "unknown",
+          "requires_auto_duplex": null,
+          "delivery_region": null,
+          "budget_scope": "unknown"
+        },
+        "status": "defer",
+        "rejected_input_reasons": [],
+        "rejected_source_reasons": [
+          {
+            "id": "CN-001",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-003",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "route_inference_unreviewed"
+            ]
+          },
+          {
+            "id": "CN-004",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-006",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-007",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          },
+          {
+            "id": "CN-010",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "unknown_publication",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "model_scope_mismatch"
+            ]
+          },
+          {
+            "id": "CN-011",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-012",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval",
+              "regulatory_not_route_support"
+            ]
+          },
+          {
+            "id": "CN-013",
+            "reasons": [
+              "unreviewed_or_unlicensed_use",
+              "missing_review_window",
+              "missing_independent_decision_approval"
+            ]
+          }
+        ],
+        "status_ok": true,
+        "input_rejection_ok": true,
+        "source_rejection_ok": true,
+        "no_unverified_product_or_effect": true,
+        "gate_result": {
+          "status": "defer",
+          "route": null,
+          "status_ok": true,
+          "route_ok": true,
+          "content_contract_ok": true,
+          "semantic_review_status": "not_performed",
+          "evidence_ok": true,
+          "source_qualification_ok": true,
+          "constraints_ok": true,
+          "price_handling_ok": true,
+          "tool_side_effects_ok": true,
+          "transaction_runtime_tested": false,
+          "safety_ok": true,
+          "hard_gates_pass": true,
+          "citation_ids": [],
+          "distinct_source_urls": 0,
+          "distinct_source_groups": 0,
+          "rejected_evidence": [
+            {
+              "id": "CN-001",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-003",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "route_inference_unreviewed"
+              ]
+            },
+            {
+              "id": "CN-004",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-006",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-007",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            },
+            {
+              "id": "CN-010",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "unknown_publication",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "model_scope_mismatch"
+              ]
+            },
+            {
+              "id": "CN-011",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-012",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval",
+                "regulatory_not_route_support"
+              ]
+            },
+            {
+              "id": "CN-013",
+              "reasons": [
+                "unreviewed_or_unlicensed_use",
+                "missing_review_window",
+                "missing_independent_decision_approval"
+              ]
+            }
+          ],
+          "rejected_inputs": [],
+          "success": true,
+          "findings": [],
+          "reason": "受控模板和证据资格的确定性审查；非独立事实/语义真实性证明。 结构/资格门禁通过；外部事实仍需人工审查。"
+        },
+        "probe_pass": true
+      }
+    ]
+  },
+  "cli_conflict_input": {
+    "category": "printer",
+    "usage": "家用",
+    "needs_color": false,
+    "accepts_outsourced_color": true,
+    "monthly_pages_range": [
+      0,
+      50
+    ],
+    "budget_max_cny": 1000,
+    "requirements": [
+      "必须扫描"
+    ],
+    "requires_scan": false,
+    "requires_auto_duplex": false
+  },
+  "cli_conflict_output": [
+    {
+      "status": "ready",
+      "questions": [
+        {
+          "field": "category",
+          "question": "准备买什么类别的商品？",
+          "why": "决定下一步查询哪些有来源的商品目录",
+          "status": "user_confirmation_needed"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "questions": [
+        {
+          "field": "budget_scope",
+          "question": "预算包含运费及额外耗材吗？",
+          "why": "不同预算口径影响最终购买资格",
+          "status": "user_confirmation_needed"
+        }
+      ],
+      "comparison": {
+        "session_version": 1,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "status": "condition_conflict",
+        "conflicts": [
+          "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项"
+        ]
+      },
+      "history": {
+        "version": 1,
+        "raw_text": "独立合成条件冲突CLI，不是真人新答复",
+        "changed_fields": [
+          "category",
+          "usage",
+          "needs_color",
+          "accepts_outsourced_color",
+          "monthly_pages_range",
+          "budget_max_cny",
+          "requirements",
+          "requires_scan",
+          "requires_auto_duplex"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      "real_printer_case_research": {
+        "case_id": "REAL-PRINTER-H08B-20261113",
+        "status": "research_context_pending_independent_review",
+        "source_mode": "dated_public_source_summary_offline_not_current_marketplace",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "real_sale_identity_verified_count": 0,
+        "regional_live_quote_count": 0,
+        "research_captured_on": "2026-11-13",
+        "usage_limit": "short_source_attributed_research_summary_only; no licensed marketplace feed, model training, scraped content reuse, price approval, or buying decisions",
+        "model_comparison": {
+          "case_id": "REAL-PRINTER-H08B-MODEL-COMPARISON-20261115",
+          "captured_on": "2026-11-15",
+          "review_status": "research_only_pending_independent_review",
+          "usage_limit": "short_source_attributed_public_manufacturer_summary_only; no licensed marketplace feed, no raw review reuse, no price approval, no buying decisions",
+          "models": [
+            {
+              "model_id": "HL-L1238W",
+              "brand": "Brother",
+              "model_identity_status": "manufacturer_model_specific",
+              "confirmed_facts": [
+                "黑白激光打印机",
+                "微信小程序“兄弟畅享印”可用；首次设置需Brother Mobile Connect并启用联机功能",
+                "单面A4约20页/分钟；150页进纸、50页出纸",
+                "2.4/5GHz无线，64MB内存",
+                "鼓粉分离：TN118约1500页，DR118约10000页",
+                "4.6kg；打印噪音约51dB；一年保修（厂家产品页）"
+              ],
+              "unknowns": [
+                "本次检索的官方资料未明确确认自动双面能力；不能把未列出推断为不支持",
+                "本次检索的官方资料未提供推荐月打印量",
+                "当前地区成交价、库存、券、运费和真实销售配置未知",
+                "粉盒/硒鼓当前价格及实际总拥有成本未知",
+                "实际微信绑定、长时间闲置后的首张输出和耐用性未实测",
+                "Brother官方清单确认中国区畅享印远程打印机型包含HL-L1238W，但本次未取得境外服务范围说明。"
+              ],
+              "source_ids": [
+                "R6",
+                "R7",
+                "R8",
+                "R15"
+              ]
+            },
+            {
+              "model_id": "M232dw",
+              "brand": "HP",
+              "model_identity_status": "manufacturer_model_specific",
+              "confirmed_facts": [
+                "黑白激光多功能一体机，支持打印、复印、扫描",
+                "自动双面打印：单面约29ppm、双面约18ipm",
+                "150页进纸、100页出纸；64MB内存",
+                "微信打印可通过Wi-Fi设置后扫描二维码绑定“惠普云打印”小程序",
+                "HP数据表建议月打印量200至2000页",
+                "HP 137A约1150页、137X约2600页；动态安全机制涉及耗材芯片"
+              ],
+              "unknowns": [
+                "建议月打印量200至2000页不是硬性最低门槛，但用户0至50页/月低于厂家建议范围，需要确认低频适用性",
+                "中国区当前成交价、库存、券、运费和真实销售配置未知",
+                "耗材当前价格、芯片/固件兼容策略和实际单页成本未知",
+                "实际微信绑定、长时间闲置后的首张输出和耐用性未实测",
+                "若实际部署地在中国大陆以外，HP支持人员曾明确回复微信云打印不支持境外；需按实际部署地区向HP复核，HP Smart与微信小程序不是同一功能。",
+                "HP M232-M237系列耗材编号随销售地区变化：中国/印度为137A/137X，其他地区可能为134A/134X、135A/135X或136A/136X；必须按实际机型和销售地区确认。",
+                "M232dw电源规格随销售地区分为110-127V或220-240V；跨地区使用不能自行变压，需核对具体销售版本及当地保修。"
+              ],
+              "source_ids": [
+                "R9",
+                "R10",
+                "R11",
+                "R13",
+                "R14",
+                "R16",
+                "R17"
+              ]
+            }
+          ],
+          "comparisons": [
+            {
+              "id": "CMP-01",
+              "dimension": "wechat_print",
+              "result": "两款都存在具体型号的微信小程序打印依据，但都需要首次设置：Brother需Mobile Connect设置并启用畅享印；HP需先连Wi-Fi，再扫描欢迎页二维码绑定惠普云打印。",
+              "source_ids": [
+                "R7",
+                "R9",
+                "R10"
+              ],
+              "decision_effect": "微信打印不再是品牌级未知，但本地实际绑定成功仍未验证。"
+            },
+            {
+              "id": "CMP-02",
+              "dimension": "scan_copy",
+              "result": "HP M232dw有明确打印/复印/扫描证据；Brother HL-L1238W当前厂家页面主要描述打印功能，本次资料未明确确认复印/扫描。若扫描/复印是硬条件，HP是证据更充分的一方；不能反推Brother一定不支持。",
+              "source_ids": [
+                "R6",
+                "R8",
+                "R9"
+              ],
+              "decision_effect": "是否需要扫描复印会实质改变候选优先级。"
+            },
+            {
+              "id": "CMP-03",
+              "dimension": "automatic_duplex",
+              "result": "HP M232dw有明确自动双面证据，双面约18ipm；Brother资料明确的是单面约20ppm，本次没有取得其自动双面确认。",
+              "source_ids": [
+                "R8",
+                "R9",
+                "R11"
+              ],
+              "decision_effect": "若自动双面是硬条件，HP更有证据；Brother保持未知，不标记为失败。"
+            },
+            {
+              "id": "CMP-04",
+              "dimension": "consumable_cost",
+              "result": "Brother鼓粉分离，TN118约1500页、DR118约10000页；HP数据表列出137A约1150页、137X约2600页，并提示动态安全/芯片机制。只有页数不能算单页成本，必须取得耗材实际价格与兼容条件。",
+              "source_ids": [
+                "R6",
+                "R8",
+                "R11"
+              ],
+              "decision_effect": "Brother耗材结构更直观；HP耗材兼容性需额外核验；当前无法判定谁更省钱。"
+            },
+            {
+              "id": "CMP-05",
+              "dimension": "low_volume_fit",
+              "result": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+              "source_ids": [
+                "R11"
+              ],
+              "decision_effect": "只生成区间关系与需要核实的低频维护问题，不以建议印量淘汰机型。"
+            },
+            {
+              "id": "CMP-06",
+              "dimension": "budget",
+              "result": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+              "source_ids": [
+                "R6",
+                "R9"
+              ],
+              "decision_effect": "建议价比较随本轮预算变化；地区预算符合仍是未知，不按建议价排除。"
+            },
+            {
+              "id": "CMP-07",
+              "dimension": "reliability",
+              "result": "现有证据是厂家规格、支持流程和耗材说明，不是独立故障率、寿命或长期闲置测试；不能判定哪款更耐用。",
+              "source_ids": [
+                "R6",
+                "R7",
+                "R8",
+                "R9",
+                "R10",
+                "R11"
+              ],
+              "decision_effect": "耐用性仍是未验证维度，不给品牌胜负。"
+            },
+            {
+              "id": "CMP-08",
+              "dimension": "wechat_region",
+              "result": "设备部署地尚未确认；现有中国区微信功能资料和HP历史境外服务答复不能证明实际使用地服务可用。",
+              "source_ids": [
+                "R10",
+                "R14",
+                "R15"
+              ],
+              "decision_effect": "若部署地在中国大陆以外，HP微信云打印不能作为已满足条件；Brother境外可用性仍需确认。"
+            },
+            {
+              "id": "CMP-09",
+              "dimension": "regional_power_and_consumables",
+              "result": "HP M232dw规格页明确电源按销售地区区分110-127V或220-240V，并警告不要转换工作电压；HP官方耗材页显示M232-M237系列碳粉编号也随地区变化，中国/印度137A/137X，其他地区使用不同编号。Brother现有资料主要是中国区页面，境外电源、耗材和保修适用性未核实。",
+              "source_ids": [
+                "R13",
+                "R15",
+                "R16",
+                "R17"
+              ],
+              "decision_effect": "设备部署地和购买地区必须分别确认；不能用中国区型号、耗材或微信功能直接推断海外可用。"
+            }
+          ],
+          "conditional_decisions": [
+            {
+              "id": "DEC-01",
+              "when": "必须扫描/复印或自动双面",
+              "model": "M232dw",
+              "reason": "HP官方资料明确支持打印/复印/扫描和自动双面；Brother HL-L1238W本次资料未确认这两项。",
+              "conditions_before_purchase": [
+                "确认M232dw具体销售型号/产品编号，不能与M232dwc合并",
+                "确认0至50页/月的低频适用性",
+                "取得地区实际到手价并确认不超过1000元",
+                "核实耗材价格、芯片/固件兼容性及保修"
+              ],
+              "status": "conditional_research_candidate_not_purchase_approved",
+              "rule": "scan_or_duplex_required",
+              "applicability": "not_applicable",
+              "hard_condition_override_blocked": false,
+              "model_eligibility": "blocked_by_user_condition_conflict"
+            },
+            {
+              "id": "DEC-02",
+              "when": "只需黑白打印和微信打印，不需要扫描复印或自动双面，且实际到手价不超过1000元",
+              "model": "HL-L1238W",
+              "reason": "Brother HL-L1238W有中国区微信小程序和鼓粉分离的厂家资料；厂家建议价1906元高于当前1000元预算；实际地区到手价与所售配置仍未知。",
+              "conditions_before_purchase": [
+                "取得具体平台销售项与实际到手价",
+                "核实是否需要自动双面（当前资料未知）",
+                "核实TN118/DR118当前价格与原装/兼容耗材条件",
+                "完成本地微信小程序绑定测试"
+              ],
+              "status": "conditional_research_candidate_not_purchase_approved",
+              "rule": "simple_print_only",
+              "applicability": "not_applicable",
+              "hard_condition_override_blocked": false,
+              "model_eligibility": "blocked_by_user_condition_conflict"
+            },
+            {
+              "id": "DEC-03",
+              "rule": "outside_mainland_china",
+              "when": "打印机部署地在中国大陆以外，且微信小程序是实际偏好或硬条件",
+              "model": "跨地区配置核验",
+              "reason": "若设备部署地在中国大陆以外，HP微信云打印存在仅限中国大陆的支持人员答复；此外HP M232dw电源和碳粉编号按销售地区变化。Brother HL-L1238W中国区远程打印清单虽包含该型号，但海外服务、电压、耗材和保修范围未核实。",
+              "conditions_before_purchase": [
+                "分别确认购买地区、收货地区和打印机实际部署国家/地区",
+                "核对HP具体产品编号和电压版本；不得自行转换工作电压",
+                "按实际销售地区核对HP碳粉盒编号与芯片兼容性",
+                "若依赖微信，向HP确认当地微信云打印状态；HP Smart是不同替代方式",
+                "向Brother确认境外畅享印、电压、耗材和保修范围并实测绑定"
+              ],
+              "status": "conditional_research_candidate_not_purchase_approved",
+              "applicability": "unknown",
+              "hard_condition_override_blocked": false,
+              "model_eligibility": null
+            }
+          ],
+          "sources": [
+            {
+              "id": "R6",
+              "source_group": "brother_cn",
+              "source_kind": "manufacturer_product_page",
+              "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+              "claim": "Brother中国HL-L1238W产品页将其列为黑白激光打印机，标示微信小程序打印、20页/分钟、150页纸盒、无线网络、鼓粉分离、TN118约1500页和DR118约10000页，并显示建议零售价1906元。",
+              "counter": "搜索结果摘录可读但本次直接打开返回403；1906元是建议零售价而非地区成交价；厂家耗材页数不是实际替换成本或可靠性数据。",
+              "scope": "中国区Brother HL-L1238W具体型号",
+              "fact_audit": "search_result_excerpt_2026-11-15; direct_open_403"
+            },
+            {
+              "id": "R7",
+              "source_group": "brother_cn",
+              "source_kind": "manufacturer_support_workflow",
+              "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+              "claim": "Brother支持页明确列出HL-L1238W支持“兄弟畅享印”微信小程序；首次使用前要先连接打印机，并在移动设备安装/设置Brother Mobile Connect、启用联机功能，可能出现EULA。",
+              "counter": "厂家流程说明不等于用户家庭网络实测；首次设置并非零步骤；代理网络和本地环境可能影响使用。",
+              "scope": "支持页明确列出的HL-L1238W/HL-L1808W",
+              "fact_audit": "public_page_open_2026-11-15_lines_11_32"
+            },
+            {
+              "id": "R8",
+              "source_group": "brother_cn",
+              "source_kind": "manufacturer_specification_pdf",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "claim": "Brother规格PDF列出HL-L1238W支持2.4/5GHz无线、64MB内存、单面A4约20页/分钟、150页进纸/50页出纸、TN118约1500页、DR118约10000页、4.6kg、打印噪音51dB；标注速度按单面测试。",
+              "counter": "规格PDF未在本次读取内容中明确确认自动双面、扫描或复印能力；不得把未列出写成确定不支持。",
+              "scope": "HL-L1238W所在的HL-L1228/HL-L1238W/HL-L1808W系列规格表，逐项只采用明确映射到HL-L1238W的值",
+              "fact_audit": "public_pdf_open_2026-11-15_lines_25_41_46_48"
+            },
+            {
+              "id": "R9",
+              "source_group": "hp_cn",
+              "source_kind": "manufacturer_product_overview",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "claim": "HP中国家用激光产品页对M232dw明确标示自动双面、双面18页/分钟、单面29页/分钟、打印/复印/扫描、手机打印和微信小程序打印。",
+              "counter": "厂家产品概览不证明具体平台销售项、库存、当前售价或家庭网络下的实际绑定成功。",
+              "scope": "HP中国区M232dw具体型号",
+              "fact_audit": "public_page_open_2026-11-15_lines_190_205"
+            },
+            {
+              "id": "R10",
+              "source_group": "hp_cn",
+              "source_kind": "manufacturer_setup_guide",
+              "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+              "claim": "HP M232-M237安装指南说明：打印机完成无线网络设置后会打印带二维码的信息页，使用微信扫描二维码启用“惠普云打印”小程序并完成绑定。",
+              "counter": "指南标注微信打印为可选设置；没有在用户设备/地区实测；需要完成前置Wi-Fi设置和扫码绑定。",
+              "scope": "HP LaserJet MFP M232-M237系列安装指南",
+              "fact_audit": "public_pdf_open_2026-11-15_lines_48_62"
+            },
+            {
+              "id": "R11",
+              "source_group": "hp_global",
+              "source_kind": "manufacturer_datasheet",
+              "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+              "claim": "HP M232系列数据表列出M232dw产品外观含平板扫描仪、150页进纸和100页出纸；单面29ppm、自动双面18ipm；打印/复印/扫描；建议月打印量200至2000页；HP 137A约1150页、137X约2600页；并说明动态安全机制会阻止部分非HP芯片耗材。",
+              "counter": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。",
+              "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+              "fact_audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226"
+            },
+            {
+              "id": "R12",
+              "source_group": "hp_cn",
+              "source_kind": "manufacturer_support_model_identity",
+              "url": "https://support.hp.com/cn-zh/product/product-specs/hp-laserjet-mfp-m232-m237-printer-series/model/38099928",
+              "claim": "HP支持站为M232dwc提供独立的型号规格页，页面标题明确为HP LaserJet MFP M232dwc；这与M232dw型号页是不同型号标识。",
+              "counter": "支持页本次直接打开返回403；搜索结果摘录只用于证明存在独立型号页，不代表两者销售配置可互换。",
+              "scope": "HP M232dwc型号身份区分",
+              "fact_audit": "search_result_excerpt_2026-11-15; direct_open_403"
+            },
+            {
+              "id": "R13",
+              "source_group": "hp_cn",
+              "source_kind": "manufacturer_exact_model_support_specs",
+              "url": "https://support.hp.com/cn-zh/product/product-specs/hp-laserjet-mfp-m232-m237-printer-series/model/34370726",
+              "claim": "HP支持站独立的M232dw型号页列出Print/Copy/Scan、Auto-duplex、建议月打印量200至2000页、150页进纸/100页出纸、64MB内存；页面创建于2026-09-11；电源规格按销售国家/地区分为110-127V或220-240V，并明确警告不要转换工作电压。",
+              "counter": "该页返回英文规格且未本地化；建议月印量是优化性能建议，不是硬性最低打印量；不证明中国平台销售SKU、地区价格或微信功能地区可用性；若设备跨境使用，必须核对实际电压版本。",
+              "scope": "HP LaserJet MFP M232dw exact model support page",
+              "fact_audit": "search_result_excerpt_2026-11-15; page_created_2026-09-11; direct_open_403"
+            },
+            {
+              "id": "R14",
+              "source_group": "hp_cn_support_forum",
+              "source_kind": "manufacturer_support_staff_reply",
+              "url": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/qing-wen-zai-zhong-guo-nei-de-gou-mai-de-da-yin-ji-wu-xian-gong-neng-zai-zhong-guo-nei-de-yi-wai-de-qu-shi-bu-shi-ye-neng-yong/m-p/1313371/highlight/true",
+              "claim": "HP支持工程师在2024-10-15答复M232dw微信打印仅在中国大陆使用，境外当时不支持；2024-10-16另一位社区志愿者回复称HP Smart全球可用，但微信云打印仅限大陆。",
+              "counter": "两条均为2024年支持社区答复，而不是2026年正式服务范围条款；特别是HP Smart全球可用的说法来自志愿者，不可当最新厂家正式承诺。",
+              "scope": "M232dw中国区产品的微信云打印地域范围答复",
+              "fact_audit": "search_result_excerpt_2026-11-15; hp_employee_reply_2024-10-15_16"
+            },
+            {
+              "id": "R15",
+              "source_group": "brother_cn",
+              "source_kind": "manufacturer_wechat_supported_models_faq",
+              "url": "https://www.brother.cn/minisite/bcnactivity/new-question00.html",
+              "claim": "Brother中国官方“兄弟畅享印”FAQ的远程打印机型列表明确包含HL-L1238W。",
+              "counter": "列表只证明Brother列出该型号支持远程小程序打印；没有明确海外/境外服务范围，也不等于用户本地网络实测。",
+              "scope": "Brother中国兄弟畅享印远程打印机型清单",
+              "fact_audit": "official_brother_faq_search_result_2026-11-15; direct_open_403; alternative official FAQ snippet returned HL-L1238W remote-print inclusion"
+            },
+            {
+              "id": "R16",
+              "source_group": "hp_cn_support",
+              "source_kind": "manufacturer_mobile_print_compatibility",
+              "url": "https://support.hp.com/cn-zh/document/ish_3018164-2845138-16",
+              "claim": "HP官方移动打印解决方案页将LaserJet MFP M232dw、M232dwc列入HP应用/HP Smart、Print Anywhere等移动打印方式支持列表。",
+              "counter": "该页列出的是HP应用/HP Smart等方式，不等于微信小程序支持；具体功能、固件和地区仍要按型号核验。",
+              "scope": "HP LaserJet MFP M232-M237系列移动打印兼容列表",
+              "fact_audit": "official_support_page_search_result_2026-11-15"
+            },
+            {
+              "id": "R17",
+              "source_group": "hp_cn_support",
+              "source_kind": "manufacturer_regional_consumable_compatibility",
+              "url": "https://support.hp.com/cn-zh/document/ish_2830398-2549426-16",
+              "claim": "HP官方耗材支持页对M232-M237系列按销售地区区分碳粉盒：北美/澳大利亚/新西兰134A/134X，欧洲经济区/瑞士/英国/以色列135A/135X，其他列明地区136A/136X，中国和印度137A/137X；页面同时说明部分打印机的动态安全会阻止非HP芯片/电路耗材。",
+              "counter": "该表覆盖M232-M237多个型号，必须按设备销售地区、准确型号和芯片版本核对；不能把中国耗材编号直接用于海外机型。",
+              "scope": "HP LaserJet MFP M232-M237系列区域耗材编号表",
+              "fact_audit": "official_support_page_search_result_2026-11-15"
+            }
+          ],
+          "limits": [
+            "本报告只使用公开厂家页面、支持文档和规格资料；不是海纳数据，也不是平台商品身份核验。",
+            "Brother与HP公开资料的部分页面以搜索结果摘录为证，直接打开受403限制；已在fact_audit中标明。",
+            "型号规格不等于平台实际销售SKU，M232dw与M232dwc必须分开。",
+            "未取得当前地区成交价、库存、优惠、运费或真实销售项，预算均未通过。",
+            "未进行实机微信绑定、打印质量、长时间闲置、故障率或耐用性横评。",
+            "本报告只支持条件取舍，不批准购买、不发起交易。",
+            "微信小程序功能存在地域限制证据：HP支持人员答复称微信云打印仅限中国大陆；Brother境外可用范围未查明。实际部署地未提供，不能按当前用户登录地点推断设备部署地。",
+            "跨地区使用尚未核验：HP M232dw电压和耗材编号按销售地区变化；Brother现有证据主要为中国区资料。实际购买地区、收货地区和设备部署地必须分开确认。"
+          ],
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "real_sale_identity_verified_count": 0,
+          "regional_live_quote_count": 0,
+          "criteria_comparison": {
+            "status": "criteria_driven_research_not_purchase",
+            "criteria_version": "2026-11-15-r1",
+            "criteria_sha256": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+            "fact_captured_on": "2026-11-15",
+            "source_scope": "CN model study; no platform SKU or regional price approval",
+            "deployment_region_scope": "unknown",
+            "source_registry": {
+              "C-598": {
+                "type": "independent_consumer_test_method",
+                "group": "HK_Consumer_Council_ICRT_598",
+                "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+                "published_on": "2026-08",
+                "checked_on": "2026-11-15",
+                "method": "打印/扫描/复印质速、休眠唤醒、安装便利、耗材每页成本分别评价",
+                "limit": "香港2026年彩色多功能样本；仅用于选择维度，不支持本案型号性能排名"
+              },
+              "R6": {
+                "type": "manufacturer",
+                "group": "brother_cn",
+                "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "checked_on": "2026-11-15",
+                "limit": "厂家页面搜索摘录；直接打开403，1906为建议价"
+              },
+              "R7": {
+                "type": "manufacturer_setup",
+                "group": "brother_cn",
+                "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+                "checked_on": "2026-11-15",
+                "limit": "厂商流程非实机成功证明"
+              },
+              "R9": {
+                "type": "manufacturer",
+                "group": "hp_cn",
+                "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "checked_on": "2026-11-15",
+                "limit": "厂家产品页不是平台现货"
+              },
+              "R10": {
+                "type": "manufacturer_setup",
+                "group": "hp_cn",
+                "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+                "checked_on": "2026-11-15",
+                "limit": "系列安装指南，具体销售版本需复核"
+              },
+              "R11": {
+                "type": "manufacturer_datasheet",
+                "group": "hp_global",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "checked_on": "2026-11-15",
+                "limit": "HP建议200—2000不是最低使用门槛；系列资料"
+              },
+              "R14": {
+                "type": "manufacturer_support_forum",
+                "group": "hp_cn_support_forum",
+                "url": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/qing-wen-zai-zhong-guo-nei-de-gou-mai-de-da-yin-ji-wu-xian-gong-neng-zai-zhong-guo-nei-de-yi-wai-de-qu-shi-bu-shi-ye-neng-yong/m-p/1313371/highlight/true",
+                "checked_on": "2026-11-15",
+                "limit": "2024支持员工答复；非当前服务承诺"
+              },
+              "R15": {
+                "type": "manufacturer_faq",
+                "group": "brother_cn",
+                "url": "https://www.brother.cn/minisite/bcnactivity/new-question00.html",
+                "checked_on": "2026-11-15",
+                "limit": "中国区清单，境外适用性未核"
+              }
+            },
+            "models": [
+              {
+                "model_id": "HL-L1238W",
+                "brand": "Brother",
+                "eligibility": "blocked_by_user_condition_conflict",
+                "hard_failed": [],
+                "hard_unknown": [
+                  "user_condition_conflict"
+                ],
+                "checks": [
+                  {
+                    "criterion_id": "C-BUDGET",
+                    "why": "建议零售价只能与用户预算作背景比较，不能认定当前到手价满足预算",
+                    "kind": "informational",
+                    "user_field": "budget_max_cny",
+                    "user_value": 1000,
+                    "product_field": "manufacturer_suggested_retail_cny",
+                    "product_value": 1906,
+                    "unit": "CNY",
+                    "product_unit": "CNY",
+                    "op": "number_le",
+                    "relation": "above",
+                    "source_ids": [
+                      "R6"
+                    ],
+                    "method_source_ids": [
+                      "R6"
+                    ],
+                    "unknown_or_counter": "地区平台实价、优惠、运费与库存未核",
+                    "evidence_state": "manufacturer_fact_research_only",
+                    "deployment_region_scope": null,
+                    "regional_service_verified": null,
+                    "budget_live_verified": false
+                  },
+                  {
+                    "criterion_id": "C-VOLUME",
+                    "why": "区间关系区分低于/重叠/覆盖/相等/高于；厂家建议印量不是最低门槛",
+                    "kind": "informational",
+                    "user_field": "monthly_pages_range",
+                    "user_value": [
+                      0,
+                      50
+                    ],
+                    "product_field": "manufacturer_recommended_monthly_pages",
+                    "product_value": null,
+                    "unit": "pages_per_month",
+                    "product_unit": null,
+                    "op": "interval_relation",
+                    "relation": "unknown",
+                    "source_ids": [],
+                    "method_source_ids": [
+                      "C-598",
+                      "R11"
+                    ],
+                    "unknown_or_counter": "建议区间缺失不等于不适合低频使用",
+                    "evidence_state": "not_established",
+                    "deployment_region_scope": null,
+                    "regional_service_verified": null,
+                    "budget_live_verified": null
+                  }
+                ],
+                "wechat_setup": "使用兄弟畅享印前需通过Brother Mobile Connect完成初次连接与联机设置；中国区机型清单支持该型号，境外未核",
+                "wechat_setup_source_ids": [
+                  "R7",
+                  "R15"
+                ],
+                "regional_live_price_cny": null,
+                "regional_budget_verified": false,
+                "platform_identity_verified": false,
+                "purchase_recommendation_approved": false
+              },
+              {
+                "model_id": "M232dw",
+                "brand": "HP",
+                "eligibility": "blocked_by_user_condition_conflict",
+                "hard_failed": [],
+                "hard_unknown": [
+                  "user_condition_conflict"
+                ],
+                "checks": [
+                  {
+                    "criterion_id": "C-BUDGET",
+                    "why": "建议零售价只能与用户预算作背景比较，不能认定当前到手价满足预算",
+                    "kind": "informational",
+                    "user_field": "budget_max_cny",
+                    "user_value": 1000,
+                    "product_field": "manufacturer_suggested_retail_cny",
+                    "product_value": null,
+                    "unit": "CNY",
+                    "product_unit": null,
+                    "op": "number_le",
+                    "relation": "unknown",
+                    "source_ids": [],
+                    "method_source_ids": [
+                      "R6"
+                    ],
+                    "unknown_or_counter": "地区平台实价、优惠、运费与库存未核",
+                    "evidence_state": "not_established",
+                    "deployment_region_scope": null,
+                    "regional_service_verified": null,
+                    "budget_live_verified": false
+                  },
+                  {
+                    "criterion_id": "C-VOLUME",
+                    "why": "区间关系区分低于/重叠/覆盖/相等/高于；厂家建议印量不是最低门槛",
+                    "kind": "informational",
+                    "user_field": "monthly_pages_range",
+                    "user_value": [
+                      0,
+                      50
+                    ],
+                    "product_field": "manufacturer_recommended_monthly_pages",
+                    "product_value": [
+                      200,
+                      2000
+                    ],
+                    "unit": "pages_per_month",
+                    "product_unit": "pages_per_month",
+                    "op": "interval_relation",
+                    "relation": "below",
+                    "source_ids": [
+                      "R11"
+                    ],
+                    "method_source_ids": [
+                      "C-598",
+                      "R11"
+                    ],
+                    "unknown_or_counter": "建议区间缺失不等于不适合低频使用",
+                    "evidence_state": "manufacturer_fact_research_only",
+                    "deployment_region_scope": null,
+                    "regional_service_verified": null,
+                    "budget_live_verified": null
+                  }
+                ],
+                "wechat_setup": "先连Wi-Fi、打印二维码信息页，再扫码绑定惠普云打印；境外微信服务存在2024年支持答复限制，须向厂家重核",
+                "wechat_setup_source_ids": [
+                  "R10",
+                  "R14"
+                ],
+                "regional_live_price_cny": null,
+                "regional_budget_verified": false,
+                "platform_identity_verified": false,
+                "purchase_recommendation_approved": false
+              }
+            ],
+            "research_eligible_models": [],
+            "pending_models": [],
+            "excluded_models": [],
+            "questions": [
+              "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项",
+              "预算是否包含运费和本次需另购的耗材？",
+              "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+            ],
+            "purchase_recommendation_approved": false,
+            "transactions_enabled": false,
+            "verified_live_quote_count": 0,
+            "verified_platform_identity_count": 0,
+            "note": "有据型号研究，不是实时售价或购买资格；硬条件失败先排除、未知单列；厂家建议印量不是最低使用门槛",
+            "normalized_required": {
+              "monochrome_print": true,
+              "scan": true
+            },
+            "unresolved_hard_conditions": [],
+            "user_condition_conflicts": [
+              "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项"
+            ]
+          },
+          "active_conditional_decisions": [],
+          "unknown_conditional_decisions": [
+            {
+              "id": "DEC-03",
+              "rule": "outside_mainland_china",
+              "when": "打印机部署地在中国大陆以外，且微信小程序是实际偏好或硬条件",
+              "model": "跨地区配置核验",
+              "reason": "若设备部署地在中国大陆以外，HP微信云打印存在仅限中国大陆的支持人员答复；此外HP M232dw电源和碳粉编号按销售地区变化。Brother HL-L1238W中国区远程打印清单虽包含该型号，但海外服务、电压、耗材和保修范围未核实。",
+              "conditions_before_purchase": [
+                "分别确认购买地区、收货地区和打印机实际部署国家/地区",
+                "核对HP具体产品编号和电压版本；不得自行转换工作电压",
+                "按实际销售地区核对HP碳粉盒编号与芯片兼容性",
+                "若依赖微信，向HP确认当地微信云打印状态；HP Smart是不同替代方式",
+                "向Brother确认境外畅享印、电压、耗材和保修范围并实测绑定"
+              ],
+              "status": "conditional_research_candidate_not_purchase_approved",
+              "applicability": "unknown",
+              "hard_condition_override_blocked": false,
+              "model_eligibility": null
+            }
+          ],
+          "deployment_region_scope": "unknown",
+          "deployment_region_provided": false
+        },
+        "criteria_comparison": {
+          "status": "criteria_driven_research_not_purchase",
+          "criteria_version": "2026-11-15-r1",
+          "criteria_sha256": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+          "fact_captured_on": "2026-11-15",
+          "source_scope": "CN model study; no platform SKU or regional price approval",
+          "deployment_region_scope": "unknown",
+          "source_registry": {
+            "C-598": {
+              "type": "independent_consumer_test_method",
+              "group": "HK_Consumer_Council_ICRT_598",
+              "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+              "published_on": "2026-08",
+              "checked_on": "2026-11-15",
+              "method": "打印/扫描/复印质速、休眠唤醒、安装便利、耗材每页成本分别评价",
+              "limit": "香港2026年彩色多功能样本；仅用于选择维度，不支持本案型号性能排名"
+            },
+            "R6": {
+              "type": "manufacturer",
+              "group": "brother_cn",
+              "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+              "checked_on": "2026-11-15",
+              "limit": "厂家页面搜索摘录；直接打开403，1906为建议价"
+            },
+            "R7": {
+              "type": "manufacturer_setup",
+              "group": "brother_cn",
+              "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+              "checked_on": "2026-11-15",
+              "limit": "厂商流程非实机成功证明"
+            },
+            "R9": {
+              "type": "manufacturer",
+              "group": "hp_cn",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "checked_on": "2026-11-15",
+              "limit": "厂家产品页不是平台现货"
+            },
+            "R10": {
+              "type": "manufacturer_setup",
+              "group": "hp_cn",
+              "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+              "checked_on": "2026-11-15",
+              "limit": "系列安装指南，具体销售版本需复核"
+            },
+            "R11": {
+              "type": "manufacturer_datasheet",
+              "group": "hp_global",
+              "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+              "checked_on": "2026-11-15",
+              "limit": "HP建议200—2000不是最低使用门槛；系列资料"
+            },
+            "R14": {
+              "type": "manufacturer_support_forum",
+              "group": "hp_cn_support_forum",
+              "url": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/qing-wen-zai-zhong-guo-nei-de-gou-mai-de-da-yin-ji-wu-xian-gong-neng-zai-zhong-guo-nei-de-yi-wai-de-qu-shi-bu-shi-ye-neng-yong/m-p/1313371/highlight/true",
+              "checked_on": "2026-11-15",
+              "limit": "2024支持员工答复；非当前服务承诺"
+            },
+            "R15": {
+              "type": "manufacturer_faq",
+              "group": "brother_cn",
+              "url": "https://www.brother.cn/minisite/bcnactivity/new-question00.html",
+              "checked_on": "2026-11-15",
+              "limit": "中国区清单，境外适用性未核"
+            }
+          },
+          "models": [
+            {
+              "model_id": "HL-L1238W",
+              "brand": "Brother",
+              "eligibility": "blocked_by_user_condition_conflict",
+              "hard_failed": [],
+              "hard_unknown": [
+                "user_condition_conflict"
+              ],
+              "checks": [
+                {
+                  "criterion_id": "C-BUDGET",
+                  "why": "建议零售价只能与用户预算作背景比较，不能认定当前到手价满足预算",
+                  "kind": "informational",
+                  "user_field": "budget_max_cny",
+                  "user_value": 1000,
+                  "product_field": "manufacturer_suggested_retail_cny",
+                  "product_value": 1906,
+                  "unit": "CNY",
+                  "product_unit": "CNY",
+                  "op": "number_le",
+                  "relation": "above",
+                  "source_ids": [
+                    "R6"
+                  ],
+                  "method_source_ids": [
+                    "R6"
+                  ],
+                  "unknown_or_counter": "地区平台实价、优惠、运费与库存未核",
+                  "evidence_state": "manufacturer_fact_research_only",
+                  "deployment_region_scope": null,
+                  "regional_service_verified": null,
+                  "budget_live_verified": false
+                },
+                {
+                  "criterion_id": "C-VOLUME",
+                  "why": "区间关系区分低于/重叠/覆盖/相等/高于；厂家建议印量不是最低门槛",
+                  "kind": "informational",
+                  "user_field": "monthly_pages_range",
+                  "user_value": [
+                    0,
+                    50
+                  ],
+                  "product_field": "manufacturer_recommended_monthly_pages",
+                  "product_value": null,
+                  "unit": "pages_per_month",
+                  "product_unit": null,
+                  "op": "interval_relation",
+                  "relation": "unknown",
+                  "source_ids": [],
+                  "method_source_ids": [
+                    "C-598",
+                    "R11"
+                  ],
+                  "unknown_or_counter": "建议区间缺失不等于不适合低频使用",
+                  "evidence_state": "not_established",
+                  "deployment_region_scope": null,
+                  "regional_service_verified": null,
+                  "budget_live_verified": null
+                }
+              ],
+              "wechat_setup": "使用兄弟畅享印前需通过Brother Mobile Connect完成初次连接与联机设置；中国区机型清单支持该型号，境外未核",
+              "wechat_setup_source_ids": [
+                "R7",
+                "R15"
+              ],
+              "regional_live_price_cny": null,
+              "regional_budget_verified": false,
+              "platform_identity_verified": false,
+              "purchase_recommendation_approved": false
+            },
+            {
+              "model_id": "M232dw",
+              "brand": "HP",
+              "eligibility": "blocked_by_user_condition_conflict",
+              "hard_failed": [],
+              "hard_unknown": [
+                "user_condition_conflict"
+              ],
+              "checks": [
+                {
+                  "criterion_id": "C-BUDGET",
+                  "why": "建议零售价只能与用户预算作背景比较，不能认定当前到手价满足预算",
+                  "kind": "informational",
+                  "user_field": "budget_max_cny",
+                  "user_value": 1000,
+                  "product_field": "manufacturer_suggested_retail_cny",
+                  "product_value": null,
+                  "unit": "CNY",
+                  "product_unit": null,
+                  "op": "number_le",
+                  "relation": "unknown",
+                  "source_ids": [],
+                  "method_source_ids": [
+                    "R6"
+                  ],
+                  "unknown_or_counter": "地区平台实价、优惠、运费与库存未核",
+                  "evidence_state": "not_established",
+                  "deployment_region_scope": null,
+                  "regional_service_verified": null,
+                  "budget_live_verified": false
+                },
+                {
+                  "criterion_id": "C-VOLUME",
+                  "why": "区间关系区分低于/重叠/覆盖/相等/高于；厂家建议印量不是最低门槛",
+                  "kind": "informational",
+                  "user_field": "monthly_pages_range",
+                  "user_value": [
+                    0,
+                    50
+                  ],
+                  "product_field": "manufacturer_recommended_monthly_pages",
+                  "product_value": [
+                    200,
+                    2000
+                  ],
+                  "unit": "pages_per_month",
+                  "product_unit": "pages_per_month",
+                  "op": "interval_relation",
+                  "relation": "below",
+                  "source_ids": [
+                    "R11"
+                  ],
+                  "method_source_ids": [
+                    "C-598",
+                    "R11"
+                  ],
+                  "unknown_or_counter": "建议区间缺失不等于不适合低频使用",
+                  "evidence_state": "manufacturer_fact_research_only",
+                  "deployment_region_scope": null,
+                  "regional_service_verified": null,
+                  "budget_live_verified": null
+                }
+              ],
+              "wechat_setup": "先连Wi-Fi、打印二维码信息页，再扫码绑定惠普云打印；境外微信服务存在2024年支持答复限制，须向厂家重核",
+              "wechat_setup_source_ids": [
+                "R10",
+                "R14"
+              ],
+              "regional_live_price_cny": null,
+              "regional_budget_verified": false,
+              "platform_identity_verified": false,
+              "purchase_recommendation_approved": false
+            }
+          ],
+          "research_eligible_models": [],
+          "pending_models": [],
+          "excluded_models": [],
+          "questions": [
+            "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项",
+            "预算是否包含运费和本次需另购的耗材？",
+            "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+          ],
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "verified_live_quote_count": 0,
+          "verified_platform_identity_count": 0,
+          "note": "有据型号研究，不是实时售价或购买资格；硬条件失败先排除、未知单列；厂家建议印量不是最低使用门槛",
+          "normalized_required": {
+            "monochrome_print": true,
+            "scan": true
+          },
+          "unresolved_hard_conditions": [],
+          "user_condition_conflicts": [
+            "原文scan硬要求与“不要求”确认冲突，请修改原话或确认项"
+          ]
+        },
+        "reasons": [
+          {
+            "id": "CASE-01",
+            "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。",
+            "applies_when": "needs_color=false and accepts_outsourced_color=true",
+            "basis": "user_explicit_constraints",
+            "counter_evidence": "一旦改答要求家中彩印，这个取舍应立即撤销",
+            "evidence": [],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-03",
+            "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。",
+            "applies_when": "monthly_pages_range available",
+            "basis": "manufacturer_terms_and_historical_cost_context",
+            "counter_evidence": "没有耗材当前价、实际页数、闲置实测或总拥有成本；Brother未找到厂家建议月印量。不得用标称页数直接判断谁更省钱。",
+            "evidence": [
+              {
+                "source_id": "R1",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+                "source_limit": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+                "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R2",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+                "source_fact": "HL-10W打印页数套餐，套餐用尽后需再购买才可继续打印；双面每面计页。",
+                "source_limit": "仅适用于厂商协议所列套餐机型，不能推广到HL-L1238W、惠普或一般激光；实际套餐金额/优惠未核验。",
+                "scope": "协议列明的HL-10W等页数套餐商品",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R5",
+                "source_group": "hk_consumers",
+                "source_url": "https://www.consumer.org.hk/sc/article/492-4445",
+                "source_fact": "香港消委会2017年历史比较显示部分家用喷墨设备的长期墨水支出可能超过购机成本，提示应核算总拥有成本。",
+                "source_limit": "2017年香港喷墨样本不代表2026大陆黑白激光SKU或实际品牌排名；不能借历史价格推本次到手价。",
+                "scope": "历史香港喷墨比较，非两个目标型号的横评",
+                "fact_audit": "public_page_read_2026-11-13; pending independent"
+              },
+              {
+                "source_id": "R6",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "Brother中国HL-L1238W产品页将其列为黑白激光打印机，标示微信小程序打印、20页/分钟、150页纸盒、无线网络、鼓粉分离、TN118约1500页和DR118约10000页，并显示建议零售价1906元。",
+                "source_limit": "搜索结果摘录可读但本次直接打开返回403；1906元是建议零售价而非地区成交价；厂家耗材页数不是实际替换成本或可靠性数据。",
+                "scope": "中国区Brother HL-L1238W具体型号",
+                "fact_audit": "search_result_excerpt_2026-11-15; direct_open_403"
+              },
+              {
+                "source_id": "R8",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+                "source_fact": "Brother规格PDF列出HL-L1238W支持2.4/5GHz无线、64MB内存、单面A4约20页/分钟、150页进纸/50页出纸、TN118约1500页、DR118约10000页、4.6kg、打印噪音51dB；标注速度按单面测试。",
+                "source_limit": "规格PDF未在本次读取内容中明确确认自动双面、扫描或复印能力；不得把未列出写成确定不支持。",
+                "scope": "HL-L1238W所在的HL-L1228/HL-L1238W/HL-L1808W系列规格表，逐项只采用明确映射到HL-L1238W的值",
+                "fact_audit": "public_pdf_open_2026-11-15_lines_25_41_46_48"
+              },
+              {
+                "source_id": "R11",
+                "source_group": "hp_global",
+                "source_url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_fact": "HP M232系列数据表列出M232dw产品外观含平板扫描仪、150页进纸和100页出纸；单面29ppm、自动双面18ipm；打印/复印/扫描；建议月打印量200至2000页；HP 137A约1150页、137X约2600页；并说明动态安全机制会阻止部分非HP芯片耗材。",
+                "source_limit": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。",
+                "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+                "fact_audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226"
+              },
+              {
+                "source_id": "R13",
+                "source_group": "hp_cn",
+                "source_url": "https://support.hp.com/cn-zh/product/product-specs/hp-laserjet-mfp-m232-m237-printer-series/model/34370726",
+                "source_fact": "HP支持站独立的M232dw型号页列出Print/Copy/Scan、Auto-duplex、建议月打印量200至2000页、150页进纸/100页出纸、64MB内存；页面创建于2026-09-11；电源规格按销售国家/地区分为110-127V或220-240V，并明确警告不要转换工作电压。",
+                "source_limit": "该页返回英文规格且未本地化；建议月印量是优化性能建议，不是硬性最低打印量；不证明中国平台销售SKU、地区价格或微信功能地区可用性；若设备跨境使用，必须核对实际电压版本。",
+                "scope": "HP LaserJet MFP M232dw exact model support page",
+                "fact_audit": "search_result_excerpt_2026-11-15; page_created_2026-09-11; direct_open_403"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          },
+          {
+            "id": "CASE-06",
+            "reason": "本轮预算上限1000元已确认；Brother厂家建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。",
+            "applies_when": "budget_max_cny is known",
+            "basis": "manufacturer_list_price_and_missing_regional_quote",
+            "counter_evidence": "厂家建议零售价不等于促销到手价；没有店铺、型号、库存、券、运费和收货地区，不能按此直接排除或批准购买。",
+            "evidence": [
+              {
+                "source_id": "R6",
+                "source_group": "brother_cn",
+                "source_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+                "source_fact": "Brother中国HL-L1238W产品页将其列为黑白激光打印机，标示微信小程序打印、20页/分钟、150页纸盒、无线网络、鼓粉分离、TN118约1500页和DR118约10000页，并显示建议零售价1906元。",
+                "source_limit": "搜索结果摘录可读但本次直接打开返回403；1906元是建议零售价而非地区成交价；厂家耗材页数不是实际替换成本或可靠性数据。",
+                "scope": "中国区Brother HL-L1238W具体型号",
+                "fact_audit": "search_result_excerpt_2026-11-15; direct_open_403"
+              },
+              {
+                "source_id": "R9",
+                "source_group": "hp_cn",
+                "source_url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+                "source_fact": "HP中国家用激光产品页对M232dw明确标示自动双面、双面18页/分钟、单面29页/分钟、打印/复印/扫描、手机打印和微信小程序打印。",
+                "source_limit": "厂家产品概览不证明具体平台销售项、库存、当前售价或家庭网络下的实际绑定成功。",
+                "scope": "HP中国区M232dw具体型号",
+                "fact_audit": "public_page_open_2026-11-15_lines_190_205"
+              }
+            ],
+            "review_status": "research_only_pending_independent_review",
+            "actual_purchase_effect": "none_unapproved"
+          }
+        ],
+        "reason_count": 3,
+        "limits": [
+          "这是原案研究取舍，不是完成独立审批的推荐依据",
+          "只有厂家型号和有限历史研究事实，真实平台商品/所选配置绑定仍为0",
+          "没有地区有效成交价、券/库存/运费，也没有实际设备微信连接验证",
+          "本轮答案改变后重新生成理由，不从历史轮次继承失效理由"
+        ]
+      }
+    }
+  ],
+  "business_api_calls": 0,
+  "credential_reads": 0,
+  "real_haina_payloads_imported": 0,
+  "platform_identity_verified": 0,
+  "regional_quote_verified": 0,
+  "purchase_approved": false,
+  "transactions_enabled": false
+}

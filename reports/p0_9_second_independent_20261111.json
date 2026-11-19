@@ -1,0 +1,244 @@
+{
+  "role": "independent_reviewer",
+  "observed_at": "2026-11-11T14:51:27.887143+00:00",
+  "new_unreviewed_claim_cases": [
+    {
+      "id": "speculation",
+      "input": "用户留言：本型号可能支持无线网络连接，尚待核对。",
+      "extracted_wireless": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    },
+    {
+      "id": "quoted_question",
+      "input": "客户问：“哪款机器支持无线网络连接？”本页没有回答。",
+      "extracted_wireless": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    },
+    {
+      "id": "conditional_with_examples",
+      "input": "在设备支持无线网络连接的前提下执行以下步骤。",
+      "extracted_wireless": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    },
+    {
+      "id": "other_model_new_section",
+      "input": "<section><h2>MFC-L2750DW使用指南</h2><p>支持无线网络连接。</p></section><p>HL-10W连接方式待确认。</p>",
+      "extracted_wireless": null,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    },
+    {
+      "id": "positive_auto_unreviewed",
+      "input": "HL-10W支持无线网络连接，微信小程序直连，支持远程打印。",
+      "extracted_wireless": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    },
+    {
+      "id": "cancelled_claim",
+      "input": "支持无线网络连接是旧模板文字，当前配置尚未确认。",
+      "extracted_wireless": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    },
+    {
+      "id": "hidden_css_variable",
+      "input": "<style>.x{display:var(--mode)}</style><span class=\"x\">支持无线网络连接。</span>可见性未核。",
+      "extracted_wireless": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    },
+    {
+      "id": "negative_record_not_promoted",
+      "input": "本型号连接方式由人工核对。",
+      "extracted_wireless": false,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "required_failed": [],
+      "expectation_met": true
+    }
+  ],
+  "admission_cases_passed": 8,
+  "admission_cases_total": 8,
+  "reviewed_three_sources": [
+    {
+      "model": "HL-10W",
+      "hash_matches": true,
+      "wireless_positive_retained": true,
+      "tamper_checks": [
+        {
+          "field": "value",
+          "rejected": true
+        },
+        {
+          "field": "digest",
+          "rejected": true
+        },
+        {
+          "field": "billing",
+          "rejected": true
+        },
+        {
+          "field": "consumables",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "model": "HL-B2188DW",
+      "hash_matches": true,
+      "wireless_positive_retained": true,
+      "tamper_checks": [
+        {
+          "field": "value",
+          "rejected": true
+        },
+        {
+          "field": "digest",
+          "rejected": true
+        },
+        {
+          "field": "billing",
+          "rejected": true
+        },
+        {
+          "field": "consumables",
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "model": "HL-B2158W",
+      "hash_matches": true,
+      "wireless_positive_retained": true,
+      "tamper_checks": [
+        {
+          "field": "value",
+          "rejected": true
+        },
+        {
+          "field": "digest",
+          "rejected": true
+        },
+        {
+          "field": "billing",
+          "rejected": true
+        },
+        {
+          "field": "consumables",
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "timestamp_binding_test": {
+    "model": "HL-10W",
+    "raw_bytes_unchanged": true,
+    "only_manifest_observation_changed": true,
+    "manifest_mutated_only_in_memory": true,
+    "simulated_comparison_day": "2026-12-10",
+    "catalog_date_freshness_held_equal_in_both_arms": true,
+    "results": [
+      {
+        "mode": "original",
+        "observed_at": "2026-11-09T14:01:03.133068+00:00",
+        "age_days": 31,
+        "is_stale": true,
+        "required_met": [],
+        "required_unknown": [
+          "wireless"
+        ],
+        "status": "needs_verification"
+      },
+      {
+        "mode": "modified_manifest_time",
+        "observed_at": "2026-11-10T12:00:00+00:00",
+        "age_days": 30,
+        "is_stale": false,
+        "required_met": [
+          "wireless"
+        ],
+        "required_unknown": [],
+        "status": "specs_matched_not_purchase_approved"
+      }
+    ],
+    "expectation_met": false
+  },
+  "new_report_mutations": [
+    "encoded_url",
+    "url_in_category",
+    "tracking_in_seller",
+    "unhashable_link_kind",
+    "unhashable_product_kind",
+    "unknown_row_field",
+    "nonboolean_newness",
+    "bad_time"
+  ],
+  "mixed_report": {
+    "valid_rows": 1,
+    "rejected": 8,
+    "platform_candidates": 0,
+    "marker_absent": true
+  },
+  "normal_cli": {
+    "returncode": 0,
+    "without_utf8_env_or_flags": true,
+    "versions": [
+      1,
+      2
+    ],
+    "old_conclusions_invalidated": true,
+    "valid_rows_retained": 1,
+    "bad_rows_rejected": 8,
+    "marker_absent": true,
+    "candidate_display_counts": [
+      3,
+      3
+    ],
+    "has_explicit_exclusion": true,
+    "changed_color_excludes_black": true
+  },
+  "credentials_read": false,
+  "new_api_calls": 0,
+  "business_code_modified": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "合成时效反证，不是现实来源已被篡改或本日已过期",
+    "准入隔离成绩不代表通用HTML抽取正确率",
+    "不复验供应商授权/平台身份或地区报价"
+  ]
+}

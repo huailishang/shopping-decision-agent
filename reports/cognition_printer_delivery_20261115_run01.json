@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "run_id": "20261115_run01",
+  "run_date": "2026-11-15",
+  "role": "executor",
+  "review_state": "executor_self_check_only_pending_independent_evaluator",
+  "entry_package": "handoffs/认知依据驱动打印机比较与原包缺陷集中闭合_长执行包_20261115.md",
+  "git": {
+    "branch": "main",
+    "head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+    "start_dirty_short_status_lines": 242,
+    "start_worktree_modified": true,
+    "preserve_existing_changes": true,
+    "commit": false,
+    "push": false,
+    "reset": false,
+    "clean": false
+  },
+  "runtime": {
+    "os": "WSL Linux via connected Windows workspace",
+    "python": "3.12.3",
+    "java": "OpenJDK 17.0.20, javac --release 17",
+    "encoding": "PYTHONUTF8=1 inherited",
+    "new_external_business_calls": 0,
+    "new_external_metadata_calls": 0,
+    "new_haina_http_calls": 0,
+    "key_read": false,
+    "ecommerce_login": false,
+    "checkout": false,
+    "network_fees": "not verified",
+    "effective_work_hours": "not measured; do not infer 40-hour consumption"
+  },
+  "source_materials": {
+    "selection": "knowledge/printer_selection_criteria.json",
+    "methodology_source": {
+      "name": "香港消费者委员会，第598期打印机比较试验方法（2026-08）",
+      "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+      "effect": "comparison dimension definitions only, not tested-model ranking",
+      "limit": "HK color multifunction models; not direct evidence of CN monochrome models"
+    },
+    "manufacturer_sources": [
+      {
+        "id": "R6",
+        "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+        "fact": "Brother HL-L1238W monochrome, MSRP CNY 1906, not live quote",
+        "audit": "search excerpt; direct page open 403 in earlier 11-15 review"
+      },
+      {
+        "id": "R7",
+        "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+        "fact": "Brother WeChat setup needs Mobile Connect"
+      },
+      {
+        "id": "R9",
+        "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+        "fact": "HP M232dw scan/copy/auto duplex and WeChat support"
+      },
+      {
+        "id": "R10",
+        "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+        "fact": "HP series WeChat QR setup"
+      },
+      {
+        "id": "R11",
+        "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+        "fact": "HP recommended monthly 200-2000; not hard minimum"
+      },
+      {
+        "id": "R14",
+        "url": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/qing-wen-zai-zhong-guo-nei-de-gou-mai-de-da-yin-ji-wu-xian-gong-neng-zai-zhong-guo-nei-de-yi-wai-de-qu-shi-bu-shi-ye-neng-yong/m-p/1313371/highlight/true",
+        "fact": "2024 HP service staff regional statement, not current binding terms"
+      },
+      {
+        "id": "R15",
+        "url": "https://www.brother.cn/minisite/bcnactivity/new-question00.html",
+        "fact": "Brother CN WeChat supported model; overseas status unknown"
+      }
+    ],
+    "real_haina_new_rows": 0,
+    "independent_durability_trials": 0,
+    "verified_platform_sale_identity": 0,
+    "old20_verified": 0,
+    "regional_live_quotes": 0,
+    "list_price_is_market_quote": false
+  },
+  "code_files": [
+    "shopping_decision/selection_criteria.py",
+    "shopping_decision/real_printer_case.py",
+    "shopping_decision/haina_mcp_ingest.py",
+    "shopping_decision/dialogue_flow.py",
+    "shopping_decision/desktop_bridge.py",
+    "knowledge/printer_selection_criteria.json",
+    "tests/test_selection_criteria.py",
+    "desktop/CognitionSwingRegression.java",
+    "scripts/cognition_case_replay.py"
+  ],
+  "tests": {
+    "targeted": {
+      "passed": 33,
+      "failed": 0,
+      "command": "PYTHONUTF8=1 python3 -X utf8 -m unittest tests.test_selection_criteria tests.test_real_printer_case_research tests.test_haina_mcp_ingest -q"
+    },
+    "full_python": {
+      "passed": 385,
+      "failed": 0,
+      "command": "PYTHONUTF8=1 python3 -X utf8 -m unittest discover -s tests -q"
+    },
+    "h05": {
+      "total": 8,
+      "passed": 8,
+      "failed_ids": [],
+      "diagnostic_date": "2026-11-15",
+      "file": "reports/cognition_h05_20261115_run01.json"
+    },
+    "java": {
+      "compiler": "javac --release 17 -encoding UTF-8",
+      "compiled": true,
+      "h10": "6/6 PASS",
+      "p04": "6/6 PASS"
+    },
+    "gui": {
+      "kind": "real displayed Swing window, programmed clicks/selection, not human UX trial",
+      "checks": "5/5 PASS",
+      "new_audit": "reports/cognition_gui_review_20261115_run02.txt",
+      "saved_and_utf8_readback": true,
+      "bytes": 109411
+    },
+    "cli": {
+      "rounds": 11,
+      "passed": 11,
+      "file": "reports/cognition_case_replay_20261115_run02.json"
+    },
+    "security": {
+      "real_mcp_import_enabled": false,
+      "synthetic_fixture_hash_gate_preserved": true,
+      "known_quote_advisory_only": true,
+      "approved_purchase": false,
+      "transactions": false,
+      "git_diff_check": "PASS on touched tracked modules"
+    }
+  },
+  "fixes": {
+    "F1": "hard required home color excludes Brother and HP; inactive HP scan/duplex decisions; condition conflict blocks active models",
+    "F2": "budget 500/1905/1906/1907/3000/null dynamically changes Brother MSRP relation, live quote remains 0",
+    "F3": "volume below/equal/within/contains/overlap/above recomputed, HP recommended min not mandatory",
+    "F4": "bad numeric huge int, nan, infinity, bool, negative and bad strings isolated; same-bundle healthy neighbor preserved",
+    "F5": "empty SKU list no longer counted as listing; separate empty-result counter"
+  },
+  "rounds": [
+    {
+      "round": "R0_original",
+      "version": 1,
+      "changes": {
+        "category": "printer",
+        "usage": "家用黑白打印",
+        "budget_max_cny": 1000,
+        "budget_scope": "unknown",
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "wechat_required": null,
+        "wechat_workflow": "unknown",
+        "requires_scan": null,
+        "requires_auto_duplex": null,
+        "requirements": [
+          "月打印0至50页、家里黑白为主，偶尔彩印可去打印店，希望微信打印、可靠耐用，比较兄弟与惠普"
+        ]
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [],
+      "budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R1_scan_required_synthetic",
+      "version": 2,
+      "changes": {
+        "requires_scan": true
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "pending_hard_evidence",
+          "hard_failed": [],
+          "hard_unknown": [
+            "C-SCAN"
+          ],
+          "relations": {
+            "C-SCAN": "unknown",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-SCAN": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-01"
+      ],
+      "budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R2_duplex_required_scan_revoked_synthetic",
+      "version": 3,
+      "changes": {
+        "requires_scan": false,
+        "requires_auto_duplex": true
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "pending_hard_evidence",
+          "hard_failed": [],
+          "hard_unknown": [
+            "C-DUPLEX"
+          ],
+          "relations": {
+            "C-DUPLEX": "unknown",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-DUPLEX": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-01"
+      ],
+      "budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R2b_duplex_revoked_synthetic",
+      "version": 4,
+      "changes": {
+        "requires_auto_duplex": false
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-02"
+      ],
+      "budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R3_home_color_required_synthetic",
+      "version": 5,
+      "changes": {
+        "needs_color": true
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "excluded_by_hard_condition",
+          "hard_failed": [
+            "C-COLOR"
+          ],
+          "hard_unknown": [],
+          "relations": {
+            "C-COLOR": "mismatch",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "excluded_by_hard_condition",
+          "hard_failed": [
+            "C-COLOR"
+          ],
+          "hard_unknown": [],
+          "relations": {
+            "C-COLOR": "mismatch",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [],
+      "budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R4_restore_and_require_miniprogram_synthetic",
+      "version": 6,
+      "changes": {
+        "needs_color": false,
+        "wechat_required": true,
+        "wechat_workflow": "miniprogram"
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-WECHAT": "match",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-WECHAT": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-02"
+      ],
+      "budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R4b_wechat_optional_accept_app_synthetic",
+      "version": 7,
+      "changes": {
+        "wechat_required": false,
+        "wechat_workflow": "transfer_to_app"
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-02"
+      ],
+      "budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R5_budget_down_500_synthetic",
+      "version": 8,
+      "changes": {
+        "budget_max_cny": 500
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-02"
+      ],
+      "budget_explanation": "当前预算500元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R5b_budget_and_wechat_cleared_synthetic",
+      "version": 9,
+      "changes": {
+        "budget_max_cny": null,
+        "wechat_required": null,
+        "wechat_workflow": "unknown",
+        "requirements": [
+          "可靠耐用，重点比较兄弟与惠普"
+        ]
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-VOLUME": "below"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-02"
+      ],
+      "budget_explanation": "本轮未设置预算；Brother历史官方建议零售价1906元、HP建议价未知，二者均非已核地区到手价，无法判预算符合。",
+      "volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R6_budget_3000_pages_250_300_synthetic",
+      "version": 10,
+      "changes": {
+        "budget_max_cny": 3000,
+        "monthly_pages_range": [
+          250,
+          300
+        ]
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-02"
+      ],
+      "budget_explanation": "当前预算3000元，Brother HL-L1238W厂家建议零售价1906元，不高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量250—300页，与HP厂家建议200—2000页范围关系为落在；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    },
+    {
+      "round": "R6b_budget_equal_msrp_synthetic",
+      "version": 11,
+      "changes": {
+        "budget_max_cny": 1906
+      },
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          }
+        }
+      ],
+      "active_decisions": [
+        "DEC-02"
+      ],
+      "budget_explanation": "当前预算1906元，Brother HL-L1238W厂家建议零售价1906元，不高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "volume_explanation": "本轮月印量250—300页，与HP厂家建议200—2000页范围关系为落在；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。"
+    }
+  ],
+  "independent_statuses": {
+    "M1": "executor_test_pass_pending_independent",
+    "M2": "executor_source_scope_pass_pending_independent",
+    "M3": "executor_test_pass_pending_independent",
+    "M4": "executor_test_pass_pending_independent",
+    "M5": "executor_window_test_pass_pending_independent",
+    "M6": "executor_test_pass_pending_independent",
+    "H1": "blocked_real_haina_license_and_raw_evidence_missing",
+    "H2": "blocked_real_platform_identity_0_of_2",
+    "H3": "blocked_region_specific_quote_0",
+    "overall": "NOT_PASS_until_H1_and_independent_review"
+  },
+  "missing": [
+    {
+      "id": "H1-LICENSE",
+      "needed": "现行海纳MCP协议/适用条款或等效有权说明，明确本机解析、本人展示、最小证据留存/审计",
+      "owner": "海纳/有权材料持有人",
+      "available": false
+    },
+    {
+      "id": "H1-REAL-2",
+      "needed": "Brother HL-L1238W、HP M232dw两型号经允许使用的真实原始字段/参数/评价/来源和观察时间及复核锚点；必须有至少一项实质改变选择判断或具体未知",
+      "owner": "海纳有权导出者或材料持有人",
+      "available": false
+    },
+    {
+      "id": "H2-SALE-ID",
+      "needed": "至少两条不同型号的实际平台所选销售配置及店铺、状态、原生item/SKU或单一配置依据、原观察时刻与允许用途",
+      "owner": "合法平台材料提供者",
+      "available": false
+    },
+    {
+      "id": "H3-QUOTE",
+      "needed": "H2身份及用户真实部署/收货地、预算费用口径、优惠资格、到手价/运费/库存/有效期",
+      "owner": "用户与获授权报价来源",
+      "available": false
+    },
+    {
+      "id": "TEST-HUMAN",
+      "needed": "评估者独立复核和真人可用性评价；程序化GUI不能替代",
+      "owner": "独立评估者/用户",
+      "available": false
+    }
+  ],
+  "artifact_sha256": {
+    "knowledge/printer_selection_criteria.json": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+    "shopping_decision/selection_criteria.py": "e8b887fb39c50a60eee736341b220dc02c46275e285e0a7a3413d618141a5195",
+    "shopping_decision/real_printer_case.py": "99e8be900f7f90265faba2eea32cb2fa84484094e34db3075f894959bebca2a2",
+    "shopping_decision/haina_mcp_ingest.py": "0459a9c502b81e51c4e9cc7cd5b3545b1978ab26e49ecddf423c20d7c8155c07",
+    "shopping_decision/desktop_bridge.py": "196d4d321ed0d16de5040b489076f5af35c05aaddcd8eb259bcc8e27b3cfa88e",
+    "shopping_decision/dialogue_flow.py": "57bc593025c2829e13092340f8b4a9549fd4ca6504f55b9014a59e92c45abb87",
+    "tests/test_selection_criteria.py": "258579f252debb1b98a0f9ee0055818e8554bb7215e4a4c291d5428e4f2dffbe",
+    "desktop/CognitionSwingRegression.java": "96980e73bfa89a3da5082c40debb749359c68cd072b4c3c2d19954c9c956ac62",
+    "scripts/cognition_case_replay.py": "d5ef45a62524ca79a539947b1e914a8278611657b583f1a32d6b88bd05b91a13",
+    "reports/cognition_case_replay_20261115_run02.json": "248104252601c65bea54bf3dbb9c9b6805e0fcf05fa74fa603932728a17023d5",
+    "reports/cognition_h05_20261115_run01.json": "82851d681c40cbe6345aeef023cb40d76ac730a0a845c8fec38c0ff0a35576d5",
+    "reports/cognition_gui_review_20261115_run02.txt": "2e4f361938ad5d651538030cf6d3d0782879d94f82ac23a4dd32b1fa9cbde7b4"
+  },
+  "archive_warnings": [
+    "此前原包失败的独立裁定不由执行者改签",
+    "reports/*run01旧回放和GUI是中途版本，新摘要以run02为准",
+    "本轮公开来源研究未证明真实Haina内容有效,两款价格或真实耐用性"
+  ]
+}

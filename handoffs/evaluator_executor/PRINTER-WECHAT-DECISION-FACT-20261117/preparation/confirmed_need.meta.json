@@ -1,0 +1,16 @@
+{
+  "command_argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "shopping_decision.dialogue_flow",
+    "--real-printer-case"
+  ],
+  "started_at_utc": "2026-11-17T13:46:38.053540+00:00",
+  "finished_at_utc": "2026-11-17T13:46:39.636410+00:00",
+  "exit_code": 0,
+  "stdout_sha256": "1e6f82c53a086f5ffb58cb89ec7d6333ce319de8bff3f09e944a73b37b8ca38a",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "basis": "actual normal local CLI replay of new project-owner confirmation; no new external fact"
+}

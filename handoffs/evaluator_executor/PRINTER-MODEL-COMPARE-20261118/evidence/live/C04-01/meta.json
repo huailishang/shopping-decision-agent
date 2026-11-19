@@ -1,0 +1,10 @@
+{
+  "status": "interrupted",
+  "live_attempt": null,
+  "input_sha256": "72ea207cb1574c3fc63afd0e8d5d19994f4eefe1934ec1c68ab253ae774d06fe",
+  "started_at_utc": "2026-11-18T02:30:06.894260+00:00",
+  "finished_at_utc": "2026-11-18T02:32:47.197558+00:00",
+  "raw_receipt_available": false,
+  "failure": "controller_interrupted; underlying request/output unknown; conservatively consumes one attempt",
+  "note": "Recovery observation, not a reconstructed CLI receipt. No generated comparison is claimed."
+}

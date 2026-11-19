@@ -1,0 +1,23 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "PREP-BASELINE",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_conditions.py",
+    "--out",
+    "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/preparation/baseline_conditions"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_conditions.py --out handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/preparation/baseline_conditions",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-17T12:56:09.421285+00:00",
+  "finished_at_utc": "2026-11-17T12:56:16.572579+00:00",
+  "exit_code": 1,
+  "stdout_path": "PREP-BASELINE.stdout.log",
+  "stderr_path": "PREP-BASELINE.stderr.log",
+  "stdout_bytes": 3431,
+  "stderr_bytes": 0,
+  "stdout_sha256": "f9baa40308e057b3c9db8b2f2a0297a8c71e3ff9ad925e80ebf895fa375d09df",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

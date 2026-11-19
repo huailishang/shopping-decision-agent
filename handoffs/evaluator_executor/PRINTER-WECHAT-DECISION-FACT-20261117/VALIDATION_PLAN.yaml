@@ -1,0 +1,33 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-WECHAT-DECISION-FACT-20261117
+checks:
+- id: VP-01
+  ac: [AC-04]
+  cwd: .
+  command: [python, -X, utf8, handoffs/evaluator_executor/PRINTER-WECHAT-DECISION-FACT-20261117/check_package.py, --check, frozen]
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-02
+  ac: [AC-01, AC-02, AC-03, AC-04]
+  cwd: .
+  command: [python, -X, utf8, handoffs/evaluator_executor/PRINTER-WECHAT-DECISION-FACT-20261117/check_package.py, --check, delivery]
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-03
+  ac: [AC-03]
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - -c
+  - >-
+    import sys, unittest;
+    sys.path.insert(0, 'tests');
+    names=['test_empty_never_invents_source','test_malicious_promotion_not_executed','test_old_price_not_live_quote','test_conflicting_wechat_condition','test_injected_order_and_feedback_not_real'];
+    suite=unittest.defaultTestLoader.loadTestsFromNames(['test_minimal_research_flow.MinimalFlowTest.'+name for name in names]);
+    assert suite.countTestCases()==5;
+    result=unittest.TextTestRunner(verbosity=2).run(suite);
+    sys.exit(0 if result.wasSuccessful() else 1)
+  expected_exit_code: 0
+  mandatory: true

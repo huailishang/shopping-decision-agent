@@ -1,0 +1,631 @@
+{
+  "status": "executor_development_diagnostic_only",
+  "generated_at": "2026-11-15T14:15:45.812686+00:00",
+  "source_hashes_sha256": {
+    "evaluation/printer_cognition_dev_20261115.json": "69ad6b7d57a923602516370933345810f341453dc6f9c2640e84fa380dfd0f38",
+    "knowledge/printer_selection_criteria.json": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+    "knowledge/real_printer_case_research_20261113.json": "84df265530bad1c8e8f8b74c9d90020457485c6330f1e2f14bb870457484c529",
+    "knowledge/real_printer_case_comparison_20261115.json": "d1a647cf6e2da98e38772e330797a93aae2ca849a567977d450e1456656ea833",
+    "shopping_decision/printer_effect_probe.py": "d53b766d09e9bc9004fbb32a9162d8cae69b4d327d03e73061b01a9525c495f8",
+    "shopping_decision/real_printer_case.py": "07ec57e637e5a8449e382f77c0543984c8896c3d8adc1d282be62876967c9fd3"
+  },
+  "case_count": 6,
+  "paired_hard_eligibility_equal_count": 6,
+  "cases_with_at_least_two_source_backed_contexts": 2,
+  "original_real_case_count": 1,
+  "development_modified_condition_count": 4,
+  "independent_holdout_tested": false,
+  "independent_holdout_denominator": 0,
+  "task_success_rate_baseline": null,
+  "task_success_rate_cognition": null,
+  "measured_improvement": null,
+  "human_confirmed": false,
+  "verified_marketplace_identities": 0,
+  "verified_regional_quotes": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "method_limit": "两组已使用相同规格/硬条件，认知组增加有来源的解释。开放开发组可检查功能但不能独立验证增益；36个新保留场景与门槛冻结归评估者。",
+  "cases": [
+    {
+      "id": "D01-original",
+      "origin": "one_real_user_case_with_unanswered_conditions",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "wechat_required": null,
+        "wechat_workflow": "unknown",
+        "requires_scan": null,
+        "requires_auto_duplex": null,
+        "device_deployment_region": null,
+        "requirements": [
+          "希望微信打印",
+          "重视可靠耐用"
+        ]
+      },
+      "reference_prewritten": [
+        "两款仅可做规格研究，不签千元内可买",
+        "微信应区分初次绑定流程",
+        "低频不能据HP建议月印量淘汰",
+        "缺长期耐用对比与地区成本"
+      ],
+      "baseline": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "live_price_verified": false
+      },
+      "cognition": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "extra_judgments": [
+          {
+            "id": "E-WECHAT-SETUP",
+            "status": "source_supported_with_user_environment_unknown",
+            "claim": "Brother HL-L1238W首次启用微信畅享印需要Brother Mobile Connect配置；HP M232系列先连Wi-Fi，再用信息页二维码绑定惠普云打印。",
+            "decision_effect": "无线或微信功能标签不等于开箱即用；增加首次配置与真实地区核验，而不是据此给品牌加分。",
+            "source_refs": [
+              {
+                "source_id": "R7",
+                "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+                "source_group": "brother_cn",
+                "scope": "支持页明确列出的HL-L1238W/HL-L1808W",
+                "audit": "public_page_open_2026-11-15_lines_11_32",
+                "counter": "厂家流程说明不等于用户家庭网络实测；首次设置并非零步骤；代理网络和本地环境可能影响使用。"
+              },
+              {
+                "source_id": "R10",
+                "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+                "source_group": "hp_cn",
+                "scope": "HP LaserJet MFP M232-M237系列安装指南",
+                "audit": "public_pdf_open_2026-11-15_lines_48_62",
+                "counter": "指南标注微信打印为可选设置；没有在用户设备/地区实测；需要完成前置Wi-Fi设置和扫码绑定。"
+              }
+            ],
+            "missing": [
+              "设备部署地区与本地网络",
+              "本人能否接受首次配置",
+              "实际连通验证"
+            ],
+            "needs_user_answer_now": false
+          },
+          {
+            "id": "E-VOLUME-NOT-MINIMUM",
+            "status": "source_supported_informational_only",
+            "claim": "本案月印量低于HP M232系列建议的200—2000页/月；建议区间不等于最低使用量，也不证明低频易损坏。",
+            "decision_effect": "阻止按建议月印量直接淘汰HP；低频真正的长期成本和闲置可靠性仍需独立证据。",
+            "source_refs": [
+              {
+                "source_id": "R11",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_group": "hp_global",
+                "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+                "audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226",
+                "counter": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。"
+              }
+            ],
+            "missing": [
+              "准确耗材现价",
+              "真实覆盖页数",
+              "长期闲置维护实测"
+            ],
+            "needs_user_answer_now": false
+          },
+          {
+            "id": "E-DEFER-OR-OUTSOURCE",
+            "status": "user_condition_only_not_product_fact",
+            "claim": "已确认家中黑白、偶尔彩印可以外包；外包或暂缓购买是可讨论的路线，不是已核实更便宜的方案。",
+            "decision_effect": "避免为凑三台机器虚构商品；在现价/耗材价未知时保留暂缓选择。",
+            "source_refs": [],
+            "missing": [
+              "实际外包单价与频次",
+              "家用机器总成本"
+            ],
+            "needs_user_answer_now": false
+          },
+          {
+            "id": "E-RELIABILITY-UNKNOWN",
+            "status": "independent_model_comparison_missing",
+            "claim": "现有厂家功能、建议印量与少量历史方法资料，不能给这两款型号做长期耐用性胜负排名。",
+            "decision_effect": "保留耐用性待核，不以营销防卡纸卖点或未发现投诉代替长期故障率。",
+            "source_refs": [],
+            "missing": [
+              "同型号可迁移的长期故障/返修数据及样本方法"
+            ],
+            "needs_user_answer_now": false
+          }
+        ],
+        "extra_questions": []
+      },
+      "same_hard_eligibility": true,
+      "source_backed_context_count": 2,
+      "observed_effect": "additional_source_context_without_purchase_or_rank_claim",
+      "primary_success_rate": null
+    },
+    {
+      "id": "D02-miniprogram-outside",
+      "origin": "simulated_confirmed_answers",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "wechat_required": true,
+        "wechat_workflow": "miniprogram",
+        "device_deployment_region": "日本",
+        "requirements": [
+          "必须用微信小程序直接打印"
+        ]
+      },
+      "reference_prewritten": [
+        "境外真实微信服务不能据中国区功能页判符合",
+        "不报地区价与可买性"
+      ],
+      "baseline": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "pending_hard_evidence",
+            "hard_failed": [],
+            "hard_unknown": [
+              "C-WECHAT"
+            ]
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "pending_hard_evidence",
+            "hard_failed": [],
+            "hard_unknown": [
+              "C-WECHAT"
+            ]
+          }
+        ],
+        "live_price_verified": false
+      },
+      "cognition": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "pending_hard_evidence",
+            "hard_failed": [],
+            "hard_unknown": [
+              "C-WECHAT"
+            ]
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "pending_hard_evidence",
+            "hard_failed": [],
+            "hard_unknown": [
+              "C-WECHAT"
+            ]
+          }
+        ],
+        "extra_judgments": [
+          {
+            "id": "E-WECHAT-SETUP",
+            "status": "source_supported_with_user_environment_unknown",
+            "claim": "Brother HL-L1238W首次启用微信畅享印需要Brother Mobile Connect配置；HP M232系列先连Wi-Fi，再用信息页二维码绑定惠普云打印。",
+            "decision_effect": "无线或微信功能标签不等于开箱即用；增加首次配置与真实地区核验，而不是据此给品牌加分。",
+            "source_refs": [
+              {
+                "source_id": "R7",
+                "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+                "source_group": "brother_cn",
+                "scope": "支持页明确列出的HL-L1238W/HL-L1808W",
+                "audit": "public_page_open_2026-11-15_lines_11_32",
+                "counter": "厂家流程说明不等于用户家庭网络实测；首次设置并非零步骤；代理网络和本地环境可能影响使用。"
+              },
+              {
+                "source_id": "R10",
+                "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+                "source_group": "hp_cn",
+                "scope": "HP LaserJet MFP M232-M237系列安装指南",
+                "audit": "public_pdf_open_2026-11-15_lines_48_62",
+                "counter": "指南标注微信打印为可选设置；没有在用户设备/地区实测；需要完成前置Wi-Fi设置和扫码绑定。"
+              }
+            ],
+            "missing": [
+              "设备部署地区与本地网络",
+              "本人能否接受首次配置",
+              "实际连通验证"
+            ],
+            "needs_user_answer_now": false
+          },
+          {
+            "id": "E-VOLUME-NOT-MINIMUM",
+            "status": "source_supported_informational_only",
+            "claim": "本案月印量低于HP M232系列建议的200—2000页/月；建议区间不等于最低使用量，也不证明低频易损坏。",
+            "decision_effect": "阻止按建议月印量直接淘汰HP；低频真正的长期成本和闲置可靠性仍需独立证据。",
+            "source_refs": [
+              {
+                "source_id": "R11",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_group": "hp_global",
+                "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+                "audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226",
+                "counter": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。"
+              }
+            ],
+            "missing": [
+              "准确耗材现价",
+              "真实覆盖页数",
+              "长期闲置维护实测"
+            ],
+            "needs_user_answer_now": false
+          },
+          {
+            "id": "E-DEFER-OR-OUTSOURCE",
+            "status": "user_condition_only_not_product_fact",
+            "claim": "已确认家中黑白、偶尔彩印可以外包；外包或暂缓购买是可讨论的路线，不是已核实更便宜的方案。",
+            "decision_effect": "避免为凑三台机器虚构商品；在现价/耗材价未知时保留暂缓选择。",
+            "source_refs": [],
+            "missing": [
+              "实际外包单价与频次",
+              "家用机器总成本"
+            ],
+            "needs_user_answer_now": false
+          }
+        ],
+        "extra_questions": []
+      },
+      "same_hard_eligibility": true,
+      "source_backed_context_count": 2,
+      "observed_effect": "additional_source_context_without_purchase_or_rank_claim",
+      "primary_success_rate": null
+    },
+    {
+      "id": "D03-color-hard",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": true,
+        "accepts_outsourced_color": false,
+        "requirements": [
+          "必须在家彩印"
+        ]
+      },
+      "reference_prewritten": [
+        "两款均黑白规格，不应重新因扫描/微信功能入选",
+        "不批准购买"
+      ],
+      "baseline": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "excluded_by_hard_condition",
+            "hard_failed": [
+              "C-COLOR"
+            ],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "excluded_by_hard_condition",
+            "hard_failed": [
+              "C-COLOR"
+            ],
+            "hard_unknown": []
+          }
+        ],
+        "live_price_verified": false
+      },
+      "cognition": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "excluded_by_hard_condition",
+            "hard_failed": [
+              "C-COLOR"
+            ],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "excluded_by_hard_condition",
+            "hard_failed": [
+              "C-COLOR"
+            ],
+            "hard_unknown": []
+          }
+        ],
+        "extra_judgments": [
+          {
+            "id": "E-VOLUME-NOT-MINIMUM",
+            "status": "source_supported_informational_only",
+            "claim": "本案月印量低于HP M232系列建议的200—2000页/月；建议区间不等于最低使用量，也不证明低频易损坏。",
+            "decision_effect": "阻止按建议月印量直接淘汰HP；低频真正的长期成本和闲置可靠性仍需独立证据。",
+            "source_refs": [
+              {
+                "source_id": "R11",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_group": "hp_global",
+                "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+                "audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226",
+                "counter": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。"
+              }
+            ],
+            "missing": [
+              "准确耗材现价",
+              "真实覆盖页数",
+              "长期闲置维护实测"
+            ],
+            "needs_user_answer_now": false
+          }
+        ],
+        "extra_questions": []
+      },
+      "same_hard_eligibility": true,
+      "source_backed_context_count": 1,
+      "observed_effect": "additional_source_context_without_purchase_or_rank_claim",
+      "primary_success_rate": null
+    },
+    {
+      "id": "D04-scan-hard",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "requires_scan": true,
+        "requirements": [
+          "必须扫描"
+        ]
+      },
+      "reference_prewritten": [
+        "惠普M232dw有厂家扫描规格",
+        "兄弟扫描缺有效型号证据不能凭空判不支持",
+        "商品与现价仍待核"
+      ],
+      "baseline": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "pending_hard_evidence",
+            "hard_failed": [],
+            "hard_unknown": [
+              "C-SCAN"
+            ]
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "live_price_verified": false
+      },
+      "cognition": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "pending_hard_evidence",
+            "hard_failed": [],
+            "hard_unknown": [
+              "C-SCAN"
+            ]
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "extra_judgments": [
+          {
+            "id": "E-VOLUME-NOT-MINIMUM",
+            "status": "source_supported_informational_only",
+            "claim": "本案月印量低于HP M232系列建议的200—2000页/月；建议区间不等于最低使用量，也不证明低频易损坏。",
+            "decision_effect": "阻止按建议月印量直接淘汰HP；低频真正的长期成本和闲置可靠性仍需独立证据。",
+            "source_refs": [
+              {
+                "source_id": "R11",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_group": "hp_global",
+                "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+                "audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226",
+                "counter": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。"
+              }
+            ],
+            "missing": [
+              "准确耗材现价",
+              "真实覆盖页数",
+              "长期闲置维护实测"
+            ],
+            "needs_user_answer_now": false
+          }
+        ],
+        "extra_questions": []
+      },
+      "same_hard_eligibility": true,
+      "source_backed_context_count": 1,
+      "observed_effect": "additional_source_context_without_purchase_or_rank_claim",
+      "primary_success_rate": null
+    },
+    {
+      "id": "D05-budget-raised",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 3000,
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "requirements": [
+          "预算放宽到3000元"
+        ]
+      },
+      "reference_prewritten": [
+        "Brother的1906元是厂商建议价不是成交价",
+        "更高预算不产生地区有效成交价或购买资格"
+      ],
+      "baseline": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "live_price_verified": false
+      },
+      "cognition": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "extra_judgments": [
+          {
+            "id": "E-VOLUME-NOT-MINIMUM",
+            "status": "source_supported_informational_only",
+            "claim": "本案月印量低于HP M232系列建议的200—2000页/月；建议区间不等于最低使用量，也不证明低频易损坏。",
+            "decision_effect": "阻止按建议月印量直接淘汰HP；低频真正的长期成本和闲置可靠性仍需独立证据。",
+            "source_refs": [
+              {
+                "source_id": "R11",
+                "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+                "source_group": "hp_global",
+                "scope": "HP LaserJet MFP M232 Printer Series，具体到M232dw时以中国区型号页和产品编号复核",
+                "audit": "public_pdf_open_2026-11-15_lines_21_29_59_72_131_151_138_139_225_226",
+                "counter": "数据表为M232系列资料，部分功能/耗材SKU须按产品编号再次核对；200至2000页是建议范围不是硬性最低门槛；耗材兼容性随芯片/固件变化。"
+              }
+            ],
+            "missing": [
+              "准确耗材现价",
+              "真实覆盖页数",
+              "长期闲置维护实测"
+            ],
+            "needs_user_answer_now": false
+          }
+        ],
+        "extra_questions": []
+      },
+      "same_hard_eligibility": true,
+      "source_backed_context_count": 1,
+      "observed_effect": "additional_source_context_without_purchase_or_rank_claim",
+      "primary_success_rate": null
+    },
+    {
+      "id": "D06-higher-volume",
+      "origin": "simulated_changed_answer",
+      "values": {
+        "category": "printer",
+        "budget_max_cny": 1000,
+        "monthly_pages_range": [
+          300,
+          400
+        ],
+        "needs_color": false,
+        "wechat_required": false,
+        "requirements": [
+          "每月打印300到400页"
+        ]
+      },
+      "reference_prewritten": [
+        "HP建议印量内不等于运行可靠与成本最低",
+        "没有微信诉求不应人为新增微信绑定补问"
+      ],
+      "baseline": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "live_price_verified": false
+      },
+      "cognition": {
+        "models": [
+          {
+            "model_id": "HL-L1238W",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          },
+          {
+            "model_id": "M232dw",
+            "eligibility": "model_spec_research_only",
+            "hard_failed": [],
+            "hard_unknown": []
+          }
+        ],
+        "extra_judgments": [],
+        "extra_questions": []
+      },
+      "same_hard_eligibility": true,
+      "source_backed_context_count": 0,
+      "observed_effect": "additional_source_context_without_purchase_or_rank_claim",
+      "primary_success_rate": null
+    }
+  ]
+}

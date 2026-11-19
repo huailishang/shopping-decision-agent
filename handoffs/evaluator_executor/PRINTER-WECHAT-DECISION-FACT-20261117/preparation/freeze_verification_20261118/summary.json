@@ -1,0 +1,28 @@
+{
+  "package_ready": true,
+  "preparation_checks": [
+    {
+      "check": "FROZEN",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "check": "ROUTING",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "check": "MISSING-DELIVERY",
+      "exit_code": 1,
+      "expected_exit_code": 1
+    }
+  ],
+  "official_domain_boundary_examples_passed": 6,
+  "missing_actual_research_cannot_pass": true,
+  "new_external_calls": 0,
+  "new_product_facts": 0,
+  "research_completed": false,
+  "task_l2_l3_run": false,
+  "frozen_inputs_sha256": "08302b0f0b2a706b423d75fe4adef7b1400d6e26832fe8e0ce9fc73e70a453d4",
+  "note": "Verification outputs generated after input freeze are not frozen research inputs."
+}

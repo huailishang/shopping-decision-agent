@@ -1,0 +1,74 @@
+{
+  "task_id": "PRINTER-MIN-E2E-20261117",
+  "method": "EVALUATION_RULES.md / actual old/new local replay",
+  "baseline_sha256": "c89302757eca92c2c74893bed09bd3ca0bb101d72d16bcd64eb7e477a122be5e",
+  "flow_observation": "selected old evidence passed through normal CLI/chat and feedback absence handling",
+  "judge_scope": "3 frozen engineering/source-use questions, NOT real-user outcome evaluation",
+  "judged_question_count": 3,
+  "questions": [
+    {
+      "id": "RQ-01",
+      "type": "source_use_engineering",
+      "status": "correct",
+      "basis": "已有两条首次设置摘要，只有initial_setup支持范围",
+      "observed": "两款各保留自身一条setup事实、来源日期和反证，后续复用状态false",
+      "output_evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/main_two_facts.stdout.jsonl",
+        "sha256": "a6adbada71d9222a582171dce4630fda7d4dd15779e4146dc9a39204564f8faa"
+      },
+      "limitation": "接受首次设置与实际成功运行两回事；不是用户效果评分"
+    },
+    {
+      "id": "RQ-02",
+      "type": "source_use_engineering",
+      "status": "correct",
+      "basis": "只有Brother R7时HP没有本次可用证据",
+      "observed": "HP supported_claim_ids为空、pending_evidence，来源登记不含R10",
+      "output_evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/thin_one_fact.stdout.jsonl",
+        "sha256": "18f5639e5e6d9e5d11d785d14f9b806e3004b54e36425b2434180171c7484668"
+      },
+      "limitation": "HP待核不代表HP不支持该能力"
+    },
+    {
+      "id": "RQ-03",
+      "type": "source_use_engineering",
+      "status": "correct",
+      "basis": "河南现价/长期可靠性/真人反馈均缺",
+      "observed": "实时价、长期、反馈标志false/0；仍形成可读研究而不批准购买",
+      "output_evidence": {
+        "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/main_two_facts.chat.json",
+        "sha256": "b513b25820a8d4300acc9779fc4cc9c0704d687b999479110cb66497399b7c4b"
+      },
+      "limitation": "不证明实际购买质量或受益"
+    }
+  ],
+  "real_user_effect_judged_count": 0,
+  "reason_no_real_user_effect_judgment": "无真人参与、无实机和采购结果，不能判推荐帮助",
+  "effect_verdict": "inconclusive",
+  "formal_36_started": false,
+  "real_user_effect_verified": false,
+  "real_user_feedback_collected": false,
+  "paired_comparison": {
+    "status": "not_comparable",
+    "reason": "旧普通筛选不能接收同一个固定setup_two证据包并只用R7/R10；新有据路径用当前固定包。两者并非同一证据/权限范围，不可公平比较效果。不能复制同一输出贴两个标签或重建新框架凑评测。",
+    "attempt_evidence": {
+      "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/paired_diagnosis.json",
+      "sha256": "bf07941449be87d5fea865c265884eb6137bab345fb2f02fdcbd1c807120b788"
+    }
+  },
+  "baseline_comparison": {
+    "before": "旧CLI已有r3条件分支，但无selected pack research_case",
+    "after": "本轮CLI/chat一致生成带两条旧事实的research_case；另1/0条同源缺失分支",
+    "delta": "完成所选最小旧摘要从正常入口贯通，不代表新增事实或真实认知提升"
+  },
+  "remaining_unknowns": [
+    "亲戚真实反馈与效用",
+    "后续微信复用实测",
+    "河南当前报价/在售配置",
+    "长期可靠性",
+    "海纳数据用途许可"
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

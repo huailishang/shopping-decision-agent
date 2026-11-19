@@ -1,0 +1,263 @@
+{
+  "run_date": "2026-11-14",
+  "role": "executor",
+  "evidence": "actual_local_api_calls_with_credential_redacted",
+  "business_calls": 18,
+  "product_calls": 7,
+  "mcp_business_calls": 11,
+  "mcp_metadata_calls": 3,
+  "product_successes": 7,
+  "mcp_successes": 11,
+  "real_originals_ingested": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "real_platform_sale_identity_verified": 0,
+  "regional_quote_verified": 0,
+  "raw_responses_saved": false,
+  "credentials_logged": false,
+  "retailer_pages_opened": 0,
+  "account_logins": 0,
+  "paid_calls": "not_audited_unknown_test_key_quota",
+  "product_probes": [
+    {
+      "case": "brother_broad_full",
+      "status": "success",
+      "http": 200,
+      "business_code": 0,
+      "rows": 3,
+      "id_rows": 0,
+      "sha256": "bfb262725171cb19741a03ef1bd3e4ea4bac53d4caed1cc54d2cac5da8d02ddf",
+      "path": "reports/haina_probe_20261114_brother_broad_full.json"
+    },
+    {
+      "case": "brother_broad_ids",
+      "status": "success",
+      "http": 200,
+      "business_code": 0,
+      "rows": 3,
+      "id_rows": 0,
+      "sha256": "e3011783ae5d80aac99e735d755fdafa2dfd5a12137a6bd52556d4fa7ce6d2c0",
+      "path": "reports/haina_probe_20261114_brother_broad_ids.json"
+    },
+    {
+      "case": "brother_broad_jd",
+      "status": "success",
+      "http": 200,
+      "business_code": 0,
+      "rows": 3,
+      "id_rows": 0,
+      "sha256": "e2e969936d3e85007a3190acb16c9c0a5c2c77d2a7353de18e00e973bf15df6d",
+      "path": "reports/haina_probe_20261114_brother_broad_jd.json"
+    },
+    {
+      "case": "brother_full",
+      "status": "success",
+      "http": 200,
+      "business_code": 0,
+      "rows": 0,
+      "id_rows": 0,
+      "sha256": "d5f072338ba15f4853f14c1502eef1b811a3fb417c61e99ba503cb7a0074313a",
+      "path": "reports/haina_probe_20261114_brother_full.json"
+    },
+    {
+      "case": "hp_full",
+      "status": "success",
+      "http": 200,
+      "business_code": 0,
+      "rows": 3,
+      "id_rows": 0,
+      "sha256": "a4379548a972ff2e57816654eddd8a1df6eded653a7ad9cd3083ce185218e02e",
+      "path": "reports/haina_probe_20261114_hp_full.json"
+    },
+    {
+      "case": "hp_ids",
+      "status": "success",
+      "http": 200,
+      "business_code": 0,
+      "rows": 3,
+      "id_rows": 0,
+      "sha256": "19e4bc730a19ce4b8bc140726af7faf4dad77f8817ca24704a179e12722feb2d",
+      "path": "reports/haina_probe_20261114_hp_ids.json"
+    },
+    {
+      "case": "hp_jd",
+      "status": "success",
+      "http": 200,
+      "business_code": 0,
+      "rows": 2,
+      "id_rows": 0,
+      "sha256": "0e3b9d0fc35cfe8c6ee797a9ace5440a7d9af9eb7bde8c8c19b98c2dd1e27dc8",
+      "path": "reports/haina_probe_20261114_hp_jd.json"
+    }
+  ],
+  "mcp_probes": [
+    {
+      "case": "brother_alt_sku",
+      "tool": "product_sku_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "e706d8abf014bb74e9cab25a587bf46809bdaa9ac06b4d5fbf72dca26f972545",
+      "path": "reports/haina_mcp_probe_20261114_brother_alt_sku.json",
+      "sku_entities": [
+        {
+          "name": "兄弟 HL-B2158W 打印机",
+          "spu_id_present": false,
+          "sku_count_reported": 3,
+          "sku_list_length": 3,
+          "sku_positive": 0,
+          "referenced_shop_products": 3,
+          "platform_ids_all_numeric": [
+            false,
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "case": "brother_basic",
+      "tool": "product_basic_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "56573a763cb074885d19062cc6e997d8277036c9b849050364109603c0182878",
+      "path": "reports/haina_mcp_probe_20261114_brother_basic.json",
+      "sku_entities": []
+    },
+    {
+      "case": "brother_comment",
+      "tool": "product_comment_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "581fd1ef9cd736c0482378bf7409d256e62d854a0df88a69a3fc4b0bf0a9746c",
+      "path": "reports/haina_mcp_probe_20261114_brother_comment.json",
+      "sku_entities": []
+    },
+    {
+      "case": "brother_param",
+      "tool": "product_parameter_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "ae16a57baa2b30f6bd7b35d9ef7b8247c3e602a33c97d4b35d70982a148475cb",
+      "path": "reports/haina_mcp_probe_20261114_brother_param.json",
+      "sku_entities": []
+    },
+    {
+      "case": "brother_sku",
+      "tool": "product_sku_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "54bb290f0e981aafce072a700e666c44d2f9c23414b051110fe785d5c9e6bc14",
+      "path": "reports/haina_mcp_probe_20261114_brother_sku.json"
+    },
+    {
+      "case": "brother_sku_detail",
+      "tool": "product_sku_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "132bc4a3ac655928ad6030937abe31152383d7e0f72e5f1495910e9aee59a791",
+      "path": "reports/haina_mcp_probe_20261114_brother_sku_detail.json",
+      "sku_entities": [
+        {
+          "name": "兄弟 HL-L1238W 打印机",
+          "spu_id_present": false,
+          "sku_count_reported": 2,
+          "sku_list_length": 2,
+          "sku_positive": 0,
+          "referenced_shop_products": 2,
+          "platform_ids_all_numeric": [
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "case": "hp_basic",
+      "tool": "product_basic_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "351bd35023cfe168182823204f4e9ecf8639446571e1d15acbb542f66aaa73e6",
+      "path": "reports/haina_mcp_probe_20261114_hp_basic.json",
+      "sku_entities": []
+    },
+    {
+      "case": "hp_comment",
+      "tool": "product_comment_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "19a978bf3d246834fc65dcccd6418f3fef922aa50bc2d9fdfc9ba1c7c616916e",
+      "path": "reports/haina_mcp_probe_20261114_hp_comment.json",
+      "sku_entities": []
+    },
+    {
+      "case": "hp_param",
+      "tool": "product_parameter_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "2d6d927dc4dffdb7a23c96f8834c3e567130dd16211e817ecd25bef38b81664b",
+      "path": "reports/haina_mcp_probe_20261114_hp_param.json",
+      "sku_entities": []
+    },
+    {
+      "case": "hp_sku",
+      "tool": "product_sku_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "836d873822bf9508fd70994ad86dc99609d20865cd03f1fcd6b7551b6c6ac059",
+      "path": "reports/haina_mcp_probe_20261114_hp_sku.json"
+    },
+    {
+      "case": "hp_sku_detail",
+      "tool": "product_sku_search",
+      "http": 200,
+      "business_code": 0,
+      "is_error": false,
+      "attempted_business_tool_calls": 1,
+      "sha256": "104be3767e4629fd19fa0c23e94b4b95a0a7abdddd498490d8061a73fae7a7be",
+      "path": "reports/haina_mcp_probe_20261114_hp_sku_detail.json",
+      "sku_entities": [
+        {
+          "name": "惠普 M232dw 黑白双面激光一体机",
+          "spu_id_present": true,
+          "sku_count_reported": 2,
+          "sku_list_length": 2,
+          "sku_positive": 2,
+          "referenced_shop_products": 7,
+          "platform_ids_all_numeric": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ]
+    }
+  ],
+  "mcp_catalog": {
+    "path": "reports/haina_mcp_tool_catalog_20261114.json",
+    "sha256": "3db54dff9c755270c4f82369572628d717661f47630edd9e5fffd4d636043d44",
+    "tools_count": 10
+  }
+}

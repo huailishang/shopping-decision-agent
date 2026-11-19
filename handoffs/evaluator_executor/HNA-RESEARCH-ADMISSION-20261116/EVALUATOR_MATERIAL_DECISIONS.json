@@ -1,0 +1,56 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "review_role": "independent_evaluator",
+  "reviewed_on": "2026-11-16",
+  "scope": "prefreeze_material_disposition_not_product_admission",
+  "materials": [
+    {
+      "id": "M01",
+      "manifest_note_sha256": "3156996d262d5fedbddb0c38cf5b8ac197fc249e126dd4bf9632544e2c70de52",
+      "decision": "existing_manufacturer_fact_usable_in_limited_attributed_research",
+      "independently_checked": "cached_pdf_pages_1_2_text_and_old_file_sha",
+      "allowed_claims": [
+        "HL-L1238W is named within the series setup guide",
+        "the described WPS connection procedure uses a steady Wi-Fi indicator",
+        "WeChat printing requires binding before first use"
+      ],
+      "forbidden_inferences": [
+        "all households must use WPS",
+        "reopening WeChat or next-day print succeeds",
+        "binding never expires",
+        "current platform sales identity or price is verified"
+      ],
+      "may_support_proposed_checklist": true,
+      "new_actionable_material_approved": false,
+      "admitted_to_normal_chain": false,
+      "reason": "旧来源可继续作限定研究依据；本轮补读未解决复用问题，不因来源旧而删除，也不冒充新增效果证据。"
+    },
+    {
+      "id": "M02",
+      "manifest_note_sha256": "56ab34bb171af6b53b42c02b787ce245e7d458272477afa6a53e951d014786ee",
+      "decision": "search_lead_only_not_independently_source_verified",
+      "may_support_proposed_checklist": false,
+      "new_actionable_material_approved": false,
+      "admitted_to_normal_chain": false,
+      "reason": "没有保存可复核的原始检索结果或原页全文；可登记手动双面线索，不可从中判无自动双面，也不可把Windows流程当微信流程。原案未确认自动双面必需，当前不改资格。"
+    },
+    {
+      "id": "M03",
+      "manifest_note_sha256": "1df9a3ee37c07c23d21da286256d1e96c295c4ec678347996bc153c56e5a2da4",
+      "decision": "generic_faq_search_lead_model_workflow_mapping_unproven",
+      "may_support_proposed_checklist": true,
+      "new_actionable_material_approved": false,
+      "admitted_to_normal_chain": false,
+      "reason": "可提醒今后分别核权限与小程序在线，但准确型号映射和原页未独立核定；首次显示在线不证明重开/隔日复用。"
+    }
+  ],
+  "haina_use_basis": "unknown_not_a_legal_prohibition_verdict",
+  "haina_real_import_approved": false,
+  "new_actionable_materials_approved": 0,
+  "new_normal_chain_imports": 0,
+  "credible_new_effect_tasks": 0,
+  "material_reopen_requirement": "至少一份直接解决实际缺口的可查材料；可以是旧来源中此前未使用且相关的新事实，不要求为了新而换来源。海纳数据另需适用最小用途及原值。",
+  "review_evidence": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/independent_prefreeze_review/RV-EV-02.stdout.log",
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

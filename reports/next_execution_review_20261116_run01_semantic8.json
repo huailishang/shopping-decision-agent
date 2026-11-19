@@ -1,0 +1,64 @@
+{
+  "role": "independent_reviewer",
+  "diagnostic_not_effect": true,
+  "records": [
+    {
+      "region": null,
+      "expected_missing_user_input": true,
+      "actual_region_user_question": true,
+      "next_action": "clarify_user_conditions",
+      "passed": true
+    },
+    {
+      "region": "",
+      "expected_missing_user_input": true,
+      "actual_region_user_question": true,
+      "next_action": "clarify_user_conditions",
+      "passed": true
+    },
+    {
+      "region": "　\t",
+      "expected_missing_user_input": true,
+      "actual_region_user_question": true,
+      "next_action": "clarify_user_conditions",
+      "passed": true
+    },
+    {
+      "region": " ＵＮＫＮＯＷＮ ",
+      "expected_missing_user_input": true,
+      "actual_region_user_question": true,
+      "next_action": "clarify_user_conditions",
+      "passed": true
+    },
+    {
+      "region": "日本",
+      "expected_missing_user_input": false,
+      "actual_region_user_question": false,
+      "next_action": "verify_missing_hard_model_evidence",
+      "passed": true
+    },
+    {
+      "region": "悉尼",
+      "expected_missing_user_input": false,
+      "actual_region_user_question": false,
+      "next_action": "verify_missing_hard_model_evidence",
+      "passed": true
+    },
+    {
+      "region": "Copenhagen",
+      "expected_missing_user_input": false,
+      "actual_region_user_question": false,
+      "next_action": "verify_missing_hard_model_evidence",
+      "passed": true
+    },
+    {
+      "region": "中国大陆",
+      "expected_missing_user_input": false,
+      "actual_region_user_question": false,
+      "next_action": "verify_sale_identity_region_price_and_optional_preferences",
+      "passed": true
+    }
+  ],
+  "total": 8,
+  "passed": 8
+}

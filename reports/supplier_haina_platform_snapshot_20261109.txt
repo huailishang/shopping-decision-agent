@@ -1,0 +1,129 @@
+- generic [ref=e2]:
+  - button "意见反馈" [ref=e3] [cursor=pointer]:
+    - generic [ref=e7]: 反馈
+  - generic [ref=e464]:
+    - region "平台公告" [ref=e466]:
+      - generic [ref=e467]:
+        - generic [ref=e468]: 海纳开放平台目前处于 Beta 测试阶段，接口能力、调用限制及服务策略可能持续调整。
+        - button "查看详情" [ref=e469] [cursor=pointer]
+      - button "关闭公告" [ref=e470] [cursor=pointer]: ×
+    - banner [ref=e471]:
+      - generic [ref=e472]:
+        - link "什么值得买 · 海纳" [ref=e473] [cursor=pointer]:
+          - /url: /
+        - navigation [ref=e475]:
+          - link "海纳 Agent" [ref=e476] [cursor=pointer]:
+            - /url: /haina
+          - link "海纳开放平台" [ref=e477] [cursor=pointer]:
+            - /url: /haina-platform
+        - generic [ref=e478]:
+          - button "联系商务" [ref=e479] [cursor=pointer]
+          - button "登录 / 注册" [ref=e484] [cursor=pointer]
+    - complementary [ref=e485]:
+      - navigation [ref=e486]:
+        - button "概览" [ref=e487] [cursor=pointer]
+        - button "API Key 管理" [ref=e488] [cursor=pointer]
+        - button "使用统计" [ref=e489] [cursor=pointer]
+        - generic [ref=e490]:
+          - button "海纳能力列表 ▾" [expanded] [ref=e491] [cursor=pointer]:
+            - generic [ref=e492]: 海纳能力列表
+            - generic [ref=e493]: ▾
+          - generic [ref=e494]:
+            - button "内容检索 API" [ref=e495] [cursor=pointer]:
+              - generic [ref=e496]: 内容检索
+              - generic [ref=e497]: API
+            - button "内容检索 Pro API" [ref=e498] [cursor=pointer]:
+              - generic [ref=e499]: 内容检索 Pro
+              - generic [ref=e500]: API
+            - button "图搜商品 API" [ref=e501] [cursor=pointer]:
+              - generic [ref=e502]: 图搜商品
+              - generic [ref=e503]: API
+            - button "商品检索 Pro API" [ref=e504] [cursor=pointer]:
+              - generic [ref=e505]: 商品检索 Pro
+              - generic [ref=e506]: API
+            - button "好价检索 Pro API" [ref=e507] [cursor=pointer]:
+              - generic [ref=e508]: 好价检索 Pro
+              - generic [ref=e509]: API
+            - button "知识图谱检索 API" [ref=e510] [cursor=pointer]:
+              - generic [ref=e511]: 知识图谱检索
+              - generic [ref=e512]: API
+            - button "海纳 MCP MCP" [ref=e513] [cursor=pointer]:
+              - generic [ref=e514]: 海纳 MCP
+              - generic [ref=e515]: MCP
+    - main [ref=e516]:
+      - generic [ref=e517]:
+        - generic [ref=e518]:
+          - generic [ref=e519]: 开发者工作台 · BETA
+          - heading "登录后即可申请 API Key、在线调试接口" [level=2] [ref=e520]
+          - list [ref=e521]:
+            - listitem [ref=e522]:
+              - generic [ref=e523]: "1"
+              - generic [ref=e524]: 登录 / 注册
+            - listitem [ref=e525]:
+              - generic [ref=e526]: "2"
+              - generic [ref=e527]: 申请 API Key
+            - listitem [ref=e528]:
+              - generic [ref=e529]: "3"
+              - generic [ref=e530]: 开通接口能力
+            - listitem [ref=e531]:
+              - generic [ref=e532]: "4"
+              - generic [ref=e533]: 调试与调用
+          - generic [ref=e534]:
+            - button [ref=e535] [cursor=pointer]:
+              - strong [ref=e536]: 内容检索
+              - paragraph [ref=e537]: 检索值得买社区及外部内容平台，支持问题改写、相关性增强、时间和来源过滤。
+            - button [ref=e538] [cursor=pointer]:
+              - strong [ref=e539]: 内容检索 Pro
+              - paragraph [ref=e540]: 全网内容检索增强版，支持时间范围、召回数、增强排序与问题改写。
+            - button [ref=e541] [cursor=pointer]:
+              - strong [ref=e542]: 图搜商品
+              - paragraph [ref=e543]: 输入公网可访问的图片 URL，识别相似商品并返回商品图、品牌、类目及匹配分数。
+            - button [ref=e544] [cursor=pointer]:
+              - strong [ref=e545]: 商品检索 Pro
+              - paragraph [ref=e546]: 按商品词召回商品，支持商城、品牌、类目、整数价格区间、排序和字段裁剪。
+            - button [ref=e547] [cursor=pointer]:
+              - strong [ref=e548]: 好价检索 Pro
+              - paragraph [ref=e549]: 按商品词检索好价内容，支持 query 处理、返回数量和字段裁剪。
+            - button [ref=e550] [cursor=pointer]:
+              - strong [ref=e551]: 知识图谱检索
+              - paragraph [ref=e552]: 基于知识图谱精准查询型号级产品，返回实体信息、核心参数、价格、特征及评价证据。
+          - button "MCP 海纳 MCP 以 MCP Server（Streamable HTTP）形式开放海纳能力，大模型与 Agent 可直接把能力当作工具调用。 查看接入文档 →" [ref=e553] [cursor=pointer]:
+            - generic [ref=e554]: MCP
+            - generic [ref=e555]:
+              - strong [ref=e556]: 海纳 MCP
+              - generic [ref=e557]: 以 MCP Server（Streamable HTTP）形式开放海纳能力，大模型与 Agent 可直接把能力当作工具调用。
+            - emphasis [ref=e558]: 查看接入文档 →
+          - paragraph [ref=e559]:
+            - text: 有大规模调用或商务合作需求？
+            - button "联系商务" [ref=e560] [cursor=pointer]
+        - generic [ref=e561]:
+          - heading "登录开放平台" [level=2] [ref=e562]
+          - generic [ref=e563]: 手机号 + 短信验证码，首次登录自动注册
+          - generic [ref=e564]:
+            - generic [ref=e565]:
+              - generic [ref=e566]: 手机号
+              - textbox "手机号" [ref=e567]:
+                - /placeholder: 请输入 11 位手机号
+            - generic [ref=e568]:
+              - generic [ref=e569]: 人机验证
+              - generic [ref=e573]:
+                - generic [ref=e574]:
+                  - checkbox "我不是机器人" [ref=e576] [cursor=pointer]
+                  - generic [ref=e579]: 我不是机器人
+                - link [aria-hidden] [ref=e581] [cursor=pointer]:
+                  - /url: https://altcha.org
+            - generic [ref=e586]:
+              - generic [ref=e587]: 验证码
+              - generic [ref=e588]:
+                - textbox "验证码" [ref=e589]:
+                  - /placeholder: 6 位验证码
+                - button "获取验证码" [disabled] [ref=e590]
+            - generic [ref=e591] [cursor=pointer]:
+              - checkbox "已阅读并同意《用户协议》与《隐私政策》，首次验证即完成注册" [checked] [ref=e592]
+              - generic [ref=e593]: 已阅读并同意《用户协议》与《隐私政策》，首次验证即完成注册
+            - button "登录 / 注册" [ref=e594] [cursor=pointer]
+            - status [ref=e595]
+          - list [ref=e596]:
+            - listitem [ref=e597]: 测试 Key 免费申请，审核通过后即可调用
+            - listitem [ref=e598]: 一个 Key 通用全部海纳能力与 MCP
+            - listitem [ref=e599]: 在线调试、示例代码开箱即用

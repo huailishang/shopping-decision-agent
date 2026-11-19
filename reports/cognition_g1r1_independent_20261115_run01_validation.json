@@ -1,0 +1,169 @@
+{
+  "role": "independent_evaluator",
+  "date": "2026-11-15",
+  "results": {
+    "nearby8": {
+      "command": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "reports.independent_cognition_g123_recheck_20261115",
+        "--output",
+        "reports/cognition_g1r1_independent_20261115_run01_nearby8.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.781,
+      "stdout": "{\"total\": 8, \"passed\": 8, \"failed_ids\": [], \"finding_groups\": []}\n",
+      "stderr": ""
+    },
+    "known21": {
+      "command": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "reports.independent_cognition_printer_20261115",
+        "--output",
+        "reports/cognition_g1r1_independent_20261115_run01_known21.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.688,
+      "stdout": "{\"total\": 21, \"passed\": 21, \"failed_ids\": [], \"finding_groups\": []}\n",
+      "stderr": ""
+    },
+    "cli11": {
+      "command": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "scripts.cognition_case_replay",
+        "--output",
+        "reports/cognition_g1r1_independent_20261115_run01_cli11.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.812,
+      "stdout": "{\"rounds\": 11, \"budget_3000\": \"at_or_below\", \"volume_250_300\": \"within\", \"color_exclusions\": 2, \"purchase_approved\": false, \"output\": \"reports\\\\cognition_g1r1_independent_20261115_run01_cli11.json\"}\n",
+      "stderr": ""
+    },
+    "javac17_target": {
+      "command": [
+        "javac",
+        "--release",
+        "17",
+        "-encoding",
+        "UTF-8",
+        "-d",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\.h08-build\\g1r1-independent-20261115-run01",
+        "desktop/DesktopBridgeClient.java",
+        "desktop/ShoppingDecisionDesktop.java",
+        "desktop/P04MarketplaceRegression.java"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.047,
+      "stdout": "",
+      "stderr": ""
+    },
+    "p04": {
+      "command": [
+        "java",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\.h08-build\\g1r1-independent-20261115-run01",
+        "P04MarketplaceRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.781,
+      "stdout": "PASS official browser search URL\nPASS malformed search query refused\nPASS Java->Python subprocess 3 candidate URLs, zero quotes\nPASS spoofed URL rejected\nPASS Taobao browser search URL\nPASS Java->Python Taobao user link validation\nP04 Java marketplace regression: 6/6 PASS\n",
+      "stderr": ""
+    },
+    "full_suite": {
+      "command": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 80.672,
+      "stdout": "",
+      "stderr": "127.0.0.1 - - [15/Nov/2026 21:58:52] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [15/Nov/2026 21:58:52] \"POST /api/decide HTTP/1.1\" 200 -\n127.0.0.1 - - [15/Nov/2026 21:58:52] \"POST /api/decide HTTP/1.1\" 400 -\n----------------------------------------------------------------------\nRan 394 tests in 79.346s\n\nOK\n"
+    }
+  },
+  "baseline": "reports\\cognition_g1r1_independent_20261115_run01_baseline.json",
+  "protected_file_count": 466,
+  "changed_original_files": [],
+  "new_combinations": "reports\\cognition_g1r1_independent_20261115_run01_variants.json",
+  "core_checks_passed": true,
+  "business_api_calls": 0,
+  "credential_reads": 0,
+  "new_real_haina_inputs": 0,
+  "verified_platform_identities": 0,
+  "regional_live_quotes": 0,
+  "purchase_approved": false,
+  "transactions_enabled": false,
+  "gui": {
+    "status": "passed_bounded_independent_window_check",
+    "method": "computer-use skill; sky API through node_repl; synthetic input, no human UX or hardware claim",
+    "audit": "reports/cognition_g1r1_independent_20261115_run01_gui.txt",
+    "audit_bytes": 57390,
+    "audit_sha256": "7900b95734f6d81844dbfcc6d5cc1a96739c432c098d1f6869a953084bc6807c",
+    "raw_request": "独立合成复核：必须微信打印，接受文件转存到厂商App后打印。",
+    "raw_wechat_required": null,
+    "workflow": "transfer_to_app",
+    "normalized_hard_requirement": true,
+    "pending_models": [
+      "HL-L1238W",
+      "M232dw"
+    ],
+    "eligible_models": [],
+    "all_wechat_relations": "other_workflow_unverified",
+    "active_decisions": [],
+    "purchase_approved": false,
+    "transactions_enabled": false,
+    "window_pid": 25524,
+    "window_closed_observed": true,
+    "limits": "other user fields largely unknown; not full original case new confirmation or full GUI suite"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "java_runtime": "21.0.7",
+    "javac": "21.0.7",
+    "java_target": "17",
+    "PYTHONUTF8": "1",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "changed_original_files_after_gui": [],
+  "bounded_review_verdict": "PASS_G1_R1_original_scope_no_observed_related_regression",
+  "overall_project_verdict": "NOT_PASS_H1_missing_H2_zero_H3_zero",
+  "handoff_merge": {
+    "status": "complete",
+    "long_package": "handoffs/真实打印机认知决策效果验证_下一长执行包_20261115.md",
+    "Q0": "passed_bounded_G1R1_baseline",
+    "next_step": "S0_version_check_then_S1_real_materials",
+    "long_package_implementation_started": false,
+    "sent_to_another_thread": false,
+    "changed_baseline_files_only_planned_documents": [
+      "docs/PROJECT_BOTTLENECK_MAP.md",
+      "handoffs/真实打印机认知决策效果验证_下一长执行包_20261115.md",
+      "handoffs/认知驱动打印机比较_G1R1独立复核并入长包_20261115.md",
+      "CURRENT.md"
+    ],
+    "business_knowledge_tests_and_original_reports_unchanged": true,
+    "checked_local_links": 34,
+    "missing_links": []
+  },
+  "final_document_hashes": {
+    "reports/认知驱动打印机比较_G1R1独立复核报告_20261115.md": "a3c3372f988529d5f961844f3ee1e707e3a73c12420641bd92bbd74040d8e578",
+    "CURRENT.md": "768476701de98a70417a181995333ceab921585f3839fea1fefaf69bede1c34f",
+    "docs/PROJECT_BOTTLENECK_MAP.md": "3501ec75786740641af95c79703d306d1cf86fe79a603241d695e91b7a06de20",
+    "handoffs/真实打印机认知决策效果验证_下一长执行包_20261115.md": "a612ca497627740eee1f36dcb8baa0510f1755e229e076a53539c19d3d9033fe",
+    "handoffs/认知驱动打印机比较_G1R1独立复核并入长包_20261115.md": "ba293faead7d0392a636306b0c0be3e9ed12e446eb851aeb818f51a71f44f3be"
+  }
+}

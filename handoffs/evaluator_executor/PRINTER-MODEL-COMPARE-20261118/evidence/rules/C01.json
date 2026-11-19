@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "input_sha256": "766a0c46dc06e73c65f7426db7d2202fe371af9d775f057b6d3ad0f001bb4e79",
+  "mode": "deterministic_research",
+  "assessments": [
+    {
+      "candidate_id": "HL-L1238W",
+      "comparisons": [
+        {
+          "requirement_id": "wechat",
+          "dimension": "wechat_reuse",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "budget",
+          "dimension": "live_price",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "setup",
+          "dimension": "setup_documented",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "BROTHER-FIRST-SETUP-setup_documented"
+          ],
+          "ignored_fact_ids": []
+        }
+      ],
+      "research_status": "pending_evidence"
+    },
+    {
+      "candidate_id": "M232dw",
+      "comparisons": [
+        {
+          "requirement_id": "wechat",
+          "dimension": "wechat_reuse",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "budget",
+          "dimension": "live_price",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "setup",
+          "dimension": "setup_documented",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "HP-FIRST-SETUP-setup_documented"
+          ],
+          "ignored_fact_ids": []
+        }
+      ],
+      "research_status": "pending_evidence"
+    }
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false,
+  "wechat_reuse_verified": false,
+  "real_user_effect_verified": false
+}

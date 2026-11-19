@@ -1,0 +1,22 @@
+{
+  "name": "VP-03",
+  "started_at_utc": "2026-11-19T07:25:24.643566+00:00",
+  "finished_at_utc": "2026-11-19T07:25:37.426678+00:00",
+  "duration_sec": 12.743,
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "scripts/run_model_comparison_experiment.py",
+    "--audit",
+    "--task",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+  ],
+  "exit_code": 1,
+  "expected_exit_code": 1,
+  "stdout_sha256": "98582b6616cc6e4f37d1474da28fe7bf78b7902f51d062284b75a078c8e51317",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observed_stderr_tail": "",
+  "observed_stdout_tail": "{\"status\": \"failed\", \"reason\": \"model cases not attempted: C05,C06,C07\"}\n",
+  "pass_expected_exit": true
+}

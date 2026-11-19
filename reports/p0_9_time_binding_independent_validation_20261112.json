@@ -1,0 +1,126 @@
+{
+  "task": "P0.9_frozen_observation_independent_reassessment_and_next_package",
+  "date": "2026-11-12",
+  "role": "independent_reviewer",
+  "reviewed_file_sha256": {
+    "shopping_decision/p0_7_official_details.py": "33a73c87d280c1e295114b3df2b172355c2e94f1b96c444642c1cd03745ede58",
+    "tests/test_p0_9_observed_at_binding.py": "0d4f5321f13fc8e0445b160f723e2e1f79ae93de1ff32956abe4cd4524e0eb7f",
+    "shopping_decision/dialogue_flow.py": "dd52137567838905b18bfbe385746e9dc68f367efe2531eeca5642eaa5b78d7d",
+    "shopping_decision/discovery_pool.py": "284ad69f973466f13a024746defb6aed3f06bde510f269c61fb2d961e92c375f",
+    "shopping_decision/haina_ingest.py": "e304d71a40a97ee51cc46dd8297143d44001dfa00c4bd0e67964402ef99e43c2"
+  },
+  "verdict": {
+    "latest_observation_binding_repair": "passed",
+    "previous_unique_P2": "closed",
+    "limited_local_fact_admission_and_report_boundary": "passed_with_scope_limits",
+    "P0_9_overall": "not_passed",
+    "real_AC3_AC4": "blocked_or_not_passed",
+    "real_listing_configuration_positive_count": 0,
+    "verified_regional_quotes": 0,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "validation": {
+    "independent_diagnostics": {
+      "command": "D:/SoftWare/Python/install/python.exe reports/p0_9_time_binding_independent_20261112.py",
+      "exit_code": 0,
+      "passed": 134,
+      "total": 134,
+      "result": "reports/p0_9_time_binding_independent_20261112.json",
+      "composition": "new_variants_plus_original_exploit_positive_controls_normal_entry_and_source_integrity",
+      "groups": {
+        "original_positive": 3,
+        "changed_time_rejected": 78,
+        "equivalent_instant_accepted": 36,
+        "simulated_age_boundary": 9,
+        "unreviewed_isolation": 3,
+        "normal_entry_rejects_refresh": 3,
+        "normal_cli": 1,
+        "source_unchanged": 1
+      }
+    },
+    "windows_native_full_suite": {
+      "interpreter": "D:/SoftWare/Python/install/python.exe",
+      "version": "3.12.3",
+      "command": "python -m unittest discover -s tests -q",
+      "removed_environment_variables": ["PYTHONUTF8", "PYTHONIOENCODING"],
+      "extra_python_encoding_flags": [],
+      "exit_code": 0,
+      "passed": 328,
+      "total": 328,
+      "unittest_elapsed_seconds": 27.394,
+      "wrapper_elapsed_seconds": 28.215
+    },
+    "h05": {
+      "command": "D:/SoftWare/Python/install/python.exe -m shopping_decision.h05_probes --output reports/p0_9_time_binding_independent_h05_20261112.json",
+      "exit_code": 0,
+      "passed": 8,
+      "total": 8,
+      "result": "reports/p0_9_time_binding_independent_h05_20261112.json"
+    },
+    "java_compile": {
+      "compiler_version": "javac 21.0.7",
+      "command": "javac -encoding UTF-8 --release 17 -d .h08-build desktop/DesktopBridgeClient.java desktop/ShoppingDecisionDesktop.java desktop/P04MarketplaceRegression.java desktop/H10JavaRegression.java",
+      "exit_code": 0,
+      "status": "passed_java17_target"
+    },
+    "java_P04": {
+      "command": "java -Djava.awt.headless=true -cp .h08-build P04MarketplaceRegression D:/SoftWare/Python/install/python.exe",
+      "exit_code": 0,
+      "passed": 6,
+      "total": 6
+    },
+    "java_H10": {
+      "command": "java -Djava.awt.headless=true -cp .h08-build H10JavaRegression D:/SoftWare/Python/install/python.exe",
+      "exit_code": 0,
+      "passed": 6,
+      "total": 6
+    },
+    "tracked_diff_check": {
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "exit_code": 0,
+      "status": "passed"
+    },
+    "manual_gui": "not_run",
+    "wsl_this_review": "not_run",
+    "new_artifact_utf8_whitespace_and_relative_links": "passed_no_missing_links"
+  },
+  "public_document_read_attempt": {
+    "platform_entry": "https://ai.zhidemai.com/haina-platform",
+    "platform_result": "no_readable_lines",
+    "archived_product_doc_entry": "https://ai.zhidemai.com/haina-platform/product_search_pro",
+    "product_doc_result": "not_accessible_via_web_tool",
+    "current_basic_information_or_sku_contract": "unknown_not_inferred_from_failed_fetch"
+  },
+  "next_package": {
+    "file": "handoffs/P0_9_B_商品身份与所售配置闭环_执行包_20261112.md",
+    "state": "planned_not_implemented",
+    "steps": 8,
+    "new_work_hour_ceiling": 32,
+    "step_hour_allocations": [1, 4, 4, 6, 6, 5, 5, 1],
+    "original_package_remaining_hours": "unknown_not_claimed",
+    "original_sample_denominator": 20,
+    "maximum_deep_listing_samples": 6,
+    "minimum_real_distinct_model_positives": 2,
+    "developer_scenarios_minimum": 18,
+    "independent_new_variants_minimum": 10,
+    "public_requests_ceiling": 20,
+    "new_haina_business_call_budget": 0,
+    "paid_budget": 0
+  },
+  "boundaries": {
+    "credential_reads": 0,
+    "new_haina_business_calls": 0,
+    "paid_calls": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "external_messages": 0,
+    "business_code_modified": false,
+    "historical_reports_overwritten": false,
+    "original_manifest_or_html_modified": false,
+    "git_commit": false,
+    "git_push": false
+  },
+  "report": "reports/P0_9_时间绑定独立复验报告_20261112.md",
+  "handoff": "handoffs/P0_9_时间绑定独立复验与下一包_20261112.md"
+}

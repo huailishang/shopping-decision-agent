@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "case_id": "PRINTER-HENAN-FAMILY-20261116",
+  "input_basis": "project_owner_proxy",
+  "flow_status": "research_delivered_with_limits",
+  "evidence_pack_id": "setup_empty",
+  "used_facts": [],
+  "source_registry": {},
+  "new_external_fact_count": 0,
+  "processed_stages": [
+    "requirements",
+    "evidence",
+    "comparison",
+    "explanation"
+  ],
+  "candidate_assessments": [
+    {
+      "model_id": "HL-L1238W",
+      "supported_claim_ids": [],
+      "research_status": "pending_evidence",
+      "reason": "本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料包没有该型号可用的首次设置依据；保持待核，不等于不支持或已支持。",
+      "positive_evidence": [],
+      "counter_evidence": [
+        "缺少本次选定资料，不能作支持或不支持的断言"
+      ],
+      "unknown_fields": [
+        "wechat_reuse",
+        "live_price",
+        "long_term_reliability",
+        "required_wechat_workflow_unconfirmed"
+      ]
+    },
+    {
+      "model_id": "M232dw",
+      "supported_claim_ids": [],
+      "research_status": "pending_evidence",
+      "reason": "本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料包没有该型号可用的首次设置依据；保持待核，不等于不支持或已支持。",
+      "positive_evidence": [],
+      "counter_evidence": [
+        "缺少本次选定资料，不能作支持或不支持的断言"
+      ],
+      "unknown_fields": [
+        "wechat_reuse",
+        "live_price",
+        "long_term_reliability",
+        "required_wechat_workflow_unconfirmed"
+      ]
+    }
+  ],
+  "condition_conflicts": [],
+  "wechat_requirement_status": "required",
+  "report_text": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量0—50页，黑白为主；首次App/扫码设置：接受。\n本次证据包：setup_empty，其中0条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料包没有该型号可用的首次设置依据；保持待核，不等于不支持或已支持。 仅有研究状态待核。\nHP M232dw：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料包没有该型号可用的首次设置依据；保持待核，不等于不支持或已支持。 仅有研究状态待核。\n现有明确条件包含微信打印必须项：优先核准确型号要求的方式与第二次微信打印证据，首次设置说明不能证明复用；无需重复询问微信是否必须。\n明确硬要求尚无本次选包依据，先逐型号核证而不判支持：wechat_workflow_unconfirmed。其他已知研究仍可继续。\n本次选定来源：无，本次选包没有可用型号来源\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。",
+  "feedback": {
+    "status": "not_collected",
+    "actual_response_count": 0,
+    "questions_prepared_not_sent": [
+      "微信打印是一定需要，还是有就更好？",
+      "两款型号中哪些功能对日常打印最重要？",
+      "您愿意以后自愿记录一次实际操作体验吗？"
+    ]
+  },
+  "next_actions": [
+    {
+      "action": "verify_wechat_reuse_if_needed",
+      "owner_role": "需求提出者或自愿参与的设备持有人",
+      "exact_item": "已明确微信为硬条件，核具体微信路径及第二次打印条件（不收集账号密码）"
+    },
+    {
+      "action": "verify_remaining_product_facts",
+      "owner_role": "研究执行者/厂家官方支持",
+      "exact_item": "按两款分别补本次没有的型号事实；购买前另向销售方核所售型号、河南实时报价、运费和耗材"
+    }
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "wechat_reuse_verified": false,
+  "live_price_verified": false,
+  "long_term_reliability_verified": false,
+  "real_user_effect_verified": false
+}

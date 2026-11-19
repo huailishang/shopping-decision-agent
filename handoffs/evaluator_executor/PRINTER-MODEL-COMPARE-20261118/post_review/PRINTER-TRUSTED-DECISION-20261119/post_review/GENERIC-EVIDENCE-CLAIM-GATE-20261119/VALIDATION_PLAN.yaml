@@ -1,0 +1,72 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: GENERIC-EVIDENCE-CLAIM-GATE-20261119
+run_mode: local_offline_only
+mandatory: true
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-03, AC-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_claim_gate.py, -v]
+    expected_exit_code: 0
+    must_have_cases:
+      - numeric_rule_correct_but_opposite_summary_and_explanation
+      - tradeoff_cites_other_candidate_or_dimension
+      - action_kind_research_but_description_says_buy_now
+      - listing_sku_not_a_regionally_valid_price_or_current_stock
+      - source_is_index_only_or_series_only_for_exact_model
+      - input_change_or_source_revocation_removes_prior_verified_claim
+      - missing_or_conflicting_fact_remains_unknown_or_conflict
+      - generic_second_nonprinter_category_same_gate
+      - valid_verified_claim_and_public_text_positive
+    note: Require a concrete sample user-facing output replay, not only assertions on internal metadata
+  - id: VP-02
+    ac: [AC-01, AC-03, AC-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_model_comparison.py, -v]
+    expected_exit_code: 0
+    note: Existing model adapter regressions must still pass
+  - id: VP-03
+    ac: [AC-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+  - id: VP-04
+    ac: [AC-05]
+    command: [python3, -X, utf8, scripts/run_model_comparison_experiment.py, --audit, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 1
+    expected_reason_contains: "model cases not attempted: C05,C06,C07"
+    note: Expected historical FAIL, not proof that historical model comparison PASSED
+  - id: VP-05
+    ac: [AC-02, AC-03, AC-04]
+    method: independent_read_only_publication_replay
+    command_template: "python3 -X utf8 scripts/verify_claim_publication.py --input <synthetic-test-or-prior-matrix> --out <new-evidence-path>"
+    must_observe:
+      - malicious_raw_summary_never_appears_as_verified_text
+      - correct_numeric_and_categorical_status_from_deterministic_rules
+      - listing_and_series_source_claims_scope_downgraded
+      - missing_provenance_not_autoupgraded
+      - rule_model_and_manual_ingest_use_same_claim_gate
+      - all_output_claims_refer_to_verified_structural_claim_ids
+      - no_purchase_authority_and_no_live_price_without_regional_quote
+  - id: VP-06
+    ac: [AC-05]
+    method: frozen_baseline_and_git_scope_comparison
+    must_observe:
+      - protected_input_sha256_unchanged
+      - baseline_sha256_valid
+      - no_old_live_receipt_modification
+      - no_model_inference_and_no_public_research_calls
+      - all_changes_in_allowlist_or_explicit_one_file_exception
+      - no_git_commit_push_payment_or_login
+  - id: VP-07
+    ac: [AC-01, AC-02, AC-04]
+    method: source_to_claim_manual_independent_counterexamples
+    must_observe:
+      - a_link_to_official_page_is_not_sufficient_to_prove_claim_content
+      - explanation_text_cannot_override_failed_budget
+      - model_historical_or_ineligible_source_cannot_turn_into_current_region_quote
+      - showing_research_progress_does_not_label_user_decision_gain
+review_rules:
+  - Engine may support verified statuses without claiming arbitrary natural-language entailment
+  - Test count is not evidence of complete publication coverage
+  - Freeform model/human text may be stored for audit, but must not be included in public verified decisions
+  - No API/Git/public source actions in this task
+  - No claim that all legacy GUI and CLI entry points are upgraded without matching smoke checks
+  - Evaluator verifies exact original failure reproduction and that mitigations block it in real outputs

@@ -1,0 +1,2753 @@
+{
+  "role": "independent_reviewer",
+  "date": "2026-11-13",
+  "observed_at": "2026-11-13T14:32:26.168074+00:00",
+  "new_total": 21,
+  "new_passed": 21,
+  "failed_ids": [],
+  "cases": [
+    {
+      "id": "new_complete_positive_control",
+      "expected": "complete synthetic binding retained without real approval",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "63547001",
+            "selected_sku_id": "63547002",
+            "seller_id": "s2_new_seller",
+            "selected_model_id": "HL-10W",
+            "observed_at": "2026-11-13T11:32:26.168074+00:00",
+            "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+            "source_id": "synthetic:s2_new_source",
+            "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+            "source_ref": "synthetic:s2_new_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:s2_platform_item_id",
+              "seller_id": "synthetic:s2_seller_id",
+              "selected_variant": "synthetic:s2_selected_variant",
+              "selected_model_id": "synthetic:s2_selected_model_id",
+              "item_kind": "synthetic:s2_item_kind",
+              "condition": "synthetic:s2_condition",
+              "selected_sku_id": "synthetic:s2_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "legitimate_use_reduction_minimal_audit",
+      "expected": "valid use loss invalidates source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "legitimate_use_reduction_user_display",
+      "expected": "valid use loss invalidates source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "legitimate_use_reduction_local_parse_user_display",
+      "expected": "valid use loss invalidates source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "legitimate_use_reduction_minimal_audit_local_parse",
+      "expected": "valid use loss invalidates source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "legitimate_use_reduction_minimal_audit_user_display",
+      "expected": "valid use loss invalidates source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "legal_withdrawal_permuted_uses_and_utc_equivalence",
+      "expected": "valid normalized same event withdraws",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "review_withdrawn_or_unconfirmed"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "63547001",
+            "selected_sku_id": "63547002",
+            "seller_id": "s2_new_seller",
+            "selected_model_id": "HL-10W",
+            "observed_at": "2026-11-13T11:32:26.168074+00:00",
+            "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+            "source_id": "synthetic:s2_new_source",
+            "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+            "source_ref": "synthetic:s2_new_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:s2_platform_item_id",
+              "seller_id": "synthetic:s2_seller_id",
+              "selected_variant": "synthetic:s2_selected_variant",
+              "selected_model_id": "synthetic:s2_selected_model_id",
+              "item_kind": "synthetic:s2_item_kind",
+              "condition": "synthetic:s2_condition",
+              "selected_sku_id": "synthetic:s2_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_same_source_invalidated_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_status_object",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_status_boolean",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_source_anchor_url",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_uppercase_digest",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "source_hash_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "source_hash_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_wrong_bundle",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "not_single_new_printer"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "not_single_new_printer"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_unicode_sku_digits",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "sku_id_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "sku_id_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_mismatched_title",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_unknown_anchor",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "invalid_event_expired_event",
+      "expected": "bad event rejected without affecting valid source in either order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "utc_out_of_range_withdrawn",
+      "expected": "invalid normalized event rejected while good row remains",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "utc_out_of_range_permission_loss",
+      "expected": "invalid normalized event rejected while good row remains",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "63547001",
+              "selected_sku_id": "63547002",
+              "seller_id": "s2_new_seller",
+              "selected_model_id": "HL-10W",
+              "observed_at": "2026-11-13T11:32:26.168074+00:00",
+              "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+              "source_id": "synthetic:s2_new_source",
+              "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+              "source_ref": "synthetic:s2_new_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:s2_platform_item_id",
+                "seller_id": "synthetic:s2_seller_id",
+                "selected_variant": "synthetic:s2_selected_variant",
+                "selected_model_id": "synthetic:s2_selected_model_id",
+                "item_kind": "synthetic:s2_item_kind",
+                "condition": "synthetic:s2_condition",
+                "selected_sku_id": "synthetic:s2_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ],
+      "expectation_met": true
+    },
+    {
+      "id": "new_valid_use_loss_independent_source_survives",
+      "expected": "only event source invalidated",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 3,
+        "accepted_rows": 2,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "required_local_uses_not_evidenced"
+          }
+        ],
+        "configuration_count": 2,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "63547001",
+            "selected_sku_id": "63547002",
+            "seller_id": "s2_new_seller",
+            "selected_model_id": "HL-10W",
+            "observed_at": "2026-11-13T11:32:26.168074+00:00",
+            "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+            "source_id": "synthetic:s2_new_source",
+            "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+            "source_ref": "synthetic:s2_new_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:s2_platform_item_id",
+              "seller_id": "synthetic:s2_seller_id",
+              "selected_variant": "synthetic:s2_selected_variant",
+              "selected_model_id": "synthetic:s2_selected_model_id",
+              "item_kind": "synthetic:s2_item_kind",
+              "condition": "synthetic:s2_condition",
+              "selected_sku_id": "synthetic:s2_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_same_source_invalidated_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          },
+          {
+            "platform": "JD",
+            "platform_item_id": "63547001",
+            "selected_sku_id": "63547002",
+            "seller_id": "s2_new_seller",
+            "selected_model_id": "HL-10W",
+            "observed_at": "2026-11-13T11:32:26.168074+00:00",
+            "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+            "source_id": "synthetic:s2_other",
+            "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+            "source_ref": "synthetic:s2_other_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:s2_platform_item_id",
+              "seller_id": "synthetic:s2_seller_id",
+              "selected_variant": "synthetic:s2_selected_variant",
+              "selected_model_id": "synthetic:s2_selected_model_id",
+              "item_kind": "synthetic:s2_item_kind",
+              "condition": "synthetic:s2_condition",
+              "selected_sku_id": "synthetic:s2_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "cli_utc_out_of_range_rejected_without_crash",
+      "expected": "CLI retains valid configuration and rejects bad expiry",
+      "actual": {
+        "returncode": 0,
+        "rows": [
+          {
+            "status": "ready",
+            "questions": [
+              {
+                "field": "category",
+                "question": "准备买什么类别的商品？",
+                "why": "决定下一步查询哪些有来源的商品目录",
+                "status": "user_confirmation_needed"
+              }
+            ]
+          },
+          {
+            "version": 1,
+            "questions": [
+              {
+                "field": "accepts_outsourced_color",
+                "question": "偶尔要彩印时，可以去打印店解决吗？",
+                "why": "决定是否只比较黑白打印机",
+                "status": "user_confirmation_needed"
+              },
+              {
+                "field": "budget_max_cny",
+                "question": "主机预算大约是多少元？",
+                "why": "帮助安排价格核验，不会直接判断到手价",
+                "status": "user_confirmation_needed"
+              }
+            ],
+            "comparison": {
+              "session_version": 1,
+              "purchase_recommendation_approved": false,
+              "transactions_enabled": false,
+              "status": "model_facts_only_not_purchase",
+              "source_mode": "recorded_manufacturer_detail_replay_no_network",
+              "questions": [
+                "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+              ],
+              "unresolved_actions": [
+                {
+                  "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+                  "state": "optional_confirmation_or_defer"
+                }
+              ],
+              "comparison": {
+                "operation": "injected_manufacturer_facts_only",
+                "comparison": {
+                  "status": "facts_comparison_only",
+                  "category": "printer",
+                  "catalog_recorded_on": "2026-11-04",
+                  "catalog_age_days": 9,
+                  "catalog_source_kind": "manufacturer_public_pages",
+                  "searched_models": 9,
+                  "purchase_recommendation_approved": false,
+                  "all_prices_real_time_verified": false,
+                  "transactions_enabled": false,
+                  "constraints": {
+                    "required": {
+                      "monochrome_print": true,
+                      "wireless": true
+                    },
+                    "preferred": {},
+                    "budget_max_cny": null
+                  },
+                  "candidates": [
+                    {
+                      "model_id": "HL-10W",
+                      "brand": "Brother",
+                      "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+                      "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+                      "status": "specs_matched_not_purchase_approved",
+                      "required_met": [
+                        "monochrome_print",
+                        "wireless"
+                      ],
+                      "required_unknown": [],
+                      "required_failed": [],
+                      "preferred_met": [],
+                      "preferred_unknown": [],
+                      "preferred_failed": [],
+                      "evidence_by_feature": {
+                        "monochrome_print": "https://www.brother.cn/printer/prt/hl-10w",
+                        "wireless": "https://www.brother.cn/printer/prt/hl-10w"
+                      },
+                      "budget_status": "not_checked",
+                      "live_price_cny": null,
+                      "marketplace_sku": null,
+                      "manufacturer_suggested_retail_cny": null,
+                      "manufacturer_suggested_retail_is_live_price": false,
+                      "consumables": [],
+                      "manufacturer_detail_evidence": {
+                        "observed_at": "2026-11-09T14:01:03.133068+00:00",
+                        "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+                        "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+                        "billing_model": "buy_print_pages_to_claim_consumables",
+                        "admission": "frozen_p0_8_local_field_review"
+                      },
+                      "manufacturer_detail_age_days": 4,
+                      "manufacturer_detail_is_stale": false,
+                      "billing_model": "buy_print_pages_to_claim_consumables",
+                      "durability_independently_verified": false,
+                      "unknowns": [
+                        "独立耐用性/故障率未核实",
+                        "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+                      ]
+                    },
+                    {
+                      "model_id": "HL-B2158W",
+                      "brand": "Brother",
+                      "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+                      "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                      "status": "specs_matched_not_purchase_approved",
+                      "required_met": [
+                        "monochrome_print",
+                        "wireless"
+                      ],
+                      "required_unknown": [],
+                      "required_failed": [],
+                      "preferred_met": [],
+                      "preferred_unknown": [],
+                      "preferred_failed": [],
+                      "evidence_by_feature": {
+                        "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2158w",
+                        "wireless": "https://www.brother.cn/printer/prt/hl-b2158w"
+                      },
+                      "budget_status": "not_checked",
+                      "live_price_cny": null,
+                      "marketplace_sku": null,
+                      "manufacturer_suggested_retail_cny": null,
+                      "manufacturer_suggested_retail_is_live_price": false,
+                      "consumables": [
+                        {
+                          "model": "TNB020",
+                          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                        },
+                        {
+                          "model": "DRB020",
+                          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                        }
+                      ],
+                      "manufacturer_detail_evidence": {
+                        "observed_at": "2026-11-09T14:01:04.511646+00:00",
+                        "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                        "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+                        "billing_model": "unknown",
+                        "admission": "frozen_p0_8_local_field_review"
+                      },
+                      "manufacturer_detail_age_days": 4,
+                      "manufacturer_detail_is_stale": false,
+                      "billing_model": "unknown",
+                      "durability_independently_verified": false,
+                      "unknowns": [
+                        "独立耐用性/故障率未核实"
+                      ]
+                    },
+                    {
+                      "model_id": "HL-L1228",
+                      "brand": "Brother",
+                      "name": "兄弟 HL-L1228 黑白激光打印机",
+                      "official_url": "https://www.brother.cn/printer/prt/hl-l1228",
+                      "status": "excluded_by_verified_spec",
+                      "required_met": [
+                        "monochrome_print"
+                      ],
+                      "required_unknown": [],
+                      "required_failed": [
+                        "wireless"
+                      ],
+                      "preferred_met": [],
+                      "preferred_unknown": [],
+                      "preferred_failed": [],
+                      "evidence_by_feature": {
+                        "monochrome_print": "https://www.brother.cn/printer/prt/hl-l1228",
+                        "wireless": "https://www.brother.cn/printer/prt/hl-l1228"
+                      },
+                      "budget_status": "not_checked",
+                      "live_price_cny": null,
+                      "marketplace_sku": null,
+                      "manufacturer_suggested_retail_cny": 1573,
+                      "manufacturer_suggested_retail_is_live_price": false,
+                      "consumables": [
+                        {
+                          "model": "TN118",
+                          "kind": "toner",
+                          "claimed_yield_pages": 1500,
+                          "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+                        },
+                        {
+                          "model": "DR118",
+                          "kind": "drum",
+                          "claimed_yield_pages": 10000,
+                          "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+                        }
+                      ],
+                      "manufacturer_detail_evidence": null,
+                      "manufacturer_detail_age_days": null,
+                      "manufacturer_detail_is_stale": false,
+                      "billing_model": "unknown",
+                      "durability_independently_verified": false,
+                      "unknowns": [
+                        "独立耐用性/故障率未核实"
+                      ]
+                    }
+                  ],
+                  "limitations": [
+                    "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+                    "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+                    "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+                    "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+                  ],
+                  "total_candidate_count": 9,
+                  "displayed_candidate_count": 3
+                },
+                "approved_purchase_count": 0,
+                "purchase_recommendation_approved": false,
+                "transactions_enabled": false
+              },
+              "unknowns": []
+            },
+            "history": {
+              "version": 1,
+              "raw_text": "S2 fresh synthetic assessment",
+              "changed_fields": [
+                "category",
+                "needs_color",
+                "requires_wireless",
+                "usage",
+                "monthly_pages_range"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            "sale_configuration_evidence": {
+              "operation": "p0_9_b_sale_configuration_evidence_gate",
+              "source_mode": "synthetic_test",
+              "status": "synthetic_only_no_real_identity",
+              "input_rows": 2,
+              "accepted_rows": 1,
+              "rejected_count": 1,
+              "rejected": [
+                {
+                  "row": 2,
+                  "reason": "review_withdrawn_or_unconfirmed"
+                }
+              ],
+              "configuration_count": 1,
+              "configurations": [
+                {
+                  "platform": "JD",
+                  "platform_item_id": "63547001",
+                  "selected_sku_id": "63547002",
+                  "seller_id": "s2_new_seller",
+                  "selected_model_id": "HL-10W",
+                  "observed_at": "2026-11-13T11:32:26.168074+00:00",
+                  "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+                  "source_id": "synthetic:s2_new_source",
+                  "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+                  "source_ref": "synthetic:s2_new_panel",
+                  "field_anchors": {
+                    "platform_item_id": "synthetic:s2_platform_item_id",
+                    "seller_id": "synthetic:s2_seller_id",
+                    "selected_variant": "synthetic:s2_selected_variant",
+                    "selected_model_id": "synthetic:s2_selected_model_id",
+                    "item_kind": "synthetic:s2_item_kind",
+                    "condition": "synthetic:s2_condition",
+                    "selected_sku_id": "synthetic:s2_selected_sku_id"
+                  },
+                  "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+                  "field_binding_complete": true,
+                  "status": "synthetic_field_binding_test_only",
+                  "identity_verified": false,
+                  "quote_verified": false,
+                  "purchasable": false,
+                  "budget_status": "unknown_no_authorized_regional_quote",
+                  "source_count": 1,
+                  "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+                  "required_met": [
+                    "monochrome_print",
+                    "wireless"
+                  ],
+                  "required_unknown": [],
+                  "required_failed": [],
+                  "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+                }
+              ],
+              "real_identity_verified_count": 0,
+              "verified_quote_count": 0,
+              "purchase_recommendation_approved": false,
+              "transactions_enabled": false,
+              "limitations": [
+                "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+                "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+                "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+              ],
+              "displayed_configuration_count": 1
+            }
+          }
+        ],
+        "stderr": ""
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "cli_new_legitimate_reduction_with_independent_source",
+      "expected": "valid state loss applied only to correct source",
+      "actual": {
+        "returncode": 0,
+        "rows": [
+          {
+            "status": "ready",
+            "questions": [
+              {
+                "field": "category",
+                "question": "准备买什么类别的商品？",
+                "why": "决定下一步查询哪些有来源的商品目录",
+                "status": "user_confirmation_needed"
+              }
+            ]
+          },
+          {
+            "version": 1,
+            "questions": [
+              {
+                "field": "accepts_outsourced_color",
+                "question": "偶尔要彩印时，可以去打印店解决吗？",
+                "why": "决定是否只比较黑白打印机",
+                "status": "user_confirmation_needed"
+              },
+              {
+                "field": "budget_max_cny",
+                "question": "主机预算大约是多少元？",
+                "why": "帮助安排价格核验，不会直接判断到手价",
+                "status": "user_confirmation_needed"
+              }
+            ],
+            "comparison": {
+              "session_version": 1,
+              "purchase_recommendation_approved": false,
+              "transactions_enabled": false,
+              "status": "model_facts_only_not_purchase",
+              "source_mode": "recorded_manufacturer_detail_replay_no_network",
+              "questions": [
+                "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费"
+              ],
+              "unresolved_actions": [
+                {
+                  "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+                  "state": "optional_confirmation_or_defer"
+                }
+              ],
+              "comparison": {
+                "operation": "injected_manufacturer_facts_only",
+                "comparison": {
+                  "status": "facts_comparison_only",
+                  "category": "printer",
+                  "catalog_recorded_on": "2026-11-04",
+                  "catalog_age_days": 9,
+                  "catalog_source_kind": "manufacturer_public_pages",
+                  "searched_models": 9,
+                  "purchase_recommendation_approved": false,
+                  "all_prices_real_time_verified": false,
+                  "transactions_enabled": false,
+                  "constraints": {
+                    "required": {
+                      "monochrome_print": true,
+                      "wireless": true
+                    },
+                    "preferred": {},
+                    "budget_max_cny": null
+                  },
+                  "candidates": [
+                    {
+                      "model_id": "HL-10W",
+                      "brand": "Brother",
+                      "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+                      "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+                      "status": "specs_matched_not_purchase_approved",
+                      "required_met": [
+                        "monochrome_print",
+                        "wireless"
+                      ],
+                      "required_unknown": [],
+                      "required_failed": [],
+                      "preferred_met": [],
+                      "preferred_unknown": [],
+                      "preferred_failed": [],
+                      "evidence_by_feature": {
+                        "monochrome_print": "https://www.brother.cn/printer/prt/hl-10w",
+                        "wireless": "https://www.brother.cn/printer/prt/hl-10w"
+                      },
+                      "budget_status": "not_checked",
+                      "live_price_cny": null,
+                      "marketplace_sku": null,
+                      "manufacturer_suggested_retail_cny": null,
+                      "manufacturer_suggested_retail_is_live_price": false,
+                      "consumables": [],
+                      "manufacturer_detail_evidence": {
+                        "observed_at": "2026-11-09T14:01:03.133068+00:00",
+                        "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+                        "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+                        "billing_model": "buy_print_pages_to_claim_consumables",
+                        "admission": "frozen_p0_8_local_field_review"
+                      },
+                      "manufacturer_detail_age_days": 4,
+                      "manufacturer_detail_is_stale": false,
+                      "billing_model": "buy_print_pages_to_claim_consumables",
+                      "durability_independently_verified": false,
+                      "unknowns": [
+                        "独立耐用性/故障率未核实",
+                        "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+                      ]
+                    },
+                    {
+                      "model_id": "HL-B2158W",
+                      "brand": "Brother",
+                      "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+                      "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                      "status": "specs_matched_not_purchase_approved",
+                      "required_met": [
+                        "monochrome_print",
+                        "wireless"
+                      ],
+                      "required_unknown": [],
+                      "required_failed": [],
+                      "preferred_met": [],
+                      "preferred_unknown": [],
+                      "preferred_failed": [],
+                      "evidence_by_feature": {
+                        "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2158w",
+                        "wireless": "https://www.brother.cn/printer/prt/hl-b2158w"
+                      },
+                      "budget_status": "not_checked",
+                      "live_price_cny": null,
+                      "marketplace_sku": null,
+                      "manufacturer_suggested_retail_cny": null,
+                      "manufacturer_suggested_retail_is_live_price": false,
+                      "consumables": [
+                        {
+                          "model": "TNB020",
+                          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                        },
+                        {
+                          "model": "DRB020",
+                          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+                        }
+                      ],
+                      "manufacturer_detail_evidence": {
+                        "observed_at": "2026-11-09T14:01:04.511646+00:00",
+                        "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+                        "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+                        "billing_model": "unknown",
+                        "admission": "frozen_p0_8_local_field_review"
+                      },
+                      "manufacturer_detail_age_days": 4,
+                      "manufacturer_detail_is_stale": false,
+                      "billing_model": "unknown",
+                      "durability_independently_verified": false,
+                      "unknowns": [
+                        "独立耐用性/故障率未核实"
+                      ]
+                    },
+                    {
+                      "model_id": "HL-L1228",
+                      "brand": "Brother",
+                      "name": "兄弟 HL-L1228 黑白激光打印机",
+                      "official_url": "https://www.brother.cn/printer/prt/hl-l1228",
+                      "status": "excluded_by_verified_spec",
+                      "required_met": [
+                        "monochrome_print"
+                      ],
+                      "required_unknown": [],
+                      "required_failed": [
+                        "wireless"
+                      ],
+                      "preferred_met": [],
+                      "preferred_unknown": [],
+                      "preferred_failed": [],
+                      "evidence_by_feature": {
+                        "monochrome_print": "https://www.brother.cn/printer/prt/hl-l1228",
+                        "wireless": "https://www.brother.cn/printer/prt/hl-l1228"
+                      },
+                      "budget_status": "not_checked",
+                      "live_price_cny": null,
+                      "marketplace_sku": null,
+                      "manufacturer_suggested_retail_cny": 1573,
+                      "manufacturer_suggested_retail_is_live_price": false,
+                      "consumables": [
+                        {
+                          "model": "TN118",
+                          "kind": "toner",
+                          "claimed_yield_pages": 1500,
+                          "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+                        },
+                        {
+                          "model": "DR118",
+                          "kind": "drum",
+                          "claimed_yield_pages": 10000,
+                          "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+                        }
+                      ],
+                      "manufacturer_detail_evidence": null,
+                      "manufacturer_detail_age_days": null,
+                      "manufacturer_detail_is_stale": false,
+                      "billing_model": "unknown",
+                      "durability_independently_verified": false,
+                      "unknowns": [
+                        "独立耐用性/故障率未核实"
+                      ]
+                    }
+                  ],
+                  "limitations": [
+                    "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+                    "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+                    "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+                    "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+                  ],
+                  "total_candidate_count": 9,
+                  "displayed_candidate_count": 3
+                },
+                "approved_purchase_count": 0,
+                "purchase_recommendation_approved": false,
+                "transactions_enabled": false
+              },
+              "unknowns": []
+            },
+            "history": {
+              "version": 1,
+              "raw_text": "S2 fresh synthetic assessment",
+              "changed_fields": [
+                "category",
+                "needs_color",
+                "requires_wireless",
+                "usage",
+                "monthly_pages_range"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            "sale_configuration_evidence": {
+              "operation": "p0_9_b_sale_configuration_evidence_gate",
+              "source_mode": "synthetic_test",
+              "status": "synthetic_only_no_real_identity",
+              "input_rows": 3,
+              "accepted_rows": 2,
+              "rejected_count": 1,
+              "rejected": [
+                {
+                  "row": 3,
+                  "reason": "required_local_uses_not_evidenced"
+                }
+              ],
+              "configuration_count": 2,
+              "configurations": [
+                {
+                  "platform": "JD",
+                  "platform_item_id": "63547001",
+                  "selected_sku_id": "63547002",
+                  "seller_id": "s2_new_seller",
+                  "selected_model_id": "HL-10W",
+                  "observed_at": "2026-11-13T11:32:26.168074+00:00",
+                  "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+                  "source_id": "synthetic:s2_new_source",
+                  "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+                  "source_ref": "synthetic:s2_new_panel",
+                  "field_anchors": {
+                    "platform_item_id": "synthetic:s2_platform_item_id",
+                    "seller_id": "synthetic:s2_seller_id",
+                    "selected_variant": "synthetic:s2_selected_variant",
+                    "selected_model_id": "synthetic:s2_selected_model_id",
+                    "item_kind": "synthetic:s2_item_kind",
+                    "condition": "synthetic:s2_condition",
+                    "selected_sku_id": "synthetic:s2_selected_sku_id"
+                  },
+                  "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+                  "field_binding_complete": true,
+                  "status": "synthetic_same_source_invalidated_requires_review",
+                  "identity_verified": false,
+                  "quote_verified": false,
+                  "purchasable": false,
+                  "budget_status": "unknown_no_authorized_regional_quote",
+                  "manufacturer_model_fact_status": "manufacturer_facts_not_compared",
+                  "required_met": [],
+                  "required_unknown": [],
+                  "required_failed": [],
+                  "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+                },
+                {
+                  "platform": "JD",
+                  "platform_item_id": "63547001",
+                  "selected_sku_id": "63547002",
+                  "seller_id": "s2_new_seller",
+                  "selected_model_id": "HL-10W",
+                  "observed_at": "2026-11-13T11:32:26.168074+00:00",
+                  "review_valid_until": "2026-11-17T14:32:26.168074+00:00",
+                  "source_id": "synthetic:s2_other",
+                  "source_sha256": "19f166b634cbf54e987f333b23b5a39d51946cc024c05dc0be9b3cac6b17a540",
+                  "source_ref": "synthetic:s2_other_panel",
+                  "field_anchors": {
+                    "platform_item_id": "synthetic:s2_platform_item_id",
+                    "seller_id": "synthetic:s2_seller_id",
+                    "selected_variant": "synthetic:s2_selected_variant",
+                    "selected_model_id": "synthetic:s2_selected_model_id",
+                    "item_kind": "synthetic:s2_item_kind",
+                    "condition": "synthetic:s2_condition",
+                    "selected_sku_id": "synthetic:s2_selected_sku_id"
+                  },
+                  "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+                  "field_binding_complete": true,
+                  "status": "synthetic_field_binding_test_only",
+                  "identity_verified": false,
+                  "quote_verified": false,
+                  "purchasable": false,
+                  "budget_status": "unknown_no_authorized_regional_quote",
+                  "source_count": 1,
+                  "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+                  "required_met": [
+                    "monochrome_print",
+                    "wireless"
+                  ],
+                  "required_unknown": [],
+                  "required_failed": [],
+                  "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+                }
+              ],
+              "real_identity_verified_count": 0,
+              "verified_quote_count": 0,
+              "purchase_recommendation_approved": false,
+              "transactions_enabled": false,
+              "limitations": [
+                "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+                "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+                "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+              ],
+              "displayed_configuration_count": 2
+            }
+          }
+        ],
+        "stderr": ""
+      },
+      "expectation_met": true
+    }
+  ],
+  "protected_files_unchanged": true,
+  "protected_sha256": {
+    "shopping_decision/sale_configuration_evidence.py": "a3f6cd26af6eae94c37920eb2358e978e7a2ce1e0c7dc6e51a978c6cd3f30916",
+    "shopping_decision/dialogue_flow.py": "ac0a81e2ce1c910ab732cbe0f2a563756308f02ee154a1f776c369465acf0254",
+    "shopping_decision/discovery_pool.py": "e5cf73971f2aabe611540a0f64111ec4bcae1976d709df3d4557a500c6f82cb8",
+    "tests/test_p0_9_b_s1s4_followup.py": "55e3288ca3a0fdc0a53d371dcf7b72aaf6edde70681dc99a42339a354b7e27de",
+    "reports/p0_9_b_s1s4_new_review_20261112.json": "c923bc121698d3472abde52f747f0eb5232c7d2aefe40223e8c7f569c6943b10",
+    "reports/p0_9_b_s1s4_independent_validation_20261112.json": "60a172f003ea96ff94e53a92e72f66f551faf551df0daa6bf660b5c49e79dc9d",
+    "reports/p0_9_b_independent_20261112.json": "7e6dd3e1096f138d07993a41d66f07a9f6c42ef730d3f92a8f6bc91636f15a34",
+    "reports/p0_9_b_independent_validation_20261112.json": "8a453b185f56d2bace5adc1d0fb74f8cd97f8deb0d94fd235fb9f0a822bf7814",
+    "reports/P0_9_B_S1S4_执行者续修报告_20261112.md": "63240b3aa755f55eae0e319c929f52626fe67070b388f22b740a2a7aa3e04329",
+    "reports/P0_9_B_S1S4_独立再检查报告_20261112.md": "e3c9d121d4d3aa12b8e127ad44614aa639123aedbbdaa4515755f2569e47a9b6",
+    "reports/P0_9_B_S2_有效状态事件收口_执行报告_20261113.md": "4f7d1bd69e064d707f6b699f491bfd971f3a619bedccb337069ab9bcc67ba265",
+    "reports/P0_9_B_S2_独立检查报告_20261113.md": "8ce8fe9a041944e475bf35e272106643b855ac20b3eed71028aa652dcce5331b",
+    "reports/P0_9_B_执行者报告_20261112.md": "50a5fa82e62e15cced7acf3d44a420611362d8e0cd65b7acf138119fcd0ae943",
+    "reports/P0_9_B_独立评估报告_20261112.md": "6ad8a7ae10f2e53be2e15bf482a1b8dd9a4b98ce3312015215133010a85ac696"
+  },
+  "boundaries": {
+    "new_api_calls": 0,
+    "paid_calls": 0,
+    "credential_reads": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "external_messages": 0,
+    "business_code_modified": false,
+    "git_commit": false,
+    "git_push": false
+  },
+  "limitations": [
+    "synthetic only; purpose-selected boundary checks are not overall accuracy",
+    "no new real product identity, license, price or account evidence"
+  ]
+}

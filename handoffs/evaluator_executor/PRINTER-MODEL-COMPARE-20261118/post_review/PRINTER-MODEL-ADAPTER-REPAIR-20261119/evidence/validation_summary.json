@@ -1,0 +1,38 @@
+{
+  "task_id": "PRINTER-MODEL-ADAPTER-REPAIR-20261119",
+  "recorded_at_utc": "2026-11-19T06:24:11.377969+00:00",
+  "observed_source": "CodexProshl WSL local commands in this execution; independent evaluator should rerun",
+  "run_mode": "offline_only",
+  "VP-01": {
+    "command": "python3 -X utf8 -m unittest discover -s tests -p test_model_comparison.py -v",
+    "exit_code": 0,
+    "tests": 19,
+    "passed": 19
+  },
+  "VP-02": {
+    "command": "python3 -X utf8 scripts/run_model_comparison_experiment.py --audit --task handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118",
+    "exit_code": 1,
+    "reason": "model cases not attempted: C05,C06,C07",
+    "historical_gate_still_failed": true
+  },
+  "VP-03": {
+    "command": "python3 -X utf8 -m unittest discover -s tests -q",
+    "exit_code": 0,
+    "tests": 483,
+    "passed": 483
+  },
+  "old_live_attempts": {
+    "scheduled": 6,
+    "completed": 6,
+    "new_attempts": 0,
+    "attempts_ledger_sha256": "dc0f8631caa98df123206ef751312f42998e3f55614ac81b730bd7dbfe372026",
+    "C01_01_historical_tool_count": 1,
+    "C01_01_reclassified_tool_count": 0,
+    "C01_01_raw_receipt_sha256": "55ad14652dc7116b6fa2137a6dff784bc754af78a3eab4831882d2e9da4987b2"
+  },
+  "old_frozen_manifest_sha_matches": true,
+  "old_report_exists": true,
+  "provider_decision": "BLOCKED_EXTERNAL",
+  "inference_success": false,
+  "external_calls_in_this_task": 0
+}

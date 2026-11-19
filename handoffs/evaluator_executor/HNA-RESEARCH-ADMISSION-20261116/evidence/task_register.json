@@ -1,0 +1,32 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "role": "Evaluator",
+  "status": "insufficient_evidence_no_effect_tasks_frozen",
+  "created_on": "2026-11-16",
+  "reference_register_frozen": false,
+  "paired_answers_generated": false,
+  "formal_36_created": false,
+  "eligible_effect_task_count": 0,
+  "required_minimum_for_parent_development_comparison": 3,
+  "topics_reviewed": [
+    {
+      "id": "G1-M01",
+      "reference_supported": "首次微信打印前先绑定；无线连接与微信绑定分开核",
+      "not_an_eligible_new_effect_task_because": "既有事实，且不证明后续复用；不能将首次绑定与隔日稳定性设成同一个已知答案。"
+    },
+    {
+      "id": "G1-M03",
+      "reference_supported": "现有摘录仅能作为权限/在线检查线索",
+      "not_an_eligible_new_effect_task_because": "准确型号映射与复用结果未知；不能冻结该型号复用成功的参考答案。"
+    },
+    {
+      "id": "G2-M02",
+      "reference_supported": "仅有Windows手动双面检索线索",
+      "not_an_eligible_new_effect_task_because": "未独立核原值，且原案未要求自动双面；不得凑作影响原案选择的效果题。"
+    }
+  ],
+  "baseline_replay": "independent_prefreeze_review/independent_cli.run02.stdout.jsonl",
+  "baseline_result": "shared snapshot and full JSON equal to executor archived old output; two model_spec_research_only; no new material integration",
+  "evaluator_owned_missing_work": "完整实料交付核验器仍需在实际材料与范围确定后由评估者定稿；本登记不是该验收器，不把该准备缺件归责为产品缺陷。",
+  "reopen_rule": "先收到可查相关材料并核范围，再登记可判问题；少于3题按父合同不做增益统计，禁止编造参考或把工程负向凑成认知收益题。"
+}

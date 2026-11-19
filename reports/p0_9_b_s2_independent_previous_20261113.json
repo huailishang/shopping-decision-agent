@@ -1,0 +1,3152 @@
+{
+  "role": "independent_reviewer",
+  "observed_at": "2026-11-13T13:24:14.913835+00:00",
+  "new_total": 18,
+  "new_passed": 17,
+  "failed_ids": [
+    "merge_complete_and_partial_anchor_order"
+  ],
+  "new_cases": [
+    {
+      "id": "fully_anchored_taobao_positive",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "complete SKU anchor remains auditable with all real permissions false",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "new_mixed_type_anchors_nested_value",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "reject malformed row and retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "platform_field_anchor_missing"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "new_mixed_type_digest_object",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "reject malformed row and retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "source_hash_invalid"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "new_mixed_type_expiry_list",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "reject malformed row and retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "review_expiry_invalid"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "new_mixed_type_source_id_list",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "reject malformed row and retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "source_or_seller_invalid"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "new_mixed_type_uses_boolean",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "reject malformed row and retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "required_local_uses_not_evidenced"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "six_orders_revocation_keeps_independent_source",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "all six orders invalidate source A only and keep independent B",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 3,
+          "accepted_rows": 2,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            },
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:independent_B",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:independent_panel_B",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 3,
+          "accepted_rows": 2,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 3,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            },
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:independent_B",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:independent_panel_B",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 3,
+          "accepted_rows": 2,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            },
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:independent_B",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:independent_panel_B",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 3,
+          "accepted_rows": 2,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            },
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:independent_B",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:independent_panel_B",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 3,
+          "accepted_rows": 2,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 3,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            },
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:independent_B",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:independent_panel_B",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 3,
+          "accepted_rows": 2,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            },
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:independent_B",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:independent_panel_B",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negative_half_hour_zone_revocation",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "same source event normalized to UTC is invalidated",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "review_withdrawn_or_unconfirmed"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_same_source_invalidated_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "malformed_rejected_row_must_not_invalidate_forbidden_approval_on_withdrawal",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "malformed/forbidden row is rejected without revoking the valid source",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "unrecognized_or_forbidden_fields"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "malformed_rejected_row_must_not_invalidate_forbidden_price_on_use_loss",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "malformed/forbidden row is rejected without revoking the valid source",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "unrecognized_or_forbidden_fields"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "malformed_rejected_row_must_not_invalidate_malformed_uses_on_withdrawal",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "malformed/forbidden row is rejected without revoking the valid source",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "review_withdrawn_or_unconfirmed"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "withdrawal_other_platform_cannot_revoke",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "different platform is a different event",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "review_withdrawn_or_unconfirmed"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "legacy_missing_sku_anchor_is_explicitly_incomplete",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "legacy fixture may remain synthetic but cannot claim complete binding",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:legacy_partial",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "bad_sku_anchor_does_not_drop_good",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "bad SKU anchor rejected per row",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "platform_field_anchor_missing"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      }
+    },
+    {
+      "id": "merge_complete_and_partial_anchor_order",
+      "expectation_met": false,
+      "kind": "audit_robustness",
+      "expected": "merging a partial fixture must not discard the other complete source solely due to row order",
+      "actual": [
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 2,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:legacy_partial",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 2
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 2,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 2
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "new_cli_half_hour_zone_expiry_between_turns",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "one usable binding before expiry, none afterwards; source time not refreshed",
+      "actual": {
+        "first_turn": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 1,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "75432001",
+              "selected_sku_id": "75432009",
+              "seller_id": "new_review_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T09:24:14.913835+00:00",
+              "review_valid_until": "2026-11-13T13:25:14.913835+00:00",
+              "source_id": "synthetic:new_review_A",
+              "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+              "source_ref": "synthetic:new_review_panel_A",
+              "field_anchors": {
+                "platform_item_id": "synthetic:new_anchor_platform_item_id",
+                "seller_id": "synthetic:new_anchor_seller_id",
+                "selected_variant": "synthetic:new_anchor_selected_variant",
+                "selected_model_id": "synthetic:new_anchor_selected_model_id",
+                "item_kind": "synthetic:new_anchor_item_kind",
+                "condition": "synthetic:new_anchor_condition",
+                "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1,
+              "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+              "required_met": [
+                "monochrome_print",
+                "wireless"
+              ],
+              "required_unknown": [],
+              "required_failed": [],
+              "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ],
+          "displayed_configuration_count": 1
+        },
+        "second_turn": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 0,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_expired"
+            }
+          ],
+          "configuration_count": 0,
+          "configurations": [],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ],
+          "displayed_configuration_count": 0
+        },
+        "simulated_clock_only": true
+      }
+    },
+    {
+      "id": "new_subprocess_invalidated_source_not_compared_independent_kept",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "withdrawn source not associated with met specs; independent source survives",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 3,
+        "accepted_rows": 2,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "review_withdrawn_or_unconfirmed"
+          }
+        ],
+        "configuration_count": 2,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_same_source_invalidated_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "manufacturer_model_fact_status": "manufacturer_facts_not_compared",
+            "required_met": [],
+            "required_unknown": [],
+            "required_failed": [],
+            "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+          },
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:independent_B",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:independent_panel_B",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1,
+            "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+            "required_met": [
+              "monochrome_print",
+              "wireless"
+            ],
+            "required_unknown": [],
+            "required_failed": [],
+            "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ],
+        "displayed_configuration_count": 2
+      }
+    },
+    {
+      "id": "new_subprocess_forbidden_withdrawal_not_applied",
+      "expectation_met": true,
+      "kind": "acceptance",
+      "expected": "forbidden rejected row must not suppress the valid source in normal CLI",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "unrecognized_or_forbidden_fields"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "75432001",
+            "selected_sku_id": "75432009",
+            "seller_id": "new_review_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-13T09:24:14.913835+00:00",
+            "review_valid_until": "2026-11-16T13:24:14.913835+00:00",
+            "source_id": "synthetic:new_review_A",
+            "source_sha256": "f38ff07cccd0695a725f94455373853ab9aa68d1f142274dd7b54e0547807b80",
+            "source_ref": "synthetic:new_review_panel_A",
+            "field_anchors": {
+              "platform_item_id": "synthetic:new_anchor_platform_item_id",
+              "seller_id": "synthetic:new_anchor_seller_id",
+              "selected_variant": "synthetic:new_anchor_selected_variant",
+              "selected_model_id": "synthetic:new_anchor_selected_model_id",
+              "item_kind": "synthetic:new_anchor_item_kind",
+              "condition": "synthetic:new_anchor_condition",
+              "selected_sku_id": "synthetic:new_anchor_selected_sku_id"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1,
+            "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+            "required_met": [
+              "monochrome_print",
+              "wireless"
+            ],
+            "required_unknown": [],
+            "required_failed": [],
+            "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ],
+        "displayed_configuration_count": 1
+      }
+    }
+  ],
+  "old_24_replay": {
+    "exit_code": 0,
+    "passed": 24,
+    "total": 24,
+    "cases": [
+      {
+        "id": "new_positive_model_control",
+        "expected": "one synthetic binding; no real identity or price",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 1,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "equivalent_instant_plus_14_cross_day",
+        "expected": "one equivalent binding",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 1,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "equivalent_instant_minus_09_30",
+        "expected": "one equivalent binding",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 1,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "equivalent_instant_quarter_hour_plus_12_45",
+        "expected": "one equivalent binding",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 1,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "mixed_bad_type_platform_list",
+        "expected": "reject bad row; retain good row without exception",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "platform_or_item_id_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "mixed_bad_type_platform_object",
+        "expected": "reject bad row; retain good row without exception",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "platform_or_item_id_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "mixed_bad_type_uses_nested_object",
+        "expected": "reject bad row; retain good row without exception",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "mixed_bad_type_uses_nested_list",
+        "expected": "reject bad row; retain good row without exception",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "same_source_active_then_withdrawn",
+        "expected": "same-source revocation invalidates or blocks old active binding, independent of order",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "same_source_withdrawn_then_active",
+        "expected": "same-source revocation invalidates or blocks old active binding, independent of order",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_withdrawn_or_unconfirmed"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "same_source_display_permission_withdrawn",
+        "expected": "old binding no longer available for user display",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "required_local_uses_not_evidenced"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_same_source_invalidated_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "eval_instruction_and_forged_purchase",
+        "expected": "bad row rejected, positive row retained, no approval",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "unrecognized_or_forbidden_fields"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "expired_price_smuggled",
+        "expected": "bad row rejected, positive row retained, no approval",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "unrecognized_or_forbidden_fields"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "sku_option_list_in_selected_value",
+        "expected": "bad row rejected, positive row retained, no approval",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "sku_id_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "cross_platform_same_digits",
+        "expected": "two separate configurations without real identity or quotes",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 2,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            },
+            {
+              "platform": "TAOBAO",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:separate_cross_platform_same_digits",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "same_item_different_sku",
+        "expected": "two separate configurations without real identity or quotes",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 2,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            },
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765003",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:separate_same_item_different_sku",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "same_item_different_seller",
+        "expected": "two separate configurations without real identity or quotes",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 2,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            },
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "another_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:separate_same_item_different_seller",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "same_hash_same_key_conflicting_model",
+        "expected": "both interpretations marked conflict",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 2,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 2,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_source_conflict_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            },
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2158W",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:conflict_model",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_source_conflict_requires_review",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "explicit_selected_sku_source_anchor",
+        "expected": "selected SKU source anchor allowed and retained for audit",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 1,
+          "rejected_count": 0,
+          "rejected": [],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition",
+                "selected_sku_id": "synthetic:selected_sku_original_field"
+              },
+              "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+              "field_binding_complete": true,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true,
+        "design_gap": "mandatory SKU has no field anchor; adding an explicit anchor is currently rejected"
+      },
+      {
+        "id": "real_response_mode_forbidden",
+        "expected": "real import denied",
+        "actual": {
+          "exception": "ValueError",
+          "reason": "real_sale_evidence_import_not_authorized"
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "one_microsecond_expired_standalone",
+        "expected": "expired row rejected",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 0,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_expired"
+            }
+          ],
+          "configuration_count": 0,
+          "configurations": [],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "cli_mixed_bad_row_preserves_valid_configuration",
+        "expected": "CLI retains one valid configuration",
+        "actual": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 2,
+              "reason": "platform_or_item_id_invalid"
+            }
+          ],
+          "configuration_count": 1,
+          "configurations": [
+            {
+              "platform": "JD",
+              "platform_item_id": "98765001",
+              "selected_sku_id": "98765002",
+              "seller_id": "independent_seller",
+              "selected_model_id": "HL-B2188DW",
+              "observed_at": "2026-11-13T11:24:14.932033+00:00",
+              "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+              "source_id": "synthetic:independent001",
+              "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+              "source_ref": "synthetic:independent_panel",
+              "field_anchors": {
+                "platform_item_id": "synthetic:independent_platform_item_id",
+                "seller_id": "synthetic:independent_seller_id",
+                "selected_variant": "synthetic:independent_selected_variant",
+                "selected_model_id": "synthetic:independent_selected_model_id",
+                "item_kind": "synthetic:independent_item_kind",
+                "condition": "synthetic:independent_condition"
+              },
+              "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+              "field_binding_complete": false,
+              "status": "synthetic_field_binding_test_only",
+              "identity_verified": false,
+              "quote_verified": false,
+              "purchasable": false,
+              "budget_status": "unknown_no_authorized_regional_quote",
+              "source_count": 1,
+              "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+              "required_met": [
+                "monochrome_print",
+                "wireless"
+              ],
+              "required_unknown": [],
+              "required_failed": [],
+              "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+            }
+          ],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ],
+          "displayed_configuration_count": 1
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "cli_limit_three_must_not_drop_bound_model_conditions",
+        "expected": "bound HL-B2188DW keeps wireless met and scan unknown even if outside displayed top three",
+        "actual": {
+          "first": {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-13T11:24:14.932033+00:00",
+            "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1,
+            "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+            "required_met": [
+              "monochrome_print",
+              "wireless"
+            ],
+            "required_unknown": [
+              "scan"
+            ],
+            "required_failed": [],
+            "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+          },
+          "after_withdraw_scan": {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-13T11:24:14.932033+00:00",
+            "review_valid_until": "2026-11-15T13:24:14.932033+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1,
+            "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+            "required_met": [
+              "monochrome_print",
+              "wireless"
+            ],
+            "required_unknown": [],
+            "required_failed": [],
+            "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+          }
+        },
+        "expectation_met": true
+      },
+      {
+        "id": "cli_rechecks_review_expiry_each_turn",
+        "expected": "second turn drops or marks expired binding",
+        "actual": {
+          "simulated_now_second_turn": "2026-11-13T13:26:14.932033+00:00",
+          "cli_second_turn": {
+            "operation": "p0_9_b_sale_configuration_evidence_gate",
+            "source_mode": "synthetic_test",
+            "status": "synthetic_only_no_real_identity",
+            "input_rows": 1,
+            "accepted_rows": 0,
+            "rejected_count": 1,
+            "rejected": [
+              {
+                "row": 1,
+                "reason": "review_expired"
+              }
+            ],
+            "configuration_count": 0,
+            "configurations": [],
+            "real_identity_verified_count": 0,
+            "verified_quote_count": 0,
+            "purchase_recommendation_approved": false,
+            "transactions_enabled": false,
+            "limitations": [
+              "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+              "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+              "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+            ],
+            "displayed_configuration_count": 0
+          },
+          "fresh_gate_at_same_instant": {
+            "operation": "p0_9_b_sale_configuration_evidence_gate",
+            "source_mode": "synthetic_test",
+            "status": "synthetic_only_no_real_identity",
+            "input_rows": 1,
+            "accepted_rows": 0,
+            "rejected_count": 1,
+            "rejected": [
+              {
+                "row": 1,
+                "reason": "review_expired"
+              }
+            ],
+            "configuration_count": 0,
+            "configurations": [],
+            "real_identity_verified_count": 0,
+            "verified_quote_count": 0,
+            "purchase_recommendation_approved": false,
+            "transactions_enabled": false,
+            "limitations": [
+              "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+              "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+              "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+            ]
+          }
+        },
+        "expectation_met": true,
+        "clock_simulated_only": true
+      }
+    ],
+    "developer_22": {
+      "passed": 22,
+      "total": 22,
+      "path": "reports/p0_9_b_developer_replay_independent_20261112.json",
+      "original_report_not_overwritten": true
+    },
+    "all_legacy_script_writes_were_temporary": true
+  },
+  "protected_sha256": {
+    "reports/p0_9_b_independent_20261112.json": "7e6dd3e1096f138d07993a41d66f07a9f6c42ef730d3f92a8f6bc91636f15a34",
+    "reports/p0_9_b_independent_validation_20261112.json": "8a453b185f56d2bace5adc1d0fb74f8cd97f8deb0d94fd235fb9f0a822bf7814",
+    "reports/p0_9_b_developer_replay_independent_20261112.json": "3cf368a7f309a1b26fd16e7d5b713a0bed86d8fbb1b0e85f18f5446d77ea9eab",
+    "reports/p0_9_b_22_development_scenarios_20261112.json": "bbe8c3a274582949994957dc6d7a0a8e292f70c3a3061f0f477698f67fb8a3dc",
+    "reports/p0_9_b_independent_20261112.py": "a57f382989e14597cd0acb7f5ddd66d3a5c6b5ddec4c1d2545ea1d659efbcd59",
+    "shopping_decision/sale_configuration_evidence.py": "77887bc0a8bfa6f4a677af18e9307d76e797c9c0079af0e248212ce6837ce059",
+    "shopping_decision/dialogue_flow.py": "ac0a81e2ce1c910ab732cbe0f2a563756308f02ee154a1f776c369465acf0254",
+    "shopping_decision/discovery_pool.py": "e5cf73971f2aabe611540a0f64111ec4bcae1976d709df3d4557a500c6f82cb8",
+    "shopping_decision/p0_7_official_details.py": "33a73c87d280c1e295114b3df2b172355c2e94f1b96c444642c1cd03745ede58",
+    "tests/test_p0_9_b_s1s4_followup.py": "55e3288ca3a0fdc0a53d371dcf7b72aaf6edde70681dc99a42339a354b7e27de",
+    "reports/P0_9_B_S1S4_执行者续修报告_20261112.md": "63240b3aa755f55eae0e319c929f52626fe67070b388f22b740a2a7aa3e04329",
+    "reports/P0_9_B_S1S4_独立再检查报告_20261112.md": "e3c9d121d4d3aa12b8e127ad44614aa639123aedbbdaa4515755f2569e47a9b6",
+    "reports/P0_9_B_S2_有效状态事件收口_执行报告_20261113.md": "4f7d1bd69e064d707f6b699f491bfd971f3a619bedccb337069ab9bcc67ba265",
+    "reports/P0_9_B_执行者报告_20261112.md": "50a5fa82e62e15cced7acf3d44a420611362d8e0cd65b7acf138119fcd0ae943",
+    "reports/P0_9_B_独立评估报告_20261112.md": "6ad8a7ae10f2e53be2e15bf482a1b8dd9a4b98ce3312015215133010a85ac696"
+  },
+  "all_protected_files_unchanged": true,
+  "boundaries": {
+    "new_haina_calls": 0,
+    "credential_reads": 0,
+    "paid_calls": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "business_code_modified": false,
+    "git_commit": false,
+    "git_push": false
+  },
+  "limits": [
+    "synthetic only, no real identity positives",
+    "selected checks are not an accuracy estimate",
+    "original old 14/24 per-case bytes were already lost before this review"
+  ]
+}

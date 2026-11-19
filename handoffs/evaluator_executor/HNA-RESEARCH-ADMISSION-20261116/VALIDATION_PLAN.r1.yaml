@@ -1,0 +1,28 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: HNA-RESEARCH-ADMISSION-20261116
+# DRAFT: 原值receipt与评估者核验器尚缺，不能运行或宣称冻结。
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-03, AC-04]
+    cwd: .
+    command: [python, -X, utf8, -m, unittest, discover, -s, tests, -p, test_haina_research_admission.py, -v]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-02, AC-04]
+    cwd: .
+    command: [python, -X, utf8, -m, unittest, discover, -s, tests, -p, test_haina_mcp_ingest.py, -v]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-01, AC-02, AC-03, AC-04, AC-05]
+    cwd: .
+    command: [python, -X, utf8, handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/verify_delivery.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-03, AC-04]
+    cwd: .
+    command: [python, -X, utf8, -m, unittest, discover, -s, tests, -v]
+    expected_exit_code: 0
+    mandatory: true

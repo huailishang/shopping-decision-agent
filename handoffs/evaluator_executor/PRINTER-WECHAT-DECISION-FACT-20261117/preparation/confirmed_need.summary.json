@@ -1,0 +1,42 @@
+{
+  "wechat_requirement_status": "required",
+  "candidate_states": [
+    {
+      "model_id": "HL-L1238W",
+      "research_status": "pending_evidence",
+      "unknown_fields": [
+        "wechat_reuse",
+        "live_price",
+        "long_term_reliability",
+        "required_wechat_workflow_unconfirmed"
+      ]
+    },
+    {
+      "model_id": "M232dw",
+      "research_status": "pending_evidence",
+      "unknown_fields": [
+        "wechat_reuse",
+        "live_price",
+        "long_term_reliability",
+        "required_wechat_workflow_unconfirmed"
+      ]
+    }
+  ],
+  "next_actions": [
+    {
+      "action": "verify_wechat_reuse_if_needed",
+      "owner_role": "需求提出者或自愿参与的设备持有人",
+      "exact_item": "已明确微信为硬条件，核具体微信路径及第二次打印条件（不收集账号密码）"
+    },
+    {
+      "action": "verify_remaining_product_facts",
+      "owner_role": "研究执行者/厂家官方支持",
+      "exact_item": "按两款分别补本次没有的型号事实；购买前另向销售方核所售型号、河南实时报价、运费和耗材"
+    }
+  ],
+  "old_selected_source_ids": [
+    "R7",
+    "R10"
+  ],
+  "new_product_facts": 0
+}

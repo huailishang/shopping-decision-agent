@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from .contracts import PurchaseRequest
@@ -98,11 +98,38 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
         if item.get("category") != category:
             continue
         facts = item["facts"]
+        detail = item.get("manufacturer_detail_evidence")
+        detail_age_days = None
+        if detail is not None:
+            if (not isinstance(detail, dict)
+                    or detail.get("source_url") != item.get("official_url")
+                    or not isinstance(detail.get("response_sha256"), str)
+                    or len(detail["response_sha256"]) != 64
+                    or detail.get("billing_model") not in ("unknown", "buy_print_pages_to_claim_consumables")):
+                raise ValueError("invalid_manufacturer_detail_evidence")
+            try:
+                observed = datetime.fromisoformat(detail["observed_at"].replace("Z", "+00:00"))
+            except (KeyError, TypeError, ValueError, AttributeError) as exc:
+                raise ValueError("invalid_manufacturer_detail_observation") from exc
+            if (observed.tzinfo is None or observed > datetime.now(timezone.utc)
+                    or observed.date() > today or observed.year < 2020):
+                raise ValueError("future_or_invalid_manufacturer_detail_observation")
+            detail_age_days = (today - observed.date()).days
+        detail_stale = detail_age_days is not None and detail_age_days > 30
+
+        def current_fact_value(key: str):
+            field = facts.get(key, {})
+            # 逐型号详情超过30天后，来自该详情页的当前功能判断全部降级为未知；
+            # 不改写目录原始事实，历史记录仍可审计。
+            if detail_stale and detail and field.get("source_url") == detail.get("source_url"):
+                return None
+            return field.get("value")
+
         failed, unknown, met, preference_met, preference_unknown, preference_unmet = [], [], [], [], [], []
         evidence = {}
         for key, expected in required.items():
             field = facts.get(key, {})
-            actual = field.get("value")
+            actual = current_fact_value(key)
             if actual is None:
                 unknown.append(key)
             elif actual is expected:
@@ -113,7 +140,7 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
                 evidence[key] = field["source_url"]
         for key, expected in preferred.items():
             field = facts.get(key, {})
-            actual = field.get("value")
+            actual = current_fact_value(key)
             if actual is None:
                 preference_unknown.append(key)
             elif actual is expected:
@@ -125,7 +152,7 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
         budget_status = "not_checked" if budget_max_cny is None else "unverified_no_authorized_live_quote"
         if failed:
             state = "excluded_by_verified_spec"
-        elif unknown or budget_max_cny is not None or stale_days > 30:
+        elif unknown or budget_max_cny is not None or stale_days > 30 or detail_stale:
             state = "needs_verification"
         else:
             state = "specs_matched_not_purchase_approved"
@@ -138,12 +165,22 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
             "budget_status": budget_status, "live_price_cny": None, "marketplace_sku": None,
             "manufacturer_suggested_retail_cny": item.get("manufacturer_suggested_retail_cny"),
             "manufacturer_suggested_retail_is_live_price": False,
-            "consumables": item.get("consumables", []),
+            # 过期逐型号详情只能作为历史审计，不能继续展示为当期耗材配置。
+            "consumables": [] if detail_stale else item.get("consumables", []),
+            "manufacturer_detail_evidence": detail,
+            "manufacturer_detail_age_days": detail_age_days,
+            "manufacturer_detail_is_stale": detail_stale,
+            "billing_model": (detail.get("billing_model") if detail and not detail_stale else "unknown"),
             "durability_independently_verified": bool(item.get("independent_durability_test", False)),
             "unknowns": (
                 (["实际到手价、库存及预算匹配尚无授权实时核验"] if budget_max_cny is not None else [])
                 + (["独立耐用性/故障率未核实"] if not item.get("independent_durability_test") else [])
                 + (["官网产品事实已超过30天，请复核"] if stale_days > 30 else [])
+                + (["逐型号详情证据已超过30天，请重新核对"] if detail_age_days is not None and detail_age_days > 30 else [])
+                + (["此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"]
+                    if detail and not detail_stale and detail.get("billing_model") == "buy_print_pages_to_claim_consumables" else [])
+                + (["历史详情曾记载页数套餐或耗材，超过30天的内容不构成当前有效套餐/耗材配置"]
+                    if detail_stale and detail and (detail.get("billing_model") != "unknown" or item.get("consumables")) else [])
             ),
         })
     # 这是“下一步核查优先次序”，不是购买榜单或官方性价比评分。

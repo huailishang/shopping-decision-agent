@@ -1,0 +1,20 @@
+{
+  "status": "optional",
+  "next_actions": [
+    {
+      "action": "verify_wechat_reuse_if_needed",
+      "owner_role": "需求提出者或自愿参与的设备持有人",
+      "exact_item": "确认微信打印是否必须；如必须，向厂家核型号并由设备持有人自愿记录第二次打印条件（不收集账号密码）"
+    },
+    {
+      "action": "verify_remaining_product_facts",
+      "owner_role": "研究执行者/厂家官方支持",
+      "exact_item": "按两款分别补本次没有的型号事实；购买前另向销售方核所售型号、河南实时报价、运费和耗材"
+    }
+  ],
+  "prepared_feedback": [
+    "微信打印是一定需要，还是有就更好？",
+    "两款型号中哪些功能对日常打印最重要？",
+    "您愿意以后自愿记录一次实际操作体验吗？"
+  ]
+}

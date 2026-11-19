@@ -1,0 +1,46 @@
+{
+  "task_id": "PRINTER-MIN-CONDITIONS-REPAIR-20261117",
+  "start_utc": "2026-11-17T13:01:40.270663+00:00",
+  "end_utc": "2026-11-17T13:08:18.582708+00:00",
+  "parent_effective_hours": "unknown",
+  "segments": [
+    {
+      "started_at": "2026-11-17T13:01:40.270710+00:00",
+      "ended_at": "2026-11-17T13:06:21.351841+00:00",
+      "activity": "Review frozen contract and independent counterexamples; run failed 6/16 baseline; minimal scoped condition propagation changes; run 16/16 checker and 21 focused regression, prepare report before L2"
+    },
+    {
+      "started_at": "2026-11-17T13:06:21.351841+00:00",
+      "ended_at": "2026-11-17T13:08:18.582708+00:00",
+      "activity": "Formal first L2 yielded VP-05 regression in legacy Java/Haina bridge; inspect actual failure, scope web wireless field only to selected research; targeted 16 Haina tests and 16 condition cases pass; prepare repeat L2"
+    }
+  ],
+  "focused_repair_rounds": 0,
+  "max_focused_repair_rounds": 2,
+  "new_external_calls": 0,
+  "commit": false,
+  "push": false,
+  "historical_parent_effective_hours": "unknown",
+  "elapsed_basis": "measured_wall_upper_bound",
+  "concentrated_iterations": 2,
+  "credentials_read": 0,
+  "messages_sent": 0,
+  "transactions": 0,
+  "git_commit": 0,
+  "git_push": 0,
+  "repair_evidence": {
+    "before": "evidence/executor_before/summary.json",
+    "round1": "evidence/executor_after_round1/summary.json",
+    "round2": "evidence/executor_after_round2/summary.json"
+  },
+  "validation_activity": "First formal L2 FAIL 5/6 with EV-05 legacy regression, preserved in rerun notes; second formal L2 planned; EV logs time each validation",
+  "connection_retries": "local remote workspace connection intermittently unavailable; restored and continued without external business calls",
+  "first_l2_failure": {
+    "result": "FAIL",
+    "failed_check": "VP-05",
+    "test": "test_java_desktop_bridge_uses_same_pinned_fixture_and_marks_synthetic",
+    "cause": "requires_wireless inadvertently forwarded to legacy compare_case_research",
+    "fix": "forward wireless only when research_context exists for minimal selected research",
+    "targeted_recheck": "16 Haina tests PASS; 16 frozen conditions PASS"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "role": "independent_reviewer",
+  "observed_at": "2026-11-10T14:31:36.864965+00:00",
+  "new_html_variants": [
+    {
+      "id": "css_descendant_hidden",
+      "input": "<style>.wrap .secret{display:none}</style><div class=\"wrap\"><div class=\"secret\">支持无线网络连接</div></div>本型号仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "css_attribute_hidden",
+      "input": "<style>[data-secret=\"yes\"]{display:none}</style><div data-secret=\"yes\">支持无线网络连接</div>本型号仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "css_tag_hidden",
+      "input": "<style>aside{display:none}</style><aside>支持无线网络连接</aside>本型号仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "css_compound_classes_hidden",
+      "input": "<style>.spec.secret{visibility:hidden}</style><div class=\"spec secret\">支持无线网络连接</div>本型号仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "other_family_dcp_scope",
+      "input": "DCP-B7658DW支持无线网络连接；HL-10W仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "other_family_mfc_scope",
+      "input": "MFC-L5728DW支持无线网络连接。HL-10W仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "paragraph_other_model_scope",
+      "input": "<section><h2>HL-B2188DW。</h2><p>支持无线网络连接。</p></section><section>HL-10W仅USB。</section>",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "positive_negative_separate_sentences",
+      "input": "本型号支持无线网络连接。更正：本型号不支持无线网络连接，仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "positive_scope_following_sentence",
+      "input": "支持无线网络连接。以上功能仅适用于HL-B2188DW，HL-10W仅USB。",
+      "expected": null,
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "visible_opacity_half",
+      "input": "<span style=\"opacity:0.5\">本型号支持无线网络连接。</span>",
+      "expected": true,
+      "actual": null,
+      "expectation_met": false
+    },
+    {
+      "id": "visible_comparison_with_other_model",
+      "input": "与HL-B2188DW相比，HL-10W同样支持无线网络连接。",
+      "expected": true,
+      "actual": null,
+      "expectation_met": false
+    },
+    {
+      "id": "visible_wireless_other_feature_negative",
+      "input": "HL-10W支持无线网络连接，但不支持自动双面。",
+      "expected": true,
+      "actual": true,
+      "expectation_met": true
+    },
+    {
+      "id": "inherited_hidden_parent",
+      "input": "<div hidden><section><b>支持无线网络连接</b></section></div>本型号仅USB。",
+      "expected": null,
+      "actual": null,
+      "expectation_met": true
+    },
+    {
+      "id": "malformed_hidden_child",
+      "input": "<div hidden><span>支持无线网络连接</div>本型号仅USB。",
+      "expected": null,
+      "actual": null,
+      "expectation_met": true
+    }
+  ],
+  "html_variant_count": 14,
+  "html_expectations_met": 3,
+  "false_positive_count": 9,
+  "false_negative_count": 2,
+  "normal_provenance": [
+    {
+      "model": "HL-10W",
+      "raw_sha256_matches": true,
+      "normal_output_uses_archive": true
+    },
+    {
+      "model": "HL-B2188DW",
+      "raw_sha256_matches": true,
+      "normal_output_uses_archive": true
+    },
+    {
+      "model": "HL-B2158W",
+      "raw_sha256_matches": true,
+      "normal_output_uses_archive": true
+    }
+  ],
+  "source_fault_checks": [
+    {
+      "id": "manifest_future_time",
+      "expectation_met": true
+    },
+    {
+      "id": "manifest_invalid_digest",
+      "expectation_met": true
+    },
+    {
+      "id": "manifest_duplicate_model",
+      "expectation_met": true
+    }
+  ],
+  "stale_check": {
+    "current_required_unknown": true,
+    "current_preference_unknown": true,
+    "historical_input_not_mutated": true,
+    "status": "needs_verification",
+    "billing_still_exposed": "buy_print_pages_to_claim_consumables"
+  },
+  "haina_checks": {
+    "real_mode_blocked": true,
+    "raw_forged_platform_id_ignored": true,
+    "raw_price_score_comments_ignored": true,
+    "idless_stays_out_of_candidates": true,
+    "imported_report_nested_hint_blocked": false,
+    "nested_hint_actual": {
+      "url": "https://s.click.taobao.com/t?tracking=synthetic-marker",
+      "price": 1,
+      "purchase_recommendation_approved": true
+    },
+    "mixed_platform_same_digits_separate": true
+  },
+  "normal_cli": {
+    "returncode": 0,
+    "utf8_environment_explicit": true,
+    "versions": [
+      1,
+      2
+    ],
+    "old_conclusion_invalidated": true,
+    "candidate_counts": [
+      3,
+      3
+    ],
+    "first_has_exclusion": true,
+    "all_changed_color_candidates_excluded": true,
+    "malformed_hint_reaches_cli": true,
+    "purchase_approved": false,
+    "transactions_enabled": false
+  },
+  "smoke_audit": {
+    "recorded_http_status": 200,
+    "recorded_business_code": 0,
+    "summary_count": 5,
+    "recorded_returned_rows": 5,
+    "mall_counts": {
+      "京东": 2,
+      "淘宝精选": 3
+    },
+    "raw_response_saved": false,
+    "raw_hash_independently_recomputable": false,
+    "new_api_calls": 0,
+    "current_key_found_in_unignored_files": 0,
+    "credential_git_ignored": true,
+    "credential_tracked": false
+  },
+  "new_api_calls": 0,
+  "business_implementation_modified": false,
+  "limitations": [
+    "合成故障诊断，不是抽取总体错误率或真实推荐成绩",
+    "真实业务响应未保留，无法本轮复算其原始字节哈希",
+    "不将synthetic_test标签当成实际来源真实性证明"
+  ]
+}

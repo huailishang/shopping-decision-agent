@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "source_scope": "old_attributed_manufacturer_setup_research_only",
+  "collected_new_external_materials": 0,
+  "sources": {
+    "R7": {
+      "type": "manufacturer_setup",
+      "group": "brother_cn",
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+      "checked_on": "2026-11-15",
+      "limit": "厂商流程非实机成功证明"
+    },
+    "R10": {
+      "type": "manufacturer_setup",
+      "group": "hp_cn",
+      "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+      "checked_on": "2026-11-15",
+      "limit": "系列安装指南，具体销售版本需复核"
+    }
+  },
+  "claims": [
+    {
+      "id": "manufacturer_setup_study",
+      "positive": "已有Brother的旧设置流程和HP系列安装指南，供研究查证路径",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "counter": "设置流程不证明型号实机后续微信复用，HP资料未绑定在售配置",
+      "date_scope": "2026-11-15核查的厂家研究资料，不是2026-11-17平台在售事实"
+    },
+    {
+      "id": "mandatory_wechat_action",
+      "positive": "微信必须时可据厂家流程确定应向官方支持或自愿设备持有者核问的具体项目",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "counter": "现阶段不能说两款已成功复用或某款长期稳定",
+      "date_scope": "条件假设，非本人新答复"
+    },
+    {
+      "id": "optional_wechat_action",
+      "positive": "微信可选可继续有据的型号研究，不以该单项缺证据阻断全部研究",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "counter": "不能据此说其他App成功或建议价符合预算",
+      "date_scope": "条件假设，非本人新答复"
+    }
+  ],
+  "purchase_checks": [
+    "budget_scope",
+    "delivery_region",
+    "sale_identity",
+    "live_price"
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

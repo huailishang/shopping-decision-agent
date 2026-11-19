@@ -1,0 +1,16 @@
+{
+  "command_argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-WECHAT-DECISION-FACT-20261117\\check_package.py",
+    "--check",
+    "delivery"
+  ],
+  "started_at_utc": "2026-11-18T01:04:46.273688+00:00",
+  "finished_at_utc": "2026-11-18T01:04:47.462262+00:00",
+  "exit_code": 1,
+  "expected_exit_code": 1,
+  "stdout_sha256": "6bafdba89fe1edd834b475120dc331b4e1077216d117ecf0b081103f70eb206c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

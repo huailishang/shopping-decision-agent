@@ -1,0 +1,210 @@
+{
+  "schema": "evidence-acquisition-receipt/v2",
+  "task_id": "HNA-EVIDENCE-REOPEN-20261116",
+  "observed_on": "2026-11-17",
+  "outcome": "no_actionable_evidence",
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "parent_restoration_authorized": false,
+  "prohibited_actions": {
+    "business_api_calls": 0,
+    "metadata_calls": 0,
+    "key_reads": 0,
+    "logins": 0,
+    "paid_calls": 0,
+    "messages_sent": 0,
+    "model_transfers": 0,
+    "cart_or_order_actions": 0,
+    "git_commits": 0,
+    "git_pushes": 0
+  },
+  "actions": [
+    {
+      "id": "A-L1",
+      "route_id": "A",
+      "kind": "local",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "readable",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_local_inputs_20261117.md",
+        "sha256": "e49cd798acdebed845a5d0538f36a489ab17c190c446ec41ebcef2937262f5c5"
+      },
+      "input_path": "knowledge/real_printer_case_comparison_20261115.json"
+    },
+    {
+      "id": "A-L2",
+      "route_id": "A",
+      "kind": "local",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "readable",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_local_inputs_20261117.md",
+        "sha256": "e49cd798acdebed845a5d0538f36a489ab17c190c446ec41ebcef2937262f5c5"
+      },
+      "input_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_manifest.json"
+    },
+    {
+      "id": "A-L3",
+      "route_id": "A",
+      "kind": "local",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "readable",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_local_inputs_20261117.md",
+        "sha256": "e49cd798acdebed845a5d0538f36a489ab17c190c446ec41ebcef2937262f5c5"
+      },
+      "input_path": "data/raw/p0_2_min_comparison/a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7.pdf"
+    },
+    {
+      "id": "A-D1",
+      "route_id": "A",
+      "kind": "document",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "no_relevant_fact",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_Brother_official_20261117.md",
+        "sha256": "95c0b74418c01440397e1b0ab452349b577d16f10f31ae8f41820e21c7426500"
+      },
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html"
+    },
+    {
+      "id": "A-D2",
+      "route_id": "A",
+      "kind": "document",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "restricted",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_Brother_FAQ_block_20261117.md",
+        "sha256": "c2d936cbdfd3025ba0df623685fcfcb5c4ba4810242771be5b8896a732cd9b22"
+      },
+      "url": "https://www.brother.cn/minisite/bcnactivity/FAQ.html",
+      "discovered_from": "A-D1"
+    },
+    {
+      "id": "A-D3",
+      "route_id": "A",
+      "kind": "document",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "no_relevant_fact",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_HP_setup_20261117.md",
+        "sha256": "a1b0d069c37b2249868e48a8e608510034bef460acf154d5c808ed4b4257628d"
+      },
+      "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf"
+    },
+    {
+      "id": "A-R1",
+      "route_id": "A",
+      "kind": "render",
+      "recorded_at": "2026-11-17T02:10:32+00:00",
+      "outcome": "empty",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_HP_setup_20261117.md",
+        "sha256": "a1b0d069c37b2249868e48a8e608510034bef460acf154d5c808ed4b4257628d"
+      },
+      "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+      "discovered_from": "A-D3"
+    },
+    {
+      "id": "B-L1",
+      "route_id": "B",
+      "kind": "local",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "readable",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_local_inputs_20261117.md",
+        "sha256": "d55bf7842d6cfbbe2d27ea7a36d79e34fc0fc5f554fafe75d2578d656246878e"
+      },
+      "input_path": "reports/supplier_haina_platform_public_20261109.json"
+    },
+    {
+      "id": "B-L2",
+      "route_id": "B",
+      "kind": "local",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "readable",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_local_inputs_20261117.md",
+        "sha256": "d55bf7842d6cfbbe2d27ea7a36d79e34fc0fc5f554fafe75d2578d656246878e"
+      },
+      "input_path": "reports/supplier_haina_mcp_docs_20261109.json"
+    },
+    {
+      "id": "B-L3",
+      "route_id": "B",
+      "kind": "local",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "readable",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_local_inputs_20261117.md",
+        "sha256": "d55bf7842d6cfbbe2d27ea7a36d79e34fc0fc5f554fafe75d2578d656246878e"
+      },
+      "input_path": "reports/supplier_haina_beta_notice_20261109.json"
+    },
+    {
+      "id": "B-D1",
+      "route_id": "B",
+      "kind": "document",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "empty",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_haina_platform_error_20261117.md",
+        "sha256": "e8ce1f6b54e1613b797d895edcd4f5cfbeaf91b8bde0a9a89c584463abcad65e"
+      },
+      "url": "https://ai.zhidemai.com/haina-platform"
+    },
+    {
+      "id": "B-D2",
+      "route_id": "B",
+      "kind": "document",
+      "recorded_at": "2026-11-17T01:52:12+00:00",
+      "outcome": "restricted",
+      "evidence": {
+        "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_haina_mcp_error_20261117.md",
+        "sha256": "9e50888e3d72b0e74c66244c27a0c8c482d0144655f5e893b31b9f66381cb535"
+      },
+      "url": "https://ai.zhidemai.com/haina-platform/haina_mcp"
+    }
+  ],
+  "route_results": [
+    {
+      "route_id": "A",
+      "owner": "Executor",
+      "state": "no_relevant_fact",
+      "reason": "R7和R10官方首次设置已存；Brother官方FAQ一次403、HP PDF只含首次绑定；未取得准确型号后续再次微信打印/变网重绑新原值。",
+      "action_ids": [
+        "A-L1",
+        "A-L2",
+        "A-L3",
+        "A-D1",
+        "A-D2",
+        "A-D3",
+        "A-R1"
+      ]
+    },
+    {
+      "route_id": "B",
+      "owner": "Executor",
+      "state": "restricted",
+      "reason": "仓内3份旧公开说明仅技术接口和协议名称；两个官方种子页此次工具分别Cache miss与not accessible，未取得最小用途条款正文，不据工具错误推断网站必需登录。",
+      "action_ids": [
+        "B-L1",
+        "B-L2",
+        "B-L3",
+        "B-D1",
+        "B-D2"
+      ]
+    }
+  ],
+  "materials": [],
+  "owner_request": {
+    "recipient_role": "已持设备自愿测试者或厂家支持；海纳协议/材料有权持有者",
+    "exact_item": "准确型号首次与隔日二次微信打印、换网是否重绑的最小记录；海纳本机解析/本人展示/最小留证适用协议名称版本条款位置及限制",
+    "sent": false,
+    "evidence": {
+      "path": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/owner_minimal_requests_20261117.md",
+      "sha256": "c6836c8b6cd10d0a165da26ee50031fb25f1c6dd46c7fc8a0cf3294f0233fe95"
+    }
+  },
+  "next_step": "交评估者核本轮无新增可准入事实、取证停点与未发送的最小人工请求；不得恢复父长包或产品改造。"
+}

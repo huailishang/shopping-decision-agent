@@ -5,6 +5,7 @@ import json
 import re
 import os
 import time
+from pathlib import Path
 from .web import evaluate_input
 
 NAMES = ('monthly_pages','budget_max_cny','idle_weeks','needs_color','accepts_outsourced_color','requires_wireless','requires_scan')
@@ -27,18 +28,29 @@ def encode(s):
 
 def main():
     try:
-        raw = [base64.b64decode(v, validate=True).decode('utf-8') for v in sys.argv[1:]]
-        if len(raw) not in (9, 14):
+        argv = sys.argv[1:]
+        haina_mcp_report_path = None
+        if argv and argv[0] == '--haina-mcp-report':
+            if len(argv) < 3:
+                raise ValueError('海纳研究材料参数不完整')
+            haina_mcp_report_path = Path(argv[1])
+            argv = argv[2:]
+        if any(value == '--haina-mcp-report' for value in argv):
+            raise ValueError('海纳研究材料参数位置不正确')
+        raw = [base64.b64decode(v, validate=True).decode('utf-8') for v in argv]
+        if len(raw) not in (9, 14, 15):
             raise ValueError('条件数量不正确')
         data = {'description':raw[0], 'confirmed': True, 'requirements':raw[8].splitlines() if raw[8] else []}
-        if len(raw) == 14:
-            for name, value in zip(('wechat_required', 'wechat_workflow', 'requires_auto_duplex', 'delivery_region', 'budget_scope'), raw[9:]):
+        if len(raw) >= 14:
+            for name, value in zip(('wechat_required', 'wechat_workflow', 'requires_auto_duplex', 'delivery_region', 'budget_scope'), raw[9:14]):
                 if name in ('wechat_required', 'requires_auto_duplex'):
                     if value not in ('', 'true', 'false'):
                         raise ValueError(name + ' 必须是true、false或未知')
                     data[name] = None if value == '' else value == 'true'
                 else:
                     data[name] = (value or None) if name == 'delivery_region' else (value or 'unknown')
+        if len(raw) == 15:
+            data['device_deployment_region'] = raw[14] or None
         for k,v in zip(NAMES,raw[1:8]):
             if k in NAMES[3:] and v not in ('', 'true', 'false'):
                 raise ValueError(k + ' 必须是true、false或未知')
@@ -47,7 +59,7 @@ def main():
                        (int(v) if k == 'monthly_pages' and re.fullmatch(r'[0-9]+', v) else
                         v if k == 'monthly_pages' else
                         (v == 'true' if k in NAMES[3:] else int(v))))
-        result = evaluate_input(data)
+        result = evaluate_input(data, haina_mcp_report_path=haina_mcp_report_path)
         if os.environ.get("SHOPPING_H09_TEST_DELAY_MS"):
             time.sleep(min(5, int(os.environ["SHOPPING_H09_TEST_DELAY_MS"])/1000))
         rec = result['recommendation']
@@ -98,6 +110,133 @@ def main():
                     preview.append('  零售渠道：尚无该型号已核实销售项')
                 preview.append('  官方资料：' + item['official_url'] + '；获取日：' + comparison['catalog_recorded_on'])
             preview.append('任何一款均未证明符合预算或耐用性领先；缺报价/库存/销售配置时继续暂缓。')
+        case_research = result.get('real_printer_case_research')
+        if isinstance(case_research, dict):
+            shared = case_research.get('shared_research_snapshot', {})
+            if shared.get('status') == 'research_snapshot_only_not_purchase':
+                preview.append('【共享研究结果｜计算全部候选，仅展示前三项；不含购买许可】')
+                preview.append('已计算候选：' + str(shared['total_candidate_count'])
+                               + '；下一动作：' + str(shared['next_action']))
+                for candidate in shared.get('displayed_candidates', []):
+                    preview.append('  ' + str(candidate['model_id']) + '：'
+                                   + str(candidate['eligibility']))
+                if shared.get('hidden_candidates'):
+                    preview.append('其余已计算但未展示：' + '、'.join(
+                        str(item['model_id']) for item in shared['hidden_candidates']))
+                for question in shared.get('necessary_user_questions', []):
+                    preview.append('待本人确认：' + str(question))
+            comparison = case_research.get('model_comparison', {})
+            effects = case_research.get('decision_effects', {})
+            if effects.get('status') == 'source_limited_development_not_independent_effect':
+                preview.append('【认知增量与关键缺件｜仅型号研究，未通过独立效果验收】')
+                for effect in effects.get('judgments', [])[:4]:
+                    preview.append(str(effect['id']) + '：' + str(effect['claim'])
+                                   + '；对判断的作用：' + str(effect['decision_effect']))
+                    preview.append('  仍缺：' + '、'.join(effect.get('missing', []))
+                                   + '；来源：' + '、'.join(ref.get('url', '')
+                                       for ref in effect.get('source_refs', [])))
+                for question in effects.get('questions', []):
+                    preview.append('关键补问：' + question)
+                preview.append('候选路线（不含购买资格）：' + '、'.join(
+                    str(route.get('name')) + ('（条件冲突，暂停判断）'
+                        if route.get('eligibility') == 'blocked_by_user_condition_conflict' else '')
+                    for route in effects.get('routes', [])))
+            preview.append('【公开厂家资料的两型号比较｜不是海纳数据，也不是平台在售核验】')
+            for item in case_research.get('reasons', [])[:9]:
+                preview.append(str(item.get('id')) + '：' + str(item.get('reason'))
+                               + '；限制：' + str(item.get('counter_evidence')))
+            selection = case_research.get('criteria_comparison', {})
+            if selection.get('status') == 'criteria_driven_research_not_purchase':
+                preview.append('【本轮条件驱动的型号资格｜依据版本：' +
+                               str(selection.get('criteria_version')) + '】')
+                preview.append('当前依据 SHA-256：' + str(selection.get('criteria_sha256')))
+                preview.append('本轮规范化硬要求：' + str(selection.get('normalized_required', {}))
+                               + '；未识别：' + str(selection.get('unresolved_hard_conditions', []))
+                               + '；未建准则：' + str(selection.get('unmodeled_hard_requirements', [])))
+                relation_names = {
+                    'match': '符合', 'mismatch': '不符合',
+                    'unknown': '未核', 'at_or_below': '不高于',
+                    'above': '高于', 'below': '低于建议区间',
+                    'within': '位于建议区间', 'equal': '等于建议区间',
+                    'contains': '覆盖建议区间', 'overlap': '与建议区间部分重叠',
+                    'workflow_unconfirmed': '微信打印流程未确认',
+                    'other_workflow_unverified': 'App替代流程待实测',
+                    'deployment_region_unconfirmed': '设备部署地未知，微信服务未核',
+                    'deployment_outside_verified_scope': '境外微信服务缺有效适用证据',
+                }
+                for model in selection.get('models', []):
+                    state_label = {
+                        'excluded_by_hard_condition': '本轮硬条件排除',
+                        'pending_hard_evidence': '存在硬条件未知，暂不能判满足',
+                        'model_spec_research_only': '规格研究候选，不是购买批准',
+                        'blocked_by_user_condition_conflict': '本人确认与原文硬条件冲突，暂停入选',
+                    }.get(model.get('eligibility'), '研究状态待核')
+                    preview.append(str(model.get('model_id')) + '：' + state_label)
+                    for check in model.get('checks', []):
+                        name = str(check.get('criterion_id'))
+                        relation = relation_names.get(check.get('relation'), '未核')
+                        preview.append('  ' + name + ' ' + relation + '；用户：' +
+                                       str(check.get('user_value')) + '；型号事实：' +
+                                       str(check.get('product_value')) + ' ' +
+                                       str(check.get('unit')) + '；来源：' +
+                                       '、'.join(check.get('source_ids', [])) + '；证据状态：' +
+                                        str(check.get('evidence_state', 'unknown')) + '；局限：' +
+                                       str(check.get('unknown_or_counter', '')))
+                    preview.append('  地区到手价、购买资格与平台销售身份：未核，不可购买')
+                for question in selection.get('questions', [])[:6]:
+                    preview.append('待核：' + str(question))
+                preview.append('【依据来源与适用限制】')
+                for source_id, source in selection.get('source_registry', {}).items():
+                    preview.append(str(source_id) + ' (' +
+                                   str(source.get('type', 'unknown')) + ')：' +
+                                   str(source.get('url', '')) + '；限制：' +
+                                   str(source.get('limit', '')))
+            for item in comparison.get('comparisons', [])[:8]:
+                preview.append(str(item.get('dimension')) + '：' + str(item.get('result'))
+                               + '（来源：' + '、'.join(item.get('source_ids', [])) + '）')
+            for item in comparison.get('active_conditional_decisions', [])[:3]:
+                preview.append('当前条件触发的取舍：' + str(item.get('when')) + ' → ' + str(item.get('model'))
+                               + '；' + str(item.get('reason')) + '（未批准购买）')
+            for item in comparison.get('unknown_conditional_decisions', [])[:3]:
+                preview.append('条件尚未确认：' + str(item.get('when')) + '；需补：'
+                               + '；'.join(item.get('conditions_before_purchase', [])))
+            preview.append('部署地区范围：' + str(comparison.get('deployment_region_scope', 'unknown'))
+                           + '；是否已提供部署地：' + str(comparison.get('deployment_region_provided', False)))
+            preview.append('当前平台商品身份：'
+                           + str(comparison.get('real_sale_identity_verified_count', 0))
+                           + '；地区有效报价：'
+                           + str(comparison.get('regional_live_quote_count', 0))
+                           + '；购买批准：否。')
+        haina_mcp = result.get('haina_mcp_research')
+        if isinstance(haina_mcp, dict):
+            preview.append('【海纳MCP研究材料｜显式本机文件；当前仅允许合成接线测试】')
+            preview.append('材料状态：' + str(haina_mcp.get('status', 'unknown'))
+                           + '；实体数：' + str(haina_mcp.get('entity_count', 0))
+                           + '；平台身份核实：' + str(haina_mcp.get('platform_identity_verified_count', 0))
+                           + '；有效报价：' + str(haina_mcp.get('quote_verified_count', 0)))
+            if haina_mcp.get('error'):
+                preview.append('材料拒绝/错误原因：' + str(haina_mcp.get('error')))
+            for entity in haina_mcp.get('entities', [])[:3]:
+                preview.append('实体线索：' + str(entity.get('entity_name', '未命名'))
+                               + '；型号候选：' + '、'.join(entity.get('model_candidates', []))
+                               + '；销售线索数：' + str(entity.get('sale_lead_count', 0)))
+                for lead in entity.get('sale_leads', [])[:2]:
+                    preview.append('  销售线索：' + str(lead.get('title') or '未返回商品标题')
+                                   + '；身份：' + str(lead.get('identity_status'))
+                                   + '；商城：' + str(lead.get('mall_hint') or '未知')
+                                   + '；店铺：' + str(lead.get('seller_hint') or '未知')
+                                   + '；链接域名：' + str(lead.get('link_host') or '未知')
+                                   + '；供方价格线索：' + str(lead.get('supplier_price_hint') or '无')
+                                   + '（未核验，不是到手价）')
+                for parameter in entity.get('parameters', [])[:5]:
+                    preview.append('  参数线索：' + str(parameter.get('name') or '未命名')
+                                   + ' = ' + str(parameter.get('value') or parameter.get('description') or '未知')
+                                   + '（供应商返回，待核）')
+                for opinion in entity.get('opinion_summaries', [])[:3]:
+                    preview.append('  评价摘要线索：' + str(opinion.get('attribute_name') or '未命名')
+                                   + ' / ' + str(opinion.get('attribute_value') or '未知')
+                                   + '（供应商聚合，非独立评测）')
+            preview.append('本材料不提升平台商品ID、地区报价、预算通过或购买批准；合成内容不代表真实商品。')
         visible_reasons = '\n'.join((*rec['reasons'], *preview))
         output = [('status',rec['status']),('route',rec['recommended_route'] or ''),('reasons',visible_reasons),('questions','\n'.join(rec['questions'])),('unknowns','\n'.join(rec['unknowns'])),('evidence','\n'.join(e['id']+' '+e['source']+' '+e['published_on'] for e in result['evidence'])),('card_version',result['card_sha256']),('time',result['evaluated_at']),('report_json',json.dumps(result,ensure_ascii=False,indent=2))]
     except (ValueError,TypeError) as exc:

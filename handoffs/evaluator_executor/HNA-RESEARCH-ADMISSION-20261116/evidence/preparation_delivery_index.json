@@ -1,0 +1,121 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "status": "prefreeze_preparation_handoff_not_full_package_delivery",
+  "artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/EXECUTOR_PREPARATION.md",
+      "sha256": "c33bc8073f50626eac0e8af60c534faf66e2eb372a769a1b1ccc5ddff1ed04f6",
+      "bytes": 763
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/REPORT.md",
+      "sha256": "6adff0ec11ddc9d6a9264eafa9f822ba987be8a76e4739784591fd991819d149",
+      "bytes": 7629
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/gap_register.json",
+      "sha256": "362235fc92a4e8e4c9377e70b864aacc3788f20e5aa62340983b9e8f324644f5",
+      "bytes": 2398
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/executor_start_snapshot.json",
+      "sha256": "09680176ea580278d7c2e2b5c27c8b08070dc2255a439d355dd7f0102bc58fd4",
+      "bytes": 33792
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/executor_start_source_snapshot.zip",
+      "sha256": "060c5f7f1c4f2582bdd9240c21e3cffc701c9b9bc9911c68e8d5ceed50c47ec3",
+      "bytes": 343509
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/executor_start_source_diff.patch",
+      "sha256": "69f127cba23188c9838bbdbbace2a50016ec971d6641597f3f07fbddf3e7f721",
+      "bytes": 92107
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/executor_start_git_status.z",
+      "sha256": "ce8ded880d4396902948559fafc05b506be2b775e2a733170978fbd1263d2a6a",
+      "bytes": 25521
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/tracked_diff_after_activation.patch",
+      "sha256": "b2c53f9dddafd69d70c2ae31b945c1513bf435f303e6d31901a0bf4480c216f9",
+      "bytes": 249507
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/baseline_input.json",
+      "sha256": "3cf8b018c27ccac39b9f1bb5d8596a9e0a8a68cbfe7e107009f619dcf1ca0b0a",
+      "bytes": 666
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/baseline_capture.json",
+      "sha256": "0d204f596ad26f9b4c7e8ac9e32b9eea6914c2d63fe391ea2eebab4800277f77",
+      "bytes": 14858
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/baseline_cli.stdout.jsonl",
+      "sha256": "e3303dfb617554f8a60ef70c4b823b90a42391adccba66e52d3173ba89e38dab",
+      "bytes": 65515
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/baseline_cli.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/public_action_ledger.json",
+      "sha256": "c5f4a6c74da3eea38848570b7b0a7e5ea56f308716be7fc552f99972b6ffe24d",
+      "bytes": 4936
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_manifest.json",
+      "sha256": "06f3732153e0a43c97be052a98f7cee65f645c928369152971c835384037fdc4",
+      "bytes": 6809
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_qsg_recheck.md",
+      "sha256": "3156996d262d5fedbddb0c38cf5b8ac197fc249e126dd4bf9632544e2c70de52",
+      "bytes": 1464
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_manual_duplex_lead.md",
+      "sha256": "56ab34bb171af6b53b42c02b787ce245e7d458272477afa6a53e951d014786ee",
+      "bytes": 1344
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_wechat_online_lead.md",
+      "sha256": "1df9a3ee37c07c23d21da286256d1e96c295c4ec678347996bc153c56e5a2da4",
+      "bytes": 1252
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/development_comparison.json",
+      "sha256": "81258b26a41b8966e4ca08acd343a08122daa838aa912b4f60ba79d04a78c66c",
+      "bytes": 511
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/iterations.json",
+      "sha256": "ea2445831e998c7a0337a4331f974c6ff727da71f7a7e315539d4bb05e5cbdd2",
+      "bytes": 605
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/check_preparation.py",
+      "sha256": "23c905e4082e7ed82d5ea31feb9e8dcdae7b468f9ba16ebe83295cd598ed2732",
+      "bytes": 4963
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/preparation_validation.json",
+      "sha256": "37bbbf2f6acfa798f4d2f89ac31679e77030e093c45a7111648efe55f2ffb2d0",
+      "bytes": 2768
+    }
+  ],
+  "unchanged_contract_dependencies": {
+    "CONTRACT.md": "b7cc751a17b263802316baf9661a20b95bd4f5c2337c167c62846a58ef8d704d",
+    "EVALUATION_RULES.md": "e5b68bace0d375e2b3226791e7d0ba77fb62cf290cc6312c51d9e38992efc14a",
+    "VALIDATION_PLAN.yaml": "eeba6990e4e8cbb3992402816c5854774b5933ced70bb7e507d87f572900fe5b",
+    "evidence/planning_r2_baseline.json": "10ffe646cb86c02ae384493b8e9c1fd039aeb3be100e0036fd3a9593e21246ce"
+  },
+  "current_entry_sha256": "56ac8a3dcfc1f4e005452d303c558e1d4f03af7ed4085f831eadd1ef76bfd6ef",
+  "local_replay": "python -X utf8 handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/check_preparation.py",
+  "next_owner": "Evaluator",
+  "product_or_evaluation_pass_claimed": false
+}

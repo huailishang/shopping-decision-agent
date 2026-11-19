@@ -1,0 +1,131 @@
+{
+  "task": "P0.9-B S1-S4 independent finding repair",
+  "date": "2026-11-12",
+  "role": "executor",
+  "status": "P2_local_fixes_pass_self_replay_pending_independent_new_variants",
+  "baseline": {
+    "original_assessor_findings": "reports/P0_9_B_独立评估报告_20261112.md",
+    "original_assessor_validation": "reports/p0_9_b_independent_validation_20261112.json",
+    "original_assessor_new_cases_total": 24,
+    "original_assessor_new_cases_passed": 14,
+    "original_assessor_new_cases_failed": 10
+  },
+  "fixes": {
+    "S1": "reject unsupported/unhashable row fields per-row without losing good rows",
+    "S2": "same source event revocation or loss of permitted uses forces conflicting active entry to invalidated, preserves unrelated valid source",
+    "S3": "CLI re-gates raw synthetic source at each conversation turn; expiry is not cached from startup",
+    "S4": "explicit selected_sku_id anchor supported/retained; legacy absent anchor marked field_binding_complete=false with missing status"
+  },
+  "synthetic_event_key": [
+    "platform",
+    "platform_item_id",
+    "selected_sku_id",
+    "seller_id",
+    "source_id",
+    "source_ref",
+    "source_sha256",
+    "observed_at(normalized UTC)"
+  ],
+  "new_tests": {
+    "file": "tests/test_p0_9_b_s1s4_followup.py",
+    "unittest_methods": 8,
+    "features": [
+      "4 bad row types both orders",
+      "withdrawn and use loss both orders",
+      "independent valid source retained",
+      "timezone-equivalent source event",
+      "malformed claims not trusted as revocation",
+      "SKU anchor audit/provisional distinction",
+      "expiry before after",
+      "real subprocess mixed rows revocation"
+    ]
+  },
+  "regression": {
+    "existing_24_independent_known_cases_windows": {
+      "passed": 24,
+      "total": 24,
+      "path": "reports/p0_9_b_s1s4_win_replay_20261112.json"
+    },
+    "existing_24_independent_known_cases_wsl": {
+      "passed": 24,
+      "total": 24,
+      "path": "reports/p0_9_b_s1s4_wsl_replay_20261112.json"
+    },
+    "previous_executor_22_development_cases": {
+      "passed": 22,
+      "total": 22
+    },
+    "python_windows_native": {
+      "passed": 344,
+      "total": 344
+    },
+    "python_wsl": {
+      "passed": 344,
+      "total": 344
+    },
+    "h05": {
+      "passed": 8,
+      "total": 8,
+      "path": "reports/p0_9_b_s1s4_h05_executor_20261112.json"
+    },
+    "java_17_compile": "pass",
+    "java_p04": {
+      "passed": 6,
+      "total": 6
+    },
+    "java_h10": {
+      "passed": 6,
+      "total": 6
+    },
+    "git_diff_check": "pass",
+    "prior_A_time_binding_independent_current_run": {
+      "passed": 134,
+      "total": 134,
+      "path": "reports/p0_9_b_s1s4_time_regression_20261112.json"
+    }
+  },
+  "changed_files": [
+    "shopping_decision/sale_configuration_evidence.py",
+    "shopping_decision/dialogue_flow.py"
+  ],
+  "new_files": [
+    "tests/test_p0_9_b_s1s4_followup.py",
+    "reports/p0_9_b_s1s4_safe_replay_20261112.py",
+    "reports/p0_9_b_s1s4_win_replay_20261112.json",
+    "reports/p0_9_b_s1s4_wsl_replay_20261112.json",
+    "reports/p0_9_b_s1s4_h05_executor_20261112.json"
+  ],
+  "code_hashes": {
+    "shopping_decision/sale_configuration_evidence.py": "1e955643bfbaa5ce00d7233a49e82112565c42774256e0458904b035f290eefb",
+    "shopping_decision/dialogue_flow.py": "ac0a81e2ce1c910ab732cbe0f2a563756308f02ee154a1f776c369465acf0254",
+    "tests/test_p0_9_b_s1s4_followup.py": "c800d409642b1dadf36ac1966116dcce3e1a92f94322e92535bba063087fe486"
+  },
+  "historic_output_note": "First direct replay of assessor script writes to fixed reports/p0_9_b_independent_20261112.json; its original per-case 14/24 JSON was overwritten by 24/24 replay. Assessor historical narrative report and validation index remain intact and show 14/24. Subsequent replays use safe wrapper with distinct paths; original per-case bytes not recoverable here; this loss is disclosed rather than silently claiming preserved.",
+  "real_branch": {
+    "original_brother_20_processed": 0,
+    "deep_six_processed": 0,
+    "distinct_model_real_positive": 0,
+    "goal_distinct_real_positive": 2,
+    "regional_quotes": 0,
+    "permission": "unknown",
+    "real_import_enabled": false
+  },
+  "limits": {
+    "new_haina_business_api_calls": 0,
+    "paid_calls": 0,
+    "key_reads": 0,
+    "account_actions": 0,
+    "orders": 0,
+    "transactions": 0,
+    "external_messages": 0,
+    "git_commit": 0,
+    "git_push": 0
+  },
+  "approval": {
+    "identity_verified": false,
+    "quote_verified": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "overall": "P0.9-B remains NOT PASS because real B1/B2/B3 missing. Repair demonstrated only local synthetic scope, new independent unexposed tests pending."
+}

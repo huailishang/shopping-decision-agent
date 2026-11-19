@@ -1,0 +1,16 @@
+{
+  "command_argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "shopping_decision.dialogue_flow",
+    "--real-printer-case"
+  ],
+  "started_at_utc": "2026-11-18T01:01:34.438203+00:00",
+  "finished_at_utc": "2026-11-18T01:01:35.477726+00:00",
+  "exit_code": 0,
+  "input_sha256": "e3b7ec9aac3322523657197d6962492996e58d7e7971f262e2e80fe5f7f52ab4",
+  "stdout_sha256": "9bf04ebc8b5c7c553735cb6cf06d6de159abc17485b08d680e7afaff83348259",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

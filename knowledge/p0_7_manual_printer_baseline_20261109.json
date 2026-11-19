@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "source_kind": "manufacturer_public_pages",
+  "recorded_on": "2026-11-09",
+  "market_region": "CN",
+  "purpose": "P0.7同型号人工事实对照基线；评估者独立复核仍待完成",
+  "review_method": "人工阅读Brother中国公开型号详情；仅列清楚的官方正向/类型证据，未列出的功能=未知",
+  "products": [
+    {
+      "model_id": "HL-10W",
+      "brand": "Brother",
+      "category": "printer",
+      "name": "Brother HL-10W（人工核对官网详情）",
+      "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "pay_per_page_consumables": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        }
+      },
+      "consumables": [],
+      "manufacturer_suggested_retail_cny": null,
+      "independent_durability_test": false
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "brand": "Brother",
+      "category": "printer",
+      "name": "Brother HL-B2188DW（人工核对官网详情）",
+      "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "auto_duplex": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        }
+      },
+      "consumables": [
+        {
+          "model": "TNB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw"
+        },
+        {
+          "model": "DRB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw"
+        }
+      ],
+      "manufacturer_suggested_retail_cny": null,
+      "independent_durability_test": false
+    },
+    {
+      "model_id": "HL-B2158W",
+      "brand": "Brother",
+      "category": "printer",
+      "name": "Brother HL-B2158W（人工核对官网详情）",
+      "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "2026-11-09人工阅读官网对应型号详情的对照记录；非自动解析结果；不证明实机或市场售价"
+        }
+      },
+      "consumables": [
+        {
+          "model": "TNB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w"
+        },
+        {
+          "model": "DRB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w"
+        }
+      ],
+      "manufacturer_suggested_retail_cny": null,
+      "independent_durability_test": false
+    }
+  ]
+}

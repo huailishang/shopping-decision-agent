@@ -1,0 +1,21 @@
+{
+  "basis": "Observed read-only local Codex app-server model/list result during this task; listing does not prove account access",
+  "listed_model_ids": [
+    "gpt-5.5",
+    "gpt-5.4",
+    "gpt-5.4-mini",
+    "gpt-5.3-codex",
+    "gpt-5.2"
+  ],
+  "tested_rejected_ids": [
+    "gpt-5.5",
+    "gpt-5.4-mini",
+    "gpt-5.3-codex"
+  ],
+  "authentication_status": "CLI reports ChatGPT login; no credential files read or copied",
+  "actual_inference_completed_count": 0,
+  "attempts_consumed_conservatively": 6,
+  "attempt_budget": 10,
+  "remaining_attempts_not_reset": 4,
+  "missing_raw_receipts": 1
+}

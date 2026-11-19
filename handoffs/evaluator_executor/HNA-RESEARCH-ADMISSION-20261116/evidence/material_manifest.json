@@ -1,0 +1,131 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "status": "prefreeze_material_review_candidates_no_product_admission",
+  "retrieved_on": "2026-11-16",
+  "materials": [
+    {
+      "id": "M01",
+      "gap_id": "G1",
+      "source_type": "manufacturer_series_setup_pdf",
+      "source_url": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf",
+      "retrieved_on": "2026-11-16",
+      "published_on": null,
+      "valid_until": null,
+      "scope": "中国区HL-L1238W研究；M03流程须另核准确型号映射",
+      "evidence_quality": "pdf_text_and_page_2_visual_checked",
+      "novelty": "existing_source_rechecked_not_new",
+      "local_allowed_excerpt_or_note_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_qsg_recheck.md",
+      "local_note_sha256": "3156996d262d5fedbddb0c38cf5b8ac197fc249e126dd4bf9632544e2c70de52",
+      "sha256_scope": "local_attributed_note_not_remote_response",
+      "field_anchor": "第2页手动无线设置及兄弟畅享印框；文档D031HN001-00",
+      "support_and_counter_limit": "无线连接指示与微信绑定应分别核；首次绑定不是隔日复用证据。",
+      "usage_basis": {
+        "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/CONTRACT.md",
+        "section": "第二步及冻结前精确依赖：厂家少量归因研究边界",
+        "allowed_scope": "short_attributed_personal_research_notes_only",
+        "not_vendor_license_grant": true,
+        "evaluator_admission": "pending_not_approved"
+      },
+      "admitted_to_normal_chain": false,
+      "revocation_conditions": [
+        "source_withdrawn_or_changed",
+        "wrong_model_mapping",
+        "usage_basis_withdrawn",
+        "local_sha_mismatch"
+      ],
+      "price_or_platform_identity_evidence": false,
+      "existing_local_original": {
+        "path": "data/raw/p0_2_min_comparison/a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7.pdf",
+        "sha256": "a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7",
+        "bytes": 2404380,
+        "original_capture_date": "2026-11-06",
+        "current_remote_pdf_bytes_hash": "not_available_from_web_tool_not_inferred_from_cache"
+      }
+    },
+    {
+      "id": "M02",
+      "gap_id": "G2",
+      "source_type": "manufacturer_windows_manual_search_excerpt",
+      "source_url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-AF8C0063-911B-44B3-B52D-0FC0D110ABB5_1.html",
+      "retrieved_on": "2026-11-16",
+      "published_on": null,
+      "valid_until": null,
+      "scope": "中国区HL-L1238W研究；M03流程须另核准确型号映射",
+      "evidence_quality": "search_excerpt_only_original_open_403",
+      "novelty": "new_lead_only_pending_original_and_relevance_review",
+      "local_allowed_excerpt_or_note_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_manual_duplex_lead.md",
+      "local_note_sha256": "56ab34bb171af6b53b42c02b787ce245e7d458272477afa6a53e951d014786ee",
+      "sha256_scope": "local_attributed_note_not_remote_response",
+      "field_anchor": "搜索标题含HL-L1238W；双面打印（手动）选项与偶数页步骤",
+      "support_and_counter_limit": "可记录手动流程线索；不能判无自动双面；原案未确认自动双面需求。",
+      "usage_basis": {
+        "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/CONTRACT.md",
+        "section": "第二步及冻结前精确依赖：厂家少量归因研究边界",
+        "allowed_scope": "short_attributed_personal_research_notes_only",
+        "not_vendor_license_grant": true,
+        "evaluator_admission": "pending_not_approved"
+      },
+      "admitted_to_normal_chain": false,
+      "revocation_conditions": [
+        "source_withdrawn_or_changed",
+        "wrong_model_mapping",
+        "usage_basis_withdrawn",
+        "local_sha_mismatch"
+      ],
+      "price_or_platform_identity_evidence": false
+    },
+    {
+      "id": "M03",
+      "gap_id": "G1",
+      "source_type": "manufacturer_generic_wechat_faq_search_excerpt",
+      "source_url": "https://www.brother.cn/minisite/bcnactivity/new-question09.html",
+      "retrieved_on": "2026-11-16",
+      "published_on": null,
+      "valid_until": null,
+      "scope": "中国区HL-L1238W研究；M03流程须另核准确型号映射",
+      "evidence_quality": "search_excerpt_only_original_open_403",
+      "novelty": "new_lead_only_pending_original_and_model_mapping",
+      "local_allowed_excerpt_or_note_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_wechat_online_lead.md",
+      "local_note_sha256": "1df9a3ee37c07c23d21da286256d1e96c295c4ec678347996bc153c56e5a2da4",
+      "sha256_scope": "local_attributed_note_not_remote_response",
+      "field_anchor": "管理员/普通用户；管理员设定/添加管理员/启动微信小程序/在线；机型列表",
+      "support_and_counter_limit": "可细化拟议实机检查；不能证明隔日复用或将所有通用FAQ步骤映射到本型号。",
+      "usage_basis": {
+        "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/CONTRACT.md",
+        "section": "第二步及冻结前精确依赖：厂家少量归因研究边界",
+        "allowed_scope": "short_attributed_personal_research_notes_only",
+        "not_vendor_license_grant": true,
+        "evaluator_admission": "pending_not_approved"
+      },
+      "admitted_to_normal_chain": false,
+      "revocation_conditions": [
+        "source_withdrawn_or_changed",
+        "wrong_model_mapping",
+        "usage_basis_withdrawn",
+        "local_sha_mismatch"
+      ],
+      "price_or_platform_identity_evidence": false
+    }
+  ],
+  "counts": {
+    "existing_source_rechecks": 1,
+    "new_search_leads": 2,
+    "new_actionable_materials_approved_for_integration": 0,
+    "normal_chain_new_real_materials": 0
+  },
+  "blocked_branches": [
+    {
+      "id": "HAINA",
+      "reason": "6次检索中的官方协议查询未得到可核全文，主页无可读正文；本机解析/本人展示/必要留证用途及有权目标原值仍缺。",
+      "state": "stopped_haina_only",
+      "api_or_key_read": false
+    },
+    {
+      "id": "MANUFACTURER_INTEGRATION",
+      "reason": "新线索原页403；唯一可读PDF为已存旧来源，联网补读细节不足以解决后续微信复用或改变原案判断。先交评估者核相关性，不自行准入。",
+      "state": "stopped_pending_evaluator_or_new_material"
+    }
+  ],
+  "overall_purchase_approved": false,
+  "transactions_enabled": false
+}

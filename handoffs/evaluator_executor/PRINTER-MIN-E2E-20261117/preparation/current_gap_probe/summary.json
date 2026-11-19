@@ -1,0 +1,20 @@
+{
+  "cases_checked": 3,
+  "passed": 0,
+  "results": [],
+  "errors": [
+    {
+      "case": "main_two_facts",
+      "error": "normal entry has not produced a selected-evidence research_case"
+    },
+    {
+      "case": "thin_one_fact",
+      "error": "normal entry has not produced a selected-evidence research_case"
+    },
+    {
+      "case": "empty_evidence",
+      "error": "normal entry has not produced a selected-evidence research_case"
+    }
+  ],
+  "limit": "One proxy walkthrough plus sparse/empty engineering variants, not three user trials."
+}

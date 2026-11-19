@@ -1,0 +1,263 @@
+{
+  "role": "executor",
+  "task": "P0.9-B",
+  "source_mode": "synthetic_test",
+  "observed_at": "2026-11-12T13:08:09.840683+00:00",
+  "development_scenarios": [
+    {
+      "id": "normal_jd",
+      "modified_fields": [],
+      "expected": "accepted_synthetic",
+      "actual": "accepted_synthetic",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "normal_taobao_same_number",
+      "modified_fields": [
+        "platform"
+      ],
+      "expected": "accepted_synthetic",
+      "actual": "accepted_synthetic",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "unsupported_platform",
+      "modified_fields": [
+        "platform"
+      ],
+      "expected": "platform_or_item_id_invalid",
+      "actual": "platform_or_item_id_invalid",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "missing_item_id",
+      "modified_fields": [
+        "platform_item_id"
+      ],
+      "expected": "platform_or_item_id_invalid",
+      "actual": "platform_or_item_id_invalid",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "missing_selected_sku",
+      "modified_fields": [
+        "selected_sku_id"
+      ],
+      "expected": "selected_sku_id_missing",
+      "actual": "selected_sku_id_missing",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "invalid_sku_id",
+      "modified_fields": [
+        "selected_sku_id"
+      ],
+      "expected": "sku_id_invalid",
+      "actual": "sku_id_invalid",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "multiple_models",
+      "modified_fields": [
+        "title_models"
+      ],
+      "expected": "title_spec_or_selected_model_conflict",
+      "actual": "title_spec_or_selected_model_conflict",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "title_spec_conflict",
+      "modified_fields": [
+        "spec_models"
+      ],
+      "expected": "title_spec_or_selected_model_conflict",
+      "actual": "title_spec_or_selected_model_conflict",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "used_device",
+      "modified_fields": [
+        "condition"
+      ],
+      "expected": "not_single_new_printer",
+      "actual": "not_single_new_printer",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "bundle_not_single",
+      "modified_fields": [
+        "selected_variant"
+      ],
+      "expected": "not_single_new_printer",
+      "actual": "not_single_new_printer",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "consumable_not_host",
+      "modified_fields": [
+        "item_kind"
+      ],
+      "expected": "not_single_new_printer",
+      "actual": "not_single_new_printer",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "missing_seller",
+      "modified_fields": [
+        "seller_id"
+      ],
+      "expected": "source_or_seller_invalid",
+      "actual": "source_or_seller_invalid",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "corrupt_hash",
+      "modified_fields": [
+        "source_sha256"
+      ],
+      "expected": "source_hash_invalid",
+      "actual": "source_hash_invalid",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "future_observation",
+      "modified_fields": [
+        "observed_at"
+      ],
+      "expected": "source_observation_invalid",
+      "actual": "source_observation_invalid",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "expired_field_review",
+      "modified_fields": [
+        "review_valid_until"
+      ],
+      "expected": "review_expired",
+      "actual": "review_expired",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "withdrawn_review",
+      "modified_fields": [
+        "review_status"
+      ],
+      "expected": "review_withdrawn_or_unconfirmed",
+      "actual": "review_withdrawn_or_unconfirmed",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "uses_not_permitted",
+      "modified_fields": [
+        "permitted_uses"
+      ],
+      "expected": "required_local_uses_not_evidenced",
+      "actual": "required_local_uses_not_evidenced",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "missing_model_anchor",
+      "modified_fields": [
+        "field_anchors"
+      ],
+      "expected": "platform_field_anchor_missing",
+      "actual": "platform_field_anchor_missing",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "forged_identity_pass",
+      "modified_fields": [
+        "identity_verified"
+      ],
+      "expected": "unrecognized_or_forbidden_fields",
+      "actual": "unrecognized_or_forbidden_fields",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "forged_price",
+      "modified_fields": [
+        "price"
+      ],
+      "expected": "unrecognized_or_forbidden_fields",
+      "actual": "unrecognized_or_forbidden_fields",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "url_in_evidence_reference",
+      "modified_fields": [
+        "source_ref"
+      ],
+      "expected": "source_or_seller_invalid",
+      "actual": "source_or_seller_invalid",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    },
+    {
+      "id": "model_not_in_reviewed_sources",
+      "modified_fields": [
+        "selected_model_id",
+        "spec_models",
+        "title_models"
+      ],
+      "expected": "manufacturer_model_not_reviewed",
+      "actual": "manufacturer_model_not_reviewed",
+      "expectation_met": true,
+      "real_identity_verified": 0,
+      "new_api_calls": 0
+    }
+  ],
+  "total": 22,
+  "passed": 22,
+  "failed": [],
+  "real_identity_verified_count": 0,
+  "real_sales_samples_processed": 0,
+  "new_haina_business_api_calls": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "limits": [
+    "人工期望只验证合成合同规则，不是独立评估者新样本",
+    "未读取原20条响应，未有平台权威所选SKU原件及合法本机用途",
+    "旧商城价格、供应商score与评论不进入硬条件或报价"
+  ]
+}

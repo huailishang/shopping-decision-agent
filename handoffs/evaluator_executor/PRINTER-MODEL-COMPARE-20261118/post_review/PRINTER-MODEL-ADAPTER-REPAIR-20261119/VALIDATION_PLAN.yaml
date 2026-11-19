@@ -1,0 +1,29 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-MODEL-ADAPTER-REPAIR-20261119
+run_mode: offline_only
+checks:
+  - id: VP-01
+    ac: [AC-03, AC-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_model_comparison.py, -v]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-01, AC-03, AC-04]
+    command: [python3, -X, utf8, scripts/run_model_comparison_experiment.py, --audit, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 1
+    expected_reason_contains: "model cases not attempted: C05,C06,C07"
+    mandatory: true
+    note: Historical audit must remain FAIL; matching failure is a preservation check, not a PASS for prior task
+  - id: VP-03
+    ac: [AC-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+    mandatory: true
+manual_checks:
+  - prior_attempts_jsonl_unchanged_and_count_six
+  - C01_01_raw_item_error_not_real_tool_execution
+  - prior_contract_and_frozen_inputs_unchanged
+  - prior_report_discloses_missing_C05_C06_C07_and_zero_accepted
+  - preflight_inference_success_false_and_no_api_calls
+  - no_new_credential_or_price_or_transaction_effect
+  - report_exit_ready_or_blocked_only

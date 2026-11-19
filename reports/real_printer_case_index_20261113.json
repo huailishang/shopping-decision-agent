@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "case_id": "REAL-PRINTER-H08B-20261113",
+  "date": "2026-11-13",
+  "role": "executor",
+  "task_contract": "handoffs/真实打印机决策案例_执行包_20261113.md",
+  "decision": "partial_execution_delivered_main_goal_not_passed_pending_real_sku_and_independent_content_review",
+  "demand": {
+    "origin": "H08_original_user_statement_and_previous_user_followup",
+    "budget_max_cny": 1000,
+    "monthly_pages_range": [
+      0,
+      50
+    ],
+    "home_color_required": false,
+    "occasional_color_outsourcing_accepted": true,
+    "wechat_requested": true,
+    "preferred_brands": [
+      "Brother",
+      "HP"
+    ],
+    "durability_goal": true,
+    "unconfirmed": [
+      "wechat_workflow",
+      "budget_scope",
+      "delivery_region",
+      "requires_scan",
+      "long_idle_duration",
+      "requires_auto_duplex"
+    ]
+  },
+  "sources": [
+    {
+      "id": "R1",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "retrieved_on": "2026-11-13",
+      "type": "manufacturer_model_fact",
+      "usage": "short_research_summary_pending_independent_review",
+      "known_model": "HL-L1238W",
+      "seller_verified": false,
+      "selected_sku_verified": false
+    },
+    {
+      "id": "R2",
+      "url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+      "retrieved_on": "2026-11-13",
+      "type": "manufacturer_business_terms",
+      "usage": "short_research_summary_pending_independent_review",
+      "known_model": "HL-10W",
+      "seller_verified": false,
+      "selected_sku_verified": false
+    },
+    {
+      "id": "R3",
+      "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+      "retrieved_on": "2026-11-13",
+      "type": "manufacturer_model_overview",
+      "usage": "short_research_summary_pending_independent_review",
+      "known_model": "M232dw",
+      "seller_verified": false,
+      "selected_sku_verified": false
+    },
+    {
+      "id": "R4",
+      "url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+      "retrieved_on": "2026-11-13",
+      "type": "manufacturer_support",
+      "usage": "short_research_summary_pending_independent_review",
+      "known_model": "HL-L1238W",
+      "seller_verified": false,
+      "selected_sku_verified": false
+    },
+    {
+      "id": "R5",
+      "url": "https://www.consumer.org.hk/sc/article/492-4445",
+      "retrieved_on": "2026-11-13",
+      "type": "historic_independent_cost_method",
+      "usage": "historical_research_only",
+      "known_model": null,
+      "seller_verified": false,
+      "selected_sku_verified": false
+    }
+  ],
+  "marketplace_leads": [
+    {
+      "url": "https://item.jd.com/product/I0co29Xw3Ol5hq5iOZFwcQ.html",
+      "title_context": "HP M232dw headline from public search",
+      "status": "unverified_lead_only",
+      "limitations": [
+        "not_proven_as_platform_item_id",
+        "selected_sku_unknown",
+        "seller_unknown",
+        "region_and_current_checkout_price_login_gated"
+      ]
+    },
+    {
+      "url": "https://item.jd.com/product/y09qV-7yiEepfo7qS006Cg.html",
+      "title_context": "HP M232dwc listing with mixed related variants",
+      "status": "unverified_lead_only",
+      "limitations": [
+        "model_variant_conflict_M232dw_vs_M232dwc",
+        "sku_unknown",
+        "seller_unknown",
+        "not_live_regional_quote"
+      ]
+    }
+  ],
+  "identity_funnel": {
+    "historical_brother_original_total": 20,
+    "historical_brother_reviewed": 0,
+    "deep_reviewed": 0,
+    "deep_target": 6,
+    "new_platform_configuration_candidates_qualified": 0,
+    "new_platform_configuration_candidates_verified": 0,
+    "target_distinct_real_models": 2,
+    "distinct_real_models_verified": 0,
+    "unverified_public_marketplace_leads": 2
+  },
+  "reason_audit": {
+    "file": "knowledge/real_printer_case_research_20261113.json",
+    "total_claims": 5,
+    "original_applicable_reasons": 3,
+    "independently_approved_decision_reasons": 0,
+    "permitted_scope": "public_short_summary_for_audit_pending_review",
+    "no_pretend_investigation_or_reviews": true
+  },
+  "normal_cli": {
+    "command": "python3 -m shopping_decision.dialogue_flow --real-printer-case",
+    "replay_command": "python3 reports/run_real_printer_case_20261113.py --output reports/NEW_UNEXISTING.json",
+    "replay_result": "reports/real_printer_case_replay_20261113.json",
+    "total_scenarios": 5,
+    "passed_scenarios": 5,
+    "scenarios": [
+      {
+        "round": 1,
+        "type": "recorded_demand_offline_replay",
+        "expected_reason_ids": [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03"
+        ]
+      },
+      {
+        "round": 2,
+        "type": "synthetic_duplex_change",
+        "expected_add": [
+          "CASE-05"
+        ]
+      },
+      {
+        "round": 3,
+        "type": "synthetic_home_color_change",
+        "expected_remove": [
+          "CASE-01"
+        ]
+      },
+      {
+        "round": 4,
+        "type": "synthetic_wechat_change",
+        "expected_remove": [
+          "CASE-02"
+        ]
+      },
+      {
+        "round": 5,
+        "type": "synthetic_scan_change",
+        "expected_add": [
+          "CASE-04"
+        ]
+      }
+    ],
+    "no_new_real_user_answers": true
+  },
+  "quotes": {
+    "region": null,
+    "budget_scope": "unknown",
+    "valid_verified_regional_quotes": 0,
+    "real_quote_compared": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "safety_tests": {
+    "t1_targeted": {
+      "passed": 4,
+      "total": 4
+    },
+    "t1_prior_independent_probe_replay": {
+      "passed": 21,
+      "total": 21,
+      "result": "reports/real_printer_case_t1_existing_evaluator_replay_20261113.json",
+      "protected_files_unchanged": true,
+      "not_new_blind_evaluation": true
+    },
+    "research_targeted": {
+      "passed": 5,
+      "total": 5
+    },
+    "windows_native_python_unittest": {
+      "passed": 356,
+      "total": 356
+    },
+    "h05": {
+      "passed": 8,
+      "total": 8
+    },
+    "java17_compile": true,
+    "java_p04": {
+      "passed": 6,
+      "total": 6
+    },
+    "java_h10": {
+      "passed": 6,
+      "total": 6
+    },
+    "windows_gui_real_click_tested": false,
+    "hardware_print_tested": false,
+    "independent_case_new_examples_tested": false
+  },
+  "acceptance": {
+    "A1": "recorded_constraints_preserved_unanswered_fields_open",
+    "A2": "blocked_0_of_2_real_identity",
+    "A3": "research_reason_output_3_of_3_but_independent_approval_0",
+    "A4": "research_normal_cli_replay_5_of_5_real_sale_not_connected",
+    "A5": "blocked_no_verified_region_quote",
+    "A6": "executor_engineering_regression_passed_independent_pending",
+    "A7": "executor_materials_reproducible_independent_review_pending"
+  },
+  "permissions_and_accounting": {
+    "new_business_api_calls": 0,
+    "paid_calls": 0,
+    "api_key_reads": 0,
+    "login_actions": 0,
+    "orders": 0,
+    "payments": 0,
+    "outbound_messages": 0,
+    "public_search_queries": 10,
+    "public_open_actions": 0,
+    "underlying_HTTP_requests_unknown": true,
+    "estimated_cost_cny": 0,
+    "actual_bill_amount_known": false,
+    "actual_active_work_hours": "not_metered_cannot_estimate",
+    "max_new_active_work_hours": 32,
+    "git_committed": false,
+    "git_pushed": false
+  },
+  "files": [
+    "shopping_decision/sale_configuration_evidence.py",
+    "shopping_decision/real_printer_case.py",
+    "shopping_decision/dialogue_flow.py",
+    "knowledge/real_printer_case_research_20261113.json",
+    "tests/test_real_printer_case_t1.py",
+    "tests/test_real_printer_case_research.py",
+    "reports/run_real_printer_case_20261113.py",
+    "reports/real_printer_case_replay_20261113.json",
+    "reports/real_printer_case_t1_existing_evaluator_replay_20261113.json",
+    "reports/真实打印机决策案例_执行报告_20261113.md",
+    "handoffs/真实打印机决策案例_执行者开工_20261113.md",
+    "handoffs/真实打印机决策案例_执行者交付_20261113.md",
+    "CURRENT.md"
+  ]
+}

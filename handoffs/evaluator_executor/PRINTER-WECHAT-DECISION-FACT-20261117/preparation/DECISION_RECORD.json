@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-11-17T13:51:04.429081+00:00",
+  "assessment_complete": true,
+  "next_contract_state": "DRAFT_CONTRACT",
+  "new_requirement_confirmation_count": 1,
+  "new_product_fact_count": 0,
+  "new_public_calls": 0,
+  "product_changes": 0,
+  "prior_submitted_files_verified_unchanged": 430,
+  "routing_validation_exit_code": 0,
+  "pending_authority": "proposed separate public read-only search<=4 and official document opens<=6; not yet authorized",
+  "pending_freeze_work": "exact implementation paths, executable validation plan and SHA after authority is resolved"
+}

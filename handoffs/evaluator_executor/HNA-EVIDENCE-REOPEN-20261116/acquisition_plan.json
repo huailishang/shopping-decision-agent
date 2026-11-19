@@ -1,0 +1,75 @@
+{
+  "schema": "evidence-acquisition-plan/v2",
+  "task_id": "HNA-EVIDENCE-REOPEN-20261116",
+  "task_dir": "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116",
+  "prior_ledger": {
+    "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/public_action_ledger.json",
+    "sha256": "c5f4a6c74da3eea38848570b7b0a7e5ea56f308716be7fc552f99972b6ffe24d"
+  },
+  "parent_source_snapshot": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/planning_r2_baseline.json",
+  "new_search_limit": 0,
+  "document_read_limit": 7,
+  "approved_hosts": [
+    "support.brother.com",
+    "download.brother.com",
+    "www.brother.cn",
+    "h10032.www1.hp.com",
+    "support.hp.com",
+    "www.hp.com",
+    "ai.zhidemai.com"
+  ],
+  "blocked_urls": [
+    "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-AF8C0063-911B-44B3-B52D-0FC0D110ABB5_1.html",
+    "https://www.brother.cn/minisite/bcnactivity/new-question09.html",
+    "https://ai.zhidemai.com/",
+    "https://www.brother.cn/printer/prt/hl-l1238w",
+    "https://support.hp.com/cn-zh/product/product-specs/hp-laserjet-mfp-m232-m237-printer-series/model/38099928",
+    "https://support.hp.com/cn-zh/product/product-specs/hp-laserjet-mfp-m232-m237-printer-series/model/34370726"
+  ],
+  "prohibited_actions": [
+    "business_api_calls",
+    "metadata_calls",
+    "key_reads",
+    "logins",
+    "paid_calls",
+    "messages_sent",
+    "model_transfers",
+    "cart_or_order_actions",
+    "git_commits",
+    "git_pushes"
+  ],
+  "routes": [
+    {
+      "id": "A",
+      "owner": "Executor",
+      "question": "首次绑定后再次微信打印需满足哪些条件，哪些情况必须重绑？",
+      "document_read_limit": 4,
+      "local_inputs": [
+        "knowledge/real_printer_case_comparison_20261115.json",
+        "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_manifest.json",
+        "data/raw/p0_2_min_comparison/a7f9666c7f66daca04ed476e323655de253c73374702c2b29949f533c360d7c7.pdf"
+      ],
+      "seed_urls": [
+        "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+        "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf"
+      ],
+      "strategy": "先核仓内原文；只跟随原文明确出现的后续打印/远程/重新绑定官方链接；已有相同正文不重复读公网。用尽或遇限制即转B。"
+    },
+    {
+      "id": "B",
+      "owner": "Executor",
+      "question": "海纳是否有公开、适用本项目最小本机用途的协议正文入口？",
+      "document_read_limit": 3,
+      "local_inputs": [
+        "reports/supplier_haina_platform_public_20261109.json",
+        "reports/supplier_haina_mcp_docs_20261109.json",
+        "reports/supplier_haina_beta_notice_20261109.json"
+      ],
+      "seed_urls": [
+        "https://ai.zhidemai.com/haina-platform",
+        "https://ai.zhidemai.com/haina-platform/haina_mcp"
+      ],
+      "strategy": "先查已存官方说明；公开文档只取实际显示的用户协议/开发者合作协议链接。若正文需账号登录，结束公开路线并交最小人工请求草稿，不操作账号、不取商品。"
+    }
+  ]
+}

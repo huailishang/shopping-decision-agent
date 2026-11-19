@@ -1,0 +1,35 @@
+{
+  "probe_case": "brother_full",
+  "source": "official_haina_product_search_pro",
+  "observed_at": "2026-11-14T02:50:33.141997+00:00",
+  "request_query": "兄弟 HL-L1238W 打印机",
+  "request_size": 3,
+  "request_mall_id": null,
+  "field_strategy": "all_default_fields",
+  "requested_fields": "",
+  "request_attempts": 1,
+  "auto_retries": 0,
+  "raw_response_saved": false,
+  "credentials_saved": false,
+  "promotional_url_saved": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "http_status": 200,
+  "elapsed_seconds": 0.658,
+  "response_size": 71,
+  "response_sha256": "469e959cae57e9e6858283fde552105cb2a940b31386b8db06072904164061ae",
+  "top_level_keys": [
+    "error_code",
+    "error_msg",
+    "data"
+  ],
+  "business_code": 0,
+  "status": "success",
+  "data_keys": [
+    "rows",
+    "total_num"
+  ],
+  "rows_returned": 0,
+  "summaries": [],
+  "explicit_item_or_sku_field_count": 0
+}

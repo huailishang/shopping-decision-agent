@@ -1,0 +1,10 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "status": "not_run_prefreeze_dependencies_missing",
+  "paired_answers_generated": false,
+  "reference_register_frozen": false,
+  "reason": "没有评估者定稿核验程序或参考登记；新线索原页403，安装PDF为旧材料，未形成足够新增可判问题。",
+  "cognitive_benefit": "unknown_not_measured",
+  "material_integration_count_this_run": 0,
+  "do_not_interpret_as": ["zero_benefit", "three_task_test_pass", "formal_36_case_result"]
+}

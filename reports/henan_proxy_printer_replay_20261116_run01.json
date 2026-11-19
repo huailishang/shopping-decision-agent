@@ -1,0 +1,62 @@
+{
+  "sample_id": "PRINTER-HENAN-FAMILY-20261116",
+  "source_file": "evaluation/printer_henan_proxy_sample_20261116.json",
+  "source_sha256": "c87fa2105a84c813f33b2dbfc39e712cf1437fbc17d2b66b17991d3f1fad9a6b",
+  "run_date": "2026-11-16",
+  "operation": "offline_read_only_comparison",
+  "owner_proxy_state": {
+    "confirmed_fields": {
+      "category": "printer",
+      "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+      "needs_color": false,
+      "accepts_outsourced_color": true,
+      "monthly_pages_range": [
+        0,
+        50
+      ],
+      "budget_max_cny": 1000,
+      "accepts_initial_setup": true,
+      "device_deployment_region": "中国大陆河南省"
+    },
+    "pending_wechat_hard_or_preference": true,
+    "next_prompt": "wechat_required",
+    "session_version": 8
+  },
+  "strict_assumption_not_actual_confirmation": {
+    "wechat_required": true,
+    "wechat_workflow": "miniprogram",
+    "region_scope": "mainland_china",
+    "result_status": "defer",
+    "next_action": "clarify_user_conditions",
+    "candidate_models": [
+      {
+        "model_id": "HL-L1238W",
+        "eligibility": "model_spec_research_only",
+        "hard_unknown": []
+      },
+      {
+        "model_id": "M232dw",
+        "eligibility": "model_spec_research_only",
+        "hard_unknown": []
+      }
+    ],
+    "user_questions": [
+      "预算是否包含运费和本次需另购的耗材？"
+    ],
+    "missing_evidence": [
+      "HL-L1238W:C-VOLUME",
+      "M232dw:C-BUDGET"
+    ],
+    "purchase_approved": false,
+    "transactions_enabled": false
+  },
+  "not_tested": [
+    "physical_wechat_pairing",
+    "wechat_reuse_after_restart_or_day",
+    "real_sale_sku",
+    "current_delivery_price",
+    "real_user_approval",
+    "independent_cognitive_gain"
+  ],
+  "overall": "NOT_PASS"
+}

@@ -1,0 +1,19 @@
+{"status": "ready", "questions": [{"field": "category", "question": "准备买什么类别的商品？", "why": "决定下一步查询哪些有来源的商品目录", "status": "user_confirmation_needed"}]}
+{"status": "invalid_turn", "error": "Expecting property name enclosed in double quotes: line 2 column 1 (char 2)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 9 (char 8)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 12 (char 11)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 15 (char 14)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 12 (char 11)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 21 (char 20)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 26 (char 25)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 8 (char 7)"}
+{"status": "invalid_turn", "error": "'int' object is not subscriptable"}
+{"status": "invalid_turn", "error": "Expecting value: line 1 column 5 (char 4)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 18 (char 17)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 31 (char 30)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 28 (char 27)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 31 (char 30)"}
+{"status": "invalid_turn", "error": "Extra data: line 1 column 22 (char 21)"}
+{"status": "invalid_turn", "error": "Expecting value: line 1 column 3 (char 2)"}
+{"status": "invalid_turn", "error": "Expecting value: line 1 column 1 (char 0)"}
+{"status": "invalid_turn", "error": "Expecting value: line 2 column 1 (char 1)"}

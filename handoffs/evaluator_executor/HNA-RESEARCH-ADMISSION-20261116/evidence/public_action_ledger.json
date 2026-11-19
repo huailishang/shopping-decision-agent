@@ -1,0 +1,138 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "authorized_by": "2026-11-16 用户：你是执行者，执行新任务；合同r2独立增量只读收集预算",
+  "recorded_at_utc": "2026-11-16 14:21:29 UTC",
+  "budget": {
+    "search_limit": 6,
+    "search_used": 6,
+    "document_read_limit": 12,
+    "document_reads_used": 5,
+    "screenshot_counted_as_read": 1
+  },
+  "actions": [
+    {
+      "id": "P01",
+      "kind": "search",
+      "gap_id": "G1",
+      "input": {
+        "q": "site.support.brother.com HL-L1238W 兄弟畅享印 联机 功能 打印机 在线 重新"
+      },
+      "outcome": "官方Brother资料返回，含既有与新线索；分别见材料清单。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P02",
+      "kind": "search",
+      "gap_id": "G2",
+      "input": {
+        "q": "site.support.brother.com HL-L1238W 双面打印 手动"
+      },
+      "outcome": "手动双面官方手册命中；不等于证明无自动双面。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P03",
+      "kind": "search",
+      "gap_id": "G3",
+      "input": {
+        "q": "site:ai.zhidemai.com \"MCP开发者合作协议\" 数据 使用"
+      },
+      "outcome": "未返回可核对的海纳协议正文，不推断不存在。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P04",
+      "kind": "open",
+      "gap_id": "G2",
+      "input": {
+        "ref_id": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-AF8C0063-911B-44B3-B52D-0FC0D110ABB5_1.html"
+      },
+      "outcome": "403，停止此入口，不重试。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P05",
+      "kind": "open",
+      "gap_id": "G1",
+      "input": {
+        "ref_id": "https://www.brother.cn/minisite/bcnactivity/new-question09.html"
+      },
+      "outcome": "403，停止此入口，不换FAQ入口绕过。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P06",
+      "kind": "open",
+      "gap_id": "G3",
+      "input": {
+        "ref_id": "https://ai.zhidemai.com/"
+      },
+      "outcome": "页面返回但无可读正文，未取得用途依据。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P07",
+      "kind": "search",
+      "gap_id": "G2",
+      "input": {
+        "q": "site:download.brother.com \"HL-L1238W\" \"手动\" \"双面\""
+      },
+      "outcome": "无结果，不能推断没有相应功能或资料。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P08",
+      "kind": "search",
+      "gap_id": "G1",
+      "input": {
+        "q": "site:hp.com \"M232\" \"微信\" \"离线\" \"打印\""
+      },
+      "outcome": "无结果，未解决HP微信离线/复用问题。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P09",
+      "kind": "search",
+      "gap_id": "G1",
+      "input": {
+        "q": "site:download.brother.com/welcome \"HL-L1238W\" \"高级说明书\""
+      },
+      "outcome": "命中Brother既有快速安装指南；后核实仓内早已留档，不计新增材料。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P10",
+      "kind": "open",
+      "gap_id": "G1",
+      "input": {
+        "ref_id": "https://download.brother.com/welcome/doc101565/cv_hll1228_sch_qsg.pdf"
+      },
+      "outcome": "读取2页官方安装PDF；确认系列适用与联网步骤；已知旧来源。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    },
+    {
+      "id": "P11",
+      "kind": "screenshot",
+      "gap_id": "G1",
+      "input": {
+        "ref_id": "turn910951view0",
+        "pageno": 1
+      },
+      "outcome": "查看PDF第2页渲染，核步骤/脚注；为独立页面渲染动作保守计1次读取。",
+      "time_precision": "ordered_in_session_2026-11-16; per-action wall timestamp not recorded"
+    }
+  ],
+  "prohibited_actions": {
+    "haina_business_calls": 0,
+    "haina_metadata_calls": 0,
+    "key_reads": 0,
+    "logins": 0,
+    "paid_calls": 0,
+    "external_messages": 0,
+    "third_party_model_transfers": 0,
+    "cart_or_order_actions": 0,
+    "git_commits": 0,
+    "git_pushes": 0
+  },
+  "note": "按每条检索而非工具调用计数；失败/无结果均计数。公共检索/文档获取是已授权只读动作，与被禁止的商品业务API分账。旧额度/旧超限不重置。"
+}

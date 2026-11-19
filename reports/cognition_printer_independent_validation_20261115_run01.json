@@ -1,0 +1,223 @@
+{
+  "review_date": "2026-11-15",
+  "completed_at_utc": "2026-11-15T12:40:26.686541+00:00",
+  "role": "independent_evaluator",
+  "review_complete": true,
+  "overall": "NOT_PASS",
+  "scope": "M1-M6 and H1-H3 under existing cognition/printer long package; no new business implementation",
+  "continuation": "GUI and tests completed in preceding review turn; Esc interrupted documentation closeout; user explicitly requested continuation; this closeout verifies preserved evidence without rerunning unchanged passing tests.",
+  "runtime": {
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:42:21) [MSC v.1916 64 bit (AMD64)]",
+    "os": "Windows-11-10.0.26300-SP0",
+    "java_observed": {
+      "chunk_id": "9b62d2",
+      "wall_time_seconds": 1.6280724,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "java version \"21.0.7\" 2025-04-15 LTS\r\nJava(TM) SE Runtime Environment (build 21.0.7+8-LTS-245)\r\nJava HotSpot(TM) 64-Bit Server VM (build 21.0.7+8-LTS-245, mixed mode, sharing)\r\n"
+    },
+    "javac_observed": {
+      "chunk_id": "be6254",
+      "wall_time_seconds": 2.1283359,
+      "exit_code": 0,
+      "original_token_count": 4,
+      "output": "javac 21.0.7\r\n"
+    },
+    "compile_target": "--release 17",
+    "java17_runtime_tested": false
+  },
+  "full_python": {
+    "command": "PYTHONUTF8=1 process environment; python -X utf8 -m unittest discover -s tests -q",
+    "tool_observed_result": {
+      "chunk_id": "e0071e",
+      "wall_time_seconds": 2.74e-05,
+      "exit_code": 0,
+      "original_token_count": 78,
+      "output": "127.0.0.1 - - [15/Nov/2026 20:18:35] \"GET / HTTP/1.1\" 200 -\r\n127.0.0.1 - - [15/Nov/2026 20:18:35] \"POST /api/decide HTTP/1.1\" 200 -\r\n127.0.0.1 - - [15/Nov/2026 20:18:35] \"POST /api/decide HTTP/1.1\" 400 -\r\n----------------------------------------------------------------------\r\nRan 385 tests in 39.560s\r\n\r\nOK\r\n"
+    },
+    "passed": 385,
+    "failed": 0,
+    "h10_six_java_cases_asserted_by_test_h10_java_process": true
+  },
+  "p04_java": {
+    "command": "java -cp .h08-build/independent_cognition_20261115_run01 P04MarketplaceRegression python",
+    "exit_code": 0,
+    "passed": 6,
+    "failed": 0,
+    "result_observed_in_preceding_review_turn": true
+  },
+  "current_date_h05": {
+    "total": 8,
+    "passed": 8,
+    "failed_ids": []
+  },
+  "cli_replay": {
+    "path": "reports/cognition_case_replay_20261115_independent01.json",
+    "rounds": 11,
+    "script_key_assertions_passed": true,
+    "not_all_possible_semantic_combinations": true
+  },
+  "new_diagnostics": {
+    "path": "reports/cognition_printer_independent_20261115_run01.json",
+    "sha256": "83db585f2aade502edf34cdb1120dab7643a40a3382eafe2f2b34f3106cd1bad",
+    "total": 21,
+    "passed": 13,
+    "failed_ids": [
+      "I11_raw_scan_conflict_propagation",
+      "I12_unrecognized_hard_requirement",
+      "I14_withdrawn_scan_explanation",
+      "I15_expired_price_explanation",
+      "I16_missing_fact_not_missing_user_answer",
+      "I17_miniprogram_unknown_region",
+      "I18_miniprogram_overseas",
+      "I20_normal_cli_conflict"
+    ],
+    "groups": [
+      {
+        "id": "G1",
+        "priority": "P2",
+        "issue": "Raw confirmed hard requirements and unresolved requirements do not fully propagate to research eligibility",
+        "probes": [
+          "I11_raw_scan_conflict_propagation",
+          "I12_unrecognized_hard_requirement",
+          "I20_normal_cli_conflict"
+        ],
+        "locations": [
+          "shopping_decision/real_printer_case.py:96",
+          "shopping_decision/real_printer_case.py:107"
+        ],
+        "closure": "One normalized requirement/conflict/unknown set drives primary result, research eligibility, questions, active decisions and audit; unsupported hard requirements stay pending."
+      },
+      {
+        "id": "G2",
+        "priority": "P2",
+        "issue": "Evidence withdrawal/expiry degrades calculator but stale active decisions and prose retain or invert claims",
+        "probes": [
+          "I14_withdrawn_scan_explanation",
+          "I15_expired_price_explanation",
+          "I16_missing_fact_not_missing_user_answer"
+        ],
+        "locations": [
+          "shopping_decision/real_printer_case.py:217",
+          "shopping_decision/real_printer_case.py:229",
+          "shopping_decision/real_printer_case.py:154"
+        ],
+        "closure": "Render from per-claim current evidence state and operands; pending claims cannot support active definite advantages; unknown relation remains unknown, not <=; distinguish missing user value from missing product evidence."
+      },
+      {
+        "id": "G3",
+        "priority": "P2",
+        "issue": "WeChat deployment scope is informational text rather than a prerequisite of a hard capability match",
+        "probes": [
+          "I17_miniprogram_unknown_region",
+          "I18_miniprogram_overseas"
+        ],
+        "locations": [
+          "shopping_decision/selection_criteria.py:187",
+          "shopping_decision/selection_criteria.py:222"
+        ],
+        "closure": "Apply evidence market/version/deployment scope before hard qualification; unknown or unproven overseas service stays pending; do not infer worldwide support, universal ban, or device-tested availability."
+      }
+    ],
+    "not_recommendation_accuracy": true,
+    "memory_only_perturbations_for_withdrawn_evidence": true,
+    "script_exit_1_means_recorded_failures_not_execution_crash": true
+  },
+  "gui": {
+    "path": "reports/cognition_printer_independent_gui_20261115_run01.txt",
+    "sha256": "5972b6f5297621d2f0265c77bf470ca867cd289b6479f19ac9c10d72781b7c78",
+    "bytes": 96276,
+    "method": "Computer Use skill with native sky API; new evaluator Java window; explicit synthetic inputs, preview and new-path save; UTF-8 readback",
+    "budget_max_cny": 3000,
+    "wechat_required": true,
+    "wechat_workflow": "miniprogram",
+    "confirmed_deployment_text": "日本; observed in input and confirmation screen and stored text header",
+    "stored_scope": "outside_mainland_china",
+    "stored_deployment_provided": true,
+    "request_dataclass_has_deployment_field": false,
+    "eligibility": {
+      "HL-L1238W": "model_spec_research_only",
+      "M232dw": "model_spec_research_only"
+    },
+    "wechat_relations": {
+      "HL-L1238W": "match",
+      "M232dw": "match"
+    },
+    "criteria_sha256": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+    "gui_and_audit_reproduce_G3": true,
+    "review_process_id": 31624,
+    "review_process_absent_on_closeout": true,
+    "not_real_user_or_printer_hardware_test": true
+  },
+  "public_source_audit": [
+    {
+      "url": "https://www.consumer.org.hk/tc/issue/598",
+      "observed": "Official issue heading 2026.08 | 598; the reported month is supported, not an identified date defect."
+    },
+    {
+      "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+      "observed": "Original body supports comparison dimensions and testing methods; no independent ranking of the two target CN monochrome models established."
+    }
+  ],
+  "artifact_integrity": {
+    "baseline": "reports/cognition_printer_independent_baseline_20261115_run01.json",
+    "baseline_sha256": "25f365c0377a46f22cc675a0ca74dc418771722fcfc789a233a56f3de09a0513",
+    "protected_count": 412,
+    "changed_protected_files": [],
+    "executor_index_hash_checks": {
+      "knowledge/printer_selection_criteria.json": true,
+      "shopping_decision/selection_criteria.py": true,
+      "shopping_decision/real_printer_case.py": true,
+      "shopping_decision/haina_mcp_ingest.py": true,
+      "shopping_decision/desktop_bridge.py": true,
+      "shopping_decision/dialogue_flow.py": true,
+      "tests/test_selection_criteria.py": true,
+      "desktop/CognitionSwingRegression.java": true,
+      "scripts/cognition_case_replay.py": true,
+      "reports/cognition_case_replay_20261115_run02.json": true,
+      "reports/cognition_h05_20261115_run01.json": true,
+      "reports/cognition_gui_review_20261115_run02.txt": true
+    }
+  },
+  "acceptance": {
+    "M1": "limited_pass_original_F1_F5_reproductions",
+    "M2": "limited_pass_manually_sourced_criteria_not_autonomous_cognition",
+    "M3": "fail_G2_G3_partial_data_driven_only",
+    "M4": "fail_G1_G2_G3",
+    "M5": "path_and_new_save_verified_condition_correctness_failed",
+    "M6": "base_engineering_and_safety_limited_pass_resource_accounting_unknown",
+    "H1": "blocked_usage_basis_and_auditable_real_payloads_missing",
+    "H2": "not_pass_verified_identity_0_of_2",
+    "H3": "not_pass_regional_live_quotes_0"
+  },
+  "old_findings": {
+    "F1": "original_trigger_and_covered_boundaries_fixed; does not certify all new combinations",
+    "F2": "original_trigger_and_covered_boundaries_fixed; does not certify all new combinations",
+    "F3": "original_trigger_and_covered_boundaries_fixed; does not certify all new combinations",
+    "F4": "original_trigger_and_covered_boundaries_fixed; does not certify all new combinations",
+    "F5": "original_trigger_and_covered_boundaries_fixed; does not certify all new combinations"
+  },
+  "real_state": {
+    "haina_real_payloads_imported": 0,
+    "platform_identity_verified": 0,
+    "platform_identity_target": 2,
+    "old20_verified": 0,
+    "regional_live_quote_count": 0,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "reviewer_actions": {
+    "business_code_or_original_data_changed": false,
+    "new_business_api_calls": 0,
+    "credential_reads": 0,
+    "marketplace_account_actions": 0,
+    "transactions": 0,
+    "messages_sent": 0,
+    "git_commit": false,
+    "git_push": false,
+    "public_web_reads_performed": true,
+    "low_level_http_count_not_measured": true,
+    "executor_effective_work_hours_not_measured": true
+  },
+  "final_report": "reports/认知驱动打印机比较_独立集中验收报告_20261115.md"
+}

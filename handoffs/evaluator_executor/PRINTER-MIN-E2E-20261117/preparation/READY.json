@@ -1,0 +1,63 @@
+{
+  "task_id": "PRINTER-MIN-E2E-20261117",
+  "prepared_on": "2026-11-17",
+  "scope": "Ready frozen execution package, not implemented product or source/user-effect approval.",
+  "bindings": {
+    "CONTRACT.md": "ccf0138332c1b36c31b04c174e76cf3839ddb6f1c63d3c150c53fb254a79f7fb",
+    "EVALUATION_RULES.md": "26b221daa591a6371d3b040739ab4586f7b8b176eaa94a2ec4b7d1c6f27587a7",
+    "evidence_packs.json": "d6468dfde182dfb86536629f8ae468372b6cb02fe7cd403975bad0b3cf6a7e0a",
+    "cases.json": "fc45f28738149ea1cea3fbb8356ddd506ba70747f19c4e1f839a566b1bdce4ac",
+    "check_delivery.py": "65e5e05d54d824ad534414ca54012dcc42e516848f3038a155e673489d42e748",
+    "test_checker.py": "68fe91c8304218a43aa71d55986868bf424cc2b7be1eb1a73878231edc001d25",
+    "FROZEN_INPUTS.json": "560fe9a30e949def2a0cdc0992a0d8499cb7e38cb3bea106b81cb8b564e3b8b8",
+    "VALIDATION_PLAN.yaml": "8e28e88b69c335c96792b731a157c032c5a1d610ae8fd17bad0cbc484f6ed3a7"
+  },
+  "preparation_checks": {
+    "PREP-CHECKER": {
+      "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/preparation/verification/PREP-CHECKER.meta.json",
+      "sha256": "10e3a4c7edc34110ddd69b0951a2917ab6cedfd01c428be9afe243b3941cff5b",
+      "observed_exit_code": 0,
+      "expected_preparation_exit_code": 0
+    },
+    "PREP-FROZEN": {
+      "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/preparation/verification/PREP-FROZEN.meta.json",
+      "sha256": "9928c110ef06bda32b23abeb0adbc5d03e4f28995294493cb992c732c2fac40d",
+      "observed_exit_code": 0,
+      "expected_preparation_exit_code": 0
+    },
+    "PREP-CURRENT-GAP": {
+      "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/preparation/verification/PREP-CURRENT-GAP.meta.json",
+      "sha256": "c9bb49fe65579d1fd59c86374e20b39ff38b99ba30f0ee15042b20688657e6d7",
+      "observed_exit_code": 1,
+      "expected_preparation_exit_code": 1
+    }
+  },
+  "facts_in_main_run": 2,
+  "facts_in_sparse_variant": 1,
+  "facts_in_empty_negative": 0,
+  "checker_selftests_passed": 12,
+  "protected_product_files": 96,
+  "current_gap_probe": {
+    "cases_checked": 3,
+    "passed": 0,
+    "results": [],
+    "errors": [
+      {
+        "case": "main_two_facts",
+        "error": "normal entry has not produced a selected-evidence research_case"
+      },
+      {
+        "case": "thin_one_fact",
+        "error": "normal entry has not produced a selected-evidence research_case"
+      },
+      {
+        "case": "empty_evidence",
+        "error": "normal entry has not produced a selected-evidence research_case"
+      }
+    ],
+    "limit": "One proxy walkthrough plus sparse/empty engineering variants, not three user trials."
+  },
+  "external_material_count_added": 0,
+  "product_implementation_started": false,
+  "clarification": "Existing r3 capabilities remain valid; expected missing selected-pack result is not a claim that old business behavior had no value."
+}

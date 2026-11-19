@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "run_id": "shopping_newpack_independent_20261116_run01",
+  "date": "2026-11-16",
+  "role": "independent_reviewer",
+  "overall": "NOT_PASS",
+  "review_scope": "current longpack A/B/C/D and H gates; independent source applicability limited to stored records; implementation unchanged",
+  "findings": [
+    {
+      "id": "R1",
+      "priority": "P2",
+      "file": "shopping_decision/research_snapshot.py",
+      "line": 141,
+      "related_line": 113,
+      "summary": "request, configuration, and output categories are not bound",
+      "probes": [
+        "V02",
+        "V03"
+      ],
+      "status": "open",
+      "actual": "kettle request returns relabelled printer candidates; inverse neutral config mismatch also accepted",
+      "required": "reject mismatches or return unsupported; bind output to validated context; keep explicit legacy compatibility"
+    },
+    {
+      "id": "R2",
+      "priority": "P2",
+      "file": "shopping_decision/research_snapshot.py",
+      "line": 94,
+      "related_line": 102,
+      "summary": "question-mark classification loses user missing conditions and conflict questions; next action treats them as missing product evidence",
+      "probes": [
+        "V10",
+        "V11",
+        "V12"
+      ],
+      "status": "open",
+      "actual": "necessary_user_questions empty for unknown required deployment region and color conflict; normal Web and desktop Python subprocess reproduce",
+      "required": "classify semantically by missing field/relation/conflict; preserve user/evidence distinction and matching next action without repeated answered questions"
+    }
+  ],
+  "acceptance": {
+    "A": "limited_source_based_conditional_research; actual original-user decision not closed",
+    "B": "partial engineering confirmed; NOT PASS due R1/R2",
+    "C": "open_development_outputs_auditable_and_unchanged; formal preconditions not met",
+    "D": "effect gain unknown; no new actual user feedback",
+    "prior_E1": "retain limited closure; new findings scoped to research snapshot"
+  },
+  "tests": {
+    "python_full": {
+      "passed": 412,
+      "total": 412,
+      "seconds": 34.408,
+      "log": "reports/newpack_independent_20261116_run01_unittest.txt"
+    },
+    "h05": {
+      "passed": 8,
+      "total": 8,
+      "as_of": "2026-11-16",
+      "exposed_regression_not_new_holdout": true
+    },
+    "adjacent_probes": {
+      "total": 12,
+      "passed": 7,
+      "failed_ids": [
+        "V02",
+        "V03",
+        "V10",
+        "V11",
+        "V12"
+      ],
+      "root_causes": 2,
+      "not_accuracy": true
+    },
+    "java_compile": {
+      "compiler": "JDK21",
+      "release": 17,
+      "success": true
+    },
+    "H10": "ran as part of full Python suite; retained process tests",
+    "P04_newly_run": false
+  },
+  "development": {
+    "cases_replayed": 6,
+    "task_outputs_compared": 12,
+    "all_replayed_outputs_match_executor": true,
+    "all_delivered_task_outputs_equal_prior_reviewed": true,
+    "new_independent_scoring_not_needed_for_unchanged_answers": true,
+    "historical_completeness": {
+      "baseline": "13/15",
+      "cognition": "14/15",
+      "limits": "prior open-answer completeness; not gain estimate; broad reading both 15/15"
+    },
+    "formal_36_created_or_run": false,
+    "formal_effect_gain": null,
+    "actual_user_new_answers": 0
+  },
+  "gui": {
+    "method": "computer-use skill; node_repl @oai/sky native Windows APIs",
+    "new_native_swing_window": true,
+    "original_case_replayed_not_user_confirmation": true,
+    "actual_java_to_python": true,
+    "changed_shared_section_visually_seen": true,
+    "preview_and_explicit_save": true,
+    "utf8_readback_and_json_parsed": true,
+    "audit_path": "reports/newpack_independent_20261116_run01_gui.txt",
+    "audit_bytes": 139565,
+    "audit_sha256": "a652681cefd2457131f07f683c1bda2f21b2b3ba825442be92e6ba8a268a2161",
+    "criteria_sha256": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+    "candidate_count": 2,
+    "review_window_closed": true,
+    "other_initial_windows_retained": true,
+    "not_full_gui_or_real_user_usability_trial": true
+  },
+  "source_and_resource_boundaries": {
+    "new_external_source_actions": 0,
+    "provider_business_api_calls": 0,
+    "credential_reads": 0,
+    "login_actions": 0,
+    "paid_or_transaction_actions": 0,
+    "external_messages": 0,
+    "git_commit": false,
+    "git_push": false,
+    "executor_public_search_count": "3 self-reported; not independently reconstructed",
+    "historical_budget_remaining": null,
+    "effective_hours": null
+  },
+  "integrity": {
+    "baseline_original_file_count": 549,
+    "unchanged_original_count": 545,
+    "allowed_changed_original_files": [
+      "CURRENT.md",
+      "README.md",
+      "docs/PROJECT_BOTTLENECK_MAP.md",
+      "handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md"
+    ],
+    "missing_original_files": [],
+    "unexpected_original_changes": [],
+    "verification_and_gui_finished_before_doc_updates": "548 of 549 original files unchanged; only CURRENT had review entry",
+    "business_knowledge_tests_executor_delivery_old_failures_unchanged": true
+  },
+  "external_gates": {
+    "H1": "BLOCKED_permission_and_raw_two_model_fields",
+    "H2": "0/2 real sale identity; prior 0/20",
+    "H3": "0 valid regional quotes",
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "overall": "NOT_PASS"
+  },
+  "next": "Concentrated R1/R2 repair in same existing package, suggested at most 2 effective hours within verifiable remaining interface budget; no new total budget, new framework, or repeated unchanged GUI. Continue original real evidence/user-condition responsibility; keep formal effect unknown."
+}

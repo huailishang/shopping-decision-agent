@@ -1,0 +1,92 @@
+{
+  "operation": "mcp_tool_call_once",
+  "case": "hp_param",
+  "tool": "product_parameter_search",
+  "input_query": "惠普 M232dw",
+  "observed_at": "2026-11-14T02:58:35.187364+00:00",
+  "initialization_http": 200,
+  "initialization_success": true,
+  "raw_response_saved": false,
+  "credential_logged": false,
+  "full_product_url_saved": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "attempted_business_tool_calls": 1,
+  "automatic_retries": 0,
+  "initialized_notification_http": 202,
+  "rpc_http": 200,
+  "response_len": 3601,
+  "response_sha256": "53bdd9623122dd7c7c0568f633a8f9687d0b0b2fbcec44964a950d3e1fa85a2b",
+  "rpc_is_error": false,
+  "rpc_error_present": false,
+  "parsed_result_type": "dict",
+  "business_code": 0,
+  "structure": [
+    {
+      "path": "error_code",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "error_msg",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "requestid",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "domain",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data",
+      "type": "list",
+      "length": 1
+    },
+    {
+      "path": "data[].entity_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_parameter",
+      "type": "list",
+      "length": 13
+    },
+    {
+      "path": "data[].entity_parameter[].key",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_parameter[].value",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_parameter[].parameter_description",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_parameter[].confidence",
+      "type": "str",
+      "length": null
+    }
+  ],
+  "identity_field_occurrences": [],
+  "title_brand_store_excerpts": [],
+  "sku_entities": [],
+  "business_container_keys": [
+    "error_code",
+    "error_msg",
+    "requestid",
+    "domain",
+    "data"
+  ],
+  "elapsed_seconds": 3.983
+}

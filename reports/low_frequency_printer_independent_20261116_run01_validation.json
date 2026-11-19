@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "run_id": "low_frequency_printer_independent_20261116_run01",
+  "date": "2026-11-16",
+  "role": "independent_reviewer",
+  "review_type": "source applicability and incremental decision value; manual document review, not runtime or effect trial",
+  "sources": [
+    {
+      "id": "L16-01",
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-B6E8FEAE-BE0B-4CB3-8F23-55767185E30B_1.html",
+      "source_group": "brother",
+      "method": "open returned readable page text",
+      "anchor": "consumables table, lines 25-36; exact model and separate inbox row",
+      "accepted": "HL-L1238W inbox toner approximately 1500 ISO/IEC19752 simplex test pages",
+      "not_supported": [
+        "realized lifetime",
+        "retail sale configuration",
+        "current price"
+      ],
+      "reviewed_on": "2026-11-16",
+      "published_on": "unknown",
+      "recheck_before_use": true
+    },
+    {
+      "id": "L16-02",
+      "url": "https://support.hp.com/ph-en/document/ish_9364723-9363932-16",
+      "alternate_url": "https://support.hp.com/ca-en/document/ish_9364723-9363932-16",
+      "source_group": "hp",
+      "method": "both direct opens 403; official URL search-cache page text",
+      "anchor": "packaged storage conditions and cartridge storage-period footnote",
+      "accepted": "general LaserJet shipping/storage guidance, storage plus use time <=2.5 years",
+      "not_supported": [
+        "M232dw or CN137A verified applicability",
+        "mandatory replacement",
+        "failure rate",
+        "Brother comparison"
+      ],
+      "reviewed_on": "2026-11-16",
+      "published_on": "unknown",
+      "recheck_before_use": true
+    },
+    {
+      "id": "L16-03",
+      "url": "https://support.hp.com/rs-en/document/ish_12019633-12019817-16",
+      "alternate_url": "https://support.hp.com/us-en/document/ish_12019633-12019817-16",
+      "secondary_url": "https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html",
+      "source_group": "hp",
+      "method": "direct opens 403; official support URL and storefront URL search-cache page text; storefront crawl about four months old",
+      "anchor": "remove printer from box note; box contents",
+      "accepted": "M232-M237 series ships with prepared toner; CN model page lists black toner as box content",
+      "not_supported": [
+        "CN exact starter yield",
+        "current regional price or stock",
+        "live platform sale identity",
+        "independently verified storefront affiliation"
+      ],
+      "reviewed_on": "2026-11-16",
+      "published_on": "unknown",
+      "recheck_before_use": true
+    },
+    {
+      "id": "L16-04",
+      "url": "https://support.hp.com/cn-zh/document/ish_11838799-11926070-16",
+      "source_group": "hp",
+      "method": "direct open 403 twice; official URL search-cache page text",
+      "anchor": "China genuine consumables scope; warranty table; production date is not expiry note",
+      "accepted": "separate conditional China warranty policy, including inbox consumables",
+      "not_supported": [
+        "usable lifetime",
+        "automatic expiry",
+        "unconditional model-specific warranty approval"
+      ],
+      "reviewed_on": "2026-11-16",
+      "published_on": "unknown",
+      "recheck_before_use": true
+    }
+  ],
+  "delta": {
+    "brother_inbox_nominal_yield_newly_resolved": true,
+    "inbox_existence_already_recorded": true,
+    "baseline_pointer": "knowledge/printer_products_official.json:68-72",
+    "new_necessary_user_question_resolved": false,
+    "original_case_tradeoff_change_demonstrated": false,
+    "independent_effect_gain": null,
+    "ranking_change_required_for_value": false,
+    "material_scope_verdict": "LIMITED_FACT_ACCEPTED; DECISION_INCREMENT_NOT_DEMONSTRATED; NO_NEW_DEVELOPMENT"
+  },
+  "expression_finding": {
+    "severity": "nonblocking research wording",
+    "file": "reports/低频打印耗材起始量与存放限制_新增公开资料核验_执行者_20261116_run02.md",
+    "line": 21,
+    "claim": "30 months as upper bound",
+    "correction": "conditional conversion for exactly 50 simplex standard test pages/month; no actual lifetime bound; scenario unit sheets should be pages",
+    "original_preserved": true,
+    "mandatory_code_fix": false
+  },
+  "negative_reviews": [
+    {
+      "id": "N01",
+      "hypothetical_misuse": "Replacement yield proves inbox yield",
+      "manual_ruling": "Reject this inference; L16-01 is accepted only because the manual has a separate inbox row",
+      "runtime_test": false
+    },
+    {
+      "id": "N02",
+      "hypothetical_misuse": "0-50 pages/month means the person prints exactly 50",
+      "manual_ruling": "Reject; 50 may be used only in an explicitly hypothetical calculation",
+      "runtime_test": false
+    },
+    {
+      "id": "N03",
+      "hypothetical_misuse": "1500/50=30 months is an upper bound on actual life",
+      "manual_ruling": "Reject; executor report line 21 wording is imprecise; not an observed runtime claim",
+      "runtime_test": false
+    },
+    {
+      "id": "N04",
+      "hypothetical_misuse": "General HP 2.5 years mandates replacement of CN M232dw toner",
+      "manual_ruling": "Reject; applicability and field reliability unverified",
+      "runtime_test": false
+    },
+    {
+      "id": "N05",
+      "hypothetical_misuse": "Warranty/production date proves usable life or expiry",
+      "manual_ruling": "Reject; China policy separates warranty and expiry",
+      "runtime_test": false
+    },
+    {
+      "id": "N06",
+      "hypothetical_misuse": "Series or replacement-cartridge pages establish China inbox yield",
+      "manual_ruling": "Reject; exact CN starter yield remains unknown",
+      "runtime_test": false
+    },
+    {
+      "id": "N07",
+      "hypothetical_misuse": "Search-cache storefront price/stock is valid regional quote",
+      "manual_ruling": "Reject; H3 remains zero and deployment/delivery region unknown",
+      "runtime_test": false
+    },
+    {
+      "id": "N08",
+      "hypothetical_misuse": "Manufacturer material supports a durability or cost ranking",
+      "manual_ruling": "Reject; applicable comparative lifetime and cost data absent",
+      "runtime_test": false
+    },
+    {
+      "id": "N09",
+      "hypothetical_misuse": "Research source retrieval authorizes cart/order/payment",
+      "manual_ruling": "Reject; no authorization or commerce action; inherited buying/trading state remains false",
+      "runtime_test": false
+    }
+  ],
+  "operations": {
+    "web_tool_calls": 4,
+    "public_open_actions": 8,
+    "public_search_actions": 9,
+    "total_public_actions": 17,
+    "original_search_limit": 6,
+    "excess_search_actions": 3,
+    "boundary_violations": [
+      "queries exceeded six",
+      "HP 403 documents subsequently opened via regional aliases or same URL; China policy URL opened twice"
+    ],
+    "execution_boundary_pass": false,
+    "further_external_retrieval_stopped": true,
+    "historical_cumulative_actions": null,
+    "remaining_budget": null,
+    "effective_work_hours": null,
+    "underlying_http_requests": null,
+    "historical_fees": null,
+    "provider_business_api_calls": 0,
+    "credential_reads": 0,
+    "login_actions": 0,
+    "transaction_actions": 0,
+    "external_messages": 0,
+    "git_commit": false,
+    "git_push": false
+  },
+  "validation": {
+    "code_changed": false,
+    "knowledge_changed": false,
+    "runtime_tests_newly_run": false,
+    "gui_newly_run": false,
+    "new_user_answers": 0,
+    "old_development_scores_recomputed": false,
+    "formal_36_created_or_run": false,
+    "old_engineering_results_not_relabelled": true
+  },
+  "integrity": {
+    "baseline_file": "reports/low_frequency_printer_independent_20261116_run01_baseline.json",
+    "original_files": 537,
+    "unchanged_original_files": 534,
+    "changed_original_files": [
+      "CURRENT.md",
+      "docs/PROJECT_BOTTLENECK_MAP.md",
+      "handoffs/真实打印机认知决策效果验证_下一长执行包_20261115.md"
+    ],
+    "missing_original_files": [],
+    "unexpected_original_changes": [],
+    "executor_delivery_and_old_evidence_unchanged": true
+  },
+  "project_state": {
+    "E1": "retain prior limited closure",
+    "development_strict_completeness": {
+      "baseline": "13/15",
+      "cognition": "14/15",
+      "status": "prior observation; not rerun or gain estimate"
+    },
+    "H1": "BLOCKED",
+    "H2": "0/2; prior 0/20",
+    "H3": "0 regional valid prices",
+    "buying_approved": false,
+    "trading_enabled": false,
+    "overall": "NOT PASS"
+  },
+  "next_action": "Close this material-only iteration without template/code/GUI/holdout expansion; resume original package after applicable cost/longitudinal evidence or necessary real user conditions support a defined local comparison."
+}

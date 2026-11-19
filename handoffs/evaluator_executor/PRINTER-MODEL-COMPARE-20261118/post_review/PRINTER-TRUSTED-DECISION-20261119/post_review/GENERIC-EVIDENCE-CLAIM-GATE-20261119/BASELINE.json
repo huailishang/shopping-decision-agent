@@ -1,0 +1,36 @@
+{
+  "schema": "generic-claim-gate-baseline/v1",
+  "task_id": "GENERIC-EVIDENCE-CLAIM-GATE-20261119",
+  "captured_at_utc": "2026-11-19T08:05:51.266859+00:00",
+  "git_head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+  "immutable_files_sha256": {
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/CONTRACT.md": "c353fc4d6dfc968e2d8e3883c4f8a3935c2eff8911aa5ece3def2a4176c98fbe",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/VALIDATION_PLAN.yaml": "6f7dc74125da391bc4dccb2e3731f54c42c1ffa181b94ebf97c0e5eabdf20966",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/CONTRACT.md": "0a157f414ff5473a9386c1cabb4bc5e2a13eb17d6ebd4afdfb6638b90b0d3e24",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/VALIDATION_PLAN.yaml": "85420e4004c6866d5840d6be0bcee5e9aad89c4fda341a4c30343f2d7fcb64ee",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/BASELINE.json": "2888bc4f3b08df1befe847b187973e112c38591d5d231fd2f349577fe00b9b07",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/BASELINE.sha256": "66c578eccc1f1c69cfcec2afcf8b01bbb5c1c742bef70504c461051d01a0272e",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/REVIEW.md": "d7602a63a9644dfe5d318bb5b53d5177e23363fb2bc07fb1284ecd6065b620f2",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/REPORT.md": "095be5625d2ab8c7d12910637bfab2b9a2bc2ca4c0c6e1c179e65ee2c3f9f3ef",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/COMPARISON.md": "0215d8e7fa87e13cd62c0a1331390242270e3c01f00f38586e6265a64850bcaa",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/sources.json": "d897511f208dcec9af5a2b68158668f12018de3e074a0fe07c0e23b406b0adc7",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/decision_matrix.json": "2a8353930356a7d183ddb21f72ba0016d27b90ab88272401c2c0ac5831b9ae9c",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/evidence/attempts.jsonl": "6732ae03972fcf4e09ac895e6f9ef5ebbc855ac3ffa382b39c0687579327a142",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/CONTRACT.md": "80bb0e1dae30fae57b10d9d466384ab7286b7ecff89f176cbc8b9d3bd4805d3d",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/FROZEN_INPUTS.json": "1aff6672167e01bd13d8b845097d3834f66c3868806543e7429fb24744fb60b5",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/FROZEN_INPUTS.sha256": "88767b7db2d23d2034fb4e855eabfda592301876e155c4ba242f6940337d4c9f",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/evidence/live/attempts.jsonl": "dc0f8631caa98df123206ef751312f42998e3f55614ac81b730bd7dbfe372026",
+    "docs/PROJECT_BOTTLENECK_MAP.md": "d06d1dd2b91d6cd8923d3faeef87c32352c50234dadc521d747f4ebb72659eac"
+  },
+  "modifiable_preimage_sha256": {
+    "CURRENT.md": "87b602d496c7388878789525ecf2ff651c7189c30f49699f6e15a8d88f4646d2",
+    "shopping_decision/evidence_comparison.py": "a69c7ef53d2166453007deb8ce54ea443b693ac9b9176e3f09c83f18ec0ed5a4",
+    "shopping_decision/model_comparison.py": "b4d4755648bca43b7c22ba7c82bad6c3daf70112287e80b16e1c51d84d5634bb"
+  },
+  "git_status_sha256": "2d3302152cc0490d380e63da75f42079698a59ead8d7bce865c158e69398edd1",
+  "git_status_count": 1235,
+  "historical_model_ledger_sha256": "dc0f8631caa98df123206ef751312f42998e3f55614ac81b730bd7dbfe372026",
+  "historical_model_attempts_used": 6,
+  "historical_model_attempts_limit": 10,
+  "note": "Preexisting uncommitted worktree must be preserved; no resets/cleanup. This baseline is immutable and is not evidence of any new model calls."
+}

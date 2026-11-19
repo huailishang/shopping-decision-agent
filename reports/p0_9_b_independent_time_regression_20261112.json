@@ -1,0 +1,1051 @@
+{
+  "role": "independent_reviewer",
+  "observed_at": "2026-11-12T13:37:38.718819+00:00",
+  "passed": 134,
+  "total": 134,
+  "groups": {
+    "original_positive": {
+      "passed": 3,
+      "total": 3
+    },
+    "changed_time_rejected": {
+      "passed": 78,
+      "total": 78
+    },
+    "equivalent_instant_accepted": {
+      "passed": 36,
+      "total": 36
+    },
+    "simulated_age_boundary": {
+      "passed": 9,
+      "total": 9
+    },
+    "unreviewed_isolation": {
+      "passed": 3,
+      "total": 3
+    },
+    "normal_entry_rejects_refresh": {
+      "passed": 3,
+      "total": 3
+    },
+    "normal_cli": {
+      "passed": 1,
+      "total": 1
+    },
+    "source_unchanged": {
+      "passed": 1,
+      "total": 1
+    }
+  },
+  "cases": [
+    {
+      "group": "original_positive",
+      "id": "HL-10W",
+      "expectation_met": true,
+      "source_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+      "original_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/minus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/minus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/plus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/plus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/fraction_lost",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/fraction_lost",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/same_wall_clock_wrong_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/same_wall_clock_wrong_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/original_exploit_new_past_time",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/original_exploit_new_past_time",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/naive_same_clock",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/naive_same_clock",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/date_only",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/date_only",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/null",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/null",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/boolean",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/boolean",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/missing",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/missing",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/invalid_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/invalid_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/invalid_date",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/invalid_date",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/manifest/future",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-10W/direct_reviewed/future",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/manifest/plus_14_next_calendar_day",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-10T04:01:03.133068+14:00",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/direct_reviewed/plus_14_next_calendar_day",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-10T04:01:03.133068+14:00",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/manifest/minus_12",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T02:01:03.133068-12:00",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/direct_reviewed/minus_12",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T02:01:03.133068-12:00",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/manifest/quarter_hour_zone",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T19:46:03.133068+05:45",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/direct_reviewed/quarter_hour_zone",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T19:46:03.133068+05:45",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/manifest/compact_utc_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.133068+0000",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/direct_reviewed/compact_utc_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.133068+0000",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/manifest/negative_zero_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.133068-00:00",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/direct_reviewed/negative_zero_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.133068-00:00",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/manifest/utc_z",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.133068Z",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-10W/direct_reviewed/utc_z",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.133068Z",
+      "output_observed_at": "2026-11-09T14:01:03.133068+00:00"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-10W/2026-12-08",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-08",
+      "age_days": 29,
+      "stale": false,
+      "required_met": [
+        "wireless"
+      ],
+      "required_unknown": [],
+      "billing_model": "buy_print_pages_to_claim_consumables"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-10W/2026-12-09",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-09",
+      "age_days": 30,
+      "stale": false,
+      "required_met": [
+        "wireless"
+      ],
+      "required_unknown": [],
+      "billing_model": "buy_print_pages_to_claim_consumables"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-10W/2026-12-10",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-10",
+      "age_days": 31,
+      "stale": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "billing_model": "unknown"
+    },
+    {
+      "group": "unreviewed_isolation",
+      "id": "HL-10W",
+      "expectation_met": true
+    },
+    {
+      "group": "original_positive",
+      "id": "HL-B2188DW",
+      "expectation_met": true,
+      "source_sha256": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+      "original_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/minus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/minus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/plus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/plus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/fraction_lost",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/fraction_lost",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/same_wall_clock_wrong_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/same_wall_clock_wrong_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/original_exploit_new_past_time",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/original_exploit_new_past_time",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/naive_same_clock",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/naive_same_clock",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/date_only",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/date_only",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/null",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/null",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/boolean",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/boolean",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/missing",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/missing",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/invalid_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/invalid_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/invalid_date",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/invalid_date",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/manifest/future",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2188DW/direct_reviewed/future",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/manifest/plus_14_next_calendar_day",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-10T04:01:03.875727+14:00",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/direct_reviewed/plus_14_next_calendar_day",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-10T04:01:03.875727+14:00",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/manifest/minus_12",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T02:01:03.875727-12:00",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/direct_reviewed/minus_12",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T02:01:03.875727-12:00",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/manifest/quarter_hour_zone",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T19:46:03.875727+05:45",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/direct_reviewed/quarter_hour_zone",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T19:46:03.875727+05:45",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/manifest/compact_utc_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.875727+0000",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/direct_reviewed/compact_utc_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.875727+0000",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/manifest/negative_zero_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.875727-00:00",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/direct_reviewed/negative_zero_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.875727-00:00",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/manifest/utc_z",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.875727Z",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2188DW/direct_reviewed/utc_z",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:03.875727Z",
+      "output_observed_at": "2026-11-09T14:01:03.875727+00:00"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-B2188DW/2026-12-08",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-08",
+      "age_days": 29,
+      "stale": false,
+      "required_met": [
+        "wireless"
+      ],
+      "required_unknown": [],
+      "billing_model": "unknown"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-B2188DW/2026-12-09",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-09",
+      "age_days": 30,
+      "stale": false,
+      "required_met": [
+        "wireless"
+      ],
+      "required_unknown": [],
+      "billing_model": "unknown"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-B2188DW/2026-12-10",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-10",
+      "age_days": 31,
+      "stale": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "billing_model": "unknown"
+    },
+    {
+      "group": "unreviewed_isolation",
+      "id": "HL-B2188DW",
+      "expectation_met": true
+    },
+    {
+      "group": "original_positive",
+      "id": "HL-B2158W",
+      "expectation_met": true,
+      "source_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+      "original_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/minus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/minus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/plus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/plus_one_microsecond",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/fraction_lost",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/fraction_lost",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/same_wall_clock_wrong_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/same_wall_clock_wrong_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/original_exploit_new_past_time",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/original_exploit_new_past_time",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/naive_same_clock",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/naive_same_clock",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/date_only",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/date_only",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/null",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/null",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/boolean",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/boolean",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/missing",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/missing",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/invalid_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/invalid_offset",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/invalid_date",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_p0_8_source_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/invalid_date",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "invalid_detail_observed_at"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/manifest/future",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "reviewed_detail_observation_time_mismatch"
+    },
+    {
+      "group": "changed_time_rejected",
+      "id": "HL-B2158W/direct_reviewed/future",
+      "expectation_met": true,
+      "exception": "ValueError",
+      "reason": "future_or_invalid_detail_observed_at"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/manifest/plus_14_next_calendar_day",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-10T04:01:04.511646+14:00",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/direct_reviewed/plus_14_next_calendar_day",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-10T04:01:04.511646+14:00",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/manifest/minus_12",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T02:01:04.511646-12:00",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/direct_reviewed/minus_12",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T02:01:04.511646-12:00",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/manifest/quarter_hour_zone",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T19:46:04.511646+05:45",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/direct_reviewed/quarter_hour_zone",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T19:46:04.511646+05:45",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/manifest/compact_utc_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:04.511646+0000",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/direct_reviewed/compact_utc_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:04.511646+0000",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/manifest/negative_zero_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:04.511646-00:00",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/direct_reviewed/negative_zero_offset",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:04.511646-00:00",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/manifest/utc_z",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:04.511646Z",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "equivalent_instant_accepted",
+      "id": "HL-B2158W/direct_reviewed/utc_z",
+      "expectation_met": true,
+      "input_observed_at": "2026-11-09T14:01:04.511646Z",
+      "output_observed_at": "2026-11-09T14:01:04.511646+00:00"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-B2158W/2026-12-08",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-08",
+      "age_days": 29,
+      "stale": false,
+      "required_met": [
+        "wireless"
+      ],
+      "required_unknown": [],
+      "billing_model": "unknown"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-B2158W/2026-12-09",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-09",
+      "age_days": 30,
+      "stale": false,
+      "required_met": [
+        "wireless"
+      ],
+      "required_unknown": [],
+      "billing_model": "unknown"
+    },
+    {
+      "group": "simulated_age_boundary",
+      "id": "HL-B2158W/2026-12-10",
+      "expectation_met": true,
+      "simulated_comparison_date": "2026-12-10",
+      "age_days": 31,
+      "stale": true,
+      "required_met": [],
+      "required_unknown": [
+        "wireless"
+      ],
+      "billing_model": "unknown"
+    },
+    {
+      "group": "unreviewed_isolation",
+      "id": "HL-B2158W",
+      "expectation_met": true
+    },
+    {
+      "group": "normal_entry_rejects_refresh",
+      "id": "HL-10W",
+      "expectation_met": true,
+      "source_mode": "older_manufacturer_directory_snapshot_only",
+      "source_warning": "本机型号详情原文缺失或完整性校验失败，已降级为旧目录快照；未使用旧详情摘要。"
+    },
+    {
+      "group": "normal_entry_rejects_refresh",
+      "id": "HL-B2188DW",
+      "expectation_met": true,
+      "source_mode": "older_manufacturer_directory_snapshot_only",
+      "source_warning": "本机型号详情原文缺失或完整性校验失败，已降级为旧目录快照；未使用旧详情摘要。"
+    },
+    {
+      "group": "normal_entry_rejects_refresh",
+      "id": "HL-B2158W",
+      "expectation_met": true,
+      "source_mode": "older_manufacturer_directory_snapshot_only",
+      "source_warning": "本机型号详情原文缺失或完整性校验失败，已降级为旧目录快照；未使用旧详情摘要。"
+    },
+    {
+      "group": "normal_cli",
+      "id": "default_windows_utf8_bytes_two_turns",
+      "expectation_met": true,
+      "returncode": 0,
+      "versions": [
+        1,
+        2
+      ],
+      "candidate_counts": [
+        3,
+        3
+      ],
+      "old_conclusions_invalidated": true,
+      "interpreter": "D:\\SoftWare\\Python\\install\\python.exe",
+      "utf8_environment_overrides": false
+    },
+    {
+      "group": "source_unchanged",
+      "id": "original_manifest_and_raw_archives",
+      "expectation_met": true
+    }
+  ],
+  "limitations": [
+    "手选时间/边界诊断，不是总体准确率",
+    "日历日30天复核策略，不是720小时TTL",
+    "未验Windows GUI或真实平台SKU/地区报价"
+  ],
+  "boundaries": {
+    "credential_reads": 0,
+    "new_haina_business_calls": 0,
+    "paid_calls": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "business_code_modified": false,
+    "git_commit": false,
+    "git_push": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "operation": "p0_8_read_only_official_source_recheck",
+  "models": [
+    {
+      "model_id": "HL-10W",
+      "observed_at": "2026-11-09T14:01:03.133068+00:00",
+      "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+      "response_sha256": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+      "raw_html_local_path": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/data/raw/p0_8_official_details/3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff.html",
+      "extracted_positive_features": [
+        "monochrome_print",
+        "wireless",
+        "wechat_miniprogram",
+        "pay_per_page_consumables"
+      ],
+      "billing_model": "buy_print_pages_to_claim_consumables"
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "observed_at": "2026-11-09T14:01:03.875727+00:00",
+      "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+      "response_sha256": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+      "raw_html_local_path": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/data/raw/p0_8_official_details/ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb.html",
+      "extracted_positive_features": [
+        "monochrome_print",
+        "wireless",
+        "wechat_miniprogram",
+        "auto_duplex"
+      ],
+      "billing_model": "unknown"
+    },
+    {
+      "model_id": "HL-B2158W",
+      "observed_at": "2026-11-09T14:01:04.511646+00:00",
+      "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+      "response_sha256": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+      "raw_html_local_path": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/data/raw/p0_8_official_details/37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a.html",
+      "extracted_positive_features": [
+        "monochrome_print",
+        "wireless",
+        "wechat_miniprogram"
+      ],
+      "billing_model": "unknown"
+    }
+  ],
+  "authorized_ecommerce_api_calls": 0,
+  "verified_price_count": 0,
+  "transactions_enabled": false
+}

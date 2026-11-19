@@ -1,0 +1,27 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-01",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/check_delivery.py",
+    "--check",
+    "frozen",
+    "--frozen",
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/FROZEN_INPUTS.json",
+    "--frozen-sha",
+    "4837ffe23a86008e005f62debcdc62eaf7109a7de7baf22d44fd433a815a37e4"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/check_delivery.py --check frozen --frozen handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/FROZEN_INPUTS.json --frozen-sha 4837ffe23a86008e005f62debcdc62eaf7109a7de7baf22d44fd433a815a37e4",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-17T01:53:00.879937+00:00",
+  "finished_at_utc": "2026-11-17T01:53:03.308984+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-01.stdout.log",
+  "stderr_path": "EV-01.stderr.log",
+  "stdout_bytes": 66,
+  "stderr_bytes": 0,
+  "stdout_sha256": "a62c9a709c17b75a26bc0ecae7c0367bcbca5e6e1976ee722a6b89738dc915e2",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

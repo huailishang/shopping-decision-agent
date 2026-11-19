@@ -1,0 +1,5 @@
+{
+  "PYTHONUTF8": "1",
+  "basis": "Project README requires UTF-8 inheritance for subprocesses; -X on parent alone did not propagate. Original failed L2 preserved under batches/L2-01-encoding-failure.",
+  "product_changes_for_encoding_fix": 0
+}

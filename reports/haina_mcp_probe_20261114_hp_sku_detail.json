@@ -1,0 +1,395 @@
+{
+  "operation": "mcp_tool_call_once",
+  "case": "hp_sku_detail",
+  "tool": "product_sku_search",
+  "input_query": "惠普 M232dw",
+  "observed_at": "2026-11-14T02:57:37.118252+00:00",
+  "initialization_http": 200,
+  "initialization_success": true,
+  "raw_response_saved": false,
+  "credential_logged": false,
+  "full_product_url_saved": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "attempted_business_tool_calls": 1,
+  "automatic_retries": 0,
+  "initialized_notification_http": 202,
+  "rpc_http": 200,
+  "response_len": 13125,
+  "response_sha256": "bc1555a966d3d90beea7831b92dd06b2727170947f129d887020adb53afa5118",
+  "rpc_is_error": false,
+  "rpc_error_present": false,
+  "parsed_result_type": "dict",
+  "business_code": 0,
+  "structure": [
+    {
+      "path": "error_code",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "error_msg",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "requestid",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "domain",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data",
+      "type": "list",
+      "length": 1
+    },
+    {
+      "path": "data[].entity_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result",
+      "type": "dict",
+      "length": 4
+    },
+    {
+      "path": "data[].sku_result.spu_id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.spu_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_count",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list",
+      "type": "list",
+      "length": 2
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_axes",
+      "type": "dict",
+      "length": 1
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_axes.型号变体",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products_count",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products",
+      "type": "list",
+      "length": 2
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].index",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].url",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].title",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].image_url",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].mall_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].shop_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].shop_type",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].sku_prop",
+      "type": "NoneType",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].union_spec",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].spec_detail",
+      "type": "NoneType",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].good_review_rate",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].month_sale",
+      "type": "NoneType",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].final_price",
+      "type": "str",
+      "length": null
+    }
+  ],
+  "identity_field_occurrences": [
+    {
+      "field": "data[].sku_result.spu_id",
+      "kind": "str",
+      "len": 32,
+      "sha256": "d763b895d2e07420a0acdb96010735112e4f9b376b0e58f221b2a4af362146b9"
+    },
+    {
+      "field": "data[].sku_result.spu_name",
+      "kind": "str",
+      "len": 19,
+      "sha256": "870dcac5e4c93abbc07cb1d47fc60a4a1a3eb0e9408e339022be2464dcf7fa89"
+    },
+    {
+      "field": "data[].sku_result.sku_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_id",
+      "kind": "str",
+      "len": 32,
+      "sha256": "063c7b15b8483f17bc38c44254bcf63a164f7bccd3ae42977735624f5677375a"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_id",
+      "kind": "str",
+      "len": 32,
+      "sha256": "484866704bf6bf70d57015b5d586aff33e075381b98db16256d92c13a966db84"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products[].sku_prop",
+      "kind": "str",
+      "len": 18,
+      "sha256": "21c865475f394cf30d331b78a8665c63a0df2ef772f159cef34a202f231b9086"
+    }
+  ],
+  "title_brand_store_excerpts": [
+    {
+      "field": "title",
+      "value_excerpt": "惠普 （HP）M232dw 家用激光打印机 自动双面无线学生家用一体机 低成本 高速高效 M232dw多功能+双面 手机远程打印 标配"
+    },
+    {
+      "field": "mall_name",
+      "value_excerpt": "京东"
+    },
+    {
+      "field": "shop_name",
+      "value_excerpt": "经辉办公设备服务买手店"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw 233dw家用激光打印机 自动双面无线学生家用一体机 低成本 高速高效家用商用打印机打印机 M232dw多功能+双面 手机远程打印 官方标配"
+    },
+    {
+      "field": "mall_name",
+      "value_excerpt": "京东"
+    },
+    {
+      "field": "shop_name",
+      "value_excerpt": "臻选打印机买手店"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普 【企业采购】惠普黑白无线激光打印复印扫描一体机 232dwc多功能办公家用打印自动双面打印A4 232dwc（自动双面打印+复印扫描+无线）"
+    },
+    {
+      "field": "mall_name",
+      "value_excerpt": "京东"
+    },
+    {
+      "field": "shop_name",
+      "value_excerpt": "惠普精通理想专卖店"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普（HP）M232dwc A4黑白激光无线双面打印机打印复印机扫描一体机家用办公手机远程打印无线WiFi连接"
+    },
+    {
+      "field": "mall_name",
+      "value_excerpt": "京东"
+    },
+    {
+      "field": "shop_name",
+      "value_excerpt": "惠普打印机办公专卖店"
+    }
+  ],
+  "sku_entities": [
+    {
+      "entity_name": "惠普 M232dw 黑白双面激光一体机",
+      "spu_id_present": true,
+      "spu_name_excerpt": "惠普 M232dw 黑白双面激光一体机",
+      "sku_count_reported": 2,
+      "sku_list_length": 2,
+      "skus": [
+        {
+          "sku_id_present": true,
+          "sku_id_length": 32,
+          "axes_keys": [
+            "型号变体"
+          ],
+          "sku_products_count_reported": 2,
+          "sku_products_length": 2,
+          "products": [
+            {
+              "item_id_field_present": true,
+              "item_id_length": 32,
+              "item_id_all_digits": false,
+              "item_id_sha256": "33679833bacee90454751699603d1ac8145abf12da3267adb5fb564129789efc",
+              "title_excerpt": "惠普 （HP）M232dw 家用激光打印机 自动双面无线学生家用一体机 低成本 高速高效 M232dw多功能+双面 手机远程打印 标配",
+              "mall_name": "京东",
+              "shop_name": "经辉办公设备服务买手店",
+              "shop_type": "其他第三方",
+              "sku_prop_excerpt": "",
+              "url_host": null,
+              "price_provider_unverified": "859.3"
+            },
+            {
+              "item_id_field_present": true,
+              "item_id_length": 32,
+              "item_id_all_digits": false,
+              "item_id_sha256": "1e22750c5c78c3a3375de3c6c0c3e2133d1f1bccbc0c958d7ca7e007d451e512",
+              "title_excerpt": "惠普M232dw 233dw家用激光打印机 自动双面无线学生家用一体机 低成本 高速高效家用商用打印机打印机 M232dw多功能+双面 手机远程打印 官方标配",
+              "mall_name": "京东",
+              "shop_name": "臻选打印机买手店",
+              "shop_type": "其他第三方",
+              "sku_prop_excerpt": "",
+              "url_host": null,
+              "price_provider_unverified": "859.1"
+            }
+          ]
+        },
+        {
+          "sku_id_present": true,
+          "sku_id_length": 32,
+          "axes_keys": [
+            "型号变体"
+          ],
+          "sku_products_count_reported": 5,
+          "sku_products_length": 5,
+          "products": [
+            {
+              "item_id_field_present": true,
+              "item_id_length": 32,
+              "item_id_all_digits": false,
+              "item_id_sha256": "757c83fc2504d28adb08f8bbc005b0b8e14a6686def49498e98f492be241c1ad",
+              "title_excerpt": "惠普 【企业采购】惠普黑白无线激光打印复印扫描一体机 232dwc多功能办公家用打印自动双面打印A4 232dwc（自动双面打印+复印扫描+无线）",
+              "mall_name": "京东",
+              "shop_name": "惠普精通理想专卖店",
+              "shop_type": "其他第三方",
+              "sku_prop_excerpt": "",
+              "url_host": null,
+              "price_provider_unverified": "1061.1"
+            },
+            {
+              "item_id_field_present": true,
+              "item_id_length": 32,
+              "item_id_all_digits": false,
+              "item_id_sha256": "0c6ecd093f8287f9532af3c3bd35f3cd5e9279a4090806179234719597277d31",
+              "title_excerpt": "惠普（HP）M232dwc A4黑白激光无线双面打印机打印复印机扫描一体机家用办公手机远程打印无线WiFi连接",
+              "mall_name": "京东",
+              "shop_name": "惠普打印机办公专卖店",
+              "shop_type": "其他第三方",
+              "sku_prop_excerpt": "",
+              "url_host": null,
+              "price_provider_unverified": "989.1"
+            },
+            {
+              "item_id_field_present": true,
+              "item_id_length": 32,
+              "item_id_all_digits": false,
+              "item_id_sha256": "304618a528905c790096bad1f40c46721e97323b2cd987c5bc87a42147909df7",
+              "title_excerpt": "惠普（HP）232dwc/233sdw打印机办公A4自动双面黑白无线激光学生家用三合一复印扫描多功能一体试卷打印 M232dwc（打印复印扫描三合一+双面打印） 官方标配（全国联保）",
+              "mall_name": "京东",
+              "shop_name": "艾牧未办公设备专营店",
+              "shop_type": "其他第三方",
+              "sku_prop_excerpt": "",
+              "url_host": null,
+              "price_provider_unverified": "989.1"
+            },
+            {
+              "item_id_field_present": true,
+              "item_id_length": 32,
+              "item_id_all_digits": false,
+              "item_id_sha256": "0b611b9a39a2885737977ef2ef584fc0cf853f991f33732d7565e2d629799207",
+              "title_excerpt": "【自营】惠普M232dwc黑白激光无线wifi网络自动双面打印一体机多功能复印扫描A4家用小型办公专用手机三合一",
+              "mall_name": "天猫精选",
+              "shop_name": "天猫优品官方旗舰店",
+              "shop_type": "旗舰店",
+              "sku_prop_excerpt": "",
+              "url_host": null,
+              "price_provider_unverified": "1019.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "business_container_keys": [
+    "error_code",
+    "error_msg",
+    "requestid",
+    "domain",
+    "data"
+  ],
+  "elapsed_seconds": 1.343
+}

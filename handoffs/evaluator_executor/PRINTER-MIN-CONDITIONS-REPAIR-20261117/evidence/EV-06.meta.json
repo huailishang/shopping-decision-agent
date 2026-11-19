@@ -1,0 +1,25 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-06",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_scope.py",
+    "--check",
+    "ledger",
+    "--frozen-sha",
+    "aadb26287cb2d30a42b8766690db3c3d3458962388ed5b53f85f9219408681ae"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_scope.py --check ledger --frozen-sha aadb26287cb2d30a42b8766690db3c3d3458962388ed5b53f85f9219408681ae",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-17T13:09:23.489110+00:00",
+  "finished_at_utc": "2026-11-17T13:09:25.469216+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-06.stdout.log",
+  "stderr_path": "EV-06.stderr.log",
+  "stdout_bytes": 78,
+  "stderr_bytes": 0,
+  "stdout_sha256": "60babac5d6617561e0e465c6077fce598849bd78dc52b6eb39f047ef20b331ec",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

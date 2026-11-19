@@ -1,0 +1,1466 @@
+{
+  "generated_at": "2026-11-15T09:59:52.843782+00:00",
+  "mode": "offline_cli_real_entrypoint_synthetic_followups",
+  "case_id": "REAL-PRINTER-H08B-20261113",
+  "identity_verified_count": 0,
+  "old20_verified": 0,
+  "regional_quote_count": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "new_external_api_calls": 0,
+  "source_artifacts_sha256": {
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/knowledge/printer_selection_criteria.json": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/knowledge/real_printer_case_research_20261113.json": "84df265530bad1c8e8f8b74c9d90020457485c6330f1e2f14bb870457484c529",
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/knowledge/real_printer_case_comparison_20261115.json": "d1a647cf6e2da98e38772e330797a93aae2ca849a567977d450e1456656ea833"
+  },
+  "passed_rounds": 11,
+  "rounds": [
+    {
+      "round": "R0_original",
+      "origin": "known_original_requirements",
+      "changes": {
+        "category": "printer",
+        "usage": "家用黑白打印",
+        "budget_max_cny": 1000,
+        "budget_scope": "unknown",
+        "monthly_pages_range": [
+          0,
+          50
+        ],
+        "needs_color": false,
+        "accepts_outsourced_color": true,
+        "wechat_required": null,
+        "wechat_workflow": "unknown",
+        "requires_scan": null,
+        "requires_auto_duplex": null,
+        "requirements": [
+          "月打印0至50页、家里黑白为主，偶尔彩印可去打印店，希望微信打印、可靠耐用，比较兄弟与惠普"
+        ]
+      },
+      "session_version": 1,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-02",
+          "reason": "用户希望微信打印时，需核对具体型号的小程序/绑定流程；不能把普通Wi-Fi或手机打印替代微信，也不自动把“希望”升级为硬性必须。HP微信云打印还存在中国大陆地域限制证据。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1000元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        },
+        {
+          "id": "CASE-08",
+          "reason": "微信打印偏好还要核设备部署地区：HP支持人员曾回复M232dw微信云打印仅限中国大陆；Brother中国官方清单列出HL-L1238W，但未说明境外服务范围。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R1_scan_required_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "requires_scan": true
+      },
+      "session_version": 2,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true,
+          "scan": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "pending_hard_evidence",
+          "hard_failed": [],
+          "hard_unknown": [
+            "C-SCAN"
+          ],
+          "relations": {
+            "C-SCAN": "unknown",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-SCAN": {
+              "user": true,
+              "product": null,
+              "unit": "boolean",
+              "source_ids": []
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-SCAN": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-SCAN": {
+              "user": true,
+              "product": true,
+              "unit": "boolean",
+              "source_ids": [
+                "R9"
+              ]
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-01"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-02",
+          "reason": "用户希望微信打印时，需核对具体型号的小程序/绑定流程；不能把普通Wi-Fi或手机打印替代微信，也不自动把“希望”升级为硬性必须。HP微信云打印还存在中国大陆地域限制证据。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-04",
+          "reason": "如果必须扫描复印，需要优先核实具多功能的型号，例如惠普M232dw；打印单功能与一体机不能只比较无线和价格。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1000元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        },
+        {
+          "id": "CASE-08",
+          "reason": "微信打印偏好还要核设备部署地区：HP支持人员曾回复M232dw微信云打印仅限中国大陆；Brother中国官方清单列出HL-L1238W，但未说明境外服务范围。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R2_duplex_required_scan_revoked_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "requires_scan": false,
+        "requires_auto_duplex": true
+      },
+      "session_version": 3,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true,
+          "auto_duplex": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "pending_hard_evidence",
+          "hard_failed": [],
+          "hard_unknown": [
+            "C-DUPLEX"
+          ],
+          "relations": {
+            "C-DUPLEX": "unknown",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-DUPLEX": {
+              "user": true,
+              "product": null,
+              "unit": "boolean",
+              "source_ids": []
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-DUPLEX": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-DUPLEX": {
+              "user": true,
+              "product": true,
+              "unit": "boolean",
+              "source_ids": [
+                "R9",
+                "R11"
+              ]
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-01"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-05",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-02",
+          "reason": "用户希望微信打印时，需核对具体型号的小程序/绑定流程；不能把普通Wi-Fi或手机打印替代微信，也不自动把“希望”升级为硬性必须。HP微信云打印还存在中国大陆地域限制证据。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-05",
+          "reason": "如果自动双面变成硬条件，需重新核验所售配置的双面能力。惠普官网只对M232dw等具体型号宣称自动双面，不能外推整个品牌。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1000元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        },
+        {
+          "id": "CASE-08",
+          "reason": "微信打印偏好还要核设备部署地区：HP支持人员曾回复M232dw微信云打印仅限中国大陆；Brother中国官方清单列出HL-L1238W，但未说明境外服务范围。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R2b_duplex_revoked_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "requires_auto_duplex": false
+      },
+      "session_version": 4,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-02"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-02",
+          "reason": "用户希望微信打印时，需核对具体型号的小程序/绑定流程；不能把普通Wi-Fi或手机打印替代微信，也不自动把“希望”升级为硬性必须。HP微信云打印还存在中国大陆地域限制证据。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1000元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        },
+        {
+          "id": "CASE-08",
+          "reason": "微信打印偏好还要核设备部署地区：HP支持人员曾回复M232dw微信云打印仅限中国大陆；Brother中国官方清单列出HL-L1238W，但未说明境外服务范围。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R3_home_color_required_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "needs_color": true
+      },
+      "session_version": 5,
+      "latest_conditions": {
+        "required": {
+          "color_print": true
+        },
+        "preferred": {
+          "wechat_miniprogram": true,
+          "wireless": true
+        },
+        "budget_max_cny": 1000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "excluded_by_hard_condition",
+          "hard_failed": [
+            "C-COLOR"
+          ],
+          "hard_unknown": [],
+          "relations": {
+            "C-COLOR": "mismatch",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-COLOR": {
+              "user": true,
+              "product": false,
+              "unit": "boolean",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "excluded_by_hard_condition",
+          "hard_failed": [
+            "C-COLOR"
+          ],
+          "hard_unknown": [],
+          "relations": {
+            "C-COLOR": "mismatch",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-COLOR": {
+              "user": true,
+              "product": false,
+              "unit": "boolean",
+              "source_ids": [
+                "R9"
+              ]
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [],
+      "reason_ids": [
+        "CASE-02",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08",
+        "CASE-09"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-02",
+          "reason": "用户希望微信打印时，需核对具体型号的小程序/绑定流程；不能把普通Wi-Fi或手机打印替代微信，也不自动把“希望”升级为硬性必须。HP微信云打印还存在中国大陆地域限制证据。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1000元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        },
+        {
+          "id": "CASE-08",
+          "reason": "微信打印偏好还要核设备部署地区：HP支持人员曾回复M232dw微信云打印仅限中国大陆；Brother中国官方清单列出HL-L1238W，但未说明境外服务范围。"
+        },
+        {
+          "id": "CASE-09",
+          "reason": "如果改成必须在家打印彩色，Brother HL-L1238W和HP M232dw均是黑白激光型号，不能满足该硬条件；原来只比较黑白路线的理由应撤销。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R4_restore_and_require_miniprogram_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "needs_color": false,
+        "wechat_required": true,
+        "wechat_workflow": "miniprogram"
+      },
+      "session_version": 6,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true,
+          "wechat_miniprogram": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-WECHAT": "match",
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-WECHAT": {
+              "user": true,
+              "product": true,
+              "unit": "boolean",
+              "source_ids": [
+                "R7",
+                "R15"
+              ]
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-WECHAT": "match",
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-WECHAT": {
+              "user": true,
+              "product": true,
+              "unit": "boolean",
+              "source_ids": [
+                "R9",
+                "R10"
+              ]
+            },
+            "C-BUDGET": {
+              "user": 1000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-02"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-02",
+          "reason": "用户希望微信打印时，需核对具体型号的小程序/绑定流程；不能把普通Wi-Fi或手机打印替代微信，也不自动把“希望”升级为硬性必须。HP微信云打印还存在中国大陆地域限制证据。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1000元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        },
+        {
+          "id": "CASE-08",
+          "reason": "微信打印偏好还要核设备部署地区：HP支持人员曾回复M232dw微信云打印仅限中国大陆；Brother中国官方清单列出HL-L1238W，但未说明境外服务范围。"
+        }
+      ],
+      "necessary_questions": [
+        "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替",
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R4b_wechat_optional_accept_app_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "wechat_required": false,
+        "wechat_workflow": "transfer_to_app"
+      },
+      "session_version": 7,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1000元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-02"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1000元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R5_budget_down_500_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "budget_max_cny": 500
+      },
+      "session_version": 8,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "budget_max_cny": 500
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "above",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 500,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 500,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算500元，Brother HL-L1238W厂家建议零售价1906元，高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-02"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限500元；Brother官方建议价1906元，高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R5b_budget_and_wechat_cleared_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "budget_max_cny": null,
+        "wechat_required": null,
+        "wechat_workflow": "unknown",
+        "requirements": [
+          "可靠耐用，重点比较兄弟与惠普"
+        ]
+      },
+      "session_version": 9,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "budget_max_cny": null
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-VOLUME": "below"
+          },
+          "values": {
+            "C-VOLUME": {
+              "user": [
+                0,
+                50
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "本轮未设置预算；Brother历史官方建议零售价1906元、HP建议价未知，二者均非已核地区到手价，无法判预算符合。",
+      "current_volume_explanation": "本轮月印量0—50页，与HP厂家建议200—2000页范围关系为整体低于；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-02"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-07"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量0—50页，与HP建议200—2000页关系为整体低于，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        }
+      ],
+      "necessary_questions": [
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R6_budget_3000_pages_250_300_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "budget_max_cny": 3000,
+        "monthly_pages_range": [
+          250,
+          300
+        ]
+      },
+      "session_version": 10,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "budget_max_cny": 3000
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 3000,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                250,
+                300
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 3000,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                250,
+                300
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算3000元，Brother HL-L1238W厂家建议零售价1906元，不高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量250—300页，与HP厂家建议200—2000页范围关系为落在；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-02"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量250—300页，与HP建议200—2000页关系为位于其中，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限3000元；Brother官方建议价1906元，不高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    {
+      "round": "R6b_budget_equal_msrp_synthetic",
+      "origin": "explicitly_synthetic_condition_change",
+      "changes": {
+        "budget_max_cny": 1906
+      },
+      "session_version": 11,
+      "latest_conditions": {
+        "required": {
+          "monochrome_print": true
+        },
+        "preferred": {},
+        "budget_max_cny": 1906
+      },
+      "source_mode": "recorded_manufacturer_detail_replay_no_network",
+      "criteria_sha256": "8b646b6095185652217475ef88e2d6ab7fbb7dd8c4623829cb71fc035677fbe8",
+      "criteria_version": "2026-11-15-r1",
+      "model_results": [
+        {
+          "model": "HL-L1238W",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "at_or_below",
+            "C-VOLUME": "unknown"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1906,
+              "product": 1906,
+              "unit": "CNY",
+              "source_ids": [
+                "R6"
+              ]
+            },
+            "C-VOLUME": {
+              "user": [
+                250,
+                300
+              ],
+              "product": null,
+              "unit": "pages_per_month",
+              "source_ids": []
+            }
+          }
+        },
+        {
+          "model": "M232dw",
+          "eligibility": "model_spec_research_only",
+          "hard_failed": [],
+          "hard_unknown": [],
+          "relations": {
+            "C-BUDGET": "unknown",
+            "C-VOLUME": "within"
+          },
+          "values": {
+            "C-BUDGET": {
+              "user": 1906,
+              "product": null,
+              "unit": "CNY",
+              "source_ids": []
+            },
+            "C-VOLUME": {
+              "user": [
+                250,
+                300
+              ],
+              "product": [
+                200,
+                2000
+              ],
+              "unit": "pages_per_month",
+              "source_ids": [
+                "R11"
+              ]
+            }
+          }
+        }
+      ],
+      "current_budget_explanation": "当前预算1906元，Brother HL-L1238W厂家建议零售价1906元，不高于当前预算；建议价并非实价。HP M232dw缺厂家建议价，两款都没有地区到手价核验。",
+      "current_volume_explanation": "本轮月印量250—300页，与HP厂家建议200—2000页范围关系为落在；厂家建议范围不是最低启动量或故障门槛。Brother相应建议月印量未查明。",
+      "active_conditional_decisions": [
+        "DEC-02"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07"
+      ],
+      "reason_texts": [
+        {
+          "id": "CASE-01",
+          "reason": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。"
+        },
+        {
+          "id": "CASE-03",
+          "reason": "本轮月印量250—300页，与HP建议200—2000页关系为位于其中，建议范围不是最低使用门槛。Brother鼓粉分离；缺现价、维护和闲置实测，不能断言谁更耐用或省钱。"
+        },
+        {
+          "id": "CASE-06",
+          "reason": "本轮预算上限1906元；Brother官方建议价1906元，不高于该预算；HP建议价和双方地区现价均未核。建议价关系仅供研究，不能判定实际预算通过或排除。"
+        },
+        {
+          "id": "CASE-07",
+          "reason": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。"
+        }
+      ],
+      "necessary_questions": [
+        "预算是否包含运费和本次需另购的耗材？",
+        "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    }
+  ]
+}

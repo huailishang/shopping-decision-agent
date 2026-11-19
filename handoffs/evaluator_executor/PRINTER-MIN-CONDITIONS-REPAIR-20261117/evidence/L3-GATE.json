@@ -1,0 +1,164 @@
+{
+  "schema": "evaluator-executor-gate-summary/v1",
+  "task_id": "PRINTER-MIN-CONDITIONS-REPAIR-20261117",
+  "mode": "evaluator",
+  "gate_level": "L3",
+  "result": "PASS",
+  "plan": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/VALIDATION_PLAN.yaml",
+  "checks_total": 6,
+  "mandatory_failures": 0,
+  "checks": [
+    {
+      "check_id": "VP-01",
+      "ac": [
+        "AC-03"
+      ],
+      "evidence_id": "RV-EV-01",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_scope.py",
+        "--check",
+        "frozen",
+        "--frozen-sha",
+        "aadb26287cb2d30a42b8766690db3c3d3458962388ed5b53f85f9219408681ae"
+      ],
+      "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-01.meta.json",
+      "stdout": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-01.stdout.log",
+      "stderr": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-01.stderr.log"
+    },
+    {
+      "check_id": "VP-02",
+      "ac": [
+        "AC-01",
+        "AC-02"
+      ],
+      "evidence_id": "RV-EV-02",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_conditions.py",
+        "--out",
+        "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/evaluator_conditions"
+      ],
+      "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-02.meta.json",
+      "stdout": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-02.stdout.log",
+      "stderr": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-02.stderr.log"
+    },
+    {
+      "check_id": "VP-03",
+      "ac": [
+        "AC-02",
+        "AC-03"
+      ],
+      "evidence_id": "RV-EV-03",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/check_delivery.py",
+        "--check",
+        "flow",
+        "--frozen-sha",
+        "560fe9a30e949def2a0cdc0992a0d8499cb7e38cb3bea106b81cb8b564e3b8b8",
+        "--out",
+        "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/evaluator_flow"
+      ],
+      "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-03.meta.json",
+      "stdout": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-03.stdout.log",
+      "stderr": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-03.stderr.log"
+    },
+    {
+      "check_id": "VP-04",
+      "ac": [
+        "AC-01",
+        "AC-02",
+        "AC-03"
+      ],
+      "evidence_id": "RV-EV-04",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-c",
+        "import sys,unittest; s=unittest.defaultTestLoader.discover('tests',pattern='test_minimal_research_flow.py'); assert s.countTestCases()>=14, 'existing focused cases removed'; r=unittest.TextTestRunner(verbosity=2).run(s); sys.exit(0 if r.wasSuccessful() else 1)"
+      ],
+      "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-04.meta.json",
+      "stdout": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-04.stdout.log",
+      "stderr": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-04.stderr.log"
+    },
+    {
+      "check_id": "VP-05",
+      "ac": [
+        "AC-03"
+      ],
+      "evidence_id": "RV-EV-05",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-05.meta.json",
+      "stdout": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-05.stdout.log",
+      "stderr": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-05.stderr.log"
+    },
+    {
+      "check_id": "VP-06",
+      "ac": [
+        "AC-03"
+      ],
+      "evidence_id": "RV-EV-06",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_scope.py",
+        "--check",
+        "ledger",
+        "--frozen-sha",
+        "aadb26287cb2d30a42b8766690db3c3d3458962388ed5b53f85f9219408681ae"
+      ],
+      "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-06.meta.json",
+      "stdout": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-06.stdout.log",
+      "stderr": "handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/RV-EV-06.stderr.log"
+    }
+  ]
+}

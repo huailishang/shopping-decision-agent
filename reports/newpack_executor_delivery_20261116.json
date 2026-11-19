@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "run_id": "shopping_newpack_20261116_executor_run01",
+  "date": "2026-11-16",
+  "role": "executor",
+  "task_file": "handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md",
+  "project": "shopping-decision-agent",
+  "baseline_commit": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+  "starting_project_verdict": "NOT_PASS",
+  "status": "executor_delivered_pending_independent_review",
+  "stages": {
+    "S0": "existing dirty workspace preserved; baseline E1 closed and external H1/H2/H3 blocked",
+    "S1": "public manufacturer source-based conditional comparison and candidate coverage complete; real purchase decision not complete",
+    "S2": "shared injectable read-only research snapshot implemented with backward-compatible old outputs",
+    "S3": "Web and Java Python text bridge same source hash and safe defer; native Swing new click/save not run",
+    "S4": "six open development cases both groups generated; no new independent scoring or formal holdout",
+    "S5": "code tests and local report delivered; overall effect and external evidence unresolved"
+  },
+  "source_research": {
+    "public_search_queries": 3,
+    "public_clicks": 0,
+    "external_business_api_calls": 0,
+    "login_attempts": 0,
+    "paid_actions": 0,
+    "read_secret": 0,
+    "market_price_verified": 0,
+    "third_candidate": "Brother HL-L1808W public catalog research only",
+    "source_urls": [
+      "https://www.brother.cn/printer/prt/hl-l1238w",
+      "https://www.brother.cn/minisite/bcnactivity/new-question00.html",
+      "https://www.brother.cn/printer/prt/hl-l1808w",
+      "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+      "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf"
+    ]
+  },
+  "implementation": [
+    "shopping_decision/research_snapshot.py",
+    "shopping_decision/selection_criteria.py",
+    "shopping_decision/real_printer_case.py",
+    "shopping_decision/desktop_bridge.py",
+    "tests/test_research_snapshot.py"
+  ],
+  "tests": {
+    "targeted": {
+      "passed": 35,
+      "total": 35
+    },
+    "python_full": {
+      "passed": 412,
+      "total": 412
+    },
+    "h05_default": {
+      "passed": 8,
+      "total": 8,
+      "default_probe_date": "2026-10-31"
+    },
+    "h05_target_date": {
+      "passed": 8,
+      "total": 8,
+      "probe_date": "2026-11-16"
+    },
+    "java_compile_release": 17,
+    "H10": {
+      "passed": 6,
+      "total": 6
+    },
+    "P04": {
+      "passed": 6,
+      "total": 6
+    },
+    "normal_web_desktop_same_criteria_sha": true,
+    "normal_web_candidate_count": 2,
+    "desktop_status": "defer",
+    "desktop_report_chars": 112392,
+    "native_swing_gui_this_round": false,
+    "dirty_worktree_preserved": true
+  },
+  "fair_development": {
+    "source": "evaluation/printer_cognition_dev_20261115.json",
+    "output": "reports/newpack_research_development_20261116_run01.json",
+    "case_count": 6,
+    "same_hard_eligibility": true,
+    "new_independent_scoring": false,
+    "historical_independent_reference_items": 15,
+    "historical_baseline_pass": 13,
+    "historical_cognition_pass": 14,
+    "formal_holdout_started": false,
+    "formal_holdout_cases_run": 0,
+    "real_user_new_answers": 0,
+    "independent_gain": null
+  },
+  "external_gates": {
+    "H1": "BLOCKED_permission_and_auditable_raw_two_model_fields",
+    "H2_sale_identity_verified": 0,
+    "H2_denominator": 2,
+    "prior_20_verified": 0,
+    "H3_regional_quotes": 0,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "overall": "NOT_PASS"
+  },
+  "resource_account": {
+    "new_pack_executor_cap_effective_hours": 24,
+    "actual_effective_hours": "not_metered; not fabricated",
+    "historical_budget_remaining": "unknown_and_not_reset",
+    "external_search_queries": 3,
+    "external_tool_action_cap": 12,
+    "external_search_query_cap": 4,
+    "haina_calls": 0,
+    "git_commit": false,
+    "git_push": false,
+    "payment": false
+  },
+  "deliverables": {
+    "report": "reports/真实打印机决策与通用研究接口_长包执行报告_20261116.md",
+    "machine_development": "reports/newpack_research_development_20261116_run01.json",
+    "reproduction_script": "reports/run_newpack_research_development_20261116.py",
+    "handoff": "handoffs/真实打印机决策验证与通用接口_执行者交付_20261116.md",
+    "router": "CURRENT.md"
+  },
+  "limitations": [
+    "History CASE/DEC explanation still hardcodes initial two models; new injected research snapshot avoids such dependency in its own interface only",
+    "No native Swing click/save for changed display this round, only Java subprocess validation",
+    "No independently demonstrated shopping utility improvement",
+    "No formal unseen 36 task score and no user satisfaction evidence",
+    "No trusted live price, SKU identity, or supplier original data"
+  ]
+}

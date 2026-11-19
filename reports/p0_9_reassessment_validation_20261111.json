@@ -1,0 +1,76 @@
+{
+  "date_local": "2026-11-11",
+  "timezone": "Asia/Shanghai",
+  "role": "independent_reviewer",
+  "python": {
+    "version": "3.12.3",
+    "platform": "Windows",
+    "environment": "default_no_PYTHONUTF8_or_PYTHONIOENCODING",
+    "total": 315,
+    "passed": 315,
+    "elapsed_seconds": 17.522
+  },
+  "old_html_cases": {
+    "total": 14,
+    "expectations_met": 14
+  },
+  "new_html_cases": {
+    "total": 12,
+    "expectations_met": 5,
+    "false_positives": 5,
+    "false_negatives": 2,
+    "standards_doctype_added_for_css_case_sensitivity_case": true,
+    "not_a_population_error_rate": true
+  },
+  "source_replay": {
+    "matching_hashes": 3,
+    "stale_feature_billing_consumables_downgraded": true,
+    "original_input_unchanged": true
+  },
+  "fact_admission": {
+    "synthetic_question_promoted_to_wireless_required_met": true,
+    "purchase_approved": false
+  },
+  "new_report_attacks": {
+    "rejected_per_row": 4,
+    "url_string_reaches_cli": true,
+    "bad_enum_raises_TypeError": true,
+    "bad_enum_discards_valid_row_in_cli": true
+  },
+  "normal_cli": {
+    "forced_encoding_env_or_X_flag": false,
+    "versions": [
+      1,
+      2
+    ],
+    "old_conclusion_invalidated": true,
+    "display_counts": [
+      3,
+      3
+    ],
+    "changed_color_exclusion_works": true
+  },
+  "h05": {
+    "passed": 8,
+    "total": 8,
+    "path": "reports/p0_9_reassessment_h05_20261111.json"
+  },
+  "java": {
+    "release_target": 17,
+    "compiled": true,
+    "P04": "6/6",
+    "H10": "6/6",
+    "manual_gui": "not_run"
+  },
+  "diff_check": "pass",
+  "supplier_rights_reverified": false,
+  "credentials_read": false,
+  "new_haina_business_calls": 0,
+  "business_implementation_modified": false,
+  "real_evidence_approval_changed": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "overall_p0_9_acceptance": "not_passed",
+  "git_committed": false,
+  "git_pushed": false
+}

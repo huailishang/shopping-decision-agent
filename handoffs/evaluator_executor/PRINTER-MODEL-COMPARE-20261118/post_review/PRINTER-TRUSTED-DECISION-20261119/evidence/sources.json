@@ -1,0 +1,76 @@
+{
+  "schema": "bounded-public-research-sources/v1",
+  "assembled_at_utc": "2026-11-19T07:22:48.202583+00:00",
+  "sources": [
+    {
+      "source_id": "S_BR_PRODUCT_INDEX",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "type": "official_search_index_only",
+      "model_scope": "Brother HL-L1238W",
+      "region_scope": "CN",
+      "short_excerpt": "微信小程序打印；通过微信小程序可支持远程打印；兄弟畅享印",
+      "limitations": "Official URL returned 403 on direct reading; index snippet cannot establish full workflow, later reuse or firmware prerequisites.",
+      "published_at": "unknown",
+      "captured_at_utc": "not_precisely_recorded_in_browser",
+      "excerpt_sha256": "47511bf3cb07a92fa8087a9e94f532bf5f48265fa0fbd24dbea19f79feef99d0",
+      "full_content_sha256": null,
+      "content_hash_explanation": "Not available: retrieved snippets/parsed page text were not transferred as raw bytes; excerpt SHA only."
+    },
+    {
+      "source_id": "S_BR_FAQ_INDEX",
+      "url": "https://www.brother.cn/minisite/bcnactivity/new-question07.html",
+      "type": "official_search_index_only",
+      "model_scope": "Brother HL-L1238W (included in listed models)",
+      "region_scope": "CN",
+      "short_excerpt": "HL-L1238W列入远程打印机型；Brother Mobile Connect注册设备，畅享印设置，启动微信小程序",
+      "limitations": "403 on original official URL; no first-hand page body retrieved; not proof of reliable reuse or direct mini-program use on this specific hardware.",
+      "published_at": "unknown",
+      "captured_at_utc": "not_precisely_recorded_in_browser",
+      "excerpt_sha256": "436e47f63ab33add5e10818919c22ce53145979d1f2b94564f639f373625db99",
+      "full_content_sha256": null,
+      "content_hash_explanation": "Not available: retrieved snippets/parsed page text were not transferred as raw bytes; excerpt SHA only."
+    },
+    {
+      "source_id": "S_HP_SETUP",
+      "url": "https://kaas.hpcloud.hp.com/pdf-public/pdf_12826995_zh-CN-1.pdf",
+      "type": "official_manufacturer_pdf_parsed_text",
+      "model_scope": "HP LaserJet MFP M232–M237 series (includes M232dw family, not model-isolated)",
+      "region_scope": "CN",
+      "short_excerpt": "确保打印机已添加至 HP Smart 主屏幕，然后选择“微信打印”磁贴以启用此打印机的微信打印功能",
+      "limitations": "Series installation guide; no direct proof of current M232dw regional firmware or later reuse; screenshot retrieval cache miss but parsed PDF text available.",
+      "published_at": "2024 copyright; specific revision unknown",
+      "captured_at_utc": "not_precisely_recorded_in_browser",
+      "excerpt_sha256": "33fbfdbdf18062ebff9300694f6b5a887e4f5e2f0177c2a48f14375f88e5ff8c",
+      "full_content_sha256": null,
+      "content_hash_explanation": "Not available: retrieved snippets/parsed page text were not transferred as raw bytes; excerpt SHA only."
+    },
+    {
+      "source_id": "S_HP_LISTING",
+      "url": "https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html",
+      "type": "official_storefront_html",
+      "model_scope": "HP LaserJet MFP M232dw / SKU 9YF97A",
+      "region_scope": "CN storefront; Henan destination NOT selected",
+      "short_excerpt": "惠普 LaserJet M232dw；SKU 9YF97A；展示 ¥1199；配送地区须另选省、市、区",
+      "limitations": "Page crawl about five months earlier; ¥1199 not Henan effective checkout price, stock/delivery not confirmed for Henan, no personalized promotions.",
+      "published_at": "unknown",
+      "captured_at_utc": "not_precisely_recorded_in_browser",
+      "excerpt_sha256": "d3f0f3a9bc0ae6ec5ba76c3fdfc3e8571d5938ea5b245fc65a2b62aae3d3dafe",
+      "full_content_sha256": null,
+      "content_hash_explanation": "Not available: retrieved snippets/parsed page text were not transferred as raw bytes; excerpt SHA only."
+    },
+    {
+      "source_id": "S_BR_JD_INDEX",
+      "url": "https://www.jd.com/book/670eb56e34d8a3eb10a.html",
+      "type": "marketplace_category_index_only",
+      "model_scope": "Brother HL-L1238W title lead",
+      "region_scope": "CN; Henan not selected",
+      "short_excerpt": "京东兄弟自营类别搜索结果含HL-L1238W标题",
+      "limitations": "Generic category not exact product detail; direct read cache miss, no JD item id, seller/configuration, county inventory or price.",
+      "published_at": "unknown",
+      "captured_at_utc": "not_precisely_recorded_in_browser",
+      "excerpt_sha256": "40565ce5ddfc2f74e6421fc2edaa0e88e2a79c8e10733b2c0e4f447ca029023c",
+      "full_content_sha256": null,
+      "content_hash_explanation": "Not available: retrieved snippets/parsed page text were not transferred as raw bytes; excerpt SHA only."
+    }
+  ]
+}

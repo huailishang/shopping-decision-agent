@@ -1,0 +1,15 @@
+{
+  "state": "CONTRACT_FROZEN",
+  "role": "Executor",
+  "frozen_manifest_sha256": "aadb26287cb2d30a42b8766690db3c3d3458962388ed5b53f85f9219408681ae",
+  "validation_plan_sha256": "258717869580589fdbc172565e59de0aeb30dc0276948667ea71fa63d857ef6e",
+  "protected_count": 338,
+  "baseline_conditions": {
+    "passed": 6,
+    "total": 16,
+    "expected_exit_code": 1,
+    "purpose": "known failure baseline, not implemented repair"
+  },
+  "historical_parent_effective_hours": "unknown",
+  "implementation_changed_by_evaluator": false
+}

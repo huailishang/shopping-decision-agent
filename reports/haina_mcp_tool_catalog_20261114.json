@@ -1,0 +1,152 @@
+{
+  "observed_at": "2026-11-14T02:52:56.969329+00:00",
+  "operation": "mcp_initialize_and_tools_list_metadata_only",
+  "api_business_tool_calls": 0,
+  "credential_logged": false,
+  "raw_response_saved": false,
+  "initialize_http": 200,
+  "initialize_body_sha256": "6b1f154736803e28c15707001f1edbdb42208315197d8138a5556302081c2a70",
+  "initialize_success": true,
+  "negotiated_protocol": "2025-06-18",
+  "server_name": "值得买MCP-SERVER服务",
+  "initialized_notification_http": 202,
+  "tools_list_http": 200,
+  "tools_list_body_sha256": "c13596d5f370b7344516a8a964ce6bc1ced9e9c826f265da3151017ded880c9b",
+  "tools_count": 10,
+  "tools": [
+    {
+      "name": "image_search",
+      "description_excerpt": "Get Image Search By Pic\n\n图搜商品: 根据图片搜索商品\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "img_url",
+        "is_auto_first_cate_name"
+      ],
+      "input_required": [
+        "img_url",
+        "is_auto_first_cate_name"
+      ]
+    },
+    {
+      "name": "universal_content_search",
+      "description_excerpt": "Get Universal Content Search\n\n内容搜索Pro：执行互联网内容搜索，获取最新内容、网页、图片、新闻等信息\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "query",
+        "time_range",
+        "recall_num",
+        "ranker_advanced",
+        "rewrite",
+        "search_type"
+      ],
+      "input_required": [
+        "query"
+      ]
+    },
+    {
+      "name": "product_search_pro",
+      "description_excerpt": "Get Product Pro Search\n\n商品搜索Pro：执行互联网商品搜索，获取最新商品信息\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "request_from",
+        "question_id",
+        "product_query",
+        "query_process",
+        "size",
+        "mall_id",
+        "brand_name",
+        "category_name",
+        "min_price",
+        "max_price",
+        "sort",
+        "fields"
+      ],
+      "input_required": []
+    },
+    {
+      "name": "content_graph_search",
+      "description_excerpt": "Get Content Graph Search\n\n知识图谱搜索：提供基于知识图谱的3C数码产品信息检索服务，支持精准型号级产品查询\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\",\n  \"requestid\": \"Requestid\"\n}\n```",
+      "input_property_names": [
+        "query",
+        "categories"
+      ],
+      "input_required": []
+    },
+    {
+      "name": "discount_search",
+      "description_excerpt": "Get Discount Search\n\n好价折扣搜索：根据商品查询获取好价折扣商品信息,好价搜索pro\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "request_from",
+        "question_id",
+        "product_query",
+        "query_process",
+        "size",
+        "fields"
+      ],
+      "input_required": [
+        "request_from",
+        "question_id",
+        "product_query"
+      ]
+    },
+    {
+      "name": "content_search",
+      "description_excerpt": "Get Content Search V2\n\n内容搜索：全网多平台内容检索，支持小红书、知乎、微信、今日头条、抖音、B站等平台，可按发布时间与来源筛选，返回标题、正文、互动数据及质量标签\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "query",
+        "question_id",
+        "query_rewrite",
+        "correlate_enhance",
+        "return_size",
+        "start_time",
+        "data_source"
+      ],
+      "input_required": [
+        "query"
+      ]
+    },
+    {
+      "name": "product_basic_search",
+      "description_excerpt": "Get Product Basic Search\n\n商品基础信息查询：按商品实体词（可精确到型号）查询商品的名称、品牌、描述、卖点和图片，汽车类额外返回车系；覆盖数码、家电、美妆、母婴、汽车等领域，最多返回5条，按相关度排序\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "query",
+        "categories"
+      ],
+      "input_required": [
+        "query"
+      ]
+    },
+    {
+      "name": "product_parameter_search",
+      "description_excerpt": "Get Product Parameter Search\n\n商品核心参数查询：按商品实体词（可精确到型号）查询商品的核心参数，如屏幕、处理器、续航、车辆级别、动力参数等，每个参数给出参数名、参数值、完整表述和置信度；覆盖数码、家电、美妆、母婴、汽车等领域，最多返回5条，按相关度排序\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "query",
+        "categories"
+      ],
+      "input_required": [
+        "query"
+      ]
+    },
+    {
+      "name": "product_comment_search",
+      "description_excerpt": "Get Product Comment Search\n\n商品评价查询：按商品实体词（可精确到型号）查询商品的用户评价，按维度汇总优点和缺点，每个观点附原话摘录和出处文章链接；覆盖数码、家电、美妆、母婴、汽车等领域，最多返回5条商品，按相关度排序\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "query",
+        "categories",
+        "comment_limit"
+      ],
+      "input_required": [
+        "query"
+      ]
+    },
+    {
+      "name": "product_sku_search",
+      "description_excerpt": "Get Product Sku Search\n\n商品SKU查询：按商品实体词（可精确到型号）查询商品的SKU归一结果，返回各规格组合（如颜色、存储容量）及京东、天猫等电商的在售商品（标题、链接、图片、商城、店铺）；SKU归一无结果时用商品搜索兜底返回在售商品；最多返回5条商品，按相关度排序\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json\n\n**Example Response:**\n```json\n{\n  \"error_code\": 1,\n  \"error_msg\": \"Error Msg\"\n}\n```",
+      "input_property_names": [
+        "query",
+        "categories"
+      ],
+      "input_required": [
+        "query"
+      ]
+    }
+  ],
+  "elapsed_seconds": 1.155
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "request_id": "C04",
+  "category": "printer",
+  "as_of": "2026-11-18",
+  "region": "CN",
+  "input_basis": "project_owner_proxy",
+  "requirements": [
+    {
+      "id": "wechat",
+      "dimension": "wechat_reuse",
+      "op": "eq",
+      "value": true,
+      "unit": "boolean",
+      "importance": "hard",
+      "description": "必须从微信发起打印，具体方式与隔次复用未证"
+    },
+    {
+      "id": "budget",
+      "dimension": "live_price",
+      "op": "lte",
+      "value": 1000,
+      "unit": "CNY",
+      "importance": "hard",
+      "description": "预算上限1000元，收货地和预算口径未确认"
+    },
+    {
+      "id": "setup",
+      "dimension": "setup_documented",
+      "op": "eq",
+      "value": true,
+      "unit": "boolean",
+      "importance": "soft",
+      "description": "首次App或扫码设置可接受，优先解释操作条件"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "HL-L1238W",
+      "name": "Brother HL-L1238W"
+    },
+    {
+      "id": "M232dw",
+      "name": "HP M232dw"
+    }
+  ],
+  "sources": [],
+  "facts": [],
+  "untrusted_notes": [],
+  "limitations": [
+    "只允许文档层有限研究，不支持当前服务、实机成功、现价或购买授权",
+    "实际使用者反馈0；微信小程序限定、转App接受度、禁止重绑仍未知"
+  ]
+}

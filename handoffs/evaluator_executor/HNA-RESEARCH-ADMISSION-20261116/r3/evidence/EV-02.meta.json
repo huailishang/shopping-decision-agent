@@ -1,0 +1,21 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-02",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/test_checker.py"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/test_checker.py",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-17T08:36:25.017680+00:00",
+  "finished_at_utc": "2026-11-17T08:36:28.180809+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-02.stdout.log",
+  "stderr_path": "EV-02.stderr.log",
+  "stdout_bytes": 0,
+  "stderr_bytes": 1307,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "0aa086cacb3ca25ce93187f696a33d231053146ca4116868a8981447b7fe174b"
+}

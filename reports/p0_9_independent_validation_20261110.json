@@ -1,0 +1,30 @@
+{
+  "date_local": "2026-11-10",
+  "timezone": "Asia/Shanghai",
+  "role": "independent_reviewer",
+  "python_version": "3.12.3",
+  "full_suite_runs": [
+    {"environment": "default_windows", "total": 310, "errors": 1, "elapsed_seconds": 17.028, "result": "failed", "test": "test_haina_ingest.HainaIngestTests.test_normal_text_cli_displays_source_leads_without_claiming_comparison", "reason": "UTF8 decoder reading local-codepage child output"},
+    {"environment": "PYTHONIOENCODING=utf-8_only", "total": 310, "errors": 2, "elapsed_seconds": 12.820, "result": "failed", "tests": ["test_jd_union_official.JDUnionOfficialTests.test_cli_real_subprocess_offline", "test_taobao_material.TaobaoMaterialTest.test_offline_cli_real_process"], "reason": "implicit_GBK_decoder_reading_UTF8_child_output"},
+    {"environment": "PYTHONUTF8=1_and_PYTHONIOENCODING=utf-8", "total": 310, "errors": 0, "elapsed_seconds": 12.269, "result": "passed"}
+  ],
+  "h05": {"passed": 8, "total": 8, "record": "reports/p0_9_independent_h05_20261110.json"},
+  "old_diagnostics": {"original_four_passed": 4, "exposed_variants_including_positive_passed": 5, "archive_outputs_matched": 3, "stale_detail_downgraded": true, "record": "reports/p0_9_independent_old_probes_20261110.json"},
+  "new_html_diagnostics": {"total": 14, "expectations_met": 3, "false_positives": 9, "false_negatives": 2, "not_a_population_error_rate": true, "record": "reports/p0_9_independent_review_20261110.json"},
+  "new_manifest_faults_rejected": 3,
+  "nested_report_hint_reaches_normal_cli": true,
+  "outer_purchase_or_transaction_permissions_elevated": false,
+  "java": {"release_target": 17, "compile": "pass", "P04": "6/6", "H10": "6/6", "gui_manual": "not_run"},
+  "git_diff_check": "pass",
+  "credential_check": {"current_key_matches_in_unignored_files": 0, "ignored": true, "tracked": false, "full_git_history_scanned": false},
+  "smoke_api_call_repeated": false,
+  "new_haina_business_calls": 0,
+  "raw_smoke_response_hash_recomputed": false,
+  "business_code_repaired": false,
+  "real_evidence_approval_changed": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "overall_acceptance": "not_passed",
+  "git_committed": false,
+  "git_pushed": false
+}

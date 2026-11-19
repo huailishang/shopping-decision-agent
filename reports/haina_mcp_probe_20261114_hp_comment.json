@@ -1,0 +1,154 @@
+{
+  "operation": "mcp_tool_call_once",
+  "case": "hp_comment",
+  "tool": "product_comment_search",
+  "input_query": "惠普 M232dw",
+  "observed_at": "2026-11-14T02:58:53.363483+00:00",
+  "initialization_http": 200,
+  "initialization_success": true,
+  "raw_response_saved": false,
+  "credential_logged": false,
+  "full_product_url_saved": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "attempted_business_tool_calls": 1,
+  "automatic_retries": 0,
+  "initialized_notification_http": 202,
+  "rpc_http": 200,
+  "response_len": 5441,
+  "response_sha256": "07eed7da8b9ced2e4b4f080281130c1b70c501c0070d812c7231f64fe8d9ba29",
+  "rpc_is_error": false,
+  "rpc_error_present": false,
+  "parsed_result_type": "dict",
+  "business_code": 0,
+  "structure": [
+    {
+      "path": "error_code",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "error_msg",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "requestid",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "domain",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data",
+      "type": "list",
+      "length": 1
+    },
+    {
+      "path": "data[].entity_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_comments",
+      "type": "list",
+      "length": 3
+    },
+    {
+      "path": "data[].entity_comments[].entity_name_std",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_comments[].attribute_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_comments[].attribute_value",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_comments[].attribute_description",
+      "type": "list",
+      "length": 6
+    },
+    {
+      "path": "data[].entity_comments[].dimension",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_comments[].count",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].entity_comments[].list_link",
+      "type": "list",
+      "length": 6
+    },
+    {
+      "path": "data[].entity_comments[].list_link[].link",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].entity_comments[].list_link[].title",
+      "type": "str",
+      "length": null
+    }
+  ],
+  "identity_field_occurrences": [],
+  "title_brand_store_excerpts": [
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw家用激光打印机评测：自动双面无线一体机怎么样？用后分享推荐好吗？"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw打印机优缺点介绍，家用激光自动双面无线一体机实不实用，学生高效低成本值得入手吗"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "HP M232dw 家用激光打印机怎么样?自动双面无线一体机评测,学生家用高速高效推荐!"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw激光打印机优缺点分析，家用自动双面无线一体机实不实用，学生党低成本小体积值不值得买"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw打印机优缺点介绍，家用激光自动双面无线一体机实不实用，学生高效低成本值得入手吗"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "三款热销打印机横评：惠普M232DW与竞品实测对比"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw激光打印机评测：自动双面无线一体机，学生家用低成本小体积到底怎么样？用后分享值得推荐吗？"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw激光打印机优缺点分析，家用自动双面无线一体机实不实用，学生党低成本小体积值不值得买"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "惠普M232dw家用激光打印机评测：自动双面无线一体机怎么样？用后分享推荐，低成本高速高效好吗？"
+    }
+  ],
+  "sku_entities": [],
+  "business_container_keys": [
+    "error_code",
+    "error_msg",
+    "requestid",
+    "domain",
+    "data"
+  ],
+  "elapsed_seconds": 1.406
+}

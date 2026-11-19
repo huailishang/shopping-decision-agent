@@ -1,0 +1,350 @@
+{
+  "operation": "mcp_tool_call_once",
+  "case": "brother_alt_sku",
+  "tool": "product_sku_search",
+  "input_query": "兄弟 HL-B2158W",
+  "observed_at": "2026-11-14T02:59:16.276282+00:00",
+  "initialization_http": 200,
+  "initialization_success": true,
+  "raw_response_saved": false,
+  "credential_logged": false,
+  "full_product_url_saved": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "attempted_business_tool_calls": 1,
+  "automatic_retries": 0,
+  "initialized_notification_http": 202,
+  "rpc_http": 200,
+  "response_len": 6565,
+  "response_sha256": "ec806e5b6232e3c1bd33fac465051fbe3ce64ecd0c2dff9619479bf6a3ede18d",
+  "rpc_is_error": false,
+  "rpc_error_present": false,
+  "parsed_result_type": "dict",
+  "business_code": 0,
+  "structure": [
+    {
+      "path": "error_code",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "error_msg",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "requestid",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "domain",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data",
+      "type": "list",
+      "length": 1
+    },
+    {
+      "path": "data[].entity_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result",
+      "type": "dict",
+      "length": 4
+    },
+    {
+      "path": "data[].sku_result.spu_id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.spu_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_count",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list",
+      "type": "list",
+      "length": 3
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_axes",
+      "type": "dict",
+      "length": 0
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products_count",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products",
+      "type": "list",
+      "length": 1
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].index",
+      "type": "int",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].id",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].url",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].title",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].image_url",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].mall_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].shop_name",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].shop_type",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].sku_prop",
+      "type": "NoneType",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].union_spec",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].spec_detail",
+      "type": "NoneType",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].good_review_rate",
+      "type": "str",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].month_sale",
+      "type": "NoneType",
+      "length": null
+    },
+    {
+      "path": "data[].sku_result.sku_list[].sku_products[].final_price",
+      "type": "str",
+      "length": null
+    }
+  ],
+  "identity_field_occurrences": [
+    {
+      "field": "data[].sku_result.spu_id",
+      "kind": "str",
+      "len": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "field": "data[].sku_result.spu_name",
+      "kind": "str",
+      "len": 16,
+      "sha256": "3056b44f9dd0a5fc86382dc27adddf364ccfaece73af18b36356b3b51e2c3880"
+    },
+    {
+      "field": "data[].sku_result.sku_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_id",
+      "kind": "str",
+      "len": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_id",
+      "kind": "str",
+      "len": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_id",
+      "kind": "str",
+      "len": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "field": "data[].sku_result.sku_list[].sku_products_count",
+      "kind": "int",
+      "len": 1,
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    }
+  ],
+  "title_brand_store_excerpts": [
+    {
+      "field": "title",
+      "value_excerpt": "兄弟（BROTHER）激光打印机 HL-B2158W 1台/台"
+    },
+    {
+      "field": "mall_name",
+      "value_excerpt": "京东"
+    },
+    {
+      "field": "shop_name",
+      "value_excerpt": "智能办公生态京东自营专区"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "兄弟HL-2560DN 2260D 2158W 2595/2188DW黑白激光打印机 小型单打印 学生文档企业办公家用商用打印机  HL-B2158W（每分钟/34页 远程打印）"
+    },
+    {
+      "field": "mall_name",
+      "value_excerpt": "京东"
+    },
+    {
+      "field": "shop_name",
+      "value_excerpt": "兄弟力盛时代专卖店"
+    },
+    {
+      "field": "title",
+      "value_excerpt": "兄弟（brother）HL-B2158W黑白激光打印机 手机远程无线WiFi商用家用办公 B2158W一年保修 标配【含原装粉盒/硒鼓】"
+    },
+    {
+      "field": "mall_name",
+      "value_excerpt": "京东"
+    },
+    {
+      "field": "shop_name",
+      "value_excerpt": "打印机智选小店"
+    }
+  ],
+  "sku_entities": [
+    {
+      "entity_name": "兄弟 HL-B2158W 打印机",
+      "spu_id_present": false,
+      "spu_name_excerpt": "兄弟 HL-B2158W 打印机",
+      "sku_count_reported": 3,
+      "sku_list_length": 3,
+      "skus": [
+        {
+          "sku_id_present": false,
+          "sku_id_length": 0,
+          "axes_keys": [],
+          "sku_products_count_reported": 1,
+          "sku_products_length": 1,
+          "products": [
+            {
+              "item_id_field_present": false,
+              "item_id_length": 0,
+              "item_id_all_digits": false,
+              "item_id_sha256": null,
+              "title_excerpt": "兄弟（BROTHER）激光打印机 HL-B2158W 1台/台",
+              "mall_name": "京东",
+              "shop_name": "智能办公生态京东自营专区",
+              "shop_type": "自营",
+              "sku_prop_excerpt": "",
+              "url_host": "union-click.jd.com",
+              "price_provider_unverified": "1950"
+            }
+          ]
+        },
+        {
+          "sku_id_present": false,
+          "sku_id_length": 0,
+          "axes_keys": [],
+          "sku_products_count_reported": 1,
+          "sku_products_length": 1,
+          "products": [
+            {
+              "item_id_field_present": false,
+              "item_id_length": 0,
+              "item_id_all_digits": false,
+              "item_id_sha256": null,
+              "title_excerpt": "兄弟HL-2560DN 2260D 2158W 2595/2188DW黑白激光打印机 小型单打印 学生文档企业办公家用商用打印机  HL-B2158W（每分钟/34页 远程打印）",
+              "mall_name": "京东",
+              "shop_name": "兄弟力盛时代专卖店",
+              "shop_type": "其他第三方",
+              "sku_prop_excerpt": "",
+              "url_host": "union-click.jd.com",
+              "price_provider_unverified": "1580"
+            }
+          ]
+        },
+        {
+          "sku_id_present": false,
+          "sku_id_length": 0,
+          "axes_keys": [],
+          "sku_products_count_reported": 1,
+          "sku_products_length": 1,
+          "products": [
+            {
+              "item_id_field_present": false,
+              "item_id_length": 0,
+              "item_id_all_digits": false,
+              "item_id_sha256": null,
+              "title_excerpt": "兄弟（brother）HL-B2158W黑白激光打印机 手机远程无线WiFi商用家用办公 B2158W一年保修 标配【含原装粉盒/硒鼓】",
+              "mall_name": "京东",
+              "shop_name": "打印机智选小店",
+              "shop_type": "其他第三方",
+              "sku_prop_excerpt": "",
+              "url_host": "union-click.jd.com",
+              "price_provider_unverified": "1349"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "business_container_keys": [
+    "error_code",
+    "error_msg",
+    "requestid",
+    "domain",
+    "data"
+  ],
+  "elapsed_seconds": 2.524
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "shopping_chat_entry_executor_v1",
+  "date": "2026-11-16",
+  "role": "executor",
+  "contract": "handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md",
+  "report": "reports/对话式购物需求主入口_执行者交付报告_20261116.md",
+  "original_case_report": "reports/真实打印机原案条件与最小缺件核对_续办执行记录_20261116.md",
+  "files_sha256": {
+    "shopping_decision/chat_bridge.py": "797012b35dbef4c43c9be09ca4da7b60d268d4cafe2f1c659f7bf612aedbc6ef",
+    "shopping_decision/dialogue_flow.py": "0863b9032a5f6d3c1e7ff0131eca53cb43ab213faf8029fecb50a34a55a7215e",
+    "desktop/ShoppingDecisionDesktop.java": "51b9fa5c3e83aac9e23fbd336552beb9d489f105008116ed3107f0366db19819",
+    "desktop/ChatBridgeRegression.java": "4b43ba887681928cd8e708c5c24bb4557ddeaa23b90fb0c997402e15716b9276",
+    "desktop/ChatSwingRegression.java": "c43937364b103188a95f71b2c0e6187be4be58aa2b0e70f3860c64edc74cd1f9",
+    "tests/test_chat_bridge.py": "442c8a1c77f6e0eca4628f6b4e1e06f601bff45ec6c3289eb048df671b40ca5c",
+    "reports/对话式购物需求主入口_执行者交付报告_20261116.md": "5430e1f8d299425775aec13d3939050156f82e49ba5421cc14bfc378a56ee2d1"
+  },
+  "validation": {
+    "python_targeted": {
+      "total": 25,
+      "passed": 25
+    },
+    "python_full": {
+      "total": 434,
+      "passed": 434,
+      "run_date": "2026-11-16",
+      "independent": false
+    },
+    "java_release17_compile": "pass",
+    "new_java_bridge": {
+      "total": 6,
+      "passed": 6
+    },
+    "legacy_java_bridge_h10": {
+      "total": 6,
+      "passed": 6
+    },
+    "swing_programmatic": {
+      "observed_once": "pass",
+      "later_replay": "SKIP_X11_not_reachable",
+      "independent_manual_gui": false,
+      "new_gui_save_readback": false
+    },
+    "h05": {
+      "date": "2026-11-16",
+      "total": 8,
+      "passed": 8,
+      "diagnostic_not_independent": true
+    },
+    "diff_check_tracked_code": "pass"
+  },
+  "business": {
+    "source_material_added": 0,
+    "user_answers_added": 0,
+    "real_original_case_delta": "unknown",
+    "official_36_scenarios_executed": 0,
+    "h1": "BLOCKED",
+    "h2_real_identity": "0/2",
+    "h2_legacy_cases": "0/20",
+    "h3_live_quote_count": 0,
+    "purchase_approval": false,
+    "transactions_enabled": false,
+    "overall": "NOT_PASS"
+  },
+  "actions": {
+    "haina_api": 0,
+    "marketplace_api": 0,
+    "credentials_read": 0,
+    "external_queries": 0,
+    "accounts_or_purchase": 0,
+    "git_commit": false,
+    "git_push": false
+  },
+  "remaining": [
+    "independent_new_swing_manual_navigation_and_save_UTF8_readback",
+    "user_original_case_answers_wechat_setup_region",
+    "legal_current_product_identity_and_region_price_if_buy_decision",
+    "independent_conceptual_value_assessment_if_eligible"
+  ]
+}

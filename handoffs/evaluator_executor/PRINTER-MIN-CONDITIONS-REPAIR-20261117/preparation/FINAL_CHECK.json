@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-17T12:58:55.467920+00:00",
+  "submitted_snapshot_unchanged": 226,
+  "submitted_snapshot_differences": [],
+  "repair_frozen_count": 338,
+  "repair_frozen_differences": [],
+  "repair_plan_hash_matches": true,
+  "product_changed_by_evaluator": false,
+  "workflow_validation": "OK",
+  "parent_l3": "PASS",
+  "parent_task_verdict": "REJECTED",
+  "next_state": "CONTRACT_FROZEN",
+  "next_role": "Executor"
+}

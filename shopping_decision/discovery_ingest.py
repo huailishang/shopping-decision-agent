@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 import re
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 
 _JD_ID = re.compile(r"^[0-9]{5,20}$")
@@ -65,6 +65,38 @@ def parse_jd_item_url(value: str) -> dict | None:
                 "canonical_url": f"https://item.jd.com/{sku}.html"}
     except ValueError:
         return None
+
+
+def parse_taobao_item_url(value: str) -> dict | None:
+    """用户主动提供的淘宝/天猫完整商品链接。拒绝短链/跳转，URL不证明商品事实。"""
+    if not isinstance(value, str) or not value or len(value) > 2048:
+        return None
+    try:
+        parsed = urlsplit(value)
+        if (parsed.scheme != "https" or parsed.hostname not in ("item.taobao.com", "detail.tmall.com")
+                or parsed.username is not None or parsed.password is not None
+                or parsed.port is not None or parsed.path != "/item.htm"):
+            return None
+        ids = parse_qs(parsed.query, keep_blank_values=True).get("id", [])
+        if len(ids) != 1 or _JD_ID.fullmatch(ids[0]) is None:
+            return None
+        ident = ids[0]
+        return {"platform": "TAOBAO_PUBLIC_UNVERIFIED", "platform_item_id": ident,
+                "canonical_url": f"https://{parsed.hostname}/item.htm?id={ident}"}
+    except ValueError:
+        return None
+
+
+def ingest_user_taobao_item_link(url: str, *, observed_at: str,
+                                 now: datetime | None = None) -> dict:
+    current = now or datetime.now(timezone.utc)
+    parsed = parse_taobao_item_url(url)
+    moment = _valid_time(observed_at, current) if current.tzinfo else None
+    if parsed is None or moment is None:
+        return {"status": "invalid_input", "purchasable": False}
+    return {**parsed, "source_id": "user_supplied_link", "observed_at": moment,
+            "status": "discovered_unverified", "identity_verified": False,
+            "quote_verified": False, "purchasable": False, "transactions_enabled": False}
 
 
 def _valid_time(value: object, now: datetime) -> str | None:

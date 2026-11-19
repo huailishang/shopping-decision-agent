@@ -1,0 +1,211 @@
+{
+  "role": "independent_reviewer",
+  "date": "2026-11-09",
+  "operation": "independent_official_page_refetch",
+  "rows": [
+    {
+      "model_id": "catalog",
+      "url": "https://www.brother.cn/printer/prt",
+      "observed_at": "2026-11-09T13:32:46.397140+00:00",
+      "historical_sha256": "85771ec26496d5654d5cc62b0f6e64c134f74575de78aa9bab04263f6e8da63c",
+      "http_status": 200,
+      "response_sha256": "3898ac0aecdc3b7f97331762403eae0d19b07bc32935d464229944c20a0e4b09",
+      "response_bytes": 144821,
+      "same_as_executor_hash": false,
+      "raw_path": "data/raw/assessment_20261109/3898ac0aecdc3b7f97331762403eae0d19b07bc32935d464229944c20a0e4b09.html",
+      "found_model_ids": [
+        "HL-10W",
+        "HL-L1808W",
+        "HL-L1238W",
+        "HL-L1228",
+        "HL-B2188DW",
+        "HL-B2158W",
+        "HL-L6418DW",
+        "HL-L5228DW",
+        "HL-L5218DN"
+      ]
+    },
+    {
+      "model_id": "HL-10W",
+      "url": "https://www.brother.cn/printer/prt/hl-10w",
+      "observed_at": "2026-11-09T13:32:46.397140+00:00",
+      "historical_sha256": "4843c3fff5e47fe26081b4ce50602fcfb621ccf5bfa59037b37c220c5fced98e",
+      "http_status": 200,
+      "response_sha256": "7d07e05951334e77b2c2caaa130748d7281cf02aef1c440a1ca6ae17750ae63c",
+      "response_bytes": 72433,
+      "same_as_executor_hash": false,
+      "raw_path": "data/raw/assessment_20261109/7d07e05951334e77b2c2caaa130748d7281cf02aef1c440a1ca6ae17750ae63c.html",
+      "parsed": {
+        "model_id": "HL-10W",
+        "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+        "observed_at": "2026-11-09T13:32:46.397140+00:00",
+        "response_sha256": "7d07e05951334e77b2c2caaa130748d7281cf02aef1c440a1ca6ae17750ae63c",
+        "response_bytes": 72433,
+        "fact_origin": "manufacturer_public_detail",
+        "facts": {
+          "monochrome_print": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：仅证明黑白打印类别；原文标识：黑白激光打印机"
+          },
+          "color_print": {
+            "value": false,
+            "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+            "note": "厂商标注黑白激光打印机；不支持彩印的类别级判断"
+          },
+          "wireless": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：厂商支持无线连接的主张，未验证用户网络；原文标识：支持无线网络连接"
+          },
+          "wechat_miniprogram": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：官网声称微信小程序打印，未做设备绑定实验；原文标识：微信小程序直连，支持远程打印"
+          },
+          "pay_per_page_consumables": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：打印页数收费模式，不能假定耗材免费等于无长期成本；原文标识：按页付费/购买打印页数"
+          }
+        },
+        "consumables": [],
+        "billing_model": "buy_print_pages_to_claim_consumables",
+        "limitations": [
+          "厂商文字主张不等于第三方耐用性验证",
+          "未证实的功能保持未知；未获得零售SKU、地区当前价格、实际库存",
+          "只有绑定型号的详情页证据，不证明该机符合购买预算"
+        ]
+      }
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+      "observed_at": "2026-11-09T13:32:46.397140+00:00",
+      "historical_sha256": "23c1d6d1611620d0d2419e0307bc5314c9d57f869140f0cdd4d886d7ac746c73",
+      "http_status": 200,
+      "response_sha256": "e151faa6beda896194981677efaf6c0adadea00e6afcfd87e4a033351ec49939",
+      "response_bytes": 88938,
+      "same_as_executor_hash": false,
+      "raw_path": "data/raw/assessment_20261109/e151faa6beda896194981677efaf6c0adadea00e6afcfd87e4a033351ec49939.html",
+      "parsed": {
+        "model_id": "HL-B2188DW",
+        "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+        "observed_at": "2026-11-09T13:32:46.397140+00:00",
+        "response_sha256": "e151faa6beda896194981677efaf6c0adadea00e6afcfd87e4a033351ec49939",
+        "response_bytes": 88938,
+        "fact_origin": "manufacturer_public_detail",
+        "facts": {
+          "monochrome_print": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：仅证明黑白打印类别；原文标识：黑白激光打印机"
+          },
+          "color_print": {
+            "value": false,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "厂商标注黑白激光打印机；不支持彩印的类别级判断"
+          },
+          "wireless": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：厂商支持无线连接的主张，未验证用户网络；原文标识：无线/有线网络"
+          },
+          "wechat_miniprogram": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：官网声称微信小程序打印，未做设备绑定实验；原文标识：通过微信小程序可支持远程打印"
+          },
+          "auto_duplex": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：厂商自动双面规格；原文标识：标配A4自动双面打印"
+          }
+        },
+        "consumables": [
+          {
+            "model": "TNB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          },
+          {
+            "model": "DRB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          }
+        ],
+        "billing_model": "unknown",
+        "limitations": [
+          "厂商文字主张不等于第三方耐用性验证",
+          "未证实的功能保持未知；未获得零售SKU、地区当前价格、实际库存",
+          "只有绑定型号的详情页证据，不证明该机符合购买预算"
+        ]
+      }
+    },
+    {
+      "model_id": "HL-B2158W",
+      "url": "https://www.brother.cn/printer/prt/hl-b2158w",
+      "observed_at": "2026-11-09T13:32:46.397140+00:00",
+      "historical_sha256": "0adda023c6742d87ad2c32278c62ce4d12715330627951b84ba36d6070d0a62b",
+      "http_status": 200,
+      "response_sha256": "e0448c2eae1c765e744f17bfc329d08d8cd456c19f00c31c3b4609fec2b085df",
+      "response_bytes": 85174,
+      "same_as_executor_hash": false,
+      "raw_path": "data/raw/assessment_20261109/e0448c2eae1c765e744f17bfc329d08d8cd456c19f00c31c3b4609fec2b085df.html",
+      "parsed": {
+        "model_id": "HL-B2158W",
+        "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+        "observed_at": "2026-11-09T13:32:46.397140+00:00",
+        "response_sha256": "e0448c2eae1c765e744f17bfc329d08d8cd456c19f00c31c3b4609fec2b085df",
+        "response_bytes": 85174,
+        "fact_origin": "manufacturer_public_detail",
+        "facts": {
+          "monochrome_print": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：仅证明黑白打印类别；原文标识：黑白激光打印机"
+          },
+          "color_print": {
+            "value": false,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "厂商标注黑白激光打印机；不支持彩印的类别级判断"
+          },
+          "wireless": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：厂商支持无线连接的主张，未验证用户网络；原文标识：无线/有线网络"
+          },
+          "wechat_miniprogram": {
+            "value": true,
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "厂商产品页文字主张（非实机/第三方验证）：官网声称微信小程序打印，未做设备绑定实验；原文标识：通过微信小程序可支持远程打印"
+          }
+        },
+        "consumables": [
+          {
+            "model": "TNB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          },
+          {
+            "model": "DRB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          }
+        ],
+        "billing_model": "unknown",
+        "limitations": [
+          "厂商文字主张不等于第三方耐用性验证",
+          "未证实的功能保持未知；未获得零售SKU、地区当前价格、实际库存",
+          "只有绑定型号的详情页证据，不证明该机符合购买预算"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Current independent refetch; historical bytes are confirmed only if SHA256 matches.",
+    "Manufacturer text is not a device test or an independent durability review."
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

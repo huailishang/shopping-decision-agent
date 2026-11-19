@@ -1,0 +1,39 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "stage": "executor_prefreeze_preparation",
+  "registered_on": "2026-11-16",
+  "gaps": [
+    {
+      "id": "G1",
+      "priority": 1,
+      "question": "首次设置后复用微信打印，官方流程还要求什么连接、在线或再次绑定条件？",
+      "changes_if_resolved": "把泛泛的实机待核细化成具体复用步骤及失败检查；若流程与原案不符可暂缓相应方案。",
+      "evidence_type": "manufacturer_model_specific_workflow",
+      "owner": "官方支持资料；实机部分由自愿使用者确认",
+      "existing": "两款均有微信打印及首次设置依据，不能当新发现。河南和接受首次设置已答。",
+      "stop": "只重复首次安装说明、遇受限入口或新资料已足够时停止。"
+    },
+    {
+      "id": "G2",
+      "priority": 2,
+      "question": "HL-L1238W的双面/扫描能力能否由准确型号官方资料明确核定？M232dw与dwc如何避免误并？",
+      "changes_if_resolved": "明确有扫描/自动双面需求时应核哪款；未知不能由规格遗漏推成不支持。型号差异不等于平台SKU已核。",
+      "evidence_type": "manufacturer_exact_model_manual_and_identity",
+      "owner": "厂家官方手册；实际功能需求由使用者决定",
+      "existing": "HP M232dw扫描和自动双面已知；Brother对应项目仍未知；dw/dwc已知不可互换。",
+      "stop": "取得准确型号明确事实即可；无新增事实不继续搜索或造结论。"
+    },
+    {
+      "id": "G3",
+      "priority": 3,
+      "question": "海纳最小本机解析、仅本人展示、必要摘录留证的适用用途依据能否公开核对？",
+      "changes_if_resolved": "决定海纳实料分支是否可交评估者准入；厂家分支不受其整体阻断。",
+      "evidence_type": "supplier_official_terms_and_holder_provided_raw_excerpt",
+      "owner": "供应商/有权材料持有者；评估者批准",
+      "existing": "旧18份业务摘要已有线索但不等于用途许可或可查完整原值，本轮不重盘。",
+      "stop": "公开依据不含所需用途、需登录或缺原值即停海纳分支；不调用业务或元数据接口。"
+    }
+  ],
+  "user_questions_now": [],
+  "reason_no_questions": "先查现有官方材料，尚无需要重复询问本人才能开展的只读准备。"
+}

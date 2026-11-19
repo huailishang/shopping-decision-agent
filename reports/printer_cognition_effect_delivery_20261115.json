@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "status": "executor_local_limited_delivery_pending_independent_evaluation",
+  "generated_at_utc": "2026-11-15T14:28:22.428588+00:00",
+  "git_start_head_observed": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+  "task_path": "handoffs/真实打印机认知决策效果验证_下一长执行包_20261115.md",
+  "report_path": "reports/真实打印机认知效果开发对照_执行报告_20261115.md",
+  "handoff_path": "handoffs/真实打印机认知决策效果验证_执行者交付_20261115.md",
+  "scope": {
+    "existing_public_manufacturer_sources_reused": true,
+    "new_authorized_haina_raw_sources": 0,
+    "new_independent_durability_sources": 0,
+    "new_source_count": 0,
+    "underlying_manufacturer_claims_reuse_only": true,
+    "live_platform_identity_verified_models": 0,
+    "old_marketplace_20_cases_verified": 0,
+    "regional_verified_quotes": 0,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "comparison": {
+    "case_count": 6,
+    "paired_hard_eligibility_equal_count": 6,
+    "cases_with_at_least_two_source_backed_contexts": 2,
+    "newly_acquired_source_count": 0,
+    "incremental_decision_effect_proven_count": 0,
+    "original_real_case_count": 1,
+    "development_modified_condition_count": 4,
+    "independent_holdout_tested": false,
+    "independent_holdout_denominator": 0,
+    "task_success_rate_baseline": null,
+    "task_success_rate_cognition": null,
+    "measured_improvement": null,
+    "human_confirmed": false
+  },
+  "validation": {
+    "targeted_tests_pass": 7,
+    "full_unittest_pass": 401,
+    "full_unittest_run_seconds": 54.913,
+    "java_compilation": "PASS",
+    "java_h10": "6/6 PASS",
+    "java_p04": "6/6 PASS",
+    "web_entry_smoke": "PASS",
+    "cli_entry_smoke": "PASS",
+    "java_python_bridge_smoke": "PASS",
+    "native_windows_gui_this_run": "NOT_EXECUTED",
+    "independent_36_holdout": "NOT_EXECUTED",
+    "real_user_feedback": "NOT_COLLECTED",
+    "final_code_web_cli_bridge_revalidated": "PASS_WITH_MATCHING_CODE_SHA256",
+    "final_cli_log": "reports/printer_cognition_cli_20261115_run02.json",
+    "final_bridge_log": "reports/printer_cognition_bridge_20261115_run02.txt"
+  },
+  "resources": {
+    "new_haina_business_calls": 0,
+    "new_haina_metadata_calls": 0,
+    "new_haina_app_http_calls": 0,
+    "api_key_reads": 0,
+    "third_party_login": 0,
+    "payments_or_orders": 0,
+    "git_commits": 0,
+    "git_pushes": 0,
+    "new_public_source_discovery": 0,
+    "public_source_reference_rechecks": "prior index reused; exact web tool cost not measured",
+    "effective_person_hours": "unmeasured",
+    "cost": "unmeasured"
+  },
+  "gates": {
+    "Q0": "previously_independently_accepted_in_scope",
+    "Q1": "LIMITED_SOURCE_REUSE_TRUE_RAW_INPUT_NOT_CLOSED",
+    "Q2": "EXECUTOR_ENGINEERING_PASS_L2_ONLY",
+    "Q3": "DEVELOPMENT_CASES_ONLY_NO_THRESHOLD_OR_HOLDOUT",
+    "Q4": "INCREMENTAL_DECISION_EFFECT_NOT_PROVEN",
+    "Q5": "REAL_USER_CONFIRMATION_MISSING",
+    "H1": "BLOCKED_USE_RIGHTS_AND_RAW_FIELDS",
+    "H2": "0/2_PLATFORM_IDENTITIES",
+    "H3": "0_REGIONAL_QUOTES",
+    "overall": "NOT_PASS"
+  },
+  "missing": [
+    {
+      "who": "Haina/provider or licensed material owner",
+      "need": "local parse/display/minimal-audit use-rights evidence plus two separately attributable model exact raw field values with observation time, source anchors and allowed retention"
+    },
+    {
+      "who": "independent model-test and lawful consumables sources",
+      "need": "applicable long-term reliability and genuine consumables price/yield, maintenance and outsourcing costs"
+    },
+    {
+      "who": "original user",
+      "need": "Wechat mandatory-or-preference and App setup acceptance, real device deployment and delivery regions, scan/duplex/idle period, budget scope; no current answers invented"
+    },
+    {
+      "who": "independent evaluator",
+      "need": "freeze program/material hashes and success thresholds before first execution of 36 new unseen cases; independent references and blind review"
+    },
+    {
+      "who": "marketplace-authorized provider plus original user",
+      "need": "exact original sale configuration identifiers, seller/condition/timestamps and current region quote with freight, stock and promotional eligibility for H2/H3"
+    }
+  ],
+  "paths_sha256": {
+    "knowledge/printer_selection_criteria.json": {
+      "sha256": "9f41523c6b24285111750e239728a6b41ae4248c2ce394fadb1022f23a8ac52c",
+      "bytes": 7893
+    },
+    "knowledge/real_printer_case_research_20261113.json": {
+      "sha256": "84df265530bad1c8e8f8b74c9d90020457485c6330f1e2f14bb870457484c529",
+      "bytes": 9356
+    },
+    "knowledge/real_printer_case_comparison_20261115.json": {
+      "sha256": "d1a647cf6e2da98e38772e330797a93aae2ca849a567977d450e1456656ea833",
+      "bytes": 21150
+    },
+    "shopping_decision/printer_effect_probe.py": {
+      "sha256": "3aa8701478787281c37be34552cbe38f8442ae87c6f16069b4661593d5f88cfc",
+      "bytes": 9214
+    },
+    "shopping_decision/real_printer_case.py": {
+      "sha256": "07ec57e637e5a8449e382f77c0543984c8896c3d8adc1d282be62876967c9fd3",
+      "bytes": 29953
+    },
+    "shopping_decision/desktop_bridge.py": {
+      "sha256": "7327f73e275cc349ebcf714d8b7006a0d872e94173feae7d45f35eb2ba81df9f",
+      "bytes": 18759
+    },
+    "scripts/run_printer_effect_development.py": {
+      "sha256": "376fc2f97f1398ca656fe64a04a6585829c6097c5721d8325b5b85c6745569a9",
+      "bytes": 4922
+    },
+    "tests/test_printer_effect_development.py": {
+      "sha256": "008921619ad0e6d9c3f0b9b333174bf39969f8efc0b20ba66b7ca1f9c3743266",
+      "bytes": 5178
+    },
+    "evaluation/printer_cognition_dev_20261115.json": {
+      "sha256": "69ad6b7d57a923602516370933345810f341453dc6f9c2640e84fa380dfd0f38",
+      "bytes": 4070
+    },
+    "reports/printer_cognition_dev_20261115_run01.json": {
+      "sha256": "7e849459ab849162f0d1e0c73109355cb1d85fa086c3f8872875b582ffd06825",
+      "bytes": 24421
+    },
+    "reports/printer_cognition_dev_20261115_run02.json": {
+      "sha256": "1c118070415dfdfc2d344a5c6ab923d66be9ba316ffc2061acb81634cdf7abfb",
+      "bytes": 23225
+    },
+    "reports/printer_cognition_dev_20261115_run03.json": {
+      "sha256": "2cf9b2bf29f025d38af38b3de50ddf310caefc468a834de6067f6698b687f3be",
+      "bytes": 46052
+    },
+    "reports/printer_cognition_targeted_20261115_run03.txt": {
+      "sha256": "75c0b944de79c258be9b365a0b4ff310b0dbfe22c49c64781ee89e4d9e8182fb",
+      "bytes": 1387
+    },
+    "reports/printer_cognition_full_unittest_20261115_run03.txt": {
+      "sha256": "cb706c5e70cf7239716e58e8075a504c5bb927cd965fdebe026749bdf011ae3a",
+      "bytes": 704
+    },
+    "reports/printer_cognition_java_20261115_run01.txt": {
+      "sha256": "f3b90e583404bc000cb6021f6ea966610b33813695791feede43c9a5859cf7c7",
+      "bytes": 555
+    },
+    "reports/printer_cognition_cli_20261115_run01.json": {
+      "sha256": "cbb293b0951ead4ec9b91b3476a37e8fd68dfd2113db7b8f181c8f1a09763ba2",
+      "bytes": 5446
+    },
+    "reports/printer_cognition_bridge_20261115_run01.txt": {
+      "sha256": "71b9e2a90439052d7c85226606840c5a85fb50d627953fb64e84cd97f99b25cd",
+      "bytes": 20687
+    },
+    "reports/真实打印机认知效果开发对照_执行报告_20261115.md": {
+      "sha256": "4389ab7be6d617365b43009224d65f859c3deb0a4a99868e4297b716b8c98c2f",
+      "bytes": 13752
+    },
+    "handoffs/真实打印机认知决策效果验证_执行者交付_20261115.md": {
+      "sha256": "fd4c052e5056a9afd93b3bd6427fb8b377db42ff141475b8ea123d3fa23935e1",
+      "bytes": 2447
+    },
+    "CURRENT.md": {
+      "sha256": "fe1006dd43a36ab5561e114a5e432055210887906fa3a1b59df4301a724cb841",
+      "bytes": 137003
+    },
+    "reports/printer_cognition_bridge_20261115_run02.txt": {
+      "sha256": "cd1e665a47834efc9b2809ac34f65b69665f7fa5da96e1d9694897f1f463d68f",
+      "bytes": 20786
+    },
+    "reports/printer_cognition_cli_20261115_run02.json": {
+      "sha256": "a3075f0973a2380a3a06d1f52479328e6892ea31f221afda003c59ca902f16d8",
+      "bytes": 5519
+    }
+  },
+  "no_evidence_overwrite_policy": "run01 and run02 historical files preserved; run03 final development result"
+}

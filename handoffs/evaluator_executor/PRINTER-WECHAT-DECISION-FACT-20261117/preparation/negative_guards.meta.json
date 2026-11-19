@@ -1,0 +1,14 @@
+{
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "-c",
+    "import sys, unittest; sys.path.insert(0, 'tests'); names=['test_empty_never_invents_source','test_malicious_promotion_not_executed','test_old_price_not_live_quote','test_conflicting_wechat_condition','test_injected_order_and_feedback_not_real']; suite=unittest.defaultTestLoader.loadTestsFromNames(['test_minimal_research_flow.MinimalFlowTest.'+name for name in names]); assert suite.countTestCases()==5; result=unittest.TextTestRunner(verbosity=2).run(suite); sys.exit(0 if result.wasSuccessful() else 1)"
+  ],
+  "started_at_utc": "2026-11-18T01:02:24.470525+00:00",
+  "finished_at_utc": "2026-11-18T01:02:25.077359+00:00",
+  "exit_code": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "1df162c9876bc32843ff45d4b5a13b2479f53a09e3e18ef6c46bf9e44d3f162e"
+}

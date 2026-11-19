@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-16",
+  "role": "independent_reviewer",
+  "diagnostic_not_recommendation_accuracy": true,
+  "records": [
+    {
+      "id": "V01",
+      "expectation": "matched printer context preserves both anchors and read-only state",
+      "passed": true,
+      "actual": {
+        "category": "printer",
+        "models": [
+          "HL-L1238W",
+          "M232dw"
+        ]
+      }
+    },
+    {
+      "id": "V02",
+      "expectation": "reject request category inconsistent with loaded printer material",
+      "passed": false,
+      "actual": {
+        "category": "kettle",
+        "models": [
+          "HL-L1238W",
+          "M232dw"
+        ]
+      }
+    },
+    {
+      "id": "V03",
+      "expectation": "reject inverse mismatch with explicitly neutral injected config",
+      "passed": false,
+      "actual": {
+        "category": "printer",
+        "models": [
+          "SYNTHETIC-NEUTRAL"
+        ]
+      }
+    },
+    {
+      "id": "V04",
+      "expectation": "matched neutral contract works without wechat_setup placeholder",
+      "passed": true,
+      "actual": {
+        "category": "kettle",
+        "eligibility": "model_spec_research_only"
+      }
+    },
+    {
+      "id": "V05",
+      "expectation": "renaming all candidate and source identities preserves relation semantics",
+      "passed": true,
+      "actual": {
+        "models": [
+          "DIAG-HL-L1238W",
+          "DIAG-M232dw"
+        ]
+      }
+    },
+    {
+      "id": "V06",
+      "expectation": "all four reordered/added candidates computed, only three displayed",
+      "passed": true,
+      "actual": {
+        "total": 4,
+        "hidden": [
+          {
+            "model_id": "DIAG-1",
+            "reason": "display_limit_three"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V07",
+      "expectation": "withdrawn fact cannot produce attributed applicable judgment",
+      "passed": true,
+      "actual": {
+        "judgments": [],
+        "unknown": [
+          "LID"
+        ]
+      }
+    },
+    {
+      "id": "V08",
+      "expectation": "expired fact cannot produce applicable judgment",
+      "passed": true,
+      "actual": {
+        "judgments": []
+      }
+    },
+    {
+      "id": "V09",
+      "expectation": "unmapped source rejected",
+      "passed": true,
+      "actual": {
+        "error": "invalid_selection_fact_source"
+      }
+    },
+    {
+      "id": "V10",
+      "expectation": "missing user deployment region remains a user question, not solely missing product evidence",
+      "passed": false,
+      "actual": {
+        "questions": [],
+        "limitations": [
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替",
+          "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+        ],
+        "next_action": "verify_missing_hard_model_evidence"
+      }
+    },
+    {
+      "id": "V11",
+      "expectation": "condition conflict generates a necessary user resolution question",
+      "passed": false,
+      "actual": {
+        "questions": [],
+        "limitations": [
+          "用户确认只需黑白，与原文必须彩色打印冲突，请明确最新条件",
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替",
+          "低频闲置后首张输出、耗材维护与实际成本尚缺独立实测，不据此排除机型"
+        ],
+        "next_action": "resolve_user_condition_conflict",
+        "eligibilities": [
+          "blocked_by_user_condition_conflict",
+          "blocked_by_user_condition_conflict"
+        ]
+      }
+    },
+    {
+      "id": "V12",
+      "expectation": "normal Web and real Python desktop subprocess both preserve the user region question",
+      "passed": false,
+      "actual": {
+        "web_questions": [],
+        "desktop_questions": [],
+        "web_next_action": "verify_missing_hard_model_evidence",
+        "desktop_next_action": "verify_missing_hard_model_evidence",
+        "desktop_protocol_status": "defer"
+      }
+    }
+  ],
+  "total": 12,
+  "passed": 7,
+  "failed_ids": [
+    "V02",
+    "V03",
+    "V10",
+    "V11",
+    "V12"
+  ],
+  "development_replay": [
+    {
+      "case_id": "D01-original",
+      "baseline_matches_delivered": true,
+      "cognition_matches_delivered": true,
+      "baseline_matches_prior_review": true,
+      "cognition_matches_prior_review": true
+    },
+    {
+      "case_id": "D02-miniprogram-outside",
+      "baseline_matches_delivered": true,
+      "cognition_matches_delivered": true,
+      "baseline_matches_prior_review": true,
+      "cognition_matches_prior_review": true
+    },
+    {
+      "case_id": "D03-color-hard",
+      "baseline_matches_delivered": true,
+      "cognition_matches_delivered": true,
+      "baseline_matches_prior_review": true,
+      "cognition_matches_prior_review": true
+    },
+    {
+      "case_id": "D04-scan-hard",
+      "baseline_matches_delivered": true,
+      "cognition_matches_delivered": true,
+      "baseline_matches_prior_review": true,
+      "cognition_matches_prior_review": true
+    },
+    {
+      "case_id": "D05-budget-raised",
+      "baseline_matches_delivered": true,
+      "cognition_matches_delivered": true,
+      "baseline_matches_prior_review": true,
+      "cognition_matches_prior_review": true
+    },
+    {
+      "case_id": "D06-higher-volume",
+      "baseline_matches_delivered": true,
+      "cognition_matches_delivered": true,
+      "baseline_matches_prior_review": true,
+      "cognition_matches_prior_review": true
+    }
+  ],
+  "formal_holdout_run": false
+}

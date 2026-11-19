@@ -1,0 +1,37 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "revision": "r3",
+  "status": "frozen_open_development_action_references",
+  "not_real_world_effect_trials": true,
+  "real_proxy_case_count": 1,
+  "hypothetical_branch_count": 2,
+  "source_scope": "existing_attributed_manufacturer_research_only",
+  "references": [
+    {
+      "case_id": "original_proxy",
+      "question": "后续微信目标硬性程度未答时，程序是否说明不同回答会怎样改变下一动作？",
+      "expected": "保留未知与两款研究锚点，优先说明微信目标的必要澄清，直接交必须/可选两条有据分支；购买核价事项仍保留但不挡全部研究。",
+      "basis": ["evaluation/printer_henan_proxy_sample_20261116.json:explicit_ambiguities", "knowledge/real_printer_case_comparison_20261115.json:R7,R10"],
+      "counter_and_limit": "首次设置旧事实不证明隔日复用；微信偏好不等于硬要求。聊天原来已会问wechat_required，这部分不算本包新收益。"
+    },
+    {
+      "case_id": "hypothetical_wechat_required",
+      "question": "假设微信必须且方式已答，是否停止重问并把下一步落实到后续使用证据？",
+      "expected": "当前路径为核准确型号后续复用条件，说明厂家/自愿设备持有者和所需最小记录，两款未因无证据淘汰，reuse_verified保持false。",
+      "basis": ["knowledge/real_printer_case_comparison_20261115.json:R7,R10", "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/EVALUATOR_MATERIAL_DECISIONS.json:M01"],
+      "counter_and_limit": "这是合成分支，不是原使用者回答或设备实测；短时成功也不能证明长期稳定。"
+    },
+    {
+      "case_id": "hypothetical_wechat_optional",
+      "question": "假设微信只是偏好，是否允许已有事实研究继续，同时保留购买门槛？",
+      "expected": "当前路径允许继续型号研究；未核微信/海纳用途不整体阻断；具体未知只限制对应断言，保留预算口径/收货地/身份/实时报价待核。",
+      "basis": ["handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/PRIORITY_REASSESSMENT_20261117.md", "knowledge/real_printer_case_comparison_20261115.json:R7,R10"],
+      "counter_and_limit": "不能据此断言其他App方式已成功、价格符合预算或任何一款更可靠；假设不能写回本人条件。"
+    }
+  ],
+  "scoring": "逐例独立比较旧新具体行动是否正确/不完整/错误/争议；已有能力不记新增，字段与字数不计收益；五类工程负向不凑效果题。",
+  "formal_36_started": false,
+  "real_user_feedback_collected": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

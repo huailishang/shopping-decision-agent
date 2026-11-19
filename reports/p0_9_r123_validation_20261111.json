@@ -1,0 +1,98 @@
+{
+  "task": "P0.9_R1_R2_R3_followup",
+  "role": "executor",
+  "run_date": "2026-11-11",
+  "project": "shopping-decision-agent",
+  "phase": "local_repairs_ready_for_independent_review",
+  "overall_p0_9_pass": false,
+  "tests": [
+    {
+      "name": "WSL Python full",
+      "command": "python3 -m unittest discover -s tests -q",
+      "total": 315,
+      "passed": 315,
+      "exit_code": 0
+    },
+    {
+      "name": "Windows native Python 3.12.3 full",
+      "command": "/mnt/d/SoftWare/Python/install/python.exe -m unittest discover -s tests -q",
+      "total": 315,
+      "passed": 315,
+      "exit_code": 0,
+      "extra_encoding_environment_required": false
+    },
+    {
+      "name": "new follow-up regression",
+      "command": "python3 -m unittest discover -s tests -p test_p0_9_followup_regression.py -v",
+      "test_methods": 5,
+      "exposed_html_variants": 14,
+      "expected_html_matches": 14,
+      "malicious_report_field_variants": 6,
+      "unhandled_css_rejected": true
+    },
+    {
+      "name": "Java P04",
+      "command": "java -Djava.awt.headless=true -cp .h08-build P04MarketplaceRegression python3",
+      "total": 6,
+      "passed": 6,
+      "exit_code": 0
+    },
+    {
+      "name": "Java H10",
+      "command": "java -Djava.awt.headless=true -cp .h08-build H10JavaRegression python3",
+      "total": 6,
+      "passed": 6,
+      "exit_code": 0
+    },
+    {
+      "name": "H05 negative",
+      "command": "python3 -m shopping_decision.h05_probes --output reports/p0_9_r123_h05_20261111.json",
+      "total": 8,
+      "passed": 8,
+      "failed_ids": [],
+      "exit_code": 0
+    },
+    {
+      "name": "diff check",
+      "command": "git -c core.whitespace=cr-at-eol diff --check",
+      "exit_code": 0
+    }
+  ],
+  "files_changed_this_turn": [
+    "shopping_decision/official_detail_text.py",
+    "shopping_decision/p0_7_official_details.py",
+    "shopping_decision/discovery_pool.py",
+    "shopping_decision/product_compare.py",
+    "shopping_decision/dialogue_flow.py",
+    "tests/test_haina_ingest.py",
+    "tests/test_p0_9_followup_regression.py"
+  ],
+  "funnel": {
+    "existing_haina_summary_rows": 20,
+    "legally_imported_real_rows": 0,
+    "source_rows_pending": 20,
+    "validated_platform_listing_id_and_variant": 0,
+    "independently_verified_merchant_quotes": 0,
+    "approved_purchase_recommendations": 0
+  },
+  "permissions": {
+    "new_haina_api_calls": 0,
+    "paid_calls": 0,
+    "logged_in_platform_sessions": false,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false
+  },
+  "evidence": {
+    "report": "reports/P0_9_R123_续修执行报告_20261111.md",
+    "handoff": "handoffs/P0_9_R123_续修执行者交接_20261111.md",
+    "h05": "reports/p0_9_r123_h05_20261111.json",
+    "independent_pre_fix": "reports/P0_9_独立复核报告_20261110.md"
+  },
+  "awaiting": [
+    "at_least_8_new_independent_adversarial_variants",
+    "independent_review_AC1_to_AC7",
+    "Haina_usage_rights_and_full_original_samples",
+    "2_true_listing_ids_bound_to_selected_variants",
+    "Windows_GUI_manual_validation_separate"
+  ]
+}

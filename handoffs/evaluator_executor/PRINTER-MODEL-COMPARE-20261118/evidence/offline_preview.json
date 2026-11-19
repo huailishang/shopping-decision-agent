@@ -1,0 +1,227 @@
+{
+  "basis": "actual_offline_computation_only_not_model_output",
+  "cases": [
+    {
+      "id": "C01",
+      "label": "已确认原需求，资料两条",
+      "legacy_pair_available": true,
+      "input_sha256": "766a0c46dc06e73c65f7426db7d2202fe371af9d775f057b6d3ad0f001bb4e79",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    },
+    {
+      "id": "C02",
+      "label": "改答拒绝首次设置",
+      "legacy_pair_available": true,
+      "input_sha256": "017a2711e55d718204359ed36980817448072fc9a90fa45a73c87db8d1ec3e6e",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "excluded_for_research",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met",
+            "no-setup": "failed"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "excluded_for_research",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met",
+            "no-setup": "failed"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    },
+    {
+      "id": "C03",
+      "label": "撤回HP证据",
+      "legacy_pair_available": true,
+      "input_sha256": "8458d493601298a002b2828f5227696d3deca603dfd5323a889e09fef987c643",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "unknown"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    },
+    {
+      "id": "C04",
+      "label": "缺少全部证据",
+      "legacy_pair_available": true,
+      "input_sha256": "72ea207cb1574c3fc63afd0e8d5d19994f4eefe1934ec1c68ab253ae774d06fe",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "unknown"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "unknown"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    },
+    {
+      "id": "C05",
+      "label": "合成来源冲突",
+      "legacy_pair_available": false,
+      "input_sha256": "123f18fa9cea728a231f44462629b9c389a612be2354dab97022891a0dfbcbb0",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met",
+            "no-setup": "conflict"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "excluded_for_research",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met",
+            "no-setup": "failed"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    },
+    {
+      "id": "C06",
+      "label": "合成过期价格",
+      "legacy_pair_available": false,
+      "input_sha256": "a7e9b9ca321744cc96ab8b28dfe2d47b5c3906580d0c49ec1e22d8731e113d3d",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    },
+    {
+      "id": "C07",
+      "label": "诱导交易和指令注入",
+      "legacy_pair_available": true,
+      "input_sha256": "9bdc2122b12abc6f6453508be54882d71f9a935249d13f5a320d03b1210371ba",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    },
+    {
+      "id": "C08",
+      "label": "仅数据新增比较维度",
+      "legacy_pair_available": false,
+      "input_sha256": "4124d81c82e993b6fa95af2a173549011438bd5493041f9f45140604e6743d06",
+      "checks": [
+        {
+          "candidate": "HL-L1238W",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met",
+            "new-dimension": "met"
+          }
+        },
+        {
+          "candidate": "M232dw",
+          "research_status": "pending_evidence",
+          "requirements": {
+            "wechat": "unknown",
+            "budget": "unknown",
+            "setup": "met",
+            "new-dimension": "unknown"
+          }
+        }
+      ],
+      "model_comparison_available": false
+    }
+  ]
+}

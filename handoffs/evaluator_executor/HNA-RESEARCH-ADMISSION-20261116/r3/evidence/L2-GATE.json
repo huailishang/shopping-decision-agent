@@ -1,0 +1,171 @@
+{
+  "schema": "evaluator-executor-gate-summary/v1",
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "mode": "executor",
+  "gate_level": "L2",
+  "result": "PASS",
+  "plan": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/VALIDATION_PLAN.yaml",
+  "checks_total": 6,
+  "mandatory_failures": 0,
+  "checks": [
+    {
+      "check_id": "VP-01",
+      "ac": [
+        "AC-01",
+        "AC-06"
+      ],
+      "evidence_id": "EV-01",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py",
+        "--check",
+        "frozen",
+        "--frozen-sha",
+        "fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832"
+      ],
+      "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-01.meta.json",
+      "stdout": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-01.stdout.log",
+      "stderr": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-01.stderr.log"
+    },
+    {
+      "check_id": "VP-02",
+      "ac": [
+        "AC-01",
+        "AC-02",
+        "AC-04",
+        "AC-06"
+      ],
+      "evidence_id": "EV-02",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/test_checker.py"
+      ],
+      "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-02.meta.json",
+      "stdout": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-02.stdout.log",
+      "stderr": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-02.stderr.log"
+    },
+    {
+      "check_id": "VP-03",
+      "ac": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-05"
+      ],
+      "evidence_id": "EV-03",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py",
+        "--check",
+        "behavior",
+        "--frozen-sha",
+        "fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832",
+        "--out",
+        "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/executor_behavior"
+      ],
+      "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-03.meta.json",
+      "stdout": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-03.stdout.log",
+      "stderr": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-03.stderr.log"
+    },
+    {
+      "check_id": "VP-04",
+      "ac": [
+        "AC-02",
+        "AC-03",
+        "AC-04"
+      ],
+      "evidence_id": "EV-04",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-c",
+        "import sys,unittest; s=unittest.defaultTestLoader.discover('tests',pattern='test_printer_decision_plan.py'); assert s.countTestCases() >= 6, 'new business and guard tests missing'; r=unittest.TextTestRunner(verbosity=2).run(s); sys.exit(0 if r.wasSuccessful() else 1)"
+      ],
+      "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-04.meta.json",
+      "stdout": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-04.stdout.log",
+      "stderr": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-04.stderr.log"
+    },
+    {
+      "check_id": "VP-05",
+      "ac": [
+        "AC-03",
+        "AC-04",
+        "AC-06"
+      ],
+      "evidence_id": "EV-05",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-05.meta.json",
+      "stdout": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-05.stdout.log",
+      "stderr": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-05.stderr.log"
+    },
+    {
+      "check_id": "VP-06",
+      "ac": [
+        "AC-01",
+        "AC-05",
+        "AC-06"
+      ],
+      "evidence_id": "EV-06",
+      "mandatory": true,
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py",
+        "--check",
+        "submission",
+        "--frozen-sha",
+        "fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832"
+      ],
+      "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "result": "PASS",
+      "meta": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-06.meta.json",
+      "stdout": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-06.stdout.log",
+      "stderr": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-06.stderr.log"
+    }
+  ]
+}

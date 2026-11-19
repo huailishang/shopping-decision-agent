@@ -1,0 +1,19 @@
+{
+  "command_argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "shopping_decision.dialogue_flow",
+    "--real-printer-case"
+  ],
+  "started_at_utc": "2026-11-17T12:10:49.516085+00:00",
+  "finished_at_utc": "2026-11-17T12:10:50.432400+00:00",
+  "exit_code": 0,
+  "input_sha256": "3abf506daeddbc02120009d776b2947c2b8172d0a877cc185ba76363b22a75b8",
+  "stdout_sha256": "c89302757eca92c2c74893bed09bd3ca0bb101d72d16bcd64eb7e477a122be5e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "has_selected_pack_case_result": false,
+  "legacy_conditional_path": "clarify_wechat_requirement",
+  "interpretation": "r3 conditional path exists; no explicit selected minimal evidence case result in normal entry. Absence of a new field alone is not evidence of zero existing business capability."
+}

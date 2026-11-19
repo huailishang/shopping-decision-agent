@@ -1,0 +1,384 @@
+- generic [ref=e2]:
+  - button "意见反馈" [ref=e3] [cursor=pointer]:
+    - generic [ref=e7]: 反馈
+  - region "平台公告" [ref=e426]:
+    - generic [ref=e427]:
+      - generic [ref=e428]: 海纳开放平台目前处于 Beta 测试阶段，接口能力、调用限制及服务策略可能持续调整。
+      - button "查看详情" [ref=e429] [cursor=pointer]
+    - button "关闭公告" [ref=e430] [cursor=pointer]: ×
+  - banner [ref=e8]:
+    - generic [ref=e9]:
+      - link "什么值得买 · 海纳" [ref=e10] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e12]:
+        - link "海纳 Agent" [ref=e13] [cursor=pointer]:
+          - /url: /haina
+        - link "海纳开放平台" [ref=e14] [cursor=pointer]:
+          - /url: /haina-platform
+      - generic [ref=e15]:
+        - button "联系商务" [ref=e16] [cursor=pointer]
+        - button "登录 / 注册" [ref=e21] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - heading [level=1] [ref=e26]:
+          - generic [ref=e27]:
+            - emphasis [ref=e28]: 开放
+            - text: 消费数据
+          - generic [ref=e29]:
+            - emphasis [ref=e30]: 赋能
+            - text: 模型、Agent与智能终端
+        - paragraph [ref=e31]: 以 API、MCP 与 A2A 三种形式，开放商品、价格、内容与消费决策能力。
+      - generic [ref=e32]:
+        - link "申请接入 测试额度免费" [ref=e33] [cursor=pointer]:
+          - /url: /haina-platform
+          - generic [ref=e34]:
+            - generic [ref=e35]: 申请接入
+            - generic [ref=e36]: 测试额度免费
+        - link "海纳 Agent 海纳能力体验" [ref=e37] [cursor=pointer]:
+          - /url: /haina
+          - generic [ref=e38]:
+            - generic [ref=e39]: 海纳 Agent
+            - generic [ref=e40]: 海纳能力体验
+      - generic [ref=e41]:
+        - button "商品检索 Pro 93.3% 准确性 六大电商 SKU 全维检索" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: 商品检索 Pro
+          - strong [ref=e44]:
+            - text: 93.3%
+            - generic [ref=e45]: 准确性
+          - generic [ref=e46]: 六大电商 SKU 全维检索
+        - button "好价检索 Pro 1000万 日更新量级 真人验证优惠，完整购买路径" [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: 好价检索 Pro
+          - strong [ref=e49]:
+            - text: 1000万
+            - generic [ref=e50]: 日更新量级
+          - generic [ref=e51]: 真人验证优惠，完整购买路径
+        - button "图搜商品 0.23秒 检索耗时 以图搜 SKU，多模态检索入口" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: 图搜商品
+          - strong [ref=e54]:
+            - text: 0.23秒
+            - generic [ref=e55]: 检索耗时
+          - generic [ref=e56]: 以图搜 SKU，多模态检索入口
+        - button "内容检索 200亿+ 内容库 站内+站外统一消费内容入口" [ref=e57] [cursor=pointer]:
+          - generic [ref=e58]: 内容检索
+          - strong [ref=e59]:
+            - text: 200亿+
+            - generic [ref=e60]: 内容库
+          - generic [ref=e61]: 站内+站外统一消费内容入口
+        - button "内容检索 Pro 6档 时效 多源大搜融合，LLM 相关性过滤" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 内容检索 Pro
+          - strong [ref=e64]:
+            - text: 6档
+            - generic [ref=e65]: 时效
+          - generic [ref=e66]: 多源大搜融合，LLM 相关性过滤
+        - button "知识图谱检索 4个 一级类目 可检索、可推理的商品知识底座" [ref=e67] [cursor=pointer]:
+          - generic [ref=e68]: 知识图谱检索
+          - strong [ref=e69]:
+            - text: 4个
+            - generic [ref=e70]: 一级类目
+          - generic [ref=e71]: 可检索、可推理的商品知识底座
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - heading "一次接入，三种开放形式" [level=2] [ref=e75]
+        - paragraph [ref=e76]: 同一套账号、配额与字段规范，按你的工程习惯任选或混用。
+      - generic [ref=e77]:
+        - article [ref=e78]:
+          - generic [ref=e79]: API
+          - heading "服务端标准集成" [level=3] [ref=e81]
+          - paragraph [ref=e82]: 已有后端服务时最直接的方式，返回结构化 JSON，字段可按需指定。
+          - generic [ref=e83]: 适合 自建服务端 · 网页与小程序
+        - article [ref=e84]:
+          - generic [ref=e85]: MCP
+          - heading "大模型与 Agent 直挂" [level=3] [ref=e87]
+          - paragraph [ref=e88]: 挂载为 MCP Server，模型直接把六项能力当工具调用，无需自行封装。
+          - generic [ref=e89]: 适合 大模型应用 · Agent 框架
+        - article [ref=e90]:
+          - generic [ref=e91]: A2A
+          - heading "智能体之间互调" [level=3] [ref=e93]
+          - paragraph [ref=e94]: 封装为标准 Skill，供智能体之间按任务直接调用。
+          - generic [ref=e95]: 适合 多智能体系统 · 系统级助手
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - heading "六项能力，覆盖消费决策全链路" [level=2] [ref=e99]
+        - generic [ref=e100]:
+          - button "商品检索 Pro" [ref=e101] [cursor=pointer]
+          - button "好价检索 Pro" [ref=e102] [cursor=pointer]
+          - button "图搜商品" [ref=e103] [cursor=pointer]
+          - button "内容检索" [ref=e104] [cursor=pointer]
+          - button "内容检索 Pro" [ref=e105] [cursor=pointer]
+          - button "知识图谱检索" [ref=e106] [cursor=pointer]
+      - generic [ref=e107]:
+        - button "上一个能力" [ref=e108] [cursor=pointer]: ‹
+        - article [ref=e431]:
+          - generic [ref=e432]:
+            - heading "看到好物即搜，多模态商品入口" [level=3] [ref=e433]
+            - paragraph [ref=e434]: 以图片为输入，解析后按 SKU 返回全网商品与关联好价。
+            - generic [ref=e435]:
+              - generic [ref=e436]: 耗时低至 0.23 秒
+              - generic [ref=e437]: 四级分类体系
+              - generic [ref=e438]: 搜索阈值可调
+            - generic [ref=e439]:
+              - generic [ref=e440]:
+                - generic [ref=e441]: 输入
+                - generic [ref=e442]: 一张商品图片
+              - generic [ref=e443]: →
+              - generic [ref=e444]:
+                - generic [ref=e445]: 返回
+                - generic [ref=e446]: 同款商品与好价
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]: "image_url: https://…/headphone.jpg"
+              - generic [ref=e450]: 0.23s
+            - generic [ref=e451]:
+              - paragraph [ref=e452]:
+                - generic [ref=e453]: "1"
+                - generic [ref=e454]: 同款商品 · 相似度 97%
+                - generic [ref=e455]: 推荐
+              - paragraph [ref=e456]:
+                - generic [ref=e457]: "2"
+                - generic [ref=e458]: 相近配色 · 相似度 91%
+                - generic [ref=e459]: 已匹配
+              - paragraph [ref=e460]:
+                - generic [ref=e461]: "3"
+                - generic [ref=e462]: 自动识别四级商品分类
+                - generic [ref=e463]: 已匹配
+        - button "下一个能力" [ref=e142] [cursor=pointer]: ›
+      - paragraph [ref=e143]: 每 5 秒自动轮播，也可点击两侧箭头或上方标签切换
+    - generic [ref=e145]:
+      - heading "为什么选择海纳" [level=2] [ref=e147]
+      - generic [ref=e148]:
+        - list [ref=e149]:
+          - listitem [ref=e150]:
+            - generic [ref=e151]: "01"
+            - generic [ref=e152]:
+              - heading "好价由真人验证，不是算法抓取" [level=3] [ref=e153]
+              - paragraph [ref=e154]: 十六年社区沉淀，PGC 与 UGC 逐条人工筛选，步骤可复现。
+          - listitem [ref=e155]:
+            - generic [ref=e156]: "02"
+            - generic [ref=e157]:
+              - heading "四类能力可以串成一条决策链路" [level=3] [ref=e158]
+              - paragraph [ref=e159]: 商品、好价、图谱、内容既可单独调用，也可串成完整链路。
+          - listitem [ref=e160]:
+            - generic [ref=e161]: "03"
+            - generic [ref=e162]:
+              - heading "全网商品按 SKU 标准化归一" [level=3] [ref=e163]
+              - paragraph [ref=e164]: 六大平台去重归一，匹配准确率 93.3%、链接可达性 95.7%。
+        - generic [ref=e165]:
+          - text: 能力协同示例 · 商品 → 好价 → 图谱 → 内容
+          - generic [ref=e166]:
+            - generic [ref=e167]:
+              - generic [ref=e168]: 🔍
+              - generic [ref=e169]:
+                - text: 商品检索 Pro
+                - paragraph [ref=e170]: 命中 2000 元内降噪耳机 128 个 SKU，六平台已去重。
+            - generic [ref=e171]:
+              - generic [ref=e172]: 🏷️
+              - generic [ref=e173]:
+                - text: 好价检索 Pro
+                - paragraph [ref=e174]: 其中 12 个 SKU 有真人验证好价，最高可省 420 元。
+            - generic [ref=e175]:
+              - generic [ref=e176]: 🧠
+              - generic [ref=e177]:
+                - text: 知识图谱检索
+                - paragraph [ref=e178]: 按降噪深度与舒适度，给出 3 款候选参数对比。
+            - generic [ref=e179]:
+              - generic [ref=e180]: 📄
+              - generic [ref=e181]:
+                - text: 内容检索
+                - paragraph [ref=e182]: 附 8 篇近 30 天实测内容，含正文摘要与配图。
+    - generic [ref=e184]:
+      - heading [level=2] [ref=e186]:
+        - text: 已接入
+        - emphasis [ref=e187]: 40 余个
+        - text: 大模型产品、Agent 与智能终端
+      - generic [ref=e188]:
+        - article [ref=e189]:
+          - strong [ref=e190]:
+            - text: "22.4"
+            - generic [ref=e191]: 亿次
+          - heading "内容输出量" [level=3] [ref=e192]
+          - paragraph [ref=e193]: 2026 上半年累计对外输出
+        - article [ref=e194]:
+          - strong [ref=e195]:
+            - text: "474.36"
+            - generic [ref=e196]: "%"
+          - heading "环比增长" [level=3] [ref=e197]
+          - paragraph [ref=e198]: 较 2025 下半年输出量增幅
+        - article [ref=e199]:
+          - strong [ref=e200]:
+            - text: "7.30"
+            - generic [ref=e201]: 亿次
+          - heading "618 期间输出" [level=3] [ref=e202]
+          - paragraph [ref=e203]: 大促峰值下的稳定承载
+      - generic "已接入产品及所属企业" [ref=e204]:
+        - generic [ref=e206]:
+          - generic [ref=e209]:
+            - generic [ref=e210]: Kimi
+            - generic [ref=e211]: 月之暗面
+          - generic [ref=e214]:
+            - generic [ref=e215]: 智谱清言
+            - generic [ref=e216]: 智谱 AI
+          - generic [ref=e219]:
+            - generic [ref=e220]: 豆包
+            - generic [ref=e221]: 字节跳动
+          - generic [ref=e224]:
+            - generic [ref=e225]: 讯飞星火
+            - generic [ref=e226]: 科大讯飞
+          - generic [ref=e229]:
+            - generic [ref=e230]: 夸克
+            - generic [ref=e231]: 阿里巴巴
+          - generic [ref=e234]:
+            - generic [ref=e235]: Soul
+            - generic [ref=e236]: Soul App
+          - generic [ref=e239]:
+            - generic [ref=e240]: 腾讯 WorkBuddy
+            - generic [ref=e241]: 腾讯
+          - generic [ref=e244]:
+            - generic [ref=e245]: 鸿蒙小艺
+            - generic [ref=e246]: 华为
+          - generic [ref=e249]:
+            - generic [ref=e250]: Kimi
+            - generic [ref=e251]: 月之暗面
+          - generic [ref=e254]:
+            - generic [ref=e255]: 智谱清言
+            - generic [ref=e256]: 智谱 AI
+          - generic [ref=e259]:
+            - generic [ref=e260]: 豆包
+            - generic [ref=e261]: 字节跳动
+          - generic [ref=e264]:
+            - generic [ref=e265]: 讯飞星火
+            - generic [ref=e266]: 科大讯飞
+          - generic [ref=e269]:
+            - generic [ref=e270]: 夸克
+            - generic [ref=e271]: 阿里巴巴
+          - generic [ref=e274]:
+            - generic [ref=e275]: Soul
+            - generic [ref=e276]: Soul App
+          - generic [ref=e279]:
+            - generic [ref=e280]: 腾讯 WorkBuddy
+            - generic [ref=e281]: 腾讯
+          - generic [ref=e284]:
+            - generic [ref=e285]: 鸿蒙小艺
+            - generic [ref=e286]: 华为
+        - generic [ref=e288]:
+          - generic [ref=e291]:
+            - generic [ref=e292]: 腾讯元器
+            - generic [ref=e293]: 腾讯
+          - generic [ref=e296]:
+            - generic [ref=e297]: 阿里百炼
+            - generic [ref=e298]: 阿里云
+          - generic [ref=e301]:
+            - generic [ref=e302]: 火山引擎
+            - generic [ref=e303]: 字节跳动
+          - generic [ref=e306]:
+            - generic [ref=e307]: 华为云
+            - generic [ref=e308]: 华为
+          - generic [ref=e311]:
+            - generic [ref=e312]: 理想汽车
+            - generic [ref=e313]: 理想汽车
+          - generic [ref=e316]:
+            - generic [ref=e317]: 联想
+            - generic [ref=e318]: 联想集团
+          - generic [ref=e321]:
+            - generic [ref=e322]: vivo
+            - generic [ref=e323]: 维沃移动通信
+          - generic [ref=e326]:
+            - generic [ref=e327]: 荣耀
+            - generic [ref=e328]: 荣耀终端
+          - generic [ref=e331]:
+            - generic [ref=e332]: 腾讯元器
+            - generic [ref=e333]: 腾讯
+          - generic [ref=e336]:
+            - generic [ref=e337]: 阿里百炼
+            - generic [ref=e338]: 阿里云
+          - generic [ref=e341]:
+            - generic [ref=e342]: 火山引擎
+            - generic [ref=e343]: 字节跳动
+          - generic [ref=e346]:
+            - generic [ref=e347]: 华为云
+            - generic [ref=e348]: 华为
+          - generic [ref=e351]:
+            - generic [ref=e352]: 理想汽车
+            - generic [ref=e353]: 理想汽车
+          - generic [ref=e356]:
+            - generic [ref=e357]: 联想
+            - generic [ref=e358]: 联想集团
+          - generic [ref=e361]:
+            - generic [ref=e362]: vivo
+            - generic [ref=e363]: 维沃移动通信
+          - generic [ref=e366]:
+            - generic [ref=e367]: 荣耀
+            - generic [ref=e368]: 荣耀终端
+    - generic [ref=e370]:
+      - heading "常见问题" [level=2] [ref=e372]
+      - generic [ref=e373]:
+        - article [ref=e374]:
+          - button "提供哪些开放形式，该怎么选？ ⌄" [expanded] [ref=e375] [cursor=pointer]:
+            - text: 提供哪些开放形式，该怎么选？
+            - generic [ref=e376]: ⌄
+          - paragraph [ref=e378]: API 适合已有服务端的常规集成；MCP 适合大模型与 Agent 框架直接挂载工具；A2A 适合智能体之间的能力互调。三者共用同一套账号与字段规范。
+        - article [ref=e379]:
+          - button "好价和普通抓取的优惠信息有什么区别？ ⌄" [ref=e380] [cursor=pointer]:
+            - text: 好价和普通抓取的优惠信息有什么区别？
+            - generic [ref=e381]: ⌄
+          - generic:
+            - paragraph: 每条好价都经过 PGC 团队或 UGC 用户真人验证，并给出可复现的优惠步骤，明确区分页面价与爆料实付价。
+        - article [ref=e382]:
+          - button "接口的准确率与稳定性如何评估？ ⌄" [ref=e383] [cursor=pointer]:
+            - text: 接口的准确率与稳定性如何评估？
+            - generic [ref=e384]: ⌄
+          - generic:
+            - paragraph: 商品检索 Pro 匹配准确率 93.3%、链接可达性 95.7%、店铺权威性 93.3%，接入期间可通过测试数据持续评估。
+        - article [ref=e385]:
+          - button "如何开始接入，是否有测试额度？ ⌄" [ref=e386] [cursor=pointer]:
+            - text: 如何开始接入，是否有测试额度？
+            - generic [ref=e387]: ⌄
+          - generic:
+            - paragraph: 进入海纳开放平台提交 API Key 申请，审核通过后即可获得测试密钥并进行接口联调。
+    - generic [ref=e389]:
+      - heading "把消费数据能力接入你的模型与产品" [level=2] [ref=e390]
+      - paragraph [ref=e391]: 提交接入申请，获取测试密钥与接口文档。
+      - generic [ref=e392]:
+        - link "申请接入 测试额度免费 · 当日响应" [ref=e393] [cursor=pointer]:
+          - /url: /haina-platform
+          - generic [ref=e394]:
+            - generic [ref=e395]: 申请接入
+            - generic [ref=e396]: 测试额度免费 · 当日响应
+        - button "商务合作咨询 大规模调用 · 定制合作" [ref=e397] [cursor=pointer]:
+          - generic [ref=e398]:
+            - generic [ref=e399]: 商务合作咨询
+            - generic [ref=e400]: 大规模调用 · 定制合作
+    - generic [ref=e402]:
+      - generic [ref=e403]:
+        - generic [ref=e404]:
+          - heading "值 海纳数据开放平台" [level=3] [ref=e405]:
+            - generic [ref=e406]: 值
+            - text: 海纳数据开放平台
+          - paragraph [ref=e407]: 面向模型、Agent 与智能终端的消费数据能力开放平台。
+        - generic [ref=e408]:
+          - generic [ref=e409]: 产品
+          - link "能力介绍" [ref=e410] [cursor=pointer]:
+            - /url: "#capabilities"
+          - link "开放形式" [ref=e411] [cursor=pointer]:
+            - /url: "#access"
+          - link "生态伙伴" [ref=e412] [cursor=pointer]:
+            - /url: "#scale"
+        - generic [ref=e413]:
+          - generic [ref=e414]: 开发者
+          - link "使用文档" [ref=e415] [cursor=pointer]:
+            - /url: /haina-platform
+          - link "接口调试" [ref=e416] [cursor=pointer]:
+            - /url: /haina-platform
+          - link "API Key" [ref=e417] [cursor=pointer]:
+            - /url: /haina-platform
+        - generic [ref=e418]:
+          - generic [ref=e419]: 海纳产品
+          - link "海纳 Agent" [ref=e420] [cursor=pointer]:
+            - /url: /haina
+          - link "开放能力" [ref=e421] [cursor=pointer]:
+            - /url: "#capabilities"
+          - link "开放平台" [ref=e422] [cursor=pointer]:
+            - /url: /haina-platform
+      - paragraph [ref=e423]:
+        - strong [ref=e424]: 什么值得买 · 海纳数据开放平台
+        - generic [ref=e425]: © 2026 SMZDM

@@ -1,0 +1,214 @@
+{
+  "schema": "evaluator-accepted-snapshot/v1",
+  "task_id": "HNA-EVIDENCE-REOPEN-20261116",
+  "captured_at_utc": "2026-11-17T07:23:41.467649+00:00",
+  "baseline_head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+  "files": {
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/CONTRACT.md": {
+      "sha256": "9a4a37ba11301022fc9b81b16e83e3992e3b8d382f6ec90e2f0d07fc40510a71",
+      "bytes": 14853
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/VALIDATION_PLAN.yaml": {
+      "sha256": "124b2c711421c587714072652258ab19cda68524586ac1bb922465b9f7352dc9",
+      "bytes": 1331
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/FROZEN_INPUTS.json": {
+      "sha256": "4837ffe23a86008e005f62debcdc62eaf7109a7de7baf22d44fd433a815a37e4",
+      "bytes": 5387
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/acquisition_plan.json": {
+      "sha256": "4e4b66ddf8ef5ca74033f0a44a03fcfe3eb484ea0d0b362df492756dbdc8b255",
+      "bytes": 3235
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/check_delivery.py": {
+      "sha256": "50c0bf7f52ca51e0335b21138d6b92ed33a520f470ea146fbfccbf9f3c37d908",
+      "bytes": 10151
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/test_check_delivery.py": {
+      "sha256": "decc255870147b74e1a0d34a4eaac047494a4c0ee9f19f08b06b350f9039ff9b",
+      "bytes": 7012
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/OWNER_REQUESTS.md": {
+      "sha256": "04ff78f68840202fb058af239ed73971b679af4ab2e8d57dbe817cdf8e98caec",
+      "bytes": 2431
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/REPORT.md": {
+      "sha256": "40fa2ae15abf3bfc1c2910a3ef60c79ec834962cd039d104d838c4e88a1d42d6",
+      "bytes": 11547
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/acquisition_receipt.json": {
+      "sha256": "f78fcdaf1649ea71a846b3ff67a00f6ff7baab5278d76a8bc9d39016fe621abe",
+      "bytes": 8012
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_Brother_FAQ_block_20261117.md": {
+      "sha256": "c2d936cbdfd3025ba0df623685fcfcb5c4ba4810242771be5b8896a732cd9b22",
+      "bytes": 436
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_Brother_official_20261117.md": {
+      "sha256": "95c0b74418c01440397e1b0ab452349b577d16f10f31ae8f41820e21c7426500",
+      "bytes": 927
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_HP_setup_20261117.md": {
+      "sha256": "a1b0d069c37b2249868e48a8e608510034bef460acf154d5c808ed4b4257628d",
+      "bytes": 767
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/A_local_inputs_20261117.md": {
+      "sha256": "e49cd798acdebed845a5d0538f36a489ab17c190c446ec41ebcef2937262f5c5",
+      "bytes": 973
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_haina_mcp_error_20261117.md": {
+      "sha256": "9e50888e3d72b0e74c66244c27a0c8c482d0144655f5e893b31b9f66381cb535",
+      "bytes": 389
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_haina_platform_error_20261117.md": {
+      "sha256": "e8ce1f6b54e1613b797d895edcd4f5cfbeaf91b8bde0a9a89c584463abcad65e",
+      "bytes": 396
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/B_local_inputs_20261117.md": {
+      "sha256": "d55bf7842d6cfbbe2d27ea7a36d79e34fc0fc5f554fafe75d2578d656246878e",
+      "bytes": 933
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/collected/owner_minimal_requests_20261117.md": {
+      "sha256": "c6836c8b6cd10d0a165da26ee50031fb25f1c6dd46c7fc8a0cf3294f0233fe95",
+      "bytes": 1560
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-01.meta.json": {
+      "sha256": "95bc12fa6b6ddbbc3a8a368b3fa8614b7c0a2b042ccd306a3e854df86898d0ff",
+      "bytes": 1234
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-01.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-01.stdout.log": {
+      "sha256": "a62c9a709c17b75a26bc0ecae7c0367bcbca5e6e1976ee722a6b89738dc915e2",
+      "bytes": 66
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-02.meta.json": {
+      "sha256": "f65bdacd82b2f42466369b1507221eecdea0a4c7cb009cc6590aa0f8373139fa",
+      "bytes": 861
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-02.stderr.log": {
+      "sha256": "597c4c960aa23f3014ad1cc610a9a6a984648b481df40eb6b5c924022425f30b",
+      "bytes": 2024
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-02.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-03.meta.json": {
+      "sha256": "e962925c2c86c58930d9ac5dd132610f7d8347c27d4de16c4be6fe7f225af927",
+      "bytes": 1237
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-03.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/EV-03.stdout.log": {
+      "sha256": "3f951304d49a7579b2eb8a6aa65fc85acdf2dc5b7315e70322e00fd75e101212",
+      "bytes": 169
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/L2-GATE.json": {
+      "sha256": "a77234b4c9df6a8e603f34daca77d027936cee9f5b7e9dc4f0e5bfaf54a2a8d9",
+      "bytes": 3308
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/L2-GATE.md": {
+      "sha256": "fbfc198c6123bfb36e51869cbb259489c854d7e1caf5e726a9baa2600585d967",
+      "bytes": 531
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-01.meta.json": {
+      "sha256": "3527a7553fa9bb1e508fbe3246e511fd3734b38cc4c7c372a99a3fec215d9adc",
+      "bytes": 1234
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-01.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-01.stdout.log": {
+      "sha256": "a62c9a709c17b75a26bc0ecae7c0367bcbca5e6e1976ee722a6b89738dc915e2",
+      "bytes": 66
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-02.meta.json": {
+      "sha256": "2cf15fcacc217b37fca20ae702ed136563e8cf8a000aaa627e517615214fddb0",
+      "bytes": 861
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-02.stderr.log": {
+      "sha256": "2dd2c58f069d223e6dc64fcd92096097b21de0d57117485a34c5584dad48b6ee",
+      "bytes": 2024
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-02.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-03.meta.json": {
+      "sha256": "b5ed6dcbc7aa02c971ffc95de32f5c0da14cd3726d48bea49ed30017e9bcbc71",
+      "bytes": 1237
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-03.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/EV-03.stdout.log": {
+      "sha256": "3e1463d06201485d8042a71c969ecf0597f3df6cdd0bdb9d3c88fe41e80f63d2",
+      "bytes": 169
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/L2-GATE.json": {
+      "sha256": "a77234b4c9df6a8e603f34daca77d027936cee9f5b7e9dc4f0e5bfaf54a2a8d9",
+      "bytes": 3308
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/L2-GATE.md": {
+      "sha256": "fbfc198c6123bfb36e51869cbb259489c854d7e1caf5e726a9baa2600585d967",
+      "bytes": 531
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-initial-before-render-charge-20261117/README.md": {
+      "sha256": "e50295305f9d9018e9c908a61069a5e2e2a9711a5c631a5ce3b561fad912ccb3",
+      "bytes": 228
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-01.meta.json": {
+      "sha256": "26e98542bb0de8b2e86f854cd59d3d58fa22176af29f6cacea2d8977839dc6e9",
+      "bytes": 1236
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-01.stderr.log": {
+      "sha256": "80c9a537b8ad915e9cc2b1ad0b4466fb29ab440255c7b8931a7fa27186c521fc",
+      "bytes": 45
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-01.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-02.meta.json": {
+      "sha256": "4b0a5ce9b4e5bac8b8dace0ec21e78913034de820d918d3fab3b321942093df2",
+      "bytes": 861
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-02.stderr.log": {
+      "sha256": "80c9a537b8ad915e9cc2b1ad0b4466fb29ab440255c7b8931a7fa27186c521fc",
+      "bytes": 45
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-02.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-03.meta.json": {
+      "sha256": "356080855720f7e172fd925e5c96db29862f721f6be31f2ae87dd16868f95341",
+      "bytes": 1238
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-03.stderr.log": {
+      "sha256": "80c9a537b8ad915e9cc2b1ad0b4466fb29ab440255c7b8931a7fa27186c521fc",
+      "bytes": 45
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/EV-03.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/L2-GATE.json": {
+      "sha256": "b02d2fda07c6a5fca6231590913adf1d25e765ec3107f4646d4fcff99e879a52",
+      "bytes": 3314
+    },
+    "handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/l2-retry-missing-python-20261117/L2-GATE.md": {
+      "sha256": "a1502f24ffc7080c1b8e91b3ca232d87c4fd5975c94311f929ae14cb75cdea79",
+      "bytes": 537
+    }
+  },
+  "scope": "Unchanged submitted contract, plan, report, receipt, collected notes, final and historical L2 evidence. No external facts re-fetched.",
+  "limitations": "Hash binding establishes local immutability, not provenance of remote requests."
+}

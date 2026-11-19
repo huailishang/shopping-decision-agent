@@ -85,7 +85,7 @@ def build_request(data: dict) -> PurchaseRequest:
     return PurchaseRequest(category='printer', requirements=tuple(reqs), **values)
 
 
-def evaluate_input(data: dict) -> dict:
+def evaluate_input(data: dict, *, haina_mcp_report_path: Path | None = None) -> dict:
     req = build_request(data)
     record = decide(req)
     cards = {c.id: c for c in load_cards() + load_route_claim_cards()}
@@ -117,18 +117,49 @@ def evaluate_input(data: dict) -> dict:
     recommendation = asdict(record.recommendation)
     recommendation['questions'] = tuple(dict.fromkeys((*recommendation['questions'], *product_comparison.get('questions', []))))
     recommendation['unknowns'] = tuple(dict.fromkeys((*recommendation['unknowns'], *product_comparison.get('unresolved_hard_conditions', []))))
-    return {'request': asdict(req), 'normalized_constraints': normalized,
-             'product_comparison': product_comparison,
-             'product_catalog_sha256': catalogue_sha256(),
-            'recommendation': recommendation,
-            'evidence': evidence, 'rejected_evidence': record.rejected_evidence,
-            'rejected_inputs': record.rejected_inputs,
-            'evaluated_at': datetime.now(timezone.utc).isoformat(),
-            'engine': 'shopping_decision.decision.decide',
-            'card_sha256': hashlib.sha256(CARDS_PATH.read_bytes()).hexdigest(),
-            'research_ledger_sha256': (hashlib.sha256(ROUTE_LEDGER_PATH.read_bytes()).hexdigest()
-                                     if ROUTE_LEDGER_PATH.is_file() else None),
-            'real_time_prices': False, 'transactions_enabled': False}
+    result = {'request': asdict(req), 'normalized_constraints': normalized,
+              'product_comparison': product_comparison,
+              'product_catalog_sha256': catalogue_sha256(),
+              'recommendation': recommendation,
+              'evidence': evidence, 'rejected_evidence': record.rejected_evidence,
+              'rejected_inputs': record.rejected_inputs,
+              'evaluated_at': datetime.now(timezone.utc).isoformat(),
+              'engine': 'shopping_decision.decision.decide',
+              'card_sha256': hashlib.sha256(CARDS_PATH.read_bytes()).hexdigest(),
+              'research_ledger_sha256': (hashlib.sha256(ROUTE_LEDGER_PATH.read_bytes()).hexdigest()
+                                         if ROUTE_LEDGER_PATH.is_file() else None),
+              'real_time_prices': False, 'transactions_enabled': False}
+    if req.category == 'printer':
+        from .real_printer_case import compare_case_research
+        research_values = {
+            'category': 'printer',
+            'needs_color': req.needs_color,
+            'accepts_outsourced_color': req.accepts_outsourced_color,
+            'budget_max_cny': req.budget_max_cny,
+            'budget_scope': req.budget_scope,
+            'monthly_pages_range': (list(req.monthly_pages_range)
+                                    if req.monthly_pages_range is not None else
+                                    [req.monthly_pages, req.monthly_pages]
+                                    if req.monthly_pages is not None else None),
+            'wechat_required': req.wechat_required,
+            'wechat_workflow': req.wechat_workflow,
+            'delivery_region': req.delivery_region,
+            'device_deployment_region': data.get('device_deployment_region'),
+            'requirements': list(req.requirements),
+            'requires_scan': req.requires_scan,
+            'requires_auto_duplex': req.requires_auto_duplex,
+        }
+        result['real_printer_case_research'] = compare_case_research(research_values)
+        if 'research_context' in data:
+            from .minimal_research import build_research_case
+            research_values['accepts_initial_setup'] = data.get('accepts_initial_setup')
+            # 只给新增选包研究转发无线硬条件；旧无context研究保持原输入兼容。
+            research_values['requires_wireless'] = req.requires_wireless
+            result['research_case'] = build_research_case(research_values, data['research_context'])
+    if haina_mcp_report_path is not None:
+        from .haina_mcp_ingest import load_haina_mcp_report
+        result['haina_mcp_research'] = load_haina_mcp_report(haina_mcp_report_path)
+    return result
 
 
 class Handler(BaseHTTPRequestHandler):

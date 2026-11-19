@@ -1,0 +1,1471 @@
+{
+  "role": "independent_reviewer",
+  "observed_at": "2026-11-12T13:49:18.797009+00:00",
+  "new_case_total": 24,
+  "new_cases_passed": 24,
+  "failed_ids": [],
+  "cases": [
+    {
+      "id": "new_positive_model_control",
+      "expected": "one synthetic binding; no real identity or price",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "equivalent_instant_plus_14_cross_day",
+      "expected": "one equivalent binding",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "equivalent_instant_minus_09_30",
+      "expected": "one equivalent binding",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "equivalent_instant_quarter_hour_plus_12_45",
+      "expected": "one equivalent binding",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "mixed_bad_type_platform_list",
+      "expected": "reject bad row; retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "platform_or_item_id_invalid"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "mixed_bad_type_platform_object",
+      "expected": "reject bad row; retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "platform_or_item_id_invalid"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "mixed_bad_type_uses_nested_object",
+      "expected": "reject bad row; retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "required_local_uses_not_evidenced"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "mixed_bad_type_uses_nested_list",
+      "expected": "reject bad row; retain good row without exception",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "required_local_uses_not_evidenced"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "same_source_active_then_withdrawn",
+      "expected": "same-source revocation invalidates or blocks old active binding, independent of order",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "review_withdrawn_or_unconfirmed"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_same_source_invalidated_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "same_source_withdrawn_then_active",
+      "expected": "same-source revocation invalidates or blocks old active binding, independent of order",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "review_withdrawn_or_unconfirmed"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_same_source_invalidated_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "same_source_display_permission_withdrawn",
+      "expected": "old binding no longer available for user display",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "required_local_uses_not_evidenced"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_same_source_invalidated_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "eval_instruction_and_forged_purchase",
+      "expected": "bad row rejected, positive row retained, no approval",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "unrecognized_or_forbidden_fields"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "expired_price_smuggled",
+      "expected": "bad row rejected, positive row retained, no approval",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "unrecognized_or_forbidden_fields"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "sku_option_list_in_selected_value",
+      "expected": "bad row rejected, positive row retained, no approval",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "sku_id_invalid"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "cross_platform_same_digits",
+      "expected": "two separate configurations without real identity or quotes",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 2,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 2,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          },
+          {
+            "platform": "TAOBAO",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:separate_cross_platform_same_digits",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "same_item_different_sku",
+      "expected": "two separate configurations without real identity or quotes",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 2,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 2,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          },
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765003",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:separate_same_item_different_sku",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "same_item_different_seller",
+      "expected": "two separate configurations without real identity or quotes",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 2,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 2,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          },
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "another_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:separate_same_item_different_seller",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "same_hash_same_key_conflicting_model",
+      "expected": "both interpretations marked conflict",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 2,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 2,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_source_conflict_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          },
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2158W",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:conflict_model",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_source_conflict_requires_review",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "explicit_selected_sku_source_anchor",
+      "expected": "selected SKU source anchor allowed and retained for audit",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 1,
+        "rejected_count": 0,
+        "rejected": [],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition",
+              "selected_sku_id": "synthetic:selected_sku_original_field"
+            },
+            "sku_anchor_status": "synthetic_selected_sku_anchor_recorded",
+            "field_binding_complete": true,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true,
+      "design_gap": "mandatory SKU has no field anchor; adding an explicit anchor is currently rejected"
+    },
+    {
+      "id": "real_response_mode_forbidden",
+      "expected": "real import denied",
+      "actual": {
+        "exception": "ValueError",
+        "reason": "real_sale_evidence_import_not_authorized"
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "one_microsecond_expired_standalone",
+      "expected": "expired row rejected",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 1,
+        "accepted_rows": 0,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 1,
+            "reason": "review_expired"
+          }
+        ],
+        "configuration_count": 0,
+        "configurations": [],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ]
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "cli_mixed_bad_row_preserves_valid_configuration",
+      "expected": "CLI retains one valid configuration",
+      "actual": {
+        "operation": "p0_9_b_sale_configuration_evidence_gate",
+        "source_mode": "synthetic_test",
+        "status": "synthetic_only_no_real_identity",
+        "input_rows": 2,
+        "accepted_rows": 1,
+        "rejected_count": 1,
+        "rejected": [
+          {
+            "row": 2,
+            "reason": "platform_or_item_id_invalid"
+          }
+        ],
+        "configuration_count": 1,
+        "configurations": [
+          {
+            "platform": "JD",
+            "platform_item_id": "98765001",
+            "selected_sku_id": "98765002",
+            "seller_id": "independent_seller",
+            "selected_model_id": "HL-B2188DW",
+            "observed_at": "2026-11-12T11:49:18.797009+00:00",
+            "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+            "source_id": "synthetic:independent001",
+            "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+            "source_ref": "synthetic:independent_panel",
+            "field_anchors": {
+              "platform_item_id": "synthetic:independent_platform_item_id",
+              "seller_id": "synthetic:independent_seller_id",
+              "selected_variant": "synthetic:independent_selected_variant",
+              "selected_model_id": "synthetic:independent_selected_model_id",
+              "item_kind": "synthetic:independent_item_kind",
+              "condition": "synthetic:independent_condition"
+            },
+            "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+            "field_binding_complete": false,
+            "status": "synthetic_field_binding_test_only",
+            "identity_verified": false,
+            "quote_verified": false,
+            "purchasable": false,
+            "budget_status": "unknown_no_authorized_regional_quote",
+            "source_count": 1,
+            "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+            "required_met": [
+              "monochrome_print",
+              "wireless"
+            ],
+            "required_unknown": [],
+            "required_failed": [],
+            "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+          }
+        ],
+        "real_identity_verified_count": 0,
+        "verified_quote_count": 0,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "limitations": [
+          "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+          "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+          "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+        ],
+        "displayed_configuration_count": 1
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "cli_limit_three_must_not_drop_bound_model_conditions",
+      "expected": "bound HL-B2188DW keeps wireless met and scan unknown even if outside displayed top three",
+      "actual": {
+        "first": {
+          "platform": "JD",
+          "platform_item_id": "98765001",
+          "selected_sku_id": "98765002",
+          "seller_id": "independent_seller",
+          "selected_model_id": "HL-B2188DW",
+          "observed_at": "2026-11-12T11:49:18.797009+00:00",
+          "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+          "source_id": "synthetic:independent001",
+          "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+          "source_ref": "synthetic:independent_panel",
+          "field_anchors": {
+            "platform_item_id": "synthetic:independent_platform_item_id",
+            "seller_id": "synthetic:independent_seller_id",
+            "selected_variant": "synthetic:independent_selected_variant",
+            "selected_model_id": "synthetic:independent_selected_model_id",
+            "item_kind": "synthetic:independent_item_kind",
+            "condition": "synthetic:independent_condition"
+          },
+          "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+          "field_binding_complete": false,
+          "status": "synthetic_field_binding_test_only",
+          "identity_verified": false,
+          "quote_verified": false,
+          "purchasable": false,
+          "budget_status": "unknown_no_authorized_regional_quote",
+          "source_count": 1,
+          "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+          "required_met": [
+            "monochrome_print",
+            "wireless"
+          ],
+          "required_unknown": [
+            "scan"
+          ],
+          "required_failed": [],
+          "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+        },
+        "after_withdraw_scan": {
+          "platform": "JD",
+          "platform_item_id": "98765001",
+          "selected_sku_id": "98765002",
+          "seller_id": "independent_seller",
+          "selected_model_id": "HL-B2188DW",
+          "observed_at": "2026-11-12T11:49:18.797009+00:00",
+          "review_valid_until": "2026-11-14T13:49:18.797009+00:00",
+          "source_id": "synthetic:independent001",
+          "source_sha256": "021821781d9577bee333478aedc6af88e98695ba7d3156de7e7d59848b507603",
+          "source_ref": "synthetic:independent_panel",
+          "field_anchors": {
+            "platform_item_id": "synthetic:independent_platform_item_id",
+            "seller_id": "synthetic:independent_seller_id",
+            "selected_variant": "synthetic:independent_selected_variant",
+            "selected_model_id": "synthetic:independent_selected_model_id",
+            "item_kind": "synthetic:independent_item_kind",
+            "condition": "synthetic:independent_condition"
+          },
+          "sku_anchor_status": "missing_selected_sku_anchor_unverified",
+          "field_binding_complete": false,
+          "status": "synthetic_field_binding_test_only",
+          "identity_verified": false,
+          "quote_verified": false,
+          "purchasable": false,
+          "budget_status": "unknown_no_authorized_regional_quote",
+          "source_count": 1,
+          "manufacturer_model_fact_status": "manufacturer_facts_comparison_available",
+          "required_met": [
+            "monochrome_print",
+            "wireless"
+          ],
+          "required_unknown": [],
+          "required_failed": [],
+          "next_verification": "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
+        }
+      },
+      "expectation_met": true
+    },
+    {
+      "id": "cli_rechecks_review_expiry_each_turn",
+      "expected": "second turn drops or marks expired binding",
+      "actual": {
+        "simulated_now_second_turn": "2026-11-12T13:51:18.797009+00:00",
+        "cli_second_turn": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 0,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_expired"
+            }
+          ],
+          "configuration_count": 0,
+          "configurations": [],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ],
+          "displayed_configuration_count": 0
+        },
+        "fresh_gate_at_same_instant": {
+          "operation": "p0_9_b_sale_configuration_evidence_gate",
+          "source_mode": "synthetic_test",
+          "status": "synthetic_only_no_real_identity",
+          "input_rows": 1,
+          "accepted_rows": 0,
+          "rejected_count": 1,
+          "rejected": [
+            {
+              "row": 1,
+              "reason": "review_expired"
+            }
+          ],
+          "configuration_count": 0,
+          "configurations": [],
+          "real_identity_verified_count": 0,
+          "verified_quote_count": 0,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "limitations": [
+            "合成证据只能验证绑定规则，不能代表平台原件、用户授权或真实配置",
+            "商品级ID与所选SKU不可互代；同商品不同SKU、不同平台分开",
+            "平台字段、供应商字段和厂商规格各自需要来源；本报告没有地区现价"
+          ]
+        }
+      },
+      "expectation_met": true,
+      "clock_simulated_only": true
+    }
+  ],
+  "developer_22_replay": {
+    "passed": 22,
+    "total": 22,
+    "path": "reports/p0_9_b_developer_replay_independent_20261112.json",
+    "original_report_not_overwritten": true
+  },
+  "business_file_sha256": {
+    "shopping_decision/sale_configuration_evidence.py": "1e955643bfbaa5ce00d7233a49e82112565c42774256e0458904b035f290eefb",
+    "shopping_decision/dialogue_flow.py": "ba3b5369729a4d92a63b171671586dcff9118a28c712559350a3d6ccdd355e96",
+    "shopping_decision/discovery_pool.py": "e5cf73971f2aabe611540a0f64111ec4bcae1976d709df3d4557a500c6f82cb8",
+    "shopping_decision/p0_7_official_details.py": "33a73c87d280c1e295114b3df2b172355c2e94f1b96c444642c1cd03745ede58"
+  },
+  "business_files_unchanged": true,
+  "boundaries": {
+    "new_haina_calls": 0,
+    "credential_reads": 0,
+    "paid_calls": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "external_messages": 0,
+    "business_code_modified": false,
+    "git_commit": false,
+    "git_push": false
+  },
+  "limitations": [
+    "pure synthetic contract/CLI tests; no real listing or permission verified",
+    "purpose-selected cases, not an overall accuracy estimate",
+    "clock advance is simulated; no source dates or real evidence modified"
+  ]
+}

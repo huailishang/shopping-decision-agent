@@ -1,0 +1,92 @@
+{
+  "task": "P0.9-B S2 remaining P2 - valid state event gate",
+  "date": "2026-11-13",
+  "role": "executor",
+  "decision": "executor_local_synthetic_fix_passed_pending_independent_unseen_variants",
+  "changes": [
+    "shopping_decision/sale_configuration_evidence.py",
+    "tests/test_p0_9_b_s1s4_followup.py"
+  ],
+  "outputs": [
+    "reports/p0_9_b_s2_executor_review_20261113.json",
+    "reports/P0_9_B_S2_有效状态事件收口_执行报告_20261113.md",
+    "handoffs/P0_9_B_S2_有效状态事件收口_执行者_20261113.md"
+  ],
+  "checks": {
+    "targeted_wsl_unittest": {
+      "passed": 11,
+      "total": 11,
+      "exit_code": 0
+    },
+    "evaluator_prior_probe": {
+      "old_passed": 24,
+      "old_total": 24,
+      "new_passed": 17,
+      "new_total": 18,
+      "unmet": [
+        "merge_complete_and_partial_anchor_order"
+      ],
+      "unmet_kind": "nonblocking_P3",
+      "exit_code": 0,
+      "protected_files_unchanged": true
+    },
+    "wsl_python_unittest": {
+      "passed": 347,
+      "total": 347,
+      "exit_code": 0
+    },
+    "windows_native_python_unittest": {
+      "passed": 347,
+      "total": 347,
+      "exit_code": 0
+    },
+    "h05_negative": {
+      "passed": 8,
+      "total": 8,
+      "exit_code": 0
+    },
+    "java17_compile": {
+      "passed": true,
+      "flag": "--release 17"
+    },
+    "java_p04": {
+      "passed": 6,
+      "total": 6
+    },
+    "java_h10": {
+      "passed": 6,
+      "total": 6
+    },
+    "scoped_git_diff_check": {
+      "exit_code": 0,
+      "covers_untracked": false,
+      "note": "both code files are preexisting untracked files; git diff --check has no content diff for them"
+    },
+    "untracked_text_whitespace_scan": {
+      "passed": true,
+      "trailing_whitespace_count": 0,
+      "files_checked": 5,
+      "method": "UTF-8 line-by-line trailing space and tab scan"
+    },
+    "whole_diff_check": {
+      "passed": false,
+      "preexisting_issue": "CURRENT.md CRLF/trailing whitespace in pre-existing unstaged changes"
+    }
+  },
+  "real_data": {
+    "original_records_verified": 0,
+    "original_records_total": 20,
+    "deep_verified": 0,
+    "deep_target": 6,
+    "distinct_real_identity": 0,
+    "distinct_real_identity_target": 2,
+    "regional_quotes": 0
+  },
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "api_calls_new": 0,
+  "credentials_accessed": false,
+  "git_committed": false,
+  "git_pushed": false,
+  "independent_new_variant_signoff": false
+}

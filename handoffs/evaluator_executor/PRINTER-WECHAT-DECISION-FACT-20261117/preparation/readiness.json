@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-11-18T01:02:25.077359+00:00",
+  "package_preparation_only": true,
+  "plan_loaded_executor_checks": 3,
+  "plan_loaded_evaluator_checks": 3,
+  "negative_guards_passed": 5,
+  "normal_cli_replay": "fresh_baseline.meta.json",
+  "new_external_calls": 0,
+  "new_product_facts": 0,
+  "product_changes": 0,
+  "transactions": 0,
+  "git_commit": 0,
+  "git_push": 0,
+  "task_research_executed": false,
+  "limits": "plan loading and local guards do not constitute L2/L3 acceptance of future research"
+}

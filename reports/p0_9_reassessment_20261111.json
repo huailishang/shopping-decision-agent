@@ -1,0 +1,353 @@
+{
+  "role": "independent_reviewer",
+  "observed_at": "2026-11-11T14:19:15.275436+00:00",
+  "new_html_variants": [
+    {
+      "id": "question_not_assertion",
+      "input": "本机是否支持无线网络连接？请查阅详细规格。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": false
+    },
+    {
+      "id": "conditional_not_assertion",
+      "input": "如果本机支持无线网络连接，请先连接路由器。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": false
+    },
+    {
+      "id": "feature_subject_negative",
+      "input": "本型号支持无线网络连接。更正：无线网络连接不支持，仅有USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": false
+    },
+    {
+      "id": "long_other_model_section",
+      "input": "<section><h2>HL-B2188DW</h2><p>连接方式说明</p><p>家庭网络环境</p><p>设置步骤如下</p><p>支持无线网络连接。</p></section><p>HL-10W仅USB。</p>",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": false
+    },
+    {
+      "id": "inline_css_comment_hidden",
+      "input": "<span style=\"display:/**/none\">支持无线网络连接</span>本机仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": false
+    },
+    {
+      "id": "style_case_sensitive_class_mismatch",
+      "input": "<style>.WIRELESS {display:none}</style><div class=\"wireless\">HL-10W支持无线网络连接。</div>",
+      "standards_doctype": true,
+      "expected": true,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": false
+    },
+    {
+      "id": "different_feature_negative_then_positive",
+      "input": "本型号不支持扫描。支持无线网络连接。",
+      "standards_doctype": false,
+      "expected": true,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": false
+    },
+    {
+      "id": "visible_descendant_not_hidden",
+      "input": "<style>.panel .feature {opacity:0.75;display:block}</style><div class=\"panel\"><span class=\"feature\">HL-10W支持无线网络连接。</span></div>",
+      "standards_doctype": false,
+      "expected": true,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "different_model_negative_current_positive",
+      "input": "<h2>DCP-B7658DW</h2><p>不支持无线网络连接。</p><h2>HL-10W</h2><p>本型号支持无线网络连接。</p>",
+      "standards_doctype": false,
+      "expected": true,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "unsupported_css_explicit_rejection",
+      "input": "<style>.area + .secret{display:none}</style><div class=\"secret\">支持无线网络连接</div>本机仅USB。",
+      "standards_doctype": false,
+      "expected": "reject",
+      "actual": null,
+      "rejected_reason": "unresolved_css_hidden_visibility",
+      "expectation_met": true
+    },
+    {
+      "id": "explicit_html_hidden_attribute",
+      "input": "<div hidden=\"hidden\"><p>HL-10W支持无线网络连接。</p></div>本机仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "negation_across_inline_nodes",
+      "input": "<p>本机<span>不</span>支持无线网络连接，仅USB。</p>",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    }
+  ],
+  "new_case_count": 12,
+  "new_expectations_met": 5,
+  "new_false_positives": 5,
+  "new_false_negatives": 2,
+  "old_fourteen_replayed": [
+    {
+      "id": "css_descendant_hidden",
+      "input": "<style>.wrap .secret{display:none}</style><div class=\"wrap\"><div class=\"secret\">支持无线网络连接</div></div>本型号仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "css_attribute_hidden",
+      "input": "<style>[data-secret=\"yes\"]{display:none}</style><div data-secret=\"yes\">支持无线网络连接</div>本型号仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "css_tag_hidden",
+      "input": "<style>aside{display:none}</style><aside>支持无线网络连接</aside>本型号仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "css_compound_classes_hidden",
+      "input": "<style>.spec.secret{visibility:hidden}</style><div class=\"spec secret\">支持无线网络连接</div>本型号仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "other_family_dcp_scope",
+      "input": "DCP-B7658DW支持无线网络连接；HL-10W仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "other_family_mfc_scope",
+      "input": "MFC-L5728DW支持无线网络连接。HL-10W仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "paragraph_other_model_scope",
+      "input": "<section><h2>HL-B2188DW。</h2><p>支持无线网络连接。</p></section><section>HL-10W仅USB。</section>",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "positive_negative_separate_sentences",
+      "input": "本型号支持无线网络连接。更正：本型号不支持无线网络连接，仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "positive_scope_following_sentence",
+      "input": "支持无线网络连接。以上功能仅适用于HL-B2188DW，HL-10W仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "visible_opacity_half",
+      "input": "<span style=\"opacity:0.5\">本型号支持无线网络连接。</span>",
+      "standards_doctype": false,
+      "expected": true,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "visible_comparison_with_other_model",
+      "input": "与HL-B2188DW相比，HL-10W同样支持无线网络连接。",
+      "standards_doctype": false,
+      "expected": true,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "visible_wireless_other_feature_negative",
+      "input": "HL-10W支持无线网络连接，但不支持自动双面。",
+      "standards_doctype": false,
+      "expected": true,
+      "actual": true,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "inherited_hidden_parent",
+      "input": "<div hidden><section><b>支持无线网络连接</b></section></div>本型号仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    },
+    {
+      "id": "malformed_hidden_child",
+      "input": "<div hidden><span>支持无线网络连接</div>本型号仅USB。",
+      "standards_doctype": false,
+      "expected": null,
+      "actual": null,
+      "rejected_reason": null,
+      "expectation_met": true
+    }
+  ],
+  "old_expectations_met": 14,
+  "provenance": [
+    {
+      "model_id": "HL-10W",
+      "hash_matches": true
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "hash_matches": true
+    },
+    {
+      "model_id": "HL-B2158W",
+      "hash_matches": true
+    }
+  ],
+  "stale_detail_checks": {
+    "rows": 3,
+    "all_wireless_unknown": true,
+    "all_billing_unknown": true,
+    "all_current_consumables_empty": true,
+    "original_not_mutated": true
+  },
+  "new_report_mutations": [
+    {
+      "id": "nested_seller_object",
+      "rejected_count": 1,
+      "visible_count": 0,
+      "marker_leaked": false,
+      "exception": null
+    },
+    {
+      "id": "unknown_root_field",
+      "rejected_count": 1,
+      "visible_count": 0,
+      "marker_leaked": false,
+      "exception": null
+    },
+    {
+      "id": "model_array_nonstring",
+      "rejected_count": 1,
+      "visible_count": 0,
+      "marker_leaked": false,
+      "exception": null
+    },
+    {
+      "id": "nonbool_bundle",
+      "rejected_count": 1,
+      "visible_count": 0,
+      "marker_leaked": false,
+      "exception": null
+    },
+    {
+      "id": "url_string_in_brand_hint",
+      "rejected_count": 0,
+      "visible_count": 1,
+      "marker_leaked": true,
+      "exception": null
+    },
+    {
+      "id": "unhashable_identity_status",
+      "exception": "TypeError",
+      "exception_message": "unhashable type: 'dict'"
+    }
+  ],
+  "normal_cli": {
+    "returncode": 0,
+    "utf8_env_variables_absent": true,
+    "versions": [
+      1,
+      2
+    ],
+    "old_conclusions_invalidated": true,
+    "fact_counts": [
+      3,
+      3
+    ],
+    "model_count_before_limit": 9,
+    "changed_candidates_all_excluded": true,
+    "real_purchase_approved": false,
+    "transactions_enabled": false,
+    "scalar_hint_marker_reaches_cli": true,
+    "one_bad_enum_discards_valid_report_rows": {
+      "returncode": 0,
+      "status": "discovery_report_unavailable",
+      "visible_leads": 0
+    }
+  },
+  "fact_admission": {
+    "input_is_synthetic_question": true,
+    "wireless_required_met": true,
+    "candidate_status": "specs_matched_not_purchase_approved",
+    "purchase_recommendation_approved": false
+  },
+  "real_mode_checks": {
+    "import_blocked": true,
+    "report_blocked": true
+  },
+  "new_api_calls": 0,
+  "credentials_read": false,
+  "business_code_changed": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "手选故障诊断不代表随机网页总体错误率",
+    "本轮未联网回查供应商许可、详情接口、平台身份或地区报价",
+    "未知CSS拒绝只验证相应明确错误分支"
+  ]
+}

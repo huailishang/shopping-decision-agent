@@ -1,0 +1,27 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "PREP-BASELINE-GAP",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py",
+    "--check",
+    "behavior",
+    "--frozen-sha",
+    "fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832",
+    "--out",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/preparation/current_behavior_probe"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py --check behavior --frozen-sha fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832 --out handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/preparation/current_behavior_probe",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-17T08:13:33.545275+00:00",
+  "finished_at_utc": "2026-11-17T08:13:35.790655+00:00",
+  "exit_code": 1,
+  "stdout_path": "PREP-BASELINE-GAP.stdout.log",
+  "stderr_path": "PREP-BASELINE-GAP.stderr.log",
+  "stdout_bytes": 549,
+  "stderr_bytes": 0,
+  "stdout_sha256": "02dbd30e44abfb6d2e81410a178bbc04a1abc8198ffe82e920db0c2cfb59ac0e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

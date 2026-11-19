@@ -19,6 +19,13 @@ public final class P04MarketplaceRegression {
             command.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
         return DesktopBridgeClient.invoke(new ProcessBuilder(command), 10_000);
     }
+    private static Map<String,String> invoke(String python, String query, String links, String platform) throws Exception {
+        List<String> command = new ArrayList<>();
+        command.add(python); command.add("-m"); command.add("shopping_decision.discovery_bridge");
+        for (String value : List.of(query, links, platform))
+            command.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
+        return DesktopBridgeClient.invoke(new ProcessBuilder(command), 10_000);
+    }
     public static void main(String[] args) throws Exception {
         if (args.length != 1) throw new IllegalArgumentException("Usage: P04MarketplaceRegression <python>");
         URI search = ShoppingDecisionDesktop.marketplaceSearchUri("冰箱 500L");
@@ -48,6 +55,18 @@ public final class P04MarketplaceRegression {
         Map<String,String> wrong = invoke(args[0], "冰箱", "https://item.jd.com.evil.net/100126724020.html");
         check("no_valid_candidates".equals(wrong.get("status")), "spoofed host must be rejected");
         System.out.println("PASS spoofed URL rejected");
-        System.out.println("P04 Java marketplace regression: 4/4 PASS");
+        URI taobao = ShoppingDecisionDesktop.marketplaceSearchUri("打印机 微信", "taobao");
+        check("s.taobao.com".equals(taobao.getHost()), "taobao search host must be official");
+        System.out.println("PASS Taobao browser search URL");
+
+        Map<String,String> tb = invoke(args[0], "打印机",
+                "https://item.taobao.com/item.htm?id=1234567890", "taobao");
+        check("candidates_unverified".equals(tb.get("status")), "Taobao candidate status wrong");
+        check(tb.getOrDefault("candidate_urls", "").equals("https://item.taobao.com/item.htm?id=1234567890"),
+              "candidate link was not normalized by Python");
+        String forbidden = Character.toString((char)34) + "transactions_enabled" + Character.toString((char)34) + ": false";
+        check(tb.getOrDefault("report_json", "").contains(forbidden), "must not trade");
+        System.out.println("PASS Java->Python Taobao user link validation");
+        System.out.println("P04 Java marketplace regression: 6/6 PASS");
     }
 }

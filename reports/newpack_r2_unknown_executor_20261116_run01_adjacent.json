@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-16",
+  "role": "executor_replay_of_published_independent_probes",
+  "original_probe_author": "independent_reviewer",
+  "diagnostic_not_recommendation_accuracy": true,
+  "records": [
+    {
+      "id": "A01",
+      "expectation": "explicit material category is preserved for legacy caller without a category",
+      "passed": true,
+      "actual": {
+        "category": "printer",
+        "binding": "material_explicit"
+      }
+    },
+    {
+      "id": "A02",
+      "expectation": "old unscoped contract stays explicitly unscoped",
+      "passed": true,
+      "actual": {
+        "category": null,
+        "binding": "legacy_unscoped"
+      }
+    },
+    {
+      "id": "A03",
+      "expectation": "render layer also rejects relabelling precomputed printer checks",
+      "passed": true,
+      "actual": {
+        "error": "research_snapshot_category_mismatch"
+      }
+    },
+    {
+      "id": "A04",
+      "expectation": "typed user question survives wording without question marks",
+      "passed": true,
+      "actual": {
+        "questions": [
+          "请告知实际部署国家地区"
+        ]
+      }
+    },
+    {
+      "id": "A05",
+      "expectation": "confirmed overseas deployment asks for evidence instead of repeating region question",
+      "passed": true,
+      "actual": {
+        "questions": [],
+        "next_action": "verify_missing_hard_model_evidence"
+      }
+    },
+    {
+      "id": "A06",
+      "expectation": "withdrawn product evidence does not become an unnecessary user question",
+      "passed": true,
+      "actual": {
+        "questions": [],
+        "next_action": "verify_missing_hard_model_evidence"
+      }
+    },
+    {
+      "id": "A07",
+      "expectation": "cleared conflict does not leave a stale conflict question/action",
+      "passed": true,
+      "actual": {
+        "before": "resolve_user_condition_conflict",
+        "after": "verify_missing_hard_model_evidence"
+      }
+    },
+    {
+      "id": "A08",
+      "expectation": "explicit missing/unknown region representation remains a user-input question",
+      "passed": true,
+      "actual": {
+        "region": "未知",
+        "questions": [
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替"
+        ],
+        "next_action": "clarify_user_conditions",
+        "wechat_relations": [
+          "deployment_region_unconfirmed",
+          "deployment_region_unconfirmed"
+        ]
+      }
+    },
+    {
+      "id": "A09",
+      "expectation": "explicit missing/unknown region representation remains a user-input question",
+      "passed": true,
+      "actual": {
+        "region": "待确认",
+        "questions": [
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替"
+        ],
+        "next_action": "clarify_user_conditions",
+        "wechat_relations": [
+          "deployment_region_unconfirmed",
+          "deployment_region_unconfirmed"
+        ]
+      }
+    },
+    {
+      "id": "A10",
+      "expectation": "explicit missing/unknown region representation remains a user-input question",
+      "passed": true,
+      "actual": {
+        "region": "   ",
+        "questions": [
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替"
+        ],
+        "next_action": "clarify_user_conditions",
+        "wechat_relations": [
+          "deployment_region_unconfirmed",
+          "deployment_region_unconfirmed"
+        ]
+      }
+    },
+    {
+      "id": "A11",
+      "expectation": "normal Web and desktop Python subprocess preserve unknown-marker user region question",
+      "passed": true,
+      "actual": {
+        "web_questions": [
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替"
+        ],
+        "desktop_questions": [
+          "微信服务实际部署地区尚未确认，不能用收货地或当前登录地代替"
+        ],
+        "web_next_action": "clarify_user_conditions",
+        "desktop_next_action": "clarify_user_conditions",
+        "purchase_approved": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "id": "A12",
+      "expectation": "known region with unconfirmed workflow asks only for missing workflow",
+      "passed": true,
+      "actual": {
+        "questions": [
+          "微信必须用小程序直接打印，还是允许文件转到厂家App？"
+        ],
+        "next_action": "clarify_user_conditions"
+      }
+    }
+  ],
+  "total": 12,
+  "passed": 12,
+  "failed_ids": [],
+  "remaining_root_cause": "R2 incomplete normalization of missing deployment region representations",
+  "new_external_sources": 0,
+  "formal_holdout_run": false
+}

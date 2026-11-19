@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-11-17T13:40:44.523266+00:00",
+  "submitted_files": 430,
+  "submitted_differences": [],
+  "protected_files": 338,
+  "protected_differences": [],
+  "task_verdict": "PASS",
+  "l3_checks_passed": 6,
+  "frozen_conditions_passed": 16,
+  "adjacent_checks_passed": 13,
+  "full_tests_passed": 464,
+  "product_modified_by_evaluator": false,
+  "routing_validation_exit_code": 0
+}

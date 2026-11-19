@@ -1,0 +1,27 @@
+{
+  "schema": "adapter-repair-changes/v1",
+  "recorded_at_utc": "2026-11-19T06:22:09.545152+00:00",
+  "task_id": "PRINTER-MODEL-ADAPTER-REPAIR-20261119",
+  "changed_by_this_executor": [
+    "shopping_decision/model_comparison.py",
+    "tests/test_model_comparison.py",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/REPORT.md",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-MODEL-ADAPTER-REPAIR-20261119/evidence/provider_preflight.json",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-MODEL-ADAPTER-REPAIR-20261119/evidence/validation_summary.json",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-MODEL-ADAPTER-REPAIR-20261119/REPORT.md",
+    "CURRENT.md"
+  ],
+  "historical_raw_attempts_modified": false,
+  "real_model_calls": 0,
+  "git_commit": false,
+  "git_push": false,
+  "sha256": {
+    "shopping_decision/model_comparison.py": "cfd10468c53cbba0f2cf8cd7524fd0a675b5279582b3950fa4dc41ba8228223d",
+    "tests/test_model_comparison.py": "e5cd7961eb0cc08d2c175c6a663737f15748e2a89d91fe06d76ccd72b0fe5ed9",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/REPORT.md": "5fca6f87897657cb01b2568a346135abb4d11fca637e5a214325293edf34f674",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-MODEL-ADAPTER-REPAIR-20261119/evidence/provider_preflight.json": "dfbb8722c281f397d00ada73d29e82e62412aa4e6c5dc4e6866e8803865fcfc0",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-MODEL-ADAPTER-REPAIR-20261119/evidence/validation_summary.json": "70be4e6e7c27c436f70c676c0cee515cc7c776533fd171ac9c5100d2d19367e4",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-MODEL-ADAPTER-REPAIR-20261119/REPORT.md": "25398533e99bf6a1b24c30c95e08b2a0c8fb7ffe018f06b0959684fe21f8f6e9",
+    "CURRENT.md": "05c4af52a5a32a60f710e5e70fd031212dc5cb70377e683df048b3501c219c49"
+  }
+}

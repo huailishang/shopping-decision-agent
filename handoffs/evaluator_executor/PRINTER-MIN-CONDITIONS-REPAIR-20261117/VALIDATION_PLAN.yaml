@@ -1,0 +1,115 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-MIN-CONDITIONS-REPAIR-20261117
+checks:
+- id: VP-01
+  ac:
+  - AC-03
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_scope.py
+  - --check
+  - frozen
+  - --frozen-sha
+  - aadb26287cb2d30a42b8766690db3c3d3458962388ed5b53f85f9219408681ae
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-02
+  ac:
+  - AC-01
+  - AC-02
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_conditions.py
+  - --out
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/executor_conditions
+  expected_exit_code: 0
+  mandatory: true
+  evaluator_command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_conditions.py
+  - --out
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/evaluator_conditions
+- id: VP-03
+  ac:
+  - AC-02
+  - AC-03
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/check_delivery.py
+  - --check
+  - flow
+  - --frozen-sha
+  - 560fe9a30e949def2a0cdc0992a0d8499cb7e38cb3bea106b81cb8b564e3b8b8
+  - --out
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/executor_flow
+  expected_exit_code: 0
+  mandatory: true
+  evaluator_command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/check_delivery.py
+  - --check
+  - flow
+  - --frozen-sha
+  - 560fe9a30e949def2a0cdc0992a0d8499cb7e38cb3bea106b81cb8b564e3b8b8
+  - --out
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/evidence/evaluator_flow
+- id: VP-04
+  ac:
+  - AC-01
+  - AC-02
+  - AC-03
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - -c
+  - import sys,unittest; s=unittest.defaultTestLoader.discover('tests',pattern='test_minimal_research_flow.py');
+    assert s.countTestCases()>=14, 'existing focused cases removed'; r=unittest.TextTestRunner(verbosity=2).run(s);
+    sys.exit(0 if r.wasSuccessful() else 1)
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-05
+  ac:
+  - AC-03
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - -m
+  - unittest
+  - discover
+  - -s
+  - tests
+  - -v
+  expected_exit_code: 0
+  mandatory: true
+- id: VP-06
+  ac:
+  - AC-03
+  cwd: .
+  command:
+  - python
+  - -X
+  - utf8
+  - handoffs/evaluator_executor/PRINTER-MIN-CONDITIONS-REPAIR-20261117/check_scope.py
+  - --check
+  - ledger
+  - --frozen-sha
+  - aadb26287cb2d30a42b8766690db3c3d3458962388ed5b53f85f9219408681ae
+  expected_exit_code: 0
+  mandatory: true

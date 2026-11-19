@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "case_id": "REAL-PRINTER-H08B-20261113",
+  "review_status": "research_only_pending_independent_review",
+  "captured_on": "2026-11-13",
+  "usage_limit": "short_source_attributed_research_summary_only; no licensed marketplace feed, model training, scraped content reuse, price approval, or buying decisions",
+  "sources": [
+    {
+      "id": "R1",
+      "group": "brother_cn_product_HL_L1238W",
+      "source_kind": "manufacturer_product",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "claim": "HL-L1238W为黑白激光打印机；官网说明微信小程序打印，并列出鼓粉分离耗材TN118和DR118。",
+      "counter": "厂家功能说明不等于家中设备连接实测；型号页面建议零售价不是地区到手价，耗材页数不等于用户实际替换成本。",
+      "scope": "仅中国区HL-L1238W的厂家宣称，非平台在售SKU",
+      "fact_audit": "public_page_read_2026-11-13; pending independent",
+      "source_group": "brother_cn"
+    },
+    {
+      "id": "R2",
+      "group": "brother_cn_cloud_page_terms",
+      "source_kind": "manufacturer_terms",
+      "url": "https://www.brother.cn/sp/static/portal/terms/zh/index.html",
+      "claim": "HL-10W打印页数套餐，套餐用尽后需再购买才可继续打印；双面每面计页。",
+      "counter": "仅适用于厂商协议所列套餐机型，不能推广到HL-L1238W、惠普或一般激光；实际套餐金额/优惠未核验。",
+      "scope": "协议列明的HL-10W等页数套餐商品",
+      "fact_audit": "public_page_read_2026-11-13; pending independent",
+      "source_group": "brother_cn"
+    },
+    {
+      "id": "R3",
+      "group": "hp_cn_home_laser",
+      "source_kind": "manufacturer_product_overview",
+      "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+      "claim": "惠普中国家庭激光产品列表写明M232dw具自动双面、打印复印扫描、微信小程序打印。",
+      "counter": "厂家产品概览不证明具体地区在售SKU、默认选项、实际价格、库存，也不能对其他惠普机型外推。",
+      "scope": "HP M232dw厂家中国区产品概览",
+      "fact_audit": "public_page_read_2026-11-13; pending independent",
+      "source_group": "hp_cn"
+    },
+    {
+      "id": "R4",
+      "group": "brother_cn_wechat_manual",
+      "source_kind": "manufacturer_support",
+      "url": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all",
+      "claim": "2026-10-20更新的微信畅享印指南要求首次打印前绑定设备，适用机型清单包括HL-L1238W等。",
+      "counter": "微信小程序需绑定和实际网络环境，官网名单不能等同用户手边成功联机；不得与另一版清单混同。",
+      "scope": "中国Brother畅享印指定机型列表",
+      "fact_audit": "public_page_read_2026-11-13; pending independent",
+      "source_group": "brother_cn"
+    },
+    {
+      "id": "R5",
+      "group": "hk_consumer_council_issue_492",
+      "source_kind": "independent_historical_test",
+      "url": "https://www.consumer.org.hk/sc/article/492-4445",
+      "claim": "香港消委会2017年历史比较显示部分家用喷墨设备的长期墨水支出可能超过购机成本，提示应核算总拥有成本。",
+      "counter": "2017年香港喷墨样本不代表2026大陆黑白激光SKU或实际品牌排名；不能借历史价格推本次到手价。",
+      "scope": "历史香港喷墨比较，非两个目标型号的横评",
+      "fact_audit": "public_page_read_2026-11-13; pending independent",
+      "source_group": "hk_consumers"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CASE-01",
+      "rule": "home_monochrome_outsource",
+      "description": "家中黑白+偶尔彩印外包时先比较黑白路线，彩色机不能仅因可彩印自动更优。",
+      "support_ids": [],
+      "basis": "user_explicit_constraints",
+      "counter": "一旦改答要求家中彩印，这个取舍应立即撤销",
+      "applies_when": "needs_color=false and accepts_outsourced_color=true"
+    },
+    {
+      "id": "CASE-02",
+      "rule": "wechat_specific_model",
+      "description": "用户希望微信打印时，需核对具体型号的小程序/绑定流程；不能把普通Wi-Fi或手机打印替代微信，也不自动把“希望”升级为硬性必须。HP微信云打印还存在中国大陆地域限制证据。",
+      "support_ids": [
+        "R1",
+        "R3",
+        "R4",
+        "R6",
+        "R7",
+        "R9",
+        "R10",
+        "R14",
+        "R15"
+      ],
+      "basis": "limited_manufacturer_facts",
+      "counter": "原案只表达偏好，未确认微信小程序为硬门槛；HP地域答复来自2024年支持社区员工回复；实际部署地、Brother境外可用性和本地绑定均未知。",
+      "applies_when": "wechat_required=true"
+    },
+    {
+      "id": "CASE-03",
+      "rule": "low_volume_cost_model",
+      "description": "0–50页/月属于低频区间，需要核对主机、耗材、维护与闲置适用性。Brother HL-L1238W为鼓粉分离且标称TN118约1500页/DR118约10000页；HP M232dw厂家建议月打印量200–2000页，低于原案区间但不是硬性最低门槛。",
+      "support_ids": [
+        "R1",
+        "R2",
+        "R5",
+        "R6",
+        "R8",
+        "R11",
+        "R13"
+      ],
+      "basis": "manufacturer_terms_and_historical_cost_context",
+      "counter": "没有耗材当前价、实际页数、闲置实测或总拥有成本；Brother未找到厂家建议月印量。不得用标称页数直接判断谁更省钱。",
+      "applies_when": "monthly_pages_range available"
+    },
+    {
+      "id": "CASE-04",
+      "rule": "scan_tradeoff",
+      "description": "如果必须扫描复印，需要优先核实具多功能的型号，例如惠普M232dw；打印单功能与一体机不能只比较无线和价格。",
+      "support_ids": [
+        "R1",
+        "R3",
+        "R6",
+        "R8",
+        "R9",
+        "R13"
+      ],
+      "basis": "manufacturer_model_specific",
+      "counter": "是否需要扫描仍未真人确认，且两个型号都没有真实SKU/地区报价",
+      "applies_when": "requires_scan=true"
+    },
+    {
+      "id": "CASE-05",
+      "rule": "duplex_tradeoff",
+      "description": "如果自动双面变成硬条件，需重新核验所售配置的双面能力。惠普官网只对M232dw等具体型号宣称自动双面，不能外推整个品牌。",
+      "support_ids": [
+        "R3",
+        "R8",
+        "R9",
+        "R11",
+        "R13"
+      ],
+      "basis": "manufacturer_model_specific",
+      "counter": "此处还没有所选销售项、预算及实际售后报价；其他型号能力未知。",
+      "applies_when": "requires_auto_duplex=true"
+    },
+    {
+      "id": "CASE-06",
+      "rule": "budget_tradeoff",
+      "description": "当前预算上限为{budget_max_cny}元：Brother HL-L1238W厂家建议零售价1906元，高于预算，但这不是实际成交价；HP M232dw当前没有可核验地区报价。当前两款都不能判预算通过。",
+      "support_ids": [
+        "R6",
+        "R9"
+      ],
+      "basis": "manufacturer_list_price_and_missing_regional_quote",
+      "counter": "厂家建议零售价不等于促销到手价；没有店铺、型号、库存、券、运费和收货地区，不能按此直接排除或批准购买。",
+      "applies_when": "budget_max_cny is known"
+    },
+    {
+      "id": "CASE-07",
+      "rule": "reliability_limit",
+      "description": "原案重视可靠耐用，但目前两款证据都是厂家规格、设置流程和耗材说明，没有独立故障率、寿命或长期闲置测试；因此不能给Brother或HP耐用性排名。",
+      "support_ids": [
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "R10",
+        "R11",
+        "R13"
+      ],
+      "basis": "evidence_gap_and_scope_audit",
+      "counter": "未发现独立横评不等于产品不耐用；后续需有可比方法、样本和型号对应的长期证据。",
+      "applies_when": "requirements mention reliability or durability"
+    },
+    {
+      "id": "CASE-08",
+      "rule": "wechat_region_limit",
+      "description": "微信打印偏好还要核设备部署地区：HP支持人员曾回复M232dw微信云打印仅限中国大陆；Brother中国官方清单列出HL-L1238W，但未说明境外服务范围。",
+      "support_ids": [
+        "R10",
+        "R14",
+        "R15"
+      ],
+      "basis": "manufacturer_setup_guide_and_support_staff_reply",
+      "counter": "HP地域信息来自2024年支持社区员工答复，不是当前正式服务条款；Brother境外范围未知；用户尚未提供实际部署地。",
+      "applies_when": "wechat preference or hard requirement is present"
+    },
+    {
+      "id": "CASE-09",
+      "rule": "color_required",
+      "description": "如果改成必须在家打印彩色，Brother HL-L1238W和HP M232dw均是黑白激光型号，不能满足该硬条件；原来只比较黑白路线的理由应撤销。",
+      "support_ids": [
+        "R6",
+        "R13"
+      ],
+      "basis": "manufacturer_exact_model_category",
+      "counter": "如接受彩印外包则不触发该排除；本轮仅对这两个目标型号作判断。",
+      "applies_when": "needs_color=true"
+    }
+  ]
+}

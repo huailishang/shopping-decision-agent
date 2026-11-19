@@ -1,0 +1,25 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "PREP-FROZEN",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py",
+    "--check",
+    "frozen",
+    "--frozen-sha",
+    "fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/check_delivery.py --check frozen --frozen-sha fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-17T08:13:33.541536+00:00",
+  "finished_at_utc": "2026-11-17T08:13:33.869025+00:00",
+  "exit_code": 0,
+  "stdout_path": "PREP-FROZEN.stdout.log",
+  "stderr_path": "PREP-FROZEN.stderr.log",
+  "stdout_bytes": 66,
+  "stderr_bytes": 0,
+  "stdout_sha256": "94676158f13d80fcb69a52c7d72483da2f01de06e763f1134bdb77e0c2f3dd8e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

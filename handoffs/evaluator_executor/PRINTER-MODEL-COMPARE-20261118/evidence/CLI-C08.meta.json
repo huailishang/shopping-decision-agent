@@ -1,0 +1,17 @@
+{
+  "command_argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "shopping_decision.model_comparison",
+    "--bundle",
+    "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-MODEL-COMPARE-20261118\\evidence\\live\\C08-01\\request.json"
+  ],
+  "started_at_utc": "2026-11-18T02:45:24.160493+00:00",
+  "finished_at_utc": "2026-11-18T02:45:24.560140+00:00",
+  "exit_code": 0,
+  "stdout_sha256": "c51258fb3a65c203a47b7fd3107ff1f28943fdd41813b1a2f6c5ec9dcfc1bcca",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "mode": "actual_offline_product_cli_not_model_inference"
+}

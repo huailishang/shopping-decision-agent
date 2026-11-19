@@ -2,6 +2,22 @@
 
 > **先懂品类，再选商品；先有证据，再给推荐；先核验订单，再由用户授权交易。**
 
+> **2026-11-16 当前入口**：先读 [CURRENT.md](CURRENT.md)及[唯一原长包](handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md)。旧R1/R2独立限界关闭，旧工程B限定通过。[新对话式Java主入口](reports/对话式购物需求主入口_执行者交付报告_20261116.md)已实现，并经[评估者独立工程回归](reports/购物智能体现状_独立评估_20261116.md)有限通过；执行者随后按意见补充[实际可见Swing审计另存/UTF-8逐字读回证据](reports/对话式GUI审计与河南原案条件复核_执行报告_20261116.md)，141972字节存档，Python全量434/434、ChatBridge/H10/P04各6/6再次通过。**此为程序化窗口测试，仍待独立人工可用性复核**。河南亲戚家庭样本已由项目负责人代述首次App扫码可接受、设备位于中国大陆河南省，微信必须/偏好未明确；微信三种条件在现有材料下无实质决策差异。地区SKU和有效价、实机复用、认知真实增益仍缺，正式36条未启动；H1/H2/H3及总体NOT PASS不变。历史阶段数字按对应日期解读。
+
+> **2026-11-15 历史执行状态**：长包内部 F1—F5 已修复、最小版本化打印机选购依据已接现有 CLI 与 Java Swing；执行者自测 Python **385/385**、11轮条件回放、Swing程序化 **5/5**（含新路径保存）、H05 **8/8**、Java H10/P04各 **6/6**。这些不是独立评估批准。海纳真实用途和两个型号可回查原值仍缺（H1 BLOCKED）；平台真实销售配置身份 **0/2**、地区现价 **0**、购买与交易关闭，整体仍 **NOT PASS**。先看 [CURRENT.md](CURRENT.md)、[执行报告](reports/认知驱动打印机比较_执行报告_20261115_run01.md) 和 [机器索引](reports/cognition_printer_delivery_20261115_run01.json)；此前各历史阶段的自测数字请按原日期解读。
+
+**离线重算（仅研究，不调用海纳 API / Key / 商城）**：
+
+```bash
+# 在项目根目录，设置 UTF-8 供子进程继承
+PYTHONUTF8=1 python3 -m scripts.cognition_case_replay --output reports/自选未存在的回放文件.json
+PYTHONUTF8=1 python3 -X utf8 -m unittest discover -s tests -q
+# 原有CLI仍可使用：
+PYTHONUTF8=1 python3 -m shopping_decision.dialogue_flow --real-printer-case
+```
+
+新版条件规则和来源见 `knowledge/printer_selection_criteria.json`，单位/撤回/版本/来源门禁见 `shopping_decision/selection_criteria.py`。原案对比与各模拟改答已在 [run02回放](reports/cognition_case_replay_20261115_run02.json) 留证；当前没有得到真实海纳数据使用权限或地区报价的购买结论。
+
 项目定位：面向商品、服务及可预订产品的**购买决策智能体**。目前只建设「需求理解 → 品类认知 → 评测证据 → 候选商品 → 比较推荐 → 交易草稿 → 安全交接」能力；暂不自动消费真实资金。**知识不是按品类全部预建：通用决策方法长期复用，每次只按缺口查必要专业资料**（详见[按需品类认知与跨品类复用](docs/06_按需品类认知与跨品类复用.md)）。
 
 ## 目标与边界
@@ -127,3 +143,19 @@ python3 -m shopping_decision.h05_probes
 ```
 
 首批产品事实在 `knowledge/printer_products_official.json`（兄弟3款+HP2款；型号、源URL、功能证据、耗材和厂商建议零售价），通用比较器为 `shopping_decision/product_compare.py`；没有联网的实时京东/淘宝到手价、库存或平台SKU。现有Java桌面启动方式不变。**官网建议零售价不是实际到手价**；如果无法核验当前购买价格，所有预算判定必须显示未知。Brother公开目录已经能发现额外型号，但发现记录并不自动成为经过确认的商品功能。查看 [P0执行报告](reports/P0_真实商品候选与比较_执行报告_20261104.md) 和 [CURRENT.md](CURRENT.md)。
+
+## 2026-11-15 海纳 MCP 离线接线与打印机型号比较
+
+已基于仓库内 2026-11-14 的脱敏探针结构，实现 SKU、基础信息、参数、评价四类 MCP 响应的**合成适配器**。固定夹具为 `tests/fixtures/haina_mcp_synthetic_bundle.json`，SHA-256 为 `bd1de6e313b6fcfd854e53287e5a2d91363a9c697790e984c7a5df97cd61db0d`。普通启动不会读取；CLI/桌面显式加载也只接受该固定路径与哈希。任意 JSON 即使自标 `synthetic_test` 也会被拒绝。
+
+离线复验：
+
+```bash
+python3 -m unittest tests.test_haina_mcp_ingest tests.test_real_printer_case_research -v
+
+echo '{"text":"离线合成测试","answers":{"category":"printer","usage":"家用","needs_color":false,"accepts_outsourced_color":true,"monthly_pages_range":[0,50],"budget_max_cny":1000}}' | python3 -m shopping_decision.dialogue_flow --haina-mcp-report tests/fixtures/haina_mcp_synthetic_bundle.json --real-printer-case
+```
+
+此入口只验证字段解析、型号冲突、来源分级、数量核对和CLI/桌面桥接，不代表真实海纳商品数据接入或商品比较效果。真实响应目前仍被阻断：完整MCP开发者合作协议及本机解析、个人展示、最小审计/缓存、模型传输等具体用途许可尚未取得；原始探针响应也未保存。禁止把真实响应改名为合成数据绕过限制。
+
+打印机公开厂家资料比较报告：[两型号比较](reports/打印机两型号公开证据比较_20261115.md)；已有海纳探针结构和身份缺口：[探针核对](reports/海纳MCP已有真实探针结构与身份缺口_20261115.md)。其中Brother HL-L1238W缺平台商品身份字段；HP M232dw供应商ID尚未证明为平台原生ID，且需与M232dwc严格区分。比较已覆盖9个维度和3条条件取舍。微信打印、电压、耗材和保修都受设备实际部署地区影响；Java桌面端已将收货地区与设备部署地区分成两个字段，实际部署地仍未确认。当前平台身份核验0/2、地区有效报价0、购买批准关闭。

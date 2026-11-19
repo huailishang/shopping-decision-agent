@@ -1,0 +1,12 @@
+test_both_arms_share_hard_gate_and_no_dynamic_facts (tests.test_printer_effect_development.PrinterEffectDevelopmentTests.test_both_arms_share_hard_gate_and_no_dynamic_facts) ... ok
+test_color_exclusion_does_not_reactivate_hp_volume_advantage (tests.test_printer_effect_development.PrinterEffectDevelopmentTests.test_color_exclusion_does_not_reactivate_hp_volume_advantage) ... ok
+test_missing_setup_source_does_not_claim_source_support (tests.test_printer_effect_development.PrinterEffectDevelopmentTests.test_missing_setup_source_does_not_claim_source_support) ... ok
+test_no_unasked_wechat_workflow_question (tests.test_printer_effect_development.PrinterEffectDevelopmentTests.test_no_unasked_wechat_workflow_question) ... ok
+test_open_development_report_not_36_blind_gold (tests.test_printer_effect_development.PrinterEffectDevelopmentTests.test_open_development_report_not_36_blind_gold) ... ok
+test_original_has_two_grounded_issues_and_three_routes_not_checkout (tests.test_printer_effect_development.PrinterEffectDevelopmentTests.test_original_has_two_grounded_issues_and_three_routes_not_checkout) ... ok
+test_source_withdrawal_lowers_only_affected_claim (tests.test_printer_effect_development.PrinterEffectDevelopmentTests.test_source_withdrawal_lowers_only_affected_claim) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.394s
+
+OK

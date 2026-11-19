@@ -1,0 +1,18 @@
+{
+  "task_id": "PRINTER-MIN-E2E-20261117",
+  "actual_attempt": "检查冻结前CLI正常输出与本次selected pack CLI输出，确认普通路径是否消费了相同选包",
+  "baseline_cli_stdout": {
+    "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/preparation/baseline.stdout.jsonl",
+    "sha256": "c89302757eca92c2c74893bed09bd3ca0bb101d72d16bcd64eb7e477a122be5e"
+  },
+  "new_selected_cli_stdout": {
+    "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/after_local_fix/main_two_facts.stdout.jsonl",
+    "sha256": "a6adbada71d9222a582171dce4630fda7d4dd15779e4146dc9a39204564f8faa"
+  },
+  "baseline_selected_pack_present": false,
+  "new_selected_pack_id": "setup_two",
+  "baseline_existing_sources": "旧普通比较使用默认商品/规格与研究源，未按本r1固定选包隔离",
+  "finding": "no_same_evidence_basic_arm",
+  "reason": "旧普通筛选不能接收同一个固定setup_two证据包并只用R7/R10；新有据路径用当前固定包。两者并非同一证据/权限范围，不可公平比较效果。不能复制同一输出贴两个标签或重建新框架凑评测。",
+  "scope": "真实可复现的兼容性检查；不是人为传入错误参数诱造失败"
+}

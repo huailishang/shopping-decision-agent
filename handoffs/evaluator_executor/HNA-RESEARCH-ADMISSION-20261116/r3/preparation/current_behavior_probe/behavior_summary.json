@@ -1,0 +1,20 @@
+{
+  "cases_checked": 3,
+  "passed": 0,
+  "results": [],
+  "errors": [
+    {
+      "case": "original_proxy",
+      "error": "decision_plan missing: existing output is insufficient"
+    },
+    {
+      "case": "hypothetical_wechat_required",
+      "error": "decision_plan missing: existing output is insufficient"
+    },
+    {
+      "case": "hypothetical_wechat_optional",
+      "error": "decision_plan missing: existing output is insufficient"
+    }
+  ],
+  "limit": "Normal local entry behavior, not new material acquisition or real-user effectiveness."
+}

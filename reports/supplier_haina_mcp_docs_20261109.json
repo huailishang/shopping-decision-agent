@@ -1,0 +1,18 @@
+{
+  "url": "https://ai.zhidemai.com/haina-platform/haina_mcp",
+  "text": "反馈\n海纳开放平台目前处于 Beta 测试阶段，接口能力、调用限制及服务策略可能持续调整。\n查看详情\n×\n什么值得买 · 海纳\n海纳 Agent\n海纳开放平台\n联系商务\n登录 / 注册\n概览API Key 管理使用统计\n海纳能力列表\n▾\n内容检索\nAPI\n内容检索 Pro\nAPI\n图搜商品\nAPI\n商品检索 Pro\nAPI\n好价检索 Pro\nAPI\n知识图谱检索\nAPI\n海纳 MCP\nMCP\n海纳 MCP\n\n以 MCP Server（Streamable HTTP）形式开放海纳能力，大模型与 Agent 可直接把能力当作工具调用。\n\nMCP 服务地址\nhttps://gw-openapi.zhidemai.com/ai-mcp/streamable/mcp\n复制\n传输协议\nStreamable HTTP（JSON-RPC 2.0）\n建议超时\n60s\n鉴权：在客户端配置的请求头中填写 x-api-key，与其他能力共用同一个 Key\n可用工具由客户端连接后自动获取，无需手动配置\n快速开始\n在「API Key 管理」中确认所用 Key 已开通「海纳 MCP」\n复制右侧「客户端配置」，粘贴到客户端的 MCP 设置中（或手动添加远程 MCP Server：地址填上方 MCP 服务地址，请求头加 x-api-key）\n客户端连接成功后会自动列出工具，对话中由模型按需调用\n客户端配置可在右侧「客户端配置」中复制。\n调用计数\n每次调用工具时，平台会以同一个 Key 执行对应的底层能力，计 1 次，在「使用统计」中记为该能力的「MCP 调用」；「海纳 MCP」的用量即 6 个能力工具调用次数之和\n建立会话、获取工具列表等协议请求不调用底层能力，不计入能力用量，在「使用统计」底部单独提示次数\n建议复用会话：建立一次会话后连续调用工具，可减少协议请求\n限流\nQPS：按 Key 在每个接口上分别限制，各 Key 的上限见「API Key 管理」中的 QPS 列；超出后返回 HTTP 429，等待 1 秒后重试\n建议复用会话：建立一次会话后连续调用工具，不要每次调用都重新 initialize，可显著减少请求次数和触发限流的概率\n常见错误\n返回\t原因\n401 unauthorized\t缺少 x-api-key 或 Key 无效\n403 forbidden\tKey 有效但未开通「海纳 MCP」，或 Key 已暂停使用 / 被平台停用\n429\t超过 QPS 上限，或开发 Key 的调用额度已用完\n工具返回执行失败\t通常是工具参数不符合要求，可在对话中补充更明确的条件后重试\n客户端配置\n填入我的 API Key\n暂无有效 API Key\n登录并申请 API Key 后，可直接填入示例代码\n适用于支持远程 MCP（Streamable HTTP）的客户端，如 Cursor、Cherry Studio 等；字段名以各客户端文档为准。\n复制\n{\n  \"mcpServers\": {\n    \"haina\": {\n      \"type\": \"streamable-http\",\n      \"url\": \"https://gw-openapi.zhidemai.com/ai-mcp/streamable/mcp\",\n      \"headers\": {\n        \"x-api-key\": \"your_api_key\"\n      }\n    }\n  }\n}",
+  "links": [
+    {
+      "text": "什么值得买 · 海纳",
+      "url": "https://ai.zhidemai.com/"
+    },
+    {
+      "text": "海纳 Agent",
+      "url": "https://ai.zhidemai.com/haina"
+    },
+    {
+      "text": "海纳开放平台",
+      "url": "https://ai.zhidemai.com/haina-platform"
+    }
+  ]
+}

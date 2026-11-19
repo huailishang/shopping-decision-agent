@@ -1,0 +1,204 @@
+{
+  "role": "independent_evaluator",
+  "date": "2026-11-16",
+  "scope": "public_development_explicit_answer_completion_not_real_shopping_effect",
+  "case_count": 6,
+  "reference_items": 15,
+  "single_arm_annotations": 30,
+  "groups": {
+    "baseline": {
+      "tasks": 15,
+      "pass": 13,
+      "partial": 2,
+      "fail": 0,
+      "complete_cases": 4,
+      "case_count": 6,
+      "case_scores": {
+        "D01-original": {
+          "pass": 3,
+          "partial": 1,
+          "tasks": 4
+        },
+        "D02-miniprogram-outside": {
+          "pass": 2,
+          "partial": 0,
+          "tasks": 2
+        },
+        "D03-color-hard": {
+          "pass": 2,
+          "partial": 0,
+          "tasks": 2
+        },
+        "D04-scan-hard": {
+          "pass": 3,
+          "partial": 0,
+          "tasks": 3
+        },
+        "D05-budget-raised": {
+          "pass": 2,
+          "partial": 0,
+          "tasks": 2
+        },
+        "D06-higher-volume": {
+          "pass": 1,
+          "partial": 1,
+          "tasks": 2
+        }
+      }
+    },
+    "cognition": {
+      "tasks": 15,
+      "pass": 14,
+      "partial": 1,
+      "fail": 0,
+      "complete_cases": 5,
+      "case_count": 6,
+      "case_scores": {
+        "D01-original": {
+          "pass": 4,
+          "partial": 0,
+          "tasks": 4
+        },
+        "D02-miniprogram-outside": {
+          "pass": 2,
+          "partial": 0,
+          "tasks": 2
+        },
+        "D03-color-hard": {
+          "pass": 2,
+          "partial": 0,
+          "tasks": 2
+        },
+        "D04-scan-hard": {
+          "pass": 3,
+          "partial": 0,
+          "tasks": 3
+        },
+        "D05-budget-raised": {
+          "pass": 2,
+          "partial": 0,
+          "tasks": 2
+        },
+        "D06-higher-volume": {
+          "pass": 1,
+          "partial": 1,
+          "tasks": 2
+        }
+      }
+    }
+  },
+  "paired_items": [
+    {
+      "task_id": "D01-original:T1",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D01-original:T2",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D01-original:T3",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D01-original:T4",
+      "baseline": "partial",
+      "cognition": "pass",
+      "same": false
+    },
+    {
+      "task_id": "D02-miniprogram-outside:T1",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D02-miniprogram-outside:T2",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D03-color-hard:T1",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D03-color-hard:T2",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D04-scan-hard:T1",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D04-scan-hard:T2",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D04-scan-hard:T3",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D05-budget-raised:T1",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D05-budget-raised:T2",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    },
+    {
+      "task_id": "D06-higher-volume:T1",
+      "baseline": "partial",
+      "cognition": "partial",
+      "same": true
+    },
+    {
+      "task_id": "D06-higher-volume:T2",
+      "baseline": "pass",
+      "cognition": "pass",
+      "same": true
+    }
+  ],
+  "same_items": 14,
+  "different_items": [
+    {
+      "task_id": "D01-original:T4",
+      "baseline": "partial",
+      "cognition": "pass",
+      "same": false
+    }
+  ],
+  "materially_changed_model_eligibility_cases": 0,
+  "new_external_sources": 0,
+  "manual_annotations": "reports\\printer_effect_e1_independent_20261116_run01_dev_single_arm_scores.json",
+  "mapping_read_after_annotation_file_written": true,
+  "reviewer_count": 1,
+  "strict_blinding_claimed": false,
+  "interpretation": "只在原案耐用性未知的显式说明上多完成1项；不证明选型/真实购买改善。D06两组共同只完成部分，不能靠补一句模板制造效果。",
+  "sensitivity": "若把没有作无据强断言也视作完成限缩说明，三项partial可同时放宽，两组均15/15、6/6，差异归零。保留该口径敏感性，不选择有利口径宣称增益。",
+  "formal_holdout_created": false,
+  "formal_holdout_started": false,
+  "formal_effect_estimate": null,
+  "purchase_approved": false,
+  "transactions_enabled": false
+}

@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "config_version": "2026-11-15-r1",
+  "status": "executor_source_checked_pending_independent_review",
+  "category": "printer",
+  "captured_on": "2026-11-15",
+  "market_scope": "CN model study; no platform SKU or regional price approval",
+  "source_registry": {
+    "C-598": {
+      "type": "independent_consumer_test_method",
+      "group": "HK_Consumer_Council_ICRT_598",
+      "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+      "published_on": "2026-08",
+      "checked_on": "2026-11-15",
+      "method": "打印/扫描/复印质速、休眠唤醒、安装便利、耗材每页成本分别评价",
+      "limit": "香港2026年彩色多功能样本；仅用于选择维度，不支持本案型号性能排名"
+    },
+    "R6": {
+      "type": "manufacturer",
+      "group": "brother_cn",
+      "url": "https://www.brother.cn/printer/prt/hl-l1238w",
+      "checked_on": "2026-11-15",
+      "limit": "厂家页面搜索摘录；直接打开403，1906为建议价"
+    },
+    "R7": {
+      "type": "manufacturer_setup",
+      "group": "brother_cn",
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+      "checked_on": "2026-11-15",
+      "limit": "厂商流程非实机成功证明"
+    },
+    "R9": {
+      "type": "manufacturer",
+      "group": "hp_cn",
+      "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+      "checked_on": "2026-11-15",
+      "limit": "厂家产品页不是平台现货"
+    },
+    "R10": {
+      "type": "manufacturer_setup",
+      "group": "hp_cn",
+      "url": "https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf",
+      "checked_on": "2026-11-15",
+      "limit": "系列安装指南，具体销售版本需复核"
+    },
+    "R11": {
+      "type": "manufacturer_datasheet",
+      "group": "hp_global",
+      "url": "https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07008164",
+      "checked_on": "2026-11-15",
+      "limit": "HP建议200—2000不是最低使用门槛；系列资料"
+    },
+    "R14": {
+      "type": "manufacturer_support_forum",
+      "group": "hp_cn_support_forum",
+      "url": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/qing-wen-zai-zhong-guo-nei-de-gou-mai-de-da-yin-ji-wu-xian-gong-neng-zai-zhong-guo-nei-de-yi-wai-de-qu-shi-bu-shi-ye-neng-yong/m-p/1313371/highlight/true",
+      "checked_on": "2026-11-15",
+      "limit": "2024支持员工答复；非当前服务承诺"
+    },
+    "R15": {
+      "type": "manufacturer_faq",
+      "group": "brother_cn",
+      "url": "https://www.brother.cn/minisite/bcnactivity/new-question00.html",
+      "checked_on": "2026-11-15",
+      "limit": "中国区清单，境外适用性未核"
+    }
+  },
+  "criteria": [
+    {
+      "id": "C-COLOR",
+      "why": "只有必须在家彩印才启用彩印硬门槛；不需要彩印不等于禁止彩色机",
+      "user_field": "needs_color",
+      "product_field": "color_print",
+      "op": "boolean_equal",
+      "activation": "true_only",
+      "kind": "hard",
+      "unit": "boolean",
+      "source_ids": [
+        "C-598"
+      ],
+      "unknown": "未知型号彩印能力不能算满足"
+    },
+    {
+      "id": "C-SCAN",
+      "why": "需要扫描时须有准确型号功能证据；未列出不等于明确不支持",
+      "user_field": "requires_scan",
+      "product_field": "scan",
+      "op": "boolean_equal",
+      "activation": "true_only",
+      "kind": "hard",
+      "unit": "boolean",
+      "source_ids": [
+        "C-598"
+      ],
+      "unknown": "缺准确型号扫描证据"
+    },
+    {
+      "id": "C-DUPLEX",
+      "why": "自动双面与手动翻面不同；必须时作为硬条件",
+      "user_field": "requires_auto_duplex",
+      "product_field": "auto_duplex",
+      "op": "boolean_equal",
+      "activation": "true_only",
+      "kind": "hard",
+      "unit": "boolean",
+      "source_ids": [
+        "C-598"
+      ],
+      "unknown": "缺准确型号自动双面证据"
+    },
+    {
+      "id": "C-WECHAT",
+      "why": "无线不等于微信小程序，须区分初次设置、App转存和地区限制",
+      "user_field": "wechat_required",
+      "product_field": "wechat_miniprogram",
+      "op": "boolean_equal",
+      "activation": "true_only",
+      "kind": "hard_when_miniprogram_confirmed",
+      "unit": "boolean",
+      "source_ids": [
+        "R7",
+        "R10",
+        "R14",
+        "R15"
+      ],
+      "unknown": "缺小程序方式或部署地区的确认，不能认定实机可用"
+    },
+    {
+      "id": "C-BUDGET",
+      "why": "建议零售价只能与用户预算作背景比较，不能认定当前到手价满足预算",
+      "user_field": "budget_max_cny",
+      "product_field": "manufacturer_suggested_retail_cny",
+      "op": "number_le",
+      "activation": "provided",
+      "kind": "informational",
+      "unit": "CNY",
+      "source_ids": [
+        "R6"
+      ],
+      "unknown": "地区平台实价、优惠、运费与库存未核"
+    },
+    {
+      "id": "C-VOLUME",
+      "why": "区间关系区分低于/重叠/覆盖/相等/高于；厂家建议印量不是最低门槛",
+      "user_field": "monthly_pages_range",
+      "product_field": "manufacturer_recommended_monthly_pages",
+      "op": "interval_relation",
+      "activation": "provided",
+      "kind": "informational",
+      "unit": "pages_per_month",
+      "source_ids": [
+        "C-598",
+        "R11"
+      ],
+      "unknown": "建议区间缺失不等于不适合低频使用"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "HL-L1238W",
+      "brand": "Brother",
+      "facts": {
+        "color_print": {
+          "value": false,
+          "source_ids": [
+            "R6"
+          ]
+        },
+        "scan": {
+          "value": null,
+          "source_ids": []
+        },
+        "auto_duplex": {
+          "value": null,
+          "source_ids": []
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_ids": [
+            "R7",
+            "R15"
+          ]
+        },
+        "manufacturer_suggested_retail_cny": {
+          "value": 1906,
+          "unit": "CNY",
+          "source_ids": [
+            "R6"
+          ]
+        },
+        "manufacturer_recommended_monthly_pages": {
+          "value": null,
+          "source_ids": []
+        }
+      },
+      "wechat_setup": "使用兄弟畅享印前需通过Brother Mobile Connect完成初次连接与联机设置；中国区机型清单支持该型号，境外未核",
+      "source_ids": [
+        "R7",
+        "R15"
+      ]
+    },
+    {
+      "model_id": "M232dw",
+      "brand": "HP",
+      "facts": {
+        "color_print": {
+          "value": false,
+          "source_ids": [
+            "R9"
+          ]
+        },
+        "scan": {
+          "value": true,
+          "source_ids": [
+            "R9"
+          ]
+        },
+        "auto_duplex": {
+          "value": true,
+          "source_ids": [
+            "R9",
+            "R11"
+          ]
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_ids": [
+            "R9",
+            "R10"
+          ]
+        },
+        "manufacturer_suggested_retail_cny": {
+          "value": null,
+          "source_ids": []
+        },
+        "manufacturer_recommended_monthly_pages": {
+          "value": [
+            200,
+            2000
+          ],
+          "unit": "pages_per_month",
+          "source_ids": [
+            "R11"
+          ]
+        }
+      },
+      "wechat_setup": "先连Wi-Fi、打印二维码信息页，再扫码绑定惠普云打印；境外微信服务存在2024年支持答复限制，须向厂家重核",
+      "source_ids": [
+        "R10",
+        "R14"
+      ]
+    }
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

@@ -1,0 +1,130 @@
+{
+  "task": "P0.9-B_S1-S4_independent_recheck",
+  "date": "2026-11-12",
+  "role": "independent_reviewer",
+  "verdict": {
+    "S1": "closed_in_tested_synthetic_scope",
+    "S2": "not_closed_one_remaining_P2_rejected_row_still_invalidates_good_source",
+    "S3": "closed_in_tested_per_turn_expiry_scope",
+    "S4": "core_anchor_contract_gap_closed_in_synthetic_scope",
+    "local_engineering_overall": "not_passed",
+    "P0_9_B_overall": "not_passed",
+    "real_B1_B2_B3": "remain_blocked_or_not_passed",
+    "previous_P0_9_A": "not_reopened"
+  },
+  "blocking_finding": {
+    "id": "S2_remaining",
+    "priority": 2,
+    "issue": "rejected_forbidden_or_malformed_row_can_still_invalidate_same_event_good_source",
+    "location": "shopping_decision/sale_configuration_evidence.py:187",
+    "new_unmet_acceptance_checks": 4,
+    "normal_cli_reproduced": true,
+    "real_identity_or_purchase_escalation": false
+  },
+  "nonblocking_advice": {
+    "priority": 3,
+    "issue": "complete_sku_anchor_may_be_discarded_when_partial_source_is_first_in_merge",
+    "location": "shopping_decision/sale_configuration_evidence.py:215",
+    "new_unmet_audit_robustness_checks": 1,
+    "blocks_acceptance": false
+  },
+  "validation": {
+    "independent_new_cases": {
+      "command": "D:/SoftWare/Python/install/python.exe reports/p0_9_b_s1s4_new_review_20261112.py --output reports/p0_9_b_s1s4_new_review_20261112.json",
+      "result": "reports/p0_9_b_s1s4_new_review_20261112.json",
+      "exit_code": 1,
+      "new_total": 18,
+      "new_passed": 13,
+      "acceptance_total": 17,
+      "acceptance_passed": 13,
+      "acceptance_unmet": 4,
+      "nonblocking_robustness_unmet": 1,
+      "purpose_selected_not_overall_accuracy": true
+    },
+    "old_24_replay": {
+      "passed": 24,
+      "total": 24,
+      "result_location": "old_24_replay inside new independent result",
+      "all_legacy_script_repository_writes_redirected_to_temporary_directory": true
+    },
+    "old_developer_replay": {"passed": 22, "total": 22},
+    "windows_native_suite": {
+      "interpreter": "D:/SoftWare/Python/install/python.exe",
+      "python_version": "3.12.3",
+      "command": "python -m unittest discover -s tests -q",
+      "exit_code": 0,
+      "passed": 344,
+      "total": 344,
+      "unittest_elapsed_seconds": 23.202,
+      "wrapper_elapsed_seconds": 24.199,
+      "removed_encoding_environment_variables": ["PYTHONUTF8", "PYTHONIOENCODING"],
+      "extra_encoding_flags": []
+    },
+    "h05": {
+      "command": "D:/SoftWare/Python/install/python.exe -m shopping_decision.h05_probes --output reports/p0_9_b_s1s4_independent_h05_20261112.json",
+      "result": "reports/p0_9_b_s1s4_independent_h05_20261112.json",
+      "exit_code": 0,
+      "passed": 8,
+      "total": 8
+    },
+    "java_compile": {
+      "command": "javac -encoding UTF-8 --release 17 -d .h08-build desktop/DesktopBridgeClient.java desktop/ShoppingDecisionDesktop.java desktop/P04MarketplaceRegression.java desktop/H10JavaRegression.java",
+      "exit_code": 0,
+      "target_release": 17
+    },
+    "java_P04": {
+      "command": "java -Djava.awt.headless=true -cp .h08-build P04MarketplaceRegression D:/SoftWare/Python/install/python.exe",
+      "exit_code": 0,
+      "passed": 6,
+      "total": 6
+    },
+    "java_H10": {
+      "command": "java -Djava.awt.headless=true -cp .h08-build H10JavaRegression D:/SoftWare/Python/install/python.exe",
+      "exit_code": 0,
+      "passed": 6,
+      "total": 6
+    },
+    "diff_check": {"command": "git -c core.whitespace=cr-at-eol diff --check", "exit_code": 0},
+    "new_result_overwrite_guard": {
+      "same_output_path_rerun_exit_code": 2,
+      "existing_result_bytes_unchanged": true
+    },
+    "protected_files_unchanged": true,
+    "protected_file_hashes": "protected_sha256 inside new independent result",
+    "manual_gui_this_review": "not_run",
+    "wsl_this_review": "not_run",
+    "old_134_probe_separate_run_this_review": "not_run"
+  },
+  "historical_integrity": {
+    "old_14_of_24_detailed_json": "already_overwritten_before_this_review_not_recoverable_as_original_bytes",
+    "old_narrative_and_validation_verdict": "still_14_of_24",
+    "assessor_tool_design_contribution": "previous_probe_had_hardcoded_overwriting_output_without_guard",
+    "this_review": "all_repository_side_outputs_from_legacy_probe_isolated_and_existing_outputs_not_overwritten"
+  },
+  "real_funnel": {
+    "original_20_reviewed": 0,
+    "deep_6_reviewed": 0,
+    "distinct_verified_real_model_count": 0,
+    "required_real_model_count": 2,
+    "regional_quotes": 0
+  },
+  "next_action": "repair_remaining_S2_valid_state_event_validation_within_existing_package_then_fresh_independent_variants",
+  "new_large_package": false,
+  "remaining_work_budget": "unknown_not_inferred",
+  "boundaries": {
+    "new_haina_business_calls": 0,
+    "credential_reads": 0,
+    "paid_calls": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "external_messages": 0,
+    "business_code_modified": false,
+    "historical_reports_modified_this_review": false,
+    "git_commit": false,
+    "git_push": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "report": "reports/P0_9_B_S1S4_独立再检查报告_20261112.md",
+  "handoff": "handoffs/P0_9_B_S1S4_独立再检查_20261112.md"
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "PRINTER-MIN-E2E-20261117",
+  "type": "first_coarse_real_local_flow_not_human_trial",
+  "first_run_case": "main_two_facts",
+  "selected_pack_id": "setup_two",
+  "selected_old_claim_count": 2,
+  "input": {
+    "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_run/main_two_facts.input.jsonl",
+    "sha256": "3abf506daeddbc02120009d776b2947c2b8172d0a877cc185ba76363b22a75b8"
+  },
+  "normal_cli_stdout": {
+    "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_run/main_two_facts.stdout.jsonl",
+    "sha256": "403d24f250854e653f603f329e54d462008ef8d55f5909ee70220aa209c56537"
+  },
+  "normal_cli_stderr": {
+    "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_run/main_two_facts.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "normal_chat": {
+    "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_run/main_two_facts.chat.json",
+    "sha256": "6b6d7e178fbb93a6070e109a4005463c879ee81254590bb445b3f03b7ea469dd"
+  },
+  "summary": {
+    "path": "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/evidence/first_run/summary.json",
+    "sha256": "e4b764dd9dff81fa9e6b473033894fd4348ffdda0d13d580c41a6bb1b836243a"
+  },
+  "observed_result": "research_delivered_with_limits",
+  "processed_stages": [
+    "requirements",
+    "evidence",
+    "comparison",
+    "explanation",
+    "feedback",
+    "evaluation"
+  ],
+  "feedback": {
+    "status": "not_collected",
+    "actual_response_count": 0,
+    "step": "真实反馈缺失已记录；后续仍实际检查来源和有限研究路径"
+  },
+  "initial_evaluation": {
+    "status": "bounded_manual_reference_check",
+    "RQ-01": "两款仅用选包旧厂家首次设置资料；未承诺后续复用",
+    "real_user_effect": "unknown"
+  },
+  "first_run_retained_unmodified": true,
+  "limit": "此文记录首轮真实本机粗贯通；后续改答修复另见after_local_fix，不能把本地回放当真人/实机效果"
+}

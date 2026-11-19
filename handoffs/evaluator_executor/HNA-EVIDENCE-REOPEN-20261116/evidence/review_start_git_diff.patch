@@ -1,0 +1,1945 @@
+diff --git a/CURRENT.md b/CURRENT.md
+index 60e8423..886fef6 100644
+--- a/CURRENT.md
++++ b/CURRENT.md
+@@ -1,310 +1,51 @@
+-# 当前状态（2026-11-08）
+-
+-## 2026-11-08 P0.6 eMCR 文本检索与真实购物反证（执行者完成受控实验，独立效果验收待办）
+-
+-- **角色与证据**：执行者继续完成[文本检索交接](handoffs/P0_6_eMCR_文本检索评测_执行者_20261108.md)、[结果与反方报告](reports/P0_6_eMCR_文本检索与购物差距_20261108.md)、[可复算指标](reports/p0_6_emcr_text_retrieval_eval_20261108.json)及[打印机严格类目失败记录](reports/p0_6_emcr_strict_printer_query_20261108.json)。新增 `emcr_text_retrieval.py`（36,722静态商品文本查询/明确类目范围）与 `emcr_text_evaluation.py`（独立金标评测），无联盟账号、图片、支付。
+-- **离线实测**：1,399查询中1,344含正例的候选池内排序NDCG@10=**0.68069**、已标注正例命中率@10=**0.95312**；120条哈希冻结全库检索查询中117含正例，已标注代理NDCG@10=**0.59026**、已标注正例命中率@10=**0.91453**、已标注正例召回率@10=**0.55949**。未标注商品不等于真负例，且候选池排序不是全库发现，成绩不能当真实购买推荐准确率。
+-- **关键反证**：搜家用黑白激光打印机，无过滤高排名会混入转印纸/打印机服务器；限定末级主机类目 `打印机/激光打印机/黑白激光打印机` 后eMCR是**0候选**，不能用配件冒充主机，也不改造静态数据合成不存在的在售货源。eMCR定位为中文电商检索评测基准，不是中国在售商品底库；应转Brother等来源继续取型号事实及证据。
+-- **工程验收/后续**：全量Python **273/273 PASS**、原H05负向 **8/8 PASS**、差异检查PASS。本轮无实时核价、无购买批准、无交易、无Git提交/推送，保留前期变更。**P0.7优先**人工事实候选 vs 系统自主官网目录发现的同条件独立对照，核实具体型号无线/微信/耗材、排除错误商品；对陌生品类另选择有权限的产品知识源，而不是刷eMCR模拟成功率。
+-
+-## 2026-11-08 eMCR 纯文本数据下载成功 + 真实格式映射验证（执行者完成，效果评估待办）
+-
+-- **角色/交接**：执行者直接下载到 `data/raw/p0_6_emcr/emcr_benchmark.jsonl`（原始文件被 `.gitignore` 排除），见[交接](handoffs/P0_6_eMCR_纯文本下载与验收_20261108.md)、[完整记录](reports/P0_6_eMCR_纯文本下载与字段验收_20261108.md)、[机器摘要](reports/p0_6_emcr_text_import_20261108.json)。官方HF域名在本机无法连接，改从hf-mirror的官方数据文件镜像完成；**没有下载图片**。
+-- **实际数据**：119407487字节（约113.9MiB）、SHA256 `c33001d33a5536593bb4d5361437fed0e87d18b9dcbf29cf404d65d74c0fa622`；42,022条有效JSONL、1,399条不同查询、36,722个不同商品 `content_id`、同ID字段冲突0。完整文本导入测试42,022条全可解析、36,722个候选记录、schema unmapped 0；`public_benchmark_text.py` 新支持真实字段 `content_id/title/cate_full_name/std_brand_name/property_kvs/detail_ocr` 并剥除评分金标/参考价/图片名，未授予价格或购买资格。
+-- **局限**：eMCR是历史中文电商检索评测基准，而非实时商品库。对“打印机”标题/类目粗查64个商品ID、78条记录，很多是打印服务器和配件，不能视为已覆盖家用激光打印机主机。真实数据导入与全文搜索效果是两个里程碑；尚未做冻结查询/金标隔离的搜索相关性验收，更未实现实时地区价格。**当前状态：文本下载/格式接入通过，购物效果待评估。**
+-- **回归**：Python全量 **264/264 PASS**，差异检查通过。数据、代码、文档只在本机保存，没有 Git 提交/推送，原P0.2/P0.5未通过项保留。
+-
+-## 2026-11-08 P0.6 公开商品数据接线 + 文本动态对话（执行者已完成受控工程回放，独立验收待办）
+-
+-- **角色/交接**：执行者依据用户“新的执行包继续”完成[P0.6任务交接](handoffs/P0_6_公开商品数据与发现比较_执行者_20261108.md)、[执行报告](reports/P0_6_公开商品数据与动态比较_执行报告_20261108.md)；结果索引见[官方目录历史回放](reports/p0_6_public_catalog_replay_20261108.json)、[结构化3轮对话回放](reports/p0_6_dialogue_replay_20261108.json)。**仅本地执行，未提交、未推送，不影响原有在途改动。**
+-- **实际进展**：新增 `public_catalog.py`、`dialogue_flow.py`、`public_benchmark_text.py` 及3组专项测试。将2026-11-07真实获取并保存摘要的Brother中国厂商目录快照重放到既有 `compare_products`：**共9型号，6款不在原5款事实目录中**；已核旧型号可给有来源的黑白/无线等三态判断，新发现型号仅确认目录黑白类别，其余参数未知；可核实地区到手价0、购买批准false、交易关闭。此次为**历史来源离线回放，不是本轮实时联机检索或全市场发现**。
+-- **动态对话**：支持文本JSONL结构化确认、按缺口追问、已有答案不重复问、修改条件自动撤销旧结果并重新比较；3轮人工结构化输入演示先因无线排除HL-L1228、撤销硬要求后转待核、改彩色后被排除。**非大模型自主自然语言理解；电脑/手机只做通用字段表达，不宣称专业比较通过。**
+-- **eMCR / Icecat 边界**：新增JSONL文本白名单导入探针，合成契约测试隔离了 `query/anchor/score/reason` 和历史价格/交易授权。但本机访问HF失败 `Network is unreachable`，**官方 eMCR 文件尚未下载、真实schema未验**；Icecat用途许可和目录认证待确认，尚未接入。现阶段不要把模拟输入当真数据。
+-- **验证**：Python **263/263 PASS**、旧负向 **8/8 PASS**、Java子进程 **P0.4 4/4 + H10 6/6 PASS**，JDK17编译、差异检查通过；未完成Windows GUI独立验收和效果评测。**下一步**优先恢复合法公开数据获取，真实eMCR样本检验与新型号详情取证，再做冻结人工候选对照和独立内容评估；不接联盟账号、下单、支付。
+-
+-## 2026-11-08 动态对话与真实商品比较（评估者建议，P0.6已部分实施）
+-
+-- **角色：评估者已制定主要任务，执行者完成了上方P0.6的受控最小实现；自然语言理解、真实在线外部发现及独立效果验收仍未完成。** 用户希望用途驱动、动态追问和动态候选，避免打印机/电脑/手机各做一套固定界面。[下一执行包](handoffs/动态对话与真实商品比较_下一执行包_20261108.md)：保留并更新用户条件 → 按缺口提出问题/取舍 → 打印机真实外部发现接回现有比较 → 人工候选与自主检索对照及独立验收。
+-- **交互取舍**：下一包先用文本对话验证，不扩建打印机专用GUI，不先做动态界面设计器；现有桌面保留，原GUI验收仍未完成，但不作本包内容验证前置。动态问题和选项不等于可编造商品事实；具体型号与参数仍须外部取证。
+-- **验收范围**：打印机先完成真实小链路，电脑/手机仅检验交互结构表达；正式新品类推荐迁移在打印机内容通过后另验。原P0.2/P0.5未通过项保留；本轮仅文档，不改程序/证据批准、账号或交易，未提交/推送。
+-
+-## 2026-11-08 整体瓶颈与公开商品数据路线（评估完成，未实施接入）
+-
+-- **角色：评估者**；[本轮交接](handoffs/整体瓶颈与公开商品数据路线_评估_20261108.md)、[完整评估](reports/整体瓶颈与公开商品数据路线_评估_20261108.md)。认知效果与外部供给均未完成验证；近期直接断点在外部候选、型号事实与正常比较尚未闭合，不能简单归为缺商品库。独立结构化原条件回放（合成收货地）仍defer、获准证据0、候选5、预算全未核、可购买0、交易关闭；未重跑历史231项或GUI。
+-- **路线裁定**：eMCR适合固定语料检索评测，首行含锚点/评分/理由，应隔离标签泄露；文本实验不代表完整多模态。Icecat演示单品详情不等于未知型号发现，目录索引需认证；公开许可证第10条涉及生成式AI商业用途限制，需先核对本项目适用许可。现有候选池限定JD/TB身份、比较器主要处理布尔条件，复用需最小适配。
+-- **下一建议**：用“人工核实候选直接供给”与“系统自主检索”做同条件对照以定位根因；先完成打印机小链路及阳性/负向独立验收，再冻结公共引擎测新类迁移。本轮仅评估，未下载全量数据、接入新源、变更程序/证据批准或交易；原P0.2/P0.5待办保留，未提交/推送。
+-
+-## 2026-11-07 P0.5 京东联盟 + 淘宝客商品发现结构接入（执行者已完成离线/受控联调，待外部授权）
+-
+-- **角色：执行者完成工程与替代路线 → 评估者独立验收**。本轮不等待评估者逐步指定接口；先复核[京东联盟官方API与迁移公告](https://jos.jd.com/jdunion)和[淘宝客物料搜索官方文档](https://developer.alibaba.com/docs/api.htm?apiId=35896)，再直接完成[执行包](handoffs/P0_5_京东联盟官方商品搜索_执行者任务_20261107.md)、[本轮报告](reports/P0_5_双平台官方商品发现_执行报告_20261107.md)及[合成多源回放](reports/P0_5_多源合成回放_20261107.json)。
+-- **工程新增**：`jd_union_official.py`（旧JOS v1请求签名、官方嵌套JSON导入、显式授权+旧网关版本确认后的受控HTTPS调用；本轮实际只注入模拟传输）、`taobao_material.py`（物料返回解析，**旧num_iid已弃用，新item_id与链接不一致则标记冲突**）、`discovery_pool.py`（按平台+商品ID统一候选，允许同一JD商品双来源，但JD/TB数字ID绝不混合）。原 `listing_identity.py` 补中文品牌名紧邻型号的ASCII边界识别，`discovery_ingest.py` 标记两官方来源已支持**离线导入**，并未提升真实授权资格。
+-- **实际结果**：Python全量 **231/231**、旧负向 **8/8**、Java桌面子进程 P0.4 **4/4** 与 H10 **6/6** PASS，WSL JDK17 编译/CRLF差异检查通过。三来源合成回放合并为**京东候选1条（2来源）+淘宝候选1条（1来源）**，可核地区报价**0**；购买建议/交易均关闭。**真实JD/TBK业务 API请求0、真实商品0、账户登录0**；旧JOS v1现行生产网关及协议仍需京东独立平台核准，不能将模拟HTTP响应计为实际调用。
+-- **执行者后续选择**：合法准入优先验证京东联盟2–3个商品搜索/详情样本；不具备京东资格则复核淘宝应用权限；两者仍需平台许可时用P0.4用户主动的浏览器搜索+粘贴链接做低频发现线索，不绕过登录/风控、不伪造自动搜索或报价。原打印机正常决策仍 defer；Windows GUI人工验收与平台实测待办。未提交/推送，保留原工作区其它改动。
+-
+-## 2026-11-07 P0.4 Java 商城发现入口联调（执行者已完成工程验证，待 GUI 独立验收）
+-
+-- **新交付**：[执行任务交接](handoffs/P0_4_Java商城发现入口_执行者任务_20261107.md)、[运行/验证报告](reports/P0_4_Java商城发现入口_20261107.md)；`shopping_decision/discovery_bridge.py`、`tests/test_discovery_bridge.py`、`desktop/P04MarketplaceRegression.java`，改动 `desktop/ShoppingDecisionDesktop.java`。**Java桌面第一屏及结果页有“京东商城商品发现（只读实验）”入口**：用户明确点击才打开本机默认浏览器访问京东公开搜索页，用户自己决定登录、复制最多5条商品链接；程序离线核查京东详情域名/SKU、去重、保留时间与未知字段。新入口可用任意品类关键词，但**原真实推荐决策仍只支持打印机**。
+-- **真实验收**：Python **181/181 PASS**、旧负向 **8/8 PASS**、Java/Python 新子进程回归 **4/4 PASS**、已有 H10 Java回归 **6/6 PASS**、WSL JDK17 编译和 CRLF 差异检查通过。原打印机业务入口重放仍 `defer`、5厂商事实候选、`purchase_recommendation_approved=false`、`transactions_enabled=false`。
+-- **能力边界**：这是用户辅助、手动选取销售项的**只读候选发现入口**，不是京东官方商品 API 接通，也不是登录态自动抓商品；用户能否访问浏览器尚未经本轮 Windows GUI 人工验收。具体链接不证明型号、店铺、地区报价/库存，真实有效报价仍为0。下一优先为获得合法 JD联盟/淘宝联盟应用访问权限后开展最小真实 API 搜索验证。**未提交、未推送**。
+-
+-## 2026-11-07 三开源仓库源码审读与最小能力落地（执行者交付，待独立复核）
+-
+-- **研究对象**：源码精读 [Playwright MCP](https://github.com/microsoft/playwright-mcp)（主体源码在 Playwright monorepo）、[JD-Shopping-MCP](https://github.com/abc354402600/JD-Shopping-MCP)（无可见许可证，不能复制）、[mcp-cn-commerce](https://github.com/TonyWang-hub/mcp-cn-commerce)（MIT，但主要是商家经营数据）。快照源码位置、适用边界、代码取舍和复核项见[研究与实现报告](reports/P0_3_三开源仓库源码审读与功能落地_20261107.md)，[执行交接](handoffs/P0_3_三个开源项目源码审读与最小落地_执行者_20261107.md)。
+-- **新增可跑功能**：`shopping_decision/discovery_ingest.py` 离线导入 JD-Shopping-MCP 形状的搜索快照、用户自愿提供的 JD 商品链接，严格校验官网域名/编号、保留 Bing/代理降级标签、重复冲突、来源时刻和未知价；`SOURCE_READINESS` 隔离平台 API 授权/SDK 接口/实际可核价资格。`tests/test_discovery_ingest.py` 新增12个负向与跨品类回归，原始 P0.2 业务路径不变。
+-- **验证范围**：全量 Python **169/169**、旧负向 **8/8** 通过，`diff --check`（兼容仓库原 CRLF）通过。**没有**真实登录浏览器、真实 JD/TBK 查询、已验证地区报价或购物授权；仍 defer，交易关闭。未提交/推送，待评估者独立复核。
+-
+-## 2026-11-07 商品发现长期入口研究（执行者建议，待评估）
+-
+-- **触发**：用户指出逐品牌官网搜索不可跨品类复用，要求优先考虑中国大陆商城作为可持续商品发现入口，同时研究用户明确授权的登录浏览器。
+-- **执行者已核官方资料和开源**：[多平台商品发现路线研究](docs/09_商品发现长期接入路径_平台API与用户授权浏览器_待评估.md)、[执行交接](handoffs/商品发现长期接入研究_执行者交接_20261107.md)。**方向建议**：京东联盟+淘宝联盟（获准后）为多品类商品发现主源；用户明确授权且平台允许时的已登录浏览器作为少量具体销售项核验；品牌官网转型号/参数取证；小红书补合法体验证据；支付宝主要用于商家供给及后续支付/交易衔接。
+-- **边界**：研究已落盘，**未取得任何正式商品 API 权限、未进行登录浏览器自动化、未验证买家真实价格**。本条仅为执行者建议，未替代上方/下方已冻结的 P0.2 执行包；需要评估者判定新的瓶颈及最小实验。既有真实报价仍0、交易关闭；未提交/推送。
+-
+-## 2026-11-07 执行者主动替代路径实测（已落盘，交独立复核）
+-
+-- **角色：执行者自主推进 → 评估者仅独立复核**。新[执行者多路线实测报告](reports/P0_2_执行者自主替代路线_20261107.md)、[交接](handoffs/P0_2_执行者自主替代路线_20261107.md)；按照原只读边界依次核 API 准入、京东具体商品/耗材公开页、兄弟官网目录和京东公开导购线索，不因第一种 API 权限不可用就暂停所有执行。
+-- **实际观测**：2026-11-07 兄弟官网目录重新发现9型号、6款未进入已核事实目录，原始SHA/来源见 `reports/p0_2_fallback_official_discovery_20261107.json`；京东两条公开商品页返回 HTTP200 但内容为限制/登录页，具体字段不足，原始哈希和缺口见 `reports/p0_2_fallback_public_retail_20261107.json`；京东导购价格仅作商品线索，不作地区有效报价。
+-- **执行者自行选定**：后续继续“厂商来源型号事实 + 商城公开零售入口线索”的最小只读路径；凭已有身份核验拒绝错型号/耗材/套餐，将卖家/选中配置/地区报价/库存保持未知。京东与淘宝真实授权 API 无可用权限时暂不接空 SDK、不绕限制；合规权限到位才对既有三型号做受限真实联调。
+-- **不可夸大**：实时合法销售项0、有效地区报价0、原用户购买结论仍 defer、交易关闭。11-07 既有 Python157/157 与负向8/8不等于这次真实平台接入；独立 GUI/内容复核未完成；未提交、未推送。
+-
+-## 2026-11-07 渠道专项执行者首轮交付（部分完成，待独立复核/外部权限）
+-
+-- **角色：执行者 → 独立评估者**。已接 11-07 京东联盟/淘宝客/小红书执行包。新交付：[执行交接](handoffs/P0_2_渠道专项_执行记录_20261107.md)、[三平台官方准入矩阵与运行报告](reports/P0_2_三平台渠道准入与身份验证_20261107.md)、`shopping_decision/listing_identity.py` 及 `tests/test_listing_identity.py`。先核官方能力与合规权限，不创建无授权的商城 API 适配器。
+-- **工程进展**：新增只读、离线的销售项身份保守核验（JD/淘宝平台 ID 不混并；错型号、同系列、多个型号、耗材与套餐拒绝/待核）。全量 **157/157 Python**、旧负向 **8/8** 通过，WSL JDK17 的 Java 桌面源码编译通过，兼容已有 CRLF 的差异检查通过。未开展新独立 Java GUI 人工查看与主动保存验收。
+-- **原需求保持安全**：普通入口仍 `defer`、5候选、可核地区报价 **0**、购买批准 `false`、交易关闭。京东/淘宝真实授权 API 响应 **0**；小红书没有合规全站评价读取权限与已授权样本。本轮属于 `CHANNEL_RESEARCH` + 离线负向验证，**不是** `DISCOVERY_PROVEN` / `QUOTE_VERIFIED` / `PURCHASE_COMPARISON`。评估者尚未独立签发。
+-- **外部前置与边界**：京东 JOS 公告迁移至联盟业务独立入口；淘宝详细版存在 `biz_scene_id=2` 比价场景但本应用准入/用途待核；小红书 `read_notes` 仍规划中。继续保留原 11-06 P0.2 内容/GUI 独立复核任务，不覆盖已有未提交改动；未申请/读取密钥、未登录、未调用需授权业务 API、未下单支付、未提交/推送。
+-
+-## 2026-11-07 渠道范围收敛与评估者新增执行包（执行范围仍有效）
+-
+-- **角色：评估者已完成文档/执行包 → 执行者接单**。用户指定下一轮渠道范围仅 **京东联盟、淘宝、小红书**，从当前渠道任务移除拼多多；支付宝不在本次商品数据接入范围。设计见 [渠道方案](docs/08_商品发现与评价证据渠道_京东淘宝小红书.md)，具体任务、原子验收与停止条件见 [评估者执行包](handoffs/P0_2_京东淘宝小红书_商品发现与评价证据_评估者执行包_20261107.md)。本轮只变更执行范围与文档，**不是平台已接通**。
+-- **优先次序**：P0 京东联盟准入/2–3 型号只读真实发现 → P0 淘宝客作为独立商品来源验证 → P1 小红书合法评价来源/反证调查（非前置阻塞）。统一厂商型号与平台销售项身份，记录来源、时效、价格/库存/优惠缺失；不得将推广价格、平台商品 ID 或评论点赞直接推成可购买结论。
+-- **保留在途任务**：2026-11-06 P0.2 三型号人工比较、R1/R2条件修复及独立内容/GUI 复核继续有效；已有执行者材料不覆盖、不删除。有效地区报价仍是 0，原需求尚无获准购买建议；如官方渠道缺资质/权限则交付明确阻塞，不制造空适配器或自动注册。未改程序、批准状态、账号/交易，也未提交/推送 Git。
+-
+-## 2026-11-06 最小真实商品比较（执行中）
+-
+-- **角色：执行者**；落实下方最新执行包：2～3型号人工证据基线、京东官方只读准入核验、独立复核R1/R2修复与正常桌面展示。[本轮交接](handoffs/P0_2_最小真实商品比较_执行交接_20261106.md)。
+-- 已询问预算支出口径与收货省市区，确认前预算未知；不改证据批准、不接交易、不提交/推送。验收区分内容、渠道权限/真实响应、工程回归与独立GUI。
+-
+-## 2026-11-06 评估者明确下一执行包（待执行）
+-
+-- **角色：评估者 → 执行者**；下一步继续P0.2最小真实商品比较：[执行包](handoffs/P0_2_最小真实商品比较_下一执行包_20261106.md)。先形成原需求下2～3型号的人工证据比较基线，同时核一条京东官方只读渠道；修复上轮条件问题后接入正常桌面，交独立内容/GUI验收。不再泛搜开源生态，不以小红书接通为前置，不扩品类/重构/交易。
+-- 真实报价0及原案预算未知的现状未改变。缺资质/权限要交付具体前置并继续内容工作；渠道调查可阶段验收，不能冒充P0.2可购买比较通过。本轮仅明确执行范围，没有新实现、回归或外部集成结果，不提交/推送。
+-
+-## 2026-11-06 购物智能体开源与社区证据渠道补充调研（完成）
+-
+-- 角色：研究与独立评估；核查5个代表仓库README/许可证及三平台官方资料。[本轮交接](handoffs/购物智能体开源与社区证据渠道调研_20261106.md)、[完整调研](reports/购物智能体开源与社区证据渠道调研_20261106.md)。仅静态调研，未采集帖子或调用业务API，未重复回归，不宣称集成/推荐通过。
+-- **补正京东证据**：JOS官方目录搜索索引列有普通商品搜索/详情及`jd.union.open.mcp.goods.query`（需申请/用户授权）；官方商家评价接口另有范围限制。目录存在不等于本应用权限、匿名MCP服务或现网可用；当前合同与授权主体仍待核。小红书账号路径仅basic_info已开放、read_notes规划中，商家/营销/分享能力不等于全站笔记评论读取；支付宝商家商品/支付能力仍与全网检索分开。
+-- **下一包仍P0.2**：合格实时商品数据 + 同一需求的内容比较基线同时推进；修复上轮R1/R2，补独立GUI。小红书可作体验和反证线索，但官方权限未确认时不作为前置阻塞；少量依法可用材料保留型号、使用条件、时间和偏差，不以帖数/点赞推断耐用性。保持打印机范围，不重构引擎、不开通账号、不接交易、不改批准，不提交/推送。
+-
+-## 2026-11-06 P0.2独立复核与开放商品渠道调研（完成，交执行者）
+-
+-- **角色：独立复核者 → 执行者**。独立127/127单测、旧负向8/8、JDK21编译和diff检查通过；真实桥接仍5款预算未知、defer、获准路线证据0、交易关闭。[本轮交接](handoffs/P0_2_独立复核与开放商品渠道调研_20261106.md)、[复核与调研](reports/P0_2_独立复核与开放商品渠道调研_20261106.md)。
+-- **新发现R1/R2**：“不必扫描且必须自动双面打印”吞掉双面硬要求、“要求自动双面打印”未进入逐候选条件；“不需要微信打印”仍追加微信/无线偏好。[9条独立诊断](reports/p0_2_independent_review_probes_20261106.json)不是全通过成绩。两款兄弟官网耗材/保修描述独立回源对应；GUI仅观察到启动界面，输入被活动冲突保护中断，独立查看/保存未验收。
+-- **下一包仍为P0.2**：优先核京东联盟官方准入、只读关键词/详情权限、比价用途/ID规则/数据条款，权限具备后验证2～3打印机真实查询，再判定报价缺字段；同时修复R1/R2。MIT SDK证明存在应用签名查询路径，未证明本应用权限或现网接通。支付宝已核支付MCP、商家商品管理/Agent供给接入，未取得其可直接搜索本案全网商品的接口证据。公开网页MCP许可证/数据许可及地区报价不完整，不直接引入。可购买比较与H08 B仍未签发；无账号开通、交易或Git提交/推送。
+-
+-## 2026-11-06 P0.2执行交付（条件修复与来源回查完成，有效报价未打通）
+-
+-- **角色：执行者本轮交付 → 独立复核待办**；修复微信硬要求/否定与逐候选自动双面未知，新增微信方式、预算口径和收货地区确认，接入正常Java桌面。[执行交接](handoffs/P0_2_只读零售核验_执行交接_20261106.md)、[执行报告](reports/P0_2_只读零售核验_执行报告_20261106.md)。
+-- **真实外部结果**：京东HL-L1238W主机与TN118耗材两条公开页均返回受限提示；普通浏览器访问主机页转登录，未登录。完整有效报价0，SKU/配置/卖家/金额/地区库存/售后均未核实。两款兄弟官网耗材对应与1年保修概述、官方包装清单另有本机回源记录，不能替代具体销售配置或耐用性评测。[零售记录](knowledge/printer_retail_checks.json)、[来源回查](reports/p0_2_source_recheck_20261106.json)。
+-- **验收依据**：127/127单测（新增27项）、8/8旧负向、Java21编译、git diff --check通过；执行者Windows实际输入、结果查看、审计预览/主动保存并读回完整JSON。[桌面自查](reports/p0_2_gui_check_20261106.json)、[真实桥接重放](reports/p0_2_original_bridge_20261106.json)。这是执行者代录，非新真人或独立验收；报价阳性只为合成契约验证，正常渠道仍不能核价。
+-- **原需求结果**：0–50区间保留、5款候选预算全部未知、defer、0条获准路线证据、购买未批准、交易关闭。下一步先独立复核本轮条件/来源/GUI，再寻找能返回完整销售项与地区价格条件的合规来源，才能完成P0.2实际可购买比较；地区与预算口径尚需用户确认。未提交/推送Git，未改真实证据批准状态。
+-
+-## 2026-11-06 下一步独立评估（完成，交执行者P0.2）
+-
+-- **结论**：继续P0.2，先打通单渠道、少量型号的只读零售核验与同一真实需求比较；同时补条件确认，不扩展品类、通用引擎或交易。[独立评估与下一步](handoffs/P0_下一步独立评估_20261106.md)。
+-- **独立复验**：100/100单测、8/8旧负向通过；真实Python桌面桥接子进程重放原确认条件仍为5款、预算全未核、defer、获准路线证据0。未复查外部源或操作Swing，未批准购买建议。
+-- **新诊断缺口**：“必须微信打印”被降为偏好，“不是必须微信小程序”误作硬要求；自动双面硬要求只在总体原文未知中保留，未进入逐候选未知。5条合成诊断不是全通过成绩，且当前均未批准购买或启用交易。[诊断证据](reports/p0_next_independent_probes_20261106.json)。
+-- **执行交接**：具体平台商品/SKU与有效报价、库存/地区/优惠条件、耗材与售后 → 条件和预算判定接入正常桌面 → 原需求比较及负向样本 → 独立内容/GUI验收。无匹配或渠道缺关键字段可据实暂缓，不能用官网价或搜索摘要凑出可购买结果。不提交/推送Git。
+-
+-## 2026-11-04 P0商品候选发现与事实对比（当前最新，执行者已落盘）
+-
+-- **本轮主线转向可用商品能力，不再在H08审核里空转**。执行者已接通官网事实目录、通用三态商品比较器、Java桌面桥接的候选对比展示、只读官方来源回查及兄弟官方目录自动型号发现。[P0执行交接](handoffs/P0_真实商品候选与比较_执行交接.md)；[P0执行报告](reports/P0_真实商品候选与比较_执行报告_20261104.md)。
+-- **实际结果**：兄弟黑白激光官方目录自动发现9款、6款尚待补商品事实；已登记并比较兄弟3款+HP2款，官网自动回查5款中3款可提取型号锚点（兄弟），HP的2页未提取到型号锚点，不能冒充自动核查通过。原用户需求经真正Python桌面桥接子进程得到5款有来源候选与微信/无线差异；5款均没有经授权实时成交价，预算均未核验，原路线审核状态仍defer。[实际输出](reports/p0_real_case_product_preview_2026-11-04.json)、[在线发现](reports/p0_brother_discovery_2026-11-04.json)、[官网回查](reports/p0_official_recheck_2026-11-04.json)。
+-- **验证**：100/100单元测试、8/8负向探针通过，git diff --check通过；没有账号、真实报价、SKU、订单/支付；本轮未做独立Swing鼠标操作或决策效果验收。原13卡及H08B-C01～C04审批保持不变。
+-- **下一任务 P0.2 由执行者自主推进**：优先打通合规只读商品搜索/核价渠道、核验预算内现货/耗材/售后，补自动规格提取和跨品牌发现；随后同一需求产出实际可购买候选比较，才由独立评估者对整体效果/错误推荐进行独立审查。不需要评估者逐条指定检索或代码修复。默认不提交、不推送Git。
+-
+-## 2026-11-04 H08 B证据回源补查：执行者完成 → 独立评估者待审（历史进度）
+-
+-- **本轮定位**：不再重复已关闭的R1/R2工程修复，针对实际打印机案例查补来源有效性。记录在[执行交接](handoffs/H08_B_20261104_证据回源补查执行交接.md)、[执行报告](reports/H08_B_20261104_证据补查执行报告.md)和[来源原始回查索引](reports/h08_b_source_recheck_2026-11-04.json)。
+-- **来源实质进展**：S04原PC服务文档和更新于2026-10-20的新手指南均经2026-11-04直接HTTPS回源；原文/新版清单分开记录，新版含HL-L1238W但没有设备连接测试。S03官方期刊目录核实为**2017年10月**；S01公开搜索索引有2026-02-25更新说明，但本地直接回源仍超时。账本与人工基线已更正；来源最后修改日期不冒充首次发表日。
+-- **工程复测**：82/82单测、8/8负向探针通过；真实桌面桥接Python子进程按原用户条件复跑仍为defer、0条决策用途证据、10条拒证（含C01–C04全部拒证），没有SKU/现价/交易；完整响应存放本机`data/private/`，未把它写入Git。
+-- **独立角色下一步**：独立评估者优先审查C04两份不同官方文档的限用事实、原始日期/更新日期语义及复用权限；C03可作为历史成本比较方法但绝非现售排名。**四条主张及原13卡均未获决策批准，B仍未签发**；无法获准继续研究用途，不能自行改批准字段。新改动后独立GUI复核仍待办。
+-- **边界**：此轮没有修改推荐算法、证据门禁、型号报价或支付，也没有Git提交/推送。以下2026-11-02记录保留历史结论，以本节为最新执行状态。
+-
+-## 2026-11-02 R1/R2独立复核（当时结论）
+-
+-- [追加复核结论](handoffs/H08_B_续包独立复核.md)：R2表述通过；R1真实接口与合成门禁连接通过，关闭研究主张未接入的工程缺口。独立回归82/82、负向8/8、评估者新建合成探针7/7。
+-- 真实决策依据仍为0，B整体未签发；新资料还有日期、地域/型号和用途审查缺口，不能只修改批准字段。下一步转真实主张核查与限定用途审查，不反复修已关闭问题。
+-- 本轮未再次核外部源文或开展GUI操作，未修改真实账本/批准状态；H11限定A保留，新改动后的独立桌面核验仍单列待办。详见报告与[探针](reports/h08_b_r1r2_independent_probes.json)。
+-
+-## 2026-11-02 H08 B R1/R2执行者修复交接（当前最新，待独立复核）
+-
+-- **角色：执行者修复已完成 → 独立评估者进行R1/R2独立复核及B内容判断**；不能自签PASS。详细见 [R1/R2执行报告](reports/H08_B_R1R2修复执行报告.md)，真实桥接结果见 [R1/R2证据JSON](reports/h08_b_r1_r2_e2e_2026-11-02.json)。
+-- R2：已修正微信打印表述，不再默认必须微信小程序；S01原站403、S04原PC页无法稳定回源，已在 [研究账本](knowledge/h08_b_evidence_review.json) 和 [人工基线](reports/H08_B_人工路线比较基线.md) 缩小主张范围。完整适用机型清单仍**待核实**。
+-- R1：新 `route_claims.py` 将逐条主张C01–C04接入原有 `screen_cards` 门禁；只有具备独立批准、用途/日期/地域/适用范围等资格才会在普通 `compare_routes` 中附带ID、来源、反证和版本。已用**合成审批测试替身**验证正向路径，不是实际来源获准。
+-- 真实用户需求仍返回 `defer`，当前**0条获准决策主张**，4条新主张全部拒证；B内容效果与真实购买建议没有签发。全量 **82/82 Python、8/8负向、6/6 Java进程回归通过**，Java编译通过。
+-- 本轮Swing GUI实际复跑遇到WSL X11图形服务不可连接，**未完成新GUI核验**；上一轮已有组件渲染和真实窗口代录，不可替代本轮独立GUI验收。
+-- 继续坚持H08已冻结范围，不做通用引擎重构、型号/报价或交易；未提交/推送Git。
+-
+-## 2026-11-02 H08 B续包独立复核（当前最新结论）
+-
+-- [独立复核](handoffs/H08_B_续包独立复核.md)：独立实测77/77及负向8/8；共享接口确认0–50范围保留且不重复追问，认可区间修复及针对性暂缓。B整体未签发，未重新做独立GUI操作。
+-- S02/S03原文摘要可对应；S01原链接403，S04可核对绑定说明但适用机型清单尚未复核。维持全部研究资格，不因事实对应自动批准决策/商用用途。
+-- 下一步继续H08 B：补来源核查缺口及微信打印方式表述，将获准主张按范围接入实际比较并保留引用；当前新账本尚未进入决策路径，不能写成只差批准即可完成。具体要求见复核R1/R2，不扩展到型号或通用引擎。
+-
+-> **待评估的跨品类架构方向（不改变H08执行范围）**：[动态品类选择框架：通用引擎 + 按需生成并审核的选择配置](docs/07_动态品类选择框架_待评估.md)。供独立评估者审查，不代表方案已批准、实施或验收；当前执行与角色交接仍以下方 H08 B 续包为准。
+-
+-## 2026-11-02 H08 B续包执行交接（最新）
+-
+-- **角色：执行者完成本轮实质交付 → 独立评估者复核来源与内容B**。本轮未签发独立PASS，不宣称推荐效果或跨品类已通过。
+-- 交付：[人工路线比较基线](reports/H08_B_人工路线比较基线.md)；[4条来源组审查账本](knowledge/h08_b_evidence_review.json)；[执行修复及复跑报告](reports/H08_B_续包执行报告.md)。来源目前全部仅作研究索引、独立建议批准仍为0。
+-- 最小修改：0–50区间贯穿旧API兼容的Python契约/校验/审计/Java Swing；已确认家庭黑白与彩印可外包、微信打印需型号级核验；拒绝无证据品牌/机型判断。
+-- 本机真实回归：**77/77 Python单测、8/8 H05负向、6/6 Java真实子进程、2/2 Swing自动化交互**。Swing实际预览并主动保存到 `data/private/`（不入Git），组件渲染图见 `reports/h08_b_gui_range_real_input.png`、`h08_b_gui_range_changed.png`；这些不是系统级截图，也不是用户本人点击。
+-- 当前程序能具体说明本例缺失的事实与来源，但**仍返回defer**：原因是旧知识卡与新审查资料尚无独立的决策支持批准，非程序无法接收需求。独立评估者应审查专业内容与缺口，再决定是否限定批准或签发修复，不扩大到型号/现价/交易和通用引擎重构。
+-- 未提交/推送 Git；历史未提交改动均保留。
+-
+-## 2026-11-02 动态品类方向评估（已完成文档审查）
+-
+-- [独立评估记录](handoffs/动态品类方向_独立评估.md)：有条件认可稳定公共流程、受审品类配置、商品事实分离的方向；尚未证明跨品类收益，不改变H08执行范围。
+-- 主要补充：配置规则同样须查证；用户确认/主张批准/商品事实核验分开；固定未知、区间、冲突和撤回依据的语义。先验证人工配置复用，再另测自动生成质量。
+-- 当前继续H08 B证据基线与最小修复；不启动通用引擎重构、动态表单或第二品类推荐。打印机内容验证后再决定小规模迁移任务。
+-
+-## 2026-11-02 H08 B续包（执行者材料已交付，待独立评估）
+-
+-- 角色：评估者制定执行包 → 执行者已完成证据基线与最小修复 → **独立评估者验收待办**。状态：A继续有效；本轮程序回归已通过，B尚未签发。
+-- [执行包：证据基线与最小修复](handoffs/H08_B_证据基线与最小修复执行包.md)。顺序：人工路线比较与来源审核 → 区间印量/逐项条件/比较能力最小修复 → 同一真实需求的桌面复跑与独立内容评审。
+-- 分别验收来源、工程、B处理质量与推荐效果；不强求唯一推荐，不将通用弃答当推荐完成。具体型号、现价与交易不纳入本包，不默认提交/推送。
+-
+-## 2026-11-02 H08 B独立复核（最新结论）
+-
+-- 角色：独立评估者；本次复核完成，H11交互A仍有效，B整体未通过。认可真实需求记录与合理拒证，不宣称有用推荐已验证。
+-- 独立实测71/71、负向8/8；补答记录协议/JSON/卡片哈希一致。印量0、1、25、50均defer且拒证6、有效来源0；未知仍重复追问。[复核与下一步](handoffs/H08_真实需求B_独立复核.md)、[独立探针](reports/h08_B_independent_probes_2026-11-02.json)。
+-- 当前同时缺少范围输入支持、合格决策证据及针对低印量黑白需求的比较能力；不能把questions为空或临时50页写成条件已经完整确认。
+-- 下一步继续H08：先做少量来源支撑的人工路线比较基线，再按实际缺口最小修复并独立复评。H08原范围不含具体型号/现价，不能临时以“未选出型号”加码验收；商品比较另列后续候选范围。
+-
+-**阶段：H11本机桌面交互A有效；H08 B本次独立复核完成，合理暂缓获认可，但有证据的真实路线比较及范围确认尚未完成，B整体未通过。**
+-**角色交接：独立评估者 → 执行者，按本轮复核继续H08人工证据基线与最小修复；不得扩大为具体机型/报价或批量批准旧卡。**
+-
+-## 2026-11-02 用户补答复测（最新）
+-- 真人确认：家里只需要黑白打印；偶尔彩印可去打印店，`needs_color=false`、`accepts_outsourced_color=true`。0–50页仍是范围，临时以50作为测试上界代理值，不能误认为精确月印量。
+-- 同一真实桌面桥接子进程返回 `defer`，不再追问，合格建议证据0、拒证6、商品型号0；[原始运行记录](reports/h08_real_demand_B_followup_2026-11-02.json)。
+-- 当前可验证“需求收集、审计、保守拒证”，**尚不能独立选具体型号**。避免为本案例扩建大量规则；应先由评估者从独立来源、品类路线及商品候选比较中确定通用瓶颈与最小实施范围。未签发B，未提交/推送。
+-- [执行报告已追加复测](reports/H08_真实需求B_执行报告.md)。下文保留补答前原始执行记录供审计。
+-
+-## 2026-11-02 H08 B 真人需求执行记录（补答前）
+-- 真实原文：“预算千元内、月打印 0–50 页、黑白为主、希望支持微信打印、可靠耐用，重点比较兄弟和惠普”，由用户明确确认作为本轮需求。
+-- 继续执行 H08 已有 B 包，不增设 H12；[本轮执行者交接](handoffs/H08_真实用户需求B_执行者交接.md)、[执行报告](reports/H08_真实需求B_执行报告.md)、[完整实际桥接证据](reports/h08_real_demand_B_2026-11-02.json)。
+-- 当前本地回归71/71、负向8/8。实际 `desktop_bridge` 用原始需求及保守字段返回 `clarify`，询问月印量和彩印/外包；0–50页区间因仅支持整数而未被正确使用。未假设“黑白为主”即绝不彩印。
+-- 仅作技术探针的“上界50页”仍追问彩印；“50页+彩印否”返回 `defer`，可用于建议的已核准来源为0，没有伪推荐。
+-- 当前完成的是真人提供原话+真实Python子进程执行，不是本例Swing四步点击或用户逐项确认；H11既有交互A复核仍有效。执行者不得给B签发PASS，评估者不得把此材料当成已验证推荐收益；13张卡仍不可转成正式推荐证据。
+-- 本轮不接电商、报价或交易，不默认Git提交/推送。
+-
+-
+-
+-**当前执行证据入口：** [H08 B真实需求执行者交接](handoffs/H08_真实用户需求B_执行者交接.md) → [H08 B执行报告](reports/H08_真实需求B_执行报告.md) → [原始结果](reports/h08_real_demand_B_2026-11-02.json)。**此前交互A独立验收：** [H11复核](handoffs/H11_管道修复与交互验收复核.md)，H10保留修复前失败依据。
+-
+-**继续执行包：** 当前按[H08 B证据基线与最小修复续包](handoffs/H08_B_证据基线与最小修复执行包.md)推进；[H08总包](handoffs/H08_简易交互与首个真实需求验证.md)及H11保留已验收交互A与原有约束。
+-
+-## H11当前结论与下一步
+-
+-- 实测71/71回归（含Java真实进程6类检查）、H05负向8/8；Windows启动脚本、正常200页/黑白、确认与后端结果、在途返回修改、新条件重算、真实后端校验报错后恢复均已操作验证。
+-- 实际从Swing预览、追加合成测试备注、主动选择位置保存，并读回校验完整审计JSON；记录含请求/理由/未知项/拒绝证据/卡片哈希，不是脚本伪造保存。
+-- **A仅代表本机打印机界面与后端流程可用**。未签发自然语言理解、来源授权、真实购买建议正确性、跨品类或生产可用结论；13张卡继续保持原有资格。
+-- **下一步进入真实需求B**：取得用户实际需求与确认答复，核验少量必要证据，再独立人工评审建议是否合理。合成界面测试不算真人案例，不再重复扩建界面来代替内容验证。
+-- 本轮证据：reports/h11_gui_normal.jpg、h11_gui_old_request_ignored.jpg、h11_gui_backend_error.jpg、h11_gui_recovered.jpg、h11_synthetic_review.txt。以下H10及更早内容是历史状态，当前以H11为准。
+-
+-## H10执行者修复交接（2026-11-01 晚）
+-
+-- P1已落实到 `desktop/DesktopBridgeClient.java`，采用先启动独立线程持续读取子进程输出、再等待退出；20秒超时、最大输出限制及清理不变。Swing改为通过该助手调用真实Python后端，保留输入快照和请求版本。
+-- 本机实际执行：Java17与Windows Java21编译通过；`H10JavaRegression` 6/6（正常长响应、短响应、128KiB、异常退出、超时、过期请求）、全量单测71/71、H05负向8/8（Linux/WSL及Windows原生均通过）。
+-- **仍需独立评估者完成Windows Swing界面逐步操作、主动保存、延迟竞态和截图**；先前超时截图是修复前失败依据。真人评审B另行开展，A/B未签发。
+-- 执行证据：[H10执行修复报告](reports/H10_执行修复报告.md)。本轮未提交/推送，H08–H10评估材料与其他未提交改动均保留。
+-
+-## H10立即修复与验收
+-
+-- **同日追加复核**：Java仍为先waitFor后读输出，未落实H10修复；原进程探针再次出现3秒未结束，而持续消费输出对照约0.7秒结束。结论不变，先交回执行者修该P1；本次未重复全量测试或桌面操作，源码哈希已记入H10。
+-
+-- **P1**：Swing先waitFor子进程退出、再读取stdout；完整评审JSON变长后会阻塞。真实桌面“每月200页、无需彩印”确认后20秒超时。先读取线程排空输出再等待，本机同一真实后端约295毫秒结束，输出5073字节。
+-- **已确认有效部分**：完整原文约束不再整句丢弃；请求版本/确认快照已有隔离；report_json与中文状态已接通。未知彩印的短响应可正常进入结果与预览，故不能说桌面完全不通。
+-- **下一步**：修并行消费输出并保留超时/版本保护，补真实Java子进程的大输出/超时/改条件回归，再做Swing正常判断、可控延迟竞态及主动保存。不要只跑Python capture_output测试。
+-- 本轮实测70/70、8/8、实际四步、错误后修改重试与预览；保存最终文件及延迟竞态尚未完成，全部输入为评估者合成，不能算真人B。当前A因P1不通过，B待完成。
+-- 截图位于reports/h10_gui_timeout.jpg、h10_gui_clarify.jpg、h10_gui_audit_preview.jpg；原用户窗口未修改，仅关闭本轮独立合成复核窗口。以下H09及更早内容保留为历史进度，最新判定以H10为准。
+-
+-## H09修复结果（执行者，2026-11-01）
+-
+-- R1复合硬约束保留；R2请求版本隔离、确认快照与20秒子进程超时；R3完整JSON审计记录、中文状态、主动预览/编辑/保存。
+-- 已通过70/70单测、8/8旧负向、Java Swing编译。完整桌面点击/延迟竞态及真人独立复核仍需执行，不能签发A/B。
+-- 交接：[reports/H09_执行修复报告.md](reports/H09_执行修复报告.md)。未提交/推送。
+-
+-## H09复核后的立即任务
+-
+-- R1：原话包含“只打黑白”等已识别短语时，整句其他硬要求会被忽略；已用测试替身复现“必须自动双面”不再进入未知项。先修原文条件保留。
+-- R2：后台执行期间仍可改条件，旧回调无请求版本校验，可能把旧结果挂到新摘要；源码已确认流程风险，尚未桌面重现。修快照绑定/请求失效，再用可控延迟验证。
+-- R3：桌面记录缺完整理由/未知项/拒绝原因/来源链接与获取日，需完整桥接与主动保存/复制；不能以状态码和一条哈希替代评审包。
+-- 本轮已实测68/68、8/8及javac21.0.7编译，可见Swing窗口确实启动。检测到用户同时输入后未继续抢占桌面，完整点击/重试/截图未完成；真人案例和独立建议质量仍未完成。
+-- 当前三项修复完成前不签发H08交互A；真实试用B单独验收。以下H08/H06/H07文字是历史进度，当前判定以H09为准。
+-
+-## H08交互方式修订（2026-11-01，用户确认）
+-
+-- 用户明确要求 **Java自带桌面界面**，不是浏览器交互。现采用 Java Swing，入口 `desktop/start_windows.bat`，主窗 `desktop/ShoppingDecisionDesktop.java`；调用 `shopping_decision/desktop_bridge.py` 复用既有Python核心，不在Java中重建推荐规则。早先的HTTP网页代码保留为非主路径的工程试验，不作为最终交付操作入口。
+-- Java 17 编译成功；Swing桥接经真实Python子进程测试通过；全量 **68/68**、负向 **8/8**。由于当前未完成可见桌面手工点击及截图，A仍待桌面实际操作；B真人试用仍待完成。
+-- 没有默认提交/推送Git。
+-
+-## H08执行进度更新（2026-11-01）
+-
+-- 已修H07发布日期空值漏口（决策用途 `None`、空串、未知日期一致拒绝）；CN-002删除未经独立核实细节；CN-010将源事实与项目成本推论分开；13卡继续保持研究索引资格，未获推荐批准。
+-- 新增本机单页 `shopping_decision/static/` 与只读后端 `shopping_decision/web.py`。通过 `python3 -m shopping_decision.web` 启动，默认本机 `http://127.0.0.1:8765/`，Ctrl+C退出。
+-- 服务/接口回归已通过，65/65 单测，8/8 H05负向探针。**尚无浏览器逐步点击/截图证据**，因此交互验收A未最终通过；真人原始需求、独立人工审查与推荐效果验收B亦未完成。
+-- [执行报告](reports/H08_执行报告.md)。未提交/推送Git，保留既有H07与本H08的在途未提交文件。
+-
+-## H08本轮新增任务（2026-11-01）
+-
+-- 用户已明确把简易前端纳入执行包：本机单页，走通“一句话需求 → 补问 → 确认理解 → 有依据的判断 → 修改重算”。
+-- 首版以打印机为范围，采用自由描述＋少量确认项，复用现有后端和证据准入；不假定已具备完整自然语言解析。
+-- H07日期空值、CN-002细节、CN-010事实/推论区分仍需先处理；13张源卡不因加前端自动获得推荐资格。
+-- 验收分开：A页面确实接通后端并通过浏览器操作/负向检查；B一个真人需求及独立人工评审。若未取得真实试用，B保持待完成。
+-- 本轮只编制任务，未实现页面、未启动服务或开展用户试用。下列H06/H07记录保留为历史依据，下一步范围以H08为准。
+-
+-**被复核的执行交接：** [handoffs/H06_知识卡事实审核.md](handoffs/H06_知识卡事实审核.md)
+-**本轮详细报告：** [reports/H06_知识卡事实审核报告.md](reports/H06_知识卡事实审核报告.md)
+-**逐卡事实及来源审核索引：** [knowledge/printer_source_audit.json](knowledge/printer_source_audit.json)
+-**卡片本体：** [knowledge/printer_cards.json](knowledge/printer_cards.json)
++# 当前状态（2026-11-17）
++
++<!-- evaluator-executor-workflow:v2.2 -->
++
++```yaml
++workflow: evaluator-executor-workflow/v2.2
++task_id: HNA-EVIDENCE-REOPEN-20261116
++task_kind: evaluator_design
++state: CONTRACT_FROZEN
++current_role: Executor
++baseline_commit: ce34764ab7d803b06abbdbcea0afe32048096c0a
++project_map_path: docs/PROJECT_BOTTLENECK_MAP.md
++project_map_revision: r24
++active_bottleneck_id: B01
++hypothesis_id: NONE
++contract_path: handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/CONTRACT.md
++executor_report_path: NONE
++evaluator_review_path: NONE
++next_artifact_path: handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/REPORT.md
++authorization_commit: false
++authorization_push: false
++authorization_history_rewrite: false
++authorization_api_call: false
++```
+ 
+-## 本轮（H06）已经执行
++## 当前唯一任务：前置取证包（2026-11-17）
+ 
+-- 原13卡覆盖**5个不同网页、4个来源组**；逐条对照公开文字记录来源事实、时效、适用范围。2022年上海消保委比较试验8卡为同一试验组，爱普生3卡来自同一厂商2篇FAQ，另有国家/上海市场监管通报各一张。
+-- **4条主张限缩改写**：CN-006/008/009/010；CN-008/009删掉“厂商喷墨维护说明直接推荐黑白激光”的路线绑定。
+-- 每条保存 `fact_audit_status/on/anchor/limit`。`fact_audit_status` 仅表示**执行者查到事实对应原文**，不等于来源的商业复用授权、现售型号适用性或独立批准。
+-- **没有批准任何卡用于正式购物推荐**：13张仍为 `pending` / `research_index` / `decision_support_approval=not_granted`。建议级准入需独立评估记录；模型不得借旧文章制造当前报价或官方背书。
+-- 新来源候选：2026年香港消委会第598期彩色多功能打印机试验；2025年上海家用打印机质量抽检结果的媒体转载（待核对监管原文）；2026年上海家用打印机质量抽检**计划**（不是结果）。三者只进入待查索引，不自动写入推荐证据。
+-- 本地全量单测 **58/58 通过**，H05真实负向输入 **8/8 通过**；未接平台、未加购/下单/付款、未提交/推送。
++**任务**：HNA-EVIDENCE-REOPEN-20261116。**合同机器状态**：`CONTRACT_FROZEN` / `Executor`（待评估者接受后切换）。**实际交付**：现有执行者 `REPORT.md` 已提交，L2 三项 PASS，等待独立评估者 L3；不等于任务或产品整体通过。
+ 
+-## H07 独立复核结果及下一步
++- [白话执行交接](handoffs/执行包完善_取证路径与责任闭环_20261117.md)、[冻结合同 r2](handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/CONTRACT.md)、[具体来源与额度](handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/acquisition_plan.json)、[冻结验证计划](handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/VALIDATION_PLAN.yaml)。
++- [项目瓶颈地图 r24](docs/PROJECT_BOTTLENECK_MAP.md)、[后续六步长包](handoffs/真实资料到实际选购判断_长执行包_20261116.md)。前置任务不是另起新开发长包。
+ 
+-- 本轮实测58/58单测、8/8负向输入通过；用可推荐的测试替身作阳性对照，空解释、伪现价/交易声明、未来日期及无主机URL已被阻断，认可H04主要问题的修复。
+-- 新增P2：`published_on=None` 会跳过决策用途的未知发布日期拒绝；同字段空串/未知文本却会被拒绝。需统一处理，不能因JSON空值表示差异放宽准入。
+-- 13卡主要文字有来源对应；CN-002“四色墨仓”范围细节尚未独立核实，CN-010仍需把源事实与成本分析推论分开。全部保持未批准正式推荐使用。
+-- 当前评分器复用同一个 `decide()` 重建模板，只能核对一致性，不能独立证明建议正确；报告已承认这一边界。
+-- **后续执行**：上述修复与一个真实需求验证已并入H08，通过简易本机页面完成交互；标准稳定后再冻结36条新确认样本。
++**已执行的取证路线**：仓内 Brother/HP 与海纳资料核对 → 厂家公开流程及 HP PDF（含一次失败渲染） → 海纳两个公开入口 → 未取得新增有行动意义的事实，留下可审的失败点、SHA 与未发送的最小人工请求。详见本任务回执。旧资料单纯改写不算新事实；**不要重复请求已访问的官方 URL**。
+ 
+-以下原H06待办仍适用，细化处理以H07为准：
++**实际资源账**：冻结时剩余7次；现有回执记录本轮**6次公网文档读取/渲染**（厂家4，海纳2），历史累计11/12，**仅余1次**，不自动追加调用。新搜索0，业务/API/Key/账号/付费/外发/交易0。受限/超时不重试、不重置历史预算、不扩大原长包、不提交或推送 Git。
+ 
+-1. 抽查13张卡的事实摘要与相关来源；特别是2022年试验的原始图表、爱普生FAQ无明确发布日期/型号对应、4条改写是否仍有过度推论。
+-2. 核实实际部署方式下的使用/转载/商用边界，判断 `decision_support` 是否具备可记录的允许用途。程序中的审批字段只是声明，**不是自动取得法律许可的证明**。
+-3. 审查打印机技术路线推断：原厂商维护说明不等于“低频必买黑白激光”，消保委历史样本不等于2026年现售品牌排行。
+-4. 若证据完整，再冻结全新至少36条打印机确认样本并采用分维评测；H02历史36例已经暴露，不再用作新独立成绩。H03新类目8～12条属于另一路探索。
++**已核现状**：实际 `acquisition_receipt.json`、执行 `REPORT.md` 和 L2 原件均已存在；本次本地复查确认冻结文件及120项产品哈希匹配、调查回执结构校验通过、15项合成检查通过，原L2汇总 **3/3 PASS**。结果为 `no_actionable_evidence`（新增可准入事实0）。**独立 REVIEW/L3 尚未见到**；结构成功不是来源批准或真实推荐效果。
+ 
+-## 历史工作链接
++**真实业务门禁仍未通过**：H1 合法材料/用途受阻；H2 目标平台销售身份 0/2（旧20条 0/20）；H3 河南有效到手价 0；微信二次使用与认知收益未知；正式36条未启、购买批准 false、交易 false。旧 GUI 工程有限通过不等于真实选购通过。
+ 
+-- H05修复： [handoffs/H05_执行H04修复.md](handoffs/H05_执行H04修复.md)、[reports/H05_修复执行报告.md](reports/H05_修复执行报告.md)
+-- H04独立复核： [handoffs/H04_独立复核.md](handoffs/H04_独立复核.md)
+-- H02首次实验： [reports/H02_执行报告.md](reports/H02_执行报告.md)；首次保留集为知识关闭15/36、开启29/36。经后验修复31/36不是独立成绩；H05真实未许可证据准入后旧样本诊断为关闭15/36、开启4/36，**都不能用于证明知识增益**。
+-- H03按需研究： [docs/06_按需品类认知与跨品类复用.md](docs/06_按需品类认知与跨品类复用.md)；国内/其他证据源： [docs/05_中国大陆消费证据源与开源实现.md](docs/05_中国大陆消费证据源与开源实现.md)。
++## 下一交付与核验
+ 
+-## 验证命令
++- [已提交的执行者 REPORT.md](handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/REPORT.md) · [L2 验证原件](handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/L2-GATE.json)
++- [已提交的调查回执 acquisition_receipt.json](handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/acquisition_receipt.json)（6次读取，累计11/12，0条新事实）
++- **唯一下一责任：评估者复核本次取证事实、受限记录、使用许可和预算，独立决定是否核闭本任务或维持停点。** [最小人工请求草稿](handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/OWNER_REQUESTS.md)仍未发送；执行者不自签 PASS，不自动解除父包门禁。
+ 
+-```bash
+-python3 -m unittest discover -s tests -v
+-python3 -m shopping_decision.h05_probes
+-```
++## 完整历史与维护规则
+ 
+-版本状态：已知本地提交 `5881af4`（H02–H06实现及H07初稿）；H07终稿、当前入口及H08执行包仍有未提交修改。本轮未执行提交或推送，远程同步状态未核验。下次先读H08，并按需查看H07复现依据；不要把旧样本、模板一致性或页面可用当成新独立推荐成绩。
++- [完整历史归档（CURRENT_HISTORY_20261117.md）](CURRENT_HISTORY_20261117.md)：原文件 **862 行 / 188,378 字节，按原始字节保留**；归档 SHA256：`86646ed06a273cccaa3781ffe11a53099e546d91250bcc4d5f0336c9fa567e17`。档案中的“当前最新”“下一任务”均为**历史语境**，不得覆盖本页的冻结路由。
++- 今后仅在本页维护最新机器状态、唯一执行入口、门禁和指向交接/报告的短链接；历史流水留在各自 `handoffs/` / `reports/` 或归档，不继续堆叠。
++- 本次是入口文件整理；不改产品代码、冻结合同、许可、交易开关或历史证据，未提交或推送。
+diff --git a/README.md b/README.md
+index 677480e..2d9cbc4 100644
+--- a/README.md
++++ b/README.md
+@@ -2,6 +2,22 @@
+ 
+ > **先懂品类，再选商品；先有证据，再给推荐；先核验订单，再由用户授权交易。**
+ 
++> **2026-11-16 当前入口**：先读 [CURRENT.md](CURRENT.md)及[唯一原长包](handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md)。旧R1/R2独立限界关闭，旧工程B限定通过。[新对话式Java主入口](reports/对话式购物需求主入口_执行者交付报告_20261116.md)已实现，并经[评估者独立工程回归](reports/购物智能体现状_独立评估_20261116.md)有限通过；执行者随后按意见补充[实际可见Swing审计另存/UTF-8逐字读回证据](reports/对话式GUI审计与河南原案条件复核_执行报告_20261116.md)，141972字节存档，Python全量434/434、ChatBridge/H10/P04各6/6再次通过。**此为程序化窗口测试，仍待独立人工可用性复核**。河南亲戚家庭样本已由项目负责人代述首次App扫码可接受、设备位于中国大陆河南省，微信必须/偏好未明确；微信三种条件在现有材料下无实质决策差异。地区SKU和有效价、实机复用、认知真实增益仍缺，正式36条未启动；H1/H2/H3及总体NOT PASS不变。历史阶段数字按对应日期解读。
++
++> **2026-11-15 历史执行状态**：长包内部 F1—F5 已修复、最小版本化打印机选购依据已接现有 CLI 与 Java Swing；执行者自测 Python **385/385**、11轮条件回放、Swing程序化 **5/5**（含新路径保存）、H05 **8/8**、Java H10/P04各 **6/6**。这些不是独立评估批准。海纳真实用途和两个型号可回查原值仍缺（H1 BLOCKED）；平台真实销售配置身份 **0/2**、地区现价 **0**、购买与交易关闭，整体仍 **NOT PASS**。先看 [CURRENT.md](CURRENT.md)、[执行报告](reports/认知驱动打印机比较_执行报告_20261115_run01.md) 和 [机器索引](reports/cognition_printer_delivery_20261115_run01.json)；此前各历史阶段的自测数字请按原日期解读。
++
++**离线重算（仅研究，不调用海纳 API / Key / 商城）**：
++
++```bash
++# 在项目根目录，设置 UTF-8 供子进程继承
++PYTHONUTF8=1 python3 -m scripts.cognition_case_replay --output reports/自选未存在的回放文件.json
++PYTHONUTF8=1 python3 -X utf8 -m unittest discover -s tests -q
++# 原有CLI仍可使用：
++PYTHONUTF8=1 python3 -m shopping_decision.dialogue_flow --real-printer-case
++```
++
++新版条件规则和来源见 `knowledge/printer_selection_criteria.json`，单位/撤回/版本/来源门禁见 `shopping_decision/selection_criteria.py`。原案对比与各模拟改答已在 [run02回放](reports/cognition_case_replay_20261115_run02.json) 留证；当前没有得到真实海纳数据使用权限或地区报价的购买结论。
++
+ 项目定位：面向商品、服务及可预订产品的**购买决策智能体**。目前只建设「需求理解 → 品类认知 → 评测证据 → 候选商品 → 比较推荐 → 交易草稿 → 安全交接」能力；暂不自动消费真实资金。**知识不是按品类全部预建：通用决策方法长期复用，每次只按缺口查必要专业资料**（详见[按需品类认知与跨品类复用](docs/06_按需品类认知与跨品类复用.md)）。
+ 
+ ## 目标与边界
+@@ -127,3 +143,19 @@ python3 -m shopping_decision.h05_probes
+ ```
+ 
+ 首批产品事实在 `knowledge/printer_products_official.json`（兄弟3款+HP2款；型号、源URL、功能证据、耗材和厂商建议零售价），通用比较器为 `shopping_decision/product_compare.py`；没有联网的实时京东/淘宝到手价、库存或平台SKU。现有Java桌面启动方式不变。**官网建议零售价不是实际到手价**；如果无法核验当前购买价格，所有预算判定必须显示未知。Brother公开目录已经能发现额外型号，但发现记录并不自动成为经过确认的商品功能。查看 [P0执行报告](reports/P0_真实商品候选与比较_执行报告_20261104.md) 和 [CURRENT.md](CURRENT.md)。
++
++## 2026-11-15 海纳 MCP 离线接线与打印机型号比较
++
++已基于仓库内 2026-11-14 的脱敏探针结构，实现 SKU、基础信息、参数、评价四类 MCP 响应的**合成适配器**。固定夹具为 `tests/fixtures/haina_mcp_synthetic_bundle.json`，SHA-256 为 `bd1de6e313b6fcfd854e53287e5a2d91363a9c697790e984c7a5df97cd61db0d`。普通启动不会读取；CLI/桌面显式加载也只接受该固定路径与哈希。任意 JSON 即使自标 `synthetic_test` 也会被拒绝。
++
++离线复验：
++
++```bash
++python3 -m unittest tests.test_haina_mcp_ingest tests.test_real_printer_case_research -v
++
++echo '{"text":"离线合成测试","answers":{"category":"printer","usage":"家用","needs_color":false,"accepts_outsourced_color":true,"monthly_pages_range":[0,50],"budget_max_cny":1000}}' | python3 -m shopping_decision.dialogue_flow --haina-mcp-report tests/fixtures/haina_mcp_synthetic_bundle.json --real-printer-case
++```
++
++此入口只验证字段解析、型号冲突、来源分级、数量核对和CLI/桌面桥接，不代表真实海纳商品数据接入或商品比较效果。真实响应目前仍被阻断：完整MCP开发者合作协议及本机解析、个人展示、最小审计/缓存、模型传输等具体用途许可尚未取得；原始探针响应也未保存。禁止把真实响应改名为合成数据绕过限制。
++
++打印机公开厂家资料比较报告：[两型号比较](reports/打印机两型号公开证据比较_20261115.md)；已有海纳探针结构和身份缺口：[探针核对](reports/海纳MCP已有真实探针结构与身份缺口_20261115.md)。其中Brother HL-L1238W缺平台商品身份字段；HP M232dw供应商ID尚未证明为平台原生ID，且需与M232dwc严格区分。比较已覆盖9个维度和3条条件取舍。微信打印、电压、耗材和保修都受设备实际部署地区影响；Java桌面端已将收货地区与设备部署地区分成两个字段，实际部署地仍未确认。当前平台身份核验0/2、地区有效报价0、购买批准关闭。
+diff --git a/desktop/P04MarketplaceRegression.java b/desktop/P04MarketplaceRegression.java
+index a2a07fc..d6e3cc3 100644
+--- a/desktop/P04MarketplaceRegression.java
++++ b/desktop/P04MarketplaceRegression.java
+@@ -19,6 +19,13 @@ public final class P04MarketplaceRegression {
+             command.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
+         return DesktopBridgeClient.invoke(new ProcessBuilder(command), 10_000);
+     }
++    private static Map<String,String> invoke(String python, String query, String links, String platform) throws Exception {
++        List<String> command = new ArrayList<>();
++        command.add(python); command.add("-m"); command.add("shopping_decision.discovery_bridge");
++        for (String value : List.of(query, links, platform))
++            command.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
++        return DesktopBridgeClient.invoke(new ProcessBuilder(command), 10_000);
++    }
+     public static void main(String[] args) throws Exception {
+         if (args.length != 1) throw new IllegalArgumentException("Usage: P04MarketplaceRegression <python>");
+         URI search = ShoppingDecisionDesktop.marketplaceSearchUri("冰箱 500L");
+@@ -48,6 +55,18 @@ public final class P04MarketplaceRegression {
+         Map<String,String> wrong = invoke(args[0], "冰箱", "https://item.jd.com.evil.net/100126724020.html");
+         check("no_valid_candidates".equals(wrong.get("status")), "spoofed host must be rejected");
+         System.out.println("PASS spoofed URL rejected");
+-        System.out.println("P04 Java marketplace regression: 4/4 PASS");
++        URI taobao = ShoppingDecisionDesktop.marketplaceSearchUri("打印机 微信", "taobao");
++        check("s.taobao.com".equals(taobao.getHost()), "taobao search host must be official");
++        System.out.println("PASS Taobao browser search URL");
++
++        Map<String,String> tb = invoke(args[0], "打印机",
++                "https://item.taobao.com/item.htm?id=1234567890", "taobao");
++        check("candidates_unverified".equals(tb.get("status")), "Taobao candidate status wrong");
++        check(tb.getOrDefault("candidate_urls", "").equals("https://item.taobao.com/item.htm?id=1234567890"),
++              "candidate link was not normalized by Python");
++        String forbidden = Character.toString((char)34) + "transactions_enabled" + Character.toString((char)34) + ": false";
++        check(tb.getOrDefault("report_json", "").contains(forbidden), "must not trade");
++        System.out.println("PASS Java->Python Taobao user link validation");
++        System.out.println("P04 Java marketplace regression: 6/6 PASS");
+     }
+ }
+diff --git a/desktop/ShoppingDecisionDesktop.java b/desktop/ShoppingDecisionDesktop.java
+index c3e05d5..e15476b 100644
+--- a/desktop/ShoppingDecisionDesktop.java
++++ b/desktop/ShoppingDecisionDesktop.java
+@@ -1,4 +1,5 @@
+ import javax.swing.*;
++import javax.swing.filechooser.FileNameExtensionFilter;
+ import java.awt.*;
+ import java.io.*;
+ import java.nio.file.*;
+@@ -22,6 +23,9 @@ public final class ShoppingDecisionDesktop {
+     private final JComboBox<String> wechatWorkflow = new JComboBox<>(new String[]{"待确认", "微信小程序直接打印", "文件转存到厂商App后打印"});
+     private final JComboBox<String> budgetScope = new JComboBox<>(new String[]{"待确认", "主机含运费及必要支出", "还包括本次额外购买的耗材"});
+     private final JTextField deliveryRegion = new JTextField();
++    private final JTextField deviceDeploymentRegion = new JTextField();
++    private Path hainaMcpReport = null;
++    private final JLabel hainaMcpReportStatus = new JLabel("未选择；普通判断不会读取海纳文件");
+     private final JButton calculate = new JButton("确认并调用后端判断");
+     private final JLabel status = new JLabel("仅本机运行，不下单、不查询实时价格。所有条件必须由用户确认。");
+     private String lastReport = "";
+@@ -29,17 +33,27 @@ public final class ShoppingDecisionDesktop {
+     private SwingWorker<Map<String,String>,Void> pendingWorker;
+     private String[] captured;
+     private final String python;
++    // 新对话入口与旧表单共用后端和请求版本保护；参考按钮只编辑草稿。
++    private final JTextArea chatTranscript = area(15), chatInput = area(3);
++    private final JTextArea chatUnderstanding = area(10), chatOutcome = area(12);
++    private final JLabel chatPrompt = new JLabel("正在加载本机问题...");
++    private final JPanel chatReferences = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 4));
++    private final JPanel chatEdits = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 4));
++    private final JButton chatSend = new JButton("发送并确认"), chatPreview = new JButton("预览/另存审计");
++    private String chatState = "", chatPromptField = "", chatReport = "";
++    private SwingWorker<Map<String,String>,Void> chatWorker;
+ 
+     private ShoppingDecisionDesktop(String python) {
+         this.python = python;
+         description.setText("");
++        body.add(chatPage(), "chat");
+         body.add(pageOne(), "one");
+         body.add(pageTwo(), "two");
+         body.add(pageThree(), "three");
+         body.add(pageFour(), "four");
+         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         frame.setLayout(new BorderLayout(12,12));
+-        JLabel title = new JLabel("  家用打印机决策 · H08 本机试用");
++        JLabel title = new JLabel("  购物智能体 · 对话需求判断（本机只读）");
+         title.setFont(title.getFont().deriveFont(Font.BOLD,20f));
+         frame.add(title, BorderLayout.NORTH);
+         frame.add(body, BorderLayout.CENTER);
+@@ -47,7 +61,182 @@ public final class ShoppingDecisionDesktop {
+         frame.setSize(850,850);
+         frame.setLocationRelativeTo(null);
+         frame.setVisible(true);
+-        show("one");
++        show("chat");
++        updateChat("", "", "");
++    }
++    /** 新主入口：参考答案只填文本，不进入后端；发送后才更新显式条件。 */
++    private JPanel chatPage() {
++        JPanel panel = new JPanel(new BorderLayout(8, 8));
++        panel.setBorder(BorderFactory.createEmptyBorder(12, 16, 12, 16));
++        chatTranscript.setEditable(false);
++        chatUnderstanding.setEditable(false);
++        chatOutcome.setEditable(false);
++        chatTranscript.setText("助手：请先明确商品品类。这里不会自动替你确认默认值，也不会查询或购买商品。\n");
++        JTabbedPane details = new JTabbedPane();
++        JPanel understandingPanel = new JPanel(new BorderLayout(4, 4));
++        understandingPanel.add(new JScrollPane(chatUnderstanding), BorderLayout.CENTER);
++        JPanel edits = new JPanel(new BorderLayout());
++        edits.add(new JLabel("已确认/待补条件：点击字段可修改，发送才生效"), BorderLayout.NORTH);
++        chatEdits.setLayout(new FlowLayout(FlowLayout.LEFT, 4, 2));
++        edits.add(new JScrollPane(chatEdits), BorderLayout.CENTER);
++        edits.setPreferredSize(new Dimension(300, 125));
++        understandingPanel.add(edits, BorderLayout.SOUTH);
++        details.addTab("目前理解/修改", understandingPanel);
++        details.addTab("证据与下一步", new JScrollPane(chatOutcome));
++        JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
++                new JScrollPane(chatTranscript), details);
++        split.setResizeWeight(0.58);
++        panel.add(split, BorderLayout.CENTER);
++
++        JPanel inputArea = new JPanel(new BorderLayout(4, 4));
++        JPanel promptPanel = new JPanel(new BorderLayout(4, 4));
++        promptPanel.add(chatPrompt, BorderLayout.NORTH);
++        chatReferences.setLayout(new FlowLayout(FlowLayout.LEFT, 4, 2));
++        promptPanel.add(new JScrollPane(chatReferences), BorderLayout.CENTER);
++        promptPanel.setPreferredSize(new Dimension(700, 96));
++        inputArea.add(promptPanel, BorderLayout.NORTH);
++        inputArea.add(new JScrollPane(chatInput), BorderLayout.CENTER);
++        JPanel actions = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 2));
++        chatSend.addActionListener(e -> {
++            String text = chatInput.getText().trim();
++            if (chatPromptField.isBlank() || text.isBlank()) {
++                error("请先选择当前问题并填写明确答复；“暂不确定”也可发送");
++            } else {
++                updateChat(chatPromptField, text, chatPrompt.getText());
++            }
++        });
++        chatPreview.addActionListener(e -> {
++            if (chatReport.isBlank()) {
++                error("当前没有可预览的会话审计");
++            } else {
++                lastReport = chatReport;
++                previewReport();
++            }
++        });
++        JButton newSession = new JButton("新建空白会话");
++        newSession.addActionListener(e -> {
++            requestGate.invalidate();
++            if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++            chatState = "";
++            chatPromptField = "";
++            chatReport = "";
++            chatInput.setText("");
++            chatTranscript.setText("助手：已开启空白会话。原会话不会自动带入；没有保存到磁盘。\n");
++            chatSend.setEnabled(true);
++            updateChat("", "", "");
++        });
++        JButton oldForm = new JButton("旧表单回退（实验）");
++        oldForm.addActionListener(e -> show("one"));
++        JButton bulk = new JButton("批量补充/修改");
++        bulk.addActionListener(e -> {
++            requestGate.invalidate();
++            if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++            chatSend.setEnabled(true);
++            chatPromptField = "batch";
++            chatPrompt.setText("批量答复：每行“字段名：答案”，最多8行；只有发送才确认。");
++            chatReferences.removeAll();
++            chatReferences.revalidate();
++            chatReferences.repaint();
++            chatInput.setText("");
++            chatInput.requestFocusInWindow();
++        });
++        actions.add(chatSend);
++        actions.add(bulk);
++        actions.add(chatPreview);
++        actions.add(newSession);
++        actions.add(oldForm);
++        inputArea.add(actions, BorderLayout.SOUTH);
++        inputArea.setPreferredSize(new Dimension(700, 255));
++        panel.add(inputArea, BorderLayout.SOUTH);
++        return panel;
++    }
++
++    /** 所有轮次走统一Python受控规则与现有Web共享研究；Java不解析自由文字。 */
++    private void updateChat(String field, String submitted, String previousPrompt) {
++        if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++        final String snapshot = chatState;
++        final String changedField = field;
++        final String raw = submitted;
++        final long version = requestGate.next();
++        chatSend.setEnabled(false);
++        status.setText("本机正在核对本轮显式答复；不会自动访问商城...");
++        SwingWorker<Map<String,String>,Void> worker = new SwingWorker<Map<String,String>,Void>() {
++            @Override protected Map<String,String> doInBackground() throws Exception {
++                List<String> cmd = new ArrayList<>();
++                cmd.add(python);
++                cmd.add("-m");
++                cmd.add("shopping_decision.chat_bridge");
++                for (String value : new String[]{snapshot, changedField, raw}) {
++                    cmd.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
++                }
++                return DesktopBridgeClient.invoke(new ProcessBuilder(cmd), 20_000);
++            }
++            @Override protected void done() {
++                if (!requestGate.accepts(version)) return;
++                chatWorker = null;
++                chatSend.setEnabled(true);
++                try {
++                    Map<String,String> out = get();
++                    if (out.containsKey("error")) throw new IllegalArgumentException(out.get("error"));
++                    if (!out.containsKey("state_json") || !out.containsKey("report_json")) {
++                        throw new IllegalArgumentException("对话结果缺少版本/审计");
++                    }
++                    chatState = out.get("state_json");
++                    chatReport = out.get("report_json");
++                    if (!raw.isBlank()) {
++                        chatTranscript.append("\n用户（" + previousPrompt + "）：" + raw + "\n");
++                    }
++                    chatPromptField = out.getOrDefault("prompt_field", "");
++                    String next = out.getOrDefault("prompt", "本轮已完成");
++                    chatPrompt.setText(next.length() > 80 ? next.substring(0, 80) + "…" : next);
++                    chatTranscript.append("助手：" + next + "\n");
++                    chatTranscript.setCaretPosition(chatTranscript.getDocument().getLength());
++                    chatUnderstanding.setText(out.getOrDefault("understanding", ""));
++                    chatUnderstanding.setCaretPosition(0);
++                    chatOutcome.setText(out.getOrDefault("result_text", ""));
++                    chatOutcome.setCaretPosition(0);
++                    chatInput.setText("");
++                    chatReferences.removeAll();
++                    for (String row : out.getOrDefault("choices", "").split("\\R")) {
++                        if (row.isBlank()) continue;
++                        String[] items = row.split("\\t", 2);
++                        if (items.length != 2) continue;
++                        JButton reference = new JButton(items[0]);
++                        // 不调用 updateChat：点击参考答案仅把草稿送入可编辑文本框。
++                        reference.addActionListener(e -> { chatInput.setText(items[1]); chatInput.requestFocusInWindow(); });
++                        chatReferences.add(reference);
++                    }
++                    chatReferences.revalidate();
++                    chatReferences.repaint();
++                    chatEdits.removeAll();
++                    for (String row : out.getOrDefault("editable", "").split("\\R")) {
++                        String[] items = row.split("\\t", 3);
++                        if (items.length < 3) continue;
++                        JButton edit = new JButton(items[1]);
++                        edit.addActionListener(e -> {
++                            requestGate.invalidate();
++                            if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
++                            chatSend.setEnabled(true);
++                            chatPromptField = items[0];
++                            chatPrompt.setText("修改 " + items[1] + "（当前值：" + items[2] + "；发送后才生效）");
++                            chatInput.setText("");
++                            chatInput.requestFocusInWindow();
++                        });
++                        chatEdits.add(edit);
++                    }
++                    chatEdits.revalidate();
++                    chatEdits.repaint();
++                    status.setText("对话版本 " + out.getOrDefault("session_version", "0")
++                            + " · 本机只读研究 · 不批准购买/交易");
++                } catch (Exception ex) {
++                    status.setText("本轮未确认，原条件保留：" + ex.getMessage());
++                    JOptionPane.showMessageDialog(frame, "本轮答复未保存：" + ex.getMessage(),
++                            "请检查", JOptionPane.WARNING_MESSAGE);
++                }
++            }
++        };
++        chatWorker = worker;
++        worker.execute();
+     }
+     private static JTextArea area(int rows) { JTextArea a = new JTextArea(rows,55); a.setLineWrap(true); a.setWrapStyleWord(true); return a; }
+     private static JComboBox<String> choices() { return new JComboBox<>(new String[]{"不确定","是","否"}); }
+@@ -59,8 +248,9 @@ public final class ShoppingDecisionDesktop {
+     private JPanel pageOne() {
+         JPanel p=vertical();p.add(new JLabel("第一步 · 一句话说明打印机需求（不会自动猜测条件）"));p.add(scroll(description));
+         JButton next=new JButton("下一步：补充条件");next.addActionListener(e->{if(description.getText().isBlank())error("请先填写需求");else show("two");});
+-        JButton discovery = new JButton("京东商城商品发现（只读实验）");discovery.addActionListener(e->openMarketplaceTool());
+-        p.add(buttons(next,discovery));return p;
++        JButton discovery = new JButton("京东 / 淘宝商品发现（只读实验）");discovery.addActionListener(e->openMarketplaceTool());
++        JButton chat = new JButton("返回对话主入口");chat.addActionListener(e->show("chat"));
++        p.add(buttons(next,discovery,chat));return p;
+     }
+     private JPanel pageTwo() {
+         JPanel p=vertical();p.add(new JLabel("第二步 · 不确定请留空或选“不确定”"));
+@@ -69,6 +259,7 @@ public final class ShoppingDecisionDesktop {
+         p.add(line("微信打印是必须条件",wechatRequired));p.add(line("可接受的微信方式",wechatWorkflow));
+         p.add(line("必须自动双面打印",autoDuplex));p.add(line("预算支出口径",budgetScope));
+         p.add(line("收货省市区（未知留空，无需详细地址）",deliveryRegion));
++        p.add(line("设备实际部署国家/地区（与收货地可能不同）",deviceDeploymentRegion));
+         p.add(new JLabel("其他硬要求（微信打印不等于普通Wi-Fi），每行一条"));p.add(scroll(other));
+         JButton back=new JButton("返回原话"),next=new JButton("核对我的理解");back.addActionListener(e->show("one"));next.addActionListener(e->review());p.add(buttons(back,next));
+         JPanel wrapper = new JPanel(new BorderLayout());wrapper.add(new JScrollPane(p), BorderLayout.CENTER);return wrapper;
+@@ -87,47 +278,109 @@ public final class ShoppingDecisionDesktop {
+         return s;
+     }
+     private static String bool(JComboBox<String> b) {int i=b.getSelectedIndex();return i==0?"":i==1?"true":"false";}
+-    private String[] gather() {return new String[]{description.getText().trim(),printVolume(),number(budget,"预算"),number(idle,"闲置周数"),bool(color),bool(outsourced),bool(wireless),bool(scan),other.getText().trim(),bool(wechatRequired),new String[]{"unknown","miniprogram","transfer_to_app"}[wechatWorkflow.getSelectedIndex()],bool(autoDuplex),deliveryRegion.getText().trim(),new String[]{"unknown","device_delivered","device_and_extra_consumables"}[budgetScope.getSelectedIndex()]};}
++    private String[] gather() {return new String[]{description.getText().trim(),printVolume(),number(budget,"预算"),number(idle,"闲置周数"),bool(color),bool(outsourced),bool(wireless),bool(scan),other.getText().trim(),bool(wechatRequired),new String[]{"unknown","miniprogram","transfer_to_app"}[wechatWorkflow.getSelectedIndex()],bool(autoDuplex),deliveryRegion.getText().trim(),new String[]{"unknown","device_delivered","device_and_extra_consumables"}[budgetScope.getSelectedIndex()],deviceDeploymentRegion.getText().trim()};}
+     private void review() {try {invalidatePending();captured=gather();lastReport="";result.setText("");
+-        summary.setText("第三步 · 请确认整理后的条件（未知不代表否）\n\n原始需求："+captured[0]+"\n每月张数："+display(captured[1])+"\n预算："+display(captured[2])+"\n闲置周数："+display(captured[3])+"\n彩印："+display(captured[4])+"\n外包彩印："+display(captured[5])+"\n无线："+display(captured[6])+"\n扫描："+display(captured[7])+"\n微信是必须条件："+display(captured[9])+"\n微信方式："+wechatWorkflow.getSelectedItem()+"\n必须自动双面："+display(captured[11])+"\n收货地区："+display(captured[12])+"\n预算口径："+budgetScope.getSelectedItem()+"\n待核对原话与其他要求：\n"+captured[0]+"\n"+captured[8]);show("three");
++        summary.setText("第三步 · 请确认整理后的条件（未知不代表否）\n\n原始需求："+captured[0]+"\n每月张数："+display(captured[1])+"\n预算："+display(captured[2])+"\n闲置周数："+display(captured[3])+"\n彩印："+display(captured[4])+"\n外包彩印："+display(captured[5])+"\n无线："+display(captured[6])+"\n扫描："+display(captured[7])+"\n微信是必须条件："+display(captured[9])+"\n微信方式："+wechatWorkflow.getSelectedItem()+"\n必须自动双面："+display(captured[11])+"\n收货地区："+display(captured[12])+"\n设备实际部署地区："+display(captured[14])+"\n预算口径："+budgetScope.getSelectedItem()+"\n待核对原话与其他要求：\n"+captured[0]+"\n"+captured[8]);show("three");
+     }catch(IllegalArgumentException ex){error(ex.getMessage());}}
+     private static String display(String s) {return s.isEmpty()?"未知":s.equals("true")?"是":s.equals("false")?"否":s;}
+-    private JPanel pageThree() { JPanel p=vertical();summary.setEditable(false);p.add(scroll(summary));JButton back=new JButton("修改条件");back.addActionListener(e->show("two"));calculate.addActionListener(e->calculate());p.add(buttons(back,calculate));return p; }
+-    private JPanel pageFour() {JPanel p=vertical();result.setEditable(false);p.add(scroll(result));JButton edit=new JButton("修改后重新判断"),preview=new JButton("预览本地评审记录");edit.addActionListener(e->{lastReport="";result.setText("");show("two");});preview.addActionListener(e->previewReport());JButton discovery=new JButton("打开京东商品发现（只读）");discovery.addActionListener(e->openMarketplaceTool());p.add(buttons(edit,preview,discovery));return p; }
++    private JPanel pageThree() {
++        JPanel p=vertical();
++        summary.setEditable(false);
++        p.add(scroll(summary));
++        p.add(new JLabel("可选：只加载本机海纳MCP合成测试报告，不会联网。真实响应在用途许可核准前会被阻断。"));
++        p.add(hainaMcpReportStatus);
++        JButton chooseResearch = new JButton("选择本机合成测试报告");
++        JButton clearResearch = new JButton("清除研究材料");
++        chooseResearch.addActionListener(e -> chooseHainaMcpReport());
++        clearResearch.addActionListener(e -> {
++            hainaMcpReport = null;
++            hainaMcpReportStatus.setText("未选择；普通判断不会读取海纳文件");
++        });
++        JButton back=new JButton("修改条件");
++        back.addActionListener(e->show("two"));
++        calculate.addActionListener(e->calculate());
++        p.add(buttons(chooseResearch, clearResearch));
++        p.add(buttons(back,calculate));
++        return p;
++    }
++
++    private void chooseHainaMcpReport() {
++        Path expected = Path.of("tests", "fixtures", "haina_mcp_synthetic_bundle.json")
++                .toAbsolutePath().normalize();
++        JFileChooser chooser = new JFileChooser(expected.getParent().toFile());
++        chooser.setDialogTitle("选择仓库内固定哈希的海纳MCP合成测试夹具");
++        chooser.setFileFilter(new FileNameExtensionFilter("固定合成测试包 (haina_mcp_synthetic_bundle.json)", "json"));
++        chooser.setSelectedFile(expected.toFile());
++        if (chooser.showOpenDialog(frame) != JFileChooser.APPROVE_OPTION) return;
++        Path chosen = chooser.getSelectedFile().toPath().toAbsolutePath().normalize();
++        try {
++            if (!chosen.equals(expected)) {
++                throw new IOException("只允许加载仓库内固定哈希的tests/fixtures/haina_mcp_synthetic_bundle.json；任意文件即使自标synthetic_test也会被阻断");
++            }
++            long size = Files.size(chosen);
++            if (size < 1 || size > 200_000) throw new IOException("文件大小必须在1至200000字节之间");
++            hainaMcpReport = chosen;
++            hainaMcpReportStatus.setText("已选择固定哈希夹具：" + chosen.getFileName()
++                    + "；仅作接线测试，不代表真实商品证据");
++        } catch (IOException ex) {
++            error("无法选择本机研究材料：" + ex.getMessage());
++        }
++    }
++    private JPanel pageFour() {JPanel p=vertical();result.setEditable(false);p.add(scroll(result));JButton edit=new JButton("修改后重新判断"),preview=new JButton("预览本地评审记录");edit.addActionListener(e->{lastReport="";result.setText("");show("two");});preview.addActionListener(e->previewReport());JButton discovery=new JButton("打开京东 / 淘宝商品发现（只读）");discovery.addActionListener(e->openMarketplaceTool());p.add(buttons(edit,preview,discovery));return p; }
+     /** 只构造官方商品搜索页 URL；实际打开必须由用户点击，绝不传输账号登录信息。 */
+     static URI marketplaceSearchUri(String query) {
++        return marketplaceSearchUri(query, "jd");
++    }
++    static URI marketplaceSearchUri(String query, String platform) {
+         if (query == null || query.isBlank() || query.length() > 100
+                 || query.chars().anyMatch(c -> c < 32 || c == 127)) {
+             throw new IllegalArgumentException("搜索词必须为1至100字且不含控制字符");
+         }
+-        return URI.create("https://search.jd.com/Search?keyword="
+-                + URLEncoder.encode(query.trim(), StandardCharsets.UTF_8));
++        String base = switch (platform) {
++            case "jd" -> "https://search.jd.com/Search?keyword=";
++            case "taobao" -> "https://s.taobao.com/search?q=";
++            default -> throw new IllegalArgumentException("不支持的商城");
++        };
++        return URI.create(base + URLEncoder.encode(query.trim(), StandardCharsets.UTF_8));
+     }
+ 
+     /** 独立商品发现窗口，不影响打印机需求与购买批准的状态。 */
+     private void openMarketplaceTool() {
+-        JDialog dialog = new JDialog(frame, "京东商品发现｜用户自选商品｜只读", false);
++        JDialog dialog = new JDialog(frame, "京东 / 淘宝商品发现｜用户自选商品｜只读", false);
+         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+         JPanel p = vertical();
+-        p.add(new JLabel("输入任意品类搜索词 → 用户主动打开京东 → 粘贴1～5条商品详情链接"));
++        p.add(new JLabel("输入搜索词 → 自己选择京东或淘宝并登录 → 粘贴1～5条商品详情链接"));
++        JComboBox<String> marketplace = new JComboBox<>(new String[]{"京东", "淘宝 / 天猫"});
++        p.add(line("选择商城", marketplace));
+         JTextField keyword = new JTextField(description.getText().isBlank()
+                 ? "" : description.getText().trim().substring(0, Math.min(100, description.getText().trim().length())));
+-        p.add(line("京东搜索词", keyword));
+-        p.add(new JLabel("选中的商品链接（每行一个 https://item.jd.com/数字.html；不填写账号和密码）"));
++        p.add(line("商品搜索词", keyword));
++        JLabel linkHelp = new JLabel("完整商品链接：京东 item.jd.com/数字.html；淘宝 item.taobao.com/item.htm?id=数字");
++        p.add(linkHelp);
++        p.add(new JLabel("每行一个链接，不填写账号和密码，不接受需跳转的短链接"));
+         JTextArea links = area(6);p.add(scroll(links));
+         p.add(new JLabel("核验记录（仅为商品线索，不能证明价格、库存或型号）"));
+         JTextArea outcome = area(11);outcome.setEditable(false);p.add(scroll(outcome));
+-        JButton open = new JButton("在本机浏览器打开京东搜索");
++        JButton open = new JButton("打开选中商城搜索");
+         JButton review = new JButton("校验粘贴的链接（不联网）");
++        JComboBox<String> verifiedLinks = new JComboBox<>();
++        JButton openVerified = new JButton("打开已校验商品链接");
++        openVerified.setEnabled(false);
++        p.add(line("校验通过的商品（仅网址）", verifiedLinks));
++        marketplace.addActionListener(e -> {
++            verifiedLinks.removeAllItems();
++            openVerified.setEnabled(false);
++        });
+         JButton close = new JButton("关闭");
+         open.addActionListener(e -> {
+             try {
+-                URI destination = marketplaceSearchUri(keyword.getText());
++                String site = marketplace.getSelectedIndex() == 0 ? "jd" : "taobao";
++                URI destination = marketplaceSearchUri(keyword.getText(), site);
+                 if (!Desktop.isDesktopSupported() || !Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                     throw new IllegalStateException("当前系统不支持打开默认浏览器");
+                 }
+                 Desktop.getDesktop().browse(destination);
+-                outcome.setText("浏览器已尝试打开京东公开搜索页。请自行决定是否登录并手动复制商品链接。\n"
++                outcome.setText("浏览器已尝试打开所选商城的搜索页。请自行决定是否登录并手动复制商品链接。\n"
+                         + "本机购物智能体不读取 Cookie、登录状态、商品页内容或支付信息。");
+             } catch (Exception ex) {
+                 JOptionPane.showMessageDialog(dialog, "无法打开浏览器：" + ex.getMessage(),
+@@ -137,12 +390,16 @@ public final class ShoppingDecisionDesktop {
+         review.addActionListener(e -> {
+             try {
+                 // 与 Python 校验一致，拒绝模糊/过长搜索词，避免用户误以为打开了不可信站点。
+-                marketplaceSearchUri(keyword.getText());
++                String site = marketplace.getSelectedIndex() == 0 ? "jd" : "taobao";
++                marketplaceSearchUri(keyword.getText(), site);
+                 String rawLinks = links.getText();
+                 if (rawLinks.isBlank() || rawLinks.length() > 12000) {
+-                    throw new IllegalArgumentException("请粘贴1至5条京东详情链接");
++                    throw new IllegalArgumentException("请粘贴1至5条当前商城的完整商品详情链接");
+                 }
+                 final String query = keyword.getText().trim();
++                final String chosenPlatform = site;
++                verifiedLinks.removeAllItems();
++                openVerified.setEnabled(false);
+                 review.setEnabled(false);
+                 outcome.setText("仅本机校验用户选取的商品链接，不会访问外部 API ...");
+                 SwingWorker<Map<String,String>,Void> worker = new SwingWorker<Map<String,String>,Void>() {
+@@ -151,6 +408,7 @@ public final class ShoppingDecisionDesktop {
+                         cmd.add(python);cmd.add("-m");cmd.add("shopping_decision.discovery_bridge");
+                         cmd.add(Base64.getEncoder().encodeToString(query.getBytes(StandardCharsets.UTF_8)));
+                         cmd.add(Base64.getEncoder().encodeToString(rawLinks.getBytes(StandardCharsets.UTF_8)));
++                        cmd.add(Base64.getEncoder().encodeToString(chosenPlatform.getBytes(StandardCharsets.UTF_8)));
+                         return DesktopBridgeClient.invoke(new ProcessBuilder(cmd), 15_000);
+                     }
+                     @Override protected void done() {
+@@ -158,7 +416,14 @@ public final class ShoppingDecisionDesktop {
+                         review.setEnabled(true);
+                         try {
+                             Map<String,String> checked = get();
++                            if (!chosenPlatform.equals(marketplace.getSelectedIndex() == 0 ? "jd" : "taobao")) {
++                                outcome.setText("商城选择已变更，请重新校验所选平台的链接");
++                                return;
++                            }
+                             if (checked.containsKey("error")) throw new IllegalArgumentException(checked.get("error"));
++                            String[] urls = checked.getOrDefault("candidate_urls", "").split("\\n");
++                            for (String url : urls) if (!url.isBlank()) verifiedLinks.addItem(url);
++                            openVerified.setEnabled(verifiedLinks.getItemCount() > 0);
+                             outcome.setText(checked.getOrDefault("summary", "无候选")
+                                     + "\n\n核验记录（未批准购买）：\n"
+                                     + checked.getOrDefault("report_json", "{}"));
+@@ -173,8 +438,24 @@ public final class ShoppingDecisionDesktop {
+                 JOptionPane.showMessageDialog(dialog, ex.getMessage(), "链接格式不正确", JOptionPane.WARNING_MESSAGE);
+             }
+         });
++        openVerified.addActionListener(e -> {
++            try {
++                String chosen = (String) verifiedLinks.getSelectedItem();
++                if (chosen == null) return;
++                URI itemUri = URI.create(chosen);
++                String host = itemUri.getHost();
++                if (!"https".equals(itemUri.getScheme()) ||
++                        !Set.of("item.jd.com", "item.taobao.com", "detail.tmall.com").contains(host))
++                    throw new IllegalArgumentException("不是已校验的官方商品详情页");
++                if (!Desktop.isDesktopSupported() || !Desktop.getDesktop().isSupported(Desktop.Action.BROWSE))
++                    throw new IllegalStateException("当前系统不支持浏览器");
++                Desktop.getDesktop().browse(itemUri);
++            } catch (Exception ex) {
++                JOptionPane.showMessageDialog(dialog, "无法打开商品：" + ex.getMessage(), "打开失败", JOptionPane.WARNING_MESSAGE);
++            }
++        });
+         close.addActionListener(e -> dialog.dispose());
+-        p.add(buttons(open, review, close));
++        p.add(buttons(open, review, openVerified, close));
+         dialog.add(new JScrollPane(p));
+         dialog.setSize(880,720);
+         dialog.setLocationRelativeTo(frame);
+@@ -210,6 +491,10 @@ public final class ShoppingDecisionDesktop {
+         SwingWorker<Map<String,String>,Void> worker = new SwingWorker<Map<String,String>,Void>() {
+             protected Map<String,String> doInBackground() throws Exception {
+                 List<String> cmd=new ArrayList<>();cmd.add(python);cmd.add("-m");cmd.add("shopping_decision.desktop_bridge");
++                if (hainaMcpReport != null) {
++                    cmd.add("--haina-mcp-report");
++                    cmd.add(hainaMcpReport.toString());
++                }
+                 for(String s:snapshot)cmd.add(Base64.getEncoder().encodeToString(s.getBytes(StandardCharsets.UTF_8)));
+                 return DesktopBridgeClient.invoke(new ProcessBuilder(cmd), 20_000);
+             }
+diff --git "a/docs/08_\345\225\206\345\223\201\345\217\221\347\216\260\344\270\216\350\257\204\344\273\267\350\257\201\346\215\256\346\270\240\351\201\223_\344\272\254\344\270\234\346\267\230\345\256\235\345\260\217\347\272\242\344\271\246.md" "b/docs/08_\345\225\206\345\223\201\345\217\221\347\216\260\344\270\216\350\257\204\344\273\267\350\257\201\346\215\256\346\270\240\351\201\223_\344\272\254\344\270\234\346\267\230\345\256\235\345\260\217\347\272\242\344\271\246.md"
+index 4aba3ab..c11a627 100644
+--- "a/docs/08_\345\225\206\345\223\201\345\217\221\347\216\260\344\270\216\350\257\204\344\273\267\350\257\201\346\215\256\346\270\240\351\201\223_\344\272\254\344\270\234\346\267\230\345\256\235\345\260\217\347\272\242\344\271\246.md"
++++ "b/docs/08_\345\225\206\345\223\201\345\217\221\347\216\260\344\270\216\350\257\204\344\273\267\350\257\201\346\215\256\346\270\240\351\201\223_\344\272\254\344\270\234\346\267\230\345\256\235\345\260\217\347\272\242\344\271\246.md"
+@@ -1,4 +1,6 @@
+-# 商品发现与评价证据：京东联盟 / 淘宝 / 小红书
++# 商品发现与评价证据渠道：海纳 / 京东联盟 / 淘宝 / 小红书
++
++> **2026-11-10 最新状态（优先于下方 11-07 快照）**：用户已自行注册并取得什么值得买·海纳开放平台 API Key；商品检索 Pro 的一次真实 REST 查询返回 `error_code=0`，查询“兄弟 黑白激光打印机”返回 20 条，京东 18 条、淘宝精选 2 条。第一阶段“有可调用入口发现跨商城商品候选”已打通，详见[海纳 API 首轮实测](../reports/海纳商品发现API首轮实测_20261110.md)。海纳是第三方数据服务，不等于京东/淘宝官方 API 已由本项目直接接通；本次只验证一个兄弟打印机关键词。型号/规格冲突、推广跳转链接、地区到手价、库存、数据使用授权和模型处理许可仍未解决。下一步由评估者基于新证据重排瓶颈，见[评估者交接](../handoffs/海纳商品发现API首轮实测_评估者交接_20261110.md)。
+ 
+ > 2026-11-07 评估者确认的**下一轮渠道范围**。对应执行包：[P0.2 渠道专项执行包](../handoffs/P0_2_京东淘宝小红书_商品发现与评价证据_评估者执行包_20261107.md)。这不是已完成集成，也不覆盖 2026-11-06 P0.2 在途执行和独立 GUI/内容验收。
+ >
+@@ -8,23 +10,24 @@
+ 
+ ```text
+ 真实需求 → 品类路线 / 搜索词与硬约束
+-         → 商品发现（京东联盟优先；淘宝独立第二来源）
++         → 商品发现（海纳当前可用；京东/淘宝官方直连为独立路线）
+          → 型号识别（品牌/地区版本） ≠ 销售项（平台/店铺/套餐/SKU）
+          → 厂商规格 + 合格零售报价 + 评价/专业评测证据
+          → 正反证据与未知 → 条件性比较 / 暂缓决策
+          → Java Swing 展示与审计保存
+ ```
+ 
+-本项目现在有 Brother 官网黑白激光目录发现、少量 Brother/HP 官方规格快照和三态比较，但**没有京东/淘宝可用的获准真实商品搜索响应、可购买地区报价，也没有小红书评论读取接入**。前一 P0.2 记录真实有效报价为 0，不能把页面登录跳转、测试报价或厂商建议价当成可购买数据。
++本项目已有 Brother 官网黑白激光目录发现、少量 Brother/HP 官方规格快照和三态比较；截至 2026-11-10，海纳商品检索 Pro 已有一次真实成功响应（20 条，京东 18 条、淘宝精选 2 条），第一阶段商品发现入口已打通。**仍没有经核验的用户地区有效报价，也没有小红书评论读取接入**。本次海纳数据的商品身份、价格口径、库存、优惠资格与使用授权尚待核验；不能把推广跳转、搜索报价或厂商建议价当成可购买数据。
+ 
+-**两个独立瓶颈**：① 真实商品发现、身份核实与当前销售项；② 评价的合法来源与证据质量。解决①并不会自动解决“长期耐用性”；解决②也不会自动证明当前有货、价格合适。
++**当前应分开的瓶颈**：① 商品身份核实与销售项匹配（海纳已提供候选入口，但标题/规格可能冲突）；② 当前价格、地区、库存与优惠资格核验；③ 评价的合法来源与证据质量。商品发现入口打通，不会自动解决前两项；评价证据也不能替代当前可购买条件。
+ 
+ ## 2. 平台职责与现有证据
+ 
+-| 平台 | 期望用途 | 官方路径与本轮核验 | 当前不能做的推断 |
++| 平台 / 数据源 | 期望用途 | 官方路径与本轮核验 | 当前不能做的推断 |
+ |---|---|---|---|
+ | **京东联盟（P0）** | 关键词找推广商品、查详情/优惠、确定候选销售项 | JOS/联盟索引列有 `jd.union.open.goods.query`、`jd.union.open.goods.bigfield.query`、`jd.union.open.mcp.goods.query`；权限、调用主体、用途、当前字段合同尚待正式核准 | 不能因“mcp”认为无账号即可调用；联盟商品池≠全京东；推广 ID≠未经核实商城 SKU；优惠宣传价≠实际到手价 |
+ | **淘宝客（P0）** | 在独立平台做关键词物料搜索与商品详情交叉发现 | `taobao.tbk.dg.material.optional` 官方文档称“免费 API / 不需要授权”，同时公共请求有 AppKey、签名；`taobao.tbk.item.info.upgrade.get` 与 `taobao.tbk.item.details.upgrade.get` 为详情路径。**必须核实开发者应用准入、权益与当前接口合同** | “不需要授权”指接口调用的用户 session 标签，不是任何人匿名调用；淘宝客推广池≠全部淘宝/天猫商品；不能推全规格 SKU 或真实用户结算价 |
++| **什么值得买·海纳开放平台（第三方数据服务，已实测）** | 通过商品检索 Pro 按关键词返回跨商城商品候选，作为当前已可调用的发现入口 | 2026-11-10 用户提供真实 REST 响应：`error_code=0`，20 条（京东18、淘宝精选2）；字段含标题、商城、店铺、价格线索、促销、评价汇总、规格等 | 不是京东/淘宝官方 API 直连；单关键词样本不证明全站覆盖；推广跳转不证明非分佣许可；型号字段有冲突，价格不是地区到手价；缓存、展示、模型处理和再分发权利待核。详见首轮实测报告 |
+ | **小红书（P1）** | 用户长期体验、安装问题、反例/投诉线索；不用于现价 | 官方账号 Scope 文档（2026-03-29）仅 `basic_info` 开放，`read_notes` 仍规划中，且语义是授权用户自己的笔记；电商开放平台是授权店铺经营接口，商家商品/库存不等于全站笔记和评论 | 不把店铺 API/营销接口/第三方 MCP 当成可任意抓全站笔记评论的合法许可；不能用点赞、帖子数直接推故障率 |
+ 
+ 官方资料（获取核对日 2026-11-07）：
+@@ -35,7 +38,7 @@
+ - 现有补充调研：[2026-11-06 开源与社区来源报告](../reports/购物智能体开源与社区证据渠道调研_20261106.md)。旧结论与新内容冲突时按逐条可追溯官方合同核查，不在文档中假造已经取得平台密钥或许可。
+ - **11-07 新核实**：[京东官方迁移公告](https://jos.jd.com/doc/channel.htm?id=994)将原宙斯开发者中心的新增接入迁往新平台，京东联盟业务独立入口为 [联盟开放平台](https://union.jd.com/openplatform)，不能按旧 JOS 开发者入驻教程操作。淘宝[详情升级版](https://developer.alibaba.com/docs/api.htm?apiId=64757)的 `biz_scene_id=2` 标为消费者比价场景，但不等于本项目已获得该场景准入与商品数据展示/存储许可。详见[执行者核查报告](../reports/P0_2_三平台渠道准入与身份验证_20261107.md)。
+ 
+-## 3. 首版最小数据契约（部分离线门禁已实现，平台接入未完成）
++## 3. 首版最小数据契约（部分离线门禁已实现，海纳 API Adapter 尚未接入本地链路）
+ 
+ 通用模型与平台销售项一定要分离，不为每个品牌加硬编码：
+ 
+@@ -68,7 +71,7 @@ ExperienceClaim {
+ 
+ ## 4. 两条路径如何试
+ 
+-**A. 商品发现（先做）**：只围绕既有三个真实型号 HL-L1238W、HP Laser 108w/4ZB80A、HL-L1228。先核两个平台各自的当前应用资格、字段/展示许可；有合法只读 API 权限才做最小真实调用，记录脱敏原始返回、时间、HTTP/业务错误、ID 匹配及缺字段。无法获得权限可交付可信阻塞调查，但不得称「接通京东/淘宝」。
++**A. 商品发现（首轮已打通，后续评估集成）**：海纳商品检索 Pro 已完成一次真实关键词调用，现阶段不再把“无任何商品发现 API”作为当前事实，也不重复申请 Key/重复成功查询。评估者需决定是否先将海纳作为发现 Adapter 接入现有候选池，或先做有限的商品身份/销售项字段核验；记录查询词、获取时间、商城、店铺、商品标题、型号映射、价格字段口径和缺失字段。京东/淘宝官方直连 API 仍是独立路线，不能与海纳第三方数据服务混为一谈。
+ 
+ **B. 小红书评价（次要且独立）**：先证明是否存在**本项目可以合法使用**的读取/合作路线。用户自愿提交的具体链接或明确获得许可的小量样本可人工核对并存最小摘要；没有权限就输出不可获取和所需条件，不绕平台验证。每个观点注明型号、文章/评论的独立性、具体使用场景与时长、广告与重复搬运风险、出处、时效及使用限制。只作反证线索，不靠总量作推断。
+ 
+diff --git "a/docs/09_\345\225\206\345\223\201\345\217\221\347\216\260\351\225\277\346\234\237\346\216\245\345\205\245\350\267\257\345\276\204_\345\271\263\345\217\260API\344\270\216\347\224\250\346\210\267\346\216\210\346\235\203\346\265\217\350\247\210\345\231\250_\345\276\205\350\257\204\344\274\260.md" "b/docs/09_\345\225\206\345\223\201\345\217\221\347\216\260\351\225\277\346\234\237\346\216\245\345\205\245\350\267\257\345\276\204_\345\271\263\345\217\260API\344\270\216\347\224\250\346\210\267\346\216\210\346\235\203\346\265\217\350\247\210\345\231\250_\345\276\205\350\257\204\344\274\260.md"
+index cfa56b7..8b629fe 100644
+--- "a/docs/09_\345\225\206\345\223\201\345\217\221\347\216\260\351\225\277\346\234\237\346\216\245\345\205\245\350\267\257\345\276\204_\345\271\263\345\217\260API\344\270\216\347\224\250\346\210\267\346\216\210\346\235\203\346\265\217\350\247\210\345\231\250_\345\276\205\350\257\204\344\274\260.md"
++++ "b/docs/09_\345\225\206\345\223\201\345\217\221\347\216\260\351\225\277\346\234\237\346\216\245\345\205\245\350\267\257\345\276\204_\345\271\263\345\217\260API\344\270\216\347\224\250\346\210\267\346\216\210\346\235\203\346\265\217\350\247\210\345\231\250_\345\276\205\350\257\204\344\274\260.md"
+@@ -1,4 +1,6 @@
+-# 商品发现的长期入口：平台 API + 用户授权浏览器（执行者研究，待评估）
++# 商品发现的长期入口：第三方商品数据 API + 平台官方 API + 用户授权浏览器（执行者研究，待评估）
++
++> **2026-11-10 最新增量（优先于下方 11-07 状态快照）**：海纳商品检索 Pro 已有一次真实 REST API 成功调用。用户已自行注册并取得 API Key；查询“兄弟 黑白激光打印机”返回 20 条（京东18、淘宝精选2），`error_code=0`。因此，商品发现的第一阶段入口已打通，原先“没有可调用商品搜索 API”的状态已经过时。海纳属于第三方数据服务，不等于本项目直接获得京东/淘宝官方 API 权限；也不证明全品类覆盖、SKU 身份准确、地区到手价、库存、优惠资格或数据处理授权。详见[海纳 API 首轮实测](../reports/海纳商品发现API首轮实测_20261110.md)及[评估者交接](../handoffs/海纳商品发现API首轮实测_评估者交接_20261110.md)。
+ 
+ > 2026-11-07 P0.5 增量：已完成[京东联盟+淘宝客官方返回结构的离线导入与统一候选池](../reports/P0_5_双平台官方商品发现_执行报告_20261107.md)；原始跨平台ID不互换，平台字段价格仍不得成为用户地区到手价。正式API查询资格未取得、实际商品0、有效报价0、购买批准关闭。
+ 
+@@ -8,14 +10,15 @@
+ 
+ ## 一、把当前瓶颈分成三个不同能力
+ 
+-- **商品发现（Discovery）**：从真实在售平台商品池检索品牌、型号、销售项和平台 ID；主入口应为京东联盟 + 淘宝联盟，而不是品牌官网。
++- **商品发现（Discovery）**：从真实在售平台商品池检索品牌、型号、销售项和平台标识。2026-11-10 起已有海纳商品检索 Pro 真实调用作为可用第三方发现入口；京东联盟/淘宝联盟官方 API 仍是可选的直连路线，不再是当前唯一的候选发现路径。品牌官网仍主要承担型号与规格事实核验，不替代商城销售项发现。
+ - **商品核验（Verification）**：厂家官网核对规格、连接方式、耗材兼容性；平台详情核对店铺、具体 SKU/套餐、价格与地区库存、优惠资格；评论/横评核对用户体验。这三种证据不能互相替代。
+ - **用户实际购买条件（User-specific offer）**：授权登录的浏览器可作为少量销售项的核验入口；**用户登录并不意味着获得全站商品 API 或自动批量采集许可**。账号凭证不离开本机，不跨域外传；浏览器页面操作按逐次用户授权，遇登录限制/验证码即停止，购物车/下单/支付不做。
+ 
+-## 二、权威入口（截至 2026-11-07）
++## 二、候选入口与核验情况（原平台资料截至 2026-11-07；海纳实测截至 2026-11-10）
+ 
+-| 入口 | 已有官方证据 | 范围限制与待核 |
++| 入口 | 已有资料 / 实测证据 | 范围限制与待核 |
+ |---|---|---|
++| **什么值得买·海纳开放平台（第三方数据服务，已实测）** | 2026-11-10 商品检索 Pro REST API 首次真实调用成功，返回20条兄弟黑白激光打印机候选，其中京东18、淘宝精选2；字段包括标题、商城、店铺、价格/促销、评论汇总和规格线索。 | 第三方聚合服务，不是本项目直连京东/淘宝官方 API；只测一个关键词。返回推广跳转链接，非分佣使用、上游供数权、模型处理/缓存/展示/再分发许可待核；样本已发现标题与 `union_spec` 型号冲突，地区到手价/库存/优惠资格未验证。见首轮实测报告 |
+ | **京东联盟（第一商品源）** | 旧 JOS 目录显示 `jd.union.open.goods.query` 关键词商品查询、`jd.union.open.goods.bigfield.query` 商品详情、`jd.union.open.mcp.goods.query` 商品/券查询，部分接口须申请权限/用户授权。[JOS 目录](https://jos.jd.com/apilist?apiGroupId=531&apiGroupName=%E4%BA%AC%E4%B8%9C%E8%81%94%E7%9B%9Fapi&apiId=17769&apiName=jd.union.open.selling.goods.query)；[2026-07-15迁移公告](https://jos.jd.com/doc/channel.htm?id=994)指联盟业务走[联盟独立开放平台](https://union.jd.com/openplatform)。 | **开发者主体/授权商品池/详情字段/比价展示保存许可**须由现行联盟平台合同核准。JOS商家统一新入驻企业要求不能简单认定全部适用于联盟独立平台；联盟池不等于京东全站，页面联盟商品 ID 不自动等于商城 SKU。 |
+ | **淘宝联盟（第二商品源）** | [物料搜索](https://developer.alibaba.com/docs/api.htm?apiId=35896)、[升级版](https://developer.alibaba.com/docs/api.htm?apiId=64759)、[详细商品信息](https://developer.alibaba.com/docs/api.htm?apiId=64757)文档明确关键词/商品和 `app_key`、`sign`。相关文档提 `biz_scene_id=2` 消费者比价场景、特定条件下需要相应权限。 | 官方的“不需要授权”是用户 session 级标签，**不是无应用密钥或无场景审核**；推广商品池不保证覆盖所有淘宝/天猫 SKU，未必包括地区到手价、真实库存、所有优惠。 |
+ | **用户授权浏览器（差异化补充）** | [Microsoft Playwright MCP](https://playwright.dev/mcp/configuration/browser-extension)提供复用 Chrome/Edge 已登录标签页的扩展模式。 | 有技术能力不等于京东/淘宝同意任何自动化。第一版仅在平台许可和用户明确授权下做**少量、前台、只读**查询：搜索词→商品链接→所见标题/卖家/配置/报价条件/时刻→用户复核。不得尝试绕安全验证、批量抓取、获取或复制 Cookie，不得自动下单。 |
+@@ -29,7 +32,9 @@
+ 3. [TonyWang-hub/mcp-cn-commerce](https://github.com/TonyWang-hub/mcp-cn-commerce)：MIT、8平台的商家经营数据连接器，当前公开说明 SDK 真店验收未完成；可借鉴多平台 Adapter、权限、限流、脱敏、字段缺失与可追踪性，**不是消费者商品发现接口**。
+ 4. [Vael-KY/AI-Shopping-auto](https://github.com/Vael-KY/AI-Shopping-auto)：Apache-2.0，展示浏览器搜索与支付宝支付的分层组合；本项目只研究只读搜索部分，支付/下单桥接不复制。
+ 
+-## 四、执行者建议：采用双源发现 + 受控浏览器核验，不重构整套系统
++## 四、执行者原建议（2026-11-07；海纳实测后由评估者重新排序）
++
++> 下方流程图保留 11-07 原方案的结构。2026-11-10 起，海纳商品检索 Pro 已成为新增的可调用商品发现入口；图中未体现这一新增来源，不应再按原图把 JD/淘宝官方 API 或用户授权浏览器视为发现商品的唯一入口。
+ 
+ ```text
+ 用户输入任意商品需求
+@@ -53,7 +58,7 @@
+                    候选比较或 defer（没有价格不能说“可购买”）
+ ```
+ 
+-**推荐先做一个很小的可证伪实验**：同一打印机需求、只查既定3款，先为官方 JD/淘宝 API 整理准入/用途合同清单；在获得用户具体授权且平台允许时验证 1 次登录浏览器只读搜索。每个真实销售项需至少保留：平台/URL/商品 ID、型号与所选配置、卖家、价格类型与附加费用、地区/库存、获取时刻、出处。信息不全即未知，不应进入已核报价。
++**11-07 原建议的适用边界**：当时尚无真实商品搜索 API 响应，因此把官方 JD/淘宝 API 准入与用户授权浏览器作为候选验证路线。2026-11-10 海纳商品检索 Pro 已完成首轮真实调用，商品发现入口现已打通；是否优先做海纳 Adapter、商品身份核验、报价验证或条款核对，交本轮评估者根据整体瓶颈决定，不在此预设。无论选择哪条路线，每个真实销售项仍需尽量保留：平台/URL/商品 ID、型号与所选配置、卖家、价格类型与附加费用、地区/库存、获取时刻、出处。信息不全即未知，不应进入已核报价。
+ 
+ - **AC-A：** 不预埋品牌官网为全局主入口，查一个全新未知品类时应仍能经平台搜索入口找候选（允许未知），不需为每个品牌改代码。
+ - **AC-B：** 同名异型号、裸机/耗材/套装、USB/无线混淆必须拒绝或待核；不同平台商品 ID 不自动互换。
+@@ -61,4 +66,4 @@
+ - **AC-D：** 使用浏览器时，只读行为必须被逐次许可并保留可审计动作，禁止跳过登录/验证码或将账号会话上传仓库。
+ - **AC-E：** API 与浏览器两路都阻塞时，输出已测试路径、可复核失败证据、一个执行者选定的安全替代方案，交评估者**做独立判断**而非请其给出检索步骤。
+ 
+-**当前阶段**：方案/官方文档/开源证据核对完成；不是实际登录、业务 API 调用、授权完成或真实报价可用。当前执行仍按 11-07 评估者包约束，不自行提升交易权限、不修改证据批准字段、不推送远程。
++**当前阶段（截至 2026-11-10）**：海纳商品检索 Pro 已完成一次真实业务 API 调用，第一阶段商品发现入口已打通；但海纳接入本地项目代码尚未完成，覆盖范围、商品身份、销售项、价格口径和使用授权仍待评估。京东/淘宝官方直连 API 的本应用资格仍单独待核；用户辅助浏览器仍是少量具体销售项核验备选。不得将搜索结果认定为有效地区报价或购买资格，不提升交易权限、不修改购买批准字段、不推送远程。
+diff --git a/shopping_decision/desktop_bridge.py b/shopping_decision/desktop_bridge.py
+index 5b8189e..cf01a31 100644
+--- a/shopping_decision/desktop_bridge.py
++++ b/shopping_decision/desktop_bridge.py
+@@ -5,6 +5,7 @@ import json
+ import re
+ import os
+ import time
++from pathlib import Path
+ from .web import evaluate_input
+ 
+ NAMES = ('monthly_pages','budget_max_cny','idle_weeks','needs_color','accepts_outsourced_color','requires_wireless','requires_scan')
+@@ -27,18 +28,29 @@ def encode(s):
+ 
+ def main():
+     try:
+-        raw = [base64.b64decode(v, validate=True).decode('utf-8') for v in sys.argv[1:]]
+-        if len(raw) not in (9, 14):
++        argv = sys.argv[1:]
++        haina_mcp_report_path = None
++        if argv and argv[0] == '--haina-mcp-report':
++            if len(argv) < 3:
++                raise ValueError('海纳研究材料参数不完整')
++            haina_mcp_report_path = Path(argv[1])
++            argv = argv[2:]
++        if any(value == '--haina-mcp-report' for value in argv):
++            raise ValueError('海纳研究材料参数位置不正确')
++        raw = [base64.b64decode(v, validate=True).decode('utf-8') for v in argv]
++        if len(raw) not in (9, 14, 15):
+             raise ValueError('条件数量不正确')
+         data = {'description':raw[0], 'confirmed': True, 'requirements':raw[8].splitlines() if raw[8] else []}
+-        if len(raw) == 14:
+-            for name, value in zip(('wechat_required', 'wechat_workflow', 'requires_auto_duplex', 'delivery_region', 'budget_scope'), raw[9:]):
++        if len(raw) >= 14:
++            for name, value in zip(('wechat_required', 'wechat_workflow', 'requires_auto_duplex', 'delivery_region', 'budget_scope'), raw[9:14]):
+                 if name in ('wechat_required', 'requires_auto_duplex'):
+                     if value not in ('', 'true', 'false'):
+                         raise ValueError(name + ' 必须是true、false或未知')
+                     data[name] = None if value == '' else value == 'true'
+                 else:
+                     data[name] = (value or None) if name == 'delivery_region' else (value or 'unknown')
++        if len(raw) == 15:
++            data['device_deployment_region'] = raw[14] or None
+         for k,v in zip(NAMES,raw[1:8]):
+             if k in NAMES[3:] and v not in ('', 'true', 'false'):
+                 raise ValueError(k + ' 必须是true、false或未知')
+@@ -47,7 +59,7 @@ def main():
+                        (int(v) if k == 'monthly_pages' and re.fullmatch(r'[0-9]+', v) else
+                         v if k == 'monthly_pages' else
+                         (v == 'true' if k in NAMES[3:] else int(v))))
+-        result = evaluate_input(data)
++        result = evaluate_input(data, haina_mcp_report_path=haina_mcp_report_path)
+         if os.environ.get("SHOPPING_H09_TEST_DELAY_MS"):
+             time.sleep(min(5, int(os.environ["SHOPPING_H09_TEST_DELAY_MS"])/1000))
+         rec = result['recommendation']
+@@ -98,6 +110,133 @@ def main():
+                     preview.append('  零售渠道：尚无该型号已核实销售项')
+                 preview.append('  官方资料：' + item['official_url'] + '；获取日：' + comparison['catalog_recorded_on'])
+             preview.append('任何一款均未证明符合预算或耐用性领先；缺报价/库存/销售配置时继续暂缓。')
++        case_research = result.get('real_printer_case_research')
++        if isinstance(case_research, dict):
++            shared = case_research.get('shared_research_snapshot', {})
++            if shared.get('status') == 'research_snapshot_only_not_purchase':
++                preview.append('【共享研究结果｜计算全部候选，仅展示前三项；不含购买许可】')
++                preview.append('已计算候选：' + str(shared['total_candidate_count'])
++                               + '；下一动作：' + str(shared['next_action']))
++                for candidate in shared.get('displayed_candidates', []):
++                    preview.append('  ' + str(candidate['model_id']) + '：'
++                                   + str(candidate['eligibility']))
++                if shared.get('hidden_candidates'):
++                    preview.append('其余已计算但未展示：' + '、'.join(
++                        str(item['model_id']) for item in shared['hidden_candidates']))
++                for question in shared.get('necessary_user_questions', []):
++                    preview.append('待本人确认：' + str(question))
++            comparison = case_research.get('model_comparison', {})
++            effects = case_research.get('decision_effects', {})
++            if effects.get('status') == 'source_limited_development_not_independent_effect':
++                preview.append('【认知增量与关键缺件｜仅型号研究，未通过独立效果验收】')
++                for effect in effects.get('judgments', [])[:4]:
++                    preview.append(str(effect['id']) + '：' + str(effect['claim'])
++                                   + '；对判断的作用：' + str(effect['decision_effect']))
++                    preview.append('  仍缺：' + '、'.join(effect.get('missing', []))
++                                   + '；来源：' + '、'.join(ref.get('url', '')
++                                       for ref in effect.get('source_refs', [])))
++                for question in effects.get('questions', []):
++                    preview.append('关键补问：' + question)
++                preview.append('候选路线（不含购买资格）：' + '、'.join(
++                    str(route.get('name')) + ('（条件冲突，暂停判断）'
++                        if route.get('eligibility') == 'blocked_by_user_condition_conflict' else '')
++                    for route in effects.get('routes', [])))
++            preview.append('【公开厂家资料的两型号比较｜不是海纳数据，也不是平台在售核验】')
++            for item in case_research.get('reasons', [])[:9]:
++                preview.append(str(item.get('id')) + '：' + str(item.get('reason'))
++                               + '；限制：' + str(item.get('counter_evidence')))
++            selection = case_research.get('criteria_comparison', {})
++            if selection.get('status') == 'criteria_driven_research_not_purchase':
++                preview.append('【本轮条件驱动的型号资格｜依据版本：' +
++                               str(selection.get('criteria_version')) + '】')
++                preview.append('当前依据 SHA-256：' + str(selection.get('criteria_sha256')))
++                preview.append('本轮规范化硬要求：' + str(selection.get('normalized_required', {}))
++                               + '；未识别：' + str(selection.get('unresolved_hard_conditions', []))
++                               + '；未建准则：' + str(selection.get('unmodeled_hard_requirements', [])))
++                relation_names = {
++                    'match': '符合', 'mismatch': '不符合',
++                    'unknown': '未核', 'at_or_below': '不高于',
++                    'above': '高于', 'below': '低于建议区间',
++                    'within': '位于建议区间', 'equal': '等于建议区间',
++                    'contains': '覆盖建议区间', 'overlap': '与建议区间部分重叠',
++                    'workflow_unconfirmed': '微信打印流程未确认',
++                    'other_workflow_unverified': 'App替代流程待实测',
++                    'deployment_region_unconfirmed': '设备部署地未知，微信服务未核',
++                    'deployment_outside_verified_scope': '境外微信服务缺有效适用证据',
++                }
++                for model in selection.get('models', []):
++                    state_label = {
++                        'excluded_by_hard_condition': '本轮硬条件排除',
++                        'pending_hard_evidence': '存在硬条件未知，暂不能判满足',
++                        'model_spec_research_only': '规格研究候选，不是购买批准',
++                        'blocked_by_user_condition_conflict': '本人确认与原文硬条件冲突，暂停入选',
++                    }.get(model.get('eligibility'), '研究状态待核')
++                    preview.append(str(model.get('model_id')) + '：' + state_label)
++                    for check in model.get('checks', []):
++                        name = str(check.get('criterion_id'))
++                        relation = relation_names.get(check.get('relation'), '未核')
++                        preview.append('  ' + name + ' ' + relation + '；用户：' +
++                                       str(check.get('user_value')) + '；型号事实：' +
++                                       str(check.get('product_value')) + ' ' +
++                                       str(check.get('unit')) + '；来源：' +
++                                       '、'.join(check.get('source_ids', [])) + '；证据状态：' +
++                                        str(check.get('evidence_state', 'unknown')) + '；局限：' +
++                                       str(check.get('unknown_or_counter', '')))
++                    preview.append('  地区到手价、购买资格与平台销售身份：未核，不可购买')
++                for question in selection.get('questions', [])[:6]:
++                    preview.append('待核：' + str(question))
++                preview.append('【依据来源与适用限制】')
++                for source_id, source in selection.get('source_registry', {}).items():
++                    preview.append(str(source_id) + ' (' +
++                                   str(source.get('type', 'unknown')) + ')：' +
++                                   str(source.get('url', '')) + '；限制：' +
++                                   str(source.get('limit', '')))
++            for item in comparison.get('comparisons', [])[:8]:
++                preview.append(str(item.get('dimension')) + '：' + str(item.get('result'))
++                               + '（来源：' + '、'.join(item.get('source_ids', [])) + '）')
++            for item in comparison.get('active_conditional_decisions', [])[:3]:
++                preview.append('当前条件触发的取舍：' + str(item.get('when')) + ' → ' + str(item.get('model'))
++                               + '；' + str(item.get('reason')) + '（未批准购买）')
++            for item in comparison.get('unknown_conditional_decisions', [])[:3]:
++                preview.append('条件尚未确认：' + str(item.get('when')) + '；需补：'
++                               + '；'.join(item.get('conditions_before_purchase', [])))
++            preview.append('部署地区范围：' + str(comparison.get('deployment_region_scope', 'unknown'))
++                           + '；是否已提供部署地：' + str(comparison.get('deployment_region_provided', False)))
++            preview.append('当前平台商品身份：'
++                           + str(comparison.get('real_sale_identity_verified_count', 0))
++                           + '；地区有效报价：'
++                           + str(comparison.get('regional_live_quote_count', 0))
++                           + '；购买批准：否。')
++        haina_mcp = result.get('haina_mcp_research')
++        if isinstance(haina_mcp, dict):
++            preview.append('【海纳MCP研究材料｜显式本机文件；当前仅允许合成接线测试】')
++            preview.append('材料状态：' + str(haina_mcp.get('status', 'unknown'))
++                           + '；实体数：' + str(haina_mcp.get('entity_count', 0))
++                           + '；平台身份核实：' + str(haina_mcp.get('platform_identity_verified_count', 0))
++                           + '；有效报价：' + str(haina_mcp.get('quote_verified_count', 0)))
++            if haina_mcp.get('error'):
++                preview.append('材料拒绝/错误原因：' + str(haina_mcp.get('error')))
++            for entity in haina_mcp.get('entities', [])[:3]:
++                preview.append('实体线索：' + str(entity.get('entity_name', '未命名'))
++                               + '；型号候选：' + '、'.join(entity.get('model_candidates', []))
++                               + '；销售线索数：' + str(entity.get('sale_lead_count', 0)))
++                for lead in entity.get('sale_leads', [])[:2]:
++                    preview.append('  销售线索：' + str(lead.get('title') or '未返回商品标题')
++                                   + '；身份：' + str(lead.get('identity_status'))
++                                   + '；商城：' + str(lead.get('mall_hint') or '未知')
++                                   + '；店铺：' + str(lead.get('seller_hint') or '未知')
++                                   + '；链接域名：' + str(lead.get('link_host') or '未知')
++                                   + '；供方价格线索：' + str(lead.get('supplier_price_hint') or '无')
++                                   + '（未核验，不是到手价）')
++                for parameter in entity.get('parameters', [])[:5]:
++                    preview.append('  参数线索：' + str(parameter.get('name') or '未命名')
++                                   + ' = ' + str(parameter.get('value') or parameter.get('description') or '未知')
++                                   + '（供应商返回，待核）')
++                for opinion in entity.get('opinion_summaries', [])[:3]:
++                    preview.append('  评价摘要线索：' + str(opinion.get('attribute_name') or '未命名')
++                                   + ' / ' + str(opinion.get('attribute_value') or '未知')
++                                   + '（供应商聚合，非独立评测）')
++            preview.append('本材料不提升平台商品ID、地区报价、预算通过或购买批准；合成内容不代表真实商品。')
+         visible_reasons = '\n'.join((*rec['reasons'], *preview))
+         output = [('status',rec['status']),('route',rec['recommended_route'] or ''),('reasons',visible_reasons),('questions','\n'.join(rec['questions'])),('unknowns','\n'.join(rec['unknowns'])),('evidence','\n'.join(e['id']+' '+e['source']+' '+e['published_on'] for e in result['evidence'])),('card_version',result['card_sha256']),('time',result['evaluated_at']),('report_json',json.dumps(result,ensure_ascii=False,indent=2))]
+     except (ValueError,TypeError) as exc:
+diff --git a/shopping_decision/dialogue_flow.py b/shopping_decision/dialogue_flow.py
+index 1b5ea4a..fe414f8 100644
+--- a/shopping_decision/dialogue_flow.py
++++ b/shopping_decision/dialogue_flow.py
+@@ -12,16 +12,18 @@ import sys
+ from .contracts import PurchaseRequest
+ from .printer_conditions import printer_conditions
+ from .public_catalog import compare_public_snapshot
++from .product_compare import compare_products
++from .p0_7_official_details import load_reviewed_local_replay
+ 
+ _FIELDS = {
+     "category", "usage", "budget_max_cny", "budget_scope", "monthly_pages_range",
+     "needs_color", "accepts_outsourced_color", "requires_wireless", "requires_scan",
+     "requires_auto_duplex", "wechat_required", "wechat_workflow",
+-    "delivery_region", "requirements",
++    "delivery_region", "device_deployment_region", "accepts_initial_setup", "requirements",
+ }
+ _BOOLEAN = {
+     "needs_color", "accepts_outsourced_color", "requires_wireless",
+-    "requires_scan", "requires_auto_duplex", "wechat_required",
++    "requires_scan", "requires_auto_duplex", "wechat_required", "accepts_initial_setup",
+ }
+ _MAX_TEXT = 350
+ 
+@@ -133,7 +135,7 @@ def next_questions(state: dict, *, limit: int = 2) -> list[dict]:
+     return questions[:limit]
+ 
+ 
+-def compare_dialogue(state: dict) -> dict:
++def compare_dialogue(state: dict, *, catalog_override: dict | None = None) -> dict:
+     v = _values(state)
+     base = {"session_version": state["version"],
+             "purchase_recommendation_approved": False, "transactions_enabled": False}
+@@ -160,24 +162,174 @@ def compare_dialogue(state: dict) -> dict:
+     if conditions["conflicts"]:
+         return {**base, "status": "condition_conflict",
+                 "conflicts": conditions["conflicts"]}
+-    result = compare_public_snapshot(required=conditions["required"],
+-                                     preferred=conditions["preferred"],
+-                                     budget_max_cny=req.budget_max_cny)
++    source_mode = "caller_injected_manufacturer_facts"
++    source_warning = None
++    if catalog_override is None:
++        try:
++            catalog_override = load_reviewed_local_replay()
++            source_mode = "recorded_manufacturer_detail_replay_no_network"
++        except (FileNotFoundError, OSError, ValueError):
++            # 原文缺失或完整性检查失败时，只能降级为旧目录快照；绝不回退到旧详情摘要。
++            source_mode = "older_manufacturer_directory_snapshot_only"
++            source_warning = "本机型号详情原文缺失或完整性校验失败，已降级为旧目录快照；未使用旧详情摘要。"
++    if catalog_override is None:
++        result = compare_public_snapshot(required=conditions["required"],
++                                         preferred=conditions["preferred"],
++                                         budget_max_cny=req.budget_max_cny)
++    else:
++        # 仅供内部已核对厂商事实实验调用；不能接受用户输入任意商品事实。
++        fact_result = compare_products(
++            catalog_override, category="printer", required=conditions["required"],
++            preferred=conditions["preferred"], budget_max_cny=req.budget_max_cny,
++            target_region="CN")
++        result = {"operation": "injected_manufacturer_facts_only",
++                  "comparison": fact_result, "approved_purchase_count": 0,
++                  "purchase_recommendation_approved": False, "transactions_enabled": False}
+     return {**base, "status": "model_facts_only_not_purchase",
++            "source_mode": source_mode,
++            **({"source_warning": source_warning} if source_warning else {}),
+             "questions": conditions["questions"],
++            "unresolved_actions": [{"issue": q, "state": "optional_confirmation_or_defer"}
++                                    for q in conditions["questions"]],
+             "comparison": result, "unknowns": conditions["unresolved_hard_conditions"]}
+ 
+ 
+ def main() -> None:
+     """一行JSON为一轮用户显式确认，例如 {"text":"黑白就够","answers":{"needs_color":false}}。"""
++    import argparse
++    from pathlib import Path
++    from .discovery_pool import build_discovery_pool
++
++    parser = argparse.ArgumentParser()
++    parser.add_argument("--haina-report", type=Path,
++                        help="仅用于接入测试的海纳离线导入报告；真实响应须先获用途许可")
++    parser.add_argument("--haina-mcp-report", type=Path,
++                        help="显式加载本机MCP合成测试包；真实响应在用途许可核准前阻断")
++    parser.add_argument("--sale-evidence-report", type=Path,
++                        help="P0.9-B销售配置离线合同测试；仅synthetic_test，非真实身份核验")
++    parser.add_argument("--real-printer-case", action="store_true",
++                        help="H08真实需求公开来源研究比较（仅待审理由，不接真实销售SKU/报价）")
++    args = parser.parse_args()
++    discovery_context = None
++    haina_mcp_context = None
++    sale_context = None
++    sale_report = None
++    if args.haina_mcp_report is not None:
++        from .haina_mcp_ingest import load_haina_mcp_report
++        haina_mcp_context = load_haina_mcp_report(args.haina_mcp_report)
++    if args.sale_evidence_report is not None:
++        try:
++            if (not args.sale_evidence_report.is_file()
++                    or args.sale_evidence_report.stat().st_size > 200_000):
++                raise ValueError("sale_evidence_missing_or_too_large")
++            sale_report = json.loads(args.sale_evidence_report.read_text(encoding="utf-8"))
++            sale_context = build_discovery_pool(
++                [], sale_configuration_report=sale_report)["sale_configuration_evidence"]
++        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
++            sale_context = {
++                "status": "sale_evidence_unavailable",
++                "error": type(exc).__name__,
++                "configuration_count": 0, "configurations": [],
++                "real_identity_verified_count": 0,
++                "purchase_recommendation_approved": False,
++                "transactions_enabled": False,
++            }
++    if args.haina_report is not None:
++        try:
++            if not args.haina_report.is_file() or args.haina_report.stat().st_size > 200_000:
++                raise ValueError("haina_report_missing_or_too_large")
++            report = json.loads(args.haina_report.read_text(encoding="utf-8"))
++            discovery_context = build_discovery_pool([report])
++            leads = discovery_context.get("unverified_source_leads", [])
++            discovery_context["total_unverified_source_lead_count"] = len(leads)
++            discovery_context["displayed_source_lead_count"] = min(3, len(leads))
++            discovery_context["unverified_source_leads"] = leads[:3]
++        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
++            discovery_context = {
++                "status": "discovery_report_unavailable",
++                "error": type(exc).__name__,
++                "candidate_count": 0,
++                "unverified_source_lead_count": 0,
++                "unverified_source_leads": [],
++                "purchase_recommendation_approved": False,
++                "transactions_enabled": False,
++            }
++
++    # Windows 管道默认可能使用 GBK；文本 JSONL 契约固定 UTF-8，避免父子进程误解码。
++    if hasattr(sys.stdin, "reconfigure"):
++        sys.stdin.reconfigure(encoding="utf-8")
++    if hasattr(sys.stdout, "reconfigure"):
++        sys.stdout.reconfigure(encoding="utf-8")
+     state = new_dialogue()
+     print(json.dumps({"status": "ready", "questions": next_questions(state)}, ensure_ascii=False), flush=True)
+     for raw in sys.stdin:
+         try:
+             turn = json.loads(raw)
+             state = apply_turn(state, turn["answers"], raw_text=turn["text"])
++            comparison = compare_dialogue(state)
++            fact_result = comparison.get("comparison", {}).get("comparison", {})
++            candidates = fact_result.get("candidates") if isinstance(fact_result, dict) else None
++            if isinstance(candidates, list):
++                fact_result["total_candidate_count"] = len(candidates)
++                displayed = candidates[:3]
++                excluded = next((x for x in candidates
++                                 if x.get("status") == "excluded_by_verified_spec"), None)
++                if excluded and all(x.get("model_id") != excluded.get("model_id") for x in displayed):
++                    displayed = candidates[:2] + [excluded]
++                fact_result["displayed_candidate_count"] = len(displayed)
++                fact_result["candidates"] = displayed
+             out = {"version": state["version"], "questions": next_questions(state),
+-                   "comparison": compare_dialogue(state), "history": state["history"][-1]}
++                   "comparison": comparison, "history": state["history"][-1]}
++            if haina_mcp_context is not None:
++                out["haina_mcp_research"] = haina_mcp_context
++            if args.real_printer_case:
++                from .real_printer_case import compare_case_research
++                # 此处仅按本轮已显式确认条件筛研究理由，绝不代替平台SKU证据。
++                out["real_printer_case_research"] = compare_case_research(_values(state))
++            if discovery_context is not None:
++                out["discovery_pool"] = discovery_context
++            if sale_report is not None:
++                # 每轮按当前时刻重新核验原观察事件，绝不刷新原来源时间。
++                # 兼容受控模拟钟：时间来自门禁模块，而不是CLI启动缓存。
++                from . import sale_configuration_evidence as sale_gate
++                current = sale_gate.datetime.now(sale_gate.timezone.utc)
++                try:
++                    sale_context = build_discovery_pool(
++                        [], now=current, sale_configuration_report=sale_report
++                    )["sale_configuration_evidence"]
++                except (ValueError, TypeError, OSError) as exc:
++                    sale_context = {
++                        "status": "sale_evidence_unavailable",
++                        "error": type(exc).__name__, "configuration_count": 0,
++                        "configurations": [], "real_identity_verified_count": 0,
++                        "purchase_recommendation_approved": False,
++                        "transactions_enabled": False,
++                    }
++            if sale_context is not None:
++                # 按用户本轮最新条件，仅关联已核的厂商型号规格；平台所售配置
++                # 仍是合成合同测试，绝不提升真实身份、预算或购买批准。
++                view = deepcopy(sale_context)
++                matched = {x.get("model_id"): x for x in candidates or []
++                           if isinstance(x, dict)}
++                details = []
++                for config in view.get("configurations", [])[:3]:
++                    detail = dict(config)
++                    matched_row = (matched.get(detail["selected_model_id"])
++                                   if detail.get("status") == "synthetic_field_binding_test_only"
++                                   else None)
++                    detail["manufacturer_model_fact_status"] = (
++                        "manufacturer_facts_comparison_available"
++                        if matched_row else "manufacturer_facts_not_compared")
++                    detail["required_met"] = matched_row.get("required_met", []) if matched_row else []
++                    detail["required_unknown"] = matched_row.get("required_unknown", []) if matched_row else []
++                    detail["required_failed"] = matched_row.get("required_failed", []) if matched_row else []
++                    detail["next_verification"] = (
++                        "核平台真实所售配置及授权用途，再核地区价格、库存与预算；本行仅合成合同测试"
++                    )
++                    details.append(detail)
++                view["displayed_configuration_count"] = len(details)
++                view["configurations"] = details
++                out["sale_configuration_evidence"] = view
+         except (ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
+             out = {"status": "invalid_turn", "error": str(exc)}
+         print(json.dumps(out, ensure_ascii=False), flush=True)
+diff --git a/shopping_decision/discovery_bridge.py b/shopping_decision/discovery_bridge.py
+index d531d46..5952bfe 100644
+--- a/shopping_decision/discovery_bridge.py
++++ b/shopping_decision/discovery_bridge.py
+@@ -1,6 +1,6 @@
+ """从本机 Swing 手动商城发现窗导入用户选择的商品链接（完全离线）。
+ 
+-只能构造官方公开搜索 URL，并校验用户粘贴的 JD 商品详情链接。
++只能构造官方公开搜索 URL，并离线校验用户粘贴的京东或淘宝商品详情链接。
+ 不接管浏览器登录状态、无平台 API、无页面抓取、无自动下单。
+ """
+ from __future__ import annotations
+@@ -11,7 +11,7 @@ import json
+ import sys
+ from urllib.parse import quote
+ 
+-from .discovery_ingest import ingest_user_jd_item_link
++from .discovery_ingest import ingest_user_jd_item_link, ingest_user_taobao_item_link
+ 
+ MAX_QUERY_CHARS = 100
+ MAX_LINKS = 5
+@@ -30,22 +30,24 @@ def shop_search_url(query: str, *, platform: str = "jd") -> str:
+     raise ValueError("不支持的商城")
+ 
+ 
+-def review_user_links(query: str, pasted: str, *, now: datetime | None = None) -> dict:
++def review_user_links(query: str, pasted: str, *, platform: str = "jd",
++                      now: datetime | None = None) -> dict:
+     """只读整理链接，禁止使用网页价格或 URL 编号作购买依据。"""
+-    url = shop_search_url(query)
++    url = shop_search_url(query, platform=platform)
+     if not isinstance(pasted, str) or len(pasted) > 12000:
+         raise ValueError("商品链接文本过长")
+     lines = [s.strip() for s in pasted.splitlines() if s.strip()]
+     if not 1 <= len(lines) <= MAX_LINKS:
+-        raise ValueError("请粘贴1至5条京东商品详情页链接（每行一条）")
++        raise ValueError("请粘贴1至5条当前所选平台的完整商品详情链接（每行一条）")
+     current = now or datetime.now(timezone.utc)
+     seen = set()
+     entries = []
+     rejected = []
+     for idx, line in enumerate(lines, 1):
+-        result = ingest_user_jd_item_link(line, observed_at=current.isoformat(), now=current)
++        ingest = ingest_user_jd_item_link if platform == "jd" else ingest_user_taobao_item_link
++        result = ingest(line, observed_at=current.isoformat(), now=current)
+         if result.get("status") != "discovered_unverified":
+-            rejected.append({"line": idx, "reason": "not_verified_jd_product_url"})
++            rejected.append({"line": idx, "reason": "invalid_or_wrong_platform_product_url"})
+             continue
+         key = (result["platform"], result["platform_item_id"])
+         if key in seen:
+@@ -58,11 +60,12 @@ def review_user_links(query: str, pasted: str, *, now: datetime | None = None) -
+         "status": "candidates_unverified" if entries else "no_valid_candidates",
+         "operation": "user_selected_marketplace_link_review",
+         "search_query": query.strip(), "search_url": url,
++        "marketplace_platform": platform,
+         "candidate_count": len(entries), "rejected_count": len(rejected),
+         "candidates": entries, "rejected": rejected,
+         "limitations": [
+-            "这是用户自己打开商城搜索后选取的链接，系统未调用京东官方搜索API",
+-            "仅从网址抽取可能的京东商品编号，未证明真实在售、准确型号和商品类别",
++            "这是用户自己打开商城搜索后选取的链接，系统未调用任何平台官方搜索API",
++            "仅从官方商品网址抽取候选编号，未证明真实在售、准确型号和商品类别",
+             "卖家、选中套餐、地区库存、券后价、运费及售后均待平台核验",
+             "此结果不进入原购买批准门禁，不会产生订单或支付操作",
+         ],
+@@ -78,16 +81,17 @@ def _output(values: dict[str, str]) -> None:
+ 
+ def main() -> None:
+     try:
+-        if len(sys.argv) != 3:
+-            raise ValueError("需要两个Base64参数：搜索词、商品链接")
++        if len(sys.argv) not in (3, 4):
++            raise ValueError("需要Base64参数：搜索词、商品链接、可选平台")
+         raw = [base64.b64decode(s, validate=True).decode("utf-8") for s in sys.argv[1:]]
+-        result = review_user_links(raw[0], raw[1])
++        result = review_user_links(raw[0], raw[1], platform=raw[2] if len(raw) == 3 else "jd")
+         msg = [f"状态：{result['status']}", f"商品线索：{result['candidate_count']}条",
+                f"拒绝/重复：{result['rejected_count']}条"]
+         for item in result["candidates"]:
+-            msg.append(f"京东商品编号（未核）：{item['platform_item_id']}  {item['canonical_url']}")
++            msg.append(f"{result['marketplace_platform']} 商品编号（未核）：{item['platform_item_id']}  {item['canonical_url']}")
+         msg.append("实际价格/库存/店铺/型号均未核实；暂不构成购买建议。")
+         _output({"status": result["status"], "summary": "\n".join(msg),
++                 "candidate_urls": "\n".join(x["canonical_url"] for x in result["candidates"]),
+                  "report_json": json.dumps(result, ensure_ascii=False, indent=2)})
+     except (ValueError, UnicodeError) as exc:
+         _output({"error": str(exc)})
+diff --git a/shopping_decision/discovery_ingest.py b/shopping_decision/discovery_ingest.py
+index 43105d2..4050161 100644
+--- a/shopping_decision/discovery_ingest.py
++++ b/shopping_decision/discovery_ingest.py
+@@ -8,7 +8,7 @@ from __future__ import annotations
+ 
+ from datetime import datetime, timezone
+ import re
+-from urllib.parse import urlsplit
++from urllib.parse import parse_qs, urlsplit
+ 
+ 
+ _JD_ID = re.compile(r"^[0-9]{5,20}$")
+@@ -67,6 +67,38 @@ def parse_jd_item_url(value: str) -> dict | None:
+         return None
+ 
+ 
++def parse_taobao_item_url(value: str) -> dict | None:
++    """用户主动提供的淘宝/天猫完整商品链接。拒绝短链/跳转，URL不证明商品事实。"""
++    if not isinstance(value, str) or not value or len(value) > 2048:
++        return None
++    try:
++        parsed = urlsplit(value)
++        if (parsed.scheme != "https" or parsed.hostname not in ("item.taobao.com", "detail.tmall.com")
++                or parsed.username is not None or parsed.password is not None
++                or parsed.port is not None or parsed.path != "/item.htm"):
++            return None
++        ids = parse_qs(parsed.query, keep_blank_values=True).get("id", [])
++        if len(ids) != 1 or _JD_ID.fullmatch(ids[0]) is None:
++            return None
++        ident = ids[0]
++        return {"platform": "TAOBAO_PUBLIC_UNVERIFIED", "platform_item_id": ident,
++                "canonical_url": f"https://{parsed.hostname}/item.htm?id={ident}"}
++    except ValueError:
++        return None
++
++
++def ingest_user_taobao_item_link(url: str, *, observed_at: str,
++                                 now: datetime | None = None) -> dict:
++    current = now or datetime.now(timezone.utc)
++    parsed = parse_taobao_item_url(url)
++    moment = _valid_time(observed_at, current) if current.tzinfo else None
++    if parsed is None or moment is None:
++        return {"status": "invalid_input", "purchasable": False}
++    return {**parsed, "source_id": "user_supplied_link", "observed_at": moment,
++            "status": "discovered_unverified", "identity_verified": False,
++            "quote_verified": False, "purchasable": False, "transactions_enabled": False}
++
++
+ def _valid_time(value: object, now: datetime) -> str | None:
+     if not isinstance(value, str):
+         return None
+diff --git a/shopping_decision/discovery_pool.py b/shopping_decision/discovery_pool.py
+index 77af03a..ff4a857 100644
+--- a/shopping_decision/discovery_pool.py
++++ b/shopping_decision/discovery_pool.py
+@@ -9,7 +9,8 @@ from datetime import datetime, timezone
+ import re
+ 
+ from .listing_identity import _has_exact_anchor
+-from .discovery_ingest import parse_jd_item_url
++from .discovery_ingest import parse_jd_item_url, parse_taobao_item_url
++from .model_identifiers import is_model_token
+ 
+ ID_RE = re.compile(r"[0-9]{5,20}")
+ FORMATS = {
+@@ -29,6 +30,75 @@ def _is_recent_timestamp(value: object, now: datetime) -> bool:
+         return False
+ 
+ 
++_HAINA_LEAD_FIELDS = frozenset((
++    "source_id", "source_mode", "source_kind", "observed_at", "displayed_title",
++    "brand_hint", "mall_hint", "mall_id_hint", "seller_hint", "seller_type_hint",
++    "link_kind", "category_hint", "product_kind_status", "title_model_candidates",
++    "spec_model_candidates", "spec_parse_status", "identity_status",
++    "used_or_refurbished_hint", "bundle_or_variant_ambiguous_hint",
++    "platform_item_id", "canonical_url", "status", "identity_verified",
++    "quote_verified", "purchasable", "missing_fields",
++))
++_HAINA_HINT_FIELDS = ("brand_hint", "mall_hint", "seller_hint", "seller_type_hint", "category_hint", "mall_id_hint")
++# 线索标签只允许描述文字，不能作为推广链接/追踪参数的透传通道。
++_HAINA_LINK_TEXT = re.compile(
++    r"(?:https?://|(?<!\w)www\.|(?<!\w)(?:s\.click\.taobao\.com|union-click\.jd\.com)|"
++    r"[?&](?:utm_[\w]+|tracking|click_id|aff_id)=|%3a%2f%2f)", re.IGNORECASE
++)
++_HAINA_LINK_KINDS = frozenset((
++    "missing", "invalid", "jd_promotion_redirect", "taobao_promotion_redirect",
++    "platform_detail_host_only_unverified", "other_or_unknown_host",
++))
++_HAINA_PRODUCT_STATUSES = frozenset((
++    "likely_accessory_or_consumable", "printer_host_candidate",
++    "printer_host_title_category_unconfirmed", "product_kind_unknown",
++))
++_HAINA_IDENTITY_STATUSES = frozenset((
++    "title_spec_model_conflict", "multiple_model_or_option_ambiguous",
++    "manufacturer_model_candidate_only", "spec_model_only_title_unconfirmed",
++    "title_model_only_unverified", "model_not_confirmed",
++))
++def _valid_haina_lead(row: dict, now: datetime) -> bool:
++    """导入报告也属于不可信输入；逐字段验证，拒绝嵌套对象与越界值。"""
++    if not set(row).issubset(_HAINA_LEAD_FIELDS):
++        return False
++    if (row.get("source_mode") != "synthetic_test"
++            or row.get("source_kind") != "haina_product_search_pro"
++            or row.get("status") != "source_lead_only"
++            or row.get("platform_item_id") is not None
++            or row.get("canonical_url") is not None
++            or row.get("identity_verified") is not False
++            or row.get("quote_verified") is not False
++            or row.get("purchasable") is not False
++            or not _is_recent_timestamp(row.get("observed_at"), now)):
++        return False
++    if (not isinstance(row.get("source_id"), str)
++            or re.fullmatch(r"haina-synthetic-row:[0-9]{3}", row["source_id"]) is None
++            or not isinstance(row.get("displayed_title"), str)
++            or not row["displayed_title"].strip()
++            or len(row["displayed_title"]) > 500
++            or _HAINA_LINK_TEXT.search(row["displayed_title"])):
++        return False
++    if any(row.get(k) is not None and (
++        not isinstance(row[k], str) or len(row[k]) > 120 or _HAINA_LINK_TEXT.search(row[k])
++    ) for k in _HAINA_HINT_FIELDS):
++        return False
++    if (not isinstance(row.get("link_kind"), str)
++            or not isinstance(row.get("product_kind_status"), str)
++            or not isinstance(row.get("identity_status"), str)
++            or row["link_kind"] not in _HAINA_LINK_KINDS
++            or row["product_kind_status"] not in _HAINA_PRODUCT_STATUSES
++            or row["identity_status"] not in _HAINA_IDENTITY_STATUSES):
++        return False
++    for key in ("title_model_candidates", "spec_model_candidates"):
++        items = row.get(key)
++        if (not isinstance(items, list) or len(items) > 10
++                or any(not is_model_token(x) for x in items)):
++            return False
++    return (type(row.get("used_or_refurbished_hint")) is bool
++            and type(row.get("bundle_or_variant_ambiguous_hint")) is bool)
++
++
+ def _known_title_models(titles: list[str], known_aliases: dict) -> tuple[str | None, str]:
+     if not titles:
+         return None, "no_title_source"
+@@ -49,7 +119,8 @@ def _known_title_models(titles: list[str], known_aliases: dict) -> tuple[str | N
+ 
+ def build_discovery_pool(
+     reports: list[dict], *, known_aliases: dict | None = None,
+-    now: datetime | None = None, max_candidates: int = 30
++    now: datetime | None = None, max_candidates: int = 30,
++    sale_configuration_report: dict | None = None
+ ) -> dict:
+     """去重并关联型号候选。不会批准价格、库存、图片或交易。"""
+     current = now or datetime.now(timezone.utc)
+@@ -62,11 +133,52 @@ def build_discovery_pool(
+     grouped = {}
+     rejected = 0
+     blocked_reports = 0
++    unverified_source_leads = []
+     for report in reports:
+         if not isinstance(report, dict):
+             blocked_reports += 1
+             continue
++        if report.get("operation") == "haina_product_search_offline_ingest":
++            if (report.get("source") != "haina_product_search_pro"
++                    or report.get("source_mode") != "synthetic_test"
++                    or report.get("status") != "source_leads_unverified"):
++                blocked_reports += 1
++                continue
++            rows = report.get("items")
++            if not isinstance(rows, list) or len(rows) > 20:
++                blocked_reports += 1
++                continue
++            for row in rows:
++                if not isinstance(row, dict) or not _valid_haina_lead(row, current):
++                    rejected += 1
++                    continue
++                title = row["displayed_title"]
++                unverified_source_leads.append({
++                    "source_id": row.get("source_id"),
++                    "source_mode": "synthetic_test",
++                    "displayed_title": title,
++                    "brand_hint": row.get("brand_hint"),
++                    "mall_hint": row.get("mall_hint"),
++                    "seller_hint": row.get("seller_hint"),
++                    "seller_type_hint": row.get("seller_type_hint"),
++                    "link_kind": row.get("link_kind"),
++                    "product_kind_status": row.get("product_kind_status"),
++                    "title_model_candidates": row.get("title_model_candidates", []),
++                    "spec_model_candidates": row.get("spec_model_candidates", []),
++                    "identity_status": row.get("identity_status"),
++                    "used_or_refurbished_hint": bool(row.get("used_or_refurbished_hint")),
++                    "bundle_or_variant_ambiguous_hint": bool(row.get("bundle_or_variant_ambiguous_hint")),
++                    "observed_at": row.get("observed_at"),
++                    "status": "source_lead_only_not_platform_candidate",
++                    "platform_item_id": None,
++                    "identity_verified": False,
++                    "quote_verified": False,
++                    "purchasable": False,
++                })
++            continue
+         mode = FORMATS.get(report.get("operation"))
++        if report.get("operation") == "user_selected_marketplace_link_review" and report.get("marketplace_platform") == "taobao":
++            mode = ("TAOBAO_PUBLIC_UNVERIFIED", "TAOBAO")
+         if mode is None or report.get("status") != "candidates_unverified":
+             blocked_reports += 1
+             continue
+@@ -91,7 +203,12 @@ def build_discovery_pool(
+                     rejected += 1
+                     continue
+             else:
+-                if item.get("canonical_url") != f"https://item.taobao.com/item.htm?id={product_id}":
++                if required_platform == "TAOBAO_PUBLIC_UNVERIFIED":
++                    link = parse_taobao_item_url(item.get("canonical_url"))
++                    if link is None or link["platform_item_id"] != product_id:
++                        rejected += 1
++                        continue
++                elif item.get("canonical_url") != f"https://item.taobao.com/item.htm?id={product_id}":
+                     rejected += 1
+                     continue
+             key = (shared_platform, product_id)
+@@ -133,17 +250,26 @@ def build_discovery_pool(
+                                     "conflicting_sources_unverified")
+                     for p in item["provenance"])):
+             item["status"] = "needs_identity_conflict_review"
+-    return {
++    result = {
+         "operation": "merge_unverified_marketplace_leads",
+         "status": "unverified_candidates_only",
+         "candidate_count": len(items), "rejected_count": rejected,
+         "blocked_report_count": blocked_reports, "candidates": items,
++        "unverified_source_lead_count": len(unverified_source_leads),
++        "unverified_source_leads": unverified_source_leads,
+         "verified_quote_count": 0, "purchase_recommendation_approved": False,
+         "transactions_enabled": False,
+         "limitations": [
+             "同一个SKU的来源汇总不代表卖家、套餐、地区或价格已获核实",
+             "型号标题锚点仅帮助回查厂商规格；不证明是主机而非配件",
+             "京东和淘宝平台商品标识永远不互换",
++            "无平台商品ID的海纳线索单独展示，不进入平台候选池或价格比较",
+             "不同平台候选不构成价格/质量/销量排名，推荐门禁保持关闭",
+         ],
+     }
++    if sale_configuration_report is not None:
++        # 合成配置证据在池中另设隔离区，不计入已核平台候选或报价。
++        from .sale_configuration_evidence import assess_sale_evidence_report
++        result["sale_configuration_evidence"] = assess_sale_evidence_report(
++            sale_configuration_report, now=current)
++    return result
+diff --git a/shopping_decision/printer_conditions.py b/shopping_decision/printer_conditions.py
+index f76d99a..157091e 100644
+--- a/shopping_decision/printer_conditions.py
++++ b/shopping_decision/printer_conditions.py
+@@ -59,6 +59,10 @@ def printer_conditions(req: PurchaseRequest) -> dict:
+                 break
+             if consumed:
+                 unresolved.append(clause.strip())
++    if req.needs_color is False and required.get("color_print") is True:
++        conflicts.append("用户确认只需黑白，与原文必须彩色打印冲突，请明确最新条件")
++    if req.needs_color is True and required.get("monochrome_print") is True:
++        conflicts.append("用户确认必须彩色，与原文只需黑白冲突，请明确最新条件")
+     if hard_mini:
+         hard_wechat = True
+     if hard_wechat and req.wechat_required is False:
+diff --git a/shopping_decision/product_compare.py b/shopping_decision/product_compare.py
+index 153a34d..74d2bf2 100644
+--- a/shopping_decision/product_compare.py
++++ b/shopping_decision/product_compare.py
+@@ -6,7 +6,7 @@ from __future__ import annotations
+ 
+ import hashlib
+ import json
+-from datetime import date
++from datetime import date, datetime, timezone
+ from pathlib import Path
+ 
+ from .contracts import PurchaseRequest
+@@ -98,11 +98,38 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+         if item.get("category") != category:
+             continue
+         facts = item["facts"]
++        detail = item.get("manufacturer_detail_evidence")
++        detail_age_days = None
++        if detail is not None:
++            if (not isinstance(detail, dict)
++                    or detail.get("source_url") != item.get("official_url")
++                    or not isinstance(detail.get("response_sha256"), str)
++                    or len(detail["response_sha256"]) != 64
++                    or detail.get("billing_model") not in ("unknown", "buy_print_pages_to_claim_consumables")):
++                raise ValueError("invalid_manufacturer_detail_evidence")
++            try:
++                observed = datetime.fromisoformat(detail["observed_at"].replace("Z", "+00:00"))
++            except (KeyError, TypeError, ValueError, AttributeError) as exc:
++                raise ValueError("invalid_manufacturer_detail_observation") from exc
++            if (observed.tzinfo is None or observed > datetime.now(timezone.utc)
++                    or observed.date() > today or observed.year < 2020):
++                raise ValueError("future_or_invalid_manufacturer_detail_observation")
++            detail_age_days = (today - observed.date()).days
++        detail_stale = detail_age_days is not None and detail_age_days > 30
++
++        def current_fact_value(key: str):
++            field = facts.get(key, {})
++            # 逐型号详情超过30天后，来自该详情页的当前功能判断全部降级为未知；
++            # 不改写目录原始事实，历史记录仍可审计。
++            if detail_stale and detail and field.get("source_url") == detail.get("source_url"):
++                return None
++            return field.get("value")
++
+         failed, unknown, met, preference_met, preference_unknown, preference_unmet = [], [], [], [], [], []
+         evidence = {}
+         for key, expected in required.items():
+             field = facts.get(key, {})
+-            actual = field.get("value")
++            actual = current_fact_value(key)
+             if actual is None:
+                 unknown.append(key)
+             elif actual is expected:
+@@ -113,7 +140,7 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+                 evidence[key] = field["source_url"]
+         for key, expected in preferred.items():
+             field = facts.get(key, {})
+-            actual = field.get("value")
++            actual = current_fact_value(key)
+             if actual is None:
+                 preference_unknown.append(key)
+             elif actual is expected:
+@@ -125,7 +152,7 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+         budget_status = "not_checked" if budget_max_cny is None else "unverified_no_authorized_live_quote"
+         if failed:
+             state = "excluded_by_verified_spec"
+-        elif unknown or budget_max_cny is not None or stale_days > 30:
++        elif unknown or budget_max_cny is not None or stale_days > 30 or detail_stale:
+             state = "needs_verification"
+         else:
+             state = "specs_matched_not_purchase_approved"
+@@ -138,12 +165,22 @@ def compare_products(catalog: dict, *, category: str, required: dict[str, bool],
+             "budget_status": budget_status, "live_price_cny": None, "marketplace_sku": None,
+             "manufacturer_suggested_retail_cny": item.get("manufacturer_suggested_retail_cny"),
+             "manufacturer_suggested_retail_is_live_price": False,
+-            "consumables": item.get("consumables", []),
++            # 过期逐型号详情只能作为历史审计，不能继续展示为当期耗材配置。
++            "consumables": [] if detail_stale else item.get("consumables", []),
++            "manufacturer_detail_evidence": detail,
++            "manufacturer_detail_age_days": detail_age_days,
++            "manufacturer_detail_is_stale": detail_stale,
++            "billing_model": (detail.get("billing_model") if detail and not detail_stale else "unknown"),
+             "durability_independently_verified": bool(item.get("independent_durability_test", False)),
+             "unknowns": (
+                 (["实际到手价、库存及预算匹配尚无授权实时核验"] if budget_max_cny is not None else [])
+                 + (["独立耐用性/故障率未核实"] if not item.get("independent_durability_test") else [])
+                 + (["官网产品事实已超过30天，请复核"] if stale_days > 30 else [])
++                + (["逐型号详情证据已超过30天，请重新核对"] if detail_age_days is not None and detail_age_days > 30 else [])
++                + (["此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"]
++                    if detail and not detail_stale and detail.get("billing_model") == "buy_print_pages_to_claim_consumables" else [])
++                + (["历史详情曾记载页数套餐或耗材，超过30天的内容不构成当前有效套餐/耗材配置"]
++                    if detail_stale and detail and (detail.get("billing_model") != "unknown" or item.get("consumables")) else [])
+             ),
+         })
+     # 这是“下一步核查优先次序”，不是购买榜单或官方性价比评分。
+diff --git a/shopping_decision/web.py b/shopping_decision/web.py
+index 686cd3e..7deca3f 100644
+--- a/shopping_decision/web.py
++++ b/shopping_decision/web.py
+@@ -85,7 +85,7 @@ def build_request(data: dict) -> PurchaseRequest:
+     return PurchaseRequest(category='printer', requirements=tuple(reqs), **values)
+ 
+ 
+-def evaluate_input(data: dict) -> dict:
++def evaluate_input(data: dict, *, haina_mcp_report_path: Path | None = None) -> dict:
+     req = build_request(data)
+     record = decide(req)
+     cards = {c.id: c for c in load_cards() + load_route_claim_cards()}
+@@ -117,18 +117,43 @@ def evaluate_input(data: dict) -> dict:
+     recommendation = asdict(record.recommendation)
+     recommendation['questions'] = tuple(dict.fromkeys((*recommendation['questions'], *product_comparison.get('questions', []))))
+     recommendation['unknowns'] = tuple(dict.fromkeys((*recommendation['unknowns'], *product_comparison.get('unresolved_hard_conditions', []))))
+-    return {'request': asdict(req), 'normalized_constraints': normalized,
+-             'product_comparison': product_comparison,
+-             'product_catalog_sha256': catalogue_sha256(),
+-            'recommendation': recommendation,
+-            'evidence': evidence, 'rejected_evidence': record.rejected_evidence,
+-            'rejected_inputs': record.rejected_inputs,
+-            'evaluated_at': datetime.now(timezone.utc).isoformat(),
+-            'engine': 'shopping_decision.decision.decide',
+-            'card_sha256': hashlib.sha256(CARDS_PATH.read_bytes()).hexdigest(),
+-            'research_ledger_sha256': (hashlib.sha256(ROUTE_LEDGER_PATH.read_bytes()).hexdigest()
+-                                     if ROUTE_LEDGER_PATH.is_file() else None),
+-            'real_time_prices': False, 'transactions_enabled': False}
++    result = {'request': asdict(req), 'normalized_constraints': normalized,
++              'product_comparison': product_comparison,
++              'product_catalog_sha256': catalogue_sha256(),
++              'recommendation': recommendation,
++              'evidence': evidence, 'rejected_evidence': record.rejected_evidence,
++              'rejected_inputs': record.rejected_inputs,
++              'evaluated_at': datetime.now(timezone.utc).isoformat(),
++              'engine': 'shopping_decision.decision.decide',
++              'card_sha256': hashlib.sha256(CARDS_PATH.read_bytes()).hexdigest(),
++              'research_ledger_sha256': (hashlib.sha256(ROUTE_LEDGER_PATH.read_bytes()).hexdigest()
++                                         if ROUTE_LEDGER_PATH.is_file() else None),
++              'real_time_prices': False, 'transactions_enabled': False}
++    if req.category == 'printer':
++        from .real_printer_case import compare_case_research
++        research_values = {
++            'category': 'printer',
++            'needs_color': req.needs_color,
++            'accepts_outsourced_color': req.accepts_outsourced_color,
++            'budget_max_cny': req.budget_max_cny,
++            'budget_scope': req.budget_scope,
++            'monthly_pages_range': (list(req.monthly_pages_range)
++                                    if req.monthly_pages_range is not None else
++                                    [req.monthly_pages, req.monthly_pages]
++                                    if req.monthly_pages is not None else None),
++            'wechat_required': req.wechat_required,
++            'wechat_workflow': req.wechat_workflow,
++            'delivery_region': req.delivery_region,
++            'device_deployment_region': data.get('device_deployment_region'),
++            'requirements': list(req.requirements),
++            'requires_scan': req.requires_scan,
++            'requires_auto_duplex': req.requires_auto_duplex,
++        }
++        result['real_printer_case_research'] = compare_case_research(research_values)
++    if haina_mcp_report_path is not None:
++        from .haina_mcp_ingest import load_haina_mcp_report
++        result['haina_mcp_research'] = load_haina_mcp_report(haina_mcp_report_path)
++    return result
+ 
+ 
+ class Handler(BaseHTTPRequestHandler):
+diff --git a/tests/test_dialogue_flow.py b/tests/test_dialogue_flow.py
+index e0874b2..0a92a28 100644
+--- a/tests/test_dialogue_flow.py
++++ b/tests/test_dialogue_flow.py
+@@ -45,7 +45,12 @@ class DialogueFlowTests(unittest.TestCase):
+         self.assertEqual(len(records), 9)
+         self.assertEqual(records["HL-L1238W"]["required_failed"], [])
+         self.assertIn("wireless", records["HL-L1228"]["required_failed"])
+-        self.assertIn("wechat_miniprogram", records["HL-10W"]["required_unknown"])
++        # 本机有2026-11-09已核对官网详情时，普通对话使用该记录回放；
++        # 另一台没有现场记录的机器仍保守退回历史目录，不能编造功能。
++        if result["source_mode"] == "recorded_manufacturer_detail_replay_no_network":
++            self.assertIn("wechat_miniprogram", records["HL-10W"]["required_met"])
++        else:
++            self.assertIn("wechat_miniprogram", records["HL-10W"]["required_unknown"])
+         self.assertFalse(result["purchase_recommendation_approved"])
+         self.assertFalse(result["transactions_enabled"])
+ 

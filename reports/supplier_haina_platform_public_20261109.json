@@ -1,0 +1,23 @@
+{
+  "url": "https://ai.zhidemai.com/haina-platform",
+  "title": "开发者工作台 · 海纳开放平台 · 什么值得买 AI",
+  "text": "反馈\n海纳开放平台目前处于 Beta 测试阶段，接口能力、调用限制及服务策略可能持续调整。\n查看详情\n×\n什么值得买 · 海纳\n海纳 Agent\n海纳开放平台\n联系商务\n登录 / 注册\n概览API Key 管理使用统计\n海纳能力列表\n▾\n内容检索\nAPI\n内容检索 Pro\nAPI\n图搜商品\nAPI\n商品检索 Pro\nAPI\n好价检索 Pro\nAPI\n知识图谱检索\nAPI\n海纳 MCP\nMCP\n开发者工作台 · BETA\n登录后即可申请 API Key、在线调试接口\n1\n登录 / 注册\n2\n申请 API Key\n3\n开通接口能力\n4\n调试与调用\n内容检索\n\n检索值得买社区及外部内容平台，支持问题改写、相关性增强、时间和来源过滤。\n\n内容检索 Pro\n\n全网内容检索增强版，支持时间范围、召回数、增强排序与问题改写。\n\n图搜商品\n\n输入公网可访问的图片 URL，识别相似商品并返回商品图、品牌、类目及匹配分数。\n\n商品检索 Pro\n\n按商品词召回商品，支持商城、品牌、类目、整数价格区间、排序和字段裁剪。\n\n好价检索 Pro\n\n按商品词检索好价内容，支持 query 处理、返回数量和字段裁剪。\n\n知识图谱检索\n\n基于知识图谱精准查询型号级产品，返回实体信息、核心参数、价格、特征及评价证据。\n\nMCP\n海纳 MCP\n以 MCP Server（Streamable HTTP）形式开放海纳能力，大模型与 Agent 可直接把能力当作工具调用。\n查看接入文档 →\n\n有大规模调用或商务合作需求？联系商务\n\n登录开放平台\n手机号 + 短信验证码，首次登录自动注册\n手机号\n人机验证\n我不是机器人\n验证码\n获取验证码\n已阅读并同意《用户协议》与《隐私政策》，首次验证即完成注册\n登录 / 注册\n测试 Key 免费申请，审核通过后即可调用\n一个 Key 通用全部海纳能力与 MCP\n在线调试、示例代码开箱即用",
+  "links": [
+    {
+      "text": "什么值得买 · 海纳",
+      "url": "https://ai.zhidemai.com/"
+    },
+    {
+      "text": "海纳 Agent",
+      "url": "https://ai.zhidemai.com/haina"
+    },
+    {
+      "text": "海纳开放平台",
+      "url": "https://ai.zhidemai.com/haina-platform"
+    },
+    {
+      "text": "",
+      "url": "https://altcha.org/"
+    }
+  ]
+}

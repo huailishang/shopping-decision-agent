@@ -1,0 +1,80 @@
+{
+  "schema": "provider-preflight/v1",
+  "task_id": "PRINTER-MODEL-ADAPTER-REPAIR-20261119",
+  "observed_at_utc": "2026-11-19T06:22:09.531311+00:00",
+  "execution_environment": "WSL Linux through CodexProshl bash, python3 /usr/bin/python3",
+  "non_inference_checks": [
+    {
+      "command": "codex --version",
+      "exit_code": 127,
+      "version": "unavailable",
+      "model_inference": false
+    },
+    {
+      "command": "codex exec --help",
+      "exit_code": 127,
+      "supported_flags_verified": false,
+      "model_inference": false
+    },
+    {
+      "command": "command -v codex",
+      "found": false,
+      "model_inference": false
+    },
+    {
+      "command": "command -v node, npm, cmd.exe",
+      "found": false,
+      "model_inference": false
+    },
+    {
+      "command": "test -e /mnt/d/SoftWare/npm/codex.CMD",
+      "found": true,
+      "model_inference": false
+    }
+  ],
+  "historical_provider_discovery_only": {
+    "listed_model_ids": [
+      "gpt-5.5",
+      "gpt-5.4",
+      "gpt-5.4-mini",
+      "gpt-5.3-codex",
+      "gpt-5.2"
+    ],
+    "tested_rejected_ids": [
+      "gpt-5.5",
+      "gpt-5.4-mini",
+      "gpt-5.3-codex"
+    ],
+    "authentication_status": "historical CLI reported ChatGPT account; not rechecked today",
+    "history_not_authorization": true
+  },
+  "intended_source_flags_unverified": {
+    "flags": [
+      "--ignore-user-config",
+      "--ephemeral",
+      "--sandbox read-only",
+      "--skip-git-repo-check",
+      "--output-schema",
+      "--output-last-message",
+      "--disable"
+    ],
+    "verified_current_runtime": false,
+    "tools_disabled_and_read_only_enforced": false
+  },
+  "current_account_entitled_model_ids_verified": [],
+  "current_model_compatibility": "unknown",
+  "inference_success": false,
+  "new_inference_attempts": 0,
+  "account_secrets_read": false,
+  "web_login_performed": false,
+  "external_api_called": false,
+  "historical_budget": {
+    "used": 6,
+    "limit": 10,
+    "remaining": 4,
+    "reset": false
+  },
+  "decision": "BLOCKED_EXTERNAL",
+  "reason": "Codex executable not available in WSL PATH; Windows .CMD launcher presence does not prove runnable CLI, model entitlement, or tool-isolation flags; no safe live attempt authorized.",
+  "separate_authorization_required_for_future_live_probe": true
+}

@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "id": "haina-printer-s0-s7-20261115-offline-closure",
+  "run_date": "2026-11-15",
+  "role": "executor",
+  "assessment": "partial_blocked_external_use_rights_and_raw_content",
+  "scope": "S0-S7; no new Ha(i)na API call; no credential reads, marketplace logins, financial actions or Git push",
+  "source_classification": {
+    "historical_redacted_mcp_probe_records": 11,
+    "new_real_raw_mcp_records": 0,
+    "synthetic_fixed_fixture_count": 1,
+    "official_model_research_models": 2,
+    "public_comparison_dimensions": 9,
+    "public_conditional_decisions": 3,
+    "official_web_reference_recheck": "2026-11-15: Brother China official FAQ, HP region-specific toner support, HP exact M232dw voltage specs, HP support forum 2024 reply; original pages may return 403 but official indexed excerpts visible"
+  },
+  "supplier_api_accounting": {
+    "new_business_calls": 0,
+    "new_metadata_calls": 0,
+    "known_application_http_attempts_for_this_run": 0,
+    "cost_incurred_from_api_calls": "none_new_calls",
+    "test_entitlement_and_real_use_license": "not_verified"
+  },
+  "evidence_accounting": {
+    "platform_native_identity_verified": 0,
+    "platform_native_identity_target": 2,
+    "live_region_quote_verified": 0,
+    "real_supplier_content_promoted": 0,
+    "old_brother_20_reviewed": "0/20",
+    "purchase_approved": false,
+    "transactions_enabled": false
+  },
+  "validation": {
+    "python_full_suite": {
+      "result": "pass",
+      "cases": 375,
+      "command": "python3 -X utf8 -m unittest discover -s tests -q",
+      "run_date": "2026-11-15"
+    },
+    "python_focused": {
+      "result": "pass",
+      "cases": 23,
+      "command": "python3 -m unittest tests.test_haina_mcp_ingest tests.test_real_printer_case_research -v"
+    },
+    "h05_legacy_negative": {
+      "result": "pass",
+      "cases": 8,
+      "command": "python3 -m shopping_decision.h05_probes",
+      "note": "legacy script preset dates; not a current live quote check"
+    },
+    "java_compile": {
+      "result": "pass",
+      "jdk": "OpenJDK 17.0.20",
+      "command": "javac -encoding UTF-8 -d /tmp/shopping-agent-java-build-20261115-save desktop/*.java"
+    },
+    "h10_process": {
+      "result": "pass",
+      "cases": 6
+    },
+    "p04_marketplace": {
+      "result": "pass",
+      "cases": 6
+    },
+    "swing_scripted_gui": {
+      "result": "pass",
+      "scope": "real Swing GUI with programmatic button/dialog interactions, region-aware preview, explicit save then UTF-8 readback; not human mouse acceptance"
+    },
+    "changed_code_whitespace": {
+      "result": "pass",
+      "note": "git diff --check on relevant modified paths passes; whole-tree CURRENT.md has preexisting CRLF/trailing-whitespace diffs and remains untouched"
+    },
+    "source_provenance_correction": "R14 separates 2024-10-15 HP engineer WeChat location reply from 2024-10-16 volunteer HP Smart comment; R15 Brother FAQ now points to indexed official question00 page"
+  },
+  "replay": [
+    {
+      "step": "R0",
+      "simulation": false,
+      "description": "原需求与既有补答，不推断扫描/双面或设备地区",
+      "changed_fields": [],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "active_condition_ids": [],
+      "unknown_condition_ids": [
+        "DEC-01",
+        "DEC-02",
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "R1",
+      "simulation": true,
+      "description": "模拟新增必须扫描",
+      "changed_fields": [
+        "requires_scan"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "active_condition_ids": [
+        "DEC-01"
+      ],
+      "unknown_condition_ids": [
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "R2",
+      "simulation": true,
+      "description": "模拟取消扫描、必须自动双面",
+      "changed_fields": [
+        "requires_auto_duplex",
+        "requires_scan"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-05",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "active_condition_ids": [
+        "DEC-01"
+      ],
+      "unknown_condition_ids": [
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "R2-revert",
+      "simulation": true,
+      "description": "模拟撤销自动双面",
+      "changed_fields": [
+        "requires_auto_duplex"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08"
+      ],
+      "active_condition_ids": [
+        "DEC-02"
+      ],
+      "unknown_condition_ids": [
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "R3",
+      "simulation": true,
+      "description": "模拟改成家中必须彩印",
+      "changed_fields": [
+        "needs_color"
+      ],
+      "reason_ids": [
+        "CASE-02",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07",
+        "CASE-08",
+        "CASE-09"
+      ],
+      "active_condition_ids": [],
+      "unknown_condition_ids": [
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "R4",
+      "simulation": true,
+      "description": "模拟恢复黑白并改微信方式",
+      "changed_fields": [
+        "needs_color",
+        "wechat_required",
+        "wechat_workflow"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07"
+      ],
+      "active_condition_ids": [
+        "DEC-02"
+      ],
+      "unknown_condition_ids": [
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "R5",
+      "simulation": true,
+      "description": "模拟预算从1000降到500元",
+      "changed_fields": [
+        "budget_max_cny"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-06",
+        "CASE-07"
+      ],
+      "active_condition_ids": [
+        "DEC-02"
+      ],
+      "unknown_condition_ids": [
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "R5-clear",
+      "simulation": true,
+      "description": "模拟撤销预算与微信条件",
+      "changed_fields": [
+        "budget_max_cny",
+        "requirements",
+        "wechat_required",
+        "wechat_workflow"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-07"
+      ],
+      "active_condition_ids": [
+        "DEC-02"
+      ],
+      "unknown_condition_ids": [
+        "DEC-03"
+      ],
+      "deployment_region_scope": "unknown",
+      "approved": false,
+      "transaction_enabled": false
+    },
+    {
+      "step": "Region-overseas",
+      "simulation": true,
+      "description": "额外模拟：设备部署在新加坡，收货地区仍未知",
+      "changed_fields": [
+        "device_deployment_region"
+      ],
+      "reason_ids": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-07"
+      ],
+      "active_condition_ids": [
+        "DEC-02",
+        "DEC-03"
+      ],
+      "unknown_condition_ids": [],
+      "deployment_region_scope": "outside_mainland_china",
+      "approved": false,
+      "transaction_enabled": false
+    }
+  ],
+  "negative_matrix": [
+    {
+      "id": "N1",
+      "status": "historical_summary_plus_synthetic_pass",
+      "observed_or_blocked": "Brother既有SKU探针缺SPU/SKU/商品ID；合成适配逐行保持空ID，平台身份不准入",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_four_mcp_tools_merge_into_two_separate_research_entities"
+    },
+    {
+      "id": "N2",
+      "status": "historical_summary_plus_synthetic_pass",
+      "observed_or_blocked": "HP归一ID与平台原生ID分离，仍是供应商候选",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_four_mcp_tools_merge_into_two_separate_research_entities"
+    },
+    {
+      "id": "N3",
+      "status": "synthetic_pass",
+      "observed_or_blocked": "M232dwc、耗材、二手、套餐和指令型标题逐行阻断",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_accessory_used_bundle_and_prompt_text_are_not_promoted"
+    },
+    {
+      "id": "N4",
+      "status": "partial",
+      "observed_or_blocked": "空商品数组/计数不一致有测试；完整真实轴值、来源URL未取得",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_empty_product_array_does_not_create_fake_sale_lead_and_count_mismatch_is_visible"
+    },
+    {
+      "id": "N5",
+      "status": "blocked_real_evidence",
+      "observed_or_blocked": "已有评论仅脱敏结构，不掌握原评论和转载关系；供应商count不升级为核验样本量",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_four_mcp_tools_merge_into_two_separate_research_entities"
+    },
+    {
+      "id": "N6",
+      "status": "partial",
+      "observed_or_blocked": "旧观察时间保持不刷新；真实材料撤回和全部过期理由的联动未验",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_old_observation_time_is_preserved_not_refreshed"
+    },
+    {
+      "id": "N7",
+      "status": "synthetic_pass",
+      "observed_or_blocked": "需求变化、微信偏好与必须、地区未知均区分；地区报价仍unknown",
+      "primary_test_reference": "tests.test_real_printer_case_research.RealPrinterCaseResearchTests.test_real_cli_r0_to_r5_recomputes_public_research"
+    },
+    {
+      "id": "N8",
+      "status": "synthetic_pass",
+      "observed_or_blocked": "商品标题中伪指令不触发购买或权限",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_accessory_used_bundle_and_prompt_text_are_not_promoted"
+    },
+    {
+      "id": "N9",
+      "status": "synthetic_pass",
+      "observed_or_blocked": "伪造approved、synthetic_test标签、改哈希均不授权",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_arbitrary_synthetic_label_cannot_bypass_pinned_fixture_gate"
+    },
+    {
+      "id": "N10",
+      "status": "partial",
+      "observed_or_blocked": "非法报告、提供方错误及坏行隔离覆盖；独立好报告与恶意坏JSON并列回放尚未形成专用证据",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_bad_row_does_not_poison_neighbor"
+    },
+    {
+      "id": "N11",
+      "status": "partial",
+      "observed_or_blocked": "缺文件、工具业务错误、子进程超时回归已测；真实服务403/配额场景未实际触发",
+      "primary_test_reference": "tests.test_haina_mcp_ingest.HainaMcpIngestTests.test_missing_file_invalid_report_and_business_error_fail_closed"
+    },
+    {
+      "id": "N12",
+      "status": "scripted_gui_pass_human_unverified",
+      "observed_or_blocked": "Swing实际窗口程序化操作完成选择/结果/评审保存回读；H10覆盖在途改答；未做真人全流程手动点击",
+      "primary_test_reference": "desktop/H10JavaRegression.java"
+    }
+  ],
+  "acceptance_gates": {
+    "A1": {
+      "status": "blocked",
+      "why": "complete MCP cooperation contract and actual data parsing/personal display/minimal audit rights not verified; redacted probe is not raw evidence"
+    },
+    "A2": {
+      "status": "blocked",
+      "why": "no real supplier payload entered normal CLI/Java path; only synthetics and publicly sourced model specifications"
+    },
+    "A3": {
+      "status": "executor_research_partial",
+      "why": "public manufacturer model comparison and condition-specific reasons, independent evaluator has not approved research efficacy"
+    },
+    "A4": {
+      "status": "executor_tech_pass_partial",
+      "why": "CLI R0-R5, 15-field Java bridge and scripted Swing interaction/save/readback passed; human GUI review pending"
+    },
+    "A5": {
+      "status": "executor_tech_pass_partial",
+      "why": "375 Python, 8 H05, 12+ Java, 23 focus; N5 true dedup, N6 revocation, real N11 still blocked; independent security assessment pending"
+    },
+    "A6": {
+      "status": "not_verified",
+      "why": "platform IDs 0/2; cannot upgrade supplier IDs or links"
+    },
+    "A7": {
+      "status": "not_verified",
+      "why": "user destination & sales SKU & current price/stock/discount/shipping unverified"
+    }
+  },
+  "missing_material": [
+    "Full MCP developer cooperation agreement with allowed purposes and applicable account/actor",
+    "Permitted minimally replayable real returned field contents including value/date/source identifiers (not just hash)",
+    "Supplier SKU IDs to platform native product IDs and selected configuration proof",
+    "Target printer installation country and actual store/delivery locale, verified live price and stock"
+  ],
+  "file_sha256": {
+    "tests/fixtures/haina_mcp_synthetic_bundle.json": "bd1de6e313b6fcfd854e53287e5a2d91363a9c697790e984c7a5df97cd61db0d",
+    "knowledge/real_printer_case_comparison_20261115.json": "d1a647cf6e2da98e38772e330797a93aae2ca849a567977d450e1456656ea833",
+    "knowledge/real_printer_case_research_20261113.json": "84df265530bad1c8e8f8b74c9d90020457485c6330f1e2f14bb870457484c529",
+    "shopping_decision/haina_mcp_ingest.py": "0acd39516ffdcbb7646a91b577c6e4a1c2e08625b5e44769845b176221fb79e3",
+    "shopping_decision/real_printer_case.py": "cc036c6d61ff10ff2b2c42e2c3ee101ce8daac9383f568ddee8205b96955c81c",
+    "shopping_decision/desktop_bridge.py": "0135c75e3288f15d46a0274f19c578855d850e3a1b64dae88462db46f8a01cba",
+    "desktop/ShoppingDecisionDesktop.java": "01dd3c3add92e0edf089b0a3028b89c2af66516a87fe9586ebfd73eb3e9eddea"
+  },
+  "change_policy": "No commit, no push, no clean/reset. Existing working tree preserved."
+}

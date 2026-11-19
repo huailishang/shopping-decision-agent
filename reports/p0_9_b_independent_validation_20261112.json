@@ -1,0 +1,160 @@
+{
+  "task": "P0.9-B_independent_reassessment",
+  "date": "2026-11-12",
+  "role": "independent_reviewer",
+  "verdict": {
+    "local_engineering": "not_passed",
+    "overall_P0_9_B": "not_passed",
+    "previous_P0_9_A_time_binding": "remains_passed_in_reviewed_scope",
+    "B1": "blocked_current_contract_and_required_uses_unknown",
+    "B2": "blocked_original_raw_response_unavailable",
+    "B3": "not_passed_real_identity_0_of_2",
+    "B4": "not_passed_local_type_revocation_and_sku_anchor_gaps",
+    "B5": "partially_accepted_cli_data_isolation_and_session_expiry_failures",
+    "B6": "not_passed_new_independent_checks",
+    "B7": "tested_scope_remains_closed_no_real_identity_or_purchase_escalation"
+  },
+  "findings": [
+    {
+      "id": "S1",
+      "priority": 2,
+      "kind": "behavioral_defect",
+      "issue": "unhashable_platform_or_permitted_use_aborts_report_and_drops_valid_row",
+      "locations": [
+        "shopping_decision/sale_configuration_evidence.py:53",
+        "shopping_decision/sale_configuration_evidence.py:83",
+        "shopping_decision/sale_configuration_evidence.py:140"
+      ],
+      "unmet_checks": 5
+    },
+    {
+      "id": "S2",
+      "priority": 2,
+      "kind": "behavioral_defect",
+      "issue": "same_source_revocation_or_use_loss_discarded_while_old_active_binding_survives",
+      "locations": [
+        "shopping_decision/sale_configuration_evidence.py:67",
+        "shopping_decision/sale_configuration_evidence.py:139"
+      ],
+      "unmet_checks": 3
+    },
+    {
+      "id": "S3",
+      "priority": 2,
+      "kind": "behavioral_defect",
+      "issue": "cli_caches_startup_gate_and_does_not_recheck_review_expiry_per_turn",
+      "locations": [
+        "shopping_decision/dialogue_flow.py:217",
+        "shopping_decision/dialogue_flow.py:279"
+      ],
+      "unmet_checks": 1,
+      "clock_advance": "simulated_only_two_minutes"
+    },
+    {
+      "id": "S4",
+      "priority": 2,
+      "kind": "contract_design_gap_against_frozen_execution_package",
+      "issue": "mandatory_selected_sku_lacks_source_anchor_and_explicit_anchor_is_rejected",
+      "locations": [
+        "shopping_decision/sale_configuration_evidence.py:25",
+        "shopping_decision/sale_configuration_evidence.py:79"
+      ],
+      "unmet_checks": 1,
+      "real_misbinding_demonstrated": false
+    }
+  ],
+  "validation": {
+    "new_independent_checks": {
+      "command": "D:/SoftWare/Python/install/python.exe reports/p0_9_b_independent_20261112.py",
+      "result": "reports/p0_9_b_independent_20261112.json",
+      "exit_code": 1,
+      "total": 24,
+      "passed": 14,
+      "unmet": 10,
+      "behavioral_unmet_checks": 9,
+      "contract_gap_unmet_checks": 1,
+      "purpose_selected_not_accuracy_estimate": true,
+      "business_file_hashes_before_after_identical": true
+    },
+    "old_developer_scenarios_replayed": {
+      "total": 22,
+      "passed": 22,
+      "result": "reports/p0_9_b_developer_replay_independent_20261112.json",
+      "original_executor_report_not_overwritten": true
+    },
+    "windows_native_suite": {
+      "interpreter": "D:/SoftWare/Python/install/python.exe",
+      "python_version": "3.12.3",
+      "command": "python -m unittest discover -s tests -q",
+      "exit_code": 0,
+      "total": 336,
+      "passed": 336,
+      "unittest_elapsed_seconds": 26.908,
+      "wrapper_elapsed_seconds": 27.765,
+      "removed_encoding_environment_variables": ["PYTHONUTF8", "PYTHONIOENCODING"],
+      "extra_encoding_flags": []
+    },
+    "previous_time_binding_probes": {
+      "command": "D:/SoftWare/Python/install/python.exe reports/p0_9_time_binding_independent_20261112.py --output reports/p0_9_b_independent_time_regression_20261112.json",
+      "exit_code": 0,
+      "passed": 134,
+      "total": 134,
+      "result": "reports/p0_9_b_independent_time_regression_20261112.json"
+    },
+    "h05": {
+      "command": "D:/SoftWare/Python/install/python.exe -m shopping_decision.h05_probes --output reports/p0_9_b_independent_h05_20261112.json",
+      "exit_code": 0,
+      "passed": 8,
+      "total": 8,
+      "result": "reports/p0_9_b_independent_h05_20261112.json"
+    },
+    "java_compile": {
+      "command": "javac -encoding UTF-8 --release 17 -d .h08-build desktop/DesktopBridgeClient.java desktop/ShoppingDecisionDesktop.java desktop/P04MarketplaceRegression.java desktop/H10JavaRegression.java",
+      "exit_code": 0,
+      "target_release": 17
+    },
+    "java_P04": {
+      "command": "java -Djava.awt.headless=true -cp .h08-build P04MarketplaceRegression D:/SoftWare/Python/install/python.exe",
+      "exit_code": 0,
+      "passed": 6,
+      "total": 6
+    },
+    "java_H10": {
+      "command": "java -Djava.awt.headless=true -cp .h08-build H10JavaRegression D:/SoftWare/Python/install/python.exe",
+      "exit_code": 0,
+      "passed": 6,
+      "total": 6
+    },
+    "diff_check": {"command": "git -c core.whitespace=cr-at-eol diff --check", "exit_code": 0},
+    "manual_gui_this_review": "not_run",
+    "wsl_this_review": "not_run"
+  },
+  "real_funnel": {
+    "original_rows_reviewed": 0,
+    "original_rows_total": 20,
+    "deep_samples_reviewed": 0,
+    "deep_samples_cap": 6,
+    "distinct_real_identity_positives": 0,
+    "required_real_positives": 2,
+    "regional_quotes": 0
+  },
+  "next_action": "bounded_S1_to_S4_repair_in_existing_P0.9_B_then_new_independent_variants_no_new_large_package",
+  "time_budget_remaining": "unknown_no_reliable_executor_time_record",
+  "online_experiment_application": "skeleton_only_missing_precise_endpoint_input_and_usage_evidence_not_executable",
+  "boundaries": {
+    "new_haina_business_calls": 0,
+    "credential_reads": 0,
+    "paid_calls": 0,
+    "account_actions": 0,
+    "transactions": 0,
+    "external_messages": 0,
+    "business_code_modified": false,
+    "historical_reports_overwritten": false,
+    "git_commit": false,
+    "git_push": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "report": "reports/P0_9_B_独立评估报告_20261112.md",
+  "handoff": "handoffs/P0_9_B_独立评估_20261112.md"
+}

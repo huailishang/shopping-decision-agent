@@ -1,0 +1,16 @@
+{
+  "task_id": "PRINTER-MODEL-COMPARE-20261118",
+  "cases_sha256": "77674b93a84c80875bc03836043e2bd7f2407a5f8710e3c0fccc631bd1ee7df1",
+  "case_count": 8,
+  "legacy_pair_count": 5,
+  "attempt_count": 5,
+  "accepted": {},
+  "requested_model": "gpt-5.4-mini",
+  "interrupted_receipts_missing": 1,
+  "new_external_product_facts": 0,
+  "real_user_feedback_count": 0,
+  "comparison_quality_gain": "not_determined_by_automated_checks",
+  "model_requests_only": true,
+  "live_price_verified": false,
+  "transactions_enabled": false
+}

@@ -1,0 +1,43 @@
+{
+  "status": "preparation_integrity_checked_not_contract_acceptance",
+  "checked_at": "2026-11-16T22:25:15.912477+08:00",
+  "source_hashes_unchanged": 120,
+  "snapshot_entries_valid": 120,
+  "material_note_shas_matched": 3,
+  "old_normal_cli_output_bound": true,
+  "searches": 6,
+  "reads_including_pdf_render": 5,
+  "missing_frozen_dependencies": [
+    "scripts/verify_printer_research_delivery.py",
+    "tests/test_printer_research_delivery.py",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/task_register.json"
+  ],
+  "vp01_to_vp06_run": false,
+  "product_tests_or_gui_run": false,
+  "independent_evaluation": false,
+  "measured_session_window": {
+    "first_clock_observation": "2026-11-16T22:16:11+08:00",
+    "checked_at": "2026-11-16T22:25:15.912477+08:00",
+    "wall_minutes": 9.08,
+    "note": "单一执行者连续准备的可测墙钟时间；此前读CURRENT等加载未单独计时。不是完整有效工时或24小时余额。"
+  },
+  "utf8_and_json_checked_files": [
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/EXECUTOR_PREPARATION.md",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/REPORT.md",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/baseline_capture.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/baseline_input.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/check_preparation.py",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/development_comparison.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/executor_start_snapshot.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/gap_register.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/iterations.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_manifest.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/PLAN-R2-01.meta.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/PLAN-R2-02.meta.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/planning_r2_baseline.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/public_action_ledger.json",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_manual_duplex_lead.md",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_qsg_recheck.md",
+    "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/evidence/material_notes/brother_wechat_online_lead.md"
+  ]
+}

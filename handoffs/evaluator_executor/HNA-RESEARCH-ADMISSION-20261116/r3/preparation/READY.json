@@ -1,0 +1,60 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "revision": "r3",
+  "state": "ready_to_freeze_for_executor",
+  "prepared_on": "2026-11-17",
+  "checks": {
+    "PREP-CHECKER": {
+      "meta_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/preparation/verification/PREP-CHECKER.meta.json",
+      "meta_sha256": "0bcfdea690fd49b31a8c66c81ffdcce420949368d1fae9799fa13db3d5914bf1",
+      "observed_exit_code": 0,
+      "expected_preparation_exit_code": 0
+    },
+    "PREP-FROZEN": {
+      "meta_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/preparation/verification/PREP-FROZEN.meta.json",
+      "meta_sha256": "db9d8261ea996113e53af602f96486a29c70cd2a5f73bca1ab84285b4ee1db88",
+      "observed_exit_code": 0,
+      "expected_preparation_exit_code": 0
+    },
+    "PREP-BASELINE-GAP": {
+      "meta_path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/preparation/verification/PREP-BASELINE-GAP.meta.json",
+      "meta_sha256": "887210bf08002a3590225ef4825e2c229b7338aad0ef7b345f1b715c3aa90c07",
+      "observed_exit_code": 1,
+      "expected_preparation_exit_code": 1
+    }
+  },
+  "bindings": {
+    "CONTRACT.md": "66b349164999be7de9159e631c5fbe0bfea3d14dc636dcb6c2e74967bb7498eb",
+    "VALIDATION_PLAN.yaml": "17d969271306077f261e8c1a1e85da4c40971d922adebaade12a5fdff65a882b",
+    "FROZEN_INPUTS.json": "fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832",
+    "cases.json": "49c9270a284f48f2369453889ac29752aac8d48684d2145836cb34f5bc94754c",
+    "task_register.json": "2720de964239d7370ced1d6efc819cbfbb675e7cdaa1266afd18f07adfb59bcc",
+    "check_delivery.py": "d63964cd8509adf5762cfb328c2bef7b8d20ab7d43cd78c976f6c9ddadad17cb",
+    "test_checker.py": "e975edfa63dccbaa241bae31a69299821c50f6380364f4f4e3144f7783812ee7"
+  },
+  "expected_current_product_gap": {
+    "cases_checked": 3,
+    "passed": 0,
+    "results": [],
+    "errors": [
+      {
+        "case": "original_proxy",
+        "error": "decision_plan missing: existing output is insufficient"
+      },
+      {
+        "case": "hypothetical_wechat_required",
+        "error": "decision_plan missing: existing output is insufficient"
+      },
+      {
+        "case": "hypothetical_wechat_optional",
+        "error": "decision_plan missing: existing output is insufficient"
+      }
+    ],
+    "limit": "Normal local entry behavior, not new material acquisition or real-user effectiveness."
+  },
+  "limits": [
+    "Preparation and contract readiness only; no Executor L2 or product PASS.",
+    "One proxy case and two hypothetical branches; no new external materials or real-user effect trial.",
+    "No product implementation, network/API/account/message/transaction/commit/push in preparation."
+  ]
+}

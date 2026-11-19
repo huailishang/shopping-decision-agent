@@ -1,0 +1,24 @@
+{
+  "name": "VP-02",
+  "started_at_utc": "2026-11-19T07:24:49.774784+00:00",
+  "finished_at_utc": "2026-11-19T07:25:24.626212+00:00",
+  "duration_sec": 34.87,
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-q"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "c7928fe602fe2b4034d1574bb9f6cfbd8dec09f14bc632cd12f6bfc1bca64e38",
+  "observed_stderr_tail": "127.0.0.1 - - [19/Nov/2026 15:24:58] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [19/Nov/2026 15:24:58] \"POST /api/decide HTTP/1.1\" 200 -\n127.0.0.1 - - [19/Nov/2026 15:24:58] \"POST /api/decide HTTP/1.1\" 400 -\n----------------------------------------------------------------------\nRan 485 tests in 32.989s\n\nOK\n",
+  "observed_stdout_tail": "",
+  "pass_expected_exit": true
+}

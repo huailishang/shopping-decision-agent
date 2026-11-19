@@ -1,0 +1,134 @@
+{
+  "schema": "project-bottleneck-reassessment-evidence/v1",
+  "observed_on": "2026-11-17",
+  "review_scope": "Existing project records, not fresh external acquisition or a new full regression run.",
+  "ready_bindings_match": 7,
+  "protected_product_files_match": 93,
+  "l2_l3_triplets_checked": [
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-01.meta.json",
+      "sha256": "36541a2f6a4e289770448147d974e1ef606ce0ae3332e37ab20da1a203af138d",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-02.meta.json",
+      "sha256": "47627a226330e50c6d022ff9730eb19393bf29811488dcb1096ffb413a343c68",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-03.meta.json",
+      "sha256": "a52a6db145d9f6f480f1ae2df823c04ac31c22ceb4534c962c5527b74369567b",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-04.meta.json",
+      "sha256": "4c0255dafc5db8c93ee71acd845893e5c8c19363e6814ac9d6fd1b6b5dcf7311",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-05.meta.json",
+      "sha256": "d120bb8a66c17871c6db2a8187c3184c1ffee0ffbb1c87b0690edb13cabd2985",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/EV-06.meta.json",
+      "sha256": "c84f65df3cd7180c18c62e7aabbbafe31822f415c9bb00e885bf0b5f8979f5ca",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/RV-EV-01.meta.json",
+      "sha256": "4aa533671a71bb93cd0c3843d3b3f11fb0257e4e1e9f1cc17d284715d26fe9b1",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/RV-EV-02.meta.json",
+      "sha256": "8b07f03b3a4461438ea741ac8d18a837dfba565f6c736fadebbe345c88118b75",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/RV-EV-03.meta.json",
+      "sha256": "c585e78eca86eb273bbbd83f8910d60fb8f30012d9ecbe101891fc749fedfa55",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/RV-EV-04.meta.json",
+      "sha256": "7403fdcaf413dab1ce27a5dc0439956df648e0932dbf54f533ce773063794b56",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/RV-EV-05.meta.json",
+      "sha256": "6b281b298cb7542d71ed2008d33329cbd9bf5de7e282bc05fba2dbf1c9beee50",
+      "exit_code": 0
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/RV-EV-06.meta.json",
+      "sha256": "32765e1508717868cde1dcb593f0eb2fe446346eace8710f60bf6bef10974557",
+      "exit_code": 0
+    }
+  ],
+  "existing_l3_result": "PASS",
+  "existing_l3_checks": 6,
+  "independent_recorded_paths": [
+    {
+      "case": "original_proxy",
+      "current_path": "clarify_wechat_requirement",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "reuse_verified": false,
+      "claims": "research_only_no_new_external_facts",
+      "chat_visible_and_same": true
+    },
+    {
+      "case": "hypothetical_wechat_required",
+      "current_path": "verify_wechat_reuse",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "reuse_verified": false,
+      "claims": "research_only_no_new_external_facts",
+      "chat_visible_and_same": true
+    },
+    {
+      "case": "hypothetical_wechat_optional",
+      "current_path": "continue_model_research",
+      "source_ids": [
+        "R7",
+        "R10"
+      ],
+      "reuse_verified": false,
+      "claims": "research_only_no_new_external_facts",
+      "chat_visible_and_same": true
+    }
+  ],
+  "existing_test_log_counts": {
+    "specialized": 9,
+    "full_unittest": 443
+  },
+  "new_external_materials_in_r3": 0,
+  "original_proxy_wechat_hard_required": "not_explicitly_decided_by_project_owner",
+  "original_proxy_is_direct_user_confirmation": false,
+  "original_proxy_is_live_device_test": false,
+  "r3_impact_gaps": [
+    "微信二次复用/长期稳定性未实测",
+    "Brother/HP真实平台所售型号身份0/2",
+    "河南有效地区到手价0",
+    "海纳数据用途未获核准",
+    "真实使用者本人新确认0",
+    "新外部商品事实0"
+  ],
+  "review_start_file_sha256": {
+    "CURRENT.md": "e0822f2c116568afb854cbe5bba34567a0a56c8550c7b522af687d20e07dd4d1",
+    "docs/PROJECT_BOTTLENECK_MAP.md": "2d936ea0df3168bc1298e67ddbfc99304a5c521fbefe58b155d585639dfd98b6",
+    "handoffs/evaluator_executor/HNA-B01-REUSE-ADMISSION-20261117/CONTRACT.md": "6d4d617b23e074fde15b1bbdd881ee48683a8d30b4f9752d036cc6e5501019a0",
+    "handoffs\\evaluator_executor\\HNA-RESEARCH-ADMISSION-20261116\\r3\\REPORT.md": "ea46d6367e7da985f60d2c21e76714d9385e77a64ed5c00c3d2779fe2fb862ce",
+    "handoffs\\evaluator_executor\\HNA-RESEARCH-ADMISSION-20261116\\r3\\REVIEW.md": "485f6859c7fb93902ff6503bd84b94ec40018591964fe650a071a813a6edd964",
+    "handoffs\\evaluator_executor\\HNA-RESEARCH-ADMISSION-20261116\\r3\\CASE_COMPARISON.md": "d0892c21867109e9c2f42ed57e6aa1ed4438bc94eec033e4cd3be8efa20ca342",
+    "handoffs\\evaluator_executor\\HNA-RESEARCH-ADMISSION-20261116\\r3\\evidence\\impact_comparison.json": "1ba0f92e5849331f66d57fc940ddaf0a7a05061515225f05ee27be87ab354dfd",
+    "evaluation/printer_henan_proxy_sample_20261116.json": "c87fa2105a84c813f33b2dbfc39e712cf1437fbc17d2b66b17991d3f1fad9a6b"
+  },
+  "network_actions_this_review": 0,
+  "limitation": "Existing test execution and local file integrity verified; no new real-user, physical-use, sales-identity or live-price validation performed."
+}

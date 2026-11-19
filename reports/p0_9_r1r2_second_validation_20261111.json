@@ -1,0 +1,100 @@
+{
+  "task": "P0.9 R1/R2 second bounded executor repair",
+  "role": "executor",
+  "date": "2026-11-11",
+  "scope": "manufacturer claim admission / Haina offline report content and per-row validation",
+  "before": {
+    "independent_new_html_cases": 12,
+    "expectations_met": 5,
+    "false_positives": 5,
+    "false_negatives": 2,
+    "legacy_14": 14,
+    "reviewed_3_sources": 3,
+    "malicious_url_hint_leaks": true,
+    "bad_enum_discards_good": true
+  },
+  "after_executor_validation": {
+    "new_12_html_cases": 12,
+    "expectations_met": 12,
+    "old_14_html_cases": 14,
+    "old_14_met": 14,
+    "unreviewed_html_claim_promoted_to_comparison": 0,
+    "reviewed_sources_still_admitted": 3,
+    "malicious_url_hint_leaks": false,
+    "mixed_report_good_rows_retained": true,
+    "focused_python_unittest": {
+      "total": 23,
+      "passed": 23
+    },
+    "linux_python_unittest": {
+      "total": 321,
+      "passed": 321
+    },
+    "windows_python_3_12_3_default_unittest": {
+      "total": 321,
+      "passed": 321,
+      "utf8_environment_overrides": false
+    },
+    "java_release_17_compile": true,
+    "java_P04": {
+      "total": 6,
+      "passed": 6
+    },
+    "java_H10": {
+      "total": 6,
+      "passed": 6
+    },
+    "H05": {
+      "total": 8,
+      "passed": 8
+    },
+    "git_diff_check": true
+  },
+  "changed_files": [
+    "shopping_decision/official_detail_text.py",
+    "shopping_decision/p0_7_official_details.py",
+    "shopping_decision/discovery_pool.py",
+    "tests/test_p0_7_official_details.py",
+    "tests/test_p0_9_r12_gate.py",
+    "reports/p0_9_r12_h05_20261111.json"
+  ],
+  "evidence": [
+    "tests/test_p0_9_r12_gate.py",
+    "tests/test_p0_9_followup_regression.py",
+    "reports/p0_9_r12_h05_20261111.json",
+    "reports/p0_9_reassessment_20261111.json"
+  ],
+  "supplier_contract_read_only": {
+    "public_page": "https://ai.zhidemai.com/",
+    "local_product_doc": "reports/supplier_haina_product_docs_20261109.json",
+    "search_documented_item_fields": [
+      "title",
+      "url",
+      "mall_id",
+      "mall_name",
+      "brand_name",
+      "shop_name"
+    ],
+    "stable_platform_id_documented": false,
+    "sku_variant_binding_documented": false,
+    "basic_info_sku_endpoints_usable_verified": false,
+    "new_haina_api_calls": 0
+  },
+  "unresolved": {
+    "haina_real_data_use_permission": "unknown",
+    "haina_original_brother_20": "20/20 unreviewed",
+    "verified_platform_id_and_variant": 0,
+    "verified_region_quotes": 0,
+    "independent_new_variant_acceptance": "pending",
+    "gui_human_test": "not_done"
+  },
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "git_commit": false,
+  "git_push": false,
+  "notes": [
+    "Old independent reports not overwritten",
+    "Diagnostic replay is not an independent new acceptance set",
+    "P0.9 overall not approved"
+  ]
+}

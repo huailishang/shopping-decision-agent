@@ -1,0 +1,45 @@
+{
+  "basis": "existing_r3_delivery_preserved",
+  "files": [
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/CONTRACT.md",
+      "sha256": "66b349164999be7de9159e631c5fbe0bfea3d14dc636dcb6c2e74967bb7498eb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/VALIDATION_PLAN.yaml",
+      "sha256": "17d969271306077f261e8c1a1e85da4c40971d922adebaade12a5fdff65a882b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/REPORT.md",
+      "sha256": "ea46d6367e7da985f60d2c21e76714d9385e77a64ed5c00c3d2779fe2fb862ce"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/REVIEW.md",
+      "sha256": "485f6859c7fb93902ff6503bd84b94ec40018591964fe650a071a813a6edd964"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/CASE_COMPARISON.md",
+      "sha256": "d0892c21867109e9c2f42ed57e6aa1ed4438bc94eec033e4cd3be8efa20ca342"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/FROZEN_INPUTS.json",
+      "sha256": "fa6be44019158f89e2cfa786a078601a47e0a4a9a268208ab7a48c8e30313832"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/impact_comparison.json",
+      "sha256": "1ba0f92e5849331f66d57fc940ddaf0a7a05061515225f05ee27be87ab354dfd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/claim_source_map.json",
+      "sha256": "151c16a0875998b50d65a384bce7301859b7931ce9802931e843fbdd4972047e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/L2-GATE.json",
+      "sha256": "2cf13a6e9b81c85288ce2c990e930fc3d920f3cdf04e3bbba8fbf0092cf8d253"
+    },
+    {
+      "path": "handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116/r3/evidence/L3-GATE.json",
+      "sha256": "b88218af36d6d10a316cab4eeb5719eb0bf6aff242101030525fd4f4ac325d35"
+    }
+  ]
+}

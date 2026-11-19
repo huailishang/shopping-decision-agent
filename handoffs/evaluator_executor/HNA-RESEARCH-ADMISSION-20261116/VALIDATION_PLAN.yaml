@@ -1,0 +1,74 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: HNA-RESEARCH-ADMISSION-20261116
+# r2-long DRAFT: 材料和评估者验收器尚缺；本轮只制定，未执行下列验证。
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02]
+    cwd: .
+    command:
+      - python
+      - -X
+      - utf8
+      - scripts/verify_printer_research_delivery.py
+      - --check
+      - materials
+      - --task-dir
+      - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-02, AC-03, AC-04, AC-06]
+    cwd: .
+    command:
+      - python
+      - -X
+      - utf8
+      - -c
+      - |
+        import sys, unittest
+        suite = unittest.defaultTestLoader.discover("tests", pattern="test_printer_research_delivery.py")
+        assert suite.countTestCases() > 0, "required delivery tests were not discovered"
+        result = unittest.TextTestRunner(verbosity=2).run(suite)
+        sys.exit(0 if result.wasSuccessful() else 1)
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-02, AC-06]
+    cwd: .
+    command: [python, -X, utf8, -m, unittest, discover, -s, tests, -p, test_haina_mcp_ingest.py, -v]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-03, AC-04, AC-06]
+    cwd: .
+    command:
+      - python
+      - -X
+      - utf8
+      - scripts/verify_printer_research_delivery.py
+      - --check
+      - flow
+      - --task-dir
+      - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: [AC-05, AC-07]
+    cwd: .
+    command:
+      - python
+      - -X
+      - utf8
+      - scripts/verify_printer_research_delivery.py
+      - --check
+      - comparison-and-report
+      - --task-dir
+      - handoffs/evaluator_executor/HNA-RESEARCH-ADMISSION-20261116
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: [AC-04, AC-06, AC-07]
+    cwd: .
+    command: [python, -X, utf8, -m, unittest, discover, -s, tests, -v]
+    expected_exit_code: 0
+    mandatory: true

@@ -1,0 +1,27 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: HNA-EVIDENCE-REOPEN-20261116
+# DRAFT: 真实材料未到，不执行、不将结构检查当事实或许可裁定。
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-03]
+    cwd: .
+    command:
+      - python
+      - -X
+      - utf8
+      - -c
+      - |
+        import hashlib, json
+        from pathlib import Path
+        p=Path("handoffs/evaluator_executor/HNA-EVIDENCE-REOPEN-20261116/evidence/reopen_receipt.json")
+        d=json.loads(p.read_text(encoding="utf-8"))
+        assert d["task_id"]=="HNA-EVIDENCE-REOPEN-20261116"
+        assert d["decision"] in {"restore_parent","remain_pending"}
+        assert d["independent_review_path"] and Path(d["independent_review_path"]).is_file()
+        assert d["source_checks"] and d["action_assessment"] and d["limitations"]
+        assert d["material_bindings"]
+        for row in d["material_bindings"]:
+            assert hashlib.sha256(Path(row["path"]).read_bytes()).hexdigest()==row["sha256"]
+        assert d["purchase_recommendation_approved"] is False and d["transactions_enabled"] is False
+    expected_exit_code: 0
+    mandatory: true

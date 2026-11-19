@@ -1,0 +1,25 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "RV-EV-06",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/check_delivery.py",
+    "--check",
+    "delivery",
+    "--frozen-sha",
+    "560fe9a30e949def2a0cdc0992a0d8499cb7e38cb3bea106b81cb8b564e3b8b8"
+  ],
+  "command_display": "python -X utf8 handoffs/evaluator_executor/PRINTER-MIN-E2E-20261117/check_delivery.py --check delivery --frozen-sha 560fe9a30e949def2a0cdc0992a0d8499cb7e38cb3bea106b81cb8b564e3b8b8",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-17T12:48:26.815820+00:00",
+  "finished_at_utc": "2026-11-17T12:48:27.080090+00:00",
+  "exit_code": 0,
+  "stdout_path": "RV-EV-06.stdout.log",
+  "stderr_path": "RV-EV-06.stderr.log",
+  "stdout_bytes": 158,
+  "stderr_bytes": 0,
+  "stdout_sha256": "ca5b6629a167a504d34ce065b5fcc451e05797424d53b3afd0b29d713f31a1b2",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

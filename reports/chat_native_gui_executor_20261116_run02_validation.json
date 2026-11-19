@@ -1,0 +1,120 @@
+{
+  "schema_version": "chat_gui_executor_native_audit_v1",
+  "date": "2026-11-16",
+  "role": "executor_not_independent_ux_review",
+  "workspace": "shopping-decision-agent",
+  "native_display": "available_X11",
+  "chat_gui_end_to_end": "PASS",
+  "actual_save_dialog": "JFileChooser_APPROVE_with_explicit_new_path",
+  "save_policy": "CREATE_NEW_no_overwrite",
+  "audit_path": "reports/chat_native_audit_20261116_run02.txt",
+  "audit_bytes": 141972,
+  "audit_encoding": "utf-8_exact_content_verified_by_java_and_python",
+  "audit_marked_synthetic": true,
+  "run01_status": "exploratory_gui_evidence_retained_read_only",
+  "coverage": [
+    "reference_draft_not_confirmed",
+    "category_usage_send",
+    "eight_field_batch_edit",
+    "single_field_edit_invalidates_old_version",
+    "invalid_budget_modal_error_without_state_change_and_recovery",
+    "preview_confirm_dialog",
+    "save_file_chooser_new_path",
+    "utf8_exact_readback",
+    "phone_category_no_printer_evidence",
+    "legacy_form_fallback_and_return"
+  ],
+  "regression": {
+    "python_full": "434/434 PASS",
+    "java17_compile": "PASS",
+    "chat_bridge_java": "6/6 PASS",
+    "h10_java": "6/6 PASS",
+    "p04_java": "6/6 PASS",
+    "h05_today": "not_run_in_this_turn"
+  },
+  "henan_proxy_condition_replay": {
+    "unknown": {
+      "assumption_only": false,
+      "region_scope": "mainland_china",
+      "next_action": "clarify_user_conditions",
+      "user_questions": [
+        "预算是否包含运费和本次需另购的耗材？"
+      ],
+      "candidate_statuses": {
+        "HL-L1238W": "model_spec_research_only",
+        "M232dw": "model_spec_research_only"
+      },
+      "evidence_missing": [
+        "HL-L1238W:C-VOLUME",
+        "M232dw:C-BUDGET"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    "hard_miniprogram_synthetic": {
+      "assumption_only": true,
+      "region_scope": "mainland_china",
+      "next_action": "clarify_user_conditions",
+      "user_questions": [
+        "预算是否包含运费和本次需另购的耗材？"
+      ],
+      "candidate_statuses": {
+        "HL-L1238W": "model_spec_research_only",
+        "M232dw": "model_spec_research_only"
+      },
+      "evidence_missing": [
+        "HL-L1238W:C-VOLUME",
+        "M232dw:C-BUDGET"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    },
+    "preference_synthetic": {
+      "assumption_only": true,
+      "region_scope": "mainland_china",
+      "next_action": "clarify_user_conditions",
+      "user_questions": [
+        "预算是否包含运费和本次需另购的耗材？"
+      ],
+      "candidate_statuses": {
+        "HL-L1238W": "model_spec_research_only",
+        "M232dw": "model_spec_research_only"
+      },
+      "evidence_missing": [
+        "HL-L1238W:C-VOLUME",
+        "M232dw:C-BUDGET"
+      ],
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false
+    }
+  },
+  "material_status": {
+    "new_external_sources": 0,
+    "sku_identity_verified_count": 0,
+    "regional_live_quote_count": 0,
+    "real_binding_test_count": 0,
+    "cognition_effect": "undetermined"
+  },
+  "safety": {
+    "h1": "BLOCKED",
+    "h2_verified": "0/2",
+    "h3_current_quote_count": 0,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "overall": "NOT_PASS"
+  },
+  "file_sha256": {
+    "desktop/ChatNativeAuditRegression.java": "a254bba12a347845bac953829f44d33a197244a7d532bc03278df06d25dbb38d",
+    "reports/chat_native_audit_20261116_run01.txt": "1325a18703c21b0126d2e0eaff5fe99d0fa023e7e6090ec923f43a3c7d598263",
+    "reports/chat_native_audit_20261116_run02.txt": "f2488878085217f3c1385315f876c4be891d2466ee3127a655a2b1c447eb2f36",
+    "evaluation/printer_henan_proxy_sample_20261116.json": "c87fa2105a84c813f33b2dbfc39e712cf1437fbc17d2b66b17991d3f1fad9a6b",
+    "reports/henan_proxy_printer_replay_20261116_run01.json": "1282053c3f1c19530d8699219125fe88ee7b08c604ea6feedb5c7f9d830cf405",
+    "reports/对话式GUI审计与河南原案条件复核_执行报告_20261116.md": "13f78602e324e50ebb95968b477fe3004adc371e2f9ff8d6e67d69ffff4054f4",
+    "handoffs/对话式GUI实际审计与河南样本_执行者交接_20261116.md": "6cbb4a82ebb9b1a2f44c975ca44e7f0bbf4330db71933e3b8c7d882fa527d48a",
+    "README.md": "5c3283a528b8eff3dbacc8e6f5c22baaf35811c50ce1133a29c751354d628419",
+    "CURRENT.md": "bab6b662b4312670d54be35238344004a311bb0add1c42aa1bae1aa89e6bf350",
+    "handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md": "85cc6830d5a7c20c012b9a7055bcb2bc0c9da314e4cabcc7ed499f491f4f2065"
+  },
+  "git_commit": false,
+  "git_push": false
+}

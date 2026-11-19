@@ -45,7 +45,12 @@ class DialogueFlowTests(unittest.TestCase):
         self.assertEqual(len(records), 9)
         self.assertEqual(records["HL-L1238W"]["required_failed"], [])
         self.assertIn("wireless", records["HL-L1228"]["required_failed"])
-        self.assertIn("wechat_miniprogram", records["HL-10W"]["required_unknown"])
+        # 本机有2026-11-09已核对官网详情时，普通对话使用该记录回放；
+        # 另一台没有现场记录的机器仍保守退回历史目录，不能编造功能。
+        if result["source_mode"] == "recorded_manufacturer_detail_replay_no_network":
+            self.assertIn("wechat_miniprogram", records["HL-10W"]["required_met"])
+        else:
+            self.assertIn("wechat_miniprogram", records["HL-10W"]["required_unknown"])
         self.assertFalse(result["purchase_recommendation_approved"])
         self.assertFalse(result["transactions_enabled"])
 

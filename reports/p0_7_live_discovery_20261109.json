@@ -1,0 +1,558 @@
+{
+  "operation": "p0_7_live_discovery_detail_and_comparison",
+  "discovery": {
+    "source_url": "https://www.brother.cn/printer/prt",
+    "response_sha256": "85771ec26496d5654d5cc62b0f6e64c134f74575de78aa9bab04263f6e8da63c",
+    "discovered_at": "2026-11-09T12:29:36.704946+00:00",
+    "found_count": 9,
+    "new_model_count": 6
+  },
+  "target_model_ids": [
+    "HL-10W",
+    "HL-B2188DW",
+    "HL-B2158W"
+  ],
+  "details": [
+    {
+      "model_id": "HL-10W",
+      "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+      "observed_at": "2026-11-09T12:29:37.395556+00:00",
+      "response_sha256": "4843c3fff5e47fe26081b4ce50602fcfb621ccf5bfa59037b37c220c5fced98e",
+      "response_bytes": 72433,
+      "fact_origin": "manufacturer_public_detail",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：仅证明黑白打印类别；原文标识：黑白激光打印机"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "厂商标注黑白激光打印机；不支持彩印的类别级判断"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：厂商支持无线连接的主张，未验证用户网络；原文标识：支持无线网络连接"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：官网声称微信小程序打印，未做设备绑定实验；原文标识：微信小程序直连，支持远程打印"
+        },
+        "pay_per_page_consumables": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-10w",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：打印页数收费模式，不能假定耗材免费等于无长期成本；原文标识：按页付费/购买打印页数"
+        }
+      },
+      "consumables": [],
+      "billing_model": "buy_print_pages_to_claim_consumables",
+      "limitations": [
+        "厂商文字主张不等于第三方耐用性验证",
+        "未证实的功能保持未知；未获得零售SKU、地区当前价格、实际库存",
+        "只有绑定型号的详情页证据，不证明该机符合购买预算"
+      ]
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+      "observed_at": "2026-11-09T12:29:38.017899+00:00",
+      "response_sha256": "23c1d6d1611620d0d2419e0307bc5314c9d57f869140f0cdd4d886d7ac746c73",
+      "response_bytes": 88938,
+      "fact_origin": "manufacturer_public_detail",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：仅证明黑白打印类别；原文标识：黑白激光打印机"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "厂商标注黑白激光打印机；不支持彩印的类别级判断"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：厂商支持无线连接的主张，未验证用户网络；原文标识：无线/有线网络"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：官网声称微信小程序打印，未做设备绑定实验；原文标识：通过微信小程序可支持远程打印"
+        },
+        "auto_duplex": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：厂商自动双面规格；原文标识：标配A4自动双面打印"
+        }
+      },
+      "consumables": [
+        {
+          "model": "TNB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+        },
+        {
+          "model": "DRB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+        }
+      ],
+      "billing_model": "unknown",
+      "limitations": [
+        "厂商文字主张不等于第三方耐用性验证",
+        "未证实的功能保持未知；未获得零售SKU、地区当前价格、实际库存",
+        "只有绑定型号的详情页证据，不证明该机符合购买预算"
+      ]
+    },
+    {
+      "model_id": "HL-B2158W",
+      "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+      "observed_at": "2026-11-09T12:29:38.475819+00:00",
+      "response_sha256": "0adda023c6742d87ad2c32278c62ce4d12715330627951b84ba36d6070d0a62b",
+      "response_bytes": 85174,
+      "fact_origin": "manufacturer_public_detail",
+      "facts": {
+        "monochrome_print": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：仅证明黑白打印类别；原文标识：黑白激光打印机"
+        },
+        "color_print": {
+          "value": false,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "厂商标注黑白激光打印机；不支持彩印的类别级判断"
+        },
+        "wireless": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：厂商支持无线连接的主张，未验证用户网络；原文标识：无线/有线网络"
+        },
+        "wechat_miniprogram": {
+          "value": true,
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "厂商产品页文字主张（非实机/第三方验证）：官网声称微信小程序打印，未做设备绑定实验；原文标识：通过微信小程序可支持远程打印"
+        }
+      },
+      "consumables": [
+        {
+          "model": "TNB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+        },
+        {
+          "model": "DRB020",
+          "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+        }
+      ],
+      "billing_model": "unknown",
+      "limitations": [
+        "厂商文字主张不等于第三方耐用性验证",
+        "未证实的功能保持未知；未获得零售SKU、地区当前价格、实际库存",
+        "只有绑定型号的详情页证据，不证明该机符合购买预算"
+      ]
+    }
+  ],
+  "fetch_failures": [],
+  "comparison": {
+    "status": "facts_comparison_only",
+    "category": "printer",
+    "catalog_recorded_on": "2026-11-04",
+    "catalog_age_days": 5,
+    "catalog_source_kind": "manufacturer_public_pages",
+    "searched_models": 9,
+    "purchase_recommendation_approved": false,
+    "all_prices_real_time_verified": false,
+    "transactions_enabled": false,
+    "constraints": {
+      "required": {
+        "monochrome_print": true,
+        "wireless": true,
+        "wechat_miniprogram": true
+      },
+      "preferred": {},
+      "budget_max_cny": 1000
+    },
+    "candidates": [
+      {
+        "model_id": "HL-10W",
+        "brand": "Brother",
+        "name": "Brother HL-10W（官网目录发现，详细规格待核）",
+        "official_url": "https://www.brother.cn/printer/prt/hl-10w",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt/hl-10w",
+          "wireless": "https://www.brother.cn/printer/prt/hl-10w",
+          "wechat_miniprogram": "https://www.brother.cn/printer/prt/hl-10w"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": null,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-B2158W",
+        "brand": "Brother",
+        "name": "Brother HL-B2158W（官网目录发现，详细规格待核）",
+        "official_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "wireless": "https://www.brother.cn/printer/prt/hl-b2158w",
+          "wechat_miniprogram": "https://www.brother.cn/printer/prt/hl-b2158w"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": null,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [
+          {
+            "model": "TNB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          },
+          {
+            "model": "DRB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2158w",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          }
+        ],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-B2188DW",
+        "brand": "Brother",
+        "name": "Brother HL-B2188DW（官网目录发现，详细规格待核）",
+        "official_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "wireless": "https://www.brother.cn/printer/prt/hl-b2188dw",
+          "wechat_miniprogram": "https://www.brother.cn/printer/prt/hl-b2188dw"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": null,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [
+          {
+            "model": "TNB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          },
+          {
+            "model": "DRB020",
+            "source_url": "https://www.brother.cn/printer/prt/hl-b2188dw",
+            "note": "仅核对厂商页面出现的耗材型号，未核实零售包装/价格"
+          }
+        ],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-L1238W",
+        "brand": "Brother",
+        "name": "兄弟 HL-L1238W 黑白激光打印机",
+        "official_url": "https://www.brother.cn/printer/prt/hl-l1238w",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt/hl-l1238w",
+          "wireless": "https://www.brother.cn/printer/prt/hl-l1238w",
+          "wechat_miniprogram": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": 1906,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [
+          {
+            "model": "TN118",
+            "kind": "toner",
+            "claimed_yield_pages": 1500,
+            "source_url": "https://www.brother.cn/printer/prt/hl-l1238w"
+          },
+          {
+            "model": "DR118",
+            "kind": "drum",
+            "claimed_yield_pages": 10000,
+            "source_url": "https://www.brother.cn/printer/prt/hl-l1238w"
+          }
+        ],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-L1808W",
+        "brand": "Brother",
+        "name": "兄弟 HL-L1808W 黑白激光打印机",
+        "official_url": "https://www.brother.cn/printer/prt/hl-l1808w",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt/hl-l1808w",
+          "wireless": "https://www.brother.cn/printer/prt/hl-l1808w",
+          "wechat_miniprogram": "https://www.95105369.com/Web/SkillsDisp.aspx?id=2910&modelno=dcpt420w_all"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": 1976,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [
+          {
+            "model": "TN118",
+            "kind": "toner",
+            "claimed_yield_pages": 1500,
+            "source_url": "https://www.brother.cn/printer/prt/hl-l1808w"
+          },
+          {
+            "model": "DR118",
+            "kind": "drum",
+            "claimed_yield_pages": 10000,
+            "source_url": "https://www.brother.cn/printer/prt/hl-l1808w"
+          }
+        ],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-L5218DN",
+        "brand": "Brother",
+        "name": "Brother HL-L5218DN（官网目录发现，详细规格待核）",
+        "official_url": "https://www.brother.cn/printer/prt/hl-l5218dn",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": null,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-L5228DW",
+        "brand": "Brother",
+        "name": "Brother HL-L5228DW（官网目录发现，详细规格待核）",
+        "official_url": "https://www.brother.cn/printer/prt/hl-l5228dw",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": null,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-L6418DW",
+        "brand": "Brother",
+        "name": "Brother HL-L6418DW（官网目录发现，详细规格待核）",
+        "official_url": "https://www.brother.cn/printer/prt/hl-l6418dw",
+        "status": "needs_verification",
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_failed": [],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": null,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      },
+      {
+        "model_id": "HL-L1228",
+        "brand": "Brother",
+        "name": "兄弟 HL-L1228 黑白激光打印机",
+        "official_url": "https://www.brother.cn/printer/prt/hl-l1228",
+        "status": "excluded_by_verified_spec",
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "wechat_miniprogram"
+        ],
+        "required_failed": [
+          "wireless"
+        ],
+        "preferred_met": [],
+        "preferred_unknown": [],
+        "preferred_failed": [],
+        "evidence_by_feature": {
+          "monochrome_print": "https://www.brother.cn/printer/prt/hl-l1228",
+          "wireless": "https://www.brother.cn/printer/prt/hl-l1228"
+        },
+        "budget_status": "unverified_no_authorized_live_quote",
+        "live_price_cny": null,
+        "marketplace_sku": null,
+        "manufacturer_suggested_retail_cny": 1573,
+        "manufacturer_suggested_retail_is_live_price": false,
+        "consumables": [
+          {
+            "model": "TN118",
+            "kind": "toner",
+            "claimed_yield_pages": 1500,
+            "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+          },
+          {
+            "model": "DR118",
+            "kind": "drum",
+            "claimed_yield_pages": 10000,
+            "source_url": "https://www.brother.cn/printer/prt/hl-l1228"
+          }
+        ],
+        "durability_independently_verified": false,
+        "unknowns": [
+          "实际到手价、库存及预算匹配尚无授权实时核验",
+          "独立耐用性/故障率未核实"
+        ],
+        "purchasable": false
+      }
+    ],
+    "limitations": [
+      "排序仅表示硬约束与有来源的偏好匹配，非质量/耐用/性价比排名。",
+      "事实来自厂商公开技术说明或支持页面，不能替代独立对照测试。",
+      "厂商建议零售价不等于实际到手价，不能用来判断预算是否通过。",
+      "无现售SKU、实时库存、实时平台售价与实际设备微信打印连接测试。"
+    ]
+  },
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": 0,
+  "independent_validation": "pending"
+}

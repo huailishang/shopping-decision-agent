@@ -1,0 +1,149 @@
+{
+  "review_date": "2026-11-15",
+  "completed_at_utc": "2026-11-15T13:36:45.000957+00:00",
+  "role": "independent_evaluator",
+  "review_complete": true,
+  "overall": "NOT_PASS",
+  "scope": "G1-G3 repairs, original F1-F5 controls, 8 bounded related variants, normal CLI and one new GUI/audit scenario",
+  "full_python": {
+    "command": "PYTHONUTF8=1 process environment; python -X utf8 -m unittest discover -s tests -q",
+    "observed_result": {
+      "chunk_id": "04869c",
+      "wall_time_seconds": 4.78e-05,
+      "exit_code": 0,
+      "original_token_count": 78,
+      "output": "127.0.0.1 - - [15/Nov/2026 21:23:11] \"GET / HTTP/1.1\" 200 -\r\n127.0.0.1 - - [15/Nov/2026 21:23:11] \"POST /api/decide HTTP/1.1\" 200 -\r\n127.0.0.1 - - [15/Nov/2026 21:23:11] \"POST /api/decide HTTP/1.1\" 400 -\r\n----------------------------------------------------------------------\r\nRan 393 tests in 73.260s\r\n\r\nOK\r\n"
+    },
+    "passed": 393,
+    "failed": 0,
+    "h10_java_six_cases_asserted_in_full_suite": true
+  },
+  "java": {
+    "actual_runtime": "21.0.7",
+    "javac": "21.0.7",
+    "compile_target": "--release 17",
+    "compile_succeeded": true,
+    "java17_runtime_tested": false,
+    "p04_standalone_passed": 6,
+    "p04_standalone_failed": 0
+  },
+  "known_reproductions": {
+    "path": "reports/cognition_g123_independent_known_20261115_run01.json",
+    "sha256": "7420a5e886f322c773acc4b2d0e44d97443f7c7c2d4e1091b172b115efdcafbf",
+    "total": 21,
+    "passed": 21,
+    "failed_ids": [],
+    "old_script_unchanged": true,
+    "h05_explicit_date": "2026-11-15",
+    "h05": {
+      "total": 8,
+      "passed": 8,
+      "failed_ids": []
+    }
+  },
+  "nearby_diagnostics": {
+    "path": "reports/cognition_g123_independent_variants_20261115_run01.json",
+    "sha256": "cb8b1544b0303bed91e8de9107fc80ab06a4602f98bcebbfb881acb85a635c4b",
+    "total": 8,
+    "passed": 7,
+    "failed_ids": [
+      "V03_raw_app_hard_requirement_normal_cli"
+    ],
+    "groups": [
+      "G1-R1"
+    ],
+    "not_recommendation_accuracy": true,
+    "exit1_means_recorded_counterexample": true
+  },
+  "finding": {
+    "id": "G1-R1",
+    "priority": "P2",
+    "group": "G1 residual, not a new category or acceptance standard",
+    "location": "shopping_decision/real_printer_case.py:124-144",
+    "issue": "Parsed wechat_transfer_to_app hard requirement does not set normalized wechat_required when the checkbox is absent; same parsed requirement is checked only after redundant explicit True confirmation",
+    "normal_cli_case": "V03_raw_app_hard_requirement_normal_cli",
+    "fix_acceptance": "All recognized WeChat hard workflows derive from normalized required; missing rule becomes pending. Raw-text-only and explicitly confirmed versions with the same normalized hard requirement must check the same requirement and yield equivalent eligibility; explicit revocation clears it. Do not invent actual App support."
+  },
+  "closed_findings": {
+    "F1_F5": "original triggers and covered bounds remain fixed",
+    "G1_original_I11_I12_I20": "passed; group not fully closed due to G1-R1",
+    "G2": "closed in tested withdrawal, expiry, unit mismatch and confirmed-input preservation scenarios",
+    "G3": "closed in tested unknown, mainland and unproven overseas mini-program scopes; no real service success claim"
+  },
+  "cli_replay": {
+    "path": "reports/cognition_case_replay_20261115_g123_independent01.json",
+    "rounds": 11,
+    "key_checks_passed": true
+  },
+  "gui": {
+    "path": "reports/cognition_g123_independent_gui_20261115_run01.txt",
+    "bytes": 41809,
+    "sha256": "7c91b617055224eb1d85bb4018500f1b26b103b3d0701d8fe1b21b83fdd4ad30",
+    "mode": "actual evaluator-owned native Swing window via Computer Use; explicit synthetic inputs; new-path save and UTF-8 readback",
+    "conditions": {
+      "raw_hard_requirement": "必须微信打印",
+      "wechat_required": null,
+      "wechat_workflow": "transfer_to_app",
+      "needs_color": false,
+      "budget_and_volume": "left unknown in this minimal GUI counterexample; not original-user confirmations"
+    },
+    "normalized_required": {
+      "monochrome_print": true,
+      "wechat_transfer_to_app": true
+    },
+    "unmodeled_hard_requirements": [],
+    "eligible_models": [
+      "HL-L1238W",
+      "M232dw"
+    ],
+    "pending_models": [],
+    "criterion_ids": {
+      "HL-L1238W": [],
+      "M232dw": []
+    },
+    "reproduces_G1_R1": true,
+    "process_id": 30444,
+    "review_process_closed": true,
+    "not_real_user_or_printer_test": true
+  },
+  "acceptance": {
+    "M1": "limited_pass_F1_F5",
+    "M2": "prior_manual_source_research_limited_recognition_unchanged",
+    "M3": "not_pass_G1_R1_normalized_requirement_missing_in_execution",
+    "M4": "not_pass_G1_R1_equivalent_requirement_yields_different_qualification",
+    "M5": "path_and_save_verified_conditional_correctness_not_passed",
+    "M6": "base_engineering_limited_recognition_real_lifecycle_and_historical_resource_accounting_not_fully_verified",
+    "H1": "blocked_usage_and_two_model_real_payload_evidence_missing",
+    "H2": "0_of_2_verified_sale_identities",
+    "H3": "0_verified_regional_quotes"
+  },
+  "artifact_integrity": {
+    "baseline": "reports/cognition_g123_independent_baseline_20261115_run01.json",
+    "protected_current_files": 432,
+    "changed_current_protected_files": [],
+    "old_historical_files_checked": 307,
+    "changed_old_history": [],
+    "previous_failed_json_unchanged": true
+  },
+  "actions": {
+    "business_code_or_original_knowledge_changed": false,
+    "credential_reads": 0,
+    "haina_business_calls": 0,
+    "marketplace_login_or_transactions": 0,
+    "git_commit": false,
+    "git_push": false,
+    "third_party_software_installed": false,
+    "new_external_web_research": false,
+    "executor_historical_effective_hours_unknown": true
+  },
+  "real_state": {
+    "real_haina_payloads_imported": 0,
+    "verified_sale_identities": 0,
+    "sale_identity_target": 2,
+    "old20_verified": 0,
+    "regional_live_quotes": 0,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "final_report": "reports/认知驱动打印机比较_G1G3修复_独立复核报告_20261115.md"
+}

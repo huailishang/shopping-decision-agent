@@ -1,0 +1,25 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "RV-EV-03",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "C:\\Users\\HuailiShang\\.codex\\skills\\evaluator-executor-workflow\\scripts\\validate_workflow.py",
+    "--repo",
+    ".",
+    "--current",
+    "CURRENT.md"
+  ],
+  "command_display": "python -X utf8 C:\\Users\\HuailiShang\\.codex\\skills\\evaluator-executor-workflow\\scripts\\validate_workflow.py --repo . --current CURRENT.md",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-16T14:39:40.594291+00:00",
+  "finished_at_utc": "2026-11-16T14:39:40.895015+00:00",
+  "exit_code": 0,
+  "stdout_path": "RV-EV-03.stdout.log",
+  "stderr_path": "RV-EV-03.stderr.log",
+  "stdout_bytes": 64,
+  "stderr_bytes": 0,
+  "stdout_sha256": "bc32c85ec78d2448a592c80347ce6857654cba96d2d9b6a5d6f13a0d7875c591",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

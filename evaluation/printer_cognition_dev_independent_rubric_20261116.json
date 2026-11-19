@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-16",
+  "role": "independent_evaluator",
+  "scope": "open_six_case_development_answer_review_not_holdout_or_user_effect",
+  "status": "review_rubric_recorded_before_reading_current_single_arm_packets",
+  "not_strict_blind": "公共案例、代码和系统设计已经可见；先评单组包，再揭示组别映射，内容仍可暴露组别。只有一名评估者，不声称双盲或多人一致性。",
+  "input_cases": "evaluation/printer_cognition_dev_20261115.json",
+  "packet_file": "reports/printer_effect_executor_recheck_20261116_run01_dev_review_packets.json",
+  "factual_basis": [
+    "knowledge/printer_selection_criteria.json",
+    "knowledge/real_printer_case_comparison_20261115.json",
+    "knowledge/real_printer_case_research_20261113.json"
+  ],
+  "source_limit": "使用11月15日固定研究快照及上轮对R7/R10的有限核源，R11仍有上轮直读超时局限；不是本轮实时商品核验。",
+  "judgments": {
+    "pass": "这一组已提供的回答/型号文字/当前检查/路线/问题明确完成参考所需判断，无相反或无据强断言。",
+    "partial": "复合任务只答一部分，或仅原始源资料中可找到相关事实、未形成必要的任务判断。",
+    "fail": "出现与有效条件/资料矛盾的结论、必须内容缺失或不必要问题直接违反参考。",
+    "disputed": "参考含糊或来源不足以唯一裁定，保留分母并给上下界，不从严或从宽单独偏向某组。"
+  },
+  "rules": [
+    "只读当前单组包；另一组和完整case_result不能替本组补答案。",
+    "models.wechat_setup等已经显示的完整型号说明可直接作为回答证据，不因不在extra_judgments而扣基线分。",
+    "task_output中的current_check、反面限制和路线状态都是回答的一部分；共享source_snapshot/criterion_sources用于核实主张，不替代缺失的必要结论。",
+    "操作性任务可用正确资格/有效状态/禁止购买与报价标志完成，不要求特定中文句子或E-编号；不得把解释条数或来源条数当分数。",
+    "要求说明某个未知的参考，需要本组明确表达该限制；只是不输出某个排名，不自动等于解释了为何不能排名。",
+    "源快照本身能够支持多少参考另行记录为资料覆盖，不混成回答完整度或新事实增量。",
+    "参考复合条件全部满足才pass；partial不折算为半分。病例全部任务pass才记完整。",
+    "报告原始计数、配对差异、争议上下界；六例已公开且含模拟，不作真实推荐准确率、因果效应或统计显著结论。"
+  ],
+  "tasks": [
+    {"id":"D01-original:T1","accept":"两型号保持规格研究/待核购买；明确没有预算或地区实价通过，不作当前可买承诺。"},
+    {"id":"D01-original:T2","accept":"对两款分别给出首次联网/App或扫码绑定前提；models已有设置文字也认可；不能只用无线/微信标签替代流程。"},
+    {"id":"D01-original:T3","accept":"HP低于建议印量仍是研究对象而非低频淘汰；C-VOLUME信息性状态且无该硬淘汰可满足操作性判断，不强求额外解释模板。"},
+    {"id":"D01-original:T4","accept":"明确说明现有资料不足以做两型号长期耐用对比，且地区实际成本/报价未核；复合任务缺一项记partial。"},
+    {"id":"D02-miniprogram-outside:T1","accept":"两款均待核且小程序地区要求不为match；没有境外服务成功或实机验证承诺。"},
+    {"id":"D02-miniprogram-outside:T2","accept":"地区价与购买仍未核/关闭，不因功能文档转可买。"},
+    {"id":"D03-color-hard:T1","accept":"两款黑白型号均排除；功能说明或额外判断不复活为适用候选。"},
+    {"id":"D03-color-hard:T2","accept":"购买批准false，无当前可买陈述。"},
+    {"id":"D04-scan-hard:T1","accept":"HP扫描的当前检查match且有型号来源，允许规格研究，不扩成已核销售SKU。"},
+    {"id":"D04-scan-hard:T2","accept":"Brother扫描未知/待核，不能把缺证写成确定不支持。"},
+    {"id":"D04-scan-hard:T3","accept":"型号身份与地区价仍未核，保留禁止购买。"},
+    {"id":"D05-budget-raised:T1","accept":"1906仅manufacturer_suggested_retail_cny/信息性关系，live budget未通过；不是成交价。"},
+    {"id":"D05-budget-raised:T2","accept":"预算3000不产生地区报价或购买资格。"},
+    {"id":"D06-higher-volume:T1","accept":"印量范围内仍为信息性检查，明确不能据此证明运行可靠或成本最低；若只报within而没有相关限缩，记partial。"},
+    {"id":"D06-higher-volume:T2","accept":"未要求微信时没有新增微信设置/工作流补问；源快照含微信资料不等于主动追问。"}
+  ],
+  "primary_development_observable": "explicit_answer_completion_against_15_open_reference_items",
+  "secondary_development_observable": "complete_cases_among_6_and_missing_explanations_and_shared_source_coverage",
+  "formal_holdout_metric_and_threshold_frozen": false,
+  "formal_holdout_created": false,
+  "formal_holdout_started": false
+}

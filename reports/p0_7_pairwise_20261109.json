@@ -1,0 +1,1077 @@
+{
+  "operation": "p0_7_manual_vs_auto_fact_comparison",
+  "date": "2026-11-09",
+  "source_report": "2026-11-09现场联网取证记录（不是再次联网）",
+  "candidate_identity_reconstruction": "2026-11-07历史目录+2026-11-09现场详情ID",
+  "live_catalog_full_snapshot_replay": false,
+  "case_count": 16,
+  "common_models": [
+    "HL-10W",
+    "HL-B2188DW",
+    "HL-B2158W"
+  ],
+  "comparison_units": 48,
+  "matching_units": 48,
+  "mismatches": [],
+  "records": [
+    {
+      "scenario": "home_basic_budget",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "home_basic_budget",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "home_basic_budget",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "home_basic_spec_only",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "home_basic_spec_only",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "home_basic_spec_only",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print",
+          "wireless",
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "color_needed",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "color_print"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "color_print"
+        ]
+      }
+    },
+    {
+      "scenario": "color_needed",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "color_print"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "color_print"
+        ]
+      }
+    },
+    {
+      "scenario": "color_needed",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "color_print"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "color_print"
+        ]
+      }
+    },
+    {
+      "scenario": "auto_duplex",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "auto_duplex",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print",
+          "auto_duplex"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print",
+          "auto_duplex"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "auto_duplex",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "page_plan",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "pay_per_page_consumables"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "pay_per_page_consumables"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "page_plan",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "page_plan",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "scan_requirement",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "scan"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "scan"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "scan_requirement",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "scan"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "scan"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "scan_requirement",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "scan"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "scan"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "wireless_not_wanted",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wireless"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wireless"
+        ]
+      }
+    },
+    {
+      "scenario": "wireless_not_wanted",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wireless"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wireless"
+        ]
+      }
+    },
+    {
+      "scenario": "wireless_not_wanted",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wireless"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wireless"
+        ]
+      }
+    },
+    {
+      "scenario": "wechat_not_wanted",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wechat_miniprogram"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wechat_miniprogram"
+        ]
+      }
+    },
+    {
+      "scenario": "wechat_not_wanted",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wechat_miniprogram"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wechat_miniprogram"
+        ]
+      }
+    },
+    {
+      "scenario": "wechat_not_wanted",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wechat_miniprogram"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "wechat_miniprogram"
+        ]
+      }
+    },
+    {
+      "scenario": "prefer_wireless",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "prefer_wireless",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "prefer_wireless",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "durability_unknown",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "independent_durability_test"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "independent_durability_test"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "durability_unknown",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "independent_durability_test"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "independent_durability_test"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "durability_unknown",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "independent_durability_test"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "independent_durability_test"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "monochrome_not_wanted",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "monochrome_print"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "monochrome_print"
+        ]
+      }
+    },
+    {
+      "scenario": "monochrome_not_wanted",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "monochrome_print"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "monochrome_print"
+        ]
+      }
+    },
+    {
+      "scenario": "monochrome_not_wanted",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "monochrome_print"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "monochrome_print"
+        ]
+      }
+    },
+    {
+      "scenario": "zero_budget_unknown",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "zero_budget_unknown",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "zero_budget_unknown",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "duplex_not_wanted",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "duplex_not_wanted",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "auto_duplex"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "auto_duplex"
+        ]
+      }
+    },
+    {
+      "scenario": "duplex_not_wanted",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "page_plan_not_wanted",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "excluded_by_verified_spec",
+      "automatic_status": "excluded_by_verified_spec",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "pay_per_page_consumables"
+        ]
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [],
+        "required_failed": [
+          "pay_per_page_consumables"
+        ]
+      }
+    },
+    {
+      "scenario": "page_plan_not_wanted",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "page_plan_not_wanted",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [],
+        "required_unknown": [
+          "pay_per_page_consumables"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "prefer_wechat",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "prefer_wechat",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "prefer_wechat",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "monochrome_print"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "double_hard",
+      "model": "HL-10W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "double_hard",
+      "model": "HL-B2188DW",
+      "matching": true,
+      "manual_status": "specs_matched_not_purchase_approved",
+      "automatic_status": "specs_matched_not_purchase_approved",
+      "manual_required": {
+        "required_met": [
+          "wechat_miniprogram",
+          "auto_duplex"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "wechat_miniprogram",
+          "auto_duplex"
+        ],
+        "required_unknown": [],
+        "required_failed": []
+      }
+    },
+    {
+      "scenario": "double_hard",
+      "model": "HL-B2158W",
+      "matching": true,
+      "manual_status": "needs_verification",
+      "automatic_status": "needs_verification",
+      "manual_required": {
+        "required_met": [
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      },
+      "automatic_required": {
+        "required_met": [
+          "wechat_miniprogram"
+        ],
+        "required_unknown": [
+          "auto_duplex"
+        ],
+        "required_failed": []
+      }
+    }
+  ],
+  "manual_is_independently_reviewed": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "相同官网的两条事实抽取路径对照，不能当成独立耐用性或商品质量评测",
+    "没有商城SKU、地区实时报价、库存或可购买建议资格"
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "operation": "user_authorized_haina_local_smoke",
+  "observed_at": "2026-11-10T13:39:42.417553+00:00",
+  "query": "惠普 黑白激光打印机",
+  "requested_size": 5,
+  "request_limit": 1,
+  "requests_attempted": 1,
+  "automatic_retries": 0,
+  "credential_value_logged": false,
+  "raw_response_saved": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "http_status": 200,
+  "elapsed_seconds": 1.375,
+  "response_bytes": 6263,
+  "response_sha256": "9b77d3d067c15fb25bc2a39c1dd41988575df082dad15a7ef9f8568525903c73",
+  "top_level_fields": [
+    "error_code",
+    "error_msg",
+    "data"
+  ],
+  "business_code": 0,
+  "status": "success",
+  "data_fields": [
+    "rows",
+    "total_num"
+  ],
+  "returned_rows": 5,
+  "product_summaries": [
+    {
+      "title": "惠普HP1020plusHP1108家用办公凭证A4黑白激光手机无线作业打印机",
+      "brand_name": "HP/惠普",
+      "mall_name": "淘宝精选",
+      "shop_name": "卖二手打印机",
+      "shop_type": "其他第三方",
+      "price": "¥264",
+      "page_price": 264.0,
+      "returned_fields": [
+        "product_query",
+        "title",
+        "brand_name",
+        "mall_id",
+        "mall_name",
+        "shop_name",
+        "shop_type",
+        "url",
+        "price",
+        "page_price",
+        "union_spec"
+      ],
+      "link_host": "s.click.taobao.com",
+      "union_spec_type": "str",
+      "union_spec_excerpt": "{\"SpecParams\": {\"品牌\": \"HP/惠普\", \"惠普型号\": \"LaserJet 1020 plus(CC418A)\", \"类型\": \"黑白激光\", \"接口类型\": \"USB\", \"最大幅面\": \"A4\", \"版本类型\": \"其他海外地区\", \"是否支持自动双面打印\": \"否\", \"适用场景\": \"家庭及居家办公\", \"套餐\": \"套餐二，套餐一\", \"进纸盒容量\": \"100\", \"能效等级\": \"三级\", \"支持打印类型\": \"黑白\", \"远程打印方式\": \"云打印\", \"最大打印幅面\": \"A4\", \"功能\": \"打印\", \"连接方式\": \"USB\", \"耗材类型\": \"鼓粉一体\", \"是否支持网络打印\": \"否\", \"月负荷量\": \"0-5000张\", \"颜色分类\": \"惠普1020plus，惠普1020plu加小白盒，惠普1007/1008，惠普1007/1008加小白盒，惠普1020，惠普1020加小白盒，惠普1108 1106，惠普1108/1106加小白盒，佳能2900打印机，惠普1022/1505，惠普1010/1012/1015，惠普1022N 1505N\"}}"
+    },
+    {
+      "title": "惠普（HP）a3打印机 706n a3a4黑白激光打印机 有线网络 单功能 试卷作业图纸办公室商用企业办公 706n（A3黑白激光/单功能打印/有线网络）",
+      "brand_name": "惠普（HP）",
+      "mall_name": "京东",
+      "shop_name": "惠普（HP）商用打印机旗舰店",
+      "shop_type": "旗舰店",
+      "price": "¥9899",
+      "page_price": 9899.0,
+      "returned_fields": [
+        "product_query",
+        "title",
+        "brand_name",
+        "mall_id",
+        "mall_name",
+        "shop_name",
+        "shop_type",
+        "url",
+        "price",
+        "page_price",
+        "union_spec"
+      ],
+      "link_host": "union-click.jd.com",
+      "union_spec_type": "str",
+      "union_spec_excerpt": "{\"SpecParams\": {\"包装清单\": \"惠普 706n 打印机（不支持复印和扫描）、192A硒鼓【约12000张（A4纸5%覆盖率计算）】、USB数据线、电源线、其他纸质版说明类文件\", \"主体\": {\"是否信创商品\": \"否\", \"CCC强制性认证\": \"是\", \"认证型号\": \"LaserJet Pro M706dn\"}, \"扩展功能\": {\"网络打印\": \"支持有线和无线网络打印\", \"介质类型\": \"普通纸\"}, \"基本参数\": {\"纸张输入容量\": \"350页\", \"端口\": \"以太网;USB\", \"单面支持纸张尺寸\": \"A3\", \"双面打印\": \"自动双面\", \"基础功能\": \"扫描;打印;复印\", \"黑白随机印量\": \"10000页以上\"}}}"
+    },
+    {
+      "title": "惠普HP1005HP128a手机黑白激光打印机家用办公多功能一体机复印机",
+      "brand_name": "HP/惠普",
+      "mall_name": "淘宝精选",
+      "shop_name": "涵澄兄弟办公设备",
+      "shop_type": "其他第三方",
+      "price": "¥590",
+      "page_price": 630.0,
+      "returned_fields": [
+        "product_query",
+        "title",
+        "brand_name",
+        "mall_id",
+        "mall_name",
+        "shop_name",
+        "shop_type",
+        "url",
+        "price",
+        "page_price"
+      ],
+      "link_host": "s.click.taobao.com",
+      "union_spec_type": "NoneType",
+      "union_spec_excerpt": null
+    },
+    {
+      "title": "惠普（HP）115WA4黑白激光多功能一体打印机",
+      "brand_name": "惠普（HP）",
+      "mall_name": "京东",
+      "shop_name": "角徽电脑办公京东自营专区",
+      "shop_type": "自营",
+      "price": "¥818",
+      "page_price": 820.0,
+      "returned_fields": [
+        "product_query",
+        "title",
+        "brand_name",
+        "mall_id",
+        "mall_name",
+        "shop_name",
+        "shop_type",
+        "url",
+        "price",
+        "page_price",
+        "union_spec"
+      ],
+      "link_host": "union-click.jd.com",
+      "union_spec_type": "str",
+      "union_spec_excerpt": "{\"SpecParams\": {\"包装清单\": \"暂无\", \"主体\": {\"认证型号\": \"115W\", \"型号\": \"其他\", \"CCC强制性认证\": \"是\", \"是否信创商品\": \"否\"}, \"扩展功能\": {\"网络打印\": \"支持无线网络打印\"}, \"基本参数\": {\"单面支持纸张尺寸\": \"A4;A5;B5 (JIS)\", \"端口\": \"USB;WiFi端口\", \"双面支持纸张尺寸\": \"A4\"}, \"打印功能\": {\"黑白模式最佳打印分辨率\": \"1200*1200dpi\"}, \"规格\": {\"产品尺寸\": \"长406mm;宽329.5mm;高253mm\"}}}"
+    },
+    {
+      "title": "二手惠普HP2055dnM401dn5200n5200L3015黑白激光打印机双面A4A3",
+      "brand_name": "HP/惠普",
+      "mall_name": "淘宝精选",
+      "shop_name": "广州华盛二手办公设备经营部",
+      "shop_type": "其他第三方",
+      "price": "¥388",
+      "page_price": 398.0,
+      "returned_fields": [
+        "product_query",
+        "title",
+        "brand_name",
+        "mall_id",
+        "mall_name",
+        "shop_name",
+        "shop_type",
+        "url",
+        "price",
+        "page_price"
+      ],
+      "link_host": "s.click.taobao.com",
+      "union_spec_type": "NoneType",
+      "union_spec_excerpt": null
+    }
+  ],
+  "limitations": [
+    "一次最多5条的供应商检索测试，不证明所有已开通接口或稳定性",
+    "供应商价格不等于用户地区到手价，标题及规格不等于平台销售项身份已核验",
+    "未调用商品基础信息、SKU、参数或评论接口；用途许可未由此批准"
+  ]
+}

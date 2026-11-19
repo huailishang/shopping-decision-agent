@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-11-17T13:46:38.050020+00:00",
+  "sample_id": "PRINTER-HENAN-FAMILY-20261116",
+  "source": {
+    "type": "project_owner_explicit_reply_in_current_chat",
+    "quote": "必须能从微信发起打印",
+    "is_direct_device_user_confirmation": false,
+    "is_device_test": false
+  },
+  "updates": {
+    "wechat_required": true
+  },
+  "not_confirmed": [
+    "wechat_workflow",
+    "direct_miniprogram_only",
+    "accepts_transfer_to_vendor_app",
+    "mandatory_no_rebind",
+    "delivery_region",
+    "budget_scope"
+  ],
+  "inherited_unchanged": {
+    "budget_max_cny": 1000,
+    "monthly_pages_range": [
+      0,
+      50
+    ],
+    "needs_color": false,
+    "accepts_outsourced_color": true,
+    "accepts_initial_setup": true,
+    "device_deployment_region": "中国大陆河南省"
+  },
+  "new_product_fact_count": 0,
+  "transactions_enabled": false,
+  "purchase_recommendation_approved": false
+}

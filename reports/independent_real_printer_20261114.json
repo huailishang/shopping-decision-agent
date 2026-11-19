@@ -1,0 +1,170 @@
+{
+  "role": "independent_evaluator",
+  "run_at_utc": "2026-11-14T01:48:01.222242+00:00",
+  "source": "local_worktree_current_uncommitted",
+  "scope": "synthetic_contract_and_research_cli_only_no_business_api",
+  "tests": [
+    {
+      "id": "N01_min_year_utc_underflow",
+      "pass": true,
+      "actual": [
+        1,
+        1,
+        "source_observation_invalid"
+      ],
+      "expected": "1 good + 1 bad observation"
+    },
+    {
+      "id": "N02_max_year_bad_withdrawal",
+      "pass": true,
+      "actual": [
+        1,
+        "synthetic_field_binding_test_only"
+      ],
+      "expected": "bad event cannot revoke good"
+    },
+    {
+      "id": "N03_max_year_swapped_order",
+      "pass": true,
+      "actual": [
+        1,
+        "synthetic_field_binding_test_only"
+      ],
+      "expected": "order independent good row"
+    },
+    {
+      "id": "N04_max_year_bad_use_loss",
+      "pass": true,
+      "actual": [
+        1,
+        "synthetic_field_binding_test_only"
+      ],
+      "expected": "invalid use loss no revoke"
+    },
+    {
+      "id": "N05_high_year_legal_neighbor",
+      "pass": true,
+      "actual": [
+        1,
+        "9999-12-31T18:59:59+00:00"
+      ],
+      "expected": "valid extreme UTC neighbor"
+    },
+    {
+      "id": "N06_other_item_cannot_revoke",
+      "pass": true,
+      "actual": [
+        1,
+        "synthetic_field_binding_test_only"
+      ],
+      "expected": "different item isolated"
+    },
+    {
+      "id": "N07_hp_model_gap_documented",
+      "pass": true,
+      "actual": [
+        0,
+        "manufacturer_model_not_reviewed"
+      ],
+      "expected": "current gate does NOT support HP model syntax"
+    },
+    {
+      "id": "N08_original_research_not_purchase",
+      "pass": true,
+      "actual": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03"
+      ],
+      "expected": "three conditional research reasons, no purchase"
+    },
+    {
+      "id": "N09_other_category_no_printer_reason",
+      "pass": true,
+      "actual": 0,
+      "expected": "no printer research outside printer"
+    },
+    {
+      "id": "N10_unmapped_source_refused",
+      "pass": true,
+      "actual": "unmapped_research_source",
+      "expected": "unmapped_research_source"
+    },
+    {
+      "id": "N11_cli_exits_and_row_count",
+      "pass": true,
+      "actual": {
+        "returncode": 0,
+        "rows": 9
+      },
+      "expected": "zero exit, ready+8 turns"
+    },
+    {
+      "id": "N12_scan_and_duplex_recompute",
+      "pass": true,
+      "actual": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-05"
+      ],
+      "expected": "both conditional reasons added"
+    },
+    {
+      "id": "N13_clear_scan_and_duplex",
+      "pass": true,
+      "actual": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03"
+      ],
+      "expected": "cleared reasons removed"
+    },
+    {
+      "id": "N14_color_change_and_restore",
+      "pass": true,
+      "actual": [
+        [
+          "CASE-02",
+          "CASE-03"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03"
+        ]
+      ],
+      "expected": "color change removes and reset restores"
+    },
+    {
+      "id": "N15_clear_page_range_and_wechat",
+      "pass": true,
+      "actual": [
+        "CASE-01"
+      ],
+      "expected": "cleared conditions remove dependent research"
+    },
+    {
+      "id": "N16_category_change_no_leak",
+      "pass": true,
+      "actual": [],
+      "expected": "none for phone"
+    },
+    {
+      "id": "N17_forged_approval_invalid_turn",
+      "pass": true,
+      "actual": "invalid_turn",
+      "expected": "invalid_turn"
+    },
+    {
+      "id": "N18_all_valid_turns_safe",
+      "pass": true,
+      "actual": "all7_checked",
+      "expected": "zero purchase or transaction authority"
+    }
+  ],
+  "total": 18,
+  "passed": 18,
+  "failed": []
+}

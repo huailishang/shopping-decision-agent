@@ -1,0 +1,22 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "RV-EV-04",
+  "command_argv": [
+    "python",
+    "-X",
+    "utf8",
+    "-c",
+    "import sys,unittest; s=unittest.defaultTestLoader.discover('tests',pattern='test_minimal_research_flow.py'); assert s.countTestCases()>=14, 'existing focused cases removed'; r=unittest.TextTestRunner(verbosity=2).run(s); sys.exit(0 if r.wasSuccessful() else 1)"
+  ],
+  "command_display": "python -X utf8 -c \"import sys,unittest; s=unittest.defaultTestLoader.discover('tests',pattern='test_minimal_research_flow.py'); assert s.countTestCases()>=14, 'existing focused cases removed'; r=unittest.TextTestRunner(verbosity=2).run(s); sys.exit(0 if r.wasSuccessful() else 1)\"",
+  "working_directory": "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent",
+  "started_at_utc": "2026-11-17T13:35:33.491864+00:00",
+  "finished_at_utc": "2026-11-17T13:35:34.492468+00:00",
+  "exit_code": 0,
+  "stdout_path": "RV-EV-04.stdout.log",
+  "stderr_path": "RV-EV-04.stderr.log",
+  "stdout_bytes": 0,
+  "stderr_bytes": 2884,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "ace0d87d92f9f4d551631b97304b43b79ebb5c421793ebeaa00738a8b12ca302"
+}

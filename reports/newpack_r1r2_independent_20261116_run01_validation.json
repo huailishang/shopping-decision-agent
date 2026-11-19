@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "run_id": "newpack_r1r2_independent_20261116_run01",
+  "date": "2026-11-16",
+  "role": "independent_reviewer",
+  "verdict": "R1_CLOSED; R2_PARTIAL_WITH_UNKNOWN_REGION_REPRESENTATION_GAP; B_NOT_PASS; OVERALL_NOT_PASS",
+  "findings": {
+    "R1": {
+      "status": "closed_within_original_and_finite_adjacent_scope",
+      "validated": [
+        "bidirectional category mismatch rejected",
+        "render relabelling rejected",
+        "explicit material category preserved",
+        "legacy unscoped contract labelled null/legacy_unscoped"
+      ]
+    },
+    "R2": {
+      "status": "original_failures_fixed_but_not_fully_closed",
+      "remaining_priority": "P2",
+      "file": "shopping_decision/selection_criteria.py",
+      "line": 274,
+      "remaining_root_cause": "truthiness-based missing-region check disagrees with unknown/unconfirmed region semantics",
+      "equivalent_missing_values_reproduced": [
+        "未知",
+        "待确认",
+        "   "
+      ],
+      "actual": "deployment_region_unconfirmed but no necessary user question; next action verify_missing_hard_model_evidence",
+      "normal_web_and_desktop_python_unknown_marker_reproduced": true,
+      "purchase_or_transactions_were_enabled": false,
+      "retained_protections": [
+        "null/empty asks user",
+        "typed question without question marks",
+        "confirmed Japan does not reask region",
+        "conflict and withdrawal",
+        "cleared conflict leaves no stale question",
+        "missing model evidence does not ask user product facts"
+      ]
+    }
+  },
+  "verification": {
+    "executor_hashes_matched": {
+      "shopping_decision/selection_criteria.py": true,
+      "shopping_decision/research_snapshot.py": true,
+      "tests/test_research_snapshot.py": true,
+      "reports/newpack_r1r2_executor_20261116_run01_probes.json": true,
+      "reports/真实打印机通用接口R1R2_集中修复执行报告_20261116.md": true
+    },
+    "known12": {
+      "passed": 12,
+      "total": 12,
+      "script_unchanged": true,
+      "old_failed_file_preserved": true
+    },
+    "adjacent12": {
+      "passed": 8,
+      "total": 12,
+      "failed_ids": [
+        "A08",
+        "A09",
+        "A10",
+        "A11"
+      ],
+      "remaining_root_causes": 1,
+      "duplicate_across_entry_points": true,
+      "not_recommendation_accuracy": true
+    },
+    "python_full": {
+      "passed": 418,
+      "total": 418,
+      "seconds": 31.354
+    },
+    "h05": {
+      "passed": 8,
+      "total": 8,
+      "as_of": "2026-11-16",
+      "public_regression_not_new_holdout": true
+    },
+    "H10": "as part of full suite",
+    "standalone_java_compile_or_P04": false,
+    "new_native_GUI": false,
+    "prior_GUI_reused_only_within_original_scope": "reports/newpack_independent_20261116_run01_gui.txt"
+  },
+  "development": {
+    "replayed_cases": 6,
+    "task_outputs_unchanged": true,
+    "historical_scores_preserved": {
+      "baseline": "13/15",
+      "cognition": "14/15",
+      "kind": "open answer completeness, not effect gain"
+    },
+    "formal_holdout_created_or_run": false,
+    "real_user_new_answers": 0,
+    "independent_decision_gain": null
+  },
+  "acceptance": {
+    "A": "limited source-based conditional research",
+    "B": "partial; R2 remainder open",
+    "C": "open development auditable; formal preconditions absent",
+    "D": "real effect and original-user feedback unknown"
+  },
+  "project": {
+    "H1": "BLOCKED use and auditable two-model raw fields",
+    "H2": "0/2; prior 0/20",
+    "H3": "0 valid regional quotes",
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "overall": "NOT_PASS"
+  },
+  "integrity": {
+    "baseline": "reports/newpack_r1r2_independent_20261116_run01_baseline.json",
+    "original_files": 562,
+    "unchanged_originals": 558,
+    "changed_allowed_status_docs": [
+      "CURRENT.md",
+      "README.md",
+      "docs/PROJECT_BOTTLENECK_MAP.md",
+      "handoffs/真实打印机决策验证与通用接口_下一长执行包_20261116.md"
+    ],
+    "missing_originals": [],
+    "unexpected_changes": [],
+    "business_knowledge_tests_delivery_old_failure_files_unchanged": true,
+    "current_routing_note": "executor completed CURRENT delivery route during registration; reviewer then appended review state; no implementation edits by reviewer"
+  },
+  "operations": {
+    "external_source_actions": 0,
+    "credential_reads": 0,
+    "provider_business_calls": 0,
+    "logins": 0,
+    "paid_or_transaction_actions": 0,
+    "external_messages": 0,
+    "git_commit": false,
+    "git_push": false,
+    "historical_remaining_budget": null,
+    "effective_hours": null
+  },
+  "next": "Close only the original R2 missing-region-representation remainder within same package and original suggested 2-hour/verified remaining cap; do not reopen R1 or repeat unchanged GUI, expand templates, reset budget, or start formal 36."
+}

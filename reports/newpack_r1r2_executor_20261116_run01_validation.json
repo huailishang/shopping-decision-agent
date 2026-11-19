@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "role": "executor",
+  "date": "2026-11-16",
+  "task": "same_original_newpack_R1_R2_concentrated_repair",
+  "baseline_independent_probe": "reports/newpack_independent_20261116_run01_probes.json",
+  "baseline_probe_total": 12,
+  "baseline_probe_passed": 7,
+  "baseline_failed_ids": [
+    "V02",
+    "V03",
+    "V10",
+    "V11",
+    "V12"
+  ],
+  "replay_probe": "reports/newpack_r1r2_executor_20261116_run01_probes.json",
+  "executor_replay_total": 12,
+  "executor_replay_passed": 12,
+  "executor_replay_failed_ids": [],
+  "original_six_dev_cases_unchanged": true,
+  "targeted_tests": {
+    "passed": 44,
+    "total": 44
+  },
+  "python_full": {
+    "passed": 418,
+    "total": 418
+  },
+  "h05_date": "2026-11-16",
+  "h05": {
+    "passed": 8,
+    "total": 8
+  },
+  "java_release": 17,
+  "h10": {
+    "passed": 6,
+    "total": 6
+  },
+  "p04": {
+    "passed": 6,
+    "total": 6
+  },
+  "new_native_swing_test_this_round": false,
+  "prior_independent_native_gui": "reports/newpack_independent_20261116_run01_gui.txt",
+  "real_product_api_calls": 0,
+  "read_secrets": false,
+  "live_quotes": 0,
+  "platform_identity_verified": 0,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "formal_holdout_run": false,
+  "official_effect_gain": null,
+  "overall_project_verdict": "NOT_PASS",
+  "git_commit": false,
+  "git_push": false,
+  "file_sha256": {
+    "shopping_decision/selection_criteria.py": "4c62c213df2c659c30f80913a4185087d7c24813d7129231a4de67d36fe8ba4a",
+    "shopping_decision/research_snapshot.py": "f965480de570480b51b65f73aba6bbc67ce39974fba058d7ed2b98fe62f7a9bd",
+    "tests/test_research_snapshot.py": "1fbab4530dab6f9191d12b81b1a8c52ef665dae333b9dbaebf7fafc1bf41d60b",
+    "reports/newpack_r1r2_executor_20261116_run01_probes.json": "3da00f43bf4f2e295cb663c824ce2786751cfaa9a9b07a12ad001355a029c580",
+    "reports/真实打印机通用接口R1R2_集中修复执行报告_20261116.md": "4ac7095b6cb7c5e54504adcbcc2d1a95f8a49e6ce64e465cabd91b11b66418be"
+  },
+  "limitations": [
+    "No new independent reviewer sign-off",
+    "H1 real content/use rights blocked",
+    "H2 0/2 and old 20 probes 0/20",
+    "H3 regional prices 0",
+    "Real user condition and real decision gain unknown"
+  ]
+}

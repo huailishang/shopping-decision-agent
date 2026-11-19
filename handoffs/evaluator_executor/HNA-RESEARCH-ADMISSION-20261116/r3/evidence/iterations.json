@@ -1,0 +1,18 @@
+{
+  "task_id": "HNA-RESEARCH-ADMISSION-20261116",
+  "mode": "SEQUENTIAL",
+  "bounded_attempts_used": 1,
+  "max_total_attempts": 2,
+  "events": [
+    {
+      "attempt": 1,
+      "scope": "local_conditional_plan_and_affected_regression",
+      "status": "l1_passed",
+      "cases": "3/3",
+      "new_business_tests": "9/9",
+      "full_tests": "443/443",
+      "external_calls": 0
+    }
+  ],
+  "note": "L2 pending independent gate; this is not L3 acceptance"
+}

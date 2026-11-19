@@ -1,0 +1,228 @@
+{
+  "role": "independent_reviewer",
+  "observed_at": "2026-11-10T13:53:41.754412+00:00",
+  "original_four": [
+    {
+      "id": "negated_wireless",
+      "input": "本机不支持无线网络连接，仅支持USB打印。",
+      "feature": "wireless",
+      "actual": null,
+      "expectation_met": true
+    },
+    {
+      "id": "negated_wechat",
+      "input": "本机不支持微信小程序直连，支持远程打印的是其他型号。",
+      "feature": "wechat_miniprogram",
+      "actual": null,
+      "expectation_met": true
+    },
+    {
+      "id": "other_model_duplex",
+      "input": "HL-B2188DW 标配A4自动双面打印；HL-10W不支持自动双面打印。",
+      "feature": "auto_duplex",
+      "actual": null,
+      "expectation_met": true
+    },
+    {
+      "id": "script_only_wireless",
+      "input": "<script>var otherModelText=\"支持无线网络连接\";</script>本机仅支持USB。",
+      "feature": "wireless",
+      "actual": null,
+      "expectation_met": true
+    }
+  ],
+  "new_html_variants": [
+    {
+      "id": "other_model_suffix_duplex",
+      "input_kind": "synthetic_html",
+      "input": "标配A4自动双面打印（仅限HL-B2188DW），HL-10W为手动双面。",
+      "feature": "auto_duplex",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "other_model_suffix_wireless",
+      "input_kind": "synthetic_html",
+      "input": "支持无线网络连接（仅适用于HL-B2188DW），本型号仅USB连接。",
+      "feature": "wireless",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "other_model_suffix_billing",
+      "input_kind": "synthetic_html",
+      "input": "按页付费、购买打印页数（仅适用于HL-B2188DW），HL-10W使用普通耗材。",
+      "feature": "pay_per_page_consumables",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "stylesheet_hidden_wireless",
+      "input_kind": "synthetic_html",
+      "input": "<style>.not-visible { display: none; }</style><div class=\"not-visible\">支持无线网络连接</div>本机仅USB。",
+      "feature": "wireless",
+      "expected": "not_true",
+      "actual": true,
+      "expectation_met": false
+    },
+    {
+      "id": "visible_positive_wireless",
+      "input_kind": "synthetic_html",
+      "input": "本型号支持无线网络连接。",
+      "feature": "wireless",
+      "expected": "true",
+      "actual": true,
+      "expectation_met": true
+    }
+  ],
+  "archived_source_replay": [
+    {
+      "model_id": "HL-10W",
+      "raw_path": "data/raw/p0_8_official_details/3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff.html",
+      "sha256_matches": true,
+      "positive_features_match": true,
+      "billing_matches": true,
+      "facts": {
+        "monochrome_print": true,
+        "color_print": false,
+        "wireless": true,
+        "wechat_miniprogram": true,
+        "pay_per_page_consumables": true
+      },
+      "consumables": []
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "raw_path": "data/raw/p0_8_official_details/ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb.html",
+      "sha256_matches": true,
+      "positive_features_match": true,
+      "billing_matches": true,
+      "facts": {
+        "monochrome_print": true,
+        "color_print": false,
+        "wireless": true,
+        "wechat_miniprogram": true,
+        "auto_duplex": true
+      },
+      "consumables": [
+        "TNB020",
+        "DRB020"
+      ]
+    },
+    {
+      "model_id": "HL-B2158W",
+      "raw_path": "data/raw/p0_8_official_details/37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a.html",
+      "sha256_matches": true,
+      "positive_features_match": true,
+      "billing_matches": true,
+      "facts": {
+        "monochrome_print": true,
+        "color_print": false,
+        "wireless": true,
+        "wechat_miniprogram": true
+      },
+      "consumables": [
+        "TNB020",
+        "DRB020"
+      ]
+    }
+  ],
+  "normal_dialogue": {
+    "source_mode": "recorded_manufacturer_detail_replay_no_network",
+    "candidate_count": 9,
+    "HL_10W_required_met": [
+      "monochrome_print",
+      "wireless",
+      "wechat_miniprogram"
+    ],
+    "HL_10W_billing_model": "buy_print_pages_to_claim_consumables",
+    "HL_10W_unknowns": [
+      "实际到手价、库存及预算匹配尚无授权实时核验",
+      "独立耐用性/故障率未核实",
+      "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+    ],
+    "changed_version": 2,
+    "old_conclusions_invalidated": true,
+    "HL_B2188DW_auto_duplex_met": true,
+    "HL_10W_auto_duplex_unknown": true,
+    "conflict_status": "condition_conflict",
+    "unknown_unresolved_actions": [
+      {
+        "issue": "微信打印必须采用哪种方式：微信小程序直接打印，还是文件转存到厂商App后打印？",
+        "state": "optional_confirmation_or_defer"
+      },
+      {
+        "issue": "预算上限指主机含运费及必要支出，还是还要包括本次额外购买的耗材？",
+        "state": "optional_confirmation_or_defer"
+      },
+      {
+        "issue": "请确认收货地区（省市区即可，不需要详细地址），用于核对库存和运费",
+        "state": "optional_confirmation_or_defer"
+      }
+    ]
+  },
+  "normal_output_provenance": [
+    {
+      "model_id": "HL-10W",
+      "normal_output_digest": "4843c3fff5e47fe26081b4ce50602fcfb621ccf5bfa59037b37c220c5fced98e",
+      "normal_output_observed_at": "2026-11-09T12:29:37.395556+00:00",
+      "matching_raw_file_exists": false,
+      "p08_archived_digest": "3d3a08760305db1f22c82cac514216f7d33646791775ab2490709871b2e04dff",
+      "normal_output_uses_p08_archive": false
+    },
+    {
+      "model_id": "HL-B2188DW",
+      "normal_output_digest": "23c1d6d1611620d0d2419e0307bc5314c9d57f869140f0cdd4d886d7ac746c73",
+      "normal_output_observed_at": "2026-11-09T12:29:38.017899+00:00",
+      "matching_raw_file_exists": false,
+      "p08_archived_digest": "ee0c6963a4b2962d71911010aac53bf949736e8435d701be6fa5a393295d75fb",
+      "normal_output_uses_p08_archive": false
+    },
+    {
+      "model_id": "HL-B2158W",
+      "normal_output_digest": "0adda023c6742d87ad2c32278c62ce4d12715330627951b84ba36d6070d0a62b",
+      "normal_output_observed_at": "2026-11-09T12:29:38.475819+00:00",
+      "matching_raw_file_exists": false,
+      "p08_archived_digest": "37fba167920c15d0be31caedfdfd057248d6ab86f659b0fe7118f82688ddc20a",
+      "normal_output_uses_p08_archive": false
+    }
+  ],
+  "future_detail_rejected": true,
+  "stale_detail_probe": {
+    "status": "specs_matched_not_purchase_approved",
+    "manufacturer_detail_age_days": 2505,
+    "unknowns": [
+      "独立耐用性/故障率未核实",
+      "逐型号详情证据已超过30天，请重新核对",
+      "此型号采用购买打印页数、申领耗材的模式；必须另核套餐费用、期限、剩余页数和低印量成本"
+    ]
+  },
+  "taobao_link_probe": {
+    "candidate_count": 1,
+    "rejected_count": 3,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "real_text_cli_subprocess": {
+    "returncode": 0,
+    "output_line_count": 3,
+    "source_modes": [
+      "recorded_manufacturer_detail_replay_no_network",
+      "recorded_manufacturer_detail_replay_no_network"
+    ],
+    "versions": [
+      1,
+      2
+    ]
+  },
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "limitations": [
+    "新输入是合成故障诊断，不能当推荐通过率。",
+    "原始官网HTML重放不代表本轮再次联网取证。",
+    "文本CLI测试显式使用UTF-8管道编码。"
+  ]
+}
