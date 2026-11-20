@@ -1,0 +1,12 @@
+test_change_or_revoke_recomputes_visible_claim (test_publication_entry.PublicationEntryTests.test_change_or_revoke_recomputes_visible_claim) ... ok
+test_dialogue_edit_clarify_and_nonprinter_survive (test_publication_entry.PublicationEntryTests.test_dialogue_edit_clarify_and_nonprinter_survive) ... ok
+test_history_ledger_tampering_cannot_pass_readonly_audit (test_publication_entry.PublicationEntryTests.test_history_ledger_tampering_cannot_pass_readonly_audit) ... ok
+test_malicious_budget_opposite_prose_not_shown_in_chat (test_publication_entry.PublicationEntryTests.test_malicious_budget_opposite_prose_not_shown_in_chat) ... ok
+test_one_positive_typed_synthetic_claim_renders_with_claim_id (test_publication_entry.PublicationEntryTests.test_one_positive_typed_synthetic_claim_renders_with_claim_id) ... ok
+test_price_and_model_scope_unverified_are_unknown (test_publication_entry.PublicationEntryTests.test_price_and_model_scope_unverified_are_unknown) ... ok
+test_spoofed_free_text_and_raw_bundle_in_state_never_published (test_publication_entry.PublicationEntryTests.test_spoofed_free_text_and_raw_bundle_in_state_never_published) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 17.250s
+
+OK

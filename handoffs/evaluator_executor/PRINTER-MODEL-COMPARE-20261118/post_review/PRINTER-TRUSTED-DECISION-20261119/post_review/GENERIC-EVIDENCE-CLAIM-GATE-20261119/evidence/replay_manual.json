@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "publication_schema": "verified-claims/v1",
+  "origin": "manual",
+  "input_sha256": "ec007b2febca5cbb3f6a3d96694ee78aee7fbe2c2b4535d8f2234c7b5157eed4",
+  "claims": [
+    {
+      "claim_id": "e86b36bbba2febca8126152fbce957ab913388439441692b399d346612abde07",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:first_setup",
+      "dimension": "first_setup",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "aceba4a20492e3a25eefda4f58b27ef0955d3abcf180f28a6d26064e9eedd41b",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:henan_effective_price",
+      "dimension": "henan_effective_price",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "6b45c470bea1eed75801151b097d6d26e19d0bd3c34f47a750f5ab6258ea4661",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:later_reuse",
+      "dimension": "later_reuse",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "97a1f7d096a4792815b92ed94d5c40d6653752da2e3c8c43d214b3ba41340a30",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:listing_identity",
+      "dimension": "listing_identity",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "0fbe8d69e1acd4a70dceebe4f451727a00be7561675fc6c1a339da6384bdb29d",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:supply",
+      "dimension": "supply",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "6d2e3fe9ba8f84eb3927da9c0c383b9f4a1c2c7c5520c08ba46e928d32363da8",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:wechat_initiation",
+      "dimension": "wechat_initiation",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "8971cb0929efb812c3c7253e749ceb33fa7a7552430effc20cef3f6ecc265f0a",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:first_setup",
+      "dimension": "first_setup",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "790e10f99cb79582336d8afef6ad9cc909be48c6ca857dfa4b3044b958cf4f06",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:henan_effective_price",
+      "dimension": "henan_effective_price",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "a4a30358c3ec99dcfa9b85083b1a1a4f51e2da7c7bd39db133e0de56cb6fd347",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:later_reuse",
+      "dimension": "later_reuse",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "749b6a3cbd280c5c85847bea72738f0e4337961b155f5f7b0cfe46fa0dfe48f7",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:listing_identity",
+      "dimension": "listing_identity",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "625e86a698bb926a28d5e94add3a646347b4d15ab7873772d6c3ba80382b5078",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:supply",
+      "dimension": "supply",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "87a73d7c13abdff211393f6c57444a6f2cb239aaecd87f59b8e7cb449fb85cf6",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:wechat_initiation",
+      "dimension": "wechat_initiation",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "Henan, China",
+        "as_of": "2026-11-19"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    }
+  ],
+  "assessments": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "research_status": "pending_evidence",
+      "comparisons": [
+        {
+          "requirement_id": "manual:first_setup",
+          "claim_id": "e86b36bbba2febca8126152fbce957ab913388439441692b399d346612abde07",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:henan_effective_price",
+          "claim_id": "aceba4a20492e3a25eefda4f58b27ef0955d3abcf180f28a6d26064e9eedd41b",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:later_reuse",
+          "claim_id": "6b45c470bea1eed75801151b097d6d26e19d0bd3c34f47a750f5ab6258ea4661",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:listing_identity",
+          "claim_id": "97a1f7d096a4792815b92ed94d5c40d6653752da2e3c8c43d214b3ba41340a30",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:supply",
+          "claim_id": "0fbe8d69e1acd4a70dceebe4f451727a00be7561675fc6c1a339da6384bdb29d",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:wechat_initiation",
+          "claim_id": "6d2e3fe9ba8f84eb3927da9c0c383b9f4a1c2c7c5520c08ba46e928d32363da8",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        }
+      ]
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "research_status": "pending_evidence",
+      "comparisons": [
+        {
+          "requirement_id": "manual:first_setup",
+          "claim_id": "8971cb0929efb812c3c7253e749ceb33fa7a7552430effc20cef3f6ecc265f0a",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:henan_effective_price",
+          "claim_id": "790e10f99cb79582336d8afef6ad9cc909be48c6ca857dfa4b3044b958cf4f06",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:later_reuse",
+          "claim_id": "a4a30358c3ec99dcfa9b85083b1a1a4f51e2da7c7bd39db133e0de56cb6fd347",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:listing_identity",
+          "claim_id": "749b6a3cbd280c5c85847bea72738f0e4337961b155f5f7b0cfe46fa0dfe48f7",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:supply",
+          "claim_id": "625e86a698bb926a28d5e94add3a646347b4d15ab7873772d6c3ba80382b5078",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "manual:wechat_initiation",
+          "claim_id": "87a73d7c13abdff211393f6c57444a6f2cb239aaecd87f59b8e7cb449fb85cf6",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        }
+      ]
+    }
+  ],
+  "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+  "next_actions": [
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:first_setup",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:henan_effective_price",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:later_reuse",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:listing_identity",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:supply",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "manual:wechat_initiation",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:first_setup",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:henan_effective_price",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:later_reuse",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:listing_identity",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:supply",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "manual:wechat_initiation",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    }
+  ],
+  "raw_model_text_published": false,
+  "manual_decision_gain_accepted": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false,
+  "wechat_reuse_verified": false,
+  "real_user_effect_verified": false,
+  "manual_source_audit": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "dimension": "wechat_initiation",
+      "source_ids": [
+        "S_BR_PRODUCT_INDEX",
+        "S_BR_FAQ_INDEX"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "dimension": "first_setup",
+      "source_ids": [
+        "S_BR_FAQ_INDEX"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "dimension": "later_reuse",
+      "source_ids": [
+        "S_BR_FAQ_INDEX"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "dimension": "listing_identity",
+      "source_ids": [
+        "S_BR_JD_INDEX"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "dimension": "henan_effective_price",
+      "source_ids": [],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "dimension": "supply",
+      "source_ids": [],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "dimension": "wechat_initiation",
+      "source_ids": [
+        "S_HP_SETUP"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "dimension": "first_setup",
+      "source_ids": [
+        "S_HP_SETUP"
+      ],
+      "claimed_status_audit_only": "supported",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "dimension": "later_reuse",
+      "source_ids": [
+        "S_HP_SETUP"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "dimension": "listing_identity",
+      "source_ids": [
+        "S_HP_LISTING"
+      ],
+      "claimed_status_audit_only": "supported",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "dimension": "henan_effective_price",
+      "source_ids": [
+        "S_HP_LISTING"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "dimension": "supply",
+      "source_ids": [
+        "S_HP_LISTING"
+      ],
+      "claimed_status_audit_only": "unknown",
+      "admitted_fact_count": 0,
+      "downgrade_reason": "手写状态和摘录不是具值、具时效的独立事实"
+    }
+  ],
+  "manual_source_count": 5,
+  "manual_claims_downgraded": 2
+}

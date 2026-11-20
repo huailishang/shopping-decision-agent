@@ -1,0 +1,68 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: GENERIC-PUBLIC-ENTRY-COVERAGE-20261120
+amendment: AMENDMENT_R1.md
+baseline_plan: VALIDATION_PLAN.yaml
+run_mode: local_offline_only
+mandatory: true
+checks:
+  - id: R1-VP-01
+    ac: [AC-R1-01, AC-R1-02, AC-R1-03]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_minimal_research_flow.py, -v]
+    expected_exit_code: 0
+    must_observe:
+      - two_one_zero_research_counts_preserved
+      - raw_report_text_kept_in_audit_not_published
+      - current_user_changes_recompute_safe_guidance
+  - id: R1-VP-02
+    ac: [AC-R1-01, AC-R1-02, AC-R1-03]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_printer_decision_plan.py, -v]
+    expected_exit_code: 0
+    must_observe:
+      - legacy_decision_plan_path_preserved_in_report_json
+      - raw_decision_plan_text_not_published
+      - wechat_optional_safe_research_next_step
+  - id: R1-VP-03
+    ac: [AC-R1-01, AC-R1-02, AC-R1-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_publication_entry.py, -v]
+    expected_exit_code: 0
+    must_have_cases:
+      - malicious_budget_opposite_prose_not_shown_in_chat
+      - one_positive_typed_synthetic_claim_renders_with_claim_id
+      - change_or_revoke_recomputes_visible_claim
+      - safe_research_progress_differs_for_two_one_zero
+      - safe_next_action_responds_to_wechat_required_or_optional
+  - id: R1-VP-04
+    ac: [AC-R1-01, AC-R1-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_claim_gate.py, -v]
+    expected_exit_code: 0
+  - id: R1-VP-05
+    ac: [AC-R1-01, AC-R1-02, AC-R1-03, AC-R1-04]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+    must_observe:
+      - no_test_deleted_or_skipped_to_force_green
+      - complete_suite_actual_exit_zero
+  - id: R1-VP-06
+    ac: [AC-R1-05]
+    command: [python3, -X, utf8, scripts/audit_model_history_readonly.py, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 0
+    must_observe:
+      - original_six_of_ten_attempts_preserved
+      - C05_C06_C07_not_attempted
+      - original_experiment_not_retroactively_accepted
+  - id: R1-VP-07
+    ac: [AC-R1-01, AC-R1-02, AC-R1-05, AC-R1-06]
+    method: evaluator_independent_public_chat_and_scope_review
+    must_observe:
+      - authentic_render_chat_result_text_not_legacy_prose
+      - distinct_research_progress_typed_not_claim
+      - edited_retracted_user_condition_does_not_show_stale_action
+      - changed_files_within_amendment_allowlist
+      - no_external_call_purchase_or_git_publish
+      - prior_protected_evidence_remains_unchanged
+review_rules:
+  - All mandatory checks must pass; any nonzero exit blocks PASS.
+  - Original CONTRACT.md and VALIDATION_PLAN.yaml remain immutable historical input; R1 authorization comes only from AMENDMENT_R1.md.
+  - Raw legacy prose may be audited in report_json, but not published as verified product facts.
+  - A count of research records or research next step is not verified product evidence or real purchase benefit.
+  - No budget, prior model attempt or network quota resets.

@@ -1,0 +1,22 @@
+{
+  "generated_at_utc": "2026-11-20T06:19:21.346043+00:00",
+  "original_negative_case": {
+    "rule_status": "failed",
+    "old_validator_accepted": true,
+    "legacy_semantic_entailment_verified": false,
+    "legacy_contained_raw_model_output": true
+  },
+  "three_paths": [
+    "rule_comparison",
+    "validate_model_result",
+    "handwritten_decision_matrix"
+  ],
+  "reusable_basis": [
+    "rule_comparison",
+    "validate_model_result",
+    "_eligible",
+    "SAFE_FLAGS"
+  ],
+  "primary_gap": "unverified model/human explanation could appear with otherwise correct numeric status",
+  "remaining_scope": "historical GUI unmodified; manual matrix lacking typed facts cannot be made verified"
+}

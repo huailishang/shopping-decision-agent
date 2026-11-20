@@ -1,0 +1,11 @@
+{
+  "status": "defer",
+  "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7a47bcd0f215437b30e1c6a0ce09dbe0910a0f1c293147f55dd844ed3fd9d39c。适用边界：仅用于本地合成验证，不代表真实商品\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+  "prompt": "必须在家打印彩色吗？",
+  "understanding": "已明确：\n商品品类：\"printer\"\n主要用途：\"家用学习资料\"\n微信是否必须：true\n打印机使用国家/地区：\"中国大陆\"\n预算（元）：1000\n\n尚需确认：家中彩印是否必须、是否接受首次App/扫码设置、微信打印方式、月打印页数\n参考答案点击只填草稿，发送后才会被确认为用户原话。",
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "public_claim_ids": [
+    "7a47bcd0f215437b30e1c6a0ce09dbe0910a0f1c293147f55dd844ed3fd9d39c"
+  ]
+}

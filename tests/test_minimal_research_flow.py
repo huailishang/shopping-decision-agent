@@ -114,8 +114,14 @@ class MinimalFlowTest(unittest.TestCase):
             chat=render_chat(state)
             research=json.loads(chat["report_json"])["research_result"]["research_case"]
             self.assertEqual(len(research["used_facts"]),count)
-            self.assertIn(research["report_text"],chat["result_text"])
+            # Raw historical prose stays in audit; public research progress
+            # comes only from SHA-pinned pack metadata and confirmed answers.
+            self.assertNotIn(research["report_text"], chat["result_text"])
+            self.assertIn(f"{count}条待核研究记录", chat["result_text"])
+            self.assertIn("研究资料未经过最终商品事实核验", chat["result_text"])
             self.assertNotIn("共享研究下一动作",chat["result_text"])
+            self.assertNotIn("1300<1000", chat["result_text"])
+            self.assertNotIn("立刻下单", chat["result_text"])
         state=submit_message(state,"budget_max_cny","800")
         self.assertIn("800元",render_chat(state)["result_text"])
 

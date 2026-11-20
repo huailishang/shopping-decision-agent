@@ -1,0 +1,75 @@
+{
+  "bundle": {
+    "schema_version": 1,
+    "request_id": "test",
+    "category": "synthetic_schema_probe",
+    "as_of": "2026-11-18",
+    "region": "CN",
+    "candidates": [
+      {
+        "id": "a"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "cost",
+        "dimension": "cost",
+        "op": "lte",
+        "value": 1000,
+        "unit": "CNY",
+        "importance": "hard"
+      }
+    ],
+    "sources": [
+      {
+        "id": "s",
+        "url": "https://example.invalid/test",
+        "captured_on": "2026-11-18",
+        "allowed_use": "model_research_short_summary",
+        "scope_region": "CN",
+        "limitations": "synthetic unit test, not a product fact"
+      }
+    ],
+    "facts": [
+      {
+        "id": "f",
+        "candidate_id": "a",
+        "dimension": "cost",
+        "value": 1300,
+        "unit": "CNY",
+        "source_id": "s",
+        "kind": "synthetic_probe",
+        "statement": "synthetic 900",
+        "limitations": "not a real quote"
+      }
+    ]
+  },
+  "model_result": {
+    "assessments": [
+      {
+        "candidate_id": "a",
+        "comparisons": [
+          {
+            "requirement_id": "cost",
+            "status": "failed",
+            "fact_ids": [
+              "f"
+            ],
+            "explanation": "1300元小于1000元，所以可以买",
+            "conditions": [
+              "仅合成工程输入"
+            ]
+          }
+        ],
+        "tradeoffs": []
+      }
+    ],
+    "summary": "价格符合预算，现在即可购买",
+    "next_actions": [
+      {
+        "kind": "research",
+        "description": "立即下单"
+      }
+    ]
+  }
+}

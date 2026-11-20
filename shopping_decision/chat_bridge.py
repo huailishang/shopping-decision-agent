@@ -14,6 +14,9 @@ import sys
 from .desktop_bridge import encode
 from .dialogue_flow import apply_turn, new_dialogue, next_questions
 from .web import evaluate_input
+from .claim_gate import publish_checked_comparison
+from .evidence_comparison import digest
+from .minimal_research import selected_pack
 
 UNKNOWN = {"暂不确定", "不确定", "不知道", "未知", "待确认", "先跳过"}
 BOOL = {"是": True, "需要": True, "必须": True, "接受": True,
@@ -257,6 +260,96 @@ def _analysis(state: dict) -> dict | None:
     return evaluate_input(data)
 
 
+def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None:
+    """Only accept typed backend data bound to this dialogue; never legacy prose.
+
+    The existing backend provides no typed bundle, so ordinary chat correctly
+    falls back to unverified research until that contract is populated.
+    """
+    if not isinstance(analysis, dict):
+        return None
+    bundle = analysis.get("verified_research_bundle")
+    if not isinstance(bundle, dict):
+        return None
+    if (bundle.get("category") != values.get("category") or
+            type(bundle.get("dialogue_version")) is not int or
+            bundle["dialogue_version"] != version or
+            bundle.get("confirmed_values_sha256") != digest(values)):
+        return None
+    # User budget and deployment geography must match the rule input exactly.
+    if values.get("device_deployment_region") and bundle.get("region") != values["device_deployment_region"]:
+        return None
+    budget = values.get("budget_max_cny")
+    if budget is not None and not any(
+            r.get("unit") == "CNY" and r.get("op") == "lte" and
+            type(r.get("value")) is int and r["value"] == budget
+            for r in bundle.get("requirements", []) if isinstance(r, dict)):
+        return None
+    try:
+        return publish_checked_comparison(bundle, origin="rule")
+    except (ValueError, TypeError, KeyError, OverflowError):
+        return None
+
+
+def _safe_research_progress(state: dict, analysis: dict, values: dict) -> str:
+    """Only confirmed user fields and SHA-pinned local pack metadata are publishable.
+
+    The record count measures retained research notes, never verified model facts.
+    Free-form report_text/decision_plan/next_action are deliberately ignored.
+    """
+    count = None
+    context = state.get("research_context")
+    research = analysis.get("research_case") if isinstance(analysis, dict) else None
+    if isinstance(context, dict) and isinstance(research, dict):
+        try:
+            pack_id, pack = selected_pack(context)
+            if research.get("evidence_pack_id") == pack_id:
+                count = len(pack["claims"])
+        except (ValueError, KeyError, TypeError, OSError):
+            pass
+    if count is None:
+        progress = "当前没有可核对的受控研究包记录数；研究材料仍待核。"
+    else:
+        progress = f"当前受控研究包包含{count}条待核研究记录；记录数量不代表有效商品证据数。"
+    wechat = values.get("wechat_required")
+    if wechat is True:
+        next_step = "微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。"
+    elif wechat is False:
+        next_step = "微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。"
+    else:
+        next_step = "微信是否必须尚未确认：先向用户澄清，再决定优先核查微信复用还是其他型号条件。"
+    budget = values.get("budget_max_cny")
+    requirement = (f"用户已确认预算上限为{budget}元；这不是商品售价或有效地区报价。"
+                   if type(budget) is int else "用户预算尚未确认；不得推断任何商品满足预算。")
+    if count == 0:
+        next_research = "本次没有留存待核型号记录；先整理允许使用的来源，再核型号事实。"
+    elif count is not None:
+        next_research = "已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。"
+    else:
+        next_research = "先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。"
+    return "\n".join((progress, requirement, next_step, next_research,
+                      "研究资料未经过最终商品事实核验，不能据此推荐购买。"))
+
+
+def _public_chat_text(public: dict | None, setup_guard: str, progress: str = "") -> str:
+    """User-facing text is exclusively authored by this module and the gate."""
+    if public is None:
+        return (setup_guard + "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。"
+                + ("\n" + progress if progress else "")
+                + "\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。"
+                + "\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。"
+                + "\n未批准购买，交易关闭，未核实实时价格。")
+    lines = [setup_guard + "结构化条件比较（仅对准入事实和规则可核，不是购买许可）："]
+    for i, assessment in enumerate(public["assessments"], 1):
+        for j, item in enumerate(assessment["comparisons"], 1):
+            lines.append(f"候选{i} 条件{j}：{item['text']} "
+                         f"核验命题ID：{item['claim_id']}。适用边界：{item['limit']}")
+    for action in public["next_actions"]:
+        lines.append("下一行动：" + action["description"])
+    lines.append("未批准购买，交易关闭，未核实实时价格。")
+    return "\n".join(lines)
+
+
 def render_chat(state: dict) -> dict:
     _valid_state(state)
     v = confirmed_values(state)
@@ -273,6 +366,7 @@ def render_chat(state: dict) -> dict:
                      + ("\n暂不确定：" + "、".join(deferred) if deferred else "")
                      + "\n参考答案点击只填草稿，发送后才会被确认为用户原话。")
     analysis = _analysis(state)
+    public_decision = None
     if analysis is None:
         outcome = ("尚未选择受审品类或缺用途，先收集需求；未给出商品推荐。"
                    if v.get("category") in (None, "printer")
@@ -280,24 +374,14 @@ def render_chat(state: dict) -> dict:
         status = "clarify" if v.get("category") in (None, "printer") else "unsupported"
     else:
         r = analysis["recommendation"]
-        research = analysis.get("real_printer_case_research", {})
-        shared = research.get("shared_research_snapshot") or {}
         setup_guard = ("已确认不接受App/扫码首次设置；现有型号流程材料不足以证明免设置可用，"
                        "此条件先按未核硬要求处理。\n"
                        if v.get("accepts_initial_setup") is False else "")
-        outcome = (setup_guard + "研究状态：" + r["status"]
-                   + "\n理由：" + "；".join(r.get("reasons", [])[:5])
-                   + "\n需要澄清：" + "；".join(r.get("questions", [])[:4])
-                   + "\n缺少证据：" + "；".join(r.get("unknowns", [])[:4])
-                   + "\n共享研究下一动作：" + str(shared.get("next_action") or "核本人条件和地区真实商品证据")
-                   + ("\n现有证据的条件判断：\n" + shared["decision_plan"]["text"]
-                      if isinstance(shared.get("decision_plan"), dict) else "")
-                   + "\n来源、候选、版本、正反依据见主动预览完整审计。"
-                   + "\n所有候选仅供研究：未批准购买、交易关闭。")
-        if isinstance(analysis.get("research_case"), dict):
-            # 选包研究只展示所选事实；旧完整目录的提示仅留审计，避免同屏矛盾。
-            outcome = (analysis["research_case"]["report_text"]
-                       + "\n本轮仅做有限研究：尚未核价，未批准购买或交易。")
+        public_decision = _publish_for_chat(analysis, v, state["version"])
+        research_progress = _safe_research_progress(state, analysis, v)
+        outcome = _public_chat_text(public_decision, setup_guard, research_progress)
+        # The status remains a dialogue workflow signal, never a verified
+        # product claim. Only the gate-generated text can be published as such.
         status = r["status"]
     editable = "\n".join(f"{k}\t{LABELS[k]}\t{json.dumps(v[k], ensure_ascii=False) if k in v else '待确认'}"
                           for k in FIELD_ORDER
@@ -305,7 +389,11 @@ def render_chat(state: dict) -> dict:
     report = {"dialogue": state, "confirmed_fields": v,
               "unconfirmed_fields": fields, "deferred_fields": state.get("deferred_fields", []),
               "research_result": analysis,
-              "purchase_recommendation_approved": False, "transactions_enabled": False}
+              "legacy_unverified_research": analysis is not None,
+              "public_decision": public_decision,
+              "public_claim_source": "publish_checked_comparison" if public_decision else "unverified_research_only",
+              "purchase_recommendation_approved": False, "transactions_enabled": False,
+              "live_price_verified": False}
     return {"status": status, "state_json": json.dumps(state, ensure_ascii=False),
             "prompt_field": active, "prompt": prompt,
             "choices": "\n".join(label + "\t" + draft for label, draft in choices),

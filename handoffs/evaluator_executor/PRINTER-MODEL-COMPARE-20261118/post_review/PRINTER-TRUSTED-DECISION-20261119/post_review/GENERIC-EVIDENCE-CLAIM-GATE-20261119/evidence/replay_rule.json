@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "publication_schema": "verified-claims/v1",
+  "origin": "rule",
+  "input_sha256": "e92343fb51beeee2eb68fe7dec7f168aee1693e0c337eb70706322910cce1fb5",
+  "claims": [
+    {
+      "claim_id": "055317e07af7197d5c5477b2d5ec7840d8ddd0e1f5b9324819d63b45edc4bf12",
+      "candidate_id": "a",
+      "requirement_id": "cost",
+      "dimension": "cost",
+      "status": "met",
+      "rule_id": "lte",
+      "supporting_fact_ids": [
+        "f"
+      ],
+      "source_grade": [
+        "synthetic_local"
+      ],
+      "scope": {
+        "model": "a",
+        "region": "CN",
+        "as_of": "2026-11-18"
+      },
+      "limit": "仅用于本地合成验证，不代表真实商品",
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": true,
+        "scope_applicable": true,
+        "entailed_by_rule": true,
+        "unverified_external_fact": false
+      },
+      "source_audit": [
+        {
+          "fact_id": "f",
+          "source_id": "s",
+          "source_grade": "synthetic_local",
+          "admitted": true,
+          "limit": "合成测试事实；非真实商品证明"
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "candidate_id": "a",
+      "research_status": "eligible_for_research",
+      "comparisons": [
+        {
+          "requirement_id": "cost",
+          "claim_id": "055317e07af7197d5c5477b2d5ec7840d8ddd0e1f5b9324819d63b45edc4bf12",
+          "status": "met",
+          "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+          "supporting_fact_ids": [
+            "f"
+          ],
+          "limit": "仅用于本地合成验证，不代表真实商品"
+        }
+      ]
+    }
+  ],
+  "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+  "next_actions": [
+    {
+      "kind": "verify_price",
+      "candidate_id": "a",
+      "requirement_id": "cost",
+      "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+    }
+  ],
+  "raw_model_text_published": false,
+  "manual_decision_gain_accepted": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false,
+  "wechat_reuse_verified": false,
+  "real_user_effect_verified": false
+}

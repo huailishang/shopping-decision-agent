@@ -1,0 +1,10 @@
+{
+  "baseline_source": "git show HEAD:shopping_decision/chat_bridge.py executed in isolated namespace",
+  "baseline_contains_injection": true,
+  "new_contains_injection": false,
+  "old_display_result_length": 46,
+  "new_display_result_length": 126,
+  "new_verified_synthetic_has_claim_id": true,
+  "no_live_model": true,
+  "no_external_data": true
+}

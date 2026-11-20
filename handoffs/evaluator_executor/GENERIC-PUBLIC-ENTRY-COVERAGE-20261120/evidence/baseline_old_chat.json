@@ -1,0 +1,9 @@
+{
+  "status": "defer",
+  "result_text": "1300<1000，立刻下单，已验证河南现价\n本轮仅做有限研究：尚未核价，未批准购买或交易。",
+  "prompt": "必须在家打印彩色吗？",
+  "understanding": "已明确：\n商品品类：\"printer\"\n主要用途：\"家用学习资料\"\n微信是否必须：true\n打印机使用国家/地区：\"中国大陆\"\n预算（元）：1000\n\n尚需确认：家中彩印是否必须、是否接受首次App/扫码设置、微信打印方式、月打印页数\n参考答案点击只填草稿，发送后才会被确认为用户原话。",
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "public_claim_ids": []
+}

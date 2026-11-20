@@ -1,0 +1,13 @@
+{
+  "verified_new_main_chat": "shopping_decision/chat_bridge.py:render_chat/result_text",
+  "other_new_gate_entries": [
+    "shopping_decision/model_comparison.py:--verified-report",
+    "scripts/verify_claim_publication.py"
+  ],
+  "not_covered_legacy_entries": [
+    "shopping_decision/desktop_bridge.py",
+    "shopping_decision/web.py"
+  ],
+  "unverified_research_is_audit_only": "render_chat/report_json.research_result",
+  "version_and_confirmed_answers_bound": true
+}

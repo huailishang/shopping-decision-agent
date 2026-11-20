@@ -104,7 +104,12 @@ class PrinterDecisionPlanTest(unittest.TestCase):
             state = submit_message(state, field, answer)
         output = render_chat(state)
         plan = json.loads(output["report_json"])["research_result"]["real_printer_case_research"]["shared_research_snapshot"]["decision_plan"]
-        self.assertIn(plan["text"], output["result_text"])
+        # Preserve the raw plan in report_json for audit, not as trusted
+        # user-facing product conclusions.
+        self.assertNotIn(plan["text"], output["result_text"])
+        self.assertIn("微信打印是用户确认的可选条件", output["result_text"])
+        self.assertIn("低频印量、耗材和准确销售型号", output["result_text"])
+        self.assertNotIn("立刻下单", output["result_text"])
         self.assertEqual(plan["current_path"], "continue_model_research")
         self.assertIs(plan["transactions_enabled"], False)
 

@@ -1,0 +1,26 @@
+test_boolean_not_numeric_and_not_zero (test_model_comparison.ComparisonTests.test_boolean_not_numeric_and_not_zero) ... ok
+test_conflict_cannot_cherry_pick_a_source (test_model_comparison.ComparisonTests.test_conflict_cannot_cherry_pick_a_source) ... ok
+test_cross_candidate_or_dimension_citations_rejected (test_model_comparison.ComparisonTests.test_cross_candidate_or_dimension_citations_rejected) ... ok
+test_duplicate_and_unbound_inputs_rejected (test_model_comparison.ComparisonTests.test_duplicate_and_unbound_inputs_rejected) ... ok
+test_event_classification_offline_does_not_treat_error_as_tool (test_model_comparison.ComparisonTests.test_event_classification_offline_does_not_treat_error_as_tool) ... ok
+test_incomplete_and_malformed_receipts_fail_closed (test_model_comparison.ComparisonTests.test_incomplete_and_malformed_receipts_fail_closed) ... ok
+test_invalid_structure_and_fake_citations_are_rejected (test_model_comparison.ComparisonTests.test_invalid_structure_and_fake_citations_are_rejected) ... ok
+test_missing_revoked_region_unit_and_future_are_unknown (test_model_comparison.ComparisonTests.test_missing_revoked_region_unit_and_future_are_unknown) ... ok
+test_model_must_cover_hard_requirements_and_real_citations (test_model_comparison.ComparisonTests.test_model_must_cover_hard_requirements_and_real_citations) ... ok
+test_new_dimension_is_data_only (test_model_comparison.ComparisonTests.test_new_dimension_is_data_only) ... ok
+test_numerical_boundary_and_exact_cost (test_model_comparison.ComparisonTests.test_numerical_boundary_and_exact_cost) ... ok
+test_offline_cli_is_real_entry_and_does_not_call_model (test_model_comparison.ComparisonTests.test_offline_cli_is_real_entry_and_does_not_call_model) ... ok
+test_prompt_keeps_injected_text_as_untrusted_and_no_authority (test_model_comparison.ComparisonTests.test_prompt_keeps_injected_text_as_untrusted_and_no_authority) ... ok
+test_provider_error_is_not_a_tool_call (test_model_comparison.ComparisonTests.test_provider_error_is_not_a_tool_call) ... ok
+test_provider_missing_does_not_fabricate_model_success (test_model_comparison.ComparisonTests.test_provider_missing_does_not_fabricate_model_success) ... ok
+test_r1_token_usage_bool_and_mixed_invalid_must_fail_closed (test_model_comparison.ComparisonTests.test_r1_token_usage_bool_and_mixed_invalid_must_fail_closed) ... ok
+test_r2_malformed_item_structure_must_fail_closed (test_model_comparison.ComparisonTests.test_r2_malformed_item_structure_must_fail_closed) ... ok
+test_real_tool_event_fail_closed_even_when_response_looks_complete (test_model_comparison.ComparisonTests.test_real_tool_event_fail_closed_even_when_response_looks_complete) ... ok
+test_stale_or_unbounded_live_price_not_current (test_model_comparison.ComparisonTests.test_stale_or_unbounded_live_price_not_current) ... ok
+test_subprocess_failures_have_persisted_rejected_receipts (test_model_comparison.ComparisonTests.test_subprocess_failures_have_persisted_rejected_receipts) ... ok
+test_valid_synthetic_receipt_is_not_live_evidence (test_model_comparison.ComparisonTests.test_valid_synthetic_receipt_is_not_live_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.228s
+
+OK

@@ -11,6 +11,7 @@ import subprocess
 import tempfile
 
 from .evidence_comparison import build_prompt, digest, response_schema, rule_comparison, validate_model_result
+from .claim_gate import publish_checked_comparison
 
 
 def utc_now():
@@ -152,6 +153,8 @@ def codex_inference(bundle, output_dir, *, timeout=120, model=None):
         if failure or return_code != 0 or response is None:
             raise ValueError(failure or "provider_failed_or_missing_response")
         checked = validate_model_result(bundle, json.loads(response))
+        checked["verified_public_decision"] = publish_checked_comparison(
+            bundle, checked["model_output"], origin="model")
         write_json(output_dir / "validated.json", checked)
         meta["status"] = "accepted"
     except (ValueError, KeyError, TypeError, UnicodeError) as exc:
@@ -169,6 +172,8 @@ def main():
     parser.add_argument("--live", action="store_true", help="explicitly use the already signed-in Codex model")
     parser.add_argument("--out", type=Path)
     parser.add_argument("--model", help="Codex model id; select one supported by the existing account")
+    parser.add_argument("--verified-report", action="store_true",
+                        help="only show evidence-gated, program-generated wording")
     args = parser.parse_args()
     bundle = json.loads(args.bundle.read_text(encoding="utf-8"))
     try:
@@ -178,6 +183,10 @@ def main():
             result = codex_inference(bundle, args.out, model=args.model)
         else:
             result = rule_comparison(bundle)
+        if args.live:
+            result = result["verified_public_decision"]  # raw model text stays in local audit
+        elif args.verified_report:
+            result = publish_checked_comparison(bundle, origin="rule")
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except (ValueError, RuntimeError, OSError) as exc:

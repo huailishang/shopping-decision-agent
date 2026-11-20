@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "request_id": "test",
+  "category": "synthetic_schema_probe",
+  "as_of": "2026-11-18",
+  "region": "CN",
+  "candidates": [
+    {
+      "id": "a"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "cost",
+      "dimension": "cost",
+      "op": "lte",
+      "value": 1000,
+      "unit": "CNY",
+      "importance": "hard"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s",
+      "url": "https://example.invalid/test",
+      "captured_on": "2026-11-18",
+      "allowed_use": "model_research_short_summary",
+      "scope_region": "CN",
+      "limitations": "synthetic unit test, not a product fact"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f",
+      "candidate_id": "a",
+      "dimension": "cost",
+      "value": 900,
+      "unit": "CNY",
+      "source_id": "s",
+      "kind": "synthetic_probe",
+      "statement": "synthetic 900",
+      "limitations": "not a real quote"
+    }
+  ]
+}

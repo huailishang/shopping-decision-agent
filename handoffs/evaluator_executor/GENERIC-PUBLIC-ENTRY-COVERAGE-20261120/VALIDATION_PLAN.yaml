@@ -1,0 +1,60 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: GENERIC-PUBLIC-ENTRY-COVERAGE-20261120
+run_mode: local_offline_only
+mandatory: true
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-03, AC-05]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_publication_entry.py, -v]
+    expected_exit_code: 0
+    must_have_cases:
+      - malicious_budget_opposite_prose_not_shown_in_chat
+      - price_and_model_scope_unverified_are_unknown
+      - change_or_revoke_recomputes_visible_claim
+      - one_positive_typed_synthetic_claim_renders_with_claim_id
+      - dialogue_edit_clarify_and_nonprinter_survive
+    note: Assertions must inspect actual render_chat result_text and status, not gate internals alone.
+  - id: VP-02
+    ac: [AC-02, AC-05]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_claim_gate.py, -v]
+    expected_exit_code: 0
+  - id: VP-03
+    ac: [AC-03, AC-05]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+  - id: VP-04
+    ac: [AC-04, AC-05]
+    command: [python3, -X, utf8, scripts/audit_model_history_readonly.py, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 0
+    must_observe:
+      - frozen_manifest_and_protected_hashes_unchanged
+      - six_historical_completed_attempts_ten_limit
+      - missing_cases_C05_C06_C07
+      - frozen_vs_current_head_drift_explicit
+      - no_claim_of_successful_historical_model_experiment
+      - tamper_case_rejected_by_independent_test
+    note: Supplementary immutable receipt audit only; does not retroactively satisfy parent frozen VP-04.
+  - id: VP-05
+    ac: [AC-01, AC-02, AC-03]
+    method: independent_public_chat_replay
+    must_observe:
+      - displayed_verified_claims_bound_to_gate
+      - old_untrusted_report_text_not_promoted
+      - no_fake_price_and_no_buy_now
+      - user_stated_requirements_separate_from_verified_product_facts
+      - missing_evidence_safe_unknown
+      - positive_synthetic_and_negative_samples_both_demonstrated
+  - id: VP-06
+    ac: [AC-05, AC-06]
+    method: frozen_scope_and_side_effect_audit
+    must_observe:
+      - parent_and_historical_artifacts_unchanged
+      - no_new_model_web_platform_or_trade_attempts
+      - no_git_commit_push
+      - desktop_and_web_legacy_routes_explicitly_uncovered
+      - stdout_stderr_exit_codes_and_sample_outputs_preserved
+review_rules:
+  - Each failed mandatory AC blocks task PASS even when the broad test suite passes.
+  - Legacy audit arbitrary exit code one is not expected-reason success.
+  - Synthetic verified claims prove conditional rules, not source authenticity or real shopping benefit.
+  - Preserve historical evidence, costs, attempts, and existing uncommitted work.

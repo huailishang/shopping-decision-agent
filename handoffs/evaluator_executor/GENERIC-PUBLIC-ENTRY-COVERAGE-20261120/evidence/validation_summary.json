@@ -1,0 +1,75 @@
+{
+  "generated_at_utc": "2026-11-20T07:20:02.311588+00:00",
+  "task": "GENERIC-PUBLIC-ENTRY-COVERAGE-20261120",
+  "role": "Executor",
+  "verdict": "BLOCKED_BY_FROZEN_TEST_CONTRACT_CONFLICT_NOT_PASS",
+  "VP-01": {
+    "exit": 0,
+    "tests": 7,
+    "result": "PASS",
+    "log": "VP-01.log"
+  },
+  "VP-02": {
+    "exit": 0,
+    "tests": 12,
+    "result": "PASS",
+    "log": "VP-02.log"
+  },
+  "VP-03": {
+    "exit": 1,
+    "tests": 504,
+    "failed": 2,
+    "failed_tests": [
+      "test_chat_selected_pack_switch_and_answer (test_minimal_research_flow.MinimalFlowTest.test_chat_selected_pack_switch_and_answer)",
+      "test_chat_result_contains_same_plan (test_printer_decision_plan.PrinterDecisionPlanTest.test_chat_result_contains_same_plan)"
+    ],
+    "result": "FAIL",
+    "log": "VP-03.log"
+  },
+  "VP-04": {
+    "exit": 0,
+    "result": "PASS_INCOMPLETE_MODEL_EXPERIMENT_EVIDENCE_ONLY",
+    "log": "VP-04.log"
+  },
+  "VP-05": {
+    "baseline_source": "git show HEAD:shopping_decision/chat_bridge.py executed in isolated namespace",
+    "baseline_contains_injection": true,
+    "new_contains_injection": false,
+    "old_display_result_length": 46,
+    "new_display_result_length": 126,
+    "new_verified_synthetic_has_claim_id": true,
+    "no_live_model": true,
+    "no_external_data": true
+  },
+  "VP-06": {
+    "protected_files_checked": 17,
+    "protected_bad": [],
+    "baseline_sha256_valid": true,
+    "git_status": [
+      " M CURRENT.md",
+      " M shopping_decision/chat_bridge.py",
+      " M shopping_decision/model_comparison.py",
+      "?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/REPORT.md",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/REVIEW.md",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/evidence/",
+      "?? scripts/audit_model_history_readonly.py",
+      "?? scripts/verify_claim_publication.py",
+      "?? shopping_decision/claim_gate.py",
+      "?? tests/test_claim_gate.py",
+      "?? tests/test_publication_entry.py"
+    ],
+    "commit_or_push_performed": false,
+    "external_requests": 0,
+    "transactions": 0
+  },
+  "legacy_failures_are_expected_spec_incompatibility": true,
+  "legacy_tests_not_authorized_for_modification": [
+    "tests/test_minimal_research_flow.py",
+    "tests/test_printer_decision_plan.py"
+  ],
+  "uncovered_legacy_routes": [
+    "shopping_decision/desktop_bridge.py",
+    "shopping_decision/web.py"
+  ]
+}

@@ -1,31 +1,61 @@
-# 当前状态（2026-11-19，通用证据—结论发布门禁已冻结，交执行者）
+# 当前状态（2026-11-20，R1续修局部完成，全量506项仅审计范围冲突1错误）
 
 <!-- evaluator-executor-workflow:v2.2 -->
 
 ```yaml
 workflow: evaluator-executor-workflow/v2.2
-task_id: GENERIC-EVIDENCE-CLAIM-GATE-20261119
-task_kind: architecture_blocker_repair
-state: READY_FOR_EXECUTOR
+task_id: GENERIC-PUBLIC-ENTRY-COVERAGE-20261120
+task_kind: repair
+state: EXECUTING
 current_role: Executor
-baseline_commit: ce34764ab7d803b06abbdbcea0afe32048096c0a
+executor_result: R1_IMPLEMENTED_BLOCKED_AUDIT_SCOPE_ALLOWLIST
+mandatory_gate_status: R1_VP03_VP05_VP06_FAIL_AUDIT_SCOPE
+baseline_commit: 53fa539bacde631d2359781a61566bc1a1395e5a
 project_map_path: docs/PROJECT_BOTTLENECK_MAP.md
 project_map_revision: r35
 active_bottleneck_id: B06
-hypothesis_id: H-GENERIC-CLAIM-PUBLISH-01
-contract_path: handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/CONTRACT.md
-validation_plan_path: handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/VALIDATION_PLAN.yaml
-executor_report_path: handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/REPORT.md
-evaluator_review_path: NONE
-previous_task_review_path: handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/REVIEW.md
-next_artifact_path: handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/REPORT.md
+hypothesis_id: H-GENERIC-PUBLIC-ENTRY-01
+contract_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/CONTRACT.md
+amendment_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/AMENDMENT_R1.md
+validation_plan_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/VALIDATION_PLAN.R1.yaml
+executor_report_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT_R1.md
+evaluator_review_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REVIEW.md
+interim_review_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/INTERIM_REVIEW_R1.md
+previous_task_review_path: handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/REVIEW.md
+next_artifact_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT_R1.md
 authorization_commit: false
 authorization_push: false
 authorization_history_rewrite: false
 authorization_api_call: false
 ```
 
-## 最新评估与唯一执行入口（2026-11-19）
+## R1 执行者交付（2026-11-20，强制门禁未全过）
+
+- **R1 合同允许的聊天与测试迁移已执行**：安全研究进度显示 2／1／0 条待核记录（从受保护本地包读元数据，并非商品事实），微信必须／可选／未回答的安全核查路径按已确认条件变化，预算改答及品类切换不残留旧研究结论。未核研究原文仍只在内部审计，不进入已验商品结论；没有增加网络、模型、交易行为。
+- **正式命令结果**：R1-VP-01=21/21退出0，R1-VP-02=9/9退出0，R1-VP-04=12/12退出0；R1-VP-03=9项8通过1错误、R1-VP-05=506项505通过1错误、R1-VP-06退出1。**唯一报错**为旧 `scripts/audit_model_history_readonly.py` 的固定 `CURRENT_TASK_ALLOWED_DRIFT` 未包含评估者 R1 正式授权改动的两份旧测试文件。不能把这次退出1或临时内存诊断写成正式PASS。
+- **只读定位**：`evidence/r1/history_scope_diagnostic.json` 临时仅在内存把 R1 允许的两个测试文件加入变化集合（绝未修改审计脚本），完整账本检查通过：17份保护件SHA不变、6/10尝试、C05/C06/C07缺测、HEAD漂移、成功模型输出0。父包REJECTED保持。
+- 下一步交评估者评审是否**新增审计脚本的极小白名单修订权限**；没有该授权不得修改审计脚本，也无法让当前冻结计划全绿。执行报告和原始日志：[REPORT_R1.md](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT_R1.md)、`evidence/r1/R1-VP-01.log` 至 `R1-VP-06.log`。当前继续保持 `EXECUTING / BLOCKED`，**不宣称PASS**，禁止提交推送。
+
+## 最新评估与唯一执行入口（2026-11-20，R1冻结时的历史信息）
+- **评估者独立重跑** `python3 -X utf8 -m unittest discover -s tests -q`，实际504项、502通过、2失败（退出1）；两条旧测试要求将未经新门禁验证的`research_case.report_text`或`decision_plan.text`直通聊天。原AC-05未通过，本任务不签PASS。
+- **同时发现可用性回退**：现有2/1/0条研究资料和「微信必须/可选」在`result_text`几乎均被替换成同一笼统待核说明；不得只改测试断言刷绿。
+- **唯一下一执行包：同任务R1有界续修**。评估记录 [INTERIM_REVIEW_R1.md](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/INTERIM_REVIEW_R1.md)、已冻结 [AMENDMENT_R1.md](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/AMENDMENT_R1.md)、[VALIDATION_PLAN.R1.yaml](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/VALIDATION_PLAN.R1.yaml)。明确授权仅两条旧测试的最小语义迁移，并要求安全、可解释的研究进度/下一行动从确定性输入产生；未核商品结论继续封堵。
+- **下一责任 Executor**：执行R1并写`REPORT_R1.md`及`evidence/r1/`，全量必须exit 0，交Evaluator再做独立复核。原包时间/修复轮次不重置；无外部调用、交易、Git commit/push；旧模型实验正式拒绝和B01真实商品缺件保持。
+
+## R1续修前执行者交付状态（历史阻断；2026-11-20）
+
+- **GENERIC-PUBLIC-ENTRY-COVERAGE-20261120：BLOCKED / Executor，未提交 PASS**。正常聊天 `render_chat.result_text` 已改为仅通过新确定性门禁发布规则产生的文字；无合适结构化事实时显示“待核研究”，旧自由文本保留在 `report_json` 审计，不再作为用户结论。已实跑旧版恶意显示与新版安全降级对比；新增专项7/7、原门禁12/12、聊天旧用例14/14均通过。
+- **全量 504 项中 2 项旧测试失败**：`test_minimal_research_flow.test_chat_selected_pack_switch_and_answer` 与 `test_printer_decision_plan.test_chat_result_contains_same_plan` 仍要求未经新门禁校验的 `report_text/decision_plan.text` 原样直通 `result_text`，与新冻结合同冲突。两文件不在本包修改白名单；执行者不能把不可信内容放回用户出口换取全绿。完整异常与日志在本包 `REPORT.md`、`evidence/VP-03.log`。
+- 历史新只读审计 `scripts/audit_model_history_readonly.py` 返回 0、保全17份固定保护文件，独立验证旧6/10次尝试、C05/C06/C07未运行、旧HEAD与当前HEAD漂移，含恶意账本修改拒绝测试；**不追认上一包 REJECTED**。无外部调用、交易、Git提交/推送。下一步需要评估者决定是否冻结允许更新这两项过时的测试断言，然后由执行者继续完成全套回归。核心报告：[本包 REPORT](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT.md)。
+
+## 最新评估与唯一执行入口（2026-11-20；以下为开包时原评估）
+
+- 评估者独立复跑当前门禁专项 **12/12 PASS**、全量 **497/497 PASS**。但旧冻结审计 VP-04 在 git HEAD 严格相等断言处提前失败（旧 ce34764...，现 53fa539...），没有达到预期的 C05/C06/C07 缺测原因；上一包正式 **REJECTED（强制验收阻断）**，其受测新发布门禁工程子项为局部 PASS，历史原件与额度不改。
+- 新门禁现覆盖规则/模型/手工矩阵新出口；**正常 chat_bridge.render_chat 的 result_text 仍从旧 reasons/report_text 独立拼接**，没有证明经过统一门禁。相比先抓商品报价，更优先消除用户主入口的展示绕过；B01 准确型号/河南现价/微信持续使用及真人决策收益仍未知。
+- **当前唯一新执行包：GENERIC-PUBLIC-ENTRY-COVERAGE-20261120**。[冻结合同](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/CONTRACT.md) · [验证计划](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/VALIDATION_PLAN.yaml) · [原包独立评估](handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/REVIEW.md)。主目标：正常聊天用户展示只有来自统一门禁的已验结论，否则安全降为待核；历史模型审计另做只读回执核查，不修改旧审计/账本。
+- 下一责任 **Executor**。纯离线程序/回归、≤5有效小时、≤2轮集中修复；禁止网页/模型/平台业务 API、登录/购买/支付/提交/推送。完成本包 REPORT 和原始 evidence 再交 Evaluator 独立验收。旧 r35 瓶颈图是冻结受保护原件，不更新；此处 B06 最新判断由本轮 REVIEW 追溯。
+
+## 上次评估与执行入口（2026-11-19，历史留存）
 
 - **当前结论：NEEDS_REPAIR（通用架构阻断），下一角色Executor**。上一轮R1/R2已由评估者独立复跑专项21/21、全量485/485通过，工程子项可通过；但新研究矩阵/人工比较未经过统一确定性门禁，模型自由文字可能与已计算事实相反仍被结构校验接受。本轮总体验收不能签PASS。
 - [父包独立评估](handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/REVIEW.md)记载可复现反例：硬预算1000元、证据价格1300元，程序`status=failed`正确，但解释谎称1300<1000、应购买仍被旧`validate_model_result`接纳；`semantic_entailment_verified=false`仅是标记，不等于阻止错误文字展示。

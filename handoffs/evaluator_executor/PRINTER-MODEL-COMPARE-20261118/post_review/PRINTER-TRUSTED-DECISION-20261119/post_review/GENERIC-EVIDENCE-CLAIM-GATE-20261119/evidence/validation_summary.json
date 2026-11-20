@@ -1,0 +1,66 @@
+{
+  "generated_at_utc": "2026-11-20T06:24:16.751856+00:00",
+  "gate": "L2 executor evidence (not L3 independent verdict)",
+  "VP-01": {
+    "result": "PASS",
+    "tests": 12,
+    "exit": 0,
+    "log": "VP-01.log"
+  },
+  "VP-02": {
+    "result": "PASS",
+    "tests": 21,
+    "exit": 0,
+    "log": "VP-02.log"
+  },
+  "VP-03": {
+    "result": "PASS",
+    "tests": 497,
+    "exit": 0,
+    "log": "VP-03.log"
+  },
+  "VP-04": {
+    "result": "BLOCKED_BY_BASELINE_HEAD_MISMATCH",
+    "exit": 1,
+    "log": "VP-04.log",
+    "expected_reason_observed": false,
+    "note": "Historical audit check_scope asserts frozen git baseline before reaching old missing model cases; cannot rewrite protected git history."
+  },
+  "VP-05": {
+    "result": "PASS",
+    "replays": [
+      "replay_model.json",
+      "replay_rule.json",
+      "replay_manual.json"
+    ],
+    "adversarial_prose_present_in_public_output": false
+  },
+  "VP-06": {
+    "result": "PASS_WITH_RECORDED_BASELINE_DIVERGENCE",
+    "immutable_files_checked": 17,
+    "immutable_modified_or_missing": [],
+    "baseline_sha256_valid": true,
+    "actual_head": "53fa539bacde631d2359781a61566bc1a1395e5a",
+    "frozen_head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+    "git_status": [
+      " M shopping_decision/model_comparison.py",
+      "?? handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/evidence/",
+      "?? scripts/verify_claim_publication.py",
+      "?? shopping_decision/claim_gate.py",
+      "?? tests/test_claim_gate.py"
+    ],
+    "authorized_git_commit": false,
+    "authorized_git_push": false
+  },
+  "VP-07": {
+    "result": "PASS_FOR_LOCAL_COUNTEREXAMPLES_ONLY",
+    "test_file": "tests/test_claim_gate.py",
+    "live_source_content_verified": false
+  },
+  "historical_attempts_used": 6,
+  "historical_attempts_limit": 10,
+  "external_requests_made": 0,
+  "transaction_attempts": 0,
+  "live_model_calls": 0,
+  "scope_limitation": "Historical GUI and arbitrary free-form external source truth are not validated by this gate."
+}

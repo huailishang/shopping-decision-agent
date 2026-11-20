@@ -1,0 +1,38 @@
+{
+  "mode": "in_memory_readonly_diagnostic_only_NOT_frozen_VP_06_PASS",
+  "historical_manifest_drift": [
+    "shopping_decision/chat_bridge.py",
+    "tests/test_minimal_research_flow.py",
+    "tests/test_printer_decision_plan.py"
+  ],
+  "r1_authorized_file_drift": [
+    "shopping_decision/chat_bridge.py",
+    "tests/test_minimal_research_flow.py",
+    "tests/test_printer_decision_plan.py"
+  ],
+  "conditional_audit": {
+    "audit_status": "historical_receipts_intact_experiment_incomplete",
+    "parent_vp04_status": "REJECTED_not_retroactively_repaired",
+    "frozen_manifest_sha_valid": true,
+    "protected_files_valid": 17,
+    "original_manifest_file_count": 1229,
+    "allowed_current_source_drift": [
+      "shopping_decision/chat_bridge.py",
+      "tests/test_minimal_research_flow.py",
+      "tests/test_printer_decision_plan.py"
+    ],
+    "frozen_head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+    "current_head": "53fa539bacde631d2359781a61566bc1a1395e5a",
+    "head_drift": true,
+    "scheduled": 6,
+    "completed": 6,
+    "attempt_limit": 10,
+    "not_attempted_cases": [
+      "C05",
+      "C06",
+      "C07"
+    ],
+    "accepted_model_outputs": 0,
+    "old_evidence_modified": false
+  }
+}

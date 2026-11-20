@@ -1,0 +1,17 @@
+test_action_kind_research_but_description_says_buy_now (test_claim_gate.ClaimGateTests.test_action_kind_research_but_description_says_buy_now) ... ok
+test_cli_actual_verified_display_replay (test_claim_gate.ClaimGateTests.test_cli_actual_verified_display_replay) ... ok
+test_generic_second_nonprinter_category_same_gate (test_claim_gate.ClaimGateTests.test_generic_second_nonprinter_category_same_gate) ... ok
+test_historical_manual_matrix_is_downgraded_not_relabelled_as_verified (test_claim_gate.ClaimGateTests.test_historical_manual_matrix_is_downgraded_not_relabelled_as_verified) ... ok
+test_input_change_or_source_revocation_removes_prior_verified_claim (test_claim_gate.ClaimGateTests.test_input_change_or_source_revocation_removes_prior_verified_claim) ... ok
+test_listing_sku_not_a_regionally_valid_price_or_current_stock (test_claim_gate.ClaimGateTests.test_listing_sku_not_a_regionally_valid_price_or_current_stock) ... ok
+test_missing_or_conflicting_fact_remains_unknown_or_conflict (test_claim_gate.ClaimGateTests.test_missing_or_conflicting_fact_remains_unknown_or_conflict) ... ok
+test_numeric_rule_correct_but_opposite_summary_and_explanation (test_claim_gate.ClaimGateTests.test_numeric_rule_correct_but_opposite_summary_and_explanation) ... ok
+test_source_is_index_only_or_series_only_for_exact_model (test_claim_gate.ClaimGateTests.test_source_is_index_only_or_series_only_for_exact_model) ... ok
+test_tradeoff_cites_other_candidate_or_dimension (test_claim_gate.ClaimGateTests.test_tradeoff_cites_other_candidate_or_dimension) ... ok
+test_typed_evidence_fact_and_computed_expression (test_claim_gate.ClaimGateTests.test_typed_evidence_fact_and_computed_expression) ... ok
+test_valid_verified_claim_and_public_text_positive (test_claim_gate.ClaimGateTests.test_valid_verified_claim_and_public_text_positive) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.307s
+
+OK
