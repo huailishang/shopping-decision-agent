@@ -1,0 +1,16 @@
+{
+  "command": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "C:/Users/HuailiShang/.codex/skills/evaluator-executor-workflow/scripts/validate_workflow.py",
+    "--repo",
+    ".",
+    "--current",
+    "CURRENT.md"
+  ],
+  "exit_code": 1,
+  "duration_seconds": 0.157,
+  "stdout_sha256": "0962137236452c530173e59caf5ca10aa151fd4662adc7a5c725765027bb126e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

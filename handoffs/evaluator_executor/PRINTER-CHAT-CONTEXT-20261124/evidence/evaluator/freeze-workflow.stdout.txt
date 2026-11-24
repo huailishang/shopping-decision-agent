@@ -1,0 +1,1 @@
+OK: v2.2 routing and required artifacts are structurally valid

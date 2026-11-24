@@ -1,0 +1,35 @@
+{
+  "mode": "in_memory_diagnostic_not_frozen_VP06",
+  "manifest_drift": [
+    "shopping_decision/chat_bridge.py",
+    "tests/test_minimal_research_flow.py",
+    "tests/test_printer_decision_plan.py"
+  ],
+  "checked_unlisted_files": 1226,
+  "audit": {
+    "audit_status": "historical_receipts_intact_experiment_incomplete",
+    "parent_vp04_status": "REJECTED_not_retroactively_repaired",
+    "frozen_manifest_sha_valid": true,
+    "protected_files_valid": 17,
+    "original_manifest_file_count": 1229,
+    "allowed_current_source_drift": [
+      "shopping_decision/chat_bridge.py",
+      "tests/test_minimal_research_flow.py",
+      "tests/test_printer_decision_plan.py"
+    ],
+    "frozen_head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+    "current_head": "4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf",
+    "head_drift": true,
+    "scheduled": 6,
+    "completed": 6,
+    "attempt_limit": 10,
+    "not_attempted_cases": [
+      "C05",
+      "C06",
+      "C07"
+    ],
+    "accepted_model_outputs": 0,
+    "old_evidence_modified": false
+  },
+  "tampered_ledger": "historical_ledger_sha_mismatch"
+}

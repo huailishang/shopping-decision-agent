@@ -1,0 +1,44 @@
+{
+  "original-case": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/VERIFY_ORIGINAL_CASE.py"
+    ],
+    "started_at_utc": "2026-11-24T01:23:21.473003+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "duration_seconds": 0.549,
+    "stdout_sha256": "c8d2f0a44b5f6001bca4f384154b1582f1df37d9cc08253e8839d4c317eacc5f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "previous-controls": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VERIFY_FROZEN_REPLAYS.py"
+    ],
+    "started_at_utc": "2026-11-24T01:23:22.027813+00:00",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "duration_seconds": 0.355,
+    "stdout_sha256": "7bf904b557781f38090e54191640e445a79cb2a868dc15e8195f1bb5df85421b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "independent-counterexamples": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/evidence/evaluator/replay_extra.py"
+    ],
+    "started_at_utc": "2026-11-24T01:23:22.394678+00:00",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "duration_seconds": 0.432,
+    "stdout_sha256": "dc43e9ad3590cc1e70cbd3295d19cb178be0deb24a0a5e705eabe3b77e5c70ad",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

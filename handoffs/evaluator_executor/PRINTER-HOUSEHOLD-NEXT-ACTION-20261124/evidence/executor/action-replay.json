@@ -1,0 +1,325 @@
+{
+  "checks": {
+    "clear_original_steps": true,
+    "decisions_follow_current_choice": true,
+    "quote_dependencies_follow_answers": true,
+    "quoted_total_stays_unverified_and_budget_updates": true,
+    "v1_not_promoted": true,
+    "no_card_after_category_switch": true,
+    "all_transaction_flags_false": true
+  },
+  "cases": {
+    "original": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n先确认是在微信小程序内发起，还是可以把文件转到厂商App。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（费用范围待确认）。\n核价前待确认：实际收货区县、预算费用范围。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "choose_path",
+        "wechat_action": "先确认是在微信小程序内发起，还是可以把文件转到厂商App。",
+        "quote_missing": [
+          "delivery_region",
+          "budget_scope"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": null,
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "mini": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（费用范围待确认）。\n核价前待确认：实际收货区县、预算费用范围。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_miniprogram",
+        "wechat_action": "核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。",
+        "quote_missing": [
+          "delivery_region",
+          "budget_scope"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": null,
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "transfer": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n核能否从微信把普通文件转到厂商App发起打印，并记录转存步骤。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（费用范围待确认）。\n核价前待确认：实际收货区县、预算费用范围。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_transfer",
+        "wechat_action": "核能否从微信把普通文件转到厂商App发起打印，并记录转存步骤。",
+        "quote_missing": [
+          "delivery_region",
+          "budget_scope"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": null,
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "optional": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n微信是偏好，优先核低频耗材和所售配置，保留微信路径的未知。\nBrother HL-L1238W：核同型号低频使用所需的初始墨粉、替换墨粉与硒鼓。\nHP M232dw：按历史配置线索 9YF97A 核所售套装与耗材，保留在售状态待核。\n预算 1000元（费用范围待确认）。\n核价前待确认：实际收货区县、预算费用范围。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "continue_comparison",
+        "wechat_action": "微信是偏好，优先核低频耗材和所售配置，保留微信路径的未知。",
+        "quote_missing": [
+          "delivery_region",
+          "budget_scope"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": null,
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "核同型号低频使用所需的初始墨粉、替换墨粉与硒鼓。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核所售套装与耗材，保留在售状态待核。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "setup_rejected": {
+      "text": "已确认不接受App/扫码首次设置；现有型号流程材料不足以证明免设置可用，此条件先按未核硬要求处理。\n商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n先核是否能免厂商App或扫码完成首次设置；未取得适用证据前保留待核。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（费用范围待确认）。\n核价前待确认：实际收货区县、预算费用范围。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_no_setup",
+        "wechat_action": "先核是否能免厂商App或扫码完成首次设置；未取得适用证据前保留待核。",
+        "quote_missing": [
+          "delivery_region",
+          "budget_scope"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": null,
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "province_only": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（费用范围待确认）。\n核价前待确认：实际收货区县、预算费用范围。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_miniprogram",
+        "wechat_action": "核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。",
+        "quote_missing": [
+          "delivery_region",
+          "budget_scope"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": null,
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "district": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（费用范围待确认）。\n核价前待确认：预算费用范围。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_miniprogram",
+        "wechat_action": "核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。",
+        "quote_missing": [
+          "budget_scope"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": null,
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "quote_ready": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（主机、运费及必要支出）。\n核同一收货区县及费用范围下的完整应付价。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_miniprogram",
+        "wechat_action": "核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。",
+        "quote_missing": [],
+        "quote_status": "awaiting_authoritative_quote",
+        "budget_max_cny": 1000,
+        "budget_scope": "device_delivered",
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "withdraw_district": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 1000元（主机、运费及必要支出）。\n核价前待确认：实际收货区县。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_miniprogram",
+        "wechat_action": "核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。",
+        "quote_missing": [
+          "delivery_region"
+        ],
+        "quote_status": "prerequisites_missing",
+        "budget_max_cny": 1000,
+        "budget_scope": "device_delivered",
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "new_budget": {
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为800元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n购买前核对\n核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。\nBrother HL-L1238W：按畅享印小程序线索核准确型号、首次配置及隔次微信发起。\nHP M232dw：按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。\n预算 800元（主机、运费及必要支出）。\n核同一收货区县及费用范围下的完整应付价。\n核价回传：准确型号与配置、商家、区县、价格分项、观察时间及有效期。实际价格待核。",
+      "preflight": {
+        "wechat_step": "verify_miniprogram",
+        "wechat_action": "核首次配置完成后，是否能直接在微信小程序发起；隔一段时间再从微信打印一份普通文件。",
+        "quote_missing": [],
+        "quote_status": "awaiting_authoritative_quote",
+        "budget_max_cny": 800,
+        "budget_scope": "device_delivered",
+        "payable_cny": null,
+        "candidates": [
+          {
+            "model": "Brother HL-L1238W",
+            "next_step": "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。"
+          },
+          {
+            "model": "HP M232dw",
+            "next_step": "按历史配置线索 9YF97A 核型号，有条件时核惠普云打印首次绑定和隔次微信发起。"
+          }
+        ]
+      },
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "switch_category": {
+      "text": "该品类目前只能整理需求，尚无可用的专业商品材料；不会返回打印机候选。",
+      "preflight": null,
+      "public": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+ M CURRENT.md
+ M scripts/audit_model_history_readonly.py
+ M shopping_decision/chat_bridge.py
+ M tests/test_publication_entry.py
+?? handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/
+?? handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/
+?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/AMENDMENT_R2.md
+?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT_R2.md
+?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REVIEW.md
+?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REVIEW_R2.md
+?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/evidence/evaluator-r1/
+?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/evidence/evaluator-r2/
+?? handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/evidence/r2/
+?? handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/
+?? handoffs/evaluator_executor/PRINTER-CHAT-REQUIREMENT-AUTHORITY-20261124/
+?? shopping_decision/confirmed_comparison.py
+?? tests/test_chat_claim_binding.py
+?? tests/test_chat_context_admission.py
+?? tests/test_chat_requirement_authority.py

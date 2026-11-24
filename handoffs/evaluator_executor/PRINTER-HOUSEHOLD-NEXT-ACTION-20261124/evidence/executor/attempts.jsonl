@@ -1,0 +1,20 @@
+{"id":"Q01","event":"scheduled","at":"2026-11-24T07:37:14.4815823+00:00","kind":"query","target":"site:support.brother.com HL-L1238W 兄弟畅享印 微信小程序 PDF 说明书 中国"}
+{"id":"Q02","event":"scheduled","at":"2026-11-24T07:37:14.4815823+00:00","kind":"query","target":"site:brother.cn HL-L1238W 兄弟畅享印 微信 小程序 下载 规格"}
+{"id":"Q03","event":"scheduled","at":"2026-11-24T07:37:14.4815823+00:00","kind":"query","target":"site:hp.com M232dw 9YF97A 微信 直接打印 惠普 小程序 中国 支持"}
+{"id":"Q01","event":"completed","at":"2026-11-24T07:37:34.6829974+00:00","status":"ok","receipt":"search-summary.md"}
+{"id":"Q02","event":"completed","at":"2026-11-24T07:37:34.6829974+00:00","status":"ok","receipt":"search-summary.md"}
+{"id":"Q03","event":"completed","at":"2026-11-24T07:37:34.6829974+00:00","status":"ok","receipt":"search-summary.md"}
+{"id":"O01","event":"scheduled","at":"2026-11-24T07:37:34.6829974+00:00","kind":"open","target":"https://www.brother.cn/minisite/bcnactivity/new-question10.html"}
+{"id":"O02","event":"scheduled","at":"2026-11-24T07:37:34.6829974+00:00","kind":"open","target":"https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx"}
+{"id":"O03","event":"scheduled","at":"2026-11-24T07:37:34.6829974+00:00","kind":"open","target":"https://support.brother.com/g/b/manualtop.aspx?c=cn&lang=zh&prod=hll1238w_cn"}
+{"id":"O01","event":"completed","at":"2026-11-24T07:38:11.9838873+00:00","status":"blocked","receipt":"brother-faq.txt"}
+{"id":"O02","event":"completed","at":"2026-11-24T07:38:11.9838873+00:00","status":"ok","receipt":"brother-brochure.md"}
+{"id":"O03","event":"completed","at":"2026-11-24T07:38:11.9838873+00:00","status":"blocked","receipt":"brother-manual-index.txt"}
+{"id":"O04","event":"scheduled","at":"2026-11-24T07:38:11.9838873+00:00","kind":"open","target":"https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf"}
+{"id":"Q04","event":"scheduled","at":"2026-11-24T07:38:11.9838873+00:00","kind":"query","target":"HP 9YF97A M232dw 中国 官方 商城 datasheet 微信 小程序 site:hp.com"}
+{"id":"O04","event":"completed","at":"2026-11-24T07:38:31.2330049+00:00","status":"ok","receipt":"hp-series-guide.md"}
+{"id":"Q04","event":"completed","at":"2026-11-24T07:38:31.2330049+00:00","status":"ok","receipt":"hp-search.md"}
+{"id":"O05","event":"scheduled","at":"2026-11-24T07:38:31.2330049+00:00","kind":"open","target":"https://www.hp.com/cn-zh/printers/home-laser-printers.html"}
+{"id":"O05","event":"completed","at":"2026-11-24T07:38:56.7101167+00:00","status":"ok","receipt":"hp-cn-model.md"}
+{"id":"O06","event":"scheduled","at":"2026-11-24T07:43:06.8349843+00:00","kind":"open","target":"https://www.hp.com/cn-zh/printers/home-laser-printers.html#M232dw-商城","link_ref":"M232dw 小节公开商城链接"}
+{"id":"O06","event":"completed","at":"2026-11-24T07:43:28.8813649+00:00","status":"blocked","receipt":"hp-linked-listing.txt","resolved_url":"https://item.jd.com/100019179990.html"}

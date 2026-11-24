@@ -1,0 +1,23 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-17",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/CONFIRMED-FACT-MODEL-SCOPE-20261124/VERIFY_SCOPE.py",
+    "--phase",
+    "post"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/CONFIRMED-FACT-MODEL-SCOPE-20261124/VERIFY_SCOPE.py --phase post",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-24T06:55:30.984048+00:00",
+  "finished_at_utc": "2026-11-24T06:55:37.423784+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-17.stdout.log",
+  "stderr_path": "EV-17.stderr.log",
+  "stdout_bytes": 605,
+  "stderr_bytes": 0,
+  "stdout_sha256": "b2524253719494af8a5cc65d4ff5166f58ae5eaf9cf9afbe9ff3a2e135ec997d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

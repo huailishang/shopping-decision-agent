@@ -1,0 +1,500 @@
+diff --git a/CURRENT.md b/CURRENT.md
+index 06fbecc..74d27c8 100644
+--- a/CURRENT.md
++++ b/CURRENT.md
+@@ -1,35 +1,94 @@
+-# 当前状态（2026-11-20，R1续修局部完成，全量506项仅审计范围冲突1错误）
++# 当前状态（2026-11-24，通用确认条件比较送审）
+ 
+ <!-- evaluator-executor-workflow:v2.2 -->
+ 
+ ```yaml
+ workflow: evaluator-executor-workflow/v2.2
+-task_id: GENERIC-PUBLIC-ENTRY-COVERAGE-20261120
++task_id: GENERIC-CONFIRMED-REQUIREMENTS-20261124
+ task_kind: repair
+ state: EXECUTING
+ current_role: Executor
+-executor_result: R1_IMPLEMENTED_BLOCKED_AUDIT_SCOPE_ALLOWLIST
+-mandatory_gate_status: R1_VP03_VP05_VP06_FAIL_AUDIT_SCOPE
+-baseline_commit: 53fa539bacde631d2359781a61566bc1a1395e5a
++next_role: Executor
++mandatory_gate_status: L2_PASS_SUBMITTED_FOR_REVIEW
++baseline_commit: 4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf
++baseline_path: handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/BASELINE.json
++baseline_sha256: 0736c957de5b8a40f61bc6ee98093a177d6b2142d2d1aced39d60b5cef47f74c
+ project_map_path: docs/PROJECT_BOTTLENECK_MAP.md
+ project_map_revision: r35
+ active_bottleneck_id: B06
+-hypothesis_id: H-GENERIC-PUBLIC-ENTRY-01
+-contract_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/CONTRACT.md
+-amendment_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/AMENDMENT_R1.md
+-validation_plan_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/VALIDATION_PLAN.R1.yaml
+-executor_report_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT_R1.md
+-evaluator_review_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REVIEW.md
+-interim_review_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/INTERIM_REVIEW_R1.md
+-previous_task_review_path: handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/post_review/PRINTER-TRUSTED-DECISION-20261119/post_review/GENERIC-EVIDENCE-CLAIM-GATE-20261119/REVIEW.md
+-next_artifact_path: handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT_R1.md
++hypothesis_id: H-CONFIRMED-REQUIREMENTS-01
++contract_path: handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/CONTRACT.md
++validation_plan_path: handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/VALIDATION_PLAN.yaml
++executor_report_path: handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/REPORT.md
++evaluator_review_path: handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/REVIEW.md
++next_artifact_path: handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/REPORT.md
++previous_task_review_path: handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/REVIEW.md
+ authorization_commit: false
+ authorization_push: false
+ authorization_history_rewrite: false
+ authorization_api_call: false
+ ```
+ 
+-## R1 执行者交付（2026-11-20，强制门禁未全过）
++## 本轮执行者交付（2026-11-24）
++
++- GENERIC-CONFIRMED-REQUIREMENTS-20261124：打印机正常聊天使用共用确认条件比较入口；冻结打印机7/7及安全检查通过，水壶9/9及共用入口验证通过，新增专项6/6，全量533/533，L2 15/15。1628份保护件不变，HEAD及索引不变。
++- 已交 [执行报告](handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/REPORT.md) 与 [L2原始回执](handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/evidence/executor/l2/L2-GATE.md)。执行者提交快照，保持 EXECUTING / Executor，等待评估者接受并独立复核。不宣称最终PASS，不提交或推送；真实商品与用户收益仍未知。
++
++## 独立复核裁定（2026-11-24，上一包）
++
++- **REJECTED**。评估者独立复跑冻结检查 12/12、全量 527/527。新重放发现，当微信必须被资料包反写、遗漏，或用户指定小程序而资料只有通用微信支持时，仍可错误显示满足或标记候选可继续研究。地区、价格和全包结构已验修复保留，B06 仍是聊天发布阻断。[独立评审](handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/REVIEW.md)
++
++## 唯一执行入口（2026-11-24）
++
++- 执行者接手 `GENERIC-CONFIRMED-REQUIREMENTS-20261124`。当前会话提供硬条件，资料提供事实，正常打印机聊天与离线水壶样例使用同一比较入口。先完成打印机修复，再验证第二品类的数据能借用同一个入口。总上限 4 有效小时、1 轮集中修正。[冻结合同](handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/CONTRACT.md) · [15 项验收计划](handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/VALIDATION_PLAN.yaml)
++- 打印机前测 4/7，重现反写、遗漏、指定微信路径缺证三处错误。水壶前测 5/9，重现遗漏、放宽、降为偏好和改答旧值四处错误。两条均退出 1。工作区冻结 1628 份保护件，继承 527 项旧回归。[打印机前测](handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/preparation/printer.stdout.json) · [水壶前测](handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/preparation/kettle.stdout.json)
++- 本包接替未开工的 [打印机硬条件绑定包](handoffs/evaluator_executor/PRINTER-CHAT-REQUIREMENT-AUTHORITY-20261124/CONTRACT.md)，其冻结材料留存。水壶仅用于离线迁移。通过后优先核能改变打印机实际下一行动的商品证据。河南实际价、准确型号微信使用与真人收益仍待证。公网、平台接口、模型、账号、设备、交易与 Git 提交推送授权均为零。
++
++## 执行者交付（2026-11-24，历史）
++
++- 新任务 `PRINTER-CHAT-CONTEXT-20261124` 的冻结基线重放退出 0、1、0、0，五处反例复现；修改聊天适配层后，补测八项检查全真，新增专项7/7，原专项10/10，全量527/527。
++- L2 12条冻结检查全部退出0；1554份保护件无差异、HEAD和索引不变；旧模型账6/10、C05/C06/C07缺测、0份合约成功输出和历史REJECTED保留。
++- 已交 [REPORT.md](handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/REPORT.md)、[DECISION_HANDOFF.md](handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/DECISION_HANDOFF.md) 和 `evidence/executor/l2/`。普通原案与改答通过；两款实际价、微信后续复用、真人收益仍未知。
++- 执行者当时保持 EXECUTING / Executor 提交快照，随后由评估者独立复核。未提交或推送。
++
++## 最新独立评估与唯一执行入口（2026-11-24，历史冻结）
++
++- **上一包 `CHAT-PUBLIC-CLAIM-BINDING-20261123` 裁定 `REJECTED`。** 八条冻结命令均退出 0，全量 520/520，原三案修复和正例保留。补测在同一微信维度加入单位为 CNY 的报价后，河南功能错误通过、日本有效功能错误降级；另有条件 ID 冲突、来源 ID 畸形错误及负数购机价显示满足。VP-04 未通过，86 份保护件与历史审计通过。上一包 v2.2 结构验证退出 1，细节与原始记录已归档。[独立裁定](handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/REVIEW.md)
++- **下一责任 Executor，唯一任务 `PRINTER-CHAT-CONTEXT-20261124`。** 一次修整个资料包的结构校验、条件地区和价格适用性，再跑原河南家庭正常入口和改答，交两款证据与下一行动对照。上限 6 有效小时、2 轮集中纠错，然后交 Evaluator 独立复核。工作区基线包含送审代码。[冻结合同](handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/CONTRACT.md) · [执行命令](handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/START.md) · [验证计划](handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/VALIDATION_PLAN.yaml) · [准备期基线回执](handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/preparation/exit_codes.json)
++- B06 仍是聊天发布前置阻断。B01 真实河南有效价、型号微信后续复用及真人收益依然待证。新包只做离线工程及存量资料交付，公网、平台接口、模型、账号、设备、支付、交易及 Git 提交、推送权限均为零。
++
++## 2026-11-23 执行者交付（历史，已复核）
++
++- **送审任务 `CHAT-PUBLIC-CLAIM-BINDING-20261123`。** 执行者已修复前一轮独立评估找到的错位购机预算、报价与功能地区混用、未来观察报价三项真实 `render_chat` 反例；同一候选包里无效报价不再错误拖累另一候选的有效证据。
++- 冻结复现前为 **3 项失败**，修复后 `VP-01` 的 **9 项检查全部通过**，新的 `VP-02` 专项 **10/10**，继承的 R1 六项检查均 exit 0（21/21、9/9、13/13、12/12、**520/520 全量**、历史审计通过）。受保护 **86 份 SHA-256 全一致**，HEAD 仍为 `4a2f3c5`，未重置旧模型 6/10、C05/C06/C07 缺测及父包 REJECTED。
++- [执行者报告](handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/REPORT.md) 及 `evidence/executor/` 内有冻结重放前后 `result_text`、命题 ID、原始命令 stdout/stderr、退出码、耗时和受保护哈希。送审改动限 `shopping_decision/chat_bridge.py`、新增 `tests/test_chat_claim_binding.py`、本包交付和本文件；原 R2 已评代码、旧账、Web／桌面保持原样。执行者记录无公网、模型、平台业务 API、交易和 Git 提交推送。
++- **仍未知**：真实商品准确 SKU、河南当前有效价、微信实机后续复用及真人选购收益，不能因为本地测试通过就声称 B01 完成。
++
++## 开工时的执行入口（历史）
++
++- **执行者接手。** 本包针对三处已复现的聊天错误，分别核对购机预算、收货与使用地、报价观察时间。先读 [合同](handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/CONTRACT.md)、[验证计划](handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VALIDATION_PLAN.yaml) 和 [工作区基线](handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/BASELINE.json)，保留已评过的 R2 改动。
++- 评估者冻结重放在当前版本恰好复现三处失败，合法报价、合成正例和旧反例仍符合预期。[修复前原始输出](handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/evidence/preparation/VP-01-baseline.stdout.txt)
++- 本包上限 **3 有效小时、1 轮集中离线修复**。仅改聊天适配层并补专项，六项旧命令和新重放全部通过后交 `REPORT.md` 与原始证据，再由评估者独立复核。无公网、模型、业务 API、交易及 Git 提交／推送授权。
++
++## 上一包 R2 独立评估（2026-11-23）
++
++- **正式裁定 `REJECTED`。** WSL 独立复跑六项冻结命令均退出 0，全量 510/510 通过。原反例正确降级，合法合成比较保留命题 ID，待核进度和改答提示正常。历史审计核实 17 份保护件、6/10 次旧模型尝试、C05／C06／C07 缺测、合约成功输出为 0。[独立评估](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REVIEW_R2.md)
++- **R1-VP-07 未通过。** 1000 元预算被填到耗材维度时，1300 元购机价仍可按 1500 元上限显示满足。河南报价与河南功能资料放在一起时，日本使用条件被错误判满足。11 月 24 日才观察的报价也能在 11 月 23 日显示满足。三组为真实聊天入口的离线合成重放，普通后端目前未产生这些资料包。[原始展示和命题](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/evidence/evaluator-r2/chat-results.json)
++- **本包已用完两轮集中修订，开工前的剩余有效工时无法从记录核定。** 由项目负责人决定是否另行授权短程离线修复。B06 发布边界仍受阻，B01 真实打印机选购证据及用户收益仍待实证。评估只更新本页、独立评审及相关证据。
++
++## R2 执行者交付（历史）
++
++- 项目负责人授权直接修复。Executor 按 [R2 续修授权](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/AMENDMENT_R2.md) 针对冲突预算、报价时效、河南收货地绑定修订聊天出口，并将两份经审旧测试的固定 SHA 纳入历史只读审计。
++- 冻结 R1-VP-01 至 06 实测全部 exit=0：**21/21、9/9、13/13、12/12、510/510**，历史审计通过保全 **1229 路径清单、17 保护文件、旧模型 6/10 次、C05/C06/C07 缺测、0 成功模型输出**，父包 REJECTED 未追认。评估者冻结的四组聊天夹具重放为合法合成正例 met、三组风险反例均无 met。
++- 执行者的原始日志存于 `evidence/r2/R1-VP-01.log` 至 `R1-VP-06.log`，另有 `evidence/r2/evaluator_fixture_replay.json`。[执行报告](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REPORT_R2.md)
++
++## R1 独立评估（历史，已由 R2 承接）
++
++- **R1 未通过。** 评估者在 WSL 按冻结命令独立复跑。全量 506 项，505 通过、1 错误。原计划 R1-VP-03、05、06 均因新只读审计脚本未纳入 R1 已授权的旧测试变化而退出 1。独立看到了 2／1／0 条待核记录、微信必须／可选／撤回、预算改答和切品类的正确提示。
++- **结构化结论还有三处发布缺口。** 合成反例在实际 `render_chat.result_text` 中得到错误的满足项，涉及额外的冲突预算、资料包日期掩盖报价过期、以及全国报价未绑定已确认的河南收货地。普通后端暂未提供此类资料包。独立输出和复现输入见 [评估记录](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/REVIEW.md)。
++- **唯一续修入口**是 [R2 授权与验收条件](handoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/AMENDMENT_R2.md)。Executor 在原任务剩余额度内修聊天边界及只读审计，补回归后交 `REPORT_R2.md`，待 Evaluator 独立复核。历史 17 份保护件、6/10 次模型尝试、C05/C06/C07 缺测和拒绝状态有独立诊断支持。B01 的真实选购收益仍待实证，本轮无公网、模型、交易或 Git 提交推送。
++
++## R1 执行者交付（2026-11-20，历史受阻记录）
+ 
+ - **R1 合同允许的聊天与测试迁移已执行**：安全研究进度显示 2／1／0 条待核记录（从受保护本地包读元数据，并非商品事实），微信必须／可选／未回答的安全核查路径按已确认条件变化，预算改答及品类切换不残留旧研究结论。未核研究原文仍只在内部审计，不进入已验商品结论；没有增加网络、模型、交易行为。
+ - **正式命令结果**：R1-VP-01=21/21退出0，R1-VP-02=9/9退出0，R1-VP-04=12/12退出0；R1-VP-03=9项8通过1错误、R1-VP-05=506项505通过1错误、R1-VP-06退出1。**唯一报错**为旧 `scripts/audit_model_history_readonly.py` 的固定 `CURRENT_TASK_ALLOWED_DRIFT` 未包含评估者 R1 正式授权改动的两份旧测试文件。不能把这次退出1或临时内存诊断写成正式PASS。
+diff --git a/shopping_decision/chat_bridge.py b/shopping_decision/chat_bridge.py
+index 2ab469e..4d0771e 100644
+--- a/shopping_decision/chat_bridge.py
++++ b/shopping_decision/chat_bridge.py
+@@ -7,6 +7,7 @@ CLI参数依次是 base64(state JSON), base64(field), base64(submitted text)。
+ from __future__ import annotations
+ 
+ import base64
++from datetime import date
+ import json
+ import re
+ import sys
+@@ -14,8 +15,8 @@ import sys
+ from .desktop_bridge import encode
+ from .dialogue_flow import apply_turn, new_dialogue, next_questions
+ from .web import evaluate_input
+-from .claim_gate import publish_checked_comparison
+-from .evidence_comparison import digest
++from .confirmed_comparison import publish_confirmed_comparison
++from .evidence_comparison import digest, number, validate_bundle
+ from .minimal_research import selected_pack
+ 
+ UNKNOWN = {"暂不确定", "不确定", "不知道", "未知", "待确认", "先跳过"}
+@@ -260,6 +261,50 @@ def _analysis(state: dict) -> dict | None:
+     return evaluate_input(data)
+ 
+ 
++def _confirmed_comparison_rows(values: dict, legacy_rows: list) -> list:
++    """Map explicit current dialogue answers; provider rows supply IDs only."""
++    if values.get("category") != "printer":
++        return []
++    definitions = []
++    def add(dimension, value=True, unit="bool", op="eq", manual=False):
++        row = {"dimension": dimension, "unit": unit, "op": op,
++               "value": value, "importance": "hard"}
++        if manual:
++            row["requires_manual_resolution"] = True
++        definitions.append(row)
++
++    budget = values.get("budget_max_cny")
++    if type(budget) is int:
++        add("cost", budget, "CNY", "lte")
++    if values.get("wechat_required") is True:
++        workflow = values.get("wechat_workflow")
++        add({"miniprogram": "wechat_miniprogram",
++             "transfer_to_app": "wechat_transfer_to_app"}.get(workflow, "wechat_print"))
++    for field, dimension in (("requires_scan", "scan"),
++                             ("requires_auto_duplex", "auto_duplex"),
++                             ("needs_color", "color_print")):
++        if values.get(field) is True:
++            add(dimension)
++    if values.get("accepts_initial_setup") is False:
++        add("initial_setup_without_app_or_scan", manual=True)
++    # Preserve existing IDs for matching dimensions/units, never their values.
++    # Reserve all existing IDs so an omitted condition cannot borrow another ID.
++    remaining = {(row["dimension"], row["unit"]): row for row in definitions}
++    used_ids = {row["id"] for row in legacy_rows}
++    result = []
++    for old in legacy_rows:
++        key = (old["dimension"], old["unit"])
++        if key in remaining:
++            result.append(dict(remaining.pop(key), id=old["id"]))
++    for row in remaining.values():
++        identifier = "confirmed:" + row["dimension"]
++        while identifier in used_ids:
++            identifier += ":confirmed"
++        used_ids.add(identifier)
++        result.append(dict(row, id=identifier))
++    return result
++
++
+ def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None:
+     """Only accept typed backend data bound to this dialogue; never legacy prose.
+ 
+@@ -276,19 +321,48 @@ def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None
+             bundle["dialogue_version"] != version or
+             bundle.get("confirmed_values_sha256") != digest(values)):
+         return None
+-    # User budget and deployment geography must match the rule input exactly.
+-    if values.get("device_deployment_region") and bundle.get("region") != values["device_deployment_region"]:
++    # Validate the original bundle before any scoping: slicing must never
++    # conceal duplicate IDs, dangling references or oversized collections.
++    try:
++        validate_bundle(bundle)
++    except (ValueError, TypeError, KeyError, OverflowError, AttributeError):
+         return None
++    requirements = bundle["requirements"]
++    facts, sources, candidates = (bundle[k] for k in ("facts", "sources", "candidates"))
++
++    # Budget authority is the user-confirmed main-unit purchase ceiling,
++    # not a coincidentally equal consumables limit or a renamed dimension.
+     budget = values.get("budget_max_cny")
+-    if budget is not None and not any(
+-            r.get("unit") == "CNY" and r.get("op") == "lte" and
+-            type(r.get("value")) is int and r["value"] == budget
+-            for r in bundle.get("requirements", []) if isinstance(r, dict)):
++    cost_rows = [r for r in requirements if r.get("dimension") == "cost"]
++    if type(budget) is int:
++        if (len(cost_rows) != 1 or cost_rows[0].get("unit") != "CNY" or
++                cost_rows[0].get("op") != "lte" or
++                cost_rows[0].get("importance") != "hard" or
++                type(cost_rows[0].get("value")) is not int or
++                cost_rows[0]["value"] != budget):
++            return None
++        try:
++            if any(r.get("unit") == "CNY" and r.get("op") == "lte" and
++                   number(r.get("value")) > number(budget) for r in requirements):
++                return None
++        except (ValueError, TypeError):
++            return None
++    elif cost_rows:
+         return None
+-    try:
+-        return publish_checked_comparison(bundle, origin="rule")
+-    except (ValueError, TypeError, KeyError, OverflowError):
++
++    confirmed = _confirmed_comparison_rows(values, requirements)
++    if not confirmed:
+         return None
++    # For multi-candidate displays, unresolved newly introduced conditions come
++    # first; supplied condition IDs remain in their original relative order.
++    if len(candidates) > 1:
++        old_ids = {row["id"] for row in requirements}
++        confirmed.sort(key=lambda row: row["id"] in old_ids)
++    return publish_confirmed_comparison(
++        bundle, confirmed, as_of=date.today().isoformat(),
++        deployment_region=values.get("device_deployment_region"),
++        delivery_region=values.get("delivery_region"),
++        budget_scope=values.get("budget_scope"))
+ 
+ 
+ def _safe_research_progress(state: dict, analysis: dict, values: dict) -> str:
+diff --git a/shopping_decision/confirmed_comparison.py b/shopping_decision/confirmed_comparison.py
+new file mode 100755
+index 0000000..c38180d
+--- /dev/null
++++ b/shopping_decision/confirmed_comparison.py
+@@ -0,0 +1,135 @@
++"""Compare independently confirmed conditions with attributed evidence, offline."""
++from __future__ import annotations
++
++from copy import deepcopy
++from datetime import date, date as _calendar_date, datetime, timezone
++
++from .claim_gate import publish_checked_comparison
++from .evidence_comparison import digest, number, validate_bundle
++
++
++def _quote_time_valid(source: dict, today: date) -> bool:
++    """Source capture, timezone-aware observation and expiry must agree."""
++    try:
++        raw = source.get("observed_at")
++        if not isinstance(raw, str):
++            return False
++        observed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
++        if observed.tzinfo is None or observed.utcoffset() is None:
++            return False
++        local_day = observed.date()
++        utc_day = observed.astimezone(timezone.utc).date()
++        captured = _calendar_date.fromisoformat(source["captured_on"])
++        expires = _calendar_date.fromisoformat(source["valid_until"])
++    except (ValueError, TypeError, KeyError, OverflowError):
++        return False
++    return (local_day <= today and utc_day <= today
++            and min(local_day, utc_day) <= captured <= today
++            and max(local_day, captured) <= expires and today <= expires)
++
++
++def publish_confirmed_comparison(bundle, confirmed_requirements, *, as_of,
++                                 deployment_region, delivery_region=None,
++                                 budget_scope=None):
++    """The confirmed rows alone govern thresholds, importance and eligibility.
++
++    The complete provider bundle is checked first, even for unused rows.
++    Each scoped calculation uses the existing deterministic publication gate.
++    No product category or product-specific dimension is encoded here.
++    """
++    try:
++        validate_bundle(bundle)
++        requirements = deepcopy(confirmed_requirements)
++        validated = deepcopy(bundle)
++        validated["requirements"] = requirements
++        validate_bundle(validated)
++        date.fromisoformat(as_of)
++    except (ValueError, TypeError, KeyError, OverflowError, AttributeError):
++        return None
++    facts, sources, candidates = (bundle[k] for k in ("facts", "sources", "candidates"))
++    # A condition's role, not the presence of any fact, determines its
++    # applicable region. Non-price facts use the device's deployment region;
++    # real purchase quotes require an explicit delivery destination. The old
++    # offline synthetic price probe may use deployment when no delivery is set.
++    today = date.fromisoformat(as_of)
++    delivery, deployment = delivery_region, deployment_region
++    source_by_id = {s["id"]: s for s in sources}
++    pieces = []
++    try:
++        for req in requirements:
++            dimension = req["dimension"]
++            price_condition = dimension == "cost" and req["unit"] == "CNY"
++            applicable = (delivery or deployment) if price_condition else deployment
++            region_known = isinstance(applicable, str) and bool(applicable.strip())
++            scoped = deepcopy(bundle)
++            scoped["requirements"] = [deepcopy(req)]
++            scoped["facts"] = [deepcopy(f) for f in facts
++                               if f["dimension"] == dimension and f["unit"] == req["unit"]
++                               and not req.get("requires_manual_resolution")]
++            scoped["region"] = applicable if region_known else bundle["region"]
++            scoped["as_of"] = today.isoformat()
++
++            for fact in scoped["facts"]:
++                source = source_by_id[fact["source_id"]]
++                wrong_region = (not region_known or
++                                source.get("scope_region") != applicable or
++                                (fact.get("scope_region") is not None and
++                                 fact["scope_region"] != applicable))
++                quote = fact["kind"] == "live_quote"
++                role_invalid = quote and not price_condition
++                invalid_price = False
++                if price_condition:
++                    try:
++                        invalid_price = number(fact["value"]) < 0
++                    except (ValueError, TypeError):
++                        invalid_price = True
++                    # Component discounts, non-price features and untyped
++                    # monetary facts cannot substitute for a purchase price.
++                    invalid_price |= fact["kind"] not in ("live_quote", "synthetic_probe")
++                    invalid_price |= fact.get("evidence_role", "price") != "price"
++                    if quote:
++                        invalid_price |= (not isinstance(delivery, str) or not delivery.strip()
++                                          or source.get("quote_region") != delivery
++                                          or not _quote_time_valid(source, today))
++                total_incomplete = (price_condition and
++                                    budget_scope in
++                                    ("device_delivered", "device_and_extra_consumables"))
++                if wrong_region or role_invalid or invalid_price or total_incomplete:
++                    fact["revoked"] = True
++            pieces.append(publish_checked_comparison(scoped, origin="rule"))
++    except (ValueError, TypeError, KeyError, OverflowError, AttributeError):
++        return None
++
++    # Merge only gate-produced claims, comparisons and controlled next actions,
++    # retaining original candidate/requirement order and each claim's region.
++    public = deepcopy(pieces[0])
++    public["input_sha256"] = digest({
++        "confirmed_requirements": requirements,
++        "scoped_inputs": [part["input_sha256"] for part in pieces]})
++    public["claims"] = [claim for part in pieces for claim in part["claims"]]
++    public["next_actions"] = []
++    seen_actions = set()
++    for part in pieces:
++        for action in part["next_actions"]:
++            key = (action["kind"], action["candidate_id"], action["requirement_id"])
++            if key not in seen_actions:
++                seen_actions.add(key)
++                public["next_actions"].append(action)
++    public["assessments"] = []
++    for candidate in candidates:
++        rows = []
++        for part in pieces:
++            matching = next(a for a in part["assessments"]
++                            if a["candidate_id"] == candidate["id"])
++            rows.extend(matching["comparisons"])
++        hard_ids = {req["id"] for req in requirements if req.get("importance") == "hard"}
++        hard = [row["status"] for row in rows if row["requirement_id"] in hard_ids]
++        disposition = ("excluded_for_research" if "failed" in hard else
++                       "pending_evidence" if any(s in ("unknown", "conflict") for s in hard)
++                       else "eligible_for_research")
++        public["assessments"].append({
++            "candidate_id": candidate["id"], "research_status": disposition,
++            "comparisons": rows})
++    return public
++
++
+diff --git a/tests/test_chat_requirement_authority.py b/tests/test_chat_requirement_authority.py
+new file mode 100755
+index 0000000..022d3ae
+--- /dev/null
++++ b/tests/test_chat_requirement_authority.py
+@@ -0,0 +1,107 @@
++"""Confirmed user conditions through the actual chat publication boundary."""
++from copy import deepcopy
++from datetime import date
++import json
++from pathlib import Path
++import runpy
++import unittest
++from unittest.mock import patch
++
++from shopping_decision.chat_bridge import render_chat, submit_message, confirmed_values
++from shopping_decision.evidence_comparison import digest, SAFE_FLAGS
++
++ROOT = Path(__file__).resolve().parents[1]
++FIXTURES = runpy.run_path(str(ROOT / "handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/evidence/evaluator/replay_session_conditions.py"))
++
++class RequirementAuthorityTests(unittest.TestCase):
++    def case(self):
++        state, bundle = FIXTURES["cases"]()["positive_control"]
++        return deepcopy(state), deepcopy(bundle)
++
++    def show(self, state, bundle):
++        bundle["dialogue_version"] = state["version"]
++        bundle["confirmed_values_sha256"] = digest(confirmed_values(state))
++        with (patch("shopping_decision.chat_bridge._analysis", return_value={
++                "recommendation": {"status": "defer"}, "verified_research_bundle": bundle}),
++              patch("shopping_decision.chat_bridge.date") as clock):
++            clock.today.return_value = date(2026, 11, 23)
++            view = render_chat(state)
++        public = json.loads(view["report_json"])["public_decision"]
++        self.assertIsNotNone(public)
++        for flag in SAFE_FLAGS:
++            self.assertIs(public[flag], False)
++        self.assertTrue(all(c["claim_id"] in view["result_text"] for c in public["claims"]))
++        return {c["dimension"]: c for c in public["claims"]}, public["assessments"][0]["research_status"]
++
++    def test_softening_does_not_hide_negative_wechat(self):
++        state, bundle = self.case()
++        bundle["requirements"][1]["importance"] = "soft"
++        bundle["facts"][1]["value"] = False
++        claims, status = self.show(state, bundle)
++        self.assertEqual(claims["wechat_print"]["status"], "failed")
++        self.assertEqual(claims["cost"]["status"], "met")
++        self.assertEqual(status, "excluded_for_research")
++
++    def test_omission_and_missing_fact_still_pending(self):
++        state, bundle = self.case()
++        bundle["requirements"].pop()
++        bundle["facts"].pop()
++        claims, status = self.show(state, bundle)
++        self.assertEqual(claims["wechat_print"]["status"], "unknown")
++        self.assertEqual(claims["cost"]["status"], "met")
++        self.assertEqual(status, "pending_evidence")
++
++    def test_specific_transfer_not_generic_or_miniprogram(self):
++        state, bundle = self.case()
++        state = submit_message(state, "wechat_workflow", "转App")
++        bundle["facts"].append(dict(bundle["facts"][1], id="mini", dimension="wechat_miniprogram"))
++        claims, status = self.show(state, bundle)
++        self.assertEqual(claims["wechat_transfer_to_app"]["status"], "unknown")
++        self.assertEqual(status, "pending_evidence")
++        bundle["facts"].append(dict(bundle["facts"][1], id="transfer", dimension="wechat_transfer_to_app"))
++        claims, status = self.show(state, bundle)
++        self.assertEqual(claims["wechat_transfer_to_app"]["supporting_fact_ids"], ["transfer"])
++        self.assertEqual(status, "eligible_for_research")
++
++    def test_optional_and_withdrawal_remove_stale_hard_requirement(self):
++        state, bundle = self.case()
++        state = submit_message(state, "wechat_workflow", "小程序")
++        bundle["facts"][1]["value"] = False
++        for response in ("不是必须", "暂不确定"):
++            changed = submit_message(deepcopy(state), "wechat_required", response)
++            claims, status = self.show(changed, deepcopy(bundle))
++            self.assertNotIn("wechat_print", claims)
++            self.assertNotIn("wechat_miniprogram", claims)
++            self.assertEqual(status, "eligible_for_research")
++        switched = submit_message(state, "category", "手机")
++        self.assertIsNone(json.loads(render_chat(switched)["report_json"])["public_decision"])
++
++    def test_scan_required_missing_matched_and_withdrawn(self):
++        state, bundle = self.case()
++        state = submit_message(state, "requires_scan", "是")
++        claims, status = self.show(state, bundle)
++        self.assertEqual(claims["scan"]["status"], "unknown")
++        self.assertEqual(status, "pending_evidence")
++        bundle["facts"].append(dict(bundle["facts"][1], id="scan-fact", dimension="scan"))
++        claims, status = self.show(state, bundle)
++        self.assertEqual(claims["scan"]["supporting_fact_ids"], ["scan-fact"])
++        self.assertEqual(status, "eligible_for_research")
++        bundle["facts"][-1]["value"] = False
++        claims, status = self.show(state, bundle)
++        self.assertEqual(status, "excluded_for_research")
++        changed = submit_message(state, "requires_scan", "否")
++        claims, status = self.show(changed, bundle)
++        self.assertNotIn("scan", claims)
++        self.assertEqual(status, "eligible_for_research")
++
++    def test_unmapped_initial_setup_requirement_cannot_be_invented(self):
++        state, bundle = self.case()
++        state = submit_message(state, "accepts_initial_setup", "不接受")
++        bundle["facts"].append(dict(bundle["facts"][1], id="unmapped",
++                                    dimension="initial_setup_without_app_or_scan"))
++        claims, status = self.show(state, bundle)
++        self.assertEqual(claims["initial_setup_without_app_or_scan"]["status"], "unknown")
++        self.assertEqual(status, "pending_evidence")
++
++if __name__ == "__main__":
++    unittest.main()

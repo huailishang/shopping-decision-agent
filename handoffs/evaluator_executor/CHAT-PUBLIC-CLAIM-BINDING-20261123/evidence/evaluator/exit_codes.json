@@ -1,0 +1,199 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "checks": {
+    "VP-01": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VERIFY_FROZEN_REPLAYS.py"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:12.380538+00:00",
+      "duration_seconds": 0.755,
+      "stdout": {
+        "file": "VP-01.stdout.txt",
+        "sha256": "7bf904b557781f38090e54191640e445a79cb2a868dc15e8195f1bb5df85421b"
+      },
+      "stderr": {
+        "file": "VP-01.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "VP-02": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_chat_claim_binding.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:12.380885+00:00",
+      "duration_seconds": 0.752,
+      "stdout": {
+        "file": "VP-02.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "VP-02.stderr.txt",
+        "sha256": "07136daf3ed390315dc5d373495fb93476a1fd191e8c2cb53ec706c1ab64ff3d"
+      }
+    },
+    "R1-VP-01": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_minimal_research_flow.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:12.383243+00:00",
+      "duration_seconds": 1.202,
+      "stdout": {
+        "file": "R1-VP-01.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "R1-VP-01.stderr.txt",
+        "sha256": "4414d45e7de7eaf28faf4761e947166ff91cf07fdfd6058bfcd807cc74fd82cc"
+      }
+    },
+    "R1-VP-02": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_printer_decision_plan.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:12.383763+00:00",
+      "duration_seconds": 0.797,
+      "stdout": {
+        "file": "R1-VP-02.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "R1-VP-02.stderr.txt",
+        "sha256": "462b075e49999136e28f22bbc2dd05ef10c9a8bf6f5e451ba41ce070b79518a2"
+      }
+    },
+    "R1-VP-03": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_publication_entry.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:13.133373+00:00",
+      "duration_seconds": 17.871,
+      "stdout": {
+        "file": "R1-VP-03.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "R1-VP-03.stderr.txt",
+        "sha256": "b104c02ecb3e97c95ed007e6e207aced40cc82909a205d4d7002f2398ee683e8"
+      }
+    },
+    "R1-VP-04": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_claim_gate.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:13.135547+00:00",
+      "duration_seconds": 0.653,
+      "stdout": {
+        "file": "R1-VP-04.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "R1-VP-04.stderr.txt",
+        "sha256": "4d2ffcaa1e85e90bc9a589f847991452439f6eccf6f9a758c6e871faa52d0f50"
+      }
+    },
+    "R1-VP-05": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:13.180701+00:00",
+      "duration_seconds": 42.582,
+      "stdout": {
+        "file": "R1-VP-05.stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "R1-VP-05.stderr.txt",
+        "sha256": "bb35e76b43cef179ea928972036d83537a966017699576256e5438a53be31eda"
+      }
+    },
+    "R1-VP-06": {
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "scripts/audit_model_history_readonly.py",
+        "--task",
+        "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+      ],
+      "exit_code": 0,
+      "started_at_utc": "2026-11-24T01:17:13.585074+00:00",
+      "duration_seconds": 6.425,
+      "stdout": {
+        "file": "R1-VP-06.stdout.txt",
+        "sha256": "5ea568903f503a60981038ffb1e4c3bb79e90121fff01685669aa17395a91c4c"
+      },
+      "stderr": {
+        "file": "R1-VP-06.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  }
+}

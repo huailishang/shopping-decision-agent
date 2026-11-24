@@ -1,0 +1,4 @@
+1 exit=0 seconds=6
+2 exit=1 seconds=0
+3 exit=0 seconds=1
+4 exit=0 seconds=0

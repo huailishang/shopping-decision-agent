@@ -1,0 +1,36 @@
+{
+  "positive_synthetic": {
+    "claim_statuses": [
+      "met"
+    ],
+    "dangerous_prose_visible": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "live_price_verified": false
+  },
+  "contradictory_budget": {
+    "claim_statuses": [],
+    "dangerous_prose_visible": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "live_price_verified": false
+  },
+  "expired_quote_with_stale_bundle_date": {
+    "claim_statuses": [
+      "unknown"
+    ],
+    "dangerous_prose_visible": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "live_price_verified": false
+  },
+  "quote_missing_confirmed_delivery_region": {
+    "claim_statuses": [
+      "unknown"
+    ],
+    "dangerous_prose_visible": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "live_price_verified": false
+  }
+}

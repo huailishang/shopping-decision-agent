@@ -1,0 +1,12 @@
+{
+  "command": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "handoffs\\evaluator_executor\\CHAT-PUBLIC-CLAIM-BINDING-20261123\\evidence\\evaluator\\replay_extra.py"
+  ],
+  "exit_code": 1,
+  "duration_seconds": 0.265,
+  "stdout_sha256": "016606edeeae4900279b088b5904720c6ccefa973019d4da98da759298c68c27",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

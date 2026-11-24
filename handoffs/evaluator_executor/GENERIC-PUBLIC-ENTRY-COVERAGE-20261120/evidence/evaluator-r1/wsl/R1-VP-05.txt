@@ -1,0 +1,20 @@
+127.0.0.1 - - [23/Nov/2026 20:12:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:12:59] "POST /api/decide HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:12:59] "POST /api/decide HTTP/1.1" 400 -
+======================================================================
+ERROR: test_history_ledger_tampering_cannot_pass_readonly_audit (test_publication_entry.PublicationEntryTests.test_history_ledger_tampering_cannot_pass_readonly_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/tests/test_publication_entry.py", line 189, in test_history_ledger_tampering_cannot_pass_readonly_audit
+    good = audit_history(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/scripts/audit_model_history_readonly.py", line 64, in audit_history
+    check(filename in CURRENT_TASK_ALLOWED_DRIFT,
+  File "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/scripts/audit_model_history_readonly.py", line 28, in check
+    raise ValueError(reason)
+ValueError: unapproved_historical_file_drift:tests/test_minimal_research_flow.py
+
+----------------------------------------------------------------------
+Ran 506 tests in 49.682s
+
+FAILED (errors=1)

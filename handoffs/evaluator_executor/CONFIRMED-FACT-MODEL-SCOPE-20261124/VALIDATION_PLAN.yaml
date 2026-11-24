@@ -1,0 +1,105 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: CONFIRMED-FACT-MODEL-SCOPE-20261124
+checks:
+  - id: VP-01
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/evidence/evaluator/replay_extra.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VERIFY_FROZEN_REPLAYS.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/VERIFY_ORIGINAL_CASE.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_chat_context_admission.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_chat_claim_binding.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_minimal_research_flow.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-07
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_printer_decision_plan.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-08
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_publication_entry.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-09
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_claim_gate.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-10
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-q"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-11
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "scripts/audit_model_history_readonly.py", "--task", "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-12
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/evidence/evaluator/replay_session_conditions.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-13
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_chat_requirement_authority.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-14
+    ac: [AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/VERIFY_TRANSFER.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-15
+    ac: [AC-01, AC-02]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/GENERIC-CONFIRMED-REQUIREMENTS-20261124/evidence/evaluator/replay_model_scope.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-16
+    ac: [AC-01]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_confirmed_fact_model_scope.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-17
+    ac: [AC-03]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/CONFIRMED-FACT-MODEL-SCOPE-20261124/VERIFY_SCOPE.py", "--phase", "post"]
+    expected_exit_code: 0
+    mandatory: true

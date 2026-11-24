@@ -1,0 +1,15 @@
+test_consumables_or_delivery_scope_without_total_is_pending (test_chat_claim_binding.ChatClaimBindingTests.test_consumables_or_delivery_scope_without_total_is_pending) ... ok
+test_feature_region_is_independent_of_quote_presence (test_chat_claim_binding.ChatClaimBindingTests.test_feature_region_is_independent_of_quote_presence) ... ok
+test_invalid_second_candidate_quote_does_not_hide_valid_first (test_chat_claim_binding.ChatClaimBindingTests.test_invalid_second_candidate_quote_does_not_hide_valid_first) ... ok
+test_mixed_quote_and_wrong_usage_region (test_chat_claim_binding.ChatClaimBindingTests.test_mixed_quote_and_wrong_usage_region) ... ok
+test_purchase_budget_positive_negative_and_claim_id (test_chat_claim_binding.ChatClaimBindingTests.test_purchase_budget_positive_negative_and_claim_id) ... ok
+test_quote_capture_and_validity_order (test_chat_claim_binding.ChatClaimBindingTests.test_quote_capture_and_validity_order) ... ok
+test_quote_delivery_region_exact_and_unknown_when_missing (test_chat_claim_binding.ChatClaimBindingTests.test_quote_delivery_region_exact_and_unknown_when_missing) ... ok
+test_quote_future_local_or_utc_day_is_pending (test_chat_claim_binding.ChatClaimBindingTests.test_quote_future_local_or_utc_day_is_pending) ... ok
+test_shared_source_does_not_borrow_region_or_price_validity (test_chat_claim_binding.ChatClaimBindingTests.test_shared_source_does_not_borrow_region_or_price_validity) ... ok
+test_wrong_dimension_budget_and_order_never_relaxes_purchase (test_chat_claim_binding.ChatClaimBindingTests.test_wrong_dimension_budget_and_order_never_relaxes_purchase) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.040s
+
+OK

@@ -1,0 +1,21 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "RV-EV-02",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VERIFY_FROZEN_REPLAYS.py"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VERIFY_FROZEN_REPLAYS.py",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-24T07:21:44.957076+00:00",
+  "finished_at_utc": "2026-11-24T07:21:45.335007+00:00",
+  "exit_code": 0,
+  "stdout_path": "RV-EV-02.stdout.log",
+  "stderr_path": "RV-EV-02.stderr.log",
+  "stdout_bytes": 29286,
+  "stderr_bytes": 0,
+  "stdout_sha256": "9fbc986767d03ec639dc528200a4a1869188defe63a674e6d2d6ed570063751c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

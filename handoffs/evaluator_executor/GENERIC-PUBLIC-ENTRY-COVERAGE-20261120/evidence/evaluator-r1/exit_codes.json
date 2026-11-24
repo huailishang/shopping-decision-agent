@@ -1,0 +1,96 @@
+{
+  "R1-VP-01": {
+    "command": [
+      "D:\\SoftWare\\Anaconda\\install\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_minimal_research_flow.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "test_count": 21
+  },
+  "R1-VP-02": {
+    "command": [
+      "D:\\SoftWare\\Anaconda\\install\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_printer_decision_plan.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "test_count": 9
+  },
+  "R1-VP-03": {
+    "command": [
+      "D:\\SoftWare\\Anaconda\\install\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_publication_entry.py",
+      "-v"
+    ],
+    "exit_code": 1,
+    "test_count": 9
+  },
+  "R1-VP-04": {
+    "command": [
+      "D:\\SoftWare\\Anaconda\\install\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_claim_gate.py",
+      "-v"
+    ],
+    "exit_code": 1,
+    "test_count": 12
+  },
+  "R1-VP-05": {
+    "command": [
+      "D:\\SoftWare\\Anaconda\\install\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-q"
+    ],
+    "exit_code": 1,
+    "test_count": 506
+  },
+  "R1-VP-06": {
+    "command": [
+      "D:\\SoftWare\\Anaconda\\install\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/audit_model_history_readonly.py",
+      "--task",
+      "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+    ],
+    "exit_code": 1
+  }
+}

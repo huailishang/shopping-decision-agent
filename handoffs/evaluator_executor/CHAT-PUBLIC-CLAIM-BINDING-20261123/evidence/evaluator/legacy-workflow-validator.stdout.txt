@@ -1,0 +1,34 @@
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\CURRENT.md: missing routing field evaluator_review_path
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing frozen contract state
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing allowed scope
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing exclusions
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing stop conditions
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing task kind
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing strategic basis
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing Task ID
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing baseline HEAD
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing Task kind
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\CONTRACT.md: missing concrete Validation plan file
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing Executor status
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing workspace snapshot
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing changed files
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing deviations
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing impact comparison
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing measurement evidence
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing before measurement
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing after measurement
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing delta
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing guardrail result
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing scope caveat
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing L2 task gate
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing L2 gate result
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing L2 gate summary
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing validation plan reference
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing Task ID
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing baseline HEAD
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing EV evidence section
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing executor mapping for AC-01
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing executor mapping for AC-02
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing executor mapping for AC-03
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing executor mapping for AC-04
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\CHAT-PUBLIC-CLAIM-BINDING-20261123\REPORT.md: missing executor mapping for AC-05

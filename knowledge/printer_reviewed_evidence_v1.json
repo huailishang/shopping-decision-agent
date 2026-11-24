@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "review_policy": "30-day local recheck, not manufacturer expiry",
+  "sources": [
+    {
+      "id": "brother-cn-manual",
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html",
+      "type": "official_exact_model_document",
+      "allowed_use": "model_research_short_summary",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆",
+      "captured_on": "2026-11-24",
+      "observed_at": "2026-11-24T07:13:46.868233+00:00",
+      "valid_until": "2026-12-24",
+      "limitations": "相关型号明确含HL-L1238W；中国大陆简中说明书；首次连接、安装设置Mobile Connect、启用联机功能；不保证当前服务、后续免重绑或实机成功。",
+      "locator": "高级说明书 > 移动连接 > 兄弟畅享印(微信小程序)，正文13–29、页脚62行"
+    }
+  ],
+  "facts": [
+    {
+      "id": "brother-miniprogram",
+      "candidate_id": "Brother HL-L1238W",
+      "source_id": "brother-cn-manual",
+      "dimension": "wechat_miniprogram",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆",
+      "statement": "说明书支持兄弟畅享印微信小程序打印",
+      "limitations": "相关型号明确含HL-L1238W；中国大陆简中说明书；首次连接、安装设置Mobile Connect、启用联机功能；不保证当前服务、后续免重绑或实机成功。"
+    }
+  ]
+}

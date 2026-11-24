@@ -1,0 +1,512 @@
+{
+  "frozen": {
+    "positive_synthetic": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7a47bcd0f215437b30e1c6a0ce09dbe0910a0f1c293147f55dd844ed3fd9d39c。适用边界：仅用于本地合成验证，不代表真实商品\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "cost",
+          "status": "met",
+          "claim_id": "7a47bcd0f215437b30e1c6a0ce09dbe0910a0f1c293147f55dd844ed3fd9d39c",
+          "scope": {
+            "model": "a",
+            "region": "中国大陆",
+            "as_of": "2026-11-18"
+          },
+          "source_grade": [
+            "synthetic_local"
+          ],
+          "rule_expression": "900 ≤ 1000"
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "contradictory_budget": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "expired_quote_with_stale_bundle_date": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：11b20e73c6a9edf9b4157d296823fa7160d93bd5c7148769a1ea820c60d0f6aa。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "cost",
+          "status": "unknown",
+          "claim_id": "11b20e73c6a9edf9b4157d296823fa7160d93bd5c7148769a1ea820c60d0f6aa",
+          "scope": {
+            "model": "a",
+            "region": "中国大陆",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "missing_source"
+          ],
+          "rule_expression": null
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "same_quote_with_review_date": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：11b20e73c6a9edf9b4157d296823fa7160d93bd5c7148769a1ea820c60d0f6aa。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "cost",
+          "status": "unknown",
+          "claim_id": "11b20e73c6a9edf9b4157d296823fa7160d93bd5c7148769a1ea820c60d0f6aa",
+          "scope": {
+            "model": "a",
+            "region": "中国大陆",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "missing_source"
+          ],
+          "rule_expression": null
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "quote_missing_confirmed_delivery_region": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000,
+        "delivery_region": "河南"
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：17d418f3bec6a0086a08ca8567afa4d4daa41f35ec2107eaeb6a84e6f87584be。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "cost",
+          "status": "unknown",
+          "claim_id": "17d418f3bec6a0086a08ca8567afa4d4daa41f35ec2107eaeb6a84e6f87584be",
+          "scope": {
+            "model": "a",
+            "region": "中国大陆",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "missing_source"
+          ],
+          "rule_expression": null
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    }
+  },
+  "normal": {
+    "count_2": {
+      "status": "clarify",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量未知，彩印需求未答；首次App/扫码设置：尚未确认。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态待核。\nHP M232dw：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态待核。\n现有明确条件包含微信打印必须项：优先核准确型号要求的方式与第二次微信打印证据，首次设置说明不能证明复用；无需重复询问微信是否必须。\n明确硬要求尚无本次选包依据，先逐型号核证而不判支持：wechat_workflow_unconfirmed。其他已知研究仍可继续。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "count_1": {
+      "status": "clarify",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含1条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量未知，彩印需求未答；首次App/扫码设置：尚未确认。\n本次证据包：setup_one，其中1条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态待核。\nHP M232dw：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料包没有该型号可用的首次设置依据；保持待核，不等于不支持或已支持。 仅有研究状态待核。\n现有明确条件包含微信打印必须项：优先核准确型号要求的方式与第二次微信打印证据，首次设置说明不能证明复用；无需重复询问微信是否必须。\n明确硬要求尚无本次选包依据，先逐型号核证而不判支持：wechat_workflow_unconfirmed。其他已知研究仍可继续。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "count_0": {
+      "status": "clarify",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含0条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n本次没有留存待核型号记录；先整理允许使用的来源，再核型号事实。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量未知，彩印需求未答；首次App/扫码设置：尚未确认。\n本次证据包：setup_empty，其中0条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料包没有该型号可用的首次设置依据；保持待核，不等于不支持或已支持。 仅有研究状态待核。\nHP M232dw：本次明确的必须功能仍缺选包证据（微信打印方式待核），不能据首次设置说明认定已满足；本次所选资料包没有该型号可用的首次设置依据；保持待核，不等于不支持或已支持。 仅有研究状态待核。\n现有明确条件包含微信打印必须项：优先核准确型号要求的方式与第二次微信打印证据，首次设置说明不能证明复用；无需重复询问微信是否必须。\n明确硬要求尚无本次选包依据，先逐型号核证而不判支持：wechat_workflow_unconfirmed。其他已知研究仍可继续。\n本次选定来源：无，本次选包没有可用型号来源\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "optional": {
+      "status": "clarify",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": false,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量未知，彩印需求未答；首次App/扫码设置：尚未确认。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态保留研究。\nHP M232dw：本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态保留研究。\n微信非必须：可继续已有资料能支持的型号研究，但不能宣称其他App方式已经实测成功。\n当前可继续作有限研究，不必因为价格、微信二次复用或用户反馈缺席而停下全部研究。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "withdrawn": {
+      "status": "clarify",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信是否必须尚未确认：先向用户澄清，再决定优先核查微信复用还是其他型号条件。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限1000元，月印量未知，彩印需求未答；首次App/扫码设置：尚未确认。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态保留研究。\nHP M232dw：本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态保留研究。\n微信是否必须仍是未答目标：若必须，先核准确型号的后续微信复用；若只是偏好，可继续有限型号研究。两种情况均不能当成本人新确认。\n当前可继续作有限研究，不必因为价格、微信二次复用或用户反馈缺席而停下全部研究。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "budget_edited": {
+      "status": "clarify",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": false,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 800
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为800元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "家庭打印机有限研究（负责人代理输入，不是亲戚本人回答或设备试验）：本轮预算上限800元，月印量未知，彩印需求未答；首次App/扫码设置：尚未确认。\n本次证据包：setup_two，其中2条旧厂家摘要；没有新增外部取证。\nBrother HL-L1238W：本次所选资料只支持首次设置步骤研究；既有Brother中国区流程要求首次使用微信打印前完成打印机连接及Brother Mobile Connect联机设置。（反证/限制：这是旧厂家设置说明，不能证明隔日无需重绑、亲戚家庭实测成功或长期可靠。；观察日期：2026-11-15；范围：HL-L1238W在旧流程明确列出的中国区研究范围） 仅有研究状态保留研究。\nHP M232dw：本次所选资料只支持首次设置步骤研究；既有HP M232-M237系列安装指南说明无线设置后扫描信息页二维码启用微信云打印并绑定。（反证/限制：这是系列首次设置指引；当前销售版本、二次打印和长期稳定性未证。；观察日期：2026-11-15；范围：M232-M237系列关联M232dw的有限安装研究；不替代实际所售配置核验） 仅有研究状态保留研究。\n微信非必须：可继续已有资料能支持的型号研究，但不能宣称其他App方式已经实测成功。\n当前可继续作有限研究，不必因为价格、微信二次复用或用户反馈缺席而停下全部研究。\n本次选定来源：R7：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html（核查2026-11-15，局限：厂商流程非实机成功证明）；R10：https://h10032.www1.hp.com/ctg/Manual/c07140981.pdf（核查2026-11-15，局限：系列安装指南，具体销售版本需复核）\n不能由厂家初次设置指南推断微信二次复用、长期稳定、现货与河南实时到手价，预算上限不代表成交价符合；不能判断哪款更好，也不批准加购、下单或付款。\n实际使用者反馈尚未取得；可以准备问题，但不代填或外发。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "category_switched": {
+      "status": "unsupported",
+      "confirmed": {
+        "category": "phone"
+      },
+      "text": "该品类目前只能整理需求，尚无可用的专业商品材料；不会返回打印机候选。",
+      "claims": [],
+      "audit_legacy_report": null,
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    }
+  },
+  "additional": {
+    "delivery_positive": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000,
+        "delivery_region": "河南"
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7ef3157af17d7b0fbc806404104710425bed3a5860dbeafd5f0bb85c7b5bf48e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "cost",
+          "status": "met",
+          "claim_id": "7ef3157af17d7b0fbc806404104710425bed3a5860dbeafd5f0bb85c7b5bf48e",
+          "scope": {
+            "model": "a",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "rule_expression": "900 ≤ 1000"
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "budget_on_other_dimension": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000,
+        "delivery_region": "河南"
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：100 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：44f517f6cd5149e24ff5c4c13763838c2f5a4023aa2a7a8db75957cf9988ef15。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：1300 ≤ 1500。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：461f51ba8053aa0c4af3fd1d41ec9578a15074bd650569666eef9ee953478dee。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "consumables",
+          "status": "met",
+          "claim_id": "44f517f6cd5149e24ff5c4c13763838c2f5a4023aa2a7a8db75957cf9988ef15",
+          "scope": {
+            "model": "a",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "rule_expression": "100 ≤ 1000"
+        },
+        {
+          "requirement_id": "cost",
+          "status": "met",
+          "claim_id": "461f51ba8053aa0c4af3fd1d41ec9578a15074bd650569666eef9ee953478dee",
+          "scope": {
+            "model": "a",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "rule_expression": "1300 ≤ 1500"
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "mixed_quote_and_wrong_usage_region": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "日本",
+        "budget_max_cny": 1000,
+        "delivery_region": "河南"
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：6e428202b0a071eed8205fad50c3ca7722979aff1bcfebb8abfbd4c751a365b9。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：c4acfac51f1d5710419e4cee70868f56689de244bcf374c13479c6dbc04510e3。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "cost",
+          "status": "met",
+          "claim_id": "6e428202b0a071eed8205fad50c3ca7722979aff1bcfebb8abfbd4c751a365b9",
+          "scope": {
+            "model": "a",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "rule_expression": "900 ≤ 1000"
+        },
+        {
+          "requirement_id": "use",
+          "status": "met",
+          "claim_id": "c4acfac51f1d5710419e4cee70868f56689de244bcf374c13479c6dbc04510e3",
+          "scope": {
+            "model": "a",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "rule_expression": null
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "wrong_usage_region_without_quote": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "日本",
+        "budget_max_cny": 1000,
+        "delivery_region": "河南"
+      },
+      "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {}
+    },
+    "quote_observation_after_display_date": {
+      "status": "defer",
+      "confirmed": {
+        "category": "printer",
+        "usage": "家用学习资料",
+        "wechat_required": true,
+        "device_deployment_region": "中国大陆",
+        "budget_max_cny": 1000,
+        "delivery_region": "河南"
+      },
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：3f2ff04563df4df4d1df6b55b19e2b6212285508edea3a4bbc1583f7702c31f8。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "requirement_id": "cost",
+          "status": "met",
+          "claim_id": "3f2ff04563df4df4d1df6b55b19e2b6212285508edea3a4bbc1583f7702c31f8",
+          "scope": {
+            "model": "a",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "rule_expression": "900 ≤ 1000"
+        }
+      ],
+      "audit_legacy_report": "1300<1000，立刻下单，已验证河南现价",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    }
+  }
+}

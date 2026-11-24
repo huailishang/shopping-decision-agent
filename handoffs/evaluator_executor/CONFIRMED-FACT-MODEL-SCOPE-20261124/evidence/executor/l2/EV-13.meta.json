@@ -1,0 +1,28 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-13",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_chat_requirement_authority.py",
+    "-v"
+  ],
+  "command_display": "python3 -X utf8 -m unittest discover -s tests -p test_chat_requirement_authority.py -v",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-24T06:55:28.223284+00:00",
+  "finished_at_utc": "2026-11-24T06:55:28.622398+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-13.stdout.log",
+  "stderr_path": "EV-13.stderr.log",
+  "stdout_bytes": 0,
+  "stderr_bytes": 1114,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "26e320f0a08856e6ef3730d35d213d4742c5d45e83d09e8552d379aea7b71e56"
+}

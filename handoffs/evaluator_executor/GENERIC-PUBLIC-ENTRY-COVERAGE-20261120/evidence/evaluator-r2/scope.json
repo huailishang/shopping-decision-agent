@@ -1,0 +1,42 @@
+{
+  "head": "4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf",
+  "tracked_worktree": [
+    "M\tCURRENT.md",
+    "M\tscripts/audit_model_history_readonly.py",
+    "M\tshopping_decision/chat_bridge.py",
+    "M\ttests/test_publication_entry.py"
+  ],
+  "tracked_index": null,
+  "reviewed_worktree_sha256": [
+    {
+      "path": "CURRENT.md",
+      "sha256": "d844b037f59755aa3e07b0cf057e35a4efd83c07bc0e644e4a136e653e46f429"
+    },
+    {
+      "path": "shopping_decision/chat_bridge.py",
+      "sha256": "803a5cbe4a8806d2094e58fdd114f932605c9ce06a70cc0879bf372ea99d8cf6"
+    },
+    {
+      "path": "tests/test_publication_entry.py",
+      "sha256": "760de8fa9fcd29dccfa947dd26e94154bd72fdae5059050ad6e482c7d45229b3"
+    },
+    {
+      "path": "scripts/audit_model_history_readonly.py",
+      "sha256": "6ef2d10540a1a1fb43ff44de6df6d9a7db152c5aa8dd340bb2da6e8d541004a7"
+    }
+  ],
+  "r1_approved_test_sha256": [
+    {
+      "path": "tests/test_minimal_research_flow.py",
+      "sha256": "50a2a14b70bb32cea4ffb11fd8e2d51a34697fd49b1a738ad552870e30691c8b"
+    },
+    {
+      "path": "tests/test_printer_decision_plan.py",
+      "sha256": "00efd08e1ce79f1c958575bb5531c0391f6cbe8a544e182573fa46e39a00ede4"
+    }
+  ],
+  "protected_map_git_blob": "520a3010fc8266e0b121ad1c1b8d08edce8dfe81",
+  "tracked_unstaged_parent_handoffs": null,
+  "executor_ignored_log_count": 6,
+  "executor_ignored_log_rule": ".gitignore:17:*.log\thandoffs/evaluator_executor/GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/evidence/evaluator-r2/../r2/R1-VP-05.log"
+}

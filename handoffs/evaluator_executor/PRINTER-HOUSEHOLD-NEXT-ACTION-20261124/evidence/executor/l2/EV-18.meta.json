@@ -1,0 +1,21 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-18",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/VERIFY_ACTIONS.py"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/VERIFY_ACTIONS.py",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-24T07:46:22.383933+00:00",
+  "finished_at_utc": "2026-11-24T07:46:27.211496+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-18.stdout.log",
+  "stderr_path": "EV-18.stderr.log",
+  "stdout_bytes": 26270,
+  "stderr_bytes": 0,
+  "stdout_sha256": "e105d338a59ed8629e005f458d733cee1681b9c7e4e290a1a0a7a6a01984dfc9",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

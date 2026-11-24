@@ -1,0 +1,27 @@
+test_change_or_revoke_recomputes_visible_claim (test_publication_entry.PublicationEntryTests.test_change_or_revoke_recomputes_visible_claim) ... ok
+test_dialogue_edit_clarify_and_nonprinter_survive (test_publication_entry.PublicationEntryTests.test_dialogue_edit_clarify_and_nonprinter_survive) ... ok
+test_history_ledger_tampering_cannot_pass_readonly_audit (test_publication_entry.PublicationEntryTests.test_history_ledger_tampering_cannot_pass_readonly_audit) ... ERROR
+test_malicious_budget_opposite_prose_not_shown_in_chat (test_publication_entry.PublicationEntryTests.test_malicious_budget_opposite_prose_not_shown_in_chat) ... ok
+test_one_positive_typed_synthetic_claim_renders_with_claim_id (test_publication_entry.PublicationEntryTests.test_one_positive_typed_synthetic_claim_renders_with_claim_id) ... ok
+test_price_and_model_scope_unverified_are_unknown (test_publication_entry.PublicationEntryTests.test_price_and_model_scope_unverified_are_unknown) ... ok
+test_safe_next_action_responds_to_wechat_required_or_optional (test_publication_entry.PublicationEntryTests.test_safe_next_action_responds_to_wechat_required_or_optional) ... ok
+test_safe_research_progress_differs_for_two_one_zero (test_publication_entry.PublicationEntryTests.test_safe_research_progress_differs_for_two_one_zero) ... ok
+test_spoofed_free_text_and_raw_bundle_in_state_never_published (test_publication_entry.PublicationEntryTests.test_spoofed_free_text_and_raw_bundle_in_state_never_published) ... ok
+
+======================================================================
+ERROR: test_history_ledger_tampering_cannot_pass_readonly_audit (test_publication_entry.PublicationEntryTests.test_history_ledger_tampering_cannot_pass_readonly_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\tests\test_publication_entry.py", line 189, in test_history_ledger_tampering_cannot_pass_readonly_audit
+    good = audit_history(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\scripts\audit_model_history_readonly.py", line 64, in audit_history
+    check(filename in CURRENT_TASK_ALLOWED_DRIFT,
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\scripts\audit_model_history_readonly.py", line 28, in check
+    raise ValueError(reason)
+ValueError: unapproved_historical_file_drift:tests/test_minimal_research_flow.py
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.519s
+
+FAILED (errors=1)

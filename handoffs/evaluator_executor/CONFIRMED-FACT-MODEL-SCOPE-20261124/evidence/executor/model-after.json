@@ -1,0 +1,1355 @@
+{
+  "checks": {
+    "valid_list_and_reordered_candidates_keep_their_claims": true,
+    "foreign_exact_scope_in_list_leaves_short_model_pending": true,
+    "foreign_exact_scope_in_string_cannot_prove_short_model": true,
+    "printing_chat_cannot_use_a_foreign_model_feature": true,
+    "safety_flags": true
+  },
+  "cases": {
+    "candidate_bound_as_list": {
+      "bundle": {
+        "schema_version": 1,
+        "request_id": "offline-kettle-fit",
+        "category": "kettle",
+        "as_of": "2026-11-23",
+        "region": "中国大陆",
+        "candidates": [
+          {
+            "id": "lab-kettle-x-plus"
+          },
+          {
+            "id": "lab-kettle-x"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "volume",
+            "dimension": "capacity",
+            "op": "gte",
+            "value": 1.5,
+            "unit": "L",
+            "importance": "hard"
+          },
+          {
+            "id": "shelf",
+            "dimension": "height_with_base",
+            "op": "lte",
+            "value": "230",
+            "unit": "mm",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://catalog.invalid/test-only",
+            "captured_on": "2026-11-21",
+            "scope_region": "中国大陆",
+            "allowed_use": "model_research_short_summary",
+            "limitations": "合成规格表",
+            "id": "spec-height",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "lab-kettle-x",
+              "lab-kettle-x-plus"
+            ],
+            "observed_at": "2026-11-21T09:00:00+08:00"
+          },
+          {
+            "url": "https://catalog.invalid/test-only",
+            "captured_on": "2026-11-21",
+            "scope_region": "中国大陆",
+            "allowed_use": "model_research_short_summary",
+            "limitations": "合成规格表",
+            "id": "spec-volume",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "lab-kettle-x",
+              "lab-kettle-x-plus"
+            ],
+            "observed_at": "2026-11-21T09:00:00+08:00"
+          }
+        ],
+        "facts": [
+          {
+            "id": "exact-volume",
+            "candidate_id": "lab-kettle-x-plus",
+            "source_id": "spec-volume",
+            "dimension": "capacity",
+            "value": 1.8,
+            "unit": "L",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明"
+          },
+          {
+            "id": "short-height",
+            "candidate_id": "lab-kettle-x",
+            "source_id": "spec-height",
+            "dimension": "height_with_base",
+            "value": "230",
+            "unit": "mm",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明",
+            "scope_models": [
+              "lab-kettle-x"
+            ]
+          },
+          {
+            "id": "exact-height",
+            "candidate_id": "lab-kettle-x-plus",
+            "source_id": "spec-height",
+            "dimension": "height_with_base",
+            "value": "230",
+            "unit": "mm",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明",
+            "scope_models": [
+              "lab-kettle-x-plus"
+            ]
+          },
+          {
+            "id": "short-volume",
+            "candidate_id": "lab-kettle-x",
+            "source_id": "spec-volume",
+            "dimension": "capacity",
+            "value": 1.8,
+            "unit": "L",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明"
+          }
+        ]
+      },
+      "requirements": [
+        {
+          "id": "shelf",
+          "dimension": "height_with_base",
+          "op": "lte",
+          "value": "230",
+          "unit": "mm",
+          "importance": "hard"
+        },
+        {
+          "id": "volume",
+          "dimension": "capacity",
+          "op": "gte",
+          "value": 1.5,
+          "unit": "L",
+          "importance": "hard"
+        }
+      ],
+      "result": {
+        "schema_version": 1,
+        "publication_schema": "verified-claims/v1",
+        "origin": "rule",
+        "input_sha256": "da28468e690a5bd1e7282a67f5a6ad2a56c21b513a24654cf54a3c5dfe1fece5",
+        "claims": [
+          {
+            "claim_id": "6b6d4c0e99e35efb19c7a4666d0a63ae7f15d5ad1d22eab722c044748b3d1253",
+            "candidate_id": "lab-kettle-x-plus",
+            "requirement_id": "shelf",
+            "dimension": "height_with_base",
+            "status": "met",
+            "rule_id": "lte",
+            "supporting_fact_ids": [
+              "exact-height"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x-plus",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "230 ≤ 230",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "exact-height",
+                "source_id": "spec-height",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          },
+          {
+            "claim_id": "474cfdaabf8033655d11c9ae8818d5447970339b69b911d53be859a0ef2d15fd",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "shelf",
+            "dimension": "height_with_base",
+            "status": "met",
+            "rule_id": "lte",
+            "supporting_fact_ids": [
+              "short-height"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "230 ≤ 230",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "short-height",
+                "source_id": "spec-height",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          },
+          {
+            "claim_id": "c8c3429703e38c620a4065cfc546ff9a5cb8a4b3ee05c243213ced63f5432170",
+            "candidate_id": "lab-kettle-x-plus",
+            "requirement_id": "volume",
+            "dimension": "capacity",
+            "status": "met",
+            "rule_id": "gte",
+            "supporting_fact_ids": [
+              "exact-volume"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x-plus",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "1.8 ≥ 1.5",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "exact-volume",
+                "source_id": "spec-volume",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          },
+          {
+            "claim_id": "304b928f4392dad7f20247ed9a1bfe09d3b46ba88ef902e3a28e78104f1450af",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "volume",
+            "dimension": "capacity",
+            "status": "met",
+            "rule_id": "gte",
+            "supporting_fact_ids": [
+              "short-volume"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "1.8 ≥ 1.5",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "short-volume",
+                "source_id": "spec-volume",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          }
+        ],
+        "assessments": [
+          {
+            "candidate_id": "lab-kettle-x-plus",
+            "research_status": "eligible_for_research",
+            "comparisons": [
+              {
+                "requirement_id": "shelf",
+                "claim_id": "6b6d4c0e99e35efb19c7a4666d0a63ae7f15d5ad1d22eab722c044748b3d1253",
+                "status": "met",
+                "text": "230 ≤ 230。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "exact-height"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              },
+              {
+                "requirement_id": "volume",
+                "claim_id": "c8c3429703e38c620a4065cfc546ff9a5cb8a4b3ee05c243213ced63f5432170",
+                "status": "met",
+                "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "exact-volume"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              }
+            ]
+          },
+          {
+            "candidate_id": "lab-kettle-x",
+            "research_status": "eligible_for_research",
+            "comparisons": [
+              {
+                "requirement_id": "shelf",
+                "claim_id": "474cfdaabf8033655d11c9ae8818d5447970339b69b911d53be859a0ef2d15fd",
+                "status": "met",
+                "text": "230 ≤ 230。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "short-height"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              },
+              {
+                "requirement_id": "volume",
+                "claim_id": "304b928f4392dad7f20247ed9a1bfe09d3b46ba88ef902e3a28e78104f1450af",
+                "status": "met",
+                "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "short-volume"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              }
+            ]
+          }
+        ],
+        "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+        "next_actions": [],
+        "raw_model_text_published": false,
+        "manual_decision_gain_accepted": false,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "other_exact_model_as_list": {
+      "bundle": {
+        "schema_version": 1,
+        "request_id": "offline-kettle-fit",
+        "category": "kettle",
+        "as_of": "2026-11-23",
+        "region": "中国大陆",
+        "candidates": [
+          {
+            "id": "lab-kettle-x-plus"
+          },
+          {
+            "id": "lab-kettle-x"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "volume",
+            "dimension": "capacity",
+            "op": "gte",
+            "value": 1.5,
+            "unit": "L",
+            "importance": "hard"
+          },
+          {
+            "id": "shelf",
+            "dimension": "height_with_base",
+            "op": "lte",
+            "value": "230",
+            "unit": "mm",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://catalog.invalid/test-only",
+            "captured_on": "2026-11-21",
+            "scope_region": "中国大陆",
+            "allowed_use": "model_research_short_summary",
+            "limitations": "合成规格表",
+            "id": "spec-height",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "lab-kettle-x",
+              "lab-kettle-x-plus"
+            ],
+            "observed_at": "2026-11-21T09:00:00+08:00"
+          },
+          {
+            "url": "https://catalog.invalid/test-only",
+            "captured_on": "2026-11-21",
+            "scope_region": "中国大陆",
+            "allowed_use": "model_research_short_summary",
+            "limitations": "合成规格表",
+            "id": "spec-volume",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "lab-kettle-x",
+              "lab-kettle-x-plus"
+            ],
+            "observed_at": "2026-11-21T09:00:00+08:00"
+          }
+        ],
+        "facts": [
+          {
+            "id": "exact-volume",
+            "candidate_id": "lab-kettle-x-plus",
+            "source_id": "spec-volume",
+            "dimension": "capacity",
+            "value": 1.8,
+            "unit": "L",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明"
+          },
+          {
+            "id": "short-height",
+            "candidate_id": "lab-kettle-x",
+            "source_id": "spec-height",
+            "dimension": "height_with_base",
+            "value": "230",
+            "unit": "mm",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明",
+            "scope_models": [
+              "lab-kettle-x-plus"
+            ]
+          },
+          {
+            "id": "exact-height",
+            "candidate_id": "lab-kettle-x-plus",
+            "source_id": "spec-height",
+            "dimension": "height_with_base",
+            "value": "230",
+            "unit": "mm",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明",
+            "scope_models": [
+              "lab-kettle-x-plus"
+            ]
+          },
+          {
+            "id": "short-volume",
+            "candidate_id": "lab-kettle-x",
+            "source_id": "spec-volume",
+            "dimension": "capacity",
+            "value": 1.8,
+            "unit": "L",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明"
+          }
+        ]
+      },
+      "requirements": [
+        {
+          "id": "shelf",
+          "dimension": "height_with_base",
+          "op": "lte",
+          "value": "230",
+          "unit": "mm",
+          "importance": "hard"
+        },
+        {
+          "id": "volume",
+          "dimension": "capacity",
+          "op": "gte",
+          "value": 1.5,
+          "unit": "L",
+          "importance": "hard"
+        }
+      ],
+      "result": {
+        "schema_version": 1,
+        "publication_schema": "verified-claims/v1",
+        "origin": "rule",
+        "input_sha256": "928539d17e72110591b231a7ddb803c091810b73edcbb71a3ea845541c824148",
+        "claims": [
+          {
+            "claim_id": "35188c9ca3a6c40d02d7b9ec3afec42e06a66f1021e9a570d28accf181a35513",
+            "candidate_id": "lab-kettle-x-plus",
+            "requirement_id": "shelf",
+            "dimension": "height_with_base",
+            "status": "met",
+            "rule_id": "lte",
+            "supporting_fact_ids": [
+              "exact-height"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x-plus",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "230 ≤ 230",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "exact-height",
+                "source_id": "spec-height",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          },
+          {
+            "claim_id": "2737a64740c30acb9958bff9463b20ba85c95d9b1e718cbc25d8f5d7a0c9ea2e",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "shelf",
+            "dimension": "height_with_base",
+            "status": "unknown",
+            "rule_id": "lte",
+            "supporting_fact_ids": [],
+            "source_grade": [
+              "missing_source"
+            ],
+            "scope": {
+              "model": "lab-kettle-x",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+            "rule_expression": null,
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": false,
+              "scope_applicable": false,
+              "entailed_by_rule": false,
+              "unverified_external_fact": false
+            },
+            "source_audit": []
+          },
+          {
+            "claim_id": "c8c3429703e38c620a4065cfc546ff9a5cb8a4b3ee05c243213ced63f5432170",
+            "candidate_id": "lab-kettle-x-plus",
+            "requirement_id": "volume",
+            "dimension": "capacity",
+            "status": "met",
+            "rule_id": "gte",
+            "supporting_fact_ids": [
+              "exact-volume"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x-plus",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "1.8 ≥ 1.5",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "exact-volume",
+                "source_id": "spec-volume",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          },
+          {
+            "claim_id": "304b928f4392dad7f20247ed9a1bfe09d3b46ba88ef902e3a28e78104f1450af",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "volume",
+            "dimension": "capacity",
+            "status": "met",
+            "rule_id": "gte",
+            "supporting_fact_ids": [
+              "short-volume"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "1.8 ≥ 1.5",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "short-volume",
+                "source_id": "spec-volume",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          }
+        ],
+        "assessments": [
+          {
+            "candidate_id": "lab-kettle-x-plus",
+            "research_status": "eligible_for_research",
+            "comparisons": [
+              {
+                "requirement_id": "shelf",
+                "claim_id": "35188c9ca3a6c40d02d7b9ec3afec42e06a66f1021e9a570d28accf181a35513",
+                "status": "met",
+                "text": "230 ≤ 230。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "exact-height"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              },
+              {
+                "requirement_id": "volume",
+                "claim_id": "c8c3429703e38c620a4065cfc546ff9a5cb8a4b3ee05c243213ced63f5432170",
+                "status": "met",
+                "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "exact-volume"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              }
+            ]
+          },
+          {
+            "candidate_id": "lab-kettle-x",
+            "research_status": "pending_evidence",
+            "comparisons": [
+              {
+                "requirement_id": "shelf",
+                "claim_id": "2737a64740c30acb9958bff9463b20ba85c95d9b1e718cbc25d8f5d7a0c9ea2e",
+                "status": "unknown",
+                "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                "supporting_fact_ids": [],
+                "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+              },
+              {
+                "requirement_id": "volume",
+                "claim_id": "304b928f4392dad7f20247ed9a1bfe09d3b46ba88ef902e3a28e78104f1450af",
+                "status": "met",
+                "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "short-volume"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              }
+            ]
+          }
+        ],
+        "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+        "next_actions": [
+          {
+            "kind": "research",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "shelf",
+            "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+          }
+        ],
+        "raw_model_text_published": false,
+        "manual_decision_gain_accepted": false,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "other_exact_model_as_string": {
+      "bundle": {
+        "schema_version": 1,
+        "request_id": "offline-kettle-fit",
+        "category": "kettle",
+        "as_of": "2026-11-23",
+        "region": "中国大陆",
+        "candidates": [
+          {
+            "id": "lab-kettle-x-plus"
+          },
+          {
+            "id": "lab-kettle-x"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "volume",
+            "dimension": "capacity",
+            "op": "gte",
+            "value": 1.5,
+            "unit": "L",
+            "importance": "hard"
+          },
+          {
+            "id": "shelf",
+            "dimension": "height_with_base",
+            "op": "lte",
+            "value": "230",
+            "unit": "mm",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://catalog.invalid/test-only",
+            "captured_on": "2026-11-21",
+            "scope_region": "中国大陆",
+            "allowed_use": "model_research_short_summary",
+            "limitations": "合成规格表",
+            "id": "spec-height",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "lab-kettle-x",
+              "lab-kettle-x-plus"
+            ],
+            "observed_at": "2026-11-21T09:00:00+08:00"
+          },
+          {
+            "url": "https://catalog.invalid/test-only",
+            "captured_on": "2026-11-21",
+            "scope_region": "中国大陆",
+            "allowed_use": "model_research_short_summary",
+            "limitations": "合成规格表",
+            "id": "spec-volume",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "lab-kettle-x",
+              "lab-kettle-x-plus"
+            ],
+            "observed_at": "2026-11-21T09:00:00+08:00"
+          }
+        ],
+        "facts": [
+          {
+            "id": "exact-volume",
+            "candidate_id": "lab-kettle-x-plus",
+            "source_id": "spec-volume",
+            "dimension": "capacity",
+            "value": 1.8,
+            "unit": "L",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明"
+          },
+          {
+            "id": "short-height",
+            "candidate_id": "lab-kettle-x",
+            "source_id": "spec-height",
+            "dimension": "height_with_base",
+            "value": "230",
+            "unit": "mm",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明",
+            "scope_models": "lab-kettle-x-plus"
+          },
+          {
+            "id": "exact-height",
+            "candidate_id": "lab-kettle-x-plus",
+            "source_id": "spec-height",
+            "dimension": "height_with_base",
+            "value": "230",
+            "unit": "mm",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明",
+            "scope_models": [
+              "lab-kettle-x-plus"
+            ]
+          },
+          {
+            "id": "short-volume",
+            "candidate_id": "lab-kettle-x",
+            "source_id": "spec-volume",
+            "dimension": "capacity",
+            "value": 1.8,
+            "unit": "L",
+            "kind": "official_feature",
+            "statement": "冻结离线样例",
+            "limitations": "无真实产品证明"
+          }
+        ]
+      },
+      "requirements": [
+        {
+          "id": "shelf",
+          "dimension": "height_with_base",
+          "op": "lte",
+          "value": "230",
+          "unit": "mm",
+          "importance": "hard"
+        },
+        {
+          "id": "volume",
+          "dimension": "capacity",
+          "op": "gte",
+          "value": 1.5,
+          "unit": "L",
+          "importance": "hard"
+        }
+      ],
+      "result": {
+        "schema_version": 1,
+        "publication_schema": "verified-claims/v1",
+        "origin": "rule",
+        "input_sha256": "784a06ad02eecc8eccdeb68fff78ffe258ff4357e938ab8d066f068c9bb726f7",
+        "claims": [
+          {
+            "claim_id": "1a69fcdf03fbc14068e2969a86d9c0a62ae4da756f4983dc72aca5f0fb2e7d4f",
+            "candidate_id": "lab-kettle-x-plus",
+            "requirement_id": "shelf",
+            "dimension": "height_with_base",
+            "status": "met",
+            "rule_id": "lte",
+            "supporting_fact_ids": [
+              "exact-height"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x-plus",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "230 ≤ 230",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "exact-height",
+                "source_id": "spec-height",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          },
+          {
+            "claim_id": "635a7f96aba7dde34b5595a381138563548a887f2defe89e40eba163c56404f0",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "shelf",
+            "dimension": "height_with_base",
+            "status": "unknown",
+            "rule_id": "lte",
+            "supporting_fact_ids": [],
+            "source_grade": [
+              "missing_source"
+            ],
+            "scope": {
+              "model": "lab-kettle-x",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+            "rule_expression": null,
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": false,
+              "scope_applicable": false,
+              "entailed_by_rule": false,
+              "unverified_external_fact": false
+            },
+            "source_audit": []
+          },
+          {
+            "claim_id": "c8c3429703e38c620a4065cfc546ff9a5cb8a4b3ee05c243213ced63f5432170",
+            "candidate_id": "lab-kettle-x-plus",
+            "requirement_id": "volume",
+            "dimension": "capacity",
+            "status": "met",
+            "rule_id": "gte",
+            "supporting_fact_ids": [
+              "exact-volume"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x-plus",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "1.8 ≥ 1.5",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "exact-volume",
+                "source_id": "spec-volume",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          },
+          {
+            "claim_id": "304b928f4392dad7f20247ed9a1bfe09d3b46ba88ef902e3a28e78104f1450af",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "volume",
+            "dimension": "capacity",
+            "status": "met",
+            "rule_id": "gte",
+            "supporting_fact_ids": [
+              "short-volume"
+            ],
+            "source_grade": [
+              "qualified_structural"
+            ],
+            "scope": {
+              "model": "lab-kettle-x",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+            "rule_expression": "1.8 ≥ 1.5",
+            "verification": {
+              "verified_structural": true,
+              "source_traceable": true,
+              "scope_applicable": true,
+              "entailed_by_rule": true,
+              "unverified_external_fact": true
+            },
+            "source_audit": [
+              {
+                "fact_id": "short-volume",
+                "source_id": "spec-volume",
+                "source_grade": "qualified_structural",
+                "admitted": true,
+                "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+              }
+            ]
+          }
+        ],
+        "assessments": [
+          {
+            "candidate_id": "lab-kettle-x-plus",
+            "research_status": "eligible_for_research",
+            "comparisons": [
+              {
+                "requirement_id": "shelf",
+                "claim_id": "1a69fcdf03fbc14068e2969a86d9c0a62ae4da756f4983dc72aca5f0fb2e7d4f",
+                "status": "met",
+                "text": "230 ≤ 230。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "exact-height"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              },
+              {
+                "requirement_id": "volume",
+                "claim_id": "c8c3429703e38c620a4065cfc546ff9a5cb8a4b3ee05c243213ced63f5432170",
+                "status": "met",
+                "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "exact-volume"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              }
+            ]
+          },
+          {
+            "candidate_id": "lab-kettle-x",
+            "research_status": "pending_evidence",
+            "comparisons": [
+              {
+                "requirement_id": "shelf",
+                "claim_id": "635a7f96aba7dde34b5595a381138563548a887f2defe89e40eba163c56404f0",
+                "status": "unknown",
+                "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                "supporting_fact_ids": [],
+                "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+              },
+              {
+                "requirement_id": "volume",
+                "claim_id": "304b928f4392dad7f20247ed9a1bfe09d3b46ba88ef902e3a28e78104f1450af",
+                "status": "met",
+                "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                "supporting_fact_ids": [
+                  "short-volume"
+                ],
+                "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+              }
+            ]
+          }
+        ],
+        "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+        "next_actions": [
+          {
+            "kind": "research",
+            "candidate_id": "lab-kettle-x",
+            "requirement_id": "shelf",
+            "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+          }
+        ],
+        "raw_model_text_published": false,
+        "manual_decision_gain_accepted": false,
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    }
+  },
+  "printer": {
+    "state": {
+      "version": 6,
+      "answers": {
+        "category": {
+          "value": "printer",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "打印机"
+        },
+        "usage": {
+          "value": "家用学习资料",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "家用学习资料"
+        },
+        "wechat_required": {
+          "value": true,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "必须"
+        },
+        "device_deployment_region": {
+          "value": "日本",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "日本"
+        },
+        "delivery_region": {
+          "value": "河南",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "河南"
+        },
+        "budget_max_cny": {
+          "value": 1000,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "1000"
+        }
+      },
+      "history": [
+        {
+          "version": 1,
+          "raw_text": "打印机",
+          "changed_fields": [
+            "category"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 2,
+          "raw_text": "家用学习资料",
+          "changed_fields": [
+            "usage"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 3,
+          "raw_text": "必须",
+          "changed_fields": [
+            "wechat_required"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 4,
+          "raw_text": "日本",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 5,
+          "raw_text": "河南",
+          "changed_fields": [
+            "delivery_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 6,
+          "raw_text": "1000",
+          "changed_fields": [
+            "budget_max_cny"
+          ],
+          "old_conclusions_invalidated": true
+        }
+      ],
+      "pending_approval": true,
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false,
+      "deferred_fields": []
+    },
+    "bundle": {
+      "schema_version": 1,
+      "request_id": "independent-print",
+      "category": "printer",
+      "as_of": "2026-11-23",
+      "region": "河南",
+      "dialogue_version": 6,
+      "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3",
+      "candidates": [
+        {
+          "id": "review-model"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "ceiling",
+          "dimension": "cost",
+          "unit": "CNY",
+          "op": "lte",
+          "value": 1000,
+          "importance": "hard"
+        },
+        {
+          "id": "wx",
+          "dimension": "wechat_print",
+          "unit": "bool",
+          "op": "eq",
+          "value": true,
+          "importance": "hard"
+        }
+      ],
+      "sources": [
+        {
+          "id": "practice-shop",
+          "url": "https://review.invalid/practice-shop",
+          "type": "official_exact_model_document",
+          "allowed_use": "model_research_short_summary",
+          "scope_region": "河南",
+          "scope_models": [
+            "review-model"
+          ],
+          "captured_on": "2026-11-22",
+          "observed_at": "2026-11-22T12:00:00+08:00",
+          "valid_until": "2026-11-24",
+          "limitations": "离线合成来源",
+          "quote_sku": "review-sku",
+          "quote_merchant": "离线模拟商家",
+          "quote_region": "河南"
+        },
+        {
+          "id": "practice-japan",
+          "url": "https://review.invalid/practice-japan",
+          "type": "official_exact_model_document",
+          "allowed_use": "model_research_short_summary",
+          "scope_region": "日本",
+          "scope_models": [
+            "review-model"
+          ],
+          "captured_on": "2026-11-22",
+          "observed_at": "2026-11-22T12:00:00+08:00",
+          "valid_until": "2026-11-24",
+          "limitations": "离线合成来源"
+        }
+      ],
+      "facts": [
+        {
+          "id": "device-price",
+          "candidate_id": "review-model",
+          "source_id": "practice-shop",
+          "dimension": "cost",
+          "unit": "CNY",
+          "value": 900,
+          "kind": "live_quote",
+          "statement": "独立合成输入",
+          "limitations": "无商品证明"
+        },
+        {
+          "id": "wechat-support",
+          "candidate_id": "review-model",
+          "source_id": "practice-japan",
+          "dimension": "wechat_print",
+          "unit": "bool",
+          "value": true,
+          "kind": "official_feature",
+          "statement": "独立合成输入",
+          "limitations": "无商品证明",
+          "scope_models": "review-model-plus"
+        }
+      ]
+    },
+    "chat": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：6859cd3638f123dac9b91f8227beb1e727cde3fa5b8514fa03eb687661270ce8。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "6859cd3638f123dac9b91f8227beb1e727cde3fa5b8514fa03eb687661270ce8",
+          "candidate_id": "review-model",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "unknown",
+          "rule_id": "eq",
+          "supporting_fact_ids": [],
+          "source_grade": [
+            "missing_source"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": false,
+            "scope_applicable": false,
+            "entailed_by_rule": false,
+            "unverified_external_fact": false
+          },
+          "source_audit": []
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "review-model",
+          "research_status": "pending_evidence",
+          "comparisons": [
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "wx",
+              "claim_id": "6859cd3638f123dac9b91f8227beb1e727cde3fa5b8514fa03eb687661270ce8",
+              "status": "unknown",
+              "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+              "supporting_fact_ids": [],
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    }
+  }
+}

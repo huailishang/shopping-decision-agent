@@ -1,0 +1,18 @@
+test_change_or_revoke_recomputes_visible_claim (test_publication_entry.PublicationEntryTests.test_change_or_revoke_recomputes_visible_claim) ... ok
+test_dialogue_edit_clarify_and_nonprinter_survive (test_publication_entry.PublicationEntryTests.test_dialogue_edit_clarify_and_nonprinter_survive) ... ok
+test_history_ledger_tampering_cannot_pass_readonly_audit (test_publication_entry.PublicationEntryTests.test_history_ledger_tampering_cannot_pass_readonly_audit) ... ok
+test_malicious_budget_opposite_prose_not_shown_in_chat (test_publication_entry.PublicationEntryTests.test_malicious_budget_opposite_prose_not_shown_in_chat) ... ok
+test_one_positive_typed_synthetic_claim_renders_with_claim_id (test_publication_entry.PublicationEntryTests.test_one_positive_typed_synthetic_claim_renders_with_claim_id) ... ok
+test_price_and_model_scope_unverified_are_unknown (test_publication_entry.PublicationEntryTests.test_price_and_model_scope_unverified_are_unknown) ... ok
+test_r2_conflicting_budget_row_does_not_appear_as_met (test_publication_entry.PublicationEntryTests.test_r2_conflicting_budget_row_does_not_appear_as_met) ... ok
+test_r2_quote_expiry_uses_trusted_chat_clock (test_publication_entry.PublicationEntryTests.test_r2_quote_expiry_uses_trusted_chat_clock) ... ok
+test_r2_quote_region_requires_confirmed_delivery (test_publication_entry.PublicationEntryTests.test_r2_quote_region_requires_confirmed_delivery) ... ok
+test_r2_reviewed_old_tests_must_keep_exact_sha (test_publication_entry.PublicationEntryTests.test_r2_reviewed_old_tests_must_keep_exact_sha) ... ok
+test_safe_next_action_responds_to_wechat_required_or_optional (test_publication_entry.PublicationEntryTests.test_safe_next_action_responds_to_wechat_required_or_optional) ... ok
+test_safe_research_progress_differs_for_two_one_zero (test_publication_entry.PublicationEntryTests.test_safe_research_progress_differs_for_two_one_zero) ... ok
+test_spoofed_free_text_and_raw_bundle_in_state_never_published (test_publication_entry.PublicationEntryTests.test_spoofed_free_text_and_raw_bundle_in_state_never_published) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 19.558s
+
+OK

@@ -1,0 +1,265 @@
+{
+  "legacy_prose": {
+    "status": "defer",
+    "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "positive_synthetic": {
+    "status": "defer",
+    "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7a47bcd0f215437b30e1c6a0ce09dbe0910a0f1c293147f55dd844ed3fd9d39c。适用边界：仅用于本地合成验证，不代表真实商品\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [
+      {
+        "requirement_id": "cost",
+        "status": "met",
+        "rule_expression": "900 ≤ 1000",
+        "source_grade": [
+          "synthetic_local"
+        ],
+        "scope": {
+          "model": "a",
+          "region": "中国大陆",
+          "as_of": "2026-11-18"
+        }
+      }
+    ],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "two": {
+    "status": "clarify",
+    "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "wechat_optional": {
+    "status": "clarify",
+    "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "wechat_withdrawn": {
+    "status": "clarify",
+    "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信是否必须尚未确认：先向用户澄清，再决定优先核查微信复用还是其他型号条件。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "budget_edited": {
+    "status": "clarify",
+    "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为800元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "category_changed": {
+    "status": "unsupported",
+    "text": "该品类目前只能整理需求，尚无可用的专业商品材料；不会返回打印机候选。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "one": {
+    "status": "clarify",
+    "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含1条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "zero": {
+    "status": "clarify",
+    "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含0条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n本次没有留存待核型号记录；先整理允许使用的来源，再核型号事实。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "contradictory_budget": {
+    "status": "defer",
+    "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：1300 ≤ 1000。根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：b332b6f2ab2472fda156ef5650e186f7ca521dd056886ef759634dbbda2fefc8。适用边界：仅用于本地合成验证，不代表真实商品\n候选1 条件2：1300 ≤ 1500。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：8e2969047ead8858ff37dfc2e734cc84fc757cd09692a42773b18c362af38b15。适用边界：仅用于本地合成验证，不代表真实商品\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [
+      {
+        "requirement_id": "cost",
+        "status": "failed",
+        "rule_expression": "1300 ≤ 1000",
+        "source_grade": [
+          "synthetic_local"
+        ],
+        "scope": {
+          "model": "a",
+          "region": "中国大陆",
+          "as_of": "2026-11-18"
+        }
+      },
+      {
+        "requirement_id": "contradictory_cost",
+        "status": "met",
+        "rule_expression": "1300 ≤ 1500",
+        "source_grade": [
+          "synthetic_local"
+        ],
+        "scope": {
+          "model": "a",
+          "region": "中国大陆",
+          "as_of": "2026-11-18"
+        }
+      }
+    ],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    },
+    "input": {
+      "user_budget_cny": 1000,
+      "requirements": [
+        {
+          "id": "cost",
+          "dimension": "cost",
+          "op": "lte",
+          "value": 1000,
+          "unit": "CNY",
+          "importance": "hard"
+        },
+        {
+          "id": "contradictory_cost",
+          "dimension": "cost",
+          "op": "lte",
+          "value": 1500,
+          "unit": "CNY",
+          "importance": "hard"
+        }
+      ],
+      "fact_cny": 1300
+    }
+  },
+  "expired_quote_with_stale_bundle_date": {
+    "status": "defer",
+    "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7c29c2e61b32f7099bdbe757a91bd3159e110f3d318d0de51b5d51f8df0df6d0。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [
+      {
+        "requirement_id": "cost",
+        "status": "met",
+        "rule_expression": "900 ≤ 1000",
+        "source_grade": [
+          "qualified_structural"
+        ],
+        "scope": {
+          "model": "a",
+          "region": "中国大陆",
+          "as_of": "2026-11-18"
+        }
+      }
+    ],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    },
+    "input": {
+      "review_date": "2026-11-23",
+      "bundle_as_of": "2026-11-18",
+      "source": {
+        "id": "s",
+        "url": "https://example.com/quote",
+        "captured_on": "2026-11-18",
+        "allowed_use": "model_research_short_summary",
+        "scope_region": "中国大陆",
+        "limitations": "synthetic unit test, not a product fact",
+        "type": "official_exact_model_document",
+        "scope_models": [
+          "a"
+        ],
+        "observed_at": "2026-11-18T08:00:00+08:00",
+        "valid_until": "2026-11-19",
+        "quote_merchant": "fixture",
+        "quote_sku": "fixture-a",
+        "quote_region": "中国大陆"
+      },
+      "synthetic_fixture_shaped_like_external_quote": true
+    }
+  },
+  "same_quote_with_review_date": {
+    "status": "defer",
+    "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：fdf3f08d436af5633d9d82f8500503cd766e7740d7457a61cae28e1f63005e0d。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [
+      {
+        "requirement_id": "cost",
+        "status": "unknown",
+        "rule_expression": null,
+        "source_grade": [
+          "missing_source"
+        ],
+        "scope": {
+          "model": "a",
+          "region": "中国大陆",
+          "as_of": "2026-11-23"
+        }
+      }
+    ],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "quote_missing_confirmed_delivery_region": {
+    "status": "defer",
+    "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：bdf14af14327a74264712741cc196e4fddc33153687108f6f686a68535cd35ed。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+    "claims": [
+      {
+        "requirement_id": "cost",
+        "status": "met",
+        "rule_expression": "900 ≤ 1000",
+        "source_grade": [
+          "qualified_structural"
+        ],
+        "scope": {
+          "model": "a",
+          "region": "中国大陆",
+          "as_of": "2026-11-23"
+        }
+      }
+    ],
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    },
+    "input": {
+      "confirmed_delivery_region": "河南",
+      "confirmed_deployment_region": "中国大陆",
+      "quote_region": "中国大陆",
+      "synthetic_fixture_shaped_like_external_quote": true
+    }
+  }
+}

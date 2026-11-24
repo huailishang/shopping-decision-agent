@@ -1,0 +1,48 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: CHAT-PUBLIC-CLAIM-BINDING-20261123
+run_mode: local_offline_only
+mandatory: true
+baseline: BASELINE.json
+environment: WSL Ubuntu Python 3.12.3 or equivalent
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-03, AC-05]
+    command: [python3, -X, utf8, handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VERIFY_FROZEN_REPLAYS.py]
+    expected_baseline_exit_code: 1
+    expected_exit_code: 0
+    must_observe:
+      - wrong_dimension_budget_does_not_override_purchase_budget
+      - delivery_does_not_replace_usage_region
+      - future_observation_cannot_support_current_quote
+      - legal_quote_and_synthetic_claims_still_render
+  - id: VP-02
+    ac: [AC-01, AC-02, AC-03]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_chat_claim_binding.py, -v]
+    expected_exit_code: 0
+    must_observe:
+      - test_count_nonzero
+      - budget_scope_missing_cost_and_dimension_changes
+      - region_relevant_positive_and_mixed_bundle
+      - quote_timezone_boundary_and_time_order
+  - id: VP-03
+    ac: [AC-04]
+    method: execute all six named commands unchanged from the previous frozen plan
+    inherited_plan: ../GENERIC-PUBLIC-ENTRY-COVERAGE-20261120/VALIDATION_PLAN.R1.yaml
+    use_checks: [R1-VP-01, R1-VP-02, R1-VP-03, R1-VP-04, R1-VP-05, R1-VP-06]
+    expected_exit_code_per_command: 0
+    must_observe:
+      - all_original_510_tests_retained
+      - historical_readonly_audit_passes
+      - prior_model_rejected_status_preserved
+  - id: VP-04
+    ac: [AC-04, AC-05]
+    method: evaluator_independent_replay_and_baseline_scope_review
+    must_observe:
+      - code_review_matches_contract_allowlist_and_worktree_baseline
+      - frozen_files_and_prior_evidence_sha256_unchanged
+      - command_outputs_exit_codes_and_elapsed_time_retained
+      - no_external_activity_or_git_publish
+review_rules:
+  - Archive VP-01 baseline and post-fix outputs in this package only.
+  - Every post-fix mandatory check must pass.
+  - Evaluator must issue a separate ruling and plain-language summary.

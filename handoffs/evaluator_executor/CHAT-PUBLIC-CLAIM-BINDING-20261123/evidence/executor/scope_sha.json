@@ -1,0 +1,16 @@
+{
+  "immutable_count": 86,
+  "immutable_mismatch_count": 0,
+  "baseline_head": "4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf",
+  "tracked_changes": [
+    "CURRENT.md",
+    "scripts/audit_model_history_readonly.py",
+    "shopping_decision/chat_bridge.py",
+    "tests/test_publication_entry.py"
+  ],
+  "prior_r2_tracked_files_preserved": true,
+  "new_tracked_code_change": "shopping_decision/chat_bridge.py",
+  "new_untracked_test": "tests/test_chat_claim_binding.py",
+  "chat_changed_from_task_baseline": true,
+  "historical_results_rewritten": false
+}

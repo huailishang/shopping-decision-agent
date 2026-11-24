@@ -1,5 +1,6 @@
 """Actual main-chat publication tests: only gate output is allowed as verified text."""
 from copy import deepcopy
+from datetime import date
 import json
 from pathlib import Path
 import unittest
@@ -193,6 +194,89 @@ class PublicationEntryTests(unittest.TestCase):
         ledger = (task / "evidence/live/attempts.jsonl").read_bytes()
         with self.assertRaisesRegex(ValueError, "historical_ledger_sha_mismatch"):
             audit_history(task, ledger_bytes_override=ledger + b"\\n")
+
+    def test_r2_conflicting_budget_row_does_not_appear_as_met(self):
+        state = configured()
+        x = typed(state)
+        x["facts"][0]["value"] = 1300
+        other = deepcopy(x["requirements"][0])
+        other.update(id="weaker_cost", value=1500)
+        x["requirements"].append(other)
+        view = self.show(state, x)
+        self.assertIsNone(json.loads(view["report_json"])["public_decision"])
+        self.assertNotIn("1300 ≤ 1500", view["result_text"])
+        self.assertIn("待核研究", view["result_text"])
+        x["requirements"].pop()
+        clean = self.show(state, x)
+        self.assertEqual(json.loads(clean["report_json"])["public_decision"]
+                         ["claims"][0]["status"], "failed")
+        self.assertIn("1300 ≤ 1000", clean["result_text"])
+
+    def test_r2_quote_expiry_uses_trusted_chat_clock(self):
+        state = submit_message(configured(), "delivery_region", "河南")
+        x = typed(state)
+        x["region"] = "河南"
+        x["as_of"] = "2026-11-18"  # Stale provider date must be ignored.
+        x["facts"][0]["kind"] = "live_quote"
+        x["sources"][0].update(
+            url="https://example.com/quote", type="official_exact_model_document",
+            scope_models=["a"], scope_region="河南",
+            observed_at="2026-11-18T08:00:00+08:00",
+            quote_merchant="fixture", quote_sku="fixture-a",
+            quote_region="河南", valid_until="2026-11-19")
+        with patch("shopping_decision.chat_bridge.date") as clock:
+            clock.today.return_value = date(2026, 11, 23)
+            old = self.show(state, x)
+            claims = json.loads(old["report_json"])["public_decision"]["claims"]
+            self.assertEqual(claims[0]["status"], "unknown")
+            self.assertNotIn("900 ≤ 1000", old["result_text"])
+            x["sources"][0]["valid_until"] = "2026-11-24"
+            fresh = self.show(state, x)
+            self.assertEqual(json.loads(fresh["report_json"])["public_decision"]
+                             ["claims"][0]["status"], "met")
+            self.assertIn("900 ≤ 1000", fresh["result_text"])
+            self.assertFalse(json.loads(fresh["report_json"])["live_price_verified"])
+
+    def test_r2_quote_region_requires_confirmed_delivery(self):
+        state = submit_message(configured(), "delivery_region", "河南")
+        x = typed(state)
+        x["facts"][0]["kind"] = "live_quote"
+        x["sources"][0].update(
+            url="https://example.com/quote", type="official_exact_model_document",
+            scope_models=["a"], scope_region="中国大陆",
+            observed_at="2026-11-18T08:00:00+08:00",
+            quote_merchant="fixture", quote_sku="fixture-a",
+            quote_region="中国大陆", valid_until="2026-11-24")
+        with patch("shopping_decision.chat_bridge.date") as clock:
+            clock.today.return_value = date(2026, 11, 23)
+            mismatched = self.show(state, x)
+            self.assertEqual(json.loads(mismatched["report_json"])["public_decision"]
+                             ["claims"][0]["status"], "unknown")
+            self.assertNotIn("900 ≤ 1000", mismatched["result_text"])
+            x["region"] = "河南"
+            x["sources"][0]["scope_region"] = "河南"
+            x["sources"][0]["quote_region"] = "河南"
+            matched = self.show(state, x)
+            self.assertEqual(json.loads(matched["report_json"])["public_decision"]
+                             ["claims"][0]["status"], "met")
+            no_delivery = configured()
+            x["dialogue_version"] = no_delivery["version"]
+            x["confirmed_values_sha256"] = digest(confirmed_values(no_delivery))
+            self.assertEqual(json.loads(self.show(no_delivery, x)["report_json"])
+                             ["public_decision"]["claims"][0]["status"], "unknown")
+
+    def test_r2_reviewed_old_tests_must_keep_exact_sha(self):
+        task = Path(__file__).resolve().parents[1] / "handoffs/evaluator_executor" / "PRINTER-MODEL-COMPARE-20261118"
+        with patch.dict("scripts.audit_model_history_readonly.REVIEWED_R1_TEST_SHA256",
+                        {"tests/test_minimal_research_flow.py": "0" * 64}):
+            with self.assertRaisesRegex(ValueError, "approved_r1_test_sha_mismatch"):
+                audit_history(task)
+        original_is_file = Path.is_file
+        def missing_selected(path):
+            return False if path.name == "test_printer_decision_plan.py" else original_is_file(path)
+        with patch.object(Path, "is_file", autospec=True, side_effect=missing_selected):
+            with self.assertRaisesRegex(ValueError, "approved_r1_test_missing"):
+                audit_history(task)
 
     def test_spoofed_free_text_and_raw_bundle_in_state_never_published(self):
         s = configured()

@@ -1,0 +1,980 @@
+{
+  "delivery_positive": {
+    "state": {
+      "version": 6,
+      "answers": {
+        "category": {
+          "value": "printer",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "打印机"
+        },
+        "usage": {
+          "value": "家用学习资料",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "家用学习资料"
+        },
+        "wechat_required": {
+          "value": true,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "必须"
+        },
+        "device_deployment_region": {
+          "value": "中国大陆",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "中国大陆"
+        },
+        "budget_max_cny": {
+          "value": 1000,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "1000"
+        },
+        "delivery_region": {
+          "value": "河南",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "河南"
+        }
+      },
+      "history": [
+        {
+          "version": 1,
+          "raw_text": "打印机",
+          "changed_fields": [
+            "category"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 2,
+          "raw_text": "家用学习资料",
+          "changed_fields": [
+            "usage"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 3,
+          "raw_text": "必须",
+          "changed_fields": [
+            "wechat_required"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 4,
+          "raw_text": "中国大陆",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 5,
+          "raw_text": "1000",
+          "changed_fields": [
+            "budget_max_cny"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 6,
+          "raw_text": "河南",
+          "changed_fields": [
+            "delivery_region"
+          ],
+          "old_conclusions_invalidated": true
+        }
+      ],
+      "pending_approval": true,
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false,
+      "deferred_fields": []
+    },
+    "analysis": {
+      "recommendation": {
+        "status": "defer",
+        "reasons": [
+          "1300<1000，立刻下单"
+        ],
+        "questions": [
+          "虚构保证"
+        ],
+        "unknowns": []
+      },
+      "research_case": {
+        "report_text": "1300<1000，立刻下单，已验证河南现价"
+      },
+      "real_printer_case_research": {
+        "shared_research_snapshot": {
+          "decision_plan": {
+            "text": "所有证据已证实，现在就买"
+          },
+          "next_action": "买下这台设备"
+        }
+      },
+      "verified_research_bundle": {
+        "schema_version": 1,
+        "request_id": "test",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "candidates": [
+          {
+            "id": "a"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "cost",
+            "dimension": "cost",
+            "op": "lte",
+            "value": 1000,
+            "unit": "CNY",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "s",
+            "url": "https://example.com/quote",
+            "captured_on": "2026-11-18",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "limitations": "synthetic unit test, not a product fact",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "a"
+            ],
+            "observed_at": "2026-11-18T08:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "quote_merchant": "fixture",
+            "quote_sku": "fixture-a",
+            "quote_region": "河南"
+          }
+        ],
+        "facts": [
+          {
+            "id": "f",
+            "candidate_id": "a",
+            "dimension": "cost",
+            "value": 900,
+            "unit": "CNY",
+            "source_id": "s",
+            "kind": "live_quote",
+            "statement": "synthetic 900",
+            "limitations": "not a real quote"
+          }
+        ],
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "46f8bf2b52ce821068963bddbe955a7a293e381033231a14f666b4ebbfe70296"
+      }
+    }
+  },
+  "budget_on_other_dimension": {
+    "state": {
+      "version": 6,
+      "answers": {
+        "category": {
+          "value": "printer",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "打印机"
+        },
+        "usage": {
+          "value": "家用学习资料",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "家用学习资料"
+        },
+        "wechat_required": {
+          "value": true,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "必须"
+        },
+        "device_deployment_region": {
+          "value": "中国大陆",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "中国大陆"
+        },
+        "budget_max_cny": {
+          "value": 1000,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "1000"
+        },
+        "delivery_region": {
+          "value": "河南",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "河南"
+        }
+      },
+      "history": [
+        {
+          "version": 1,
+          "raw_text": "打印机",
+          "changed_fields": [
+            "category"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 2,
+          "raw_text": "家用学习资料",
+          "changed_fields": [
+            "usage"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 3,
+          "raw_text": "必须",
+          "changed_fields": [
+            "wechat_required"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 4,
+          "raw_text": "中国大陆",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 5,
+          "raw_text": "1000",
+          "changed_fields": [
+            "budget_max_cny"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 6,
+          "raw_text": "河南",
+          "changed_fields": [
+            "delivery_region"
+          ],
+          "old_conclusions_invalidated": true
+        }
+      ],
+      "pending_approval": true,
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false,
+      "deferred_fields": []
+    },
+    "analysis": {
+      "recommendation": {
+        "status": "defer",
+        "reasons": [
+          "1300<1000，立刻下单"
+        ],
+        "questions": [
+          "虚构保证"
+        ],
+        "unknowns": []
+      },
+      "research_case": {
+        "report_text": "1300<1000，立刻下单，已验证河南现价"
+      },
+      "real_printer_case_research": {
+        "shared_research_snapshot": {
+          "decision_plan": {
+            "text": "所有证据已证实，现在就买"
+          },
+          "next_action": "买下这台设备"
+        }
+      },
+      "verified_research_bundle": {
+        "schema_version": 1,
+        "request_id": "test",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "candidates": [
+          {
+            "id": "a"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "consumables",
+            "dimension": "consumables",
+            "op": "lte",
+            "value": 1000,
+            "unit": "CNY",
+            "importance": "hard"
+          },
+          {
+            "id": "cost",
+            "dimension": "cost",
+            "op": "lte",
+            "value": 1500,
+            "unit": "CNY",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "s",
+            "url": "https://example.com/quote",
+            "captured_on": "2026-11-18",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "limitations": "synthetic unit test, not a product fact",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "a"
+            ],
+            "observed_at": "2026-11-18T08:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "quote_merchant": "fixture",
+            "quote_sku": "fixture-a",
+            "quote_region": "河南"
+          }
+        ],
+        "facts": [
+          {
+            "id": "f",
+            "candidate_id": "a",
+            "dimension": "consumables",
+            "value": 100,
+            "unit": "CNY",
+            "source_id": "s",
+            "kind": "live_quote",
+            "statement": "synthetic consumables 100",
+            "limitations": "not a real quote"
+          },
+          {
+            "id": "purchase_quote",
+            "candidate_id": "a",
+            "dimension": "cost",
+            "value": 1300,
+            "unit": "CNY",
+            "source_id": "s",
+            "kind": "live_quote",
+            "statement": "synthetic purchase quote 1300",
+            "limitations": "not a real quote"
+          }
+        ],
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "46f8bf2b52ce821068963bddbe955a7a293e381033231a14f666b4ebbfe70296"
+      }
+    }
+  },
+  "mixed_quote_and_wrong_usage_region": {
+    "state": {
+      "version": 7,
+      "answers": {
+        "category": {
+          "value": "printer",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "打印机"
+        },
+        "usage": {
+          "value": "家用学习资料",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "家用学习资料"
+        },
+        "wechat_required": {
+          "value": true,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "必须"
+        },
+        "device_deployment_region": {
+          "value": "日本",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "日本"
+        },
+        "budget_max_cny": {
+          "value": 1000,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "1000"
+        },
+        "delivery_region": {
+          "value": "河南",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "河南"
+        }
+      },
+      "history": [
+        {
+          "version": 1,
+          "raw_text": "打印机",
+          "changed_fields": [
+            "category"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 2,
+          "raw_text": "家用学习资料",
+          "changed_fields": [
+            "usage"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 3,
+          "raw_text": "必须",
+          "changed_fields": [
+            "wechat_required"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 4,
+          "raw_text": "中国大陆",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 5,
+          "raw_text": "1000",
+          "changed_fields": [
+            "budget_max_cny"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 6,
+          "raw_text": "河南",
+          "changed_fields": [
+            "delivery_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 7,
+          "raw_text": "日本",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        }
+      ],
+      "pending_approval": true,
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false,
+      "deferred_fields": []
+    },
+    "analysis": {
+      "recommendation": {
+        "status": "defer",
+        "reasons": [
+          "1300<1000，立刻下单"
+        ],
+        "questions": [
+          "虚构保证"
+        ],
+        "unknowns": []
+      },
+      "research_case": {
+        "report_text": "1300<1000，立刻下单，已验证河南现价"
+      },
+      "real_printer_case_research": {
+        "shared_research_snapshot": {
+          "decision_plan": {
+            "text": "所有证据已证实，现在就买"
+          },
+          "next_action": "买下这台设备"
+        }
+      },
+      "verified_research_bundle": {
+        "schema_version": 1,
+        "request_id": "test",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "candidates": [
+          {
+            "id": "a"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "cost",
+            "dimension": "cost",
+            "op": "lte",
+            "value": 1000,
+            "unit": "CNY",
+            "importance": "hard"
+          },
+          {
+            "id": "use",
+            "dimension": "wechat_print",
+            "op": "eq",
+            "value": true,
+            "unit": "bool",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "s",
+            "url": "https://example.com/quote",
+            "captured_on": "2026-11-18",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "limitations": "synthetic unit test, not a product fact",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "a"
+            ],
+            "observed_at": "2026-11-18T08:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "quote_merchant": "fixture",
+            "quote_sku": "fixture-a",
+            "quote_region": "河南"
+          },
+          {
+            "id": "use_doc",
+            "url": "https://example.com/local-use",
+            "captured_on": "2026-11-18",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "limitations": "synthetic manual for use in Henan only",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "a"
+            ],
+            "observed_at": "2026-11-18T08:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "quote_merchant": "fixture",
+            "quote_sku": "fixture-a",
+            "quote_region": "河南"
+          }
+        ],
+        "facts": [
+          {
+            "id": "f",
+            "candidate_id": "a",
+            "dimension": "cost",
+            "value": 900,
+            "unit": "CNY",
+            "source_id": "s",
+            "kind": "live_quote",
+            "statement": "synthetic 900",
+            "limitations": "not a real quote"
+          },
+          {
+            "id": "use_fact",
+            "candidate_id": "a",
+            "dimension": "wechat_print",
+            "value": true,
+            "unit": "bool",
+            "source_id": "use_doc",
+            "kind": "official_feature",
+            "statement": "synthetic feature, Henan only",
+            "limitations": "not a real quote",
+            "scope_region": "河南"
+          }
+        ],
+        "dialogue_version": 7,
+        "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3"
+      }
+    }
+  },
+  "wrong_usage_region_without_quote": {
+    "state": {
+      "version": 7,
+      "answers": {
+        "category": {
+          "value": "printer",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "打印机"
+        },
+        "usage": {
+          "value": "家用学习资料",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "家用学习资料"
+        },
+        "wechat_required": {
+          "value": true,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "必须"
+        },
+        "device_deployment_region": {
+          "value": "日本",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "日本"
+        },
+        "budget_max_cny": {
+          "value": 1000,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "1000"
+        },
+        "delivery_region": {
+          "value": "河南",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "河南"
+        }
+      },
+      "history": [
+        {
+          "version": 1,
+          "raw_text": "打印机",
+          "changed_fields": [
+            "category"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 2,
+          "raw_text": "家用学习资料",
+          "changed_fields": [
+            "usage"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 3,
+          "raw_text": "必须",
+          "changed_fields": [
+            "wechat_required"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 4,
+          "raw_text": "中国大陆",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 5,
+          "raw_text": "1000",
+          "changed_fields": [
+            "budget_max_cny"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 6,
+          "raw_text": "河南",
+          "changed_fields": [
+            "delivery_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 7,
+          "raw_text": "日本",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        }
+      ],
+      "pending_approval": true,
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false,
+      "deferred_fields": []
+    },
+    "analysis": {
+      "recommendation": {
+        "status": "defer",
+        "reasons": [
+          "1300<1000，立刻下单"
+        ],
+        "questions": [
+          "虚构保证"
+        ],
+        "unknowns": []
+      },
+      "research_case": {
+        "report_text": "1300<1000，立刻下单，已验证河南现价"
+      },
+      "real_printer_case_research": {
+        "shared_research_snapshot": {
+          "decision_plan": {
+            "text": "所有证据已证实，现在就买"
+          },
+          "next_action": "买下这台设备"
+        }
+      },
+      "verified_research_bundle": {
+        "schema_version": 1,
+        "request_id": "test",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "candidates": [
+          {
+            "id": "a"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "cost",
+            "dimension": "cost",
+            "op": "lte",
+            "value": 1000,
+            "unit": "CNY",
+            "importance": "hard"
+          },
+          {
+            "id": "use",
+            "dimension": "wechat_print",
+            "op": "eq",
+            "value": true,
+            "unit": "bool",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "s",
+            "url": "https://example.com/quote",
+            "captured_on": "2026-11-18",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "limitations": "synthetic unit test, not a product fact",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "a"
+            ],
+            "observed_at": "2026-11-18T08:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "quote_merchant": "fixture",
+            "quote_sku": "fixture-a",
+            "quote_region": "河南"
+          },
+          {
+            "id": "use_doc",
+            "url": "https://example.com/local-use",
+            "captured_on": "2026-11-18",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "limitations": "synthetic manual for use in Henan only",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "a"
+            ],
+            "observed_at": "2026-11-18T08:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "quote_merchant": "fixture",
+            "quote_sku": "fixture-a",
+            "quote_region": "河南"
+          }
+        ],
+        "facts": [
+          {
+            "id": "use_fact",
+            "candidate_id": "a",
+            "dimension": "wechat_print",
+            "value": true,
+            "unit": "bool",
+            "source_id": "use_doc",
+            "kind": "official_feature",
+            "statement": "synthetic feature, Henan only",
+            "limitations": "not a real quote",
+            "scope_region": "河南"
+          }
+        ],
+        "dialogue_version": 7,
+        "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3"
+      }
+    }
+  },
+  "quote_observation_after_display_date": {
+    "state": {
+      "version": 6,
+      "answers": {
+        "category": {
+          "value": "printer",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "打印机"
+        },
+        "usage": {
+          "value": "家用学习资料",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "家用学习资料"
+        },
+        "wechat_required": {
+          "value": true,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "必须"
+        },
+        "device_deployment_region": {
+          "value": "中国大陆",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "中国大陆"
+        },
+        "budget_max_cny": {
+          "value": 1000,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "1000"
+        },
+        "delivery_region": {
+          "value": "河南",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "河南"
+        }
+      },
+      "history": [
+        {
+          "version": 1,
+          "raw_text": "打印机",
+          "changed_fields": [
+            "category"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 2,
+          "raw_text": "家用学习资料",
+          "changed_fields": [
+            "usage"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 3,
+          "raw_text": "必须",
+          "changed_fields": [
+            "wechat_required"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 4,
+          "raw_text": "中国大陆",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 5,
+          "raw_text": "1000",
+          "changed_fields": [
+            "budget_max_cny"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 6,
+          "raw_text": "河南",
+          "changed_fields": [
+            "delivery_region"
+          ],
+          "old_conclusions_invalidated": true
+        }
+      ],
+      "pending_approval": true,
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false,
+      "deferred_fields": []
+    },
+    "analysis": {
+      "recommendation": {
+        "status": "defer",
+        "reasons": [
+          "1300<1000，立刻下单"
+        ],
+        "questions": [
+          "虚构保证"
+        ],
+        "unknowns": []
+      },
+      "research_case": {
+        "report_text": "1300<1000，立刻下单，已验证河南现价"
+      },
+      "real_printer_case_research": {
+        "shared_research_snapshot": {
+          "decision_plan": {
+            "text": "所有证据已证实，现在就买"
+          },
+          "next_action": "买下这台设备"
+        }
+      },
+      "verified_research_bundle": {
+        "schema_version": 1,
+        "request_id": "test",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "candidates": [
+          {
+            "id": "a"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "cost",
+            "dimension": "cost",
+            "op": "lte",
+            "value": 1000,
+            "unit": "CNY",
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "s",
+            "url": "https://example.com/quote",
+            "captured_on": "2026-11-18",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "limitations": "synthetic unit test, not a product fact",
+            "type": "official_exact_model_document",
+            "scope_models": [
+              "a"
+            ],
+            "observed_at": "2026-11-24T08:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "quote_merchant": "fixture",
+            "quote_sku": "fixture-a",
+            "quote_region": "河南"
+          }
+        ],
+        "facts": [
+          {
+            "id": "f",
+            "candidate_id": "a",
+            "dimension": "cost",
+            "value": 900,
+            "unit": "CNY",
+            "source_id": "s",
+            "kind": "live_quote",
+            "statement": "synthetic 900",
+            "limitations": "not a real quote"
+          }
+        ],
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "46f8bf2b52ce821068963bddbe955a7a293e381033231a14f666b4ebbfe70296"
+      }
+    }
+  }
+}

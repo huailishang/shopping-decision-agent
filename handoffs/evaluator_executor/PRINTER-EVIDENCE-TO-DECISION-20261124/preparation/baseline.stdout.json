@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "mode": "old_backend_no_admitted_facts"
+  },
+  "chat": {
+    "0": {
+      "original": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": null
+      },
+      "miniprogram": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "miniprogram"
+        },
+        "public_decision": null
+      },
+      "transfer_to_app": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "transfer_to_app"
+        },
+        "public_decision": null
+      },
+      "optional": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": false
+        },
+        "public_decision": null
+      },
+      "revised_budget": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为800元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 800,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": null
+      }
+    },
+    "1": {
+      "original": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": null
+      },
+      "miniprogram": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "miniprogram"
+        },
+        "public_decision": null
+      },
+      "transfer_to_app": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "transfer_to_app"
+        },
+        "public_decision": null
+      },
+      "optional": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": false
+        },
+        "public_decision": null
+      },
+      "revised_budget": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为800元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 800,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": null
+      }
+    }
+  }
+}

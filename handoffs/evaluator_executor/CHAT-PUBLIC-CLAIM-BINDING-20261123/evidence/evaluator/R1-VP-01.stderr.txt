@@ -1,0 +1,26 @@
+test_all_three_confirmed_false_conflict_with_raw_hard (test_minimal_research_flow.ConditionsRepairTest.test_all_three_confirmed_false_conflict_with_raw_hard) ... ok
+test_no_explicit_hard_keeps_positive_neighbor (test_minimal_research_flow.ConditionsRepairTest.test_no_explicit_hard_keeps_positive_neighbor) ... ok
+test_raw_and_confirmed_hard_equivalence (test_minimal_research_flow.ConditionsRepairTest.test_raw_and_confirmed_hard_equivalence) ... ok
+test_raw_wechat_hard_not_lost_or_reasked (test_minimal_research_flow.ConditionsRepairTest.test_raw_wechat_hard_not_lost_or_reasked) ... ok
+test_retracted_hard_requirement_restores_research (test_minimal_research_flow.ConditionsRepairTest.test_retracted_hard_requirement_restores_research) ... ok
+test_unrecognized_a3_hard_remains_unknown (test_minimal_research_flow.ConditionsRepairTest.test_unrecognized_a3_hard_remains_unknown) ... ok
+test_web_wireless_same_as_direct_selected_research (test_minimal_research_flow.ConditionsRepairTest.test_web_wireless_same_as_direct_selected_research) ... ok
+test_changed_answer_updates_comparison (test_minimal_research_flow.MinimalFlowTest.test_changed_answer_updates_comparison) ... ok
+test_chat_selected_pack_switch_and_answer (test_minimal_research_flow.MinimalFlowTest.test_chat_selected_pack_switch_and_answer) ... ok
+test_conflicting_wechat_condition (test_minimal_research_flow.MinimalFlowTest.test_conflicting_wechat_condition) ... ok
+test_empty_never_invents_source (test_minimal_research_flow.MinimalFlowTest.test_empty_never_invents_source) ... ok
+test_injected_order_and_feedback_not_real (test_minimal_research_flow.MinimalFlowTest.test_injected_order_and_feedback_not_real) ... ok
+test_malicious_promotion_not_executed (test_minimal_research_flow.MinimalFlowTest.test_malicious_promotion_not_executed) ... ok
+test_missing_hp_never_borrows_r10 (test_minimal_research_flow.MinimalFlowTest.test_missing_hp_never_borrows_r10) ... ok
+test_no_context_legacy_still_available (test_minimal_research_flow.MinimalFlowTest.test_no_context_legacy_still_available) ... ok
+test_old_price_not_live_quote (test_minimal_research_flow.MinimalFlowTest.test_old_price_not_live_quote) ... ok
+test_registry_tamper_fails_closed (test_minimal_research_flow.MinimalFlowTest.test_registry_tamper_fails_closed) ... ok
+test_selected_two_one_zero (test_minimal_research_flow.MinimalFlowTest.test_selected_two_one_zero) ... ok
+test_source_model_date_retained (test_minimal_research_flow.MinimalFlowTest.test_source_model_date_retained) ... ok
+test_unapproved_context_rejected (test_minimal_research_flow.MinimalFlowTest.test_unapproved_context_rejected) ... ok
+test_unknown_hard_and_foreign_scope (test_minimal_research_flow.MinimalFlowTest.test_unknown_hard_and_foreign_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.635s
+
+OK

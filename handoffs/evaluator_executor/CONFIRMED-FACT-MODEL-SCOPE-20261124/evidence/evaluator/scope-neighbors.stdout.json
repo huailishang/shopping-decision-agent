@@ -1,0 +1,373 @@
+{
+  "checks": {
+    "padded_source_list_cannot_conflict_with_valid_height": true,
+    "source_scope_and_fact_scope_must_intersect": true,
+    "valid_capacity_remains_for_both": true,
+    "input_audit_stays_unchanged": true,
+    "safety_flags_stay_false": true
+  },
+  "inputs": {
+    "schema_version": 1,
+    "request_id": "offline-kettle-fit",
+    "category": "kettle",
+    "as_of": "2026-11-23",
+    "region": "中国大陆",
+    "candidates": [
+      {
+        "id": "synthetic-kettle-EU"
+      },
+      {
+        "id": "synthetic-kettle"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "volume",
+        "dimension": "capacity",
+        "op": "gte",
+        "value": 1.5,
+        "unit": "L",
+        "importance": "hard"
+      },
+      {
+        "id": "shelf",
+        "dimension": "height_with_base",
+        "op": "lte",
+        "value": "230",
+        "unit": "mm",
+        "importance": "hard"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://kettle-evaluation.invalid/spec",
+        "captured_on": "2026-11-21",
+        "scope_region": "中国大陆",
+        "allowed_use": "model_research_short_summary",
+        "limitations": "合成规格表",
+        "id": "padded-scope",
+        "scope_models": [
+          "synthetic-kettle",
+          "synthetic-kettle-EU "
+        ]
+      },
+      {
+        "url": "https://kettle-evaluation.invalid/spec",
+        "captured_on": "2026-11-21",
+        "scope_region": "中国大陆",
+        "allowed_use": "model_research_short_summary",
+        "limitations": "合成规格表",
+        "id": "spec-height",
+        "scope_models": [
+          "synthetic-kettle"
+        ]
+      },
+      {
+        "url": "https://kettle-evaluation.invalid/spec",
+        "captured_on": "2026-11-21",
+        "scope_region": "中国大陆",
+        "allowed_use": "model_research_short_summary",
+        "limitations": "合成规格表",
+        "id": "spec-volume"
+      }
+    ],
+    "facts": [
+      {
+        "id": "invalid-oversize",
+        "candidate_id": "synthetic-kettle",
+        "source_id": "padded-scope",
+        "dimension": "height_with_base",
+        "value": "400",
+        "unit": "mm",
+        "kind": "synthetic_probe",
+        "statement": "冻结离线样例",
+        "limitations": "无真实产品证明",
+        "scope_models": [
+          "synthetic-kettle"
+        ]
+      },
+      {
+        "id": "foreign-scope",
+        "candidate_id": "synthetic-kettle-EU",
+        "source_id": "spec-height",
+        "dimension": "height_with_base",
+        "value": "230",
+        "unit": "mm",
+        "kind": "synthetic_probe",
+        "statement": "冻结离线样例",
+        "limitations": "无真实产品证明",
+        "scope_models": [
+          "synthetic-kettle-EU"
+        ]
+      },
+      {
+        "id": "other-volume",
+        "candidate_id": "synthetic-kettle-EU",
+        "source_id": "spec-volume",
+        "dimension": "capacity",
+        "value": 1.8,
+        "unit": "L",
+        "kind": "synthetic_probe",
+        "statement": "冻结离线样例",
+        "limitations": "无真实产品证明"
+      },
+      {
+        "id": "volume",
+        "candidate_id": "synthetic-kettle",
+        "source_id": "spec-volume",
+        "dimension": "capacity",
+        "value": 1.8,
+        "unit": "L",
+        "kind": "synthetic_probe",
+        "statement": "冻结离线样例",
+        "limitations": "无真实产品证明"
+      },
+      {
+        "id": "with-base",
+        "candidate_id": "synthetic-kettle",
+        "source_id": "spec-height",
+        "dimension": "height_with_base",
+        "value": "230",
+        "unit": "mm",
+        "kind": "synthetic_probe",
+        "statement": "冻结离线样例",
+        "limitations": "无真实产品证明",
+        "scope_models": [
+          "synthetic-kettle"
+        ]
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "shelf",
+      "dimension": "height_with_base",
+      "op": "lte",
+      "value": "230",
+      "unit": "mm",
+      "importance": "hard"
+    },
+    {
+      "id": "volume",
+      "dimension": "capacity",
+      "op": "gte",
+      "value": 1.5,
+      "unit": "L",
+      "importance": "hard"
+    }
+  ],
+  "result": {
+    "schema_version": 1,
+    "publication_schema": "verified-claims/v1",
+    "origin": "rule",
+    "input_sha256": "0feb16da98665d5c72ba492769bb0a513402256c5d77179bc5fd283f00496412",
+    "claims": [
+      {
+        "claim_id": "420187098336cced5363cd3c490ef83dcef66b0f004bd8cb0919a745dbe7b796",
+        "candidate_id": "synthetic-kettle-EU",
+        "requirement_id": "shelf",
+        "dimension": "height_with_base",
+        "status": "unknown",
+        "rule_id": "lte",
+        "supporting_fact_ids": [],
+        "source_grade": [
+          "missing_source"
+        ],
+        "scope": {
+          "model": "synthetic-kettle-EU",
+          "region": "中国大陆",
+          "as_of": "2026-11-23"
+        },
+        "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+        "rule_expression": null,
+        "verification": {
+          "verified_structural": true,
+          "source_traceable": false,
+          "scope_applicable": false,
+          "entailed_by_rule": false,
+          "unverified_external_fact": false
+        },
+        "source_audit": []
+      },
+      {
+        "claim_id": "2a74f909fd64e0290e39e27fb9c04bd59354dd3dbd29a66e98425f58c3c006a5",
+        "candidate_id": "synthetic-kettle",
+        "requirement_id": "shelf",
+        "dimension": "height_with_base",
+        "status": "met",
+        "rule_id": "lte",
+        "supporting_fact_ids": [
+          "with-base"
+        ],
+        "source_grade": [
+          "synthetic_local"
+        ],
+        "scope": {
+          "model": "synthetic-kettle",
+          "region": "中国大陆",
+          "as_of": "2026-11-23"
+        },
+        "limit": "仅用于本地合成验证，不代表真实商品",
+        "rule_expression": "230 ≤ 230",
+        "verification": {
+          "verified_structural": true,
+          "source_traceable": true,
+          "scope_applicable": true,
+          "entailed_by_rule": true,
+          "unverified_external_fact": false
+        },
+        "source_audit": [
+          {
+            "fact_id": "with-base",
+            "source_id": "spec-height",
+            "source_grade": "synthetic_local",
+            "admitted": true,
+            "limit": "合成测试事实；非真实商品证明"
+          }
+        ]
+      },
+      {
+        "claim_id": "4157763581f5394143ed56ef5f402f9b1d949a06622d7c414d64004f788e3e7c",
+        "candidate_id": "synthetic-kettle-EU",
+        "requirement_id": "volume",
+        "dimension": "capacity",
+        "status": "met",
+        "rule_id": "gte",
+        "supporting_fact_ids": [
+          "other-volume"
+        ],
+        "source_grade": [
+          "synthetic_local"
+        ],
+        "scope": {
+          "model": "synthetic-kettle-EU",
+          "region": "中国大陆",
+          "as_of": "2026-11-23"
+        },
+        "limit": "仅用于本地合成验证，不代表真实商品",
+        "rule_expression": "1.8 ≥ 1.5",
+        "verification": {
+          "verified_structural": true,
+          "source_traceable": true,
+          "scope_applicable": true,
+          "entailed_by_rule": true,
+          "unverified_external_fact": false
+        },
+        "source_audit": [
+          {
+            "fact_id": "other-volume",
+            "source_id": "spec-volume",
+            "source_grade": "synthetic_local",
+            "admitted": true,
+            "limit": "合成测试事实；非真实商品证明"
+          }
+        ]
+      },
+      {
+        "claim_id": "6de989bffb7f9ab01722f124e78dbf2c6d652d11deaa83a4d546e1623c42e582",
+        "candidate_id": "synthetic-kettle",
+        "requirement_id": "volume",
+        "dimension": "capacity",
+        "status": "met",
+        "rule_id": "gte",
+        "supporting_fact_ids": [
+          "volume"
+        ],
+        "source_grade": [
+          "synthetic_local"
+        ],
+        "scope": {
+          "model": "synthetic-kettle",
+          "region": "中国大陆",
+          "as_of": "2026-11-23"
+        },
+        "limit": "仅用于本地合成验证，不代表真实商品",
+        "rule_expression": "1.8 ≥ 1.5",
+        "verification": {
+          "verified_structural": true,
+          "source_traceable": true,
+          "scope_applicable": true,
+          "entailed_by_rule": true,
+          "unverified_external_fact": false
+        },
+        "source_audit": [
+          {
+            "fact_id": "volume",
+            "source_id": "spec-volume",
+            "source_grade": "synthetic_local",
+            "admitted": true,
+            "limit": "合成测试事实；非真实商品证明"
+          }
+        ]
+      }
+    ],
+    "assessments": [
+      {
+        "candidate_id": "synthetic-kettle-EU",
+        "research_status": "pending_evidence",
+        "comparisons": [
+          {
+            "requirement_id": "shelf",
+            "claim_id": "420187098336cced5363cd3c490ef83dcef66b0f004bd8cb0919a745dbe7b796",
+            "status": "unknown",
+            "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+            "supporting_fact_ids": [],
+            "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+          },
+          {
+            "requirement_id": "volume",
+            "claim_id": "4157763581f5394143ed56ef5f402f9b1d949a06622d7c414d64004f788e3e7c",
+            "status": "met",
+            "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+            "supporting_fact_ids": [
+              "other-volume"
+            ],
+            "limit": "仅用于本地合成验证，不代表真实商品"
+          }
+        ]
+      },
+      {
+        "candidate_id": "synthetic-kettle",
+        "research_status": "eligible_for_research",
+        "comparisons": [
+          {
+            "requirement_id": "shelf",
+            "claim_id": "2a74f909fd64e0290e39e27fb9c04bd59354dd3dbd29a66e98425f58c3c006a5",
+            "status": "met",
+            "text": "230 ≤ 230。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+            "supporting_fact_ids": [
+              "with-base"
+            ],
+            "limit": "仅用于本地合成验证，不代表真实商品"
+          },
+          {
+            "requirement_id": "volume",
+            "claim_id": "6de989bffb7f9ab01722f124e78dbf2c6d652d11deaa83a4d546e1623c42e582",
+            "status": "met",
+            "text": "1.8 ≥ 1.5。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+            "supporting_fact_ids": [
+              "volume"
+            ],
+            "limit": "仅用于本地合成验证，不代表真实商品"
+          }
+        ]
+      }
+    ],
+    "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+    "next_actions": [
+      {
+        "kind": "research",
+        "candidate_id": "synthetic-kettle-EU",
+        "requirement_id": "shelf",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ],
+    "raw_model_text_published": false,
+    "manual_decision_gain_accepted": false,
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "live_price_verified": false,
+    "wechat_reuse_verified": false,
+    "real_user_effect_verified": false
+  }
+}

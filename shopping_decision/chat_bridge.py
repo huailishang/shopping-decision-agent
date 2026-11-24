@@ -7,6 +7,7 @@ CLI参数依次是 base64(state JSON), base64(field), base64(submitted text)。
 from __future__ import annotations
 
 import base64
+from datetime import date
 import json
 import re
 import sys
@@ -14,9 +15,11 @@ import sys
 from .desktop_bridge import encode
 from .dialogue_flow import apply_turn, new_dialogue, next_questions
 from .web import evaluate_input
-from .claim_gate import publish_checked_comparison
-from .evidence_comparison import digest
-from .minimal_research import selected_pack
+from .confirmed_comparison import publish_confirmed_comparison
+from .evidence_comparison import digest, number, validate_bundle
+from .minimal_research import CASE_ID, selected_pack
+from .printer_purchase_checks import HARDWARE_ONLY, build_purchase_checks, render_purchase_checks
+from .printer_reviewed_evidence import local_bundle, document_note
 
 UNKNOWN = {"暂不确定", "不确定", "不知道", "未知", "待确认", "先跳过"}
 BOOL = {"是": True, "需要": True, "必须": True, "接受": True,
@@ -58,7 +61,8 @@ REFS = {
     "device_deployment_region": [("示例：中国大陆", "中国大陆")],
     "monthly_pages_range": [("示例：0-50", "0-50")],
     "budget_max_cny": [("示例：1000元", "1000")],
-    "budget_scope": [("主机含运费及必要支出", "主机含运费及必要支出"),
+    "budget_scope": [("仅主机硬件", "仅主机硬件"),
+                     ("主机含运费及必要支出", "主机含运费及必要支出"),
                      ("含额外耗材", "含额外耗材")],
     "requires_scan": [("是", "是"), ("否", "否")],
     "requires_auto_duplex": [("是", "是"), ("否", "否")],
@@ -127,8 +131,14 @@ def _question_fields(state: dict) -> list[str]:
     elif wants_wechat and v.get("wechat_required") is False:
         fields.append("device_deployment_region")
     fields.extend(("monthly_pages_range", "budget_max_cny"))
-    # legacy里出现的必要问题仍处在当前问答链，但预算口径仅到核实时再问。
-    return [f for f in fields if f not in v and f not in skipped and (f in LABELS or f in legacy)]
+    pending = [f for f in fields if f not in v and f not in skipped and (f in LABELS or f in legacy)]
+    if pending or not isinstance(state.get("research_context"), dict):
+        return pending
+    try:
+        selected_pack(state["research_context"])
+    except (ValueError, KeyError, TypeError, OSError):
+        return pending
+    return [f for f in build_purchase_checks(v)["quote_missing"] if f not in skipped]
 
 
 def _parse(field: str, submitted: str):
@@ -177,7 +187,8 @@ def _parse(field: str, submitted: str):
             raise ValueError("请选明确的微信方式，或暂不确定")
         return mapping[v]
     if field == "budget_scope":
-        mapping = {"主机含运费及必要支出": "device_delivered",
+        mapping = {"仅主机硬件": HARDWARE_ONLY,
+                   "主机含运费及必要支出": "device_delivered",
                    "含额外耗材": "device_and_extra_consumables"}
         if v not in mapping:
             raise ValueError("预算口径须选可审选项，或暂不确定")
@@ -220,7 +231,18 @@ def submit_message(state: dict, field: str, submitted: str) -> dict:
         if field == "category" and parsed != v.get("category"):
             # 换品类也要清预算等旧需求，不能把原打印机用户条件当成新商品的确认。
             changes.update({k: None for k in list(v) if k != "category"})
+    hardware_only = changes.get("budget_scope") == HARDWARE_ONLY
+    # Keep the chat-only hardware ceiling separate from legacy delivered-cost scopes.
+    if hardware_only:
+        changes["budget_scope"] = "unknown"
     state = apply_turn(state, changes, raw_text=submitted)
+    if hardware_only:
+        state["answers"]["budget_scope"]["value"] = HARDWARE_ONLY
+        turn = state["history"][-1]
+        updated = [name for name in turn["changed_fields"] if name != "budget_scope"]
+        if v.get("budget_scope") != HARDWARE_ONLY:
+            updated.append("budget_scope")
+        turn.update(changed_fields=updated, old_conclusions_invalidated=bool(updated))
     skipped = set(state.get("deferred_fields", []))
     for name, value in changes.items():
         if value is None:
@@ -238,6 +260,7 @@ def _analysis(state: dict) -> dict | None:
     v = confirmed_values(state)
     if v.get("category") != "printer" or "usage" not in v:
         return None
+    budget_scope = v.get("budget_scope", "unknown")
     data = {"category": "printer", "description": v["usage"], "confirmed": True,
             "needs_color": v.get("needs_color"),
             "accepts_outsourced_color": v.get("accepts_outsourced_color"),
@@ -246,7 +269,7 @@ def _analysis(state: dict) -> dict | None:
             "device_deployment_region": v.get("device_deployment_region"),
             "monthly_pages_range": v.get("monthly_pages_range"),
             "budget_max_cny": v.get("budget_max_cny"),
-            "budget_scope": v.get("budget_scope", "unknown"),
+            "budget_scope": "unknown" if budget_scope == HARDWARE_ONLY else budget_scope,
             "requires_scan": v.get("requires_scan"),
             "requires_auto_duplex": v.get("requires_auto_duplex"),
             "delivery_region": v.get("delivery_region"),
@@ -258,6 +281,50 @@ def _analysis(state: dict) -> dict | None:
         data["research_context"] = state["research_context"]
         data["accepts_initial_setup"] = v.get("accepts_initial_setup")
     return evaluate_input(data)
+
+
+def _confirmed_comparison_rows(values: dict, legacy_rows: list) -> list:
+    """Map explicit current dialogue answers; provider rows supply IDs only."""
+    if values.get("category") != "printer":
+        return []
+    definitions = []
+    def add(dimension, value=True, unit="bool", op="eq", manual=False):
+        row = {"dimension": dimension, "unit": unit, "op": op,
+               "value": value, "importance": "hard"}
+        if manual:
+            row["requires_manual_resolution"] = True
+        definitions.append(row)
+
+    budget = values.get("budget_max_cny")
+    if type(budget) is int:
+        add("cost", budget, "CNY", "lte")
+    if values.get("wechat_required") is True:
+        workflow = values.get("wechat_workflow")
+        add({"miniprogram": "wechat_miniprogram",
+             "transfer_to_app": "wechat_transfer_to_app"}.get(workflow, "wechat_print"))
+    for field, dimension in (("requires_scan", "scan"),
+                             ("requires_auto_duplex", "auto_duplex"),
+                             ("needs_color", "color_print")):
+        if values.get(field) is True:
+            add(dimension)
+    if values.get("accepts_initial_setup") is False:
+        add("initial_setup_without_app_or_scan", manual=True)
+    # Preserve existing IDs for matching dimensions/units, never their values.
+    # Reserve all existing IDs so an omitted condition cannot borrow another ID.
+    remaining = {(row["dimension"], row["unit"]): row for row in definitions}
+    used_ids = {row["id"] for row in legacy_rows}
+    result = []
+    for old in legacy_rows:
+        key = (old["dimension"], old["unit"])
+        if key in remaining:
+            result.append(dict(remaining.pop(key), id=old["id"]))
+    for row in remaining.values():
+        identifier = "confirmed:" + row["dimension"]
+        while identifier in used_ids:
+            identifier += ":confirmed"
+        used_ids.add(identifier)
+        result.append(dict(row, id=identifier))
+    return result
 
 
 def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None:
@@ -276,19 +343,48 @@ def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None
             bundle["dialogue_version"] != version or
             bundle.get("confirmed_values_sha256") != digest(values)):
         return None
-    # User budget and deployment geography must match the rule input exactly.
-    if values.get("device_deployment_region") and bundle.get("region") != values["device_deployment_region"]:
-        return None
-    budget = values.get("budget_max_cny")
-    if budget is not None and not any(
-            r.get("unit") == "CNY" and r.get("op") == "lte" and
-            type(r.get("value")) is int and r["value"] == budget
-            for r in bundle.get("requirements", []) if isinstance(r, dict)):
-        return None
+    # Validate the original bundle before any scoping: slicing must never
+    # conceal duplicate IDs, dangling references or oversized collections.
     try:
-        return publish_checked_comparison(bundle, origin="rule")
-    except (ValueError, TypeError, KeyError, OverflowError):
+        validate_bundle(bundle)
+    except (ValueError, TypeError, KeyError, OverflowError, AttributeError):
         return None
+    requirements = bundle["requirements"]
+    facts, sources, candidates = (bundle[k] for k in ("facts", "sources", "candidates"))
+
+    # Budget authority is the user-confirmed main-unit purchase ceiling,
+    # not a coincidentally equal consumables limit or a renamed dimension.
+    budget = values.get("budget_max_cny")
+    cost_rows = [r for r in requirements if r.get("dimension") == "cost"]
+    if type(budget) is int:
+        if (len(cost_rows) != 1 or cost_rows[0].get("unit") != "CNY" or
+                cost_rows[0].get("op") != "lte" or
+                cost_rows[0].get("importance") != "hard" or
+                type(cost_rows[0].get("value")) is not int or
+                cost_rows[0]["value"] != budget):
+            return None
+        try:
+            if any(r.get("unit") == "CNY" and r.get("op") == "lte" and
+                   number(r.get("value")) > number(budget) for r in requirements):
+                return None
+        except (ValueError, TypeError):
+            return None
+    elif cost_rows:
+        return None
+
+    confirmed = _confirmed_comparison_rows(values, requirements)
+    if not confirmed:
+        return None
+    # For multi-candidate displays, unresolved newly introduced conditions come
+    # first; supplied condition IDs remain in their original relative order.
+    if len(candidates) > 1:
+        old_ids = {row["id"] for row in requirements}
+        confirmed.sort(key=lambda row: row["id"] in old_ids)
+    return publish_confirmed_comparison(
+        bundle, confirmed, as_of=date.today().isoformat(),
+        deployment_region=values.get("device_deployment_region"),
+        delivery_region=values.get("delivery_region"),
+        budget_scope=values.get("budget_scope"))
 
 
 def _safe_research_progress(state: dict, analysis: dict, values: dict) -> str:
@@ -367,6 +463,7 @@ def render_chat(state: dict) -> dict:
                      + "\n参考答案点击只填草稿，发送后才会被确认为用户原话。")
     analysis = _analysis(state)
     public_decision = None
+    purchase_checks = None
     if analysis is None:
         outcome = ("尚未选择受审品类或缺用途，先收集需求；未给出商品推荐。"
                    if v.get("category") in (None, "printer")
@@ -377,9 +474,27 @@ def render_chat(state: dict) -> dict:
         setup_guard = ("已确认不接受App/扫码首次设置；现有型号流程材料不足以证明免设置可用，"
                        "此条件先按未核硬要求处理。\n"
                        if v.get("accepts_initial_setup") is False else "")
+        reviewed = None
+        if not isinstance(analysis.get("verified_research_bundle"), dict):
+            reviewed = local_bundle(v, state["version"], _confirmed_comparison_rows(v, []), date.today())
+            if reviewed is not None:
+                analysis = dict(analysis, verified_research_bundle=reviewed)
         public_decision = _publish_for_chat(analysis, v, state["version"])
         research_progress = _safe_research_progress(state, analysis, v)
         outcome = _public_chat_text(public_decision, setup_guard, research_progress)
+        if reviewed is not None and public_decision is not None:
+            # The comparison gate retains claim IDs. Show exact model and
+            # dimension names beside the same gate-produced rows.
+            outcome += "\n" + "\n".join(
+                f"{c['candidate_id']} / {c['dimension']}：{c['status']}；命题ID：{c['claim_id']}"
+                for c in public_decision["claims"])
+            if type(v.get("budget_max_cny")) is int:
+                outcome += f"\n已确认预算上限：{v['budget_max_cny']}元；应付价待核。"
+            outcome += "\n" + document_note(reviewed)
+        research = analysis.get("research_case")
+        if isinstance(research, dict) and research.get("case_id") == CASE_ID:
+            purchase_checks = build_purchase_checks(v)
+            outcome += "\n" + render_purchase_checks(purchase_checks)
         # The status remains a dialogue workflow signal, never a verified
         # product claim. Only the gate-generated text can be published as such.
         status = r["status"]
@@ -391,6 +506,7 @@ def render_chat(state: dict) -> dict:
               "research_result": analysis,
               "legacy_unverified_research": analysis is not None,
               "public_decision": public_decision,
+              "purchase_checks": purchase_checks,
               "public_claim_source": "publish_checked_comparison" if public_decision else "unverified_research_only",
               "purchase_recommendation_approved": False, "transactions_enabled": False,
               "live_price_verified": False}

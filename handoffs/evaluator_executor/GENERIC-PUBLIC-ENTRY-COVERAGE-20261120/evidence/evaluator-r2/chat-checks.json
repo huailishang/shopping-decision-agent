@@ -1,0 +1,12 @@
+{
+  "frozen_positive_has_visible_id": true,
+  "frozen_negatives_do_not_publish_met": true,
+  "legacy_in_audit_only": true,
+  "normal_research_and_current_answers": true,
+  "fresh_matching_quote": true,
+  "alternate_dimension_does_not_override_purchase_budget": false,
+  "off_region_usage_evidence_ignored_without_quote": true,
+  "off_region_usage_evidence_ignored_with_quote": false,
+  "future_quote_cannot_be_current": false,
+  "all_purchase_transaction_live_price_flags_false": true
+}

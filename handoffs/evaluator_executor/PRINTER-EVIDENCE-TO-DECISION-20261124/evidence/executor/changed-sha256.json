@@ -1,0 +1,8 @@
+{
+  "CURRENT.md": "893e58fa76a863488f70bc2f1aecf5f15536dc62f7991356310144287b5d5e71",
+  "shopping_decision/chat_bridge.py": "4381511a3dfebd10b76aec1b54d70d8a71c4d3602d94ef0aa931f9fe0ad77789",
+  "shopping_decision/printer_reviewed_evidence.py": "d792afb19fab3292286bbca2fd95b6312fbf20b0878344c7f90f5c7249779ae8",
+  "knowledge/printer_reviewed_evidence_v1.json": "52184538ea9bd0decff6896fdee1af9165b0b6d6c78e173e6585f539e17de54c",
+  "tests/test_printer_reviewed_evidence.py": "3894a5a4f3a6afa1becc2f0c95482b0c2ca25670ee261468888e2bbd9c6f73a9",
+  "handoffs/evaluator_executor/PRINTER-EVIDENCE-TO-DECISION-20261124/DECISION_HANDOFF.md": "5a90a11063b694046bef9cb6cd37e85265e3f143bd5ac548e051f927cc220dc9"
+}

@@ -1,0 +1,13 @@
+{
+  "basis": "project_owner_explicit",
+  "wechat_path": "miniprogram",
+  "wechat_path_interpretation": "优先验证从微信内直接发起；厂家支持与实际稳定复用仍分别核验",
+  "delivery_city_for_check": "河南省周口市",
+  "delivery_district_confirmed": false,
+  "optional_test_district": "河南省周口市川汇区",
+  "optional_test_district_is_actual_destination": false,
+  "budget_max_cny": 1000,
+  "budget_scope": "hardware_only",
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false
+}

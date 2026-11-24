@@ -1,0 +1,20 @@
+{
+  "phase": "start",
+  "head": "4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf",
+  "manifest_sha256": "4d25b6286a74293b4a50db06bdca3fff632995d158a8fbb1b1136ea2694a4ab8",
+  "protected_files_count": 1554,
+  "mismatch": [],
+  "unlisted_paths": [],
+  "staged": [],
+  "chat_sha256": "aa4b25ef4fff61fde99ef0e5e47a009cc871771a72067f43083b7a6919cbad2b",
+  "new_test_sha256": null,
+  "checks": {
+    "head_unchanged": true,
+    "index_empty": true,
+    "manifest_unchanged": true,
+    "protected_files_unchanged": true,
+    "no_extra_paths": true,
+    "chat_snapshot_matches_phase": true,
+    "new_test_matches_phase": true
+  }
+}

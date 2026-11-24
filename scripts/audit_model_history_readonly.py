@@ -21,6 +21,12 @@ PIN = (ROOT / "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
        / "post_review/PRINTER-TRUSTED-DECISION-20261119/post_review"
        / "GENERIC-EVIDENCE-CLAIM-GATE-20261119")
 CURRENT_TASK_ALLOWED_DRIFT = {"shopping_decision/chat_bridge.py"}
+# Only the exact two R1 test revisions independently reviewed on 2026-11-23
+# may drift from the frozen historical inventory. Never blanket-allow test edits.
+REVIEWED_R1_TEST_SHA256 = {
+    "tests/test_minimal_research_flow.py": "50a2a14b70bb32cea4ffb11fd8e2d51a34697fd49b1a738ad552870e30691c8b",
+    "tests/test_printer_decision_plan.py": "00efd08e1ce79f1c958575bb5531c0391f6cbe8a544e182573fa46e39a00ede4",
+}
 
 
 def check(condition, reason):
@@ -54,14 +60,19 @@ def audit_history(task: Path, *, ledger_bytes_override: bytes | None = None):
         check(p.is_file() and sha(p.read_bytes()) == expected,
               "protected_file_sha_mismatch:" + filename)
 
-    # The original frozen inventory is read, but current task's chat module is
-    # explicitly allowed to evolve. All OTHER original files stay byte-identical.
+    # Reviewed R1 test revisions are allowed only at the exact evaluator SHA.
+    for filename, expected in REVIEWED_R1_TEST_SHA256.items():
+        p = ROOT / filename
+        check(p.is_file(), "approved_r1_test_missing:" + filename)
+        check(sha(p.read_bytes()) == expected, "approved_r1_test_sha_mismatch:" + filename)
+
     historic_drifts = []
     for filename, expected in manifest["files"].items():
         p = ROOT / filename
         if not p.is_file() or sha(p.read_bytes()) != expected:
             historic_drifts.append(filename)
-            check(filename in CURRENT_TASK_ALLOWED_DRIFT,
+            check(filename in CURRENT_TASK_ALLOWED_DRIFT or
+                  filename in REVIEWED_R1_TEST_SHA256,
                   "unapproved_historical_file_drift:" + filename)
     actual_head = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()

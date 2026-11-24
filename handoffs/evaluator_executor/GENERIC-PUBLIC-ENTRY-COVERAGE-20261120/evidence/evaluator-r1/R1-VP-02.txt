@@ -1,0 +1,14 @@
+test_adversarial_requirement_cannot_instruct_purchase (test_printer_decision_plan.PrinterDecisionPlanTest.test_adversarial_requirement_cannot_instruct_purchase) ... ok
+test_changed_answer_recalculates_plan (test_printer_decision_plan.PrinterDecisionPlanTest.test_changed_answer_recalculates_plan) ... ok
+test_chat_result_contains_same_plan (test_printer_decision_plan.PrinterDecisionPlanTest.test_chat_result_contains_same_plan) ... ok
+test_explicit_condition_conflict_takes_priority (test_printer_decision_plan.PrinterDecisionPlanTest.test_explicit_condition_conflict_takes_priority) ... ok
+test_induced_order_does_not_switch_safety_flags (test_printer_decision_plan.PrinterDecisionPlanTest.test_induced_order_does_not_switch_safety_flags) ... ok
+test_missing_source_fails_closed_no_fabricated_binding (test_printer_decision_plan.PrinterDecisionPlanTest.test_missing_source_fails_closed_no_fabricated_binding) ... ok
+test_stale_or_suggested_price_not_treated_as_live_quote (test_printer_decision_plan.PrinterDecisionPlanTest.test_stale_or_suggested_price_not_treated_as_live_quote) ... ok
+test_three_paths_same_frozen_inputs (test_printer_decision_plan.PrinterDecisionPlanTest.test_three_paths_same_frozen_inputs) ... ok
+test_unconfirmed_not_made_into_answer_and_source_dates_retained (test_printer_decision_plan.PrinterDecisionPlanTest.test_unconfirmed_not_made_into_answer_and_source_dates_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.061s
+
+OK

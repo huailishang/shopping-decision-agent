@@ -1,0 +1,38 @@
+{"id": "Q01", "event": "scheduled", "at": "2026-11-24T07:13:02.915568+00:00", "kind": "query", "target": "Brother HL-L1238W 微信 小程序 site:brother.cn"}
+{"id": "Q02", "event": "scheduled", "at": "2026-11-24T07:13:02.915622+00:00", "kind": "query", "target": "Brother HL-L1238W 微信 APP 打印 site:brother.cn"}
+{"id": "Q03", "event": "scheduled", "at": "2026-11-24T07:13:02.915646+00:00", "kind": "query", "target": "HP M232dw 微信 小程序 site:hp.com"}
+{"id": "Q04", "event": "scheduled", "at": "2026-11-24T07:13:02.915656+00:00", "kind": "query", "target": "HP M232dw 微信 转存 App site:hp.com"}
+{"id": "Q01", "event": "completed", "at": "2026-11-24T07:13:13.631916+00:00", "status": "ok", "receipt": "Q01.txt"}
+{"id": "Q02", "event": "completed", "at": "2026-11-24T07:13:13.633331+00:00", "status": "ok", "receipt": "Q02.txt"}
+{"id": "Q03", "event": "completed", "at": "2026-11-24T07:13:13.634627+00:00", "status": "ok", "receipt": "Q03.txt"}
+{"id": "Q04", "event": "completed", "at": "2026-11-24T07:13:13.636128+00:00", "status": "ok", "receipt": "Q04.txt"}
+{"id": "O01", "event": "scheduled", "at": "2026-11-24T07:13:13.636180+00:00", "kind": "open", "target": "https://www.brother.cn/printer/prt/hl-l1238w"}
+{"id": "O02", "event": "scheduled", "at": "2026-11-24T07:13:13.636192+00:00", "kind": "open", "target": "https://www.brother.cn/minisite/bcnactivity/new-question08.html"}
+{"id": "O03", "event": "scheduled", "at": "2026-11-24T07:13:13.636199+00:00", "kind": "open", "target": "https://www.brother.cn/minisite/bcnactivity/new-question00.html"}
+{"id": "O04", "event": "scheduled", "at": "2026-11-24T07:13:13.636205+00:00", "kind": "open", "target": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/wei-xin-da-yin/td-p/1199701"}
+{"id": "O05", "event": "scheduled", "at": "2026-11-24T07:13:13.636210+00:00", "kind": "open", "target": "https://h30471.www3.hp.com/t5/da-yin-ji-shi-yong-xiang-guan-wen-ti/M232dw-ru-he-she-zhi-wei-xin-yun-da-yin/td-p/1364658"}
+{"id": "O01", "event": "completed", "at": "2026-11-24T07:13:25.724358+00:00", "status": "blocked", "receipt": "O01.txt"}
+{"id": "O02", "event": "completed", "at": "2026-11-24T07:13:25.726772+00:00", "status": "blocked", "receipt": "O02.txt"}
+{"id": "O03", "event": "completed", "at": "2026-11-24T07:13:25.729345+00:00", "status": "blocked", "receipt": "O03.txt"}
+{"id": "O04", "event": "completed", "at": "2026-11-24T07:13:25.731520+00:00", "status": "ok", "receipt": "O04.txt"}
+{"id": "O05", "event": "completed", "at": "2026-11-24T07:13:25.734119+00:00", "status": "ok", "receipt": "O05.txt"}
+{"id": "Q05", "event": "scheduled", "at": "2026-11-24T07:13:25.734188+00:00", "kind": "query", "target": "HP LaserJet MFP M232dw 微信小程序 惠普云打印 site:support.hp.com"}
+{"id": "Q06", "event": "scheduled", "at": "2026-11-24T07:13:25.734228+00:00", "kind": "query", "target": "HP M232dw 9YF97A 微信 云打印 site:hpstore.cn"}
+{"id": "Q07", "event": "scheduled", "at": "2026-11-24T07:13:25.734248+00:00", "kind": "query", "target": "Brother HL-L1238W 微信 畅享印 site:brother.com"}
+{"id": "Q08", "event": "scheduled", "at": "2026-11-24T07:13:25.734263+00:00", "kind": "query", "target": "HP M232dw 微信打印 9YF97A site:hp.com"}
+{"id": "Q05", "event": "completed", "at": "2026-11-24T07:13:37.026385+00:00", "status": "ok", "receipt": "Q05.txt"}
+{"id": "Q06", "event": "completed", "at": "2026-11-24T07:13:37.028114+00:00", "status": "ok", "receipt": "Q06.txt"}
+{"id": "Q07", "event": "completed", "at": "2026-11-24T07:13:37.030146+00:00", "status": "ok", "receipt": "Q07.txt"}
+{"id": "Q08", "event": "completed", "at": "2026-11-24T07:13:37.031910+00:00", "status": "ok", "receipt": "Q08.txt"}
+{"id": "O06", "event": "scheduled", "at": "2026-11-24T07:13:37.031940+00:00", "kind": "open", "target": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html"}
+{"id": "O07", "event": "scheduled", "at": "2026-11-24T07:13:37.031954+00:00", "kind": "open", "target": "https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html"}
+{"id": "O08", "event": "scheduled", "at": "2026-11-24T07:13:37.031963+00:00", "kind": "open", "target": "https://support.hp.com/cn-zh/document/ish_3018164-2845138-16"}
+{"id": "O09", "event": "scheduled", "at": "2026-11-24T07:13:37.031971+00:00", "kind": "open", "target": "https://support.hp.com/cn-zh/product/troubleshooting/hp-laserjet-mfp-m232-m237-printer-series/model/34370726?sku=9YF97A"}
+{"id": "O10", "event": "scheduled", "at": "2026-11-24T07:13:37.031978+00:00", "kind": "open", "target": "https://kaas.hpcloud.hp.com/pdf-public/pdf_12826995_zh-CN-1.pdf"}
+{"id": "O06", "event": "completed", "at": "2026-11-24T07:13:46.868233+00:00", "status": "ok", "receipt": "O06.txt"}
+{"id": "O07", "event": "completed", "at": "2026-11-24T07:13:46.869926+00:00", "status": "ok", "receipt": "O07.txt"}
+{"id": "O08", "event": "completed", "at": "2026-11-24T07:13:46.871716+00:00", "status": "blocked", "receipt": "O08.txt"}
+{"id": "O09", "event": "completed", "at": "2026-11-24T07:13:46.873297+00:00", "status": "failed", "receipt": "O09.txt"}
+{"id": "O10", "event": "completed", "at": "2026-11-24T07:13:46.875065+00:00", "status": "ok", "receipt": "O10.txt"}
+{"id": "O11", "event": "scheduled", "at": "2026-11-24T07:13:46.875110+00:00", "kind": "open", "target": "https://kaas.hpcloud.hp.com/pdf-public/pdf_12826995_zh-CN-1.pdf"}
+{"id": "O11", "event": "completed", "at": "2026-11-24T07:14:29.811316+00:00", "status": "failed", "receipt": "O11.txt"}

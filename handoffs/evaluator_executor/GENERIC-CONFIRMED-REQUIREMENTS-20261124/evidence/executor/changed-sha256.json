@@ -1,0 +1,6 @@
+{
+  "CURRENT.md": "fd93c8d4f3e44f9aa81c35536841b4cc355ea6bb0295e411549eaa6a35718528",
+  "shopping_decision/chat_bridge.py": "cddafc29979e484b67ea5de12cd4921b416a78bb8d69b9ba9db8da5f07090bbb",
+  "shopping_decision/confirmed_comparison.py": "fe8a21eace12be10af72be7ee9dcbb810a95df194120a1c31c7e2847bff2099a",
+  "tests/test_chat_requirement_authority.py": "d1496f6d87eb02657b2e02ce989998d19874d4dc7196d35e0e523e620b7f72bb"
+}

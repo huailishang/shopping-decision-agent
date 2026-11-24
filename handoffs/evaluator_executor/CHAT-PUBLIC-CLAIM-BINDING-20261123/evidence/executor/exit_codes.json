@@ -1,0 +1,141 @@
+{
+  "VP-01": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/CHAT-PUBLIC-CLAIM-BINDING-20261123/VERIFY_FROZEN_REPLAYS.py"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.852,
+    "stdout_sha256": "7bf904b557781f38090e54191640e445a79cb2a868dc15e8195f1bb5df85421b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "VP-02": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_chat_claim_binding.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.812,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "8cfae5f42c461a4236b9ef61a769573511c7370636b6eeb3724a1114c289a17b"
+  },
+  "R1-VP-01": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_minimal_research_flow.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 1.474,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "f8f76983d4ffb2e354fe85fa4f77c27b634e3e59eb6c03b3b83c8dfde6480953"
+  },
+  "R1-VP-02": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_printer_decision_plan.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.982,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "cb8d15ac32c1d46e1f0566b31e4699aa5eafb875c65d501e89d15396b883a9ac"
+  },
+  "R1-VP-03": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_publication_entry.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 26.685,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "8992a91653ba04063bf7cc2e91591e39da8755487c87c2b43e51143d205a01d7"
+  },
+  "R1-VP-04": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_claim_gate.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 0.676,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "c77261efb84e7e8d7a520bc01a3c7cd51686ebf9a8306141427dc4683acd2bd7"
+  },
+  "R1-VP-05": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-q"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 60.865,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "9c9d5f4a63ce00725da69b24a19792af0aac9cd997250d2670ecfcdf13af9710"
+  },
+  "R1-VP-06": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "scripts/audit_model_history_readonly.py",
+      "--task",
+      "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 11.713,
+    "stdout_sha256": "5ea568903f503a60981038ffb1e4c3bb79e90121fff01685669aa17395a91c4c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "total_duration_seconds": 104.111
+}

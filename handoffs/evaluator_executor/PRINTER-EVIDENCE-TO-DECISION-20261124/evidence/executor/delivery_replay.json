@@ -1,0 +1,983 @@
+{
+  "summary": {
+    "mode": "integrated",
+    "published_paths": 1,
+    "attempts": 19
+  },
+  "chat": {
+    "0": {
+      "original": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": null
+      },
+      "miniprogram": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "miniprogram"
+        },
+        "public_decision": null
+      },
+      "transfer_to_app": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "transfer_to_app"
+        },
+        "public_decision": null
+      },
+      "optional": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": false
+        },
+        "public_decision": null
+      },
+      "revised_budget": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为800元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 800,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": null
+      }
+    },
+    "1": {
+      "original": {
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：3a8c4ca02025170cf72e199497710a6e095f972e7c0b1c941ae57597c5d3eb74。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：4bbb1b4fa41b84ed6bd02cdd90998a4a6a4a6796ab1fe8d8237bd9090fc8a0de。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：cbd34784d6319978a19a22e2ab79af313e8a33dc44ff10fb4b38f07ec0cc74bd。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：761603149befb94511daee312cb3d037f620f71ff9d50bdc2b98d51606e7e4ce。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。\nBrother HL-L1238W / cost：unknown；命题ID：3a8c4ca02025170cf72e199497710a6e095f972e7c0b1c941ae57597c5d3eb74\nHP M232dw / cost：unknown；命题ID：cbd34784d6319978a19a22e2ab79af313e8a33dc44ff10fb4b38f07ec0cc74bd\nBrother HL-L1238W / wechat_print：unknown；命题ID：4bbb1b4fa41b84ed6bd02cdd90998a4a6a4a6796ab1fe8d8237bd9090fc8a0de\nHP M232dw / wechat_print：unknown；命题ID：761603149befb94511daee312cb3d037f620f71ff9d50bdc2b98d51606e7e4ce\n已确认预算上限：1000元；应付价待核。\n厂家文档（非实机验证）：Brother HL-L1238W 的兄弟畅享印小程序路径可保留核验；首次须安装并设置 Brother Mobile Connect、连接打印机并启用联机功能。后续重绑、账号/网络变化及稳定复用待核；独立转存厂商App路径未证明。HP M232dw 微信小程序及转App路径均待核。两款实际应付价未知，不推荐购买。\n来源：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html；高级说明书 > 移动连接 > 兄弟畅享印(微信小程序)，正文13–29、页脚62行；资料观察时间：2026-11-24T07:13:46.868233+00:00",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": {
+          "schema_version": 1,
+          "publication_schema": "verified-claims/v1",
+          "origin": "rule",
+          "input_sha256": "77ee63d892a897bba12805861ced68b94c442d920406d40c2576f0fef3010648",
+          "claims": [
+            {
+              "claim_id": "3a8c4ca02025170cf72e199497710a6e095f972e7c0b1c941ae57597c5d3eb74",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "cbd34784d6319978a19a22e2ab79af313e8a33dc44ff10fb4b38f07ec0cc74bd",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "4bbb1b4fa41b84ed6bd02cdd90998a4a6a4a6796ab1fe8d8237bd9090fc8a0de",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:wechat_print",
+              "dimension": "wechat_print",
+              "status": "unknown",
+              "rule_id": "eq",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "761603149befb94511daee312cb3d037f620f71ff9d50bdc2b98d51606e7e4ce",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_print",
+              "dimension": "wechat_print",
+              "status": "unknown",
+              "rule_id": "eq",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            }
+          ],
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "3a8c4ca02025170cf72e199497710a6e095f972e7c0b1c941ae57597c5d3eb74",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_print",
+                  "claim_id": "4bbb1b4fa41b84ed6bd02cdd90998a4a6a4a6796ab1fe8d8237bd9090fc8a0de",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "cbd34784d6319978a19a22e2ab79af313e8a33dc44ff10fb4b38f07ec0cc74bd",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_print",
+                  "claim_id": "761603149befb94511daee312cb3d037f620f71ff9d50bdc2b98d51606e7e4ce",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+          "next_actions": [
+            {
+              "kind": "verify_price",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "verify_price",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "research",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:wechat_print",
+              "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+            },
+            {
+              "kind": "research",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_print",
+              "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+            }
+          ],
+          "raw_model_text_published": false,
+          "manual_decision_gain_accepted": false,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false,
+          "wechat_reuse_verified": false,
+          "real_user_effect_verified": false
+        }
+      },
+      "miniprogram": {
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：9345e2c8ff368c50543660be1101f9ba80b66bf18dfdac5fe452f6cb27b1fb12。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：3c6d289561ce84220e92513d346552cfb3e011e9aaed4fbbe36079c23558e636。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：8125b2151086b7de92fac95cb8e7cf3f3f9601b449708b2109756611921b4130。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：be1e8696a2640e3eb5f8053aac5a84dc27d25cd916322d41a5c1e1389ccde832。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。\nBrother HL-L1238W / cost：unknown；命题ID：9345e2c8ff368c50543660be1101f9ba80b66bf18dfdac5fe452f6cb27b1fb12\nHP M232dw / cost：unknown；命题ID：8125b2151086b7de92fac95cb8e7cf3f3f9601b449708b2109756611921b4130\nBrother HL-L1238W / wechat_miniprogram：met；命题ID：3c6d289561ce84220e92513d346552cfb3e011e9aaed4fbbe36079c23558e636\nHP M232dw / wechat_miniprogram：unknown；命题ID：be1e8696a2640e3eb5f8053aac5a84dc27d25cd916322d41a5c1e1389ccde832\n已确认预算上限：1000元；应付价待核。\n厂家文档（非实机验证）：Brother HL-L1238W 的兄弟畅享印小程序路径可保留核验；首次须安装并设置 Brother Mobile Connect、连接打印机并启用联机功能。后续重绑、账号/网络变化及稳定复用待核；独立转存厂商App路径未证明。HP M232dw 微信小程序及转App路径均待核。两款实际应付价未知，不推荐购买。\n来源：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html；高级说明书 > 移动连接 > 兄弟畅享印(微信小程序)，正文13–29、页脚62行；资料观察时间：2026-11-24T07:13:46.868233+00:00",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "miniprogram"
+        },
+        "public_decision": {
+          "schema_version": 1,
+          "publication_schema": "verified-claims/v1",
+          "origin": "rule",
+          "input_sha256": "3e7174f2336e5e8af20eafb5b94e182503e338a2fa9216ca4e88ada1b74a2ea7",
+          "claims": [
+            {
+              "claim_id": "9345e2c8ff368c50543660be1101f9ba80b66bf18dfdac5fe452f6cb27b1fb12",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "8125b2151086b7de92fac95cb8e7cf3f3f9601b449708b2109756611921b4130",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "3c6d289561ce84220e92513d346552cfb3e011e9aaed4fbbe36079c23558e636",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:wechat_miniprogram",
+              "dimension": "wechat_miniprogram",
+              "status": "met",
+              "rule_id": "eq",
+              "supporting_fact_ids": [
+                "brother-miniprogram"
+              ],
+              "source_grade": [
+                "qualified_structural"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": true,
+                "scope_applicable": true,
+                "entailed_by_rule": true,
+                "unverified_external_fact": true
+              },
+              "source_audit": [
+                {
+                  "fact_id": "brother-miniprogram",
+                  "source_id": "brother-cn-manual",
+                  "source_grade": "qualified_structural",
+                  "admitted": true,
+                  "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+                }
+              ]
+            },
+            {
+              "claim_id": "be1e8696a2640e3eb5f8053aac5a84dc27d25cd916322d41a5c1e1389ccde832",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_miniprogram",
+              "dimension": "wechat_miniprogram",
+              "status": "unknown",
+              "rule_id": "eq",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            }
+          ],
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "9345e2c8ff368c50543660be1101f9ba80b66bf18dfdac5fe452f6cb27b1fb12",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_miniprogram",
+                  "claim_id": "3c6d289561ce84220e92513d346552cfb3e011e9aaed4fbbe36079c23558e636",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-miniprogram"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "8125b2151086b7de92fac95cb8e7cf3f3f9601b449708b2109756611921b4130",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_miniprogram",
+                  "claim_id": "be1e8696a2640e3eb5f8053aac5a84dc27d25cd916322d41a5c1e1389ccde832",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+          "next_actions": [
+            {
+              "kind": "verify_price",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "verify_price",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "research",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_miniprogram",
+              "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+            }
+          ],
+          "raw_model_text_published": false,
+          "manual_decision_gain_accepted": false,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false,
+          "wechat_reuse_verified": false,
+          "real_user_effect_verified": false
+        }
+      },
+      "transfer_to_app": {
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：a9d0908ec8c079d7dff86e98b93b4cac23a0002952ccba205a93d7d13f9ab092。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：4652aca666b9004e7ed2392936f27c4cdf2f5957864b73a422a4c572c62a375e。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：19f64584ead8bd5a436bc8b40a0d4f3b74e046e4504319d1039a5b5f9668e392。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：12af88263791a8a868f89bd64715a0ebeccaf8bfb3c7051990095fb67603c647。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。\nBrother HL-L1238W / cost：unknown；命题ID：a9d0908ec8c079d7dff86e98b93b4cac23a0002952ccba205a93d7d13f9ab092\nHP M232dw / cost：unknown；命题ID：19f64584ead8bd5a436bc8b40a0d4f3b74e046e4504319d1039a5b5f9668e392\nBrother HL-L1238W / wechat_transfer_to_app：unknown；命题ID：4652aca666b9004e7ed2392936f27c4cdf2f5957864b73a422a4c572c62a375e\nHP M232dw / wechat_transfer_to_app：unknown；命题ID：12af88263791a8a868f89bd64715a0ebeccaf8bfb3c7051990095fb67603c647\n已确认预算上限：1000元；应付价待核。\n厂家文档（非实机验证）：Brother HL-L1238W 的兄弟畅享印小程序路径可保留核验；首次须安装并设置 Brother Mobile Connect、连接打印机并启用联机功能。后续重绑、账号/网络变化及稳定复用待核；独立转存厂商App路径未证明。HP M232dw 微信小程序及转App路径均待核。两款实际应付价未知，不推荐购买。\n来源：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html；高级说明书 > 移动连接 > 兄弟畅享印(微信小程序)，正文13–29、页脚62行；资料观察时间：2026-11-24T07:13:46.868233+00:00",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true,
+          "wechat_workflow": "transfer_to_app"
+        },
+        "public_decision": {
+          "schema_version": 1,
+          "publication_schema": "verified-claims/v1",
+          "origin": "rule",
+          "input_sha256": "c8e6ed164b7e6ccb98c4e6272011e9094fa734157042dd33dbe1b109edc1d68d",
+          "claims": [
+            {
+              "claim_id": "a9d0908ec8c079d7dff86e98b93b4cac23a0002952ccba205a93d7d13f9ab092",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "19f64584ead8bd5a436bc8b40a0d4f3b74e046e4504319d1039a5b5f9668e392",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "4652aca666b9004e7ed2392936f27c4cdf2f5957864b73a422a4c572c62a375e",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:wechat_transfer_to_app",
+              "dimension": "wechat_transfer_to_app",
+              "status": "unknown",
+              "rule_id": "eq",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "12af88263791a8a868f89bd64715a0ebeccaf8bfb3c7051990095fb67603c647",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_transfer_to_app",
+              "dimension": "wechat_transfer_to_app",
+              "status": "unknown",
+              "rule_id": "eq",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            }
+          ],
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "a9d0908ec8c079d7dff86e98b93b4cac23a0002952ccba205a93d7d13f9ab092",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_transfer_to_app",
+                  "claim_id": "4652aca666b9004e7ed2392936f27c4cdf2f5957864b73a422a4c572c62a375e",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "19f64584ead8bd5a436bc8b40a0d4f3b74e046e4504319d1039a5b5f9668e392",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_transfer_to_app",
+                  "claim_id": "12af88263791a8a868f89bd64715a0ebeccaf8bfb3c7051990095fb67603c647",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+          "next_actions": [
+            {
+              "kind": "verify_price",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "verify_price",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "research",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:wechat_transfer_to_app",
+              "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+            },
+            {
+              "kind": "research",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_transfer_to_app",
+              "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+            }
+          ],
+          "raw_model_text_published": false,
+          "manual_decision_gain_accepted": false,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false,
+          "wechat_reuse_verified": false,
+          "real_user_effect_verified": false
+        }
+      },
+      "optional": {
+        "text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前受控研究包包含2条待核研究记录；记录数量不代表有效商品证据数。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n已有记录仅供研究排查；继续核原始来源、观察时间、适用型号和地区，不把旧文字当结果。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 1000,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": false
+        },
+        "public_decision": null
+      },
+      "revised_budget": {
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：105481528725045500c6979fbc41b29971ddb25508f754e435ab3496532db6a3。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：2626da8e4288b5908c8d407a929485556654512ee9a3993fbe4cb5eb32154a5b。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：0e47138bf99e4ad02b52e4de7a408889ae11af5f06042ae90e60fd116fcbe0b8。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：e4ae8371524fe992492e0ec16ff113375bc5b40b8fb5cdbdc99a8ba4bc5ba195。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。\nBrother HL-L1238W / cost：unknown；命题ID：105481528725045500c6979fbc41b29971ddb25508f754e435ab3496532db6a3\nHP M232dw / cost：unknown；命题ID：0e47138bf99e4ad02b52e4de7a408889ae11af5f06042ae90e60fd116fcbe0b8\nBrother HL-L1238W / wechat_print：unknown；命题ID：2626da8e4288b5908c8d407a929485556654512ee9a3993fbe4cb5eb32154a5b\nHP M232dw / wechat_print：unknown；命题ID：e4ae8371524fe992492e0ec16ff113375bc5b40b8fb5cdbdc99a8ba4bc5ba195\n已确认预算上限：800元；应付价待核。\n厂家文档（非实机验证）：Brother HL-L1238W 的兄弟畅享印小程序路径可保留核验；首次须安装并设置 Brother Mobile Connect、连接打印机并启用联机功能。后续重绑、账号/网络变化及稳定复用待核；独立转存厂商App路径未证明。HP M232dw 微信小程序及转App路径均待核。两款实际应付价未知，不推荐购买。\n来源：https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-849C5AB7-8304-49CC-90D6-7FE8C315EBBB_1.html；高级说明书 > 移动连接 > 兄弟畅享印(微信小程序)，正文13–29、页脚62行；资料观察时间：2026-11-24T07:13:46.868233+00:00",
+        "confirmed": {
+          "category": "printer",
+          "usage": "亲戚在河南省家用黑白打印，期望首次配置后可复用微信打印",
+          "budget_max_cny": 800,
+          "monthly_pages_range": [
+            0,
+            50
+          ],
+          "needs_color": false,
+          "accepts_outsourced_color": true,
+          "accepts_initial_setup": true,
+          "device_deployment_region": "中国大陆河南省",
+          "wechat_required": true
+        },
+        "public_decision": {
+          "schema_version": 1,
+          "publication_schema": "verified-claims/v1",
+          "origin": "rule",
+          "input_sha256": "59a807fc277af1e3a0cdd1660ce301acf6e9f25f10d923898e4e030a39ba4e8b",
+          "claims": [
+            {
+              "claim_id": "105481528725045500c6979fbc41b29971ddb25508f754e435ab3496532db6a3",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "0e47138bf99e4ad02b52e4de7a408889ae11af5f06042ae90e60fd116fcbe0b8",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "dimension": "cost",
+              "status": "unknown",
+              "rule_id": "lte",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "2626da8e4288b5908c8d407a929485556654512ee9a3993fbe4cb5eb32154a5b",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:wechat_print",
+              "dimension": "wechat_print",
+              "status": "unknown",
+              "rule_id": "eq",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "Brother HL-L1238W",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            },
+            {
+              "claim_id": "e4ae8371524fe992492e0ec16ff113375bc5b40b8fb5cdbdc99a8ba4bc5ba195",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_print",
+              "dimension": "wechat_print",
+              "status": "unknown",
+              "rule_id": "eq",
+              "supporting_fact_ids": [],
+              "source_grade": [
+                "missing_source"
+              ],
+              "scope": {
+                "model": "HP M232dw",
+                "region": "中国大陆河南省",
+                "as_of": "2026-11-24"
+              },
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+              "rule_expression": null,
+              "verification": {
+                "verified_structural": true,
+                "source_traceable": false,
+                "scope_applicable": false,
+                "entailed_by_rule": false,
+                "unverified_external_fact": false
+              },
+              "source_audit": []
+            }
+          ],
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "105481528725045500c6979fbc41b29971ddb25508f754e435ab3496532db6a3",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_print",
+                  "claim_id": "2626da8e4288b5908c8d407a929485556654512ee9a3993fbe4cb5eb32154a5b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "confirmed:cost",
+                  "claim_id": "0e47138bf99e4ad02b52e4de7a408889ae11af5f06042ae90e60fd116fcbe0b8",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "confirmed:wechat_print",
+                  "claim_id": "e4ae8371524fe992492e0ec16ff113375bc5b40b8fb5cdbdc99a8ba4bc5ba195",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+          "next_actions": [
+            {
+              "kind": "verify_price",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "verify_price",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:cost",
+              "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+            },
+            {
+              "kind": "research",
+              "candidate_id": "Brother HL-L1238W",
+              "requirement_id": "confirmed:wechat_print",
+              "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+            },
+            {
+              "kind": "research",
+              "candidate_id": "HP M232dw",
+              "requirement_id": "confirmed:wechat_print",
+              "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+            }
+          ],
+          "raw_model_text_published": false,
+          "manual_decision_gain_accepted": false,
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false,
+          "wechat_reuse_verified": false,
+          "real_user_effect_verified": false
+        }
+      }
+    }
+  }
+}

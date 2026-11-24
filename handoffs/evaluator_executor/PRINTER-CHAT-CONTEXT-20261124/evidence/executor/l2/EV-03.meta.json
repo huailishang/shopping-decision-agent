@@ -1,0 +1,21 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-03",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/VERIFY_ORIGINAL_CASE.py"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/VERIFY_ORIGINAL_CASE.py",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-24T01:44:52.386222+00:00",
+  "finished_at_utc": "2026-11-24T01:44:52.935034+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-03.stdout.log",
+  "stderr_path": "EV-03.stderr.log",
+  "stdout_bytes": 5263,
+  "stderr_bytes": 0,
+  "stdout_sha256": "c8d2f0a44b5f6001bca4f384154b1582f1df37d9cc08253e8839d4c317eacc5f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

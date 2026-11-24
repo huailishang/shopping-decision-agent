@@ -1,0 +1,72 @@
+{
+  "head": "4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf",
+  "head_matches": true,
+  "baseline_sha_matches": true,
+  "immutable_count": 86,
+  "immutable_mismatch": {},
+  "tracked_diff": [
+    "M\tCURRENT.md",
+    "M\tscripts/audit_model_history_readonly.py",
+    "M\tshopping_decision/chat_bridge.py",
+    "M\ttests/test_publication_entry.py"
+  ],
+  "tracked_paths_match": true,
+  "unaccounted_untracked_paths": [],
+  "staged_paths": [],
+  "executor_receipts": {
+    "VP-01": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    },
+    "VP-02": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    },
+    "R1-VP-01": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    },
+    "R1-VP-02": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    },
+    "R1-VP-03": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    },
+    "R1-VP-04": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    },
+    "R1-VP-05": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    },
+    "R1-VP-06": {
+      "stdout_sha256": true,
+      "stderr_sha256": true,
+      "command_equal": true,
+      "exit_equal": true
+    }
+  },
+  "reviewed_code_sha256": {
+    "shopping_decision/chat_bridge.py": "aa4b25ef4fff61fde99ef0e5e47a009cc871771a72067f43083b7a6919cbad2b",
+    "tests/test_chat_claim_binding.py": "0997389c4c86d74dfe758bd2864b766dfedbb8ba4e6a7ec9ce9132eafb5dea62",
+    "tests/test_publication_entry.py": "760de8fa9fcd29dccfa947dd26e94154bd72fdae5059050ad6e482c7d45229b3",
+    "scripts/audit_model_history_readonly.py": "6ef2d10540a1a1fb43ff44de6df6d9a7db152c5aa8dd340bb2da6e8d541004a7"
+  }
+}

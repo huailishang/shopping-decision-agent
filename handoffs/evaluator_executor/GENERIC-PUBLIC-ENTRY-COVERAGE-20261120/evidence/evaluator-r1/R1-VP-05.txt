@@ -1,0 +1,86 @@
+Exception in thread Thread-4 (_readerthread):
+Traceback (most recent call last):
+  File "D:\SoftWare\Anaconda\install\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "D:\SoftWare\Anaconda\install\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\SoftWare\Anaconda\install\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xbd in position 669: invalid start byte
+127.0.0.1 - - [23/Nov/2026 20:10:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:10:59] "POST /api/decide HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 20:10:59] "POST /api/decide HTTP/1.1" 400 -
+Exception in thread Thread-46 (_readerthread):
+Traceback (most recent call last):
+  File "D:\SoftWare\Anaconda\install\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "D:\SoftWare\Anaconda\install\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\SoftWare\Anaconda\install\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 428: invalid continuation byte
+Exception in thread Thread-72 (_readerthread):
+Traceback (most recent call last):
+  File "D:\SoftWare\Anaconda\install\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "D:\SoftWare\Anaconda\install\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\SoftWare\Anaconda\install\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb4 in position 409: invalid start byte
+======================================================================
+ERROR: test_cli_actual_verified_display_replay (test_claim_gate.ClaimGateTests.test_cli_actual_verified_display_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\tests\test_claim_gate.py", line 221, in test_cli_actual_verified_display_replay
+    self.assertEqual(json.loads(run.stdout)["publication_schema"], "verified-claims/v1")
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SoftWare\Anaconda\install\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+
+======================================================================
+ERROR: test_cli_real_subprocess_offline (test_jd_union_official.JDUnionOfficialTests.test_cli_real_subprocess_offline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\tests\test_jd_union_official.py", line 168, in test_cli_real_subprocess_offline
+    output = json.loads(res.stdout)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SoftWare\Anaconda\install\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+
+======================================================================
+ERROR: test_history_ledger_tampering_cannot_pass_readonly_audit (test_publication_entry.PublicationEntryTests.test_history_ledger_tampering_cannot_pass_readonly_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\tests\test_publication_entry.py", line 189, in test_history_ledger_tampering_cannot_pass_readonly_audit
+    good = audit_history(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\scripts\audit_model_history_readonly.py", line 64, in audit_history
+    check(filename in CURRENT_TASK_ALLOWED_DRIFT,
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\scripts\audit_model_history_readonly.py", line 28, in check
+    raise ValueError(reason)
+ValueError: unapproved_historical_file_drift:tests/test_minimal_research_flow.py
+
+======================================================================
+ERROR: test_offline_cli_real_process (test_taobao_material.TaobaoMaterialTest.test_offline_cli_real_process)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\SoftWare\VScode\install\Project\shopping-decision-agent\tests\test_taobao_material.py", line 135, in test_offline_cli_real_process
+    result = json.loads(process.stdout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SoftWare\Anaconda\install\Lib\json\__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+
+----------------------------------------------------------------------
+Ran 506 tests in 23.548s
+
+FAILED (errors=4)

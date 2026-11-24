@@ -1,0 +1,50 @@
+{
+  "freeze-scope": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/VERIFY_SCOPE.py",
+      "--phase",
+      "start"
+    ],
+    "started_at_utc": "2026-11-24T01:25:08.765818+00:00",
+    "elapsed_seconds": 6.052,
+    "exit_code": 0,
+    "stdout_sha256": "cdb6e7d241b9438c2138f63e01e49693aa0dd1cb009eecca966f43f66b0a8233",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "freeze-workflow": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "/mnt/c/Users/HuailiShang/.codex/skills/evaluator-executor-workflow/scripts/validate_workflow.py",
+      "--repo",
+      ".",
+      "--current",
+      "CURRENT.md"
+    ],
+    "started_at_utc": "2026-11-24T01:25:08.766318+00:00",
+    "elapsed_seconds": 0.317,
+    "exit_code": 0,
+    "stdout_sha256": "964aaa7e57a702d389d374fdaa0ff7acf3bf385ac8817508152ce6dc44fab479",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "freeze-runner-plan": {
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-c",
+      "from pathlib import Path; import sys; sys.path.insert(0,sys.argv[1]); from run_validation import load_plan; repo=Path.cwd(); plan=repo/sys.argv[2]; print({mode: len(load_plan(repo, plan, mode=mode)[1]) for mode in ('executor', 'evaluator')})",
+      "/mnt/c/Users/HuailiShang/.codex/skills/evaluator-executor-workflow/scripts/",
+      "handoffs/evaluator_executor/PRINTER-CHAT-CONTEXT-20261124/VALIDATION_PLAN.yaml"
+    ],
+    "started_at_utc": "2026-11-24T01:25:08.766896+00:00",
+    "elapsed_seconds": 0.224,
+    "exit_code": 0,
+    "stdout_sha256": "45ccd916cebf21476e74c8eca70557eaa6fd88d9062421070569678a8fbfffba",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

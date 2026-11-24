@@ -1,0 +1,251 @@
+{
+  "failed_prechecks": [
+    "purchase_budget_kept",
+    "mixed_usage_keeps_its_own_region",
+    "future_observation_pending"
+  ],
+  "failed_postchecks": [],
+  "cases": {
+    "budget_on_other_dimension": {
+      "before": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：100 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：44f517f6cd5149e24ff5c4c13763838c2f5a4023aa2a7a8db75957cf9988ef15。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：1300 ≤ 1500。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：461f51ba8053aa0c4af3fd1d41ec9578a15074bd650569666eef9ee953478dee。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "consumables",
+            "status": "met",
+            "claim_id": "44f517f6cd5149e24ff5c4c13763838c2f5a4023aa2a7a8db75957cf9988ef15",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "100 ≤ 1000"
+          },
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "461f51ba8053aa0c4af3fd1d41ec9578a15074bd650569666eef9ee953478dee",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "1300 ≤ 1500"
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "after": {
+        "result_text": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "mixed_quote_and_wrong_usage_region": {
+      "before": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：6e428202b0a071eed8205fad50c3ca7722979aff1bcfebb8abfbd4c751a365b9。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：c4acfac51f1d5710419e4cee70868f56689de244bcf374c13479c6dbc04510e3。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "6e428202b0a071eed8205fad50c3ca7722979aff1bcfebb8abfbd4c751a365b9",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "900 ≤ 1000"
+          },
+          {
+            "requirement_id": "use",
+            "status": "met",
+            "claim_id": "c4acfac51f1d5710419e4cee70868f56689de244bcf374c13479c6dbc04510e3",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": null
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "after": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：79c4ef22721bd76404a34418edd7a14cf61877e47d999c20e60c3bff62dda79d。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：a350864c2fc9fda2dff84b1e2d1f22577eb75423a6c95725830112332a9bb7c7。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "79c4ef22721bd76404a34418edd7a14cf61877e47d999c20e60c3bff62dda79d",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "900 ≤ 1000"
+          },
+          {
+            "requirement_id": "use",
+            "status": "unknown",
+            "claim_id": "a350864c2fc9fda2dff84b1e2d1f22577eb75423a6c95725830112332a9bb7c7",
+            "scope": {
+              "model": "a",
+              "region": "日本",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": null
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "quote_observation_after_display_date": {
+      "before": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：3f2ff04563df4df4d1df6b55b19e2b6212285508edea3a4bbc1583f7702c31f8。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "3f2ff04563df4df4d1df6b55b19e2b6212285508edea3a4bbc1583f7702c31f8",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "900 ≤ 1000"
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "after": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：7829a200a925dd6f7397f42a2cb9958c9d444a78ef08191b7defbb56dd0a50d9。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "unknown",
+            "claim_id": "7829a200a925dd6f7397f42a2cb9958c9d444a78ef08191b7defbb56dd0a50d9",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": null
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "delivery_positive": {
+      "before": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7ef3157af17d7b0fbc806404104710425bed3a5860dbeafd5f0bb85c7b5bf48e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "7ef3157af17d7b0fbc806404104710425bed3a5860dbeafd5f0bb85c7b5bf48e",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "900 ≤ 1000"
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "after": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7ef3157af17d7b0fbc806404104710425bed3a5860dbeafd5f0bb85c7b5bf48e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "7ef3157af17d7b0fbc806404104710425bed3a5860dbeafd5f0bb85c7b5bf48e",
+            "scope": {
+              "model": "a",
+              "region": "河南",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "900 ≤ 1000"
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "positive_synthetic": {
+      "before": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7a47bcd0f215437b30e1c6a0ce09dbe0910a0f1c293147f55dd844ed3fd9d39c。适用边界：仅用于本地合成验证，不代表真实商品\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "7a47bcd0f215437b30e1c6a0ce09dbe0910a0f1c293147f55dd844ed3fd9d39c",
+            "scope": {
+              "model": "a",
+              "region": "中国大陆",
+              "as_of": "2026-11-18"
+            },
+            "rule_expression": "900 ≤ 1000"
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "after": {
+        "result_text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：e37e2ddb84342230b05ebdf82439c771e7cc3cf28c8cccf15371628d01da2ae7。适用边界：仅用于本地合成验证，不代表真实商品\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+        "claims": [
+          {
+            "requirement_id": "cost",
+            "status": "met",
+            "claim_id": "e37e2ddb84342230b05ebdf82439c771e7cc3cf28c8cccf15371628d01da2ae7",
+            "scope": {
+              "model": "a",
+              "region": "中国大陆",
+              "as_of": "2026-11-23"
+            },
+            "rule_expression": "900 ≤ 1000"
+          }
+        ],
+        "safety_flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    }
+  }
+}

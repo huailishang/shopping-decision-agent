@@ -1,0 +1,2305 @@
+{
+  "checks": {
+    "positive_control": true,
+    "negative_control": true,
+    "reordered_candidates_keep_own_evidence": true,
+    "reversed_required_feature_cannot_be_met": false,
+    "omitted_required_feature_cannot_be_eligible": false,
+    "generic_feature_cannot_resolve_specific_workflow": false,
+    "specific_workflow_control": true,
+    "safety_flags": true
+  },
+  "inputs": {
+    "positive_control": [
+      {
+        "version": 6,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家用学习资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家用学习资料"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须"
+          },
+          "device_deployment_region": {
+            "value": "日本",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "日本"
+          },
+          "delivery_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家用学习资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "必须",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "日本",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "河南",
+            "changed_fields": [
+              "delivery_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      {
+        "schema_version": 1,
+        "request_id": "independent-print",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3",
+        "candidates": [
+          {
+            "id": "review-model"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "ceiling",
+            "dimension": "cost",
+            "unit": "CNY",
+            "op": "lte",
+            "value": 1000,
+            "importance": "hard"
+          },
+          {
+            "id": "wx",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "op": "eq",
+            "value": true,
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "practice-shop",
+            "url": "https://review.invalid/practice-shop",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源",
+            "quote_sku": "review-sku",
+            "quote_merchant": "离线模拟商家",
+            "quote_region": "河南"
+          },
+          {
+            "id": "practice-japan",
+            "url": "https://review.invalid/practice-japan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "日本",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          }
+        ],
+        "facts": [
+          {
+            "id": "device-price",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "cost",
+            "unit": "CNY",
+            "value": 900,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "wechat-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": true,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          }
+        ]
+      }
+    ],
+    "negative_control": [
+      {
+        "version": 6,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家用学习资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家用学习资料"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须"
+          },
+          "device_deployment_region": {
+            "value": "日本",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "日本"
+          },
+          "delivery_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家用学习资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "必须",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "日本",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "河南",
+            "changed_fields": [
+              "delivery_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      {
+        "schema_version": 1,
+        "request_id": "independent-print",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3",
+        "candidates": [
+          {
+            "id": "review-model"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "ceiling",
+            "dimension": "cost",
+            "unit": "CNY",
+            "op": "lte",
+            "value": 1000,
+            "importance": "hard"
+          },
+          {
+            "id": "wx",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "op": "eq",
+            "value": true,
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "practice-shop",
+            "url": "https://review.invalid/practice-shop",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源",
+            "quote_sku": "review-sku",
+            "quote_merchant": "离线模拟商家",
+            "quote_region": "河南"
+          },
+          {
+            "id": "practice-japan",
+            "url": "https://review.invalid/practice-japan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "日本",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          }
+        ],
+        "facts": [
+          {
+            "id": "device-price",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "cost",
+            "unit": "CNY",
+            "value": 900,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "wechat-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": false,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          }
+        ]
+      }
+    ],
+    "reordered_two_candidates": [
+      {
+        "version": 6,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家用学习资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家用学习资料"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须"
+          },
+          "device_deployment_region": {
+            "value": "日本",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "日本"
+          },
+          "delivery_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家用学习资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "必须",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "日本",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "河南",
+            "changed_fields": [
+              "delivery_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      {
+        "schema_version": 1,
+        "request_id": "independent-print",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3",
+        "candidates": [
+          {
+            "id": "other"
+          },
+          {
+            "id": "review-model"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "wx",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "op": "eq",
+            "value": true,
+            "importance": "hard"
+          },
+          {
+            "id": "ceiling",
+            "dimension": "cost",
+            "unit": "CNY",
+            "op": "lte",
+            "value": 1000,
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "other-henan",
+            "url": "https://review.invalid/other-henan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "other"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          },
+          {
+            "id": "practice-japan",
+            "url": "https://review.invalid/practice-japan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "日本",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          },
+          {
+            "id": "practice-shop",
+            "url": "https://review.invalid/practice-shop",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源",
+            "quote_sku": "review-sku",
+            "quote_merchant": "离线模拟商家",
+            "quote_region": "河南"
+          }
+        ],
+        "facts": [
+          {
+            "id": "unrelated-feature",
+            "candidate_id": "other",
+            "source_id": "other-henan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": true,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "irrelevant-quote",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "wechat_print",
+            "unit": "CNY",
+            "value": 42,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "wechat-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": true,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "device-price",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "cost",
+            "unit": "CNY",
+            "value": 900,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          }
+        ]
+      }
+    ],
+    "reversed_required_feature": [
+      {
+        "version": 6,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家用学习资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家用学习资料"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须"
+          },
+          "device_deployment_region": {
+            "value": "日本",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "日本"
+          },
+          "delivery_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家用学习资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "必须",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "日本",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "河南",
+            "changed_fields": [
+              "delivery_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      {
+        "schema_version": 1,
+        "request_id": "independent-print",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3",
+        "candidates": [
+          {
+            "id": "review-model"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "ceiling",
+            "dimension": "cost",
+            "unit": "CNY",
+            "op": "lte",
+            "value": 1000,
+            "importance": "hard"
+          },
+          {
+            "id": "wx",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "op": "eq",
+            "value": false,
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "practice-shop",
+            "url": "https://review.invalid/practice-shop",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源",
+            "quote_sku": "review-sku",
+            "quote_merchant": "离线模拟商家",
+            "quote_region": "河南"
+          },
+          {
+            "id": "practice-japan",
+            "url": "https://review.invalid/practice-japan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "日本",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          }
+        ],
+        "facts": [
+          {
+            "id": "device-price",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "cost",
+            "unit": "CNY",
+            "value": 900,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "wechat-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": false,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          }
+        ]
+      }
+    ],
+    "omitted_required_feature": [
+      {
+        "version": 6,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家用学习资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家用学习资料"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须"
+          },
+          "device_deployment_region": {
+            "value": "日本",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "日本"
+          },
+          "delivery_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家用学习资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "必须",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "日本",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "河南",
+            "changed_fields": [
+              "delivery_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      {
+        "schema_version": 1,
+        "request_id": "independent-print",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "dialogue_version": 6,
+        "confirmed_values_sha256": "f16f5dd86a55aa05996a6c72294e3549681e028bfbb094a884d9081dcdeb9ff3",
+        "candidates": [
+          {
+            "id": "review-model"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "ceiling",
+            "dimension": "cost",
+            "unit": "CNY",
+            "op": "lte",
+            "value": 1000,
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "practice-shop",
+            "url": "https://review.invalid/practice-shop",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源",
+            "quote_sku": "review-sku",
+            "quote_merchant": "离线模拟商家",
+            "quote_region": "河南"
+          },
+          {
+            "id": "practice-japan",
+            "url": "https://review.invalid/practice-japan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "日本",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          }
+        ],
+        "facts": [
+          {
+            "id": "device-price",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "cost",
+            "unit": "CNY",
+            "value": 900,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "wechat-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": false,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          }
+        ]
+      }
+    ],
+    "generic_fact_for_specific_workflow": [
+      {
+        "version": 7,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家用学习资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家用学习资料"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须"
+          },
+          "device_deployment_region": {
+            "value": "日本",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "日本"
+          },
+          "delivery_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          },
+          "wechat_workflow": {
+            "value": "miniprogram",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "微信小程序直接打印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家用学习资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "必须",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "日本",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "河南",
+            "changed_fields": [
+              "delivery_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 7,
+            "raw_text": "微信小程序直接打印",
+            "changed_fields": [
+              "wechat_workflow"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      {
+        "schema_version": 1,
+        "request_id": "independent-print",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "dialogue_version": 7,
+        "confirmed_values_sha256": "63604ebe16cbba66efed761ed482a237c72429c7f4944120067e1914cd68a2b1",
+        "candidates": [
+          {
+            "id": "review-model"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "ceiling",
+            "dimension": "cost",
+            "unit": "CNY",
+            "op": "lte",
+            "value": 1000,
+            "importance": "hard"
+          },
+          {
+            "id": "wx",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "op": "eq",
+            "value": true,
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "practice-shop",
+            "url": "https://review.invalid/practice-shop",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源",
+            "quote_sku": "review-sku",
+            "quote_merchant": "离线模拟商家",
+            "quote_region": "河南"
+          },
+          {
+            "id": "practice-japan",
+            "url": "https://review.invalid/practice-japan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "日本",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          }
+        ],
+        "facts": [
+          {
+            "id": "device-price",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "cost",
+            "unit": "CNY",
+            "value": 900,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "wechat-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": true,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          }
+        ]
+      }
+    ],
+    "specific_workflow_control": [
+      {
+        "version": 7,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家用学习资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家用学习资料"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须"
+          },
+          "device_deployment_region": {
+            "value": "日本",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "日本"
+          },
+          "delivery_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          },
+          "wechat_workflow": {
+            "value": "miniprogram",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "微信小程序直接打印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家用学习资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "必须",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "日本",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "河南",
+            "changed_fields": [
+              "delivery_region"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 7,
+            "raw_text": "微信小程序直接打印",
+            "changed_fields": [
+              "wechat_workflow"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      {
+        "schema_version": 1,
+        "request_id": "independent-print",
+        "category": "printer",
+        "as_of": "2026-11-23",
+        "region": "河南",
+        "dialogue_version": 7,
+        "confirmed_values_sha256": "63604ebe16cbba66efed761ed482a237c72429c7f4944120067e1914cd68a2b1",
+        "candidates": [
+          {
+            "id": "review-model"
+          }
+        ],
+        "requirements": [
+          {
+            "id": "ceiling",
+            "dimension": "cost",
+            "unit": "CNY",
+            "op": "lte",
+            "value": 1000,
+            "importance": "hard"
+          },
+          {
+            "id": "wx",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "op": "eq",
+            "value": true,
+            "importance": "hard"
+          },
+          {
+            "id": "mini",
+            "dimension": "wechat_miniprogram",
+            "unit": "bool",
+            "op": "eq",
+            "value": true,
+            "importance": "hard"
+          }
+        ],
+        "sources": [
+          {
+            "id": "practice-shop",
+            "url": "https://review.invalid/practice-shop",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "河南",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源",
+            "quote_sku": "review-sku",
+            "quote_merchant": "离线模拟商家",
+            "quote_region": "河南"
+          },
+          {
+            "id": "practice-japan",
+            "url": "https://review.invalid/practice-japan",
+            "type": "official_exact_model_document",
+            "allowed_use": "model_research_short_summary",
+            "scope_region": "日本",
+            "scope_models": [
+              "review-model"
+            ],
+            "captured_on": "2026-11-22",
+            "observed_at": "2026-11-22T12:00:00+08:00",
+            "valid_until": "2026-11-24",
+            "limitations": "离线合成来源"
+          }
+        ],
+        "facts": [
+          {
+            "id": "device-price",
+            "candidate_id": "review-model",
+            "source_id": "practice-shop",
+            "dimension": "cost",
+            "unit": "CNY",
+            "value": 900,
+            "kind": "live_quote",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "wechat-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_print",
+            "unit": "bool",
+            "value": true,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          },
+          {
+            "id": "miniprogram-support",
+            "candidate_id": "review-model",
+            "source_id": "practice-japan",
+            "dimension": "wechat_miniprogram",
+            "unit": "bool",
+            "value": true,
+            "kind": "official_feature",
+            "statement": "独立合成输入",
+            "limitations": "无商品证明"
+          }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "positive_control": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：bea71610d59c77f7b38bdb5a4e7090134319fb7c325c955d93a2c9b40379df38。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "bea71610d59c77f7b38bdb5a4e7090134319fb7c325c955d93a2c9b40379df38",
+          "candidate_id": "review-model",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "met",
+          "rule_id": "eq",
+          "supporting_fact_ids": [
+            "wechat-support"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "wechat-support",
+              "source_id": "practice-japan",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "review-model",
+          "research_status": "eligible_for_research",
+          "comparisons": [
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "wx",
+              "claim_id": "bea71610d59c77f7b38bdb5a4e7090134319fb7c325c955d93a2c9b40379df38",
+              "status": "met",
+              "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "wechat-support"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "negative_control": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：b74e719dbb80bdb2141c65579c25326e58e6b8c820ce36b0df5ef9f805431969。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "b74e719dbb80bdb2141c65579c25326e58e6b8c820ce36b0df5ef9f805431969",
+          "candidate_id": "review-model",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "failed",
+          "rule_id": "eq",
+          "supporting_fact_ids": [
+            "wechat-support"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "wechat-support",
+              "source_id": "practice-japan",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "review-model",
+          "research_status": "excluded_for_research",
+          "comparisons": [
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "wx",
+              "claim_id": "b74e719dbb80bdb2141c65579c25326e58e6b8c820ce36b0df5ef9f805431969",
+              "status": "failed",
+              "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+              "supporting_fact_ids": [
+                "wechat-support"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "reordered_two_candidates": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：c6489a2acd7c32747932e3110fd04e6b8a44940d4f931083235b6c8001cb5da9。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：5904086db9e0f0c614e6da32bdf149c33237cfd3d3133bffbea4c47fd8a69f64。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件1：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：2a3cfac5abc22478e062aaa799e0001aa39e065680420859e0a7be36da3ad51b。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件2：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：dc64ff2fb686ab1f5156381f96e6cc70eabaef5d64b7d7ef569f279611e90506。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n下一行动：补查当前条件缺失或冲突的来源事实，不据此下单\n下一行动：先取得对应商家、准确SKU、目的地区和有效时间的实时报价\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "c6489a2acd7c32747932e3110fd04e6b8a44940d4f931083235b6c8001cb5da9",
+          "candidate_id": "other",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "unknown",
+          "rule_id": "eq",
+          "supporting_fact_ids": [],
+          "source_grade": [
+            "missing_source"
+          ],
+          "scope": {
+            "model": "other",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": false,
+            "scope_applicable": false,
+            "entailed_by_rule": false,
+            "unverified_external_fact": false
+          },
+          "source_audit": []
+        },
+        {
+          "claim_id": "2a3cfac5abc22478e062aaa799e0001aa39e065680420859e0a7be36da3ad51b",
+          "candidate_id": "review-model",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "met",
+          "rule_id": "eq",
+          "supporting_fact_ids": [
+            "wechat-support"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "wechat-support",
+              "source_id": "practice-japan",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "5904086db9e0f0c614e6da32bdf149c33237cfd3d3133bffbea4c47fd8a69f64",
+          "candidate_id": "other",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "unknown",
+          "rule_id": "lte",
+          "supporting_fact_ids": [],
+          "source_grade": [
+            "missing_source"
+          ],
+          "scope": {
+            "model": "other",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": false,
+            "scope_applicable": false,
+            "entailed_by_rule": false,
+            "unverified_external_fact": false
+          },
+          "source_audit": []
+        },
+        {
+          "claim_id": "dc64ff2fb686ab1f5156381f96e6cc70eabaef5d64b7d7ef569f279611e90506",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "other",
+          "research_status": "pending_evidence",
+          "comparisons": [
+            {
+              "requirement_id": "wx",
+              "claim_id": "c6489a2acd7c32747932e3110fd04e6b8a44940d4f931083235b6c8001cb5da9",
+              "status": "unknown",
+              "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+              "supporting_fact_ids": [],
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+            },
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "5904086db9e0f0c614e6da32bdf149c33237cfd3d3133bffbea4c47fd8a69f64",
+              "status": "unknown",
+              "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+              "supporting_fact_ids": [],
+              "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+            }
+          ]
+        },
+        {
+          "candidate_id": "review-model",
+          "research_status": "eligible_for_research",
+          "comparisons": [
+            {
+              "requirement_id": "wx",
+              "claim_id": "2a3cfac5abc22478e062aaa799e0001aa39e065680420859e0a7be36da3ad51b",
+              "status": "met",
+              "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "wechat-support"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "dc64ff2fb686ab1f5156381f96e6cc70eabaef5d64b7d7ef569f279611e90506",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "reversed_required_feature": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：6dcdf9b520c646c73680e4b2210c38f61111d520ae21f5de1ab1d5ef2472830c。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "6dcdf9b520c646c73680e4b2210c38f61111d520ae21f5de1ab1d5ef2472830c",
+          "candidate_id": "review-model",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "met",
+          "rule_id": "eq",
+          "supporting_fact_ids": [
+            "wechat-support"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "wechat-support",
+              "source_id": "practice-japan",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "review-model",
+          "research_status": "eligible_for_research",
+          "comparisons": [
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "wx",
+              "claim_id": "6dcdf9b520c646c73680e4b2210c38f61111d520ae21f5de1ab1d5ef2472830c",
+              "status": "met",
+              "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "wechat-support"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "omitted_required_feature": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "review-model",
+          "research_status": "eligible_for_research",
+          "comparisons": [
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "71eda2a29e23d718df9210a9e17fba6bd068d315479256e56d9bc182ad6b3f6e",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "generic_fact_for_specific_workflow": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：b4f49e472446db28d07df035a3a4e5fbe9aa99b33e97c43072fb5d4255e1c503。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：8ee76188d3281db02c81e6c58d1355e494ed7bdcfac5ff6424e3129c1d6ab558。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "b4f49e472446db28d07df035a3a4e5fbe9aa99b33e97c43072fb5d4255e1c503",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "8ee76188d3281db02c81e6c58d1355e494ed7bdcfac5ff6424e3129c1d6ab558",
+          "candidate_id": "review-model",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "met",
+          "rule_id": "eq",
+          "supporting_fact_ids": [
+            "wechat-support"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "wechat-support",
+              "source_id": "practice-japan",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "review-model",
+          "research_status": "eligible_for_research",
+          "comparisons": [
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "b4f49e472446db28d07df035a3a4e5fbe9aa99b33e97c43072fb5d4255e1c503",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "wx",
+              "claim_id": "8ee76188d3281db02c81e6c58d1355e494ed7bdcfac5ff6424e3129c1d6ab558",
+              "status": "met",
+              "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "wechat-support"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    },
+    "specific_workflow_control": {
+      "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：b4f49e472446db28d07df035a3a4e5fbe9aa99b33e97c43072fb5d4255e1c503。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：8ee76188d3281db02c81e6c58d1355e494ed7bdcfac5ff6424e3129c1d6ab558。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件3：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：7ef2388ec553f14499d25527e69c5dfdd4e47b7d8d6a59784737103f6e2a689d。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n未批准购买，交易关闭，未核实实时价格。",
+      "claims": [
+        {
+          "claim_id": "b4f49e472446db28d07df035a3a4e5fbe9aa99b33e97c43072fb5d4255e1c503",
+          "candidate_id": "review-model",
+          "requirement_id": "ceiling",
+          "dimension": "cost",
+          "status": "met",
+          "rule_id": "lte",
+          "supporting_fact_ids": [
+            "device-price"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "河南",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": "900 ≤ 1000",
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "device-price",
+              "source_id": "practice-shop",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "8ee76188d3281db02c81e6c58d1355e494ed7bdcfac5ff6424e3129c1d6ab558",
+          "candidate_id": "review-model",
+          "requirement_id": "wx",
+          "dimension": "wechat_print",
+          "status": "met",
+          "rule_id": "eq",
+          "supporting_fact_ids": [
+            "wechat-support"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "wechat-support",
+              "source_id": "practice-japan",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        },
+        {
+          "claim_id": "7ef2388ec553f14499d25527e69c5dfdd4e47b7d8d6a59784737103f6e2a689d",
+          "candidate_id": "review-model",
+          "requirement_id": "mini",
+          "dimension": "wechat_miniprogram",
+          "status": "met",
+          "rule_id": "eq",
+          "supporting_fact_ids": [
+            "miniprogram-support"
+          ],
+          "source_grade": [
+            "qualified_structural"
+          ],
+          "scope": {
+            "model": "review-model",
+            "region": "日本",
+            "as_of": "2026-11-23"
+          },
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+          "rule_expression": null,
+          "verification": {
+            "verified_structural": true,
+            "source_traceable": true,
+            "scope_applicable": true,
+            "entailed_by_rule": true,
+            "unverified_external_fact": true
+          },
+          "source_audit": [
+            {
+              "fact_id": "miniprogram-support",
+              "source_id": "practice-japan",
+              "source_grade": "qualified_structural",
+              "admitted": true,
+              "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+            }
+          ]
+        }
+      ],
+      "assessments": [
+        {
+          "candidate_id": "review-model",
+          "research_status": "eligible_for_research",
+          "comparisons": [
+            {
+              "requirement_id": "ceiling",
+              "claim_id": "b4f49e472446db28d07df035a3a4e5fbe9aa99b33e97c43072fb5d4255e1c503",
+              "status": "met",
+              "text": "900 ≤ 1000。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "device-price"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "wx",
+              "claim_id": "8ee76188d3281db02c81e6c58d1355e494ed7bdcfac5ff6424e3129c1d6ab558",
+              "status": "met",
+              "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "wechat-support"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            },
+            {
+              "requirement_id": "mini",
+              "claim_id": "7ef2388ec553f14499d25527e69c5dfdd4e47b7d8d6a59784737103f6e2a689d",
+              "status": "met",
+              "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+              "supporting_fact_ids": [
+                "miniprogram-support"
+              ],
+              "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+            }
+          ]
+        }
+      ],
+      "chat_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      },
+      "public_flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false,
+        "wechat_reuse_verified": false,
+        "real_user_effect_verified": false
+      }
+    }
+  }
+}

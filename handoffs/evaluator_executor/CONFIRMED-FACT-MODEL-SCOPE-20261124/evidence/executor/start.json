@@ -1,0 +1,17 @@
+{
+  "phase": "start",
+  "head": "4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf",
+  "manifest_sha256": "4d5c863591b44422b299492f16dd4e2962a13ff3c50223f452496d10923ed84d",
+  "protected_files_count": 1683,
+  "changed_paths": [],
+  "module_sha256": "fe8a21eace12be10af72be7ee9dcbb810a95df194120a1c31c7e2847bff2099a",
+  "test_sha256": null,
+  "checks": {
+    "head_unchanged": true,
+    "index_empty": true,
+    "protected_files_unchanged": true,
+    "manifest_unchanged": true,
+    "module_matches_phase": true,
+    "new_test_matches_phase": true
+  }
+}
