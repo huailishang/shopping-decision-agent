@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "input_sha256": "9022b13f0c77bcc4e5c5c2bbd15edba4f2e4f700b913e431421ef2caaede7c8d",
+  "mode": "deterministic_research",
+  "assessments": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "dimension": "scan",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "dimension": "auto_duplex",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "dimension": "manual_duplex",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "brother-manual-duplex"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "dimension": "laser_print",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "brother-laser"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "dimension": "wechat_miniprogram",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "dimension": "color_print",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "confirmed:wechat_reuse",
+          "dimension": "wechat_reuse",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "confirmed:budget",
+          "dimension": "cost",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        }
+      ],
+      "research_status": "pending_evidence"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "dimension": "scan",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "hp-scan"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "dimension": "auto_duplex",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "hp-auto-duplex"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "dimension": "manual_duplex",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "dimension": "laser_print",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "dimension": "wechat_miniprogram",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "hp-wechat-path"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "dimension": "color_print",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "confirmed:wechat_reuse",
+          "dimension": "wechat_reuse",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "confirmed:budget",
+          "dimension": "cost",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        }
+      ],
+      "research_status": "pending_evidence"
+    }
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false,
+  "wechat_reuse_verified": false,
+  "real_user_effect_verified": false
+}

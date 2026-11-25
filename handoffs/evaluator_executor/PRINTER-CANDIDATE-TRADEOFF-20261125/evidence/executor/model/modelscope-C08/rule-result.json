@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "input_sha256": "9f5f0a42aeec9a2e11d88cdbbccb1f156f5781371b33c6e72a2b862d2c182e81",
+  "mode": "deterministic_research",
+  "assessments": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "dimension": "scan",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "dimension": "auto_duplex",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "dimension": "manual_duplex",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": [
+            "brother-manual-duplex"
+          ]
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "dimension": "laser_print",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "brother-laser"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "dimension": "wechat_miniprogram",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "dimension": "color_print",
+          "importance": "hard",
+          "status": "failed",
+          "fact_ids": [
+            "brother-mono"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:wechat_reuse",
+          "dimension": "wechat_reuse",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:cost",
+          "dimension": "cost",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:separate_drum",
+          "dimension": "separate_drum",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "brother-separate-drum"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:starter_included",
+          "dimension": "starter_included",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:replacement_137a_x",
+          "dimension": "replacement_137a_x",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:starter_toner_yield",
+          "dimension": "starter_toner_yield",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:replacement_toner_yield",
+          "dimension": "replacement_toner_yield",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "brother-tn118-yield"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:drum_yield",
+          "dimension": "drum_yield",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "brother-dr118-yield"
+          ],
+          "ignored_fact_ids": []
+        }
+      ],
+      "research_status": "excluded_for_research"
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "dimension": "scan",
+          "importance": "hard",
+          "status": "met",
+          "fact_ids": [
+            "hp-scan"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "dimension": "auto_duplex",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "hp-auto-duplex"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "dimension": "manual_duplex",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "dimension": "laser_print",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "hp-laser"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "dimension": "wechat_miniprogram",
+          "importance": "hard",
+          "status": "met",
+          "fact_ids": [
+            "hp-wechat-path"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "dimension": "color_print",
+          "importance": "hard",
+          "status": "failed",
+          "fact_ids": [
+            "hp-mono"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:wechat_reuse",
+          "dimension": "wechat_reuse",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:cost",
+          "dimension": "cost",
+          "importance": "hard",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:separate_drum",
+          "dimension": "separate_drum",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:starter_included",
+          "dimension": "starter_included",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "hp-starter-included"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:replacement_137a_x",
+          "dimension": "replacement_137a_x",
+          "importance": "soft",
+          "status": "met",
+          "fact_ids": [
+            "hp-replacement-137"
+          ],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:starter_toner_yield",
+          "dimension": "starter_toner_yield",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:replacement_toner_yield",
+          "dimension": "replacement_toner_yield",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        },
+        {
+          "requirement_id": "cognition:drum_yield",
+          "dimension": "drum_yield",
+          "importance": "soft",
+          "status": "unknown",
+          "fact_ids": [],
+          "ignored_fact_ids": []
+        }
+      ],
+      "research_status": "excluded_for_research"
+    }
+  ],
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false,
+  "wechat_reuse_verified": false,
+  "real_user_effect_verified": false
+}

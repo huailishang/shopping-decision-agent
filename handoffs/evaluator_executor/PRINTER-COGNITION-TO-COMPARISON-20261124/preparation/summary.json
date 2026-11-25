@@ -1,0 +1,14 @@
+{
+  "task_status": "contract_preparation_only",
+  "normal_chat_cases_replayed": 12,
+  "original_and_scan_required_have_identical_user_text": true,
+  "original_next_prompt": "delivery_region",
+  "normal_case_without_manual_context_has_public_decision": false,
+  "legacy_action_checks_passed": 5,
+  "legacy_action_checks_total": 8,
+  "full_suite_this_turn": "not_rerun_no_product_changes",
+  "prior_full_suite_evidence": "previous turn WSL 549/549",
+  "new_external_research_count": 0,
+  "new_model_inference_count": 0,
+  "business_acceptance": "not_met_before_implementation"
+}

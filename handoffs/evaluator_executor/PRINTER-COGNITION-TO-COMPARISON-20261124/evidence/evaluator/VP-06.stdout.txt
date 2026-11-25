@@ -1,0 +1,22 @@
+{
+  "phase": "post",
+  "head": "3ae3514c482ab1b35335cd2978301efb348a09cd",
+  "manifest_sha256": "dc2a8d32862d3adf0685ce26c0cc04cb90bdc5b9e9029361da82f95635f38576",
+  "protected_files_count": 1891,
+  "changed_protected_paths": [],
+  "changed_product_paths": [
+    "shopping_decision/chat_bridge.py",
+    "shopping_decision/printer_purchase_checks.py",
+    "tests/test_printer_purchase_checks.py",
+    "shopping_decision/cognition_comparison.py",
+    "knowledge/printer_cognition_comparison_v1.json",
+    "tests/test_cognition_comparison.py"
+  ],
+  "checks": {
+    "head_matches_baseline": true,
+    "index_empty": true,
+    "manifest_matches_checksum": true,
+    "protected_files_unchanged": true,
+    "required_product_files_present": true
+  }
+}

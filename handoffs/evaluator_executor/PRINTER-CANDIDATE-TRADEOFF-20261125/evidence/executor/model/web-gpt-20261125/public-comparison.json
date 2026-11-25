@@ -1,0 +1,86 @@
+[
+  {
+    "case": "C01",
+    "differing_public_fields": [
+      "origin"
+    ],
+    "same_claims": true,
+    "same_public_next_actions": true,
+    "same_public_summary": true,
+    "raw_model_text_published": false,
+    "manual_decision_gain_accepted": false,
+    "raw_model_first_action": {
+      "kind": "research",
+      "description": "先核Brother准确型号微信小程序路径；对HP核既有小程序路径的持续复用，两款都需隔次复用证据。若反证成立则排除该款，若证实可用再核价。"
+    },
+    "public_first_action": {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:scan",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    }
+  },
+  {
+    "case": "C08",
+    "differing_public_fields": [
+      "origin"
+    ],
+    "same_claims": true,
+    "same_public_next_actions": true,
+    "same_public_summary": true,
+    "raw_model_text_published": false,
+    "manual_decision_gain_accepted": false,
+    "raw_model_first_action": {
+      "kind": "research",
+      "description": "按原硬条件寻找新的彩印候选，并核扫描、小程序、持续复用及适用预算；不重复询问已判失败的两款彩印功能。"
+    },
+    "public_first_action": {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:scan",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    }
+  },
+  {
+    "case": "C08_SHORT",
+    "differing_public_fields": [
+      "origin"
+    ],
+    "same_claims": true,
+    "same_public_next_actions": true,
+    "same_public_summary": true,
+    "raw_model_text_published": false,
+    "manual_decision_gain_accepted": false,
+    "raw_model_first_action": {
+      "kind": "research",
+      "description": "研究符合三个硬条件的其他候选，核对应准确型号资料；无需再次询问已确认彩印要求。"
+    },
+    "public_first_action": {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:scan",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    }
+  },
+  {
+    "case": "C12",
+    "differing_public_fields": [
+      "origin"
+    ],
+    "same_claims": true,
+    "same_public_next_actions": true,
+    "same_public_summary": true,
+    "raw_model_text_published": false,
+    "manual_decision_gain_accepted": false,
+    "raw_model_first_action": {
+      "kind": "research",
+      "description": "优先核HP M232dw准确销售配置彩印能力：不支持则退出；支持才继续核持续复用及预算。"
+    },
+    "public_first_action": {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:scan",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    }
+  }
+]

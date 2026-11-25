@@ -36,6 +36,8 @@ def _county_level(region):
     if not isinstance(region, str):
         return False
     region = region.strip()
+    if any(marker in region for marker in ("未确认", "不确定", "未知", "待定", "待确认", "未定", "暂不", "示例")):
+        return False
     return region.endswith(("县", "区", "旗")) and not region.endswith("自治区")
 
 
@@ -56,6 +58,10 @@ def build_purchase_checks(values):
             "核同型号低频使用所需的初始墨粉、替换墨粉与硒鼓。",
             "按历史配置线索 9YF97A 核所售套装与耗材，保留在售状态待核。",
         )
+    elif step in ("verify_transfer", "verify_no_setup", "choose_path", "clarify_wechat"):
+        # The exact model action must follow the same confirmed workflow as
+        # the aggregate action, without inferring support from an old path.
+        actions = tuple(_WECHAT_STEPS[step] for _ in MODEL_NAMES)
     else:
         actions = (
             "按畅享印小程序线索核准确型号、首次配置及隔次微信发起。",

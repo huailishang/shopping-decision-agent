@@ -1,0 +1,12 @@
+{
+  "native_exe": "D:\\SoftWare\\npm\\node_modules\\@openai\\codex\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+  "extra_cli_flags": [
+    "--disable browser_use_external",
+    "--disable in_app_browser",
+    "approval_policy=\"never\""
+  ],
+  "no_user_config": true,
+  "no_purchase_permission": true,
+  "model_default": true,
+  "case_id": "C01"
+}

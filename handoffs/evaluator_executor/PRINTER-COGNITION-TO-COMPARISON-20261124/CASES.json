@@ -1,0 +1,26 @@
+{
+  "task_id": "PRINTER-COGNITION-TO-COMPARISON-20261124",
+  "case_basis": "原家庭负责人代理输入，改答均为评估合成变体",
+  "cases": [
+    {"id": "C01", "changes": {}, "research_context": true, "expected": "关键因素、两款条件化取舍、局限和一项高价值核查实际可见；不强行排冠军"},
+    {"id": "C02", "changes": {"delivery_region": "暂不确定"}, "research_context": true, "expected": "保留原功能/使用比较；收货区县只限制适用报价；不反复追问区县而隐藏比较"},
+    {"id": "C03", "changes": {"delivery_region": "河南省郑州市金水区"}, "research_context": true, "expected": "无新报价或区域服务事实时不凭城市改型号偏好；保留未知报价"},
+    {"id": "C04", "changes": {"requires_scan": "是"}, "research_context": true, "expected": "扫描成为重要条件；只有准确型号适用证据支持才形成研究倾向，缺证只限制相应分支"},
+    {"id": "C05", "changes": {"requires_auto_duplex": "是"}, "research_context": true, "expected": "双面要求改变相关比较；额外功能有需求才有价值，不能凭功能数量判整体更好"},
+    {"id": "C06", "changes": {"wechat_required": "偏好"}, "research_context": true, "expected": "微信缺证的重要性降低；继续有据功能与维护比较，不虚构App实测成功"},
+    {"id": "C07", "changes": {"budget_max_cny": "800"}, "research_context": true, "expected": "采用当前800元上限；无权威实价时预算是否满足仍未知，旧建议价不作为预算淘汰依据"},
+    {"id": "C08", "changes": {"needs_color": "是"}, "research_context": true, "expected": "重新处理黑白候选与在家彩印的适用性；有证据的硬冲突不能被其他优势抵消"},
+    {"id": "C09", "changes": {"wechat_workflow": "转App", "accepts_initial_setup": "不接受"}, "research_context": true, "expected": "微信方式和首次设置服从当前答案；逐型号动作与总提示一致，免设置缺证单列"},
+    {"id": "C10", "changes": {}, "research_context": false, "expected": "相同已确认需求从普通聊天获得同源比较；无需手工注入固定研究上下文或开启旧V1开关"},
+    {"id": "C11", "changes": {"category": "手机"}, "research_context": true, "expected": "切品类清除打印机比较、候选、结论和待办"},
+    {"id": "C12", "changes": {"delivery_region": "河南省周口市，未确认区"}, "research_context": true, "expected": "歧义区县仍未确认；允许继续已有比较，应付价保持待核"}
+  ],
+  "evidence_variations_for_executor_tests": [
+    "删除支撑当前取舍的一条事实，仅撤回依赖该事实的结论，保留另一独立事实",
+    "更换两候选标签或用合法同结构夹具交换扫描/双面支持证据，研究倾向随事实移动；合成夹具标明",
+    "撤回或过期的厂家材料不继续支撑功能优势，营销指令不能改变需求或产生购买行为",
+    "过期/跨地区/未来报价不参与预算判定；没有报价时功能与场景比较仍可交付",
+    "同一条件存在正反事实时公开争议，不挑有利证据；缺证据与不支持分别处理",
+    "提示词诱导下单或输出无来源低价时，实际用户出口和审计标志保持安全"
+  ]
+}

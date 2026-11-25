@@ -33,7 +33,10 @@ class PrinterPurchaseChecksTests(TestCase):
         audit = json.loads(first["report_json"])
         self.assertEqual(audit["confirmed_fields"]["budget_scope"], HARDWARE_ONLY)
         self.assertEqual(audit["purchase_checks"]["quote_missing"], ["delivery_region"])
-        self.assertEqual(first["prompt_field"], "delivery_region")
+        # The frozen cognition contract prioritizes decision-changing functions
+        # over district when a local comparison is available.
+        self.assertEqual(first["prompt_field"],
+                         "requires_scan" if audit.get("cognition_comparison") else "delivery_region")
         self.assertIn("运费及另购耗材单列", first["result_text"])
         repeat = submit_message(state, "budget_scope", "仅主机硬件")
         self.assertEqual(repeat["history"][-1]["changed_fields"], [])

@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "publication_schema": "verified-claims/v1",
+  "origin": "model",
+  "input_sha256": "a0910482b7e6f6c8cc8b33e71f620c816b1d6dc9f96a5c2408bb3bb7af1fbbd1",
+  "claims": [
+    {
+      "claim_id": "15e3254bc32c2a0616d1e71afb47ca8a619e77ca2fc00bc3d3f3c38f68f71aeb",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:scan",
+      "dimension": "scan",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "中国大陆河南省",
+        "as_of": "2026-11-25"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "rule_expression": null,
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "8dc22338b738242929052f8db4a6167f97867c657d2648acb6ea2f0f0ba4de90",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:wechat_miniprogram",
+      "dimension": "wechat_miniprogram",
+      "status": "unknown",
+      "rule_id": "eq",
+      "supporting_fact_ids": [],
+      "source_grade": [
+        "missing_source"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "中国大陆河南省",
+        "as_of": "2026-11-25"
+      },
+      "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核",
+      "rule_expression": null,
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": false,
+        "scope_applicable": false,
+        "entailed_by_rule": false,
+        "unverified_external_fact": false
+      },
+      "source_audit": []
+    },
+    {
+      "claim_id": "4cceac762a8b115cd7a62a764a4fa86e563bf1de335427fb98e2d573bcb8dbae",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:color_print",
+      "dimension": "color_print",
+      "status": "failed",
+      "rule_id": "eq",
+      "supporting_fact_ids": [
+        "brother-mono"
+      ],
+      "source_grade": [
+        "qualified_structural"
+      ],
+      "scope": {
+        "model": "Brother HL-L1238W",
+        "region": "中国大陆河南省",
+        "as_of": "2026-11-25"
+      },
+      "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+      "rule_expression": null,
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": true,
+        "scope_applicable": true,
+        "entailed_by_rule": true,
+        "unverified_external_fact": true
+      },
+      "source_audit": [
+        {
+          "fact_id": "brother-mono",
+          "source_id": "brother-cn-202405-brochure",
+          "source_grade": "qualified_structural",
+          "admitted": true,
+          "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+        }
+      ]
+    },
+    {
+      "claim_id": "2480b578a94cf25f9d0d7bcd9f95360ad4a09d7b7f5aa7ffb24664ecfc5c85c2",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "cognition:scan",
+      "dimension": "scan",
+      "status": "met",
+      "rule_id": "eq",
+      "supporting_fact_ids": [
+        "hp-scan"
+      ],
+      "source_grade": [
+        "qualified_structural"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "中国大陆河南省",
+        "as_of": "2026-11-25"
+      },
+      "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+      "rule_expression": null,
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": true,
+        "scope_applicable": true,
+        "entailed_by_rule": true,
+        "unverified_external_fact": true
+      },
+      "source_audit": [
+        {
+          "fact_id": "hp-scan",
+          "source_id": "hp-cn-home",
+          "source_grade": "qualified_structural",
+          "admitted": true,
+          "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+        }
+      ]
+    },
+    {
+      "claim_id": "efa9e9e730c9003b49ed0c2f3840c1458915208725b3993a0c81c4c507246175",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "cognition:wechat_miniprogram",
+      "dimension": "wechat_miniprogram",
+      "status": "met",
+      "rule_id": "eq",
+      "supporting_fact_ids": [
+        "hp-wechat-path"
+      ],
+      "source_grade": [
+        "qualified_structural"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "中国大陆河南省",
+        "as_of": "2026-11-25"
+      },
+      "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+      "rule_expression": null,
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": true,
+        "scope_applicable": true,
+        "entailed_by_rule": true,
+        "unverified_external_fact": true
+      },
+      "source_audit": [
+        {
+          "fact_id": "hp-wechat-path",
+          "source_id": "hp-cn-home",
+          "source_grade": "qualified_structural",
+          "admitted": true,
+          "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+        }
+      ]
+    },
+    {
+      "claim_id": "1c4c082e52a68285e8682e98488f2c7a06792c3bc23eef7ffc35a1013a09a3c7",
+      "candidate_id": "HP M232dw",
+      "requirement_id": "cognition:color_print",
+      "dimension": "color_print",
+      "status": "failed",
+      "rule_id": "eq",
+      "supporting_fact_ids": [
+        "hp-mono"
+      ],
+      "source_grade": [
+        "qualified_structural"
+      ],
+      "scope": {
+        "model": "HP M232dw",
+        "region": "中国大陆河南省",
+        "as_of": "2026-11-25"
+      },
+      "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实",
+      "rule_expression": null,
+      "verification": {
+        "verified_structural": true,
+        "source_traceable": true,
+        "scope_applicable": true,
+        "entailed_by_rule": true,
+        "unverified_external_fact": true
+      },
+      "source_audit": [
+        {
+          "fact_id": "hp-mono",
+          "source_id": "hp-cn-9yf97a-store",
+          "source_grade": "qualified_structural",
+          "admitted": true,
+          "limit": "仅验证结构与规则蕴含；外部资料内容尚未经独立核实"
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "research_status": "excluded_for_research",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "claim_id": "15e3254bc32c2a0616d1e71afb47ca8a619e77ca2fc00bc3d3f3c38f68f71aeb",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "claim_id": "8dc22338b738242929052f8db4a6167f97867c657d2648acb6ea2f0f0ba4de90",
+          "status": "unknown",
+          "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+          "supporting_fact_ids": [],
+          "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "claim_id": "4cceac762a8b115cd7a62a764a4fa86e563bf1de335427fb98e2d573bcb8dbae",
+          "status": "failed",
+          "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+          "supporting_fact_ids": [
+            "brother-mono"
+          ],
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+        }
+      ]
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "research_status": "excluded_for_research",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "claim_id": "2480b578a94cf25f9d0d7bcd9f95360ad4a09d7b7f5aa7ffb24664ecfc5c85c2",
+          "status": "met",
+          "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+          "supporting_fact_ids": [
+            "hp-scan"
+          ],
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "claim_id": "efa9e9e730c9003b49ed0c2f3840c1458915208725b3993a0c81c4c507246175",
+          "status": "met",
+          "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+          "supporting_fact_ids": [
+            "hp-wechat-path"
+          ],
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "claim_id": "1c4c082e52a68285e8682e98488f2c7a06792c3bc23eef7ffc35a1013a09a3c7",
+          "status": "failed",
+          "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+          "supporting_fact_ids": [
+            "hp-mono"
+          ],
+          "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+        }
+      ]
+    }
+  ],
+  "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+  "next_actions": [
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:scan",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    },
+    {
+      "kind": "research",
+      "candidate_id": "Brother HL-L1238W",
+      "requirement_id": "cognition:wechat_miniprogram",
+      "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+    }
+  ],
+  "raw_model_text_published": false,
+  "manual_decision_gain_accepted": false,
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false,
+  "wechat_reuse_verified": false,
+  "real_user_effect_verified": false
+}

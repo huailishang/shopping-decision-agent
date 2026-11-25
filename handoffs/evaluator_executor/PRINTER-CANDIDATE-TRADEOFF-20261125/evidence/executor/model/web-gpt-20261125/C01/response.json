@@ -1,0 +1,314 @@
+{
+  "assessments": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "无准确型号扫描证据，不能判定不支持。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "无适用自动双面证据。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "status": "unknown",
+          "fact_ids": [
+            "brother-manual-duplex"
+          ],
+          "explanation": "旧手动双面资料独立复核受阻，不能确认。",
+          "conditions": [
+            "需独立核对原说明书"
+          ]
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "status": "met",
+          "fact_ids": [
+            "brother-laser"
+          ],
+          "explanation": "规格册列为黑白激光。",
+          "conditions": [
+            "本轮厂家资料待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "当前输入没有适用小程序证据。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "status": "failed",
+          "fact_ids": [
+            "brother-mono"
+          ],
+          "explanation": "规格册列为黑白激光，不满足彩印要求。",
+          "conditions": [
+            "本轮厂家资料待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:wechat_reuse",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "没有持续微信复用证据。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:cost",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "没有河南适用的实际购机价。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:separate_drum",
+          "status": "met",
+          "fact_ids": [
+            "brother-separate-drum"
+          ],
+          "explanation": "规格册注明鼓粉分离。",
+          "conditions": [
+            "本轮厂家资料待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:starter_included",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "未证随箱耗材配置。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:replacement_137a_x",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "无此型号137A/X适用证据，不跨型号借用。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:starter_toner_yield",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "未证随箱耗材标称页数。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:replacement_toner_yield",
+          "status": "met",
+          "fact_ids": [
+            "brother-tn118-yield"
+          ],
+          "explanation": "TN118标称约1500页。",
+          "conditions": [
+            "ISO/IEC 19752口径，非家庭实测；待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:drum_yield",
+          "status": "met",
+          "fact_ids": [
+            "brother-dr118-yield"
+          ],
+          "explanation": "DR118标称约10000页。",
+          "conditions": [
+            "1页/次作业口径，非寿命承诺；待独立复核"
+          ]
+        }
+      ],
+      "tradeoffs": [
+        {
+          "statement": "鼓粉分离和两种标称产量提供了分项耗材成本的研究基础，但缺主机价、随箱量、耗材价格及维护支出，无法判定更便宜。",
+          "fact_ids": [
+            "brother-separate-drum",
+            "brother-tn118-yield",
+            "brother-dr118-yield"
+          ],
+          "conditions": [
+            "准确型号资料待独立复核",
+            "标称产量不等于家庭实际产量"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "status": "met",
+          "fact_ids": [
+            "hp-scan"
+          ],
+          "explanation": "准确型号厂家资料列有扫描。",
+          "conditions": [
+            "文档能力，非实机验证"
+          ]
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "status": "met",
+          "fact_ids": [
+            "hp-auto-duplex"
+          ],
+          "explanation": "准确型号厂家资料列有自动双面。",
+          "conditions": [
+            "文档能力，非实机验证"
+          ]
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "自动双面证据不能证明手动双面。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "status": "met",
+          "fact_ids": [
+            "hp-laser"
+          ],
+          "explanation": "9YF97A资料标为激光打印机。",
+          "conditions": [
+            "缓存销售配置，待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "status": "met",
+          "fact_ids": [
+            "hp-wechat-path"
+          ],
+          "explanation": "厂家列有微信小程序打印。",
+          "conditions": [
+            "首次设置和持续复用未证"
+          ]
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "status": "failed",
+          "fact_ids": [
+            "hp-mono"
+          ],
+          "explanation": "9YF97A资料列为A4黑白激光，不满足彩印。",
+          "conditions": [
+            "缓存销售配置，待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:wechat_reuse",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "小程序入口不等于隔次稳定复用。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:cost",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "没有河南适用的实际购机价。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:separate_drum",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "未证鼓粉结构。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:starter_included",
+          "status": "met",
+          "fact_ids": [
+            "hp-starter-included"
+          ],
+          "explanation": "9YF97A包装列有黑色硒鼓。",
+          "conditions": [
+            "缓存销售配置，待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:replacement_137a_x",
+          "status": "met",
+          "fact_ids": [
+            "hp-replacement-137"
+          ],
+          "explanation": "9YF97A列137A及137X更换硒鼓。",
+          "conditions": [
+            "仅对应准确销售配置，待独立复核"
+          ]
+        },
+        {
+          "requirement_id": "cognition:starter_toner_yield",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "未证随箱硒鼓标称产量。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:replacement_toner_yield",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "未证替换硒鼓标称产量。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:drum_yield",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "未证硒鼓独立寿命或标称页数。",
+          "conditions": []
+        }
+      ],
+      "tradeoffs": [
+        {
+          "statement": "扫描、自动双面和小程序有文档依据；仅在用户确实需要时才构成优势，不能替代微信稳定复用与预算核查。",
+          "fact_ids": [
+            "hp-scan",
+            "hp-auto-duplex",
+            "hp-wechat-path"
+          ],
+          "conditions": [
+            "非实机复用证明"
+          ]
+        },
+        {
+          "statement": "随箱黑色硒鼓与137A/X替换路径有销售配置材料，但产量、耗材价及维护成本未证。",
+          "fact_ids": [
+            "hp-starter-included",
+            "hp-replacement-137"
+          ],
+          "conditions": [
+            "准确销售配置待独立复核"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": "两款均可保留待核，但没有任何一款已满足所有硬条件。彩印在本案是软维度，黑白反证不触发淘汰。HP小程序文档证据更充分，Brother鼓粉分离及标称耗材量更具体；两者都不能据此证明低频维护成本、可靠性或实际总价胜负。若扫描和双面不重要，不把它们当决定性优势。先核微信直接打印及隔次复用，再核准确SKU的河南适用主机价；若一款通过硬条件、另一款明确失败，优先研究前者。若两款均满足硬条件，再比较主机+随箱耗材消耗后的替换耗材+维护费用；缺价格和产量时保留条件式，不推荐购买。",
+  "next_actions": [
+    {
+      "kind": "research",
+      "description": "先核Brother准确型号微信小程序路径；对HP核既有小程序路径的持续复用，两款都需隔次复用证据。若反证成立则排除该款，若证实可用再核价。"
+    },
+    {
+      "kind": "verify_price",
+      "description": "获取两款准确销售配置河南适用主机价，核1000元硬上限；不得使用非适用缓存价格。"
+    },
+    {
+      "kind": "research",
+      "description": "对仍存候选核随箱量、替换耗材价格及必要维护成本，比较条件化总成本。"
+    }
+  ]
+}

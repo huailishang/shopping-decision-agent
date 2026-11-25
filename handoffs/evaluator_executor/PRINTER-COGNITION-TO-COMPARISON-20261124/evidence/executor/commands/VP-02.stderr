@@ -1,0 +1,12 @@
+test_conflicting_fact_not_preferred (test_cognition_comparison.CognitionTests.test_conflicting_fact_not_preferred) ... ok
+test_evidence_deletion_keeps_independent_claim (test_cognition_comparison.CognitionTests.test_evidence_deletion_keeps_independent_claim) ... ok
+test_expiry_and_revocation (test_cognition_comparison.CognitionTests.test_expiry_and_revocation) ... ok
+test_injection_and_quote_does_not_approve (test_cognition_comparison.CognitionTests.test_injection_and_quote_does_not_approve) ... ok
+test_normal_entry_and_changes (test_cognition_comparison.CognitionTests.test_normal_entry_and_changes) ... ok
+test_region_budget_and_category (test_cognition_comparison.CognitionTests.test_region_budget_and_category) ... ok
+test_synthetic_swap_moves_tendency (test_cognition_comparison.CognitionTests.test_synthetic_swap_moves_tendency) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.709s
+
+OK

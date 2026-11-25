@@ -1,0 +1,206 @@
+{
+  "assessments": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 scan 维度的适用事实，不能从其他功能推断是否支持扫描。",
+          "conditions": [
+            "需要补充同维度扫描证据"
+          ]
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 auto_duplex 维度的适用事实；manual_duplex=true 不能证明自动双面存在或不存在。",
+          "conditions": [
+            "需要补充自动双面同维度证据"
+          ]
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "status": "met",
+          "fact_ids": [
+            "brother-manual-duplex"
+          ],
+          "explanation": "本候选本维度事实 value=true，满足 eq true；来源 scope_region 为中国大陆河南省，valid_until 未过期。",
+          "conditions": [
+            "文档层证据，说明书描述 Windows 手动双面"
+          ]
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "status": "met",
+          "fact_ids": [
+            "brother-laser"
+          ],
+          "explanation": "本候选本维度事实 value=true，满足 eq true；来源 scope_region 为中国大陆河南省，valid_until 未过期。",
+          "conditions": [
+            "文档层证据，非实机或寿命证明"
+          ]
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 wechat_miniprogram 维度的适用事实。",
+          "conditions": [
+            "需要补充微信小程序打印同维度证据"
+          ]
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 color_print 维度的适用事实，不能从激光、手动双面或品类推断彩色打印能力。",
+          "conditions": [
+            "需要补充彩色打印同维度证据"
+          ]
+        },
+        {
+          "requirement_id": "confirmed:wechat_reuse",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 wechat_reuse 维度的适用事实；微信小程序入口或首次设置信息不能证明后续微信复用或服务现在可用。",
+          "conditions": [
+            "需要验证当前微信复用可用性"
+          ]
+        },
+        {
+          "requirement_id": "confirmed:budget",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 cost 维度事实，无法判断是否 lte 1000 CNY；已过期价格也不能证明预算符合。",
+          "conditions": [
+            "需要当前有效价格证据"
+          ]
+        }
+      ],
+      "tradeoffs": [
+        {
+          "statement": "Brother HL-L1238W 在文档层证据中支持手动双面和激光打印，但没有扫描、自动双面、微信小程序、微信复用、彩色打印和预算的同维度证据；只有在用户接受这些证据缺失并继续核实时才具备比较价值。",
+          "fact_ids": [
+            "brother-manual-duplex",
+            "brother-laser"
+          ],
+          "conditions": [
+            "仅用于文档层比较",
+            "硬项未证实时不可作为下单依据"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "status": "met",
+          "fact_ids": [
+            "hp-scan"
+          ],
+          "explanation": "本候选本维度事实 value=true，满足 eq true；来源 scope_region 为中国大陆河南省，valid_until 未过期。",
+          "conditions": [
+            "文档层证据，非实机证明"
+          ]
+        },
+        {
+          "requirement_id": "cognition:auto_duplex",
+          "status": "met",
+          "fact_ids": [
+            "hp-auto-duplex"
+          ],
+          "explanation": "本候选本维度事实 value=true，满足 eq true；来源 scope_region 为中国大陆河南省，valid_until 未过期。",
+          "conditions": [
+            "文档层证据，非实机或销售配置证明"
+          ]
+        },
+        {
+          "requirement_id": "cognition:manual_duplex",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 manual_duplex 维度的适用事实；auto_duplex=true 不能替代证明手动双面。",
+          "conditions": [
+            "需要补充手动双面同维度证据"
+          ]
+        },
+        {
+          "requirement_id": "cognition:laser_print",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 laser_print 维度的适用事实，不能从 printer 类别、自动双面或微信小程序打印推断激光打印。",
+          "conditions": [
+            "需要补充激光打印同维度证据"
+          ]
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "status": "met",
+          "fact_ids": [
+            "hp-wechat-path"
+          ],
+          "explanation": "本候选本维度事实 value=true，满足 eq true；来源 scope_region 为中国大陆河南省，valid_until 未过期。",
+          "conditions": [
+            "文档层证据，首次设置与复用未证"
+          ]
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 color_print 维度的适用事实，不能从扫描、自动双面或微信小程序打印推断彩色能力。",
+          "conditions": [
+            "需要补充彩色打印同维度证据"
+          ]
+        },
+        {
+          "requirement_id": "confirmed:wechat_reuse",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 wechat_reuse 维度的适用事实；hp-wechat-path 明确说明首次设置与复用未证，不能证明后续微信复用或服务现在可用。",
+          "conditions": [
+            "需要验证当前微信复用可用性"
+          ]
+        },
+        {
+          "requirement_id": "confirmed:budget",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "本候选没有 cost 维度事实，无法判断是否 lte 1000 CNY；已过期价格不能证明预算符合。",
+          "conditions": [
+            "需要当前有效价格证据"
+          ]
+        }
+      ],
+      "tradeoffs": [
+        {
+          "statement": "HP M232dw 在文档层证据中支持扫描、自动双面和微信小程序打印，但没有手动双面、激光、微信复用、彩色打印和预算的同维度证据；若用户优先这些已文档证明的软功能可考虑，但硬项仍不可据此批准。",
+          "fact_ids": [
+            "hp-scan",
+            "hp-auto-duplex",
+            "hp-wechat-path"
+          ],
+          "conditions": [
+            "仅用于文档层比较",
+            "硬项未证实时不可作为下单依据"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": "本次仅进行文档层比较。HP M232dw 有扫描、自动双面、微信小程序打印三项软功能同维度证据；Brother HL-L1238W 有手动双面、激光打印两项软功能同维度证据。两者对硬性项 color_print、wechat_reuse、budget 均无适用同维度事实，状态为 unknown，因此不选出未经证据支持的冠军，也不批准或宣称下单/支付。",
+  "next_actions": [
+    {
+      "kind": "research",
+      "description": "补充两款候选在中国大陆河南省有效期内的同维度证据：HP M232dw 的手动双面、激光、彩色和微信复用；Brother HL-L1238W 的扫描、自动双面、微信小程序、彩色和微信复用。"
+    },
+    {
+      "kind": "verify_price",
+      "description": "核实两款候选在中国大陆河南省当前有效售价或成交价是否不超过 1000 CNY，避免使用过期价格判断预算。"
+    }
+  ]
+}

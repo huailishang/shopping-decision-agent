@@ -1,0 +1,103 @@
+{
+  "assessments": [
+    {
+      "candidate_id": "Brother HL-L1238W",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "无准确型号扫描证据，不能判定不支持。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "status": "unknown",
+          "fact_ids": [],
+          "explanation": "当前输入没有适用小程序证据。",
+          "conditions": []
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "status": "failed",
+          "fact_ids": [
+            "brother-mono"
+          ],
+          "explanation": "规格册列为黑白激光，不满足彩印要求。",
+          "conditions": [
+            "本轮厂家资料待独立复核"
+          ]
+        }
+      ],
+      "tradeoffs": [
+        {
+          "statement": "黑白反证使本款不合格，扫描和小程序缺证不必阻断当前淘汰。",
+          "fact_ids": [
+            "brother-mono"
+          ],
+          "conditions": [
+            "厂家资料待独立复核"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "HP M232dw",
+      "comparisons": [
+        {
+          "requirement_id": "cognition:scan",
+          "status": "met",
+          "fact_ids": [
+            "hp-scan"
+          ],
+          "explanation": "准确型号厂家资料列有扫描。",
+          "conditions": [
+            "文档能力，非实机验证"
+          ]
+        },
+        {
+          "requirement_id": "cognition:wechat_miniprogram",
+          "status": "met",
+          "fact_ids": [
+            "hp-wechat-path"
+          ],
+          "explanation": "厂家列有微信小程序打印。",
+          "conditions": [
+            "首次设置和持续复用未证"
+          ]
+        },
+        {
+          "requirement_id": "cognition:color_print",
+          "status": "failed",
+          "fact_ids": [
+            "hp-mono"
+          ],
+          "explanation": "9YF97A资料列为A4黑白激光，不满足彩印。",
+          "conditions": [
+            "缓存销售配置，待独立复核"
+          ]
+        }
+      ],
+      "tradeoffs": [
+        {
+          "statement": "扫描和小程序有文档支持，但不能抵消彩印硬失败。",
+          "fact_ids": [
+            "hp-scan",
+            "hp-wechat-path",
+            "hp-mono"
+          ],
+          "conditions": [
+            "彩印资料待独立复核；微信持续复用未证"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": "本次三个硬条件中，两款均有不满足彩印的反证，因此均退出。HP扫描与微信小程序有文档支持；Brother两项缺证，不等于不支持。不能挑选赢家。保持已确认要求，寻找有彩印、扫描和微信小程序证据的新候选；原资料待独立复核。",
+  "next_actions": [
+    {
+      "kind": "research",
+      "description": "研究符合三个硬条件的其他候选，核对应准确型号资料；无需再次询问已确认彩印要求。"
+    }
+  ]
+}

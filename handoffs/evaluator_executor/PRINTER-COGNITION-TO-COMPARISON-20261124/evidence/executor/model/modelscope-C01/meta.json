@@ -1,0 +1,21 @@
+{
+  "case": "C01",
+  "provider": "modelscope",
+  "requested_model": "Qwen/Qwen3.8-Flash-Next",
+  "input_sha256": "9022b13f0c77bcc4e5c5c2bbd15edba4f2e4f700b913e431421ef2caaede7c8d",
+  "started_at_utc": "2026-11-25T08:07:56.907049+00:00",
+  "live_attempt": true,
+  "tools_requested": false,
+  "status": "accepted",
+  "usage": {
+    "input_tokens": 2552,
+    "output_tokens": 7452,
+    "total_tokens": 10004
+  },
+  "http_status": 200,
+  "response_sha256": "e6e43e49e50da55310cbde1fc1a6e0f6e32272c03beadef405739a6e36f93a9a",
+  "observed_model": "Qwen/Qwen3.8-Flash-Next",
+  "provider_status": "completed",
+  "elapsed_seconds": 97.576,
+  "finished_at_utc": "2026-11-25T08:09:40.388903+00:00"
+}

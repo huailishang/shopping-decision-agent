@@ -1,0 +1,52 @@
+{
+  "status": "executor_provisional_not_independent",
+  "date": "2026-11-25",
+  "notes": "当前续办通过网页读取服务复查两份原址，PDF截图缓存未命中。以下定位基于本次可读文本，不是厂商当日更新或成交状态。前段取证账缺完整逐次回执，不能精确重构累计额度，故停止外部读取并保留评估预留。",
+  "sources": [
+    {
+      "id": "brother-cn-202405-brochure",
+      "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+      "locator": "PDF文本P0 2–9、P1 38、62–63、70–72、92–93、103",
+      "summary": "HL-L1238W归入黑白激光打印机规格，鼓粉分离，TN118约1500页（ISO/IEC 19752），DR118约10000页（1页/次作业）。",
+      "limits": "PDF截图失败；随机墨粉量、真实低频产量、维护和价格未知；不推断独立复证通过。"
+    },
+    {
+      "id": "hp-cn-9yf97a-store",
+      "url": "https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html",
+      "locator": "产品规格459–469、537–543、565–567、668–670、719–721",
+      "summary": "SKU 9YF97A，激光打印，黑色硒鼓，137A/137X更换硒鼓，包装附黑色硒鼓。",
+      "limits": "缓存销售配置；无实际成交价/库存/随机页数。黑白范围需评估者独立核源；非完整设备使用实测。"
+    },
+    {
+      "id": "hp-cn-home",
+      "status": "inherited_independent_review",
+      "prior": "../PRINTER-COGNITION-TO-COMPARISON-20261124/evidence/evaluator/source-review.md",
+      "summary": "继承扫描、自动双面、小程序功能文档层复证；不证明稳定复用。"
+    },
+    {
+      "id": "brother-cn-manual-duplex",
+      "status": "isolated",
+      "reason": "前包独立读取403"
+    },
+    {
+      "id": "brother-cn-spec",
+      "status": "isolated",
+      "reason": "前包未独立重开；新规格册独立作为新材料，旧来源不恢复"
+    }
+  ],
+  "continuation_reads": [
+    {
+      "target": "Brother PDF",
+      "outcome": "text readable"
+    },
+    {
+      "target": "HP Store",
+      "outcome": "text readable"
+    },
+    {
+      "target": "Brother PDF page 2 screenshot",
+      "outcome": "cache miss"
+    }
+  ],
+  "local_text_searches": "在已取回HP页面文本内定位137A、包装、黑白字段；未另作外部搜索。"
+}

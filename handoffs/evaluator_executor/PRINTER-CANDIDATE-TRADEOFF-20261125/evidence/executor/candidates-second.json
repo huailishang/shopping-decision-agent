@@ -1,0 +1,38 @@
+{
+  "basis": "synthetic intervention only",
+  "checks": {
+    "known_hard_failure_excludes_candidate": true,
+    "all_failed_candidates_excluded": true,
+    "no_priority_for_known_failed_candidate": true,
+    "no_requery_for_already_known_color_failure": true,
+    "no_purchase_or_price_upgrade": true
+  },
+  "cases": {
+    "one_excluded": {
+      "candidate_states": {
+        "Brother HL-L1238W": "pending_evidence",
+        "HP M232dw": "excluded_for_research"
+      },
+      "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：仅Brother HL-L1238W保留研究资格；其余硬条件仍须按证据核对，不等于可购买。\n当前要求在家彩印：硬性反证不能由扫描或其他功能抵消。\nBrother HL-L1238W：待核，保留研究资格。\n  待核：扫描、彩色打印、预算。\n  扫描：缺少适用证据；命题 e6185f8eb1f2edbe59bc7a8bcf5a2ddae03571e59de2e3983ab00c795b17ae4a。\n  自动双面：缺少适用证据；命题 c2b465a1193b4d47a72ea8e24324964fbdb6f9bc620d996ba6fa6a5a52798eac。\n  手动双面：缺少适用证据；命题 d1cd810b1efbab028a29ffb8800e47bef5afab4ecb030698b330280fe23ccaf2。\n  激光打印：有资料支持；命题 36431f1a0eeba9fdccd87d40754a3fb03cbbbe0140ae7c5743227e6a0c417688。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据；命题 20fa9de0c4c1beb89e54e8a4c6a952f09bff3133ec05f3b0ab0d9e31da912cd7。\n  彩色打印：证据冲突；命题 cc129469fff657429a2b607368a707cf715adb66814fd1ab26ae83b7cbf79c65。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n    来源 https://probe.invalid/color-1；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：硬条件不满足，退出优先研究。\n  反证：彩色打印。\n  待核：预算。\n  有据硬条件：扫描。\n  扫描：有资料支持；命题 9626e4ad8d9f64e65fc9aeb8055dc2128a9b5082f6f7ca138d98d537883ba161。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持；命题 bc86e9fcf58082bab7deb508cf8c2ed7e7a83d89a8a398133a0ed0867d4ac0b0。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据；命题 d62a4f6c929fba596cd860bc109bf18e779988249c047b42e82f8ff13364a455。\n  激光打印：有资料支持；命题 2fd93bc948aea87afb035a3a6a06d583ca2c73050d9c29b8d80ed2b29a7c10fc。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持；命题 b574266d01417b72c6596ef7ab8a30972f57060c70b556a7defce9bd54b85f3a。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据；命题 ffdf24d551b35ba7a8f2cca8de42265c34af665e36a159360bd39217555b4b24。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n    来源 https://probe.invalid/color-0；获取 2026-11-25；本地复核期限 2026-12-25。\n当前扫描是硬要求：缺足够证据，暂不能据此选择。\n若需要自动双面：缺足够证据，暂不能据此选择。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换墨粉数量×墨粉单价P+另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\nBrother HL-L1238W耗材：鼓粉分离，墨粉用完不等同更换硒鼓；替换墨粉标称页数 1500；硒鼓标称页数 10000；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 brother-tn118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-dr118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-separate-drum：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  仅作情景：按1800页、假设实际替换产量1500页；若随箱为0页则需2盒，若随箱为1500页则需1盒。标称量不等于家庭实际量；此处未假定实际随箱量。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n下一项高价值核查：核Brother HL-L1238W的彩色打印；若证实满足则继续研究，若证实不满足则排除相应候选，缺证仍待核。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+      "prompt": "核Brother HL-L1238W的彩色打印；若证实满足则继续研究，若证实不满足则排除相应候选，缺证仍待核。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    },
+    "both_excluded": {
+      "candidate_states": {
+        "Brother HL-L1238W": "excluded_for_research",
+        "HP M232dw": "excluded_for_research"
+      },
+      "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：原两款均有硬性反证，均不适用；不在两款间挑胜者。\n当前要求在家彩印：硬性反证不能由扫描或其他功能抵消。\nBrother HL-L1238W：硬条件不满足，退出优先研究。\n  反证：彩色打印。\n  待核：扫描、预算。\n  扫描：缺少适用证据；命题 e6185f8eb1f2edbe59bc7a8bcf5a2ddae03571e59de2e3983ab00c795b17ae4a。\n  自动双面：缺少适用证据；命题 c2b465a1193b4d47a72ea8e24324964fbdb6f9bc620d996ba6fa6a5a52798eac。\n  手动双面：缺少适用证据；命题 d1cd810b1efbab028a29ffb8800e47bef5afab4ecb030698b330280fe23ccaf2。\n  激光打印：有资料支持；命题 36431f1a0eeba9fdccd87d40754a3fb03cbbbe0140ae7c5743227e6a0c417688。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据；命题 20fa9de0c4c1beb89e54e8a4c6a952f09bff3133ec05f3b0ab0d9e31da912cd7。\n  彩色打印：有不满足的依据；命题 f7b2d14d7be78e18f6c1e1292757bbb65fb0eaf7702ce5be35c4246dc8bf4059。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n    来源 https://probe.invalid/color-1；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：硬条件不满足，退出优先研究。\n  反证：彩色打印。\n  待核：预算。\n  有据硬条件：扫描。\n  扫描：有资料支持；命题 9626e4ad8d9f64e65fc9aeb8055dc2128a9b5082f6f7ca138d98d537883ba161。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持；命题 bc86e9fcf58082bab7deb508cf8c2ed7e7a83d89a8a398133a0ed0867d4ac0b0。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据；命题 d62a4f6c929fba596cd860bc109bf18e779988249c047b42e82f8ff13364a455。\n  激光打印：有资料支持；命题 2fd93bc948aea87afb035a3a6a06d583ca2c73050d9c29b8d80ed2b29a7c10fc。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持；命题 b574266d01417b72c6596ef7ab8a30972f57060c70b556a7defce9bd54b85f3a。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据；命题 f44286145ba7d8628921d697ad2ec19358ca56db5a848a2feb8155475c18dd3f。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n    来源 https://probe.invalid/color-0；获取 2026-11-25；本地复核期限 2026-12-25。\n当前扫描是硬要求：缺足够证据，暂不能据此选择。\n若需要自动双面：缺足够证据，暂不能据此选择。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换墨粉数量×墨粉单价P+另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n下一项高价值核查：原两款均有硬性反证，结束本轮两款比较；调整需求或另找候选。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+      "prompt": "原两款均有硬性反证，结束本轮两款比较；调整需求或另找候选。",
+      "flags": {
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false,
+        "live_price_verified": false
+      }
+    }
+  }
+}

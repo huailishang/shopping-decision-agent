@@ -1,0 +1,15 @@
+{
+  "model": "GPT-6.2",
+  "channel": "ChatGPT web chat",
+  "case": "C08_SHORT",
+  "live_api_attempt": false,
+  "manual_transcription": true,
+  "blind": false,
+  "input_sha256": "a0910482b7e6f6c8cc8b33e71f620c816b1d6dc9f96a5c2408bb3bb7af1fbbd1",
+  "prompt_sha256": "4e8d114601f03e479d2416f7902d998a6827cab609ad33114b3b99c1afdcdfbe",
+  "response_sha256": "1709c6ac2aabfa9e1e0d7c6086eae69f8f9decee7b6ae26f48a213f6fdb2051a",
+  "recorded_at_utc": "2026-11-25T14:26:43.898190+00:00",
+  "token_usage": null,
+  "latency_seconds": null,
+  "status": "output_recorded_pending_local_validation"
+}

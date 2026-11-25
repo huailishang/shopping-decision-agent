@@ -1,0 +1,35 @@
+{
+  "case": "C08_SHORT",
+  "input_sha256": "a0910482b7e6f6c8cc8b33e71f620c816b1d6dc9f96a5c2408bb3bb7af1fbbd1",
+  "model_output_rows": 6,
+  "structure_pass": true,
+  "semantic_entailment_verified": false,
+  "public_keys": [
+    "schema_version",
+    "publication_schema",
+    "origin",
+    "input_sha256",
+    "claims",
+    "assessments",
+    "summary",
+    "next_actions",
+    "raw_model_text_published",
+    "manual_decision_gain_accepted",
+    "purchase_recommendation_approved",
+    "transactions_enabled",
+    "live_price_verified",
+    "wechat_reuse_verified",
+    "real_user_effect_verified"
+  ],
+  "dispositions": [
+    [
+      "Brother HL-L1238W",
+      "excluded_for_research"
+    ],
+    [
+      "HP M232dw",
+      "excluded_for_research"
+    ]
+  ],
+  "public_equal": false
+}

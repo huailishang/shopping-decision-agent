@@ -1,39 +1,78 @@
-# 当前状态（2026-11-24，周口家庭打印机购买前核对已送审）
+# 当前状态（2026-11-25，外部模型7次未通过，网页版GPT四案结构通过，待独立复核）
 
 <!-- evaluator-executor-workflow:v2.2 -->
 
 ```yaml
 workflow: evaluator-executor-workflow/v2.2
-task_id: PRINTER-HOUSEHOLD-NEXT-ACTION-20261124
+task_id: PRINTER-CANDIDATE-TRADEOFF-20261125
 task_kind: one_off
-state: EXECUTING
-current_role: Executor
-next_role: Executor
-mandatory_gate_status: L2_PASS_SUBMITTED_FOR_REVIEW
-baseline_commit: 4a2f3c5e79f47299d4e944b3bdafbf3b13767fcf
-baseline_path: handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/BASELINE.json
-baseline_sha256: 0f4486e585ba9912bc1c1eaa7d34895a72eb874eb478ccc76734cab4edad1473
-project_map_path: docs/PROJECT_BOTTLENECK_MAP.md
-project_map_revision: r35
-active_bottleneck_id: B01
-hypothesis_id: H-B01-HOUSEHOLD-NEXT-ACTION-01
-contract_path: handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/CONTRACT.md
-validation_plan_path: handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/VALIDATION_PLAN.yaml
-executor_report_path: handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/REPORT.md
-evaluator_review_path: handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/REVIEW.md
-next_artifact_path: handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/REPORT.md
-previous_task_review_path: handoffs/evaluator_executor/PRINTER-EVIDENCE-TO-DECISION-20261124/REVIEW.md
+state: READY_FOR_REVIEW
+current_role: Evaluator
+next_role: Evaluator
+mandatory_gate_status: PASS
+baseline_commit: 3ae3514c482ab1b35335cd2978301efb348a09cd
+baseline_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/BASELINE.json
+baseline_sha256: 9740530f6b647349a84f23d0e592ee37cbac60c4a734e7b0fcd20e39c685ca44
+project_map_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/ASSESSMENT.md
+project_map_revision: r38
+active_bottleneck_id: B05
+hypothesis_id: H-B05-CANDIDATE-TRADEOFF-01
+contract_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/CONTRACT.md
+validation_plan_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/VALIDATION_PLAN.yaml
+executor_report_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/REPORT.md
+evaluator_review_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/REVIEW.md
+next_artifact_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/REVIEW.md
+previous_task_reassessment_path: handoffs/evaluator_executor/PRINTER-HOUSEHOLD-DECISION-CHECK-20261124/ASSESSMENT.md
+latest_prior_formal_review_path: handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REVIEW.md
 authorization_commit: false
 authorization_push: false
 authorization_history_rewrite: false
-authorization_api_call: false
+authorization_api_call: true
+authorized_api_scope: existing_modelscope_inference_only
+authorization_platform_business_api: false
+authorization_public_research: true
+public_query_limit: 4
+public_read_limit_total: 10
+authorization_existing_local_model_cli: false
+new_model_inference_limit: 4
 ```
 
-## 独立复核裁定（2026-11-24）
+## 最新执行交付（2026-11-25）
+
+- 本包冻结工程检查6/6、全量564/564、专项8/8、候选5/5、原认知7/7及12案重放通过；2017份保护件一致。硬反证淘汰及追问联动、三年耗材成本情景已实现；两款厂家资料待独立复核，实际价/维护/真人收益未证。
+- 原阶段魔搭2/4次均HTTP 200但非完整JSON，备用协议工具请求曾被安全检查拦截，未确认新增请求，原件保留。负责人授权恢复连接后，使用 CodexPro Funnel 和原魔搭 Responses 通道新增 C12 与 C12-r1 两次：前者仍非完整JSON，后者完整JSON且实际模型匹配，但8192输出token耗尽，仅reasoning、状态incomplete；累计4/4次、0次验收通过、剩余0，模型增益不可判。旧账不变。四份原始响应哈希核对通过，本次重新实跑564/564、范围2017份保护件无变化。见[续执行记录](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/MODEL_RESUME.md)。
+- 负责人新增授权横向补测3/3次：GLM-4.7-Flash应用错误500、Qwen3.5-27B超时、DeepSeek-V4.1-Flash HTTP 400。原4次另账保留，合计7次均无合格模型输出。目录38项不代表实际额度，剩余量未知。见[横向补测交付](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/executor/model/supplement-20261125/SUMMARY.md)。本次范围检查退出1（两份新增续办说明超出冻结范围，未列出原有保护文件变化），原mandatory_gate_status为历史工程结果，不代表本次复核通过；待评估者裁定。未修改产品代码、未重跑全量、未提交推送。
+- 负责人要求停止调用模型API，由当前GPT-6.2网页版人工转录四组模型输出，原4次+补测3次外部调用失败账不变，新增模型API调用0次。C01/C08/C12/C08_SHORT四案90条比较行，结构与事实绑定4/4通过；公开输出与规则路径除origin外一致，无已证可发布决策增益。通用发布门禁在已淘汰候选上仍优先提示补查Brother扫描，待独立复核正常聊天与通用发布的行动排序。非盲测、非自动集成；范围检查仍退出1（原两份新增说明），本次未改产品代码、未重跑全量。详见[网页版模型交付](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/executor/model/web-gpt-20261125/SUMMARY.md)。
+- 交评估者按[EVALUATION.md](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/EVALUATION.md)复核，执行结果见[REPORT.md](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/REPORT.md)及[COMPARISON.md](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/COMPARISON.md)。业务通过尚未裁定，未提交推送。
+
+## 原独立评估与冻结执行入口（2026-11-25，历史）
+
+- 上包业务裁定 **NEEDS_REPAIR**，工程独立6/6、556/556、原行动8/8及12案实跑通过。普通入口与扫描/双面分支确有进展。HP三项厂家功能独立复证，Brother手动双面原页403。魔搭三场景原HTTP哈希与提取输出、原输入及结构校验匹配，真实评测通道成立，模型增益和默认聊天模型集成未证。[独立评审](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REVIEW.md)
+- 新补测给候选加入明确彩印硬反证后，程序算出failed仍优先核其扫描，并继续问能否彩印。新冻结业务前测5项仅1项通过。B05当前断点是候选资格、维护成本与下一信息尚未形成完整取舍，B01转向决定性能力及耗材/维护资料，地区不作普遍前置。[r38判断](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/ASSESSMENT.md)
+- Executor执行 **PRINTER-CANDIDATE-TRADEOFF-20261125**，把有据硬失败传到候选去留，补原家庭低频维护/成本条件与翻转依据，公开结论及下一追问同源。≤16有效小时、≤2轮纠错，第3小时留完整粗结果，建议独立3小时。匿名查询≤4、读取≤10（执行8/评估2），沿用负责人已授权魔搭新增≤4次非敏感业务推理，旧账各自保留；无新采购、平台业务API、交易或Git提交推送。冻结2017份保护件，当前仅制定待执行。[合同](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/CONTRACT.md) · [验收](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/EVALUATION.md) · [机测计划](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/VALIDATION_PLAN.yaml)
+
+## 上一包执行交付（历史，已独立复核）
+- 冻结VP-01至06均退出0，专项7/7、全量556/556、行动8/8、12案重放成功；1891份保护件一致。仅工程门禁PASS，业务独立裁定未完成。
+- 正常聊天接入条件化比较，改答与证据撤回/冲突重算。厂家初步材料仍待独立核源，价格、彩印反证、维护成本、真人收益未证。模型续办已实际尝试4/4，四次均被服务端拒绝（model_not_found），成功0、记录工具事件0；模型集成失败、相对收益不可判，额度耗尽停止。旧6/10账保留。[续办回执](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/evidence/executor/model/FINAL_STATUS.md)
+- 下一责任Evaluator，阅读本包[REPORT.md](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPORT.md)及[COMPARISON.md](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/COMPARISON.md)，按冻结EVALUATION复核，不以测试全绿代替业务裁定。未提交推送。
+- 负责人新增授权商汤 `deepseek-flash` 优先、魔搭备用；商汤本机凭据未找到，魔搭 Responses 已接通。原案C01、扫描改答C04（一次截断纠错）、彩印缺证C08均通过原校验器：3/3场景、3/4业务尝试，公开claims与规则路径完全一致；真实评测通道已通，但模型增益、生产聊天集成及真人效果尚未证明。私有配置Git忽略，历史Codex 4/4账不变。[模型对照报告](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/evidence/executor/model/MODELSCOPE_COMPARISON.md)。下一责任Evaluator。
+
+## 原冻结执行入口（2026-11-24，历史）
+
+- **Executor接手PRINTER-COGNITION-TO-COMPARISON-20261124。** 主要解决B05认知、证据与正常聊天的连接，B01针对决定性缺证主动取证，B06继承回归。12案实测中，原案新增扫描硬要求后结果完全相同，仍优先追问区县；去掉手工上下文只给通用待核。[新合同](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/CONTRACT.md) · [前测摘要](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/preparation/summary.json)
+- 正常入口须给因素重要性、两款有据条件分支、未知和下一项高价值查证。至少两条分支有型号实料，扫描/双面改答及证据撤回实际改变对应比较。缺区县只限制适用报价，不隐藏已有比较。只有待办、通用待核或测试全绿不能签业务通过。[r37瓶颈判断](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/ASSESSMENT.md) · [业务验收](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/EVALUATION.md)
+- 执行≤20有效小时、≤2轮纠错，第4小时留粗完整实跑；建议独立评估≤3小时。匿名查询≤6、读取合计≤12（执行≤10，评估预留2）；现有本机账号CLI只读无工具推理≤4次，失败计额，旧6/10不重置。模型支线失败继续完成规则比较。冻结1891份保护件，现为已制定/待执行。[冻结计划](handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/VALIDATION_PLAN.yaml)
+
+## 上一未执行包（历史，已由认知比较包接替）
+
+- **主瓶颈 B01**。两款在周口的适用报价、微信隔次复用和家庭使用反馈仍缺。旧检查 7/7、WSL 全量 549/549，新增正常入口检查 5/8，复现微信改答后两处型号动作错位、歧义区县提前放行。上包原冻结范围核对只在 HEAD 一项失败，原 1837 份保护件及产品交付哈希匹配。上一包本次不签通过，其三处问题由新包承接。[复评 r36](handoffs/evaluator_executor/PRINTER-HOUSEHOLD-DECISION-CHECK-20261124/ASSESSMENT.md) · [入口前测](handoffs/evaluator_executor/PRINTER-HOUSEHOLD-DECISION-CHECK-20261124/preparation/entry.stdout.json)
+- **Executor 接手新包**。先修三处真实入口缺口，再用同一家庭原案核对是否有一份报价或实机回传改变下一动作。没有材料也完成可回传行动单和回归，将业务增量记不可判。川汇区仍仅作示例，1000 元仅主机硬件。上限 6 有效小时、1 轮集中纠错，独立评估建议 2 小时。冻结 1887 份保护件。新公网、模型、平台接口、账号、外发、设备代操作、交易和 Git 提交推送额度均为零。[执行合同](handoffs/evaluator_executor/PRINTER-HOUSEHOLD-DECISION-CHECK-20261124/CONTRACT.md) · [冻结验收](handoffs/evaluator_executor/PRINTER-HOUSEHOLD-DECISION-CHECK-20261124/VALIDATION_PLAN.yaml)
+
+## 更早一包的独立复核裁定（2026-11-24，历史）
 
 - **REJECTED**。19 项冻结检查、546 项全量及改答后到期的 4 项独立补测均通过。两份厂家来源仅留摘要，两条原页独立复查均为 403。兄弟微信结论未能独立复证，HP 9YF97A 已在历史证据中，实际选购收益待证。[独立评审](handoffs/evaluator_executor/PRINTER-EVIDENCE-TO-DECISION-20261124/REVIEW.md)
 
-## 唯一执行入口（2026-11-24）
+## 购买前核对送审记录（2026-11-24，历史）
 
 - `PRINTER-HOUSEHOLD-NEXT-ACTION-20261124` 已执行并送独立复核。未开工的摘要隔离任务并入本包，正常聊天给出两款具体核对与回传步骤。按负责人输入使用微信内直接发起、周口及 1000 元仅硬件口径，川汇区仅作示例。两家官方文档均有小程序功能依据，稳定复用及周口实际硬件价待核。19 项冻结检查、549 项全量、1837 份保护件均通过。[报告](handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/REPORT.md) · [行动单](handoffs/evaluator_executor/PRINTER-HOUSEHOLD-NEXT-ACTION-20261124/DECISION_HANDOFF.md)
 

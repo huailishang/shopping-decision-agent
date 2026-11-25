@@ -1,0 +1,16 @@
+{
+  "VP-01": 0,
+  "VP-02": 0,
+  "VP-03": 0,
+  "VP-04": 0,
+  "VP-05": 0,
+  "VP-06": 0,
+  "full_tests": 556,
+  "new_tests": 7,
+  "action_checks": 8,
+  "replay_cases": 12,
+  "protected_files": 1891,
+  "first_full_tests": 549,
+  "first_full_failures": 4,
+  "scope": "工程退出码；非业务独立验收"
+}

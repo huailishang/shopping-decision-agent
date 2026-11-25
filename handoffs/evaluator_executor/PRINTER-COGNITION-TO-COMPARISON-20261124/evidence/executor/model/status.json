@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED_EXTERNAL_NO_SAFE_INFERENCE",
+  "windows_cli_version": "0.141.0",
+  "version_exit": 0,
+  "exec_help_exit": 0,
+  "feature_inventory_exit": 0,
+  "isolated_feature_preflight_exit": 2,
+  "reason": "WSL PATH无codex；Windows绝对路径可启动，但features子命令不接受--ignore-user-config，当前工具隔离及Windows路径适配未证实；不以只读标记代替无工具保证。",
+  "new_inference_attempts": 0,
+  "historical_attempts": 6,
+  "historical_limit": 10,
+  "successful_contract_outputs": 0,
+  "model_comparison": "not_run",
+  "no_credentials_read": true,
+  "no_install": true
+}

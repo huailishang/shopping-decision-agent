@@ -1,0 +1,15 @@
+{
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash",
+  "source_case": "C08-three-dimensions",
+  "input_sha256": "a0910482b7e6f6c8cc8b33e71f620c816b1d6dc9f96a5c2408bb3bb7af1fbbd1",
+  "prompt_sha256": "4e8d114601f03e479d2416f7902d998a6827cab609ad33114b3b99c1afdcdfbe",
+  "started_at_utc": "2026-11-25T14:11:38.623132+00:00",
+  "status": "rejected",
+  "live_attempt": true,
+  "max_output_tokens": 4096,
+  "tools_requested": false,
+  "http_status": 400,
+  "failure": "http_error",
+  "elapsed_seconds": 0.717,
+  "finished_at_utc": "2026-11-25T14:11:39.352250+00:00"
+}

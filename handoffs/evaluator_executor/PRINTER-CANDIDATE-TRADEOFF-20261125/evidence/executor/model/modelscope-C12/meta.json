@@ -1,0 +1,18 @@
+{
+  "case": "C12",
+  "provider": "modelscope",
+  "requested_model": "Qwen/Qwen3.8-Flash-Next",
+  "input_sha256": "bc251ad4ae2bf78b93c01949022923bca77be31ad61b765ea5dbb59b9837c182",
+  "started_at_utc": "2026-11-25T13:12:04.397749+00:00",
+  "live_attempt": true,
+  "tools_requested": false,
+  "status": "rejected",
+  "usage": null,
+  "max_output_tokens": 16384,
+  "corrective_retry": false,
+  "http_status": 200,
+  "response_sha256": "65318d3ba0316dad070f1839461bf573c0eac07c6a54a72f4fbfdea742930f7b",
+  "failure": "JSONDecodeError",
+  "elapsed_seconds": 141.022,
+  "finished_at_utc": "2026-11-25T13:14:29.882691+00:00"
+}

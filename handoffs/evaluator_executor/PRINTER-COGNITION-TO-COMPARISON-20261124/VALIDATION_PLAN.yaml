@@ -1,0 +1,39 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-COGNITION-TO-COMPARISON-20261124
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-05]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-01, AC-02, AC-03]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_cognition_comparison.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-02, AC-04]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/VERIFY_ACTION_REGRESSION.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-04]
+    cwd: .
+    command: ["python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-q"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: [AC-04]
+    cwd: .
+    command: ["python3", "-X", "utf8", "scripts/audit_model_history_readonly.py", "--task", "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: [AC-05]
+    cwd: .
+    command: ["python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/VERIFY_SCOPE.py", "--phase", "post"]
+    expected_exit_code: 0
+    mandatory: true

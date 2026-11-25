@@ -20,6 +20,7 @@ from .evidence_comparison import digest, number, validate_bundle
 from .minimal_research import CASE_ID, selected_pack
 from .printer_purchase_checks import HARDWARE_ONLY, build_purchase_checks, render_purchase_checks
 from .printer_reviewed_evidence import local_bundle, document_note
+from .cognition_comparison import compare as compare_cognition, render as render_cognition
 
 UNKNOWN = {"暂不确定", "不确定", "不知道", "未知", "待确认", "先跳过"}
 BOOL = {"是": True, "需要": True, "必须": True, "接受": True,
@@ -464,6 +465,7 @@ def render_chat(state: dict) -> dict:
     analysis = _analysis(state)
     public_decision = None
     purchase_checks = None
+    cognition = None
     if analysis is None:
         outcome = ("尚未选择受审品类或缺用途，先收集需求；未给出商品推荐。"
                    if v.get("category") in (None, "printer")
@@ -495,6 +497,38 @@ def render_chat(state: dict) -> dict:
         if isinstance(research, dict) and research.get("case_id") == CASE_ID:
             purchase_checks = build_purchase_checks(v)
             outcome += "\n" + render_purchase_checks(purchase_checks)
+        # The local cognition pilot uses the same deterministic claim gate.
+        # Never use it to override a provider's validated or rejected bundle.
+        if not isinstance(analysis.get("verified_research_bundle"), dict):
+            cognition = compare_cognition(v, state["version"], date.today(),
+                                          deferred=state.get("deferred_fields", []))
+            if cognition is not None:
+                outcome = (setup_guard + render_cognition(cognition, v)
+                           + "\n旧研究材料（待核研究，不影响上述有据维度）：\n"
+                           + research_progress)
+                decision = cognition["decision"]
+                action = decision["next_action"]
+                if purchase_checks is not None:
+                    # Keep quote/fee audit fields, but never recommend actions for
+                    # an excluded candidate or contradict the selected next step.
+                    survivors = {r["model"] for r in decision["candidates"] if not r["failed"]}
+                    purchase_checks["candidates"] = [x for x in purchase_checks["candidates"]
+                                                     if x["model"] in survivors]
+                    if survivors:
+                        from .printer_purchase_checks import SCOPE_LABELS
+                        scope = SCOPE_LABELS.get(purchase_checks["budget_scope"], "费用范围待确认")
+                        outcome += "\n购买前核价（仅保留研究候选）：预算费用范围 " + scope + "；实际价格待核。"
+                field = action["field"]
+                if field and field not in state.get("deferred_fields", []):
+                    active = field
+                    fields = [field] + [f for f in fields if f != field]
+                    prompt = QUESTION[field]
+                    choices = [*REFS[field], ("暂不确定", "暂不确定")]
+                else:
+                    active = ""
+                    prompt = action["text"]
+                    choices = []
+
         # The status remains a dialogue workflow signal, never a verified
         # product claim. Only the gate-generated text can be published as such.
         status = r["status"]
@@ -507,6 +541,7 @@ def render_chat(state: dict) -> dict:
               "legacy_unverified_research": analysis is not None,
               "public_decision": public_decision,
               "purchase_checks": purchase_checks,
+              "cognition_comparison": cognition,
               "public_claim_source": "publish_checked_comparison" if public_decision else "unverified_research_only",
               "purchase_recommendation_approved": False, "transactions_enabled": False,
               "live_price_verified": False}

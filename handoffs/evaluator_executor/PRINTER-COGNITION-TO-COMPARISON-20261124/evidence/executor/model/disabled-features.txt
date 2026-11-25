@@ -1,0 +1,10 @@
+2026-11-25T02:21:50Z
+error: unexpected argument '--ignore-user-config' found
+
+  tip: to pass '--ignore-user-config' as a value, use '-- --ignore-user-config'
+
+Usage: codex [OPTIONS] [PROMPT]
+       codex [OPTIONS] <COMMAND> [ARGS]
+
+For more information, try '--help'.
+disabled_features_exit=2

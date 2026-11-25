@@ -1,0 +1,57 @@
+{
+  "hard_condition_probe": {
+    "basis": "synthetic intervention only",
+    "text": "品类认知与条件化比较（厂家资料初步核对，独立复核未完成）：\n低频时先看必要功能、操作便利与总成本；无独立寿命和耗材实测，不能据印量或功能数量判耐用性。\n当前要求在家彩印：先核准确型号的彩色能力；若仅黑白则不能满足，其他优势不能抵消。\nBrother HL-L1238W：\n  扫描：缺少适用证据；命题 9e06c80e6a5a84742fc918c28241f5e0d3de412ad52a8c758134aef6cafb79b8。\n  自动双面：缺少适用证据；命题 e75b89badfdeb9e007812c0bbbce1f77b1071744d57fb42369caa25cbf348e03。\n  手动双面：有资料支持；命题 97ffe25c35a74b61a32ac833338450122e98f123a89c55a39a8e4c325e17173b。\n    来源 https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-AF8C0063-911B-44B3-B52D-0FC0D110ABB5_1.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  激光打印：有资料支持；命题 2f15a1a947ffab93cbab2ef98312f52fb841044a7628b96336e43d912dfb7e56。\n    来源 https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-4BD9944E-9970-4D7B-AD4F-1E1184F0A81F_1.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据；命题 141c92d4f1c5f6888c5a2600b929a5adef474c947bfbf5a6abbf87887d3ffadc。\n  彩色打印：缺少适用证据；命题 deb17ad6c71d94ff2d1e84f7378970a5b28093b7768b5a5ae8f2b4f65362f858。\nHP M232dw：\n  扫描：有资料支持；命题 25bc9ded98f397127c2684de606f78266050c121c8579df3ee97d132f1f35b2f。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持；命题 c6f403b862d4b89ee01b7fd3184787df4f93ebf36594f648c60b61ff5b34a4aa。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据；命题 c086f288b2dc6fc496abdb80cb0327b2c68b4f2c00e8fb971272da670ef8ad58。\n  激光打印：缺少适用证据；命题 0790ab6c907a1bffeb2bb7da40b8b5ed97f67d9549f918e42d7995c5f1da102e。\n  微信小程序功能：有资料支持；命题 acb0eb63c8b85bc07f4bc0d4e24149495eede51bb2a26ffd882ca4293e52883f。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据；命题 73e9d861d2116036a87df6a3cf4fb8dd94f1e2103bc313db36b8ce6016754a7b。\n    来源 https://probe.invalid/color；获取 2026-11-25；本地复核期限 2026-12-25。\n当前扫描是硬要求：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n若需要自动双面：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n下一项高价值核查：准确型号能否彩印；若不能则排除，若能则继续核其他硬条件。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的可选条件：可继续核实低频印量、耗材和准确销售型号；微信未核不代表其余研究失败。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+    "color_claim_status": "failed",
+    "still_prioritizes_scan_candidate": true,
+    "flags": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  "offline_model_revalidation": [
+    {
+      "case": "modelscope-C01",
+      "request_hash_matches": true,
+      "raw_http_hash_matches": true,
+      "extracted_response_matches_raw": true,
+      "validation_accepted": true,
+      "claims_equal_rule": true,
+      "reported_http_status": 200,
+      "reported_usage": {
+        "input_tokens": 2552,
+        "output_tokens": 7452,
+        "total_tokens": 10004
+      }
+    },
+    {
+      "case": "modelscope-C04-r1",
+      "request_hash_matches": true,
+      "raw_http_hash_matches": true,
+      "extracted_response_matches_raw": true,
+      "validation_accepted": true,
+      "claims_equal_rule": true,
+      "reported_http_status": 200,
+      "reported_usage": {
+        "input_tokens": 2552,
+        "output_tokens": 6317,
+        "total_tokens": 8869
+      }
+    },
+    {
+      "case": "modelscope-C08",
+      "request_hash_matches": true,
+      "raw_http_hash_matches": true,
+      "extracted_response_matches_raw": true,
+      "validation_accepted": true,
+      "claims_equal_rule": true,
+      "reported_http_status": 200,
+      "reported_usage": {
+        "input_tokens": 2552,
+        "output_tokens": 7775,
+        "total_tokens": 10327
+      }
+    }
+  ]
+}
