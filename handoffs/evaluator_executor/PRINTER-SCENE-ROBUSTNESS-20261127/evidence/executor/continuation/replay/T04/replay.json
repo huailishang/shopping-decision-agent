@@ -1,0 +1,213 @@
+{
+  "case_id": "T04",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "家里需要彩印，且必须扫描文件",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "家里需要彩印，且必须扫描文件"
+            },
+            "requires_scan": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "家里需要彩印，且必须扫描文件",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_scan"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-stdout.txt",
+        "sha256": "b9dbfc9dcae217fb76ef85574332574c4d64f35e13a19bb2eeb3f9fd6f5f229d"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-response.json",
+        "sha256": "290a4a16cf109da11ec03c643944a3cc6121ddd7e673eea599781dc538beabe4"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-stdin.json",
+        "sha256": "a0d55dc5f2dd0efee29c19dec3541f8d86ca65dcbbd2018227092db9c96960b3"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "needs_color",
+      "answer": "是"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 4,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "家里需要彩印，且必须扫描文件",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "家里需要彩印，且必须扫描文件"
+            },
+            "requires_scan": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "needs_color": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "家里需要彩印，且必须扫描文件",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_scan"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "是",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-stdout.txt",
+        "sha256": "1cb1660355c02e9d83d4d13c5912316f57ab389f44cacd9dde4e54e5b759b587"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-response.json",
+        "sha256": "5c4b81163abfa7d3a792457683fb82bd6384a3322a62302036f6263af14488df"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-stdin.json",
+        "sha256": "78a897a9e437d0ae14f58b65c79c990a5966fe7b70a5385e582d6bdb7243e7be"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "completed"
+    }
+  ],
+  "terminal": "completed"
+}

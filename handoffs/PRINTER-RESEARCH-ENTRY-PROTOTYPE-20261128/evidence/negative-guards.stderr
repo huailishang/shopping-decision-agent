@@ -1,0 +1,10 @@
+test_missing_corrupt_and_adversarial_pack (test_printer_reviewed_evidence.ReviewedPrinterTests.test_missing_corrupt_and_adversarial_pack) ... ok
+test_expired_real_pack (test_printer_reviewed_evidence.ReviewedPrinterTests.test_expired_real_pack) ... ok
+test_adversarial_requirement_cannot_instruct_purchase (test_printer_decision_plan.PrinterDecisionPlanTest.test_adversarial_requirement_cannot_instruct_purchase) ... ok
+test_malicious_promotion_not_executed (test_minimal_research_flow.MinimalFlowTest.test_malicious_promotion_not_executed) ... ok
+test_g2_expired_price_must_not_assert_current_relation (test_cognition_g123_repairs.G123RepairRegressionTests.test_g2_expired_price_must_not_assert_current_relation) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.193s
+
+OK

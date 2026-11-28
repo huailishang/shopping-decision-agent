@@ -1,0 +1,185 @@
+{
+  "case_id": "T11",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 2,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "一般每周都会打印资料",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "一般每周都会打印资料"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "一般每周都会打印资料",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-stdout.txt",
+        "sha256": "f0ad3bfec0e8410bf8c322659945ca4384ea03c70949c5df7c5f8fef0f3db971"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-response.json",
+        "sha256": "55f90d826d53a843950eac3df9b6fdfb13c7045735925b5c3ba790930a78524a"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-stdin.json",
+        "sha256": "1580312ad5b7d5c36dee37a3558e62ce69b1c666c2897d758dc24a80f15c13cb"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "idle_weeks_pattern",
+      "answer": "通常每周都会用"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "一般每周都会打印资料",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "一般每周都会打印资料"
+            },
+            "idle_weeks_pattern": {
+              "value": "usually_short",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "通常每周都会用"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "一般每周都会打印资料",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "通常每周都会用",
+              "changed_fields": [
+                "idle_weeks_pattern"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-stdout.txt",
+        "sha256": "c6eb2bd0518c81efcc998a135a9a7a25191dc32974d876904c4fcac22542efd1"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-response.json",
+        "sha256": "5f5b5173b880c35cbd85d2e43f95746f0ab3aad9d37af89b1fb8ca6e42d47f73"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-stdin.json",
+        "sha256": "52f2a85a32c13c4f15e8d2efcee4c797de8fa104fc508678d7663d0d6ad14137"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "completed"
+    }
+  ],
+  "terminal": "completed"
+}

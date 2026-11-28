@@ -1,0 +1,20 @@
+127.0.0.1 - - [26/Nov/2026 16:33:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Nov/2026 16:33:11] "POST /api/decide HTTP/1.1" 200 -
+127.0.0.1 - - [26/Nov/2026 16:33:11] "POST /api/decide HTTP/1.1" 400 -
+======================================================================
+ERROR: test_history_ledger_tampering_cannot_pass_readonly_audit (test_publication_entry.PublicationEntryTests.test_history_ledger_tampering_cannot_pass_readonly_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/tests/test_publication_entry.py", line 190, in test_history_ledger_tampering_cannot_pass_readonly_audit
+    good = audit_history(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/scripts/audit_model_history_readonly.py", line 74, in audit_history
+    check(filename in CURRENT_TASK_ALLOWED_DRIFT or
+  File "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/scripts/audit_model_history_readonly.py", line 34, in check
+    raise ValueError(reason)
+ValueError: unapproved_historical_file_drift:desktop/DesktopBridgeClient.java
+
+----------------------------------------------------------------------
+Ran 643 tests in 63.835s
+
+FAILED (errors=1)

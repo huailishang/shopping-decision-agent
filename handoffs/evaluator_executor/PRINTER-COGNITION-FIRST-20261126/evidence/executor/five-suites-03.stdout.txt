@@ -1,0 +1,20 @@
+test_guide_preserves_explicit_answers_and_route (test_cognition_guide.CognitionGuideTest.test_guide_preserves_explicit_answers_and_route) ... ok
+test_malformed_source_not_certified (test_cognition_guide.CognitionGuideTest.test_malformed_source_not_certified) ... ok
+test_reviewed_model_claims_expire (test_cognition_guide.CognitionGuideTest.test_reviewed_model_claims_expire) ... ok
+test_defer_withdraw_and_reconfirm (test_guided_requirements.GuidedRequirements.test_defer_withdraw_and_reconfirm) ... ok
+test_explicit_confirmation_changes_research_not_eligibility (test_guided_requirements.GuidedRequirements.test_explicit_confirmation_changes_research_not_eligibility) ... ok
+test_guide_is_readonly_and_color_routes (test_guided_requirements.GuidedRequirements.test_guide_is_readonly_and_color_routes) ... ok
+test_reject_bad_type_and_cross_category (test_guided_requirements.GuidedRequirements.test_reject_bad_type_and_cross_category) ... ok
+test_reject_extra_inputs (test_cognition_guide_bridge.GuideBridge.test_reject_extra_inputs) ... ok
+test_same_normal_and_subprocess (test_cognition_guide_bridge.GuideBridge.test_same_normal_and_subprocess) ... ok
+test_actual_ranking_consumes_guide_and_refuses_stale (test_cognition_context_lineage.ContextLineage.test_actual_ranking_consumes_guide_and_refuses_stale) ... ok
+test_required_guide_over_budget_refuses_transport (test_cognition_context_lineage.ContextLineage.test_required_guide_over_budget_refuses_transport) ... ok
+test_deferred_and_withdrawn_restore (test_cognition_guide_persistence.GuidePersistence.test_deferred_and_withdrawn_restore) ... ok
+test_guide_reference_is_not_a_cached_conclusion (test_cognition_guide_persistence.GuidePersistence.test_guide_reference_is_not_a_cached_conclusion) ... ok
+test_legacy_saved_input_migrates (test_cognition_guide_persistence.GuidePersistence.test_legacy_saved_input_migrates) ... ok
+test_restore_confirmed_usage_fresh_process (test_cognition_guide_persistence.GuidePersistence.test_restore_confirmed_usage_fresh_process) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 9.439s
+
+OK

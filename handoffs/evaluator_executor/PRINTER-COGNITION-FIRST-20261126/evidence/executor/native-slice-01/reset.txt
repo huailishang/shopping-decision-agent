@@ -1,0 +1,27 @@
+当前品类暂无可用指南。
+{
+  "dialogue": {
+    "version": 0,
+    "answers": {},
+    "history": [],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false
+  },
+  "confirmed_fields": {},
+  "unconfirmed_fields": [
+    "category"
+  ],
+  "deferred_fields": [],
+  "withdrawn_fields": [],
+  "research_result": null,
+  "legacy_unverified_research": false,
+  "public_decision": null,
+  "purchase_checks": null,
+  "cognition_comparison": null,
+  "ranking_audit": null,
+  "public_claim_source": "unverified_research_only",
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false
+}

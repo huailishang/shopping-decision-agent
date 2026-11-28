@@ -1,0 +1,10 @@
+{
+  "previous_end": "2026-11-27T13:52:51.955962+00:00",
+  "current_start": "2026-11-27T14:04:42.393623+00:00",
+  "request_reported": "2026-11-27T14:03:56Z",
+  "gate_first_command": "2026-11-27T13:53:12.494785+00:00",
+  "gate_last_command": "2026-11-27T14:02:30.080175+00:00",
+  "sum_command_seconds": 552.8996609999999,
+  "gap_seconds": 710.437661,
+  "limit": "Entire gap conservatively deducted including machine wait and idle; no inferred effective attention."
+}

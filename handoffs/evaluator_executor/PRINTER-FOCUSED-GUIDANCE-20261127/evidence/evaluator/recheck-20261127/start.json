@@ -1,0 +1,8 @@
+{
+  "scope": "independent L3, source semantic audit, measurement fairness, eight new holdouts",
+  "event": "start",
+  "initial_read_before_record": "unknown; no contemporaneous timestamp captured, not reconstructed",
+  "product_edit_authorized": false,
+  "role": "Evaluator",
+  "recorded_at": "2026-11-27T14:10:05.9394342+00:00"
+}

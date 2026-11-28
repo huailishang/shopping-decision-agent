@@ -1,0 +1,486 @@
+{
+  "cases": [
+    {
+      "case_id": "T03",
+      "arm": "a",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 8,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 10,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T03",
+      "arm": "b",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 8,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T08",
+      "arm": "a",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 8,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 10,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T08",
+      "arm": "b",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 8,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T10",
+      "arm": "a",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 8,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T10",
+      "arm": "b",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T15",
+      "arm": "a",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T15",
+      "arm": "b",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T16",
+      "arm": "a",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 8,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 10,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T16",
+      "arm": "b",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 8,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 10,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T18",
+      "arm": "a",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 4,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 6,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "T18",
+      "arm": "b",
+      "checks": [
+        {
+          "event": 0,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        },
+        {
+          "event": 2,
+          "prompt_matches": true,
+          "state_matches": true,
+          "source_matches": true,
+          "candidate_matches": true,
+          "safe": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "comparability_mutations": {
+    "same": true,
+    "source_rejected": true,
+    "resource_rejected": true
+  },
+  "all_passed": true
+}

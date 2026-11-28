@@ -1,0 +1,58 @@
+{
+  "status": "preimplementation_expected_failures_not_product_acceptance",
+  "commands": [
+    {
+      "id": "business-before",
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_BUSINESS.py"
+      ],
+      "started_at_utc": "2026-11-26T02:21:27.886877+00:00",
+      "finished_at_utc": "2026-11-26T02:21:29.119234+00:00",
+      "exit_code": 1
+    },
+    {
+      "id": "delivery-before",
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_DELIVERY.py"
+      ],
+      "started_at_utc": "2026-11-26T02:21:29.119347+00:00",
+      "finished_at_utc": "2026-11-26T02:21:29.347981+00:00",
+      "exit_code": 1
+    }
+  ],
+  "failed_business_checks": [
+    "C01:rule:open_hard_condition_is_first",
+    "C01:manual:open_hard_condition_is_first",
+    "C01:model:open_hard_condition_is_first",
+    "C08:rule:no_actions_for_excluded_candidates",
+    "C08:rule:all_excluded_ends_candidate_actions",
+    "C08:manual:no_actions_for_excluded_candidates",
+    "C08:manual:all_excluded_ends_candidate_actions",
+    "C08:model:no_actions_for_excluded_candidates",
+    "C08:model:all_excluded_ends_candidate_actions",
+    "C12:rule:no_actions_for_excluded_candidates",
+    "C12:rule:open_hard_condition_is_first",
+    "C12:rule:withdrawn_hp_color_is_first",
+    "C12:manual:no_actions_for_excluded_candidates",
+    "C12:manual:open_hard_condition_is_first",
+    "C12:manual:withdrawn_hp_color_is_first",
+    "C12:model:no_actions_for_excluded_candidates",
+    "C12:model:open_hard_condition_is_first",
+    "C12:model:withdrawn_hp_color_is_first",
+    "C08_SHORT:rule:no_actions_for_excluded_candidates",
+    "C08_SHORT:rule:all_excluded_ends_candidate_actions",
+    "C08_SHORT:manual:no_actions_for_excluded_candidates",
+    "C08_SHORT:manual:all_excluded_ends_candidate_actions",
+    "C08_SHORT:model:no_actions_for_excluded_candidates",
+    "C08_SHORT:model:all_excluded_ends_candidate_actions",
+    "normal_original:normal_audit_first_matches_decision",
+    "backend_both_excluded:no_actions_for_excluded_candidates",
+    "backend_both_excluded:all_excluded_ends_candidate_actions"
+  ]
+}

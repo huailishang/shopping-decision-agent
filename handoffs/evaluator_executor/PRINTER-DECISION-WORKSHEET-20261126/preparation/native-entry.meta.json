@@ -1,0 +1,16 @@
+{
+  "label": "native-entry",
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_JAVA.py",
+    "--role",
+    "evaluator"
+  ],
+  "start_utc": "2026-11-26T08:07:29.321090+00:00",
+  "end_utc": "2026-11-26T08:07:29.470214+00:00",
+  "exit_code": 1,
+  "stdout_sha256": "bcf8ce1545f4893afa5fac55a91c3fc9f77b53a36ceae3467b5c0724fe191094",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_GUIDE.py"
+  ],
+  "exit_code": 0,
+  "start": "2026-11-28T16:35:51.996201+08:00",
+  "end": "2026-11-28T16:36:00.032359+08:00"
+}

@@ -1,0 +1,185 @@
+{
+  "case_id": "T02",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 2,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "想在家打印彩色照片，不懂参数",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "想在家打印彩色照片，不懂参数"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "想在家打印彩色照片，不懂参数",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/0-stdout.txt",
+        "sha256": "bd90f7bc20ef54d7565dda9699cd88564456517b141f089250d1bd4b3a3da085"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/0-response.json",
+        "sha256": "df57fffffc0aee11a53f352dfd72c3e4d35f319e80c2dc534c71acf632f88482"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/0-stdin.json",
+        "sha256": "43f321302bfe78d742f4c0063591a855de207f6c1dd4f16d31746c4908f7fd68"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "needs_color",
+      "answer": "是"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "想在家打印彩色照片，不懂参数",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "想在家打印彩色照片，不懂参数"
+            },
+            "needs_color": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "想在家打印彩色照片，不懂参数",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/1-stdout.txt",
+        "sha256": "0f4f363555f05c17bdc57389a7400292203f8caebed4922c2c93ce6e53329a03"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/1-response.json",
+        "sha256": "fbff4233bcf28bb0c1764b8b383e375bbf0fe42c70bdc896cec370eb4b62e72c"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/1-stdin.json",
+        "sha256": "7d7a5ef30be9d1b05c984b086c36e2ab994bbc92fe721c7c59b6194f7c5bb095"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T02/a/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "completed"
+    }
+  ],
+  "terminal": "completed"
+}

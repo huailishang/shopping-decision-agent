@@ -1,0 +1,30 @@
+{
+  "body": {
+    "source_id": "hp-cn-maintenance-guide-20261126",
+    "url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
+    "models": [
+      "HP M232dw"
+    ],
+    "source_region": "中国大陆",
+    "title": "HP LaserJet MFP M232-M237 series 使用手册（ZH-CN）",
+    "version": "2020 copyright; c07148381.pdf; 154 PDF pages (web cached rendition)",
+    "locator": "印刷页62（PDF零基页67，硒鼓中碳粉严重不足）；印刷页139（PDF零基页144，管制型号表）",
+    "excerpt": "时不需要更换硒鼓，除非打印质量无法接受。",
+    "excerpt_sha256": "79cfd59137f51512ab0e7013a1fb9cd9ce7806e89c3c0cadb86167a1a7a5db16",
+    "fact": {
+      "id": "hp-replace-on-quality",
+      "candidate_id": "HP M232dw",
+      "dimension": "replace_on_unacceptable_quality",
+      "unit": "bool",
+      "value": true
+    },
+    "review_status": "executor_text_rechecked",
+    "model_visual_checked": true,
+    "review_date": "2026-11-26",
+    "review_time_window": "+08:00 14:27:18–14:29:03; per-operation exact start/end unknown",
+    "raw_document_sha256": null,
+    "maintenance_page_visual": "failed_cache_miss_twice; relevant section is prose",
+    "limits": "仅限低/严重不足告警下按打印质量决定更换、耗材高级保护保修终止；非实际产量、费用、寿命或整机保修。文本与型号表在本次缓存版本复核，未获得完整原PDF字节。"
+  },
+  "sha256": "96c840733b2edb1c015034369d15c416ccdfc08be35b5bd443fbb45ad760d0bc"
+}

@@ -1,0 +1,52 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "07b8d8d272ee7513362d98f9a5ba3accebc1ad1374003e127b195d45efaff863",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/replay.json",
+      "sha256": "9ef154ad1a5e1e4687b3b0d41f4025ce64497c5cbaedea97359b080337c4f07d"
+    }
+  },
+  "metrics": {
+    "completed": true,
+    "answers": 1,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 0
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:usage_research": true,
+    "authorization_false": true,
+    "setup:pending": true,
+    "setup:unchanged": true
+  },
+  "setup_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-response.json",
+      "sha256": "ef60f15d9983acafed7003ab0e8e33666b47cbb5695362828bb9bb04c51eef5e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-stdin.json",
+      "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-stdout.txt",
+      "sha256": "10d9c50a6eae98490e84e66687b5aaa572675382355d70e734a7c023098da1de"
+    }
+  ],
+  "semantic_completed": true,
+  "terminal": "completed"
+}

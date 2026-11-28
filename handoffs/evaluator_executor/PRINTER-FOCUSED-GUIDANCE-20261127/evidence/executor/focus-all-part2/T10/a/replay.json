@@ -1,0 +1,479 @@
+{
+  "case_id": "T10",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 2,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "家里常连续多周不用打印机",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "家里常连续多周不用打印机"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "家里常连续多周不用打印机",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/0-stdout.txt",
+        "sha256": "14672dbf15fc8878374607867845aba778159a3ee5d31f0002888c8e3103f534"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/0-response.json",
+        "sha256": "99420d5f5846e50fe948c8e8ed21cb23cfb362ca724044a1418f86dd006d007a"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/0-stdin.json",
+        "sha256": "0df87060f0340d1a7fafc9f040ee2b99155604c87dc93ff9fb14e424afc93563"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "needs_color",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "家里常连续多周不用打印机",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "家里常连续多周不用打印机"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "家里常连续多周不用打印机",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "needs_color"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/1-stdout.txt",
+        "sha256": "a72ad3b1e58d568cc21aefc3f793ca8980d11587c8d66c8c0ec4f55af4f94560"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/1-response.json",
+        "sha256": "607fb681cba199c486a1140becddc9250623f1783d9d317184a7400f19a8f446"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/1-stdin.json",
+        "sha256": "ebb1e88f497d8ed73785a9d180c13db8dfefd11c19cda6bf3d756d669b24d47c"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "wechat_required",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 4,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "家里常连续多周不用打印机",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "家里常连续多周不用打印机"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "家里常连续多周不用打印机",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "needs_color",
+            "wechat_required"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/2-stdout.txt",
+        "sha256": "d34e20acf91def638e9c57d7360c8a45ea0ac5a94ee3643f833eb91bec2695d6"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/2-response.json",
+        "sha256": "f4b09350c1a028a66951b73ea8262bd41491f165229363bfb7094c3b402a5c2f"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/2-stdin.json",
+        "sha256": "8c537de6938fe393340ef4594c0610a4938efdb204afccc81a6fa3b6af1124b9"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/2-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "monthly_pages_range",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 5,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "家里常连续多周不用打印机",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "家里常连续多周不用打印机"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "家里常连续多周不用打印机",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "monthly_pages_range",
+            "needs_color",
+            "wechat_required"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/3-stdout.txt",
+        "sha256": "850eb02088f81dbfd29b1a4c14cde570de9ec6142eef53c600f83f5e9bdbb5e9"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/3-response.json",
+        "sha256": "247a482db37dc5b4215c1de09c0054994fa2d4dc0187360fa7605ad589bc64aa"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/3-stdin.json",
+        "sha256": "56c8b7e2889db7b9b909634e984d6a5a2e7b847db582e420377dacab5f42b905"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/3-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "budget_max_cny",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 6,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "家里常连续多周不用打印机",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "家里常连续多周不用打印机"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "家里常连续多周不用打印机",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 6,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "budget_max_cny",
+            "monthly_pages_range",
+            "needs_color",
+            "wechat_required"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/4-stdout.txt",
+        "sha256": "1a85f0a5f260ca8651aff849c59f540bdd2ba51ce8c8870b7a1a8fa85be5b8c4"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/4-response.json",
+        "sha256": "beb347dd6da19228648c4f958d5734c3505b68436701435068a0c76564b18d66"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/4-stdin.json",
+        "sha256": "2d833d8021ca4e8b41a8aca2a5510f75841f887fbe3142b4f2a47ec9d24c9894"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part2/T10/a/4-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "stalled"
+    }
+  ],
+  "terminal": "stalled"
+}

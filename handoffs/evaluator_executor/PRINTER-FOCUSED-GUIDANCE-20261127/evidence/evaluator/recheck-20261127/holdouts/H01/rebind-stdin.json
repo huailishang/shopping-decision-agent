@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "action": "rebind",
+  "state": {
+    "version": 2,
+    "answers": {
+      "category": {
+        "value": "printer",
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "usage": {
+        "value": "家庭纸质资料整理",
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "needs_color": {
+        "value": false,
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "wechat_required": {
+        "value": false,
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "accepts_initial_setup": {
+        "value": true,
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "device_deployment_region": {
+        "value": "江苏",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "江苏"
+      },
+      "monthly_pages_range": {
+        "value": [
+          20,
+          80
+        ],
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "budget_max_cny": {
+        "value": 1200,
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "requires_scan": {
+        "value": true,
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      },
+      "requires_auto_duplex": {
+        "value": true,
+        "confirmed": true,
+        "origin": "user_explicit",
+        "raw_text": "已确认恢复的条件"
+      }
+    },
+    "history": [
+      {
+        "version": 2,
+        "raw_text": "江苏",
+        "changed_fields": [
+          "device_deployment_region"
+        ],
+        "old_conclusions_invalidated": true
+      }
+    ],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false,
+    "deferred_fields": [],
+    "withdrawn_fields": []
+  },
+  "worksheet": {
+    "schema_version": 1,
+    "worksheet_id": "429c241cb0fe4089828843199e676507",
+    "revision": 0,
+    "binding": {
+      "category": "printer",
+      "dialogue_version": 1,
+      "confirmed_values_sha256": "e50e857ae3ddb1e1624423827bf7118436920101913bc1501f8e8d60b4b0f789",
+      "session": null
+    },
+    "confirmed": {
+      "category": "printer",
+      "usage": "家庭纸质资料整理",
+      "needs_color": false,
+      "wechat_required": false,
+      "accepts_initial_setup": true,
+      "device_deployment_region": "广东",
+      "monthly_pages_range": [
+        20,
+        80
+      ],
+      "budget_max_cny": 1200,
+      "requires_scan": true,
+      "requires_auto_duplex": true
+    },
+    "deferred": [],
+    "withdrawn": [],
+    "basis": {
+      "pages": null,
+      "months": null,
+      "currency": "CNY",
+      "fee_scope": "hardware_consumables_maintenance",
+      "scenario_version": 1
+    },
+    "models": {},
+    "sources": [],
+    "guide_reference": {
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "f1385912843fc3885e002acf09f2d362c57bc34313319f20f9c59a413eba1388",
+      "source_ids": [
+        "brother-cn-202405-brochure",
+        "hp-cn-home",
+        "rtings-cost-method-2021"
+      ]
+    }
+  },
+  "payload": {}
+}

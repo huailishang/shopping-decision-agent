@@ -1,0 +1,8 @@
+test_ambiguity (test_scene_robustness.SceneRobustness.test_ambiguity) ... ok
+test_negation (test_scene_robustness.SceneRobustness.test_negation) ... ok
+test_positive (test_scene_robustness.SceneRobustness.test_positive) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.652s
+
+OK

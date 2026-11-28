@@ -1,0 +1,57 @@
+{
+  "task_id": "PRINTER-FOCUSED-GUIDANCE-20261127",
+  "state": "EXECUTING",
+  "role": "Executor",
+  "head": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+  "stage_A": "baseline replay complete",
+  "stage_B": "pilot and draft complete; final reference and setup pending",
+  "formal_l2": "NOT_RUN",
+  "product_changed": false,
+  "raw_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/start-scope.txt",
+      "sha256": "25dece327a5f1f249351033ac535cb557dc3dfd964a997589b2ff79d0e534217"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/start-focus.txt",
+      "sha256": "9633cd8a4fa0ab5ae4ef980cd6719a37289f60057196e6d99d184cdfabf95623"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype.json",
+      "sha256": "69e17cbb0896128043dee190b52511e13679b975659e6cdb54cba8b71655b3b1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot-results.json",
+      "sha256": "34d0bdf13090129acb80e1d5245d41821843b8e896df4421bb97f1b6e332bb8e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-draft-v0.json",
+      "sha256": "5a06f3792ad525936f6fbb48f10ae2533cd662c6feed82a0e7da2da2bf45ed22"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/checkpoint-scope.txt",
+      "sha256": "89c8b866d0e618a58b72c2fa9bb74fdf9fe405a5509d4cb417d82a2898f7bdea"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/process-checkpoint-B.json",
+      "sha256": "b598f8d0fed9da1d85961b672897b9fdc22b79419fd7efb83e440e0275714a22"
+    }
+  ],
+  "known_gaps": [
+    "VERIFY_FOCUS 0/5 expected",
+    "24 reference draft not frozen; qualification/research terminal assertions not sufficient",
+    "T20-T24 real compound setups pending",
+    "single T02 pilot CH04 only compares actual declared resource limits; final pair auditor not run",
+    "no A/B product impact or native test evidence",
+    "initial time interval unknown, bound based on minute-level request metadata, not independently verified"
+  ],
+  "next_command": "python3 -X utf8 handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/reference_draft.py (only if new draft path or preserve old hash; review existing draft first)",
+  "next_actions": [
+    "Read existing draft and prior review; complete independent semantic terminal targets and T20-T24 setup artifacts",
+    "Freeze reference v1 with SHA before any product edits",
+    "Implement common replayer and run formal four challenges; stop product expansion if insensitive",
+    "Then implement Stage C focus chain within frozen scope"
+  ],
+  "budget_debit_seconds": 586.082004,
+  "remaining_budget_seconds": 863413.917996
+}

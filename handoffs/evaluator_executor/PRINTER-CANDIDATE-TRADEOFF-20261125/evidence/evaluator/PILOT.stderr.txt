@@ -1,0 +1,13 @@
+test_action_gate (__main__.PilotTests.test_action_gate) ... ok
+test_all_excluded (__main__.PilotTests.test_all_excluded) ... ok
+test_context_budget (__main__.PilotTests.test_context_budget) ... ok
+test_failures (__main__.PilotTests.test_failures) ... ok
+test_protocols (__main__.PilotTests.test_protocols) ... ok
+test_report (__main__.PilotTests.test_report) ... ok
+test_success (__main__.PilotTests.test_success) ... ok
+test_withdrawn_evidence (__main__.PilotTests.test_withdrawn_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.066s
+
+OK

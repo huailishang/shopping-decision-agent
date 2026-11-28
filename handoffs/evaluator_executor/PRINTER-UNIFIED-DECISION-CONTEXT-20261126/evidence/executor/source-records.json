@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "id": "hp-cn-maintenance-guide-20261126",
+      "url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
+      "candidate": "HP M232dw",
+      "region": "中国大陆",
+      "observed_at": "2026-11-26T02:58:06+00:00",
+      "observation_note": "local review record, not document update; exact request time unavailable",
+      "locator": "printed pages 77–78 and 139; extracted lines 2037–2063,3674",
+      "excerpt": "此时不需要更换碳粉盒，除非打印质量无法接受。",
+      "summary": "Manufacturer guide explicitly lists M232dw. In the low-toner scenario replacement may be delayed until print quality is unacceptable; premium cartridge protection ends at very low. No exact yield, maintenance frequency or household performance. PDF text accessible; two screenshot attempts cache miss; independent reopening required.",
+      "decision_change": "Do not add replacement cost solely because of low warning; condition on actual print quality and replacement need. No automatic zero maintenance assumption.",
+      "claim_id": "hp-replace-on-quality",
+      "review_status": "executor_provisional"
+    }
+  ],
+  "query_count": 6,
+  "read_count": 12,
+  "read_reserved_for_evaluator": 4,
+  "exact_individual_attempt_timestamps": "unknown"
+}

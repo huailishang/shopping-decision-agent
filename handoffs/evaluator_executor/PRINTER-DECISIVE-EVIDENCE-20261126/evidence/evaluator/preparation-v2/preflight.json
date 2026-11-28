@@ -1,0 +1,90 @@
+{
+  "task_id": "PRINTER-DECISIVE-EVIDENCE-20261126",
+  "status": "EXPECTED_FAILURES_CONFIRMED",
+  "checks": [
+    {
+      "id": "action",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\VERIFY_ACTION.py"
+      ],
+      "start": "2026-11-26T13:06:27.356508+00:00",
+      "end": "2026-11-26T13:06:29.632046+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "711a80263c29aae26221a71289587aa099a0ec353f2860385c7a6f1e0ebd8908",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_preparation_exit_code": 1,
+      "meaning": "real observed missing/failing target, not completed implementation"
+    },
+    {
+      "id": "uncertainty",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\VERIFY_UNCERTAINTY.py"
+      ],
+      "start": "2026-11-26T13:06:29.632046+00:00",
+      "end": "2026-11-26T13:06:35.418367+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "de76c9c700bb4f329cd3133563b91704a7469f8a659c4bbf9770d38acb824b3f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_preparation_exit_code": 1,
+      "meaning": "real observed missing/failing target, not completed implementation"
+    },
+    {
+      "id": "tests",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\VERIFY_TESTS.py"
+      ],
+      "start": "2026-11-26T13:06:35.418367+00:00",
+      "end": "2026-11-26T13:06:35.531517+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "cc618d08e5c960a2d2b4f9a9b9dcb9028998ae46d765bdd0c74f7152cd8b998b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_preparation_exit_code": 1,
+      "meaning": "real observed missing/failing target, not completed implementation"
+    },
+    {
+      "id": "java",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\VERIFY_JAVA.py",
+        "--role",
+        "executor"
+      ],
+      "start": "2026-11-26T13:06:35.531517+00:00",
+      "end": "2026-11-26T13:06:35.633087+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "3452c1b2923a7be73b1067a0b882775c6e97fd74eccb4d5844dafa5e00643cfb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_preparation_exit_code": 1,
+      "meaning": "real observed missing/failing target, not completed implementation"
+    },
+    {
+      "id": "delivery",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\VERIFY_DELIVERY.py"
+      ],
+      "start": "2026-11-26T13:06:35.633087+00:00",
+      "end": "2026-11-26T13:06:35.728927+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "e3c94a66bb1133054c98c42a6115fac61679e353142ea59ad87b2fde00fcf77e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_preparation_exit_code": 1,
+      "meaning": "real observed missing/failing target, not completed implementation"
+    }
+  ],
+  "product_changes": 0,
+  "real_external_calls": 0
+}

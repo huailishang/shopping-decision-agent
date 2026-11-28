@@ -1,0 +1,187 @@
+{
+  "passed": true,
+  "role": "executor",
+  "platform": "win32",
+  "commands": [
+    {
+      "label": "compile",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\javac.EXE",
+        "-encoding",
+        "UTF-8",
+        "--release",
+        "17",
+        "-d",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatBridgeRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatNativeAuditRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\CognitionGuideRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\CognitionGuideSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\CognitionSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DecisionWorksheetRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DecisionWorksheetSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DesktopBridgeClient.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\FocusGuidanceRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\FocusGuidanceSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\H10JavaRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\P04MarketplaceRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\SceneRobustnessRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\SceneRobustnessSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ShoppingDecisionDesktop.java"
+      ],
+      "start": "2026-11-28T08:29:55.783856+00:00",
+      "end": "2026-11-28T08:30:01.933353+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "ChatBridgeRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "ChatBridgeRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe"
+      ],
+      "start": "2026-11-28T08:30:01.933353+00:00",
+      "end": "2026-11-28T08:30:06.215266+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "ChatSwingRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "ChatSwingRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe"
+      ],
+      "start": "2026-11-28T08:30:06.215266+00:00",
+      "end": "2026-11-28T08:30:13.454298+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "DecisionWorksheetRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "DecisionWorksheetRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:30:13.454298+00:00",
+      "end": "2026-11-28T08:30:18.498513+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "DecisionWorksheetSwingRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "DecisionWorksheetSwingRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:30:18.498513+00:00",
+      "end": "2026-11-28T08:30:51.553197+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "CognitionGuideRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "CognitionGuideRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:30:51.553197+00:00",
+      "end": "2026-11-28T08:30:55.887605+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "CognitionGuideSwingRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "CognitionGuideSwingRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:30:55.887605+00:00",
+      "end": "2026-11-28T08:31:26.280782+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "FocusGuidanceRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "FocusGuidanceRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:31:26.280782+00:00",
+      "end": "2026-11-28T08:31:29.414455+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "FocusGuidanceSwingRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "FocusGuidanceSwingRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:31:29.414455+00:00",
+      "end": "2026-11-28T08:32:20.899089+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "SceneRobustnessRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "SceneRobustnessRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:32:20.899089+00:00",
+      "end": "2026-11-28T08:32:25.532416+00:00",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "label": "SceneRobustnessSwingRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912\\classes",
+        "SceneRobustnessSwingRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-SCENE-ROBUSTNESS-20261127\\evidence\\executor\\java-native-20261128T082955771912"
+      ],
+      "start": "2026-11-28T08:32:25.532416+00:00",
+      "end": "2026-11-28T08:32:44.558666+00:00",
+      "exit_code": 0,
+      "passed": true
+    }
+  ]
+}

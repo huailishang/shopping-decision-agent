@@ -1,0 +1,207 @@
+{
+  "case_id": "T19",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "有预算但还没想好是否包括耗材",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "有预算但还没想好是否包括耗材"
+            },
+            "budget_max_cny": {
+              "value": 1000,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "1000"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "有预算但还没想好是否包括耗材",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "1000",
+              "changed_fields": [
+                "budget_max_cny"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-stdout.txt",
+        "sha256": "4e6869d1d1c67db33a39e60cde271f143679a4033ffc2a94c0feccc661dd92e0"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-response.json",
+        "sha256": "da810affa172e715a9840598d63cd58de09b5fcaf6016e91d93beaf447916963"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-stdin.json",
+        "sha256": "fbe749746f304eacc2bd41967a580fa8ca89f2cc87f061ea6a25bd44118e91fa"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "budget_scope",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 4,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "有预算但还没想好是否包括耗材",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "有预算但还没想好是否包括耗材"
+            },
+            "budget_max_cny": {
+              "value": 1000,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "1000"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "有预算但还没想好是否包括耗材",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "1000",
+              "changed_fields": [
+                "budget_max_cny"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "budget_scope"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-stdout.txt",
+        "sha256": "0bf3c9281ff69cd52387e212a0344f5be9959e97d34ce11bd432ee5dc7f83cbe"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-response.json",
+        "sha256": "80cecea6bc03e6267582f6dce4eee361425505e59fbdbe523b1f3447585da742"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-stdin.json",
+        "sha256": "9f589cf3ef762b5b92329c32d659271d7ed7ce55c8a7dbd7d8288652a8f8ccd5"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "completed"
+    }
+  ],
+  "terminal": "completed"
+}

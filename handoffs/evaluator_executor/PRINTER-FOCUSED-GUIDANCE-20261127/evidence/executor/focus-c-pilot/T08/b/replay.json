@@ -1,0 +1,548 @@
+{
+  "case_id": "T08",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 2,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "经常打印双面资料，需要机器自动翻面",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "经常打印双面资料，需要机器自动翻面"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "经常打印双面资料，需要机器自动翻面",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/0-stdout.txt",
+        "sha256": "bf0b75cd983462ca067b3bbf0971b36d7967ca99394de7b574ad25032644212a"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/0-response.json",
+        "sha256": "c3c56cbeeed492b3b781a4754e96f8f971429ca8937625b0b9ebe2a1396632f4"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/0-stdin.json",
+        "sha256": "175ea548cfcd5fa1e222cd7cf92ae0c5256c77a6aaca93e7c2c1931cf96e4b16"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "requires_auto_duplex",
+      "answer": "是"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "经常打印双面资料，需要机器自动翻面",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "经常打印双面资料，需要机器自动翻面"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "经常打印双面资料，需要机器自动翻面",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/1-stdout.txt",
+        "sha256": "888136a9bcb76ed2cddb2b563d1bdc72766550ed7e65c1e3d5fc5d0bb255c518"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/1-response.json",
+        "sha256": "b7714688ff0ca453b2c958219b4f37e46c1c026ac97a0df001767a946913c7cc"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/1-stdin.json",
+        "sha256": "fff867978b11c43dc460f717e6c256792dd86ce4c4d28a77325c8868045c433b"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "needs_color",
+      "answer": "否"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 4,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "经常打印双面资料，需要机器自动翻面",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "经常打印双面资料，需要机器自动翻面"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "经常打印双面资料，需要机器自动翻面",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/2-stdout.txt",
+        "sha256": "490474de33f145c5008c4998c89d1bf9b1670f7f90559c6fc578c0dd545331e3"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/2-response.json",
+        "sha256": "3fe2bec7a46bd54aeec48f80213ff70c43a07dbb1afdd649832021f86c10107b"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/2-stdin.json",
+        "sha256": "4cae7e2ed3d49a4562b589d14f69e8b5f0a5cfd7f05b5c7c68184d5e2d68cf3f"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/2-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "device_deployment_region",
+      "answer": "河南"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 5,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "经常打印双面资料，需要机器自动翻面",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "经常打印双面资料，需要机器自动翻面"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            },
+            "device_deployment_region": {
+              "value": "河南",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "河南"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "经常打印双面资料，需要机器自动翻面",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 5,
+              "raw_text": "河南",
+              "changed_fields": [
+                "device_deployment_region"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/3-stdout.txt",
+        "sha256": "97c9494bdc3142292fc5d281423caf9303d1c5f9f6bf12b98c6a7e3c4e46332e"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/3-response.json",
+        "sha256": "72a9251a2642aeae1e6d01d2b30b09ce348cadcfc638e57ab460992203b9f03b"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/3-stdin.json",
+        "sha256": "3a177505e97b146222afc850f1ba59d604fb93b61148c97a09dddc32c9ac3036"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/3-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "monthly_pages_range",
+      "answer": "0-50"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 6,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "经常打印双面资料，需要机器自动翻面",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "经常打印双面资料，需要机器自动翻面"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            },
+            "device_deployment_region": {
+              "value": "河南",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "河南"
+            },
+            "monthly_pages_range": {
+              "value": [
+                0,
+                50
+              ],
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "0-50"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "经常打印双面资料，需要机器自动翻面",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 5,
+              "raw_text": "河南",
+              "changed_fields": [
+                "device_deployment_region"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 6,
+              "raw_text": "0-50",
+              "changed_fields": [
+                "monthly_pages_range"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/4-stdout.txt",
+        "sha256": "fc32329335be22d1e035bfb7a7cf6f975ba576b7a8618b7b3720b2db928fcb97"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/4-response.json",
+        "sha256": "d7ecd45d186813b2191ef5f061a5a8c665bfd6af1c8e80f9823a1232026bd850"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/4-stdin.json",
+        "sha256": "7064d56ac8356cdc3509638145a0f62bc9dc680a705fb46489b8b0f18bb81a14"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T08/b/4-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "completed"
+    }
+  ],
+  "terminal": "completed"
+}

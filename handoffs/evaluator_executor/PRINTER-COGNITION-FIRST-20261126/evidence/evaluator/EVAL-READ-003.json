@@ -1,0 +1,8 @@
+{
+  "id": "EVAL-READ-003",
+  "observed_on": "2026-11-27",
+  "limits": "本次失败不证明页面或主张不存在；仅可依旧独立有限审核，不得声称本轮重新取得原文",
+  "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+  "reference": "turn2view0",
+  "result": "TimeoutError"
+}

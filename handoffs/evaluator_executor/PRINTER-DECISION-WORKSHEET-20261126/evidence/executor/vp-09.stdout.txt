@@ -1,0 +1,14 @@
+{
+  "errors": [
+    "completion/core/native threshold not met",
+    "missing/over-budget active work"
+  ],
+  "counts": {
+    "completed": 7,
+    "core_completed": 6,
+    "java_event_completed": 2,
+    "reads": 0,
+    "queries": 0,
+    "active_seconds": 0
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "expectations_sha256": "33a3c7a3972cefe105c2dc7fee58d65bd0a9e3116a750668379954be0319813c",
+  "cases": [
+    {
+      "id": "H01",
+      "passed": true,
+      "artifact": "H01-trace.json",
+      "sha256": "29bf2de9d231dd538507adf9a70e1f2c51ea16ca34acbe1eaf9838ce7a1742b3"
+    },
+    {
+      "id": "H02",
+      "passed": true,
+      "artifact": "H02-trace.json",
+      "sha256": "d81db45021695062ed289adab851e577e68817b8eaf2d0533ae454f2c4b57284"
+    },
+    {
+      "id": "H03",
+      "passed": true,
+      "artifact": "H03-trace.json",
+      "sha256": "0584f2af48b9a52f520d29cd87af7fed80c220564dc8d36fbdbdb728deba3d6f"
+    },
+    {
+      "id": "H04",
+      "passed": true,
+      "artifact": "H04-trace.json",
+      "sha256": "a0824ab0b8d874e9f408c4892fab25f22fb35879e3d71b0dc60a34285346a12c"
+    },
+    {
+      "id": "H05",
+      "passed": true,
+      "artifact": "H05-trace.json",
+      "sha256": "626e2d0ff063c9240b32bbbec4d89d6dd7ebaf65d10ce3dcd95b990eefe0e320"
+    },
+    {
+      "id": "H06",
+      "passed": true,
+      "artifact": "H06-trace.json",
+      "sha256": "8816c12bb34d208cadce0fa97aaed55cece0f8f7491184db907d37cd82eabdf7"
+    }
+  ],
+  "passed": 6,
+  "total": 6,
+  "scope": "独立合成复合工程留出；不证明真人或真实模型收益"
+}

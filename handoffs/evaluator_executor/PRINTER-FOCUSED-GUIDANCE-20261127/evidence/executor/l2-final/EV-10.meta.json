@@ -1,0 +1,23 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-10",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "scripts/audit_model_history_readonly.py",
+    "--task",
+    "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+  ],
+  "command_display": "python3 -X utf8 scripts/audit_model_history_readonly.py --task handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-27T13:58:57.267757+00:00",
+  "finished_at_utc": "2026-11-27T13:59:07.436136+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-10.stdout.log",
+  "stderr_path": "EV-10.stderr.log",
+  "stdout_bytes": 793,
+  "stderr_bytes": 0,
+  "stdout_sha256": "2038cc00c778ecabcb1980d28bdd18a4e9d572f48849e946158380e48c15f4d1",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

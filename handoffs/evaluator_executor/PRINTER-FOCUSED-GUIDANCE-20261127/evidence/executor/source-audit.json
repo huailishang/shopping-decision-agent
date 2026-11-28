@@ -1,0 +1,215 @@
+{
+  "as_of": "2026-11-27",
+  "scope": "reuse prior independent reading records only; no new online reads",
+  "claims": [
+    {
+      "id": "guide-functions",
+      "type": "manufacturer_model_feature",
+      "text": "有的打印机兼有扫描和自动双面；选购时应分别核实功能，不能只看打印机名称。",
+      "source_ids": [
+        "hp-cn-home"
+      ],
+      "conditions": [
+        "以 M232dw 官方规格为例"
+      ],
+      "counter_evidence": [
+        "既有核读记录未列独立实证反例；不可将限制当实测反例"
+      ],
+      "limitations": [
+        "不能推断其他型号、微信复用或实际体验",
+        "厂商营销页，只核型号宣称；不证实微信持续复用、实际体验、售价或整个品类可靠性。L243-251地区、配置和应用条件仍需逐项核。"
+      ],
+      "status": "supported",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-002.json",
+      "source_records": [
+        {
+          "id": "hp-cn-home",
+          "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+          "source_group": "hp",
+          "published_on": null,
+          "captured_on": "2026-11-27",
+          "locator": "L189-203 M232dw扫描与自动双面",
+          "scope": "中国大陆指定型号",
+          "review_expiry": "2026-12-25",
+          "bias": "厂商营销页，只核型号宣称；不证实微信持续复用、实际体验、售价或整个品类可靠性。L243-251地区、配置和应用条件仍需逐项核。",
+          "retention": "仅必要转述与定位，不保存全文"
+        }
+      ],
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-002.json",
+          "sha256": "037fc67bc73c73d0fc56e006487d2671653c56099c0f4ed122a50786a0ff9a2a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        }
+      ],
+      "support": "L189-203 M232dw扫描与自动双面"
+    },
+    {
+      "id": "guide-consumables",
+      "type": "manufacturer_model_feature",
+      "text": "部分激光打印机鼓粉分离；长期费用不能只看墨粉价格，还要核对硒鼓等耗材。",
+      "source_ids": [
+        "brother-cn-202405-brochure"
+      ],
+      "conditions": [
+        "以 HL-L1238W 系列规格册为例"
+      ],
+      "counter_evidence": [
+        "既有核读记录未列独立实证反例；不可将限制当实测反例"
+      ],
+      "limitations": [
+        "不推断所有激光机的结构或实际维护费用",
+        "本轮不作逐列参数视觉映射；不推断实际随箱量、家庭产量、维护金额或使用体验。厂商资料非独立评测。"
+      ],
+      "status": "supported",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-004.json",
+      "source_records": [
+        {
+          "id": "brother-cn-202405-brochure",
+          "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+          "source_group": "brother",
+          "published_on": "2024-05",
+          "captured_on": "2026-11-27",
+          "locator": "P0 L2-8 列三型号、鼓粉分离与黑白；P1 L62-63 TN118/DR118标称量；L70-72标准测试和单页作业条件；L103日期",
+          "scope": "中国大陆指定型号",
+          "review_expiry": "2026-12-25",
+          "bias": "本轮不作逐列参数视觉映射；不推断实际随箱量、家庭产量、维护金额或使用体验。厂商资料非独立评测。",
+          "retention": "仅必要转述与定位，不保存全文"
+        }
+      ],
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-004.json",
+          "sha256": "a72dccde550797557411e476087b0d23a89edb2b18d28f7859b2d5ff40625fa7"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        }
+      ],
+      "support": "P0 L2-8 列三型号、鼓粉分离与黑白；P1 L62-63 TN118/DR118标称量；L70-72标准测试和单页作业条件；L103日期"
+    },
+    {
+      "id": "guide-yield",
+      "type": "manufacturer_test_specification",
+      "text": "标称耗材页数有测试条件，不等于家里一定能打这么多页。",
+      "source_ids": [
+        "brother-cn-202405-brochure"
+      ],
+      "conditions": [
+        "限规格册所述 ISO 测试及单页作业口径"
+      ],
+      "counter_evidence": [
+        "既有核读记录未列独立实证反例；不可将限制当实测反例"
+      ],
+      "limitations": [
+        "随箱量、家庭实测产量和维护费未知",
+        "本轮不作逐列参数视觉映射；不推断实际随箱量、家庭产量、维护金额或使用体验。厂商资料非独立评测。"
+      ],
+      "status": "supported",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-004.json",
+      "source_records": [
+        {
+          "id": "brother-cn-202405-brochure",
+          "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+          "source_group": "brother",
+          "published_on": "2024-05",
+          "captured_on": "2026-11-27",
+          "locator": "P0 L2-8 列三型号、鼓粉分离与黑白；P1 L62-63 TN118/DR118标称量；L70-72标准测试和单页作业条件；L103日期",
+          "scope": "中国大陆指定型号",
+          "review_expiry": "2026-12-25",
+          "bias": "本轮不作逐列参数视觉映射；不推断实际随箱量、家庭产量、维护金额或使用体验。厂商资料非独立评测。",
+          "retention": "仅必要转述与定位，不保存全文"
+        }
+      ],
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-004.json",
+          "sha256": "a72dccde550797557411e476087b0d23a89edb2b18d28f7859b2d5ff40625fa7"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        }
+      ],
+      "support": "P0 L2-8 列三型号、鼓粉分离与黑白；P1 L62-63 TN118/DR118标称量；L70-72标准测试和单页作业条件；L103日期"
+    },
+    {
+      "id": "guide-cost-method",
+      "type": "independent_method",
+      "text": "单页耗材成本与长期总费用不同；比较时应另问维护费、随箱量和实际使用条件。",
+      "source_ids": [
+        "rtings-cost-method-2021"
+      ],
+      "conditions": [
+        "同测试口径的估算产量与耗材价格仅作方法参考"
+      ],
+      "counter_evidence": [
+        "既有核读记录未列独立实证反例；不可将限制当实测反例"
+      ],
+      "limitations": [
+        "清洁耗墨、鼓组件、长期可靠性未纳入该测试成本",
+        "样品主要美国，有联盟收入；不支持国内型号排名、家庭实际耗材量、维护金额或闲置淘汰阈值。只记必要转述，不保存全文。"
+      ],
+      "status": "supported",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-001.json",
+      "source_records": [
+        {
+          "id": "rtings-cost-method-2021",
+          "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+          "source_group": "rtings",
+          "published_on": "2021-09-21",
+          "captured_on": "2026-11-27",
+          "locator": "L58-70区分维护与单页测试成本；L76-100标明价格时点和估算产量；L165排除长期性能和维护费用",
+          "scope": "美国为主样品，2021方法",
+          "review_expiry": "来源撤回、同ID未核新版、指纹失配时失效；不是当前实测",
+          "bias": "样品主要美国，有联盟收入；不支持国内型号排名、家庭实际耗材量、维护金额或闲置淘汰阈值。只记必要转述，不保存全文。",
+          "retention": "仅必要转述与定位，不保存全文"
+        }
+      ],
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-001.json",
+          "sha256": "212a8be53d670b8ab511a852405dfd06619c70d18fc78b38081a9fe3d829c285"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        }
+      ],
+      "support": "L58-70区分维护与单页测试成本；L76-100标明价格时点和估算产量；L165排除长期性能和维护费用"
+    }
+  ],
+  "non_professional": [
+    {
+      "type": "logical_constraint",
+      "claim": "必须在家彩印时黑白打印不适用"
+    },
+    {
+      "type": "user_choice",
+      "claim": "是否外包、扫描、双面、微信、首次设置均由本人确认"
+    },
+    {
+      "type": "personal_assumption",
+      "claim": "成本与页数是明确情景；零不同于未知"
+    }
+  ],
+  "unresolved": [
+    "彩色路线长期维护与低频表现",
+    "家庭实际产量与维护费用",
+    "地区实时报价及售后",
+    "Brother PDF逐列视觉映射未证"
+  ],
+  "historical_failed_reads": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/evaluator/EVAL-READ-003.json",
+      "sha256": "2e2f13c826223dc175a167fe561331a35225338730b4673807839e3766fd8f64"
+    }
+  ],
+  "new_public_queries": 0,
+  "new_public_reads": 0,
+  "independent_review_required": true
+}

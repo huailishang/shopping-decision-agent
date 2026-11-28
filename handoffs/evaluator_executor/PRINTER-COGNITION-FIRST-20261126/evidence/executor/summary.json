@@ -1,0 +1,9 @@
+{
+  "raw_sha256": "8fea0d806a9b57165350785cd380769c6905d305e502f818996f020b58c214c9",
+  "generator_sha256": "dd9fcd935058c44a47fd3be974abbae94372812fdc513c4eae068310fa1b3a9c",
+  "completed": 20,
+  "core_completed": 14,
+  "java_event_completed": 10,
+  "safety_errors": 0,
+  "caveat": "执行者按已运行的具体断言汇总，不等同于评估者语义验收。"
+}

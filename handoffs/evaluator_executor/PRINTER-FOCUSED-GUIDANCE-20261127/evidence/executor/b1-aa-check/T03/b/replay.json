@@ -1,0 +1,647 @@
+{
+  "case_id": "T03",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 2,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "主要想把纸质资料扫描存档，也偶尔打印",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/0-stdout.txt",
+        "sha256": "2ba336f3c68f9a6824c39b79ae96abe904f26db1d75b500f3c0b98aa3e51fc9c"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/0-response.json",
+        "sha256": "ad23ff0e7547481791f2419d500ce8341e466fd63f26aaec8eaaeda0550cc487"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/0-stdin.json",
+        "sha256": "decc0f3029ef18ee53d9e08da757a8cd2cff99c45adca58e8cccce29e739bb58"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "needs_color",
+      "answer": "否"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "主要想把纸质资料扫描存档，也偶尔打印",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/1-stdout.txt",
+        "sha256": "d293620f9b2333bc6f96b87d5d0c704fe497aa663f6bce26054a2578d7d01077"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/1-response.json",
+        "sha256": "043b74da897430fd98357e6ca234f52f743cf736fccab00e0c25605752977d1a"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/1-stdin.json",
+        "sha256": "ec5810d8ca5fc58b637dee1a756bb2fc5385e0066e3929da17511044322ecf8b"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "accepts_outsourced_color",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 4,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "主要想把纸质资料扫描存档，也偶尔打印",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "accepts_outsourced_color"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/2-stdout.txt",
+        "sha256": "2408756e20fbfdc1fde78c46a788139a70177deb1423e41105b748625b32fb97"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/2-response.json",
+        "sha256": "8fc4b40fcd7a8af019fa5d6e351ad6591526a66bea5033e11d9871f9af109647"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/2-stdin.json",
+        "sha256": "7bf99c7fcb4a018402f5a5179e4a0f2aed8120fba8bfeb5825aa4e19f3cdd7c5"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/2-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "wechat_required",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 5,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "主要想把纸质资料扫描存档，也偶尔打印",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "accepts_outsourced_color",
+            "wechat_required"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/3-stdout.txt",
+        "sha256": "bfce489a28d3c6bb89aaa0185e19ce2d85864cb96934ac6eb0fa07b1c0a91a86"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/3-response.json",
+        "sha256": "b0b83e83eb1312d77bc18eb249d43560c3ed1a88050717add94bc70072244fff"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/3-stdin.json",
+        "sha256": "2fdf42fdea517a49bf9ffe8731a3dbe800333e0b09bc29938bcbaca4e61209d4"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/3-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "monthly_pages_range",
+      "answer": "0-50"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 6,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "主要想把纸质资料扫描存档，也偶尔打印",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            },
+            "monthly_pages_range": {
+              "value": [
+                0,
+                50
+              ],
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "0-50"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 6,
+              "raw_text": "0-50",
+              "changed_fields": [
+                "monthly_pages_range"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "accepts_outsourced_color",
+            "wechat_required"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/4-stdout.txt",
+        "sha256": "3efca70474b70a180fdd1d42777b734fa18c7d753b716123d8fc1c336cc3db62"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/4-response.json",
+        "sha256": "c77b44a69034f7d81cd1ca0daefeb4223cc206034950d919ae99485998e02d42"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/4-stdin.json",
+        "sha256": "9fb75604867dcb9ec50989174caf2e0284fbc40d4e828be70bf028a39c1c38d1"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/4-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "budget_max_cny",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 7,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "主要想把纸质资料扫描存档，也偶尔打印",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            },
+            "monthly_pages_range": {
+              "value": [
+                0,
+                50
+              ],
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "0-50"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 6,
+              "raw_text": "0-50",
+              "changed_fields": [
+                "monthly_pages_range"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 7,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "accepts_outsourced_color",
+            "budget_max_cny",
+            "wechat_required"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/5-stdout.txt",
+        "sha256": "ec8f2e366d599b3641f7ef5ff7e32ea124d1fa0d4f8791508ff284495a4765b4"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/5-response.json",
+        "sha256": "9b7d1f7f0a250bbd93d9b09cfb4bdf42e07d7ff1bd4770c5617dcfb74b780b2e"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/5-stdin.json",
+        "sha256": "f9914fe556bb911627ffb057567d437620b87183eb32c9226fd0c025547b3679"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/b1-aa-check/T03/b/5-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "stalled"
+    }
+  ],
+  "terminal": "stalled"
+}

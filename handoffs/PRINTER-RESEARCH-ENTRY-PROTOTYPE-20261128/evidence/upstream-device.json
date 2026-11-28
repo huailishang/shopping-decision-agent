@@ -1,0 +1,93 @@
+{
+  "needs": [
+    {
+      "key": "delivery",
+      "outcome": "这次交出合格的电子文件",
+      "success_check": "按接收方的格式要求验一份文件"
+    },
+    {
+      "key": "recurring",
+      "outcome": "在家持续处理纸质材料",
+      "success_check": "用一批材料核对质量和实际用时"
+    }
+  ],
+  "comparison": {
+    "context": {
+      "task_id": "sample-home-scan",
+      "revision": 2,
+      "statement": "想把几页签字纸发回单位，考虑买打印机。",
+      "batch": "每周几十份",
+      "deadline": null,
+      "phone_available": true,
+      "phone_capture_accepted": true,
+      "papers_must_stay_home": true,
+      "household_scanning_recurs": true
+    },
+    "need": {
+      "key": "recurring",
+      "outcome": "在家持续处理纸质材料",
+      "success_check": "用一批材料核对质量和实际用时"
+    },
+    "priority": "research_home_workflow",
+    "first": [
+      "device"
+    ],
+    "directions": [
+      {
+        "key": "phone",
+        "title": "用手边手机试扫",
+        "next_step": "先做一页，核对清晰度与文件格式。",
+        "status": "available",
+        "reason": "本人确认有手机，且接收方接受手机采集。",
+        "strengths": [
+          "avoid_device_purchase",
+          "try_this_batch"
+        ]
+      },
+      {
+        "key": "store",
+        "title": "查询门店扫描",
+        "next_step": "保留其他可在家执行的方向。",
+        "status": "conflict",
+        "reason": "纸件不能带出家门。",
+        "strengths": []
+      },
+      {
+        "key": "device",
+        "title": "研究在家使用的设备",
+        "next_step": "核对批量处理能力、实际耗时与预算。",
+        "status": "available",
+        "reason": "设备研究可以开始，实际省时、适用品类及机型待核。",
+        "strengths": [
+          "research_home_workflow"
+        ]
+      }
+    ],
+    "explanation": "按本人选择的「优先研究长期在家处理做法」安排下一步。"
+  },
+  "decision": {
+    "route": "shopping_research",
+    "next_step": "核对批量处理能力、实际耗时与预算。",
+    "shopping_handoff": {
+      "task_id": "sample-home-scan",
+      "revision": 2,
+      "selected_need": "recurring",
+      "outcome": "在家持续处理纸质材料",
+      "selected_direction": "device",
+      "confirmed_context": {
+        "batch": "每周几十份",
+        "phone_available": true,
+        "phone_capture_accepted": true,
+        "papers_must_stay_home": true,
+        "household_scanning_recurs": true
+      },
+      "category": null,
+      "pending": [
+        "本人选择商品品类",
+        "批量处理与耗时",
+        "可接受预算"
+      ],
+      "scope": "read_only_product_research"
+    }
+  }
+}

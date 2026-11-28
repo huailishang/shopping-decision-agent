@@ -1,0 +1,143 @@
+{
+  "checks": [
+    {
+      "id": "finite_cost_boundary_default",
+      "passed": false,
+      "detail": {
+        "exception": "Overflow",
+        "message": "[<class 'decimal.Overflow'>]"
+      }
+    },
+    {
+      "id": "finite_cost_boundary_backend",
+      "passed": false,
+      "detail": {
+        "exception": "Overflow",
+        "message": "[<class 'decimal.Overflow'>]"
+      }
+    },
+    {
+      "id": "responses_legal_reasoning_metadata",
+      "passed": true,
+      "detail": {
+        "receipt": {
+          "provider": "fixture",
+          "declared_model": "mock",
+          "observed_model": "mock",
+          "identity": "matched",
+          "protocol": "responses",
+          "request_id": null,
+          "context_id": null,
+          "http_status": 200,
+          "usage": null,
+          "provider_code": null,
+          "finish_reason": "completed",
+          "elapsed_ms": null,
+          "raw_sha256": "43260ed5c1ed7a02c20ea0279319e3f1b9cd674144120130f2999625ed5e5d3d",
+          "status": "complete",
+          "text": "{}",
+          "business_accepted": false,
+          "fixture": true,
+          "text_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      }
+    },
+    {
+      "id": "responses_nested_or_mixed_tool",
+      "passed": false,
+      "detail": {
+        "receipt": {
+          "provider": "fixture",
+          "declared_model": "mock",
+          "observed_model": "mock",
+          "identity": "matched",
+          "protocol": "responses",
+          "request_id": null,
+          "context_id": null,
+          "http_status": 200,
+          "usage": null,
+          "provider_code": null,
+          "finish_reason": "completed",
+          "elapsed_ms": null,
+          "raw_sha256": "314fc66d553b1dca27f807e27e82d8c16bb44eb2bd2dd31d7b2e6154b4a6c11c",
+          "status": "complete",
+          "text": "{}",
+          "business_accepted": false,
+          "fixture": true,
+          "text_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      }
+    },
+    {
+      "id": "chat_completions_legal_reasoning_metadata",
+      "passed": true,
+      "detail": {
+        "receipt": {
+          "provider": "fixture",
+          "declared_model": "mock",
+          "observed_model": "mock",
+          "identity": "matched",
+          "protocol": "chat_completions",
+          "request_id": null,
+          "context_id": null,
+          "http_status": 200,
+          "usage": null,
+          "provider_code": null,
+          "finish_reason": "stop",
+          "elapsed_ms": null,
+          "raw_sha256": "bd01ea16cc12f7c9f6a0c2264a3d55fd76a4e7c3310e1eea9a7154d0e83fafcc",
+          "status": "complete",
+          "text": "{}",
+          "business_accepted": false,
+          "fixture": true,
+          "text_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      }
+    },
+    {
+      "id": "chat_completions_nested_or_mixed_tool",
+      "passed": true,
+      "detail": {
+        "receipt": {
+          "provider": "fixture",
+          "declared_model": "mock",
+          "observed_model": "mock",
+          "identity": "matched",
+          "protocol": "chat_completions",
+          "request_id": null,
+          "context_id": null,
+          "http_status": 200,
+          "usage": null,
+          "provider_code": null,
+          "finish_reason": "stop",
+          "elapsed_ms": null,
+          "raw_sha256": "35619a1594d3eb476d3a9c5d2a1919d07714efb0492ce136b7fd404dbd254883",
+          "status": "unexpected_output",
+          "text": null,
+          "business_accepted": false,
+          "fixture": true,
+          "text_sha256": null
+        }
+      }
+    },
+    {
+      "id": "real_stdin_create_product_entry",
+      "passed": false,
+      "detail": {
+        "returncode": 0,
+        "output": {
+          "error": "需要状态、条件字段和本轮发送原话"
+        },
+        "stderr": ""
+      }
+    }
+  ],
+  "passed": 3,
+  "total": 7,
+  "failures": [
+    "finite_cost_boundary_default",
+    "finite_cost_boundary_backend",
+    "responses_nested_or_mixed_tool",
+    "real_stdin_create_product_entry"
+  ]
+}

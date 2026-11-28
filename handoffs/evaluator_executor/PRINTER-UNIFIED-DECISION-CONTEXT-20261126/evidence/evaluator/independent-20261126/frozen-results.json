@@ -1,0 +1,95 @@
+[
+  {
+    "id": "VP-01",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_BUSINESS.py"
+    ],
+    "started_at_utc": "2026-11-26T03:19:27.461094+00:00",
+    "finished_at_utc": "2026-11-26T03:19:28.689096+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-02",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_DELIVERY.py"
+    ],
+    "started_at_utc": "2026-11-26T03:19:28.689284+00:00",
+    "finished_at_utc": "2026-11-26T03:19:30.538051+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-03",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/VERIFY_CANDIDATES.py"
+    ],
+    "started_at_utc": "2026-11-26T03:19:30.538152+00:00",
+    "finished_at_utc": "2026-11-26T03:19:31.612513+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-04",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py"
+    ],
+    "started_at_utc": "2026-11-26T03:19:31.612639+00:00",
+    "finished_at_utc": "2026-11-26T03:19:33.861002+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-05",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-q"
+    ],
+    "started_at_utc": "2026-11-26T03:19:33.861170+00:00",
+    "finished_at_utc": "2026-11-26T03:20:32.558326+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-06",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "scripts/audit_model_history_readonly.py",
+      "--task",
+      "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+    ],
+    "started_at_utc": "2026-11-26T03:20:32.558417+00:00",
+    "finished_at_utc": "2026-11-26T03:20:43.111837+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-07",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_SCOPE.py",
+      "--phase",
+      "post"
+    ],
+    "started_at_utc": "2026-11-26T03:20:43.111936+00:00",
+    "finished_at_utc": "2026-11-26T03:21:01.879516+00:00",
+    "exit_code": 0
+  }
+]

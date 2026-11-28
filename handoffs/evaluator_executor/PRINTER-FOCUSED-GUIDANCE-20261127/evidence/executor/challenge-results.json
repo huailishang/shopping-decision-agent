@@ -1,0 +1,143 @@
+{
+  "cases": [
+    {
+      "id": "CH01",
+      "expected": "same version, same answer counts and outcome",
+      "observed": {
+        "a": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "b": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        }
+      },
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/aa1/replay.json",
+          "sha256": "704f8ff648c41eab7cb945d83121854e2c7da87d72ebdb3e8901d74900c09e7a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/aa2/replay.json",
+          "sha256": "548cc407a7e3924e73d7486066c0c37bac68a91fddd432fcf02ccfae2798f6a0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v2.json",
+          "sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db"
+        }
+      ]
+    },
+    {
+      "id": "CH03",
+      "expected": "unasked answer injected into initial state rejected",
+      "observed": [
+        "hidden answer/state injection",
+        "unexpected read mutation"
+      ],
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/hidden/replay.json",
+          "sha256": "2ef03a9db93e91f9bcc4daaaa00d37c65df081b3e69f2ff6d4445d9961236126"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v2.json",
+          "sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db"
+        }
+      ]
+    },
+    {
+      "id": "CH02",
+      "expected": "irrelevant answer and unmet route goal",
+      "observed": {
+        "completed": false,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 1
+      },
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/wrong-question/replay.json",
+          "sha256": "841bb46e105ceb37a96806ce4655efd638ac8049de49518a8a3deec74d194f63"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/mutation.json",
+          "sha256": "901280303225f081fd2256849a4304503ddc51e063c0682fcceff58302b85281"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v2.json",
+          "sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db"
+        }
+      ]
+    },
+    {
+      "id": "CH04",
+      "expected": "real source bytes and resource budget mismatch are incomparable",
+      "observed": {
+        "common_comparable": true,
+        "source_comparable": false,
+        "resource_comparable": false,
+        "a": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "b": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "8965636524df6ef1083eb1f5b2a3eaa2910023985636099e6021014e6aeb5e68",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "resource": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 11,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        }
+      },
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/registry-before.json",
+          "sha256": "23e92932cb3faf7553f685e80b2d1b852ab9e4aa9691a43b03820d42430eb671"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/registry-after.json",
+          "sha256": "1e361d26525d5d2b65a69ac5746fd2ee1c5a3e2707d76fc9e0a18fa1685f3b7a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/comparison-basis.json",
+          "sha256": "ac2a311d1841bac78808c99009ba2a7c4c001fccac2d688c50094e42a7c898d8"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-challenges-v2/aa1/replay.json",
+          "sha256": "704f8ff648c41eab7cb945d83121854e2c7da87d72ebdb3e8901d74900c09e7a"
+        }
+      ]
+    }
+  ],
+  "limit": "frozen reference T02 sensitivity; repeat after final replayer modifications"
+}

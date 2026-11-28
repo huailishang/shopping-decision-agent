@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "-m",
+    "shopping_decision.chat_bridge",
+    "--worksheet-stdin"
+  ],
+  "started": "2026-11-27T14:19:20.030066+00:00",
+  "finished": "2026-11-27T14:19:20.461327+00:00",
+  "exit_code": 0,
+  "stdout_sha256": "23b4f3b4e77c8756a6d170ed2ae05d29e51a9bb6e576a8de336f22b97a3b9e9f"
+}

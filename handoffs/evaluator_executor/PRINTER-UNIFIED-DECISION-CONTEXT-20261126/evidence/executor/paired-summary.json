@@ -1,0 +1,252 @@
+{
+  "case_count": 14,
+  "product_views": 4,
+  "cases": [
+    {
+      "case": "C01",
+      "old_prompt_bytes": 15469,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "C08",
+      "old_prompt_bytes": 15469,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": null,
+      "first_suggestion": null,
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "C12",
+      "old_prompt_bytes": 14945,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "C08_SHORT",
+      "old_prompt_bytes": 7645,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": null,
+      "first_suggestion": null,
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "missing_time",
+      "old_prompt_bytes": 15262,
+      "new_wire_bytes": 14139,
+      "accepted": true,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": null
+    },
+    {
+      "case": "source_withdrawal",
+      "old_prompt_bytes": 15486,
+      "new_wire_bytes": 13552,
+      "accepted": true,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": null
+    },
+    {
+      "case": "color_retraction",
+      "old_prompt_bytes": 14945,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "cost_sensitivity",
+      "old_prompt_bytes": 15468,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "adjacent_hard_change",
+      "old_prompt_bytes": 14945,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "region_change",
+      "old_prompt_bytes": 15487,
+      "new_wire_bytes": 12980,
+      "accepted": true,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": null
+    },
+    {
+      "case": "conflict",
+      "old_prompt_bytes": 16003,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "ad_injection",
+      "old_prompt_bytes": 15478,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "scope_malformed",
+      "old_prompt_bytes": 15475,
+      "new_wire_bytes": 0,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "no_multiple_equivalent_actions"
+    },
+    {
+      "case": "fault_fallback",
+      "old_prompt_bytes": 15262,
+      "new_wire_bytes": 14139,
+      "accepted": false,
+      "first_rule": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "first_suggestion": {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:color_print",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      "reason": "malformed_response"
+    }
+  ]
+}

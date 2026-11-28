@@ -1,0 +1,10 @@
+{
+  "baseline_hp": true,
+  "maintenance": true,
+  "hardware": true,
+  "starter": true,
+  "stale_cost_rejected": true,
+  "all_excluded": true,
+  "no_winner": true,
+  "authorization": true
+}

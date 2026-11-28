@@ -1,0 +1,13 @@
+======================================================================
+FAIL: test_actual_ranking_consumes_guide_and_refuses_stale (test_cognition_context_lineage.ContextLineage.test_actual_ranking_consumes_guide_and_refuses_stale)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/tests/test_cognition_context_lineage.py", line 23, in test_actual_ranking_consumes_guide_and_refuses_stale
+    self.assertEqual(p['cognition_context'],context(v))
+AssertionError: {'sch[8620 chars]ing'}} != {'sch[8620 chars]ing'}, 'guidance_focus': {'schema_version': 1,[625 chars]lse}}
+Diff is 14942 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.351s
+
+FAILED (failures=1)

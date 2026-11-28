@@ -1,0 +1,27 @@
+{
+  "baseline": "B0 + common T18 repair only; no source changes",
+  "repair_file": "shopping_decision/dialogue_flow.py",
+  "repair_sha256": "abeb0355d46f9def24d38ff0f508f49c75875d7aee8d3edf2f6770be834ee815",
+  "raw_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/evaluator/runtime-baseline.zip",
+      "sha256": "bbf2b09f8322ec51fbe7dfeed0effc191b97493fcee71342dd4d26b9a7996691"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/runtime-b1-shared.zip",
+      "sha256": "1b8ea6877f1612aa5f2604a74b6902659d57917673e68cc5832a59cb1ebb5877"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/T18-common-repair-before-stdin.json",
+      "sha256": "3cb10a9fe27b2455d83565b463b14a6472e74658e69b5e940f1dcc6a7c7cc697"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/T18-common-repair-before-stdout.txt",
+      "sha256": "2faa563f1e19cf91b63fd9a2f3b5d12427f89946d41b33fce8f151d4df639277"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/T18-common-repair-after-stdout.txt",
+      "sha256": "a54f1d776841181057cb4e56da7334a4667a4fe349b27384dadd078664a25297"
+    }
+  ]
+}

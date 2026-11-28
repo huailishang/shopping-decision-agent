@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-27",
+  "cases": [
+    {
+      "id": "P01",
+      "usage": "低频家庭作业，偶尔彩印可外包",
+      "oracle": {
+        "needs_color": "否",
+        "accepts_outsourced_color": "是",
+        "requires_scan": "否",
+        "requires_auto_duplex": "否",
+        "idle_weeks_pattern": "经常连续多周不用",
+        "monthly_pages_range": "0-50",
+        "wechat_required": "否",
+        "device_deployment_region": "中国大陆河南省"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "consider"
+      },
+      "expected_idle": "often_long",
+      "expected_authorization": false,
+      "reference_reason": "冻结G02/G06/G09，黑白不能满足必须在家彩印；专业方法不支持闲置阈值或维护实价；合成偏好由脚本明确指定，不从被测结果生成。"
+    },
+    {
+      "id": "P02",
+      "usage": "孩子彩色资料必须在家打印",
+      "oracle": {
+        "needs_color": "是",
+        "requires_scan": "否",
+        "requires_auto_duplex": "否",
+        "idle_weeks_pattern": "通常每周都会用",
+        "monthly_pages_range": "0-50",
+        "wechat_required": "否",
+        "device_deployment_region": "中国大陆河南省"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "not_fit"
+      },
+      "expected_idle": "usually_short",
+      "expected_authorization": false,
+      "reference_reason": "冻结G02/G06/G09，黑白不能满足必须在家彩印；专业方法不支持闲置阈值或维护实价；合成偏好由脚本明确指定，不从被测结果生成。"
+    },
+    {
+      "id": "P03",
+      "usage": "纸质文件经常要扫描",
+      "oracle": {
+        "needs_color": "否",
+        "accepts_outsourced_color": "是",
+        "requires_scan": "是",
+        "requires_auto_duplex": "否",
+        "idle_weeks_pattern": "通常每周都会用",
+        "monthly_pages_range": "0-50",
+        "wechat_required": "否",
+        "device_deployment_region": "中国大陆河南省"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "consider"
+      },
+      "expected_idle": "usually_short",
+      "expected_authorization": false,
+      "reference_reason": "冻结G02/G06/G09，黑白不能满足必须在家彩印；专业方法不支持闲置阈值或维护实价；合成偏好由脚本明确指定，不从被测结果生成。"
+    },
+    {
+      "id": "P04",
+      "usage": "需要自动双面，维护情况不确定",
+      "oracle": {
+        "needs_color": "否",
+        "accepts_outsourced_color": "否",
+        "requires_scan": "否",
+        "requires_auto_duplex": "是",
+        "idle_weeks_pattern": "暂不确定",
+        "monthly_pages_range": "0-50",
+        "wechat_required": "否",
+        "device_deployment_region": "中国大陆河南省"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "consider"
+      },
+      "expected_idle": null,
+      "expected_authorization": false,
+      "reference_reason": "冻结G02/G06/G09，黑白不能满足必须在家彩印；专业方法不支持闲置阈值或维护实价；合成偏好由脚本明确指定，不从被测结果生成。"
+    },
+    {
+      "id": "P05",
+      "usage": "熟悉参数的专家，只需黑白",
+      "oracle": {
+        "needs_color": "否",
+        "accepts_outsourced_color": "是",
+        "requires_scan": "否",
+        "requires_auto_duplex": "否",
+        "idle_weeks_pattern": "通常每周都会用",
+        "monthly_pages_range": "0-50",
+        "wechat_required": "否",
+        "device_deployment_region": "中国大陆河南省"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "consider"
+      },
+      "expected_idle": "usually_short",
+      "expected_authorization": false,
+      "reference_reason": "冻结G02/G06/G09，黑白不能满足必须在家彩印；专业方法不支持闲置阈值或维护实价；合成偏好由脚本明确指定，不从被测结果生成。"
+    },
+    {
+      "id": "P06",
+      "usage": "彩印需求尚未确定，使用间隔未知",
+      "oracle": {
+        "needs_color": "暂不确定",
+        "requires_scan": "暂不确定",
+        "requires_auto_duplex": "暂不确定",
+        "idle_weeks_pattern": "暂不确定",
+        "monthly_pages_range": "0-50",
+        "wechat_required": "否",
+        "device_deployment_region": "中国大陆河南省"
+      },
+      "expected_route": {
+        "id": "color_inkjet",
+        "status": "unknown"
+      },
+      "expected_idle": null,
+      "expected_authorization": false,
+      "reference_reason": "冻结G02/G06/G09，黑白不能满足必须在家彩印；专业方法不支持闲置阈值或维护实价；合成偏好由脚本明确指定，不从被测结果生成。"
+    }
+  ],
+  "protocol": "同一B1引擎和原始资料，A直接参数澄清、B粗用途后读指南再按同一参数澄清。共同oracle、资源限额及日期，A允许完整相同参数与路线信息。比较最终条件、路线与安全错误和额外阅读开销，不模拟真人理解；均不使用模型。"
+}

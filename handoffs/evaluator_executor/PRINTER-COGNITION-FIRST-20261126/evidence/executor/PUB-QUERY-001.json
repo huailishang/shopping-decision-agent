@@ -1,0 +1,18 @@
+{
+  "id": "PUB-QUERY-001",
+  "result": "candidate_found",
+  "query": "site:rtings.com/printer/tests printing cost per print ink yield test methodology printer",
+  "candidates": [
+    {
+      "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+      "title": "Our Printing Tests: Cost-Per-Print",
+      "source_ref": "turn603778search0"
+    },
+    {
+      "url": "https://www.rtings.com/printer/learn/how-we-test",
+      "title": "How We Test Printers",
+      "source_ref": "turn603778search1"
+    }
+  ],
+  "note": "search discovery only; no approval"
+}

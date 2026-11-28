@@ -1,0 +1,36 @@
+{
+  "status": "preimplementation_not_acceptance",
+  "commands": [
+    {
+      "id": "business-before",
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_BUSINESS.py"
+      ],
+      "started_at_utc": "2026-11-26T03:29:05.037884+00:00",
+      "finished_at_utc": "2026-11-26T03:29:06.722025+00:00",
+      "exit_code": 1
+    },
+    {
+      "id": "delivery-before",
+      "command": [
+        "python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_DELIVERY.py"
+      ],
+      "started_at_utc": "2026-11-26T03:29:06.722115+00:00",
+      "finished_at_utc": "2026-11-26T03:29:06.955749+00:00",
+      "exit_code": 1
+    }
+  ],
+  "failed_business_checks": [
+    "unanswered:same_first_action",
+    "scan_deferred:same_first_action",
+    "cost:unlike_workload_cannot_choose",
+    "receipt:tool_calls",
+    "receipt:function_call"
+  ]
+}

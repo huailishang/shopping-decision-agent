@@ -1,0 +1,19 @@
+{
+  "command": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-RESEARCH-USER-DIAGNOSTIC-20261128\\DIAGNOSTIC_GUI.py",
+    "--arm",
+    "B",
+    "--card",
+    "P1a",
+    "--smoke"
+  ],
+  "started": "2026-11-28T13:19:41.369845+00:00",
+  "ended": "2026-11-28T13:19:42.872437+00:00",
+  "elapsed_seconds": 1.5160000000614673,
+  "exit": 0,
+  "participant_seconds": null
+}

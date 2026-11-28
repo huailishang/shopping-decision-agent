@@ -1,0 +1,491 @@
+{
+  "case_id": "T23",
+  "basis": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+    "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 4,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "恢复旧会话后设备使用地改变，需要本人确认",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认"
+            },
+            "wechat_required": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "wechat_workflow": {
+              "value": "miniprogram",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "微信小程序直接打印"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "wechat_required"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "微信小程序直接打印",
+              "changed_fields": [
+                "wechat_workflow"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/0-stdout.txt",
+        "sha256": "e4af55fbce2065d330e297bed293c021e5e56b50e8411bf467a4a5d2c9c57f10"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/0-response.json",
+        "sha256": "33aa124e240472eb838096e8aea9a5975593c7d0e4b16c6e780a537a22f32766"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/0-stdin.json",
+        "sha256": "44e77ede098563d4c02b7ff9bb6f16092e7309a1d89355be6e60afb40090acc8"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "needs_color",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 5,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "恢复旧会话后设备使用地改变，需要本人确认",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认"
+            },
+            "wechat_required": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "wechat_workflow": {
+              "value": "miniprogram",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "微信小程序直接打印"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "wechat_required"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "微信小程序直接打印",
+              "changed_fields": [
+                "wechat_workflow"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "needs_color"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/1-stdout.txt",
+        "sha256": "f66d2e4de805a23f251f49c845c0a487b35087af194ded98e06172a242d59e29"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/1-response.json",
+        "sha256": "9c17b491a84344ffcb251f2ad9271f5592601e95010c39336ea2dff927fd9ff0"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/1-stdin.json",
+        "sha256": "24cb6f0f6ab9fd8423f9ed05fad604e50220fcf5db6908aad2612461a2c596b3"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "accepts_initial_setup",
+      "answer": "暂不确定"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 6,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "恢复旧会话后设备使用地改变，需要本人确认",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认"
+            },
+            "wechat_required": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "wechat_workflow": {
+              "value": "miniprogram",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "微信小程序直接打印"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "wechat_required"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "微信小程序直接打印",
+              "changed_fields": [
+                "wechat_workflow"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 6,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "accepts_initial_setup",
+            "needs_color"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/2-stdout.txt",
+        "sha256": "65de513ada9fef5ee817fca64521b09a66003c05a6bf38ff7993bbb5d8242539"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/2-response.json",
+        "sha256": "c274ab79a4915c405bcf6a95f986acd2f4c14eaf3e97d8e00d1d58fd54a1c2f9"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/2-stdin.json",
+        "sha256": "bc022709632c9fc7ab4a0b126f705f68c481db0f8e9a985ac5c370a45cd330db"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/2-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "device_deployment_region",
+      "answer": "河南"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 7,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "恢复旧会话后设备使用地改变，需要本人确认",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认"
+            },
+            "wechat_required": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "wechat_workflow": {
+              "value": "miniprogram",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "微信小程序直接打印"
+            },
+            "device_deployment_region": {
+              "value": "河南",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "河南"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "恢复旧会话后设备使用地改变，需要本人确认",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "wechat_required"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "微信小程序直接打印",
+              "changed_fields": [
+                "wechat_workflow"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 5,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 6,
+              "raw_text": "暂不确定",
+              "changed_fields": [],
+              "old_conclusions_invalidated": false
+            },
+            {
+              "version": 7,
+              "raw_text": "河南",
+              "changed_fields": [
+                "device_deployment_region"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": [
+            "accepts_initial_setup",
+            "needs_color"
+          ]
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "shopping_decision.chat_bridge",
+        "--worksheet-stdin"
+      ],
+      "exit_code": 0,
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/3-stdout.txt",
+        "sha256": "d4a9c643cbfe58efb8836b33c5a09a765b3af2a62895e8f7c90c683b1f6de7cf"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/3-response.json",
+        "sha256": "39a1759a343010ad4c644d661ab3daa65ea54ba5d57b6c510b48d55eb9d97675"
+      },
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/3-stdin.json",
+        "sha256": "f83e0b30a79a1d001eafe6871c2f7c66f6b101c3b2b0fe421271ebd9511e3406"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/3-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "type": "stop",
+      "reason": "completed"
+    }
+  ],
+  "terminal": "completed"
+}

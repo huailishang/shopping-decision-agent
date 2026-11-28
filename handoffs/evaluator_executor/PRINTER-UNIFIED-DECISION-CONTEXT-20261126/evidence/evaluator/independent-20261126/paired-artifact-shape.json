@@ -1,0 +1,17 @@
+{
+  "raw_keys": [
+    "case_count",
+    "cases",
+    "product_views",
+    "original_family_view",
+    "classification"
+  ],
+  "summary_keys": [
+    "case_count",
+    "product_views",
+    "cases"
+  ],
+  "summary_case_count": 14,
+  "raw_case_count": 14,
+  "note": "Review final raw cases against summary instead of counting simulated sorting as model gain."
+}

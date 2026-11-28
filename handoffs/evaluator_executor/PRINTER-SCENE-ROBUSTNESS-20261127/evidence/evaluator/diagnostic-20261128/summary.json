@@ -1,0 +1,67 @@
+{
+  "started": "2026-11-28T08:57:11.004677+00:00",
+  "ended": "2026-11-28T09:01:30.211908+00:00",
+  "gates": {
+    "scope": {
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py",
+        "scope"
+      ],
+      "start": "2026-11-28T08:57:40.671084+00:00",
+      "end": "2026-11-28T08:59:33.823049+00:00",
+      "elapsed_seconds": 113.15203196799996,
+      "exit_code": 0
+    },
+    "controls": {
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py",
+        "controls"
+      ],
+      "start": "2026-11-28T08:59:33.833864+00:00",
+      "end": "2026-11-28T08:59:54.269586+00:00",
+      "elapsed_seconds": 20.43573714799993,
+      "exit_code": 0
+    },
+    "delivery": {
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py",
+        "delivery"
+      ],
+      "start": "2026-11-28T08:59:54.280082+00:00",
+      "end": "2026-11-28T09:00:05.138929+00:00",
+      "elapsed_seconds": 10.858852020000086,
+      "exit_code": 1
+    },
+    "scenarios": {
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_SCENARIOS.py",
+        "--role",
+        "evaluator"
+      ],
+      "start": "2026-11-28T09:00:05.149101+00:00",
+      "end": "2026-11-28T09:00:39.082365+00:00",
+      "elapsed_seconds": 33.93327720700006,
+      "exit_code": 0
+    }
+  },
+  "manifest_mismatches": [
+    "CURRENT.md"
+  ],
+  "executor_artifacts_unchanged": true,
+  "products_unchanged": true,
+  "holdout_passed": 5,
+  "continuation_passed": 0,
+  "limit": "Diagnostic, not L3; no independent full unit/native rerun; no claim of complete effective work time."
+}

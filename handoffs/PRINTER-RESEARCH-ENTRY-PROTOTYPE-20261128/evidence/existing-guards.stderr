@@ -1,0 +1,22 @@
+test_actual_gate_same_id_version_change (test_worksheet_evidence.Evidence.test_actual_gate_same_id_version_change) ... ok
+test_forgery (test_worksheet_evidence.Evidence.test_forgery) ... ok
+test_import_pending (test_worksheet_evidence.Evidence.test_import_pending) ... ok
+test_pending_conflict_not_admitted (test_worksheet_evidence.Evidence.test_pending_conflict_not_admitted) ... ok
+test_reference_withdraw (test_worksheet_evidence.Evidence.test_reference_withdraw) ... ok
+test_unknown_reference (test_worksheet_evidence.Evidence.test_unknown_reference) ... ok
+test_version_withdraw (test_worksheet_evidence.Evidence.test_version_withdraw) ... ok
+test_wrong_model (test_worksheet_evidence.Evidence.test_wrong_model) ... ok
+test_ranked_context_same_focus (test_focus_guidance_lineage.FocusLineage.test_ranked_context_same_focus) ... ok
+test_source_new_version_invalidates_claim (test_focus_guidance_lineage.FocusLineage.test_source_new_version_invalidates_claim) ... ok
+test_stale_focus_rejected (test_focus_guidance_lineage.FocusLineage.test_stale_focus_rejected) ... ok
+test_inspect (test_worksheet_persistence.Persistence.test_inspect) ... ok
+test_no_cached_conclusion (test_worksheet_persistence.Persistence.test_no_cached_conclusion) ... ok
+test_no_consent (test_worksheet_persistence.Persistence.test_no_consent) ... ok
+test_no_overwrite (test_worksheet_persistence.Persistence.test_no_overwrite) ... ok
+test_only_inputs (test_worksheet_persistence.Persistence.test_only_inputs) ... ok
+test_round_trip (test_worksheet_persistence.Persistence.test_round_trip) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 25.086s
+
+OK

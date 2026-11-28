@@ -1,0 +1,27 @@
+{
+  "inherited_prior_unknown": true,
+  "budget_debit_seconds": 1423.5153750000002,
+  "known_logged_wall_seconds": 156.761349,
+  "repair_rounds": 2,
+  "unknown_segments": [
+    {
+      "segment": "first tool/read to first persistent start",
+      "upper_bound_seconds": null,
+      "independent_bound_artifacts": []
+    }
+  ],
+  "machine_pretest_command_duration_seconds": 104.069,
+  "status": "BLOCKED",
+  "note": "Known wall interval not effective work; initial unknown cannot be charged as zero.",
+  "continuation_wall_seconds": 963.279744,
+  "known_logged_wall_seconds_total": 1120.041093,
+  "budget_debit_limit": "Conservative recorded wall intervals including machine activity between turns; initial read remains unbounded and not charged as zero. This is not certified total effective work.",
+  "closeout_wall_seconds": 56.042478,
+  "interturn_machine_activity_bound_seconds": 247.431804,
+  "interturn_machine_activity_artifacts": [
+    "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-10.meta.json",
+    "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-11.meta.json",
+    "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-12.meta.json"
+  ],
+  "handoff_disposition": "Evaluator diagnostic review requested, not formal L2 submission; no new implementation budget"
+}

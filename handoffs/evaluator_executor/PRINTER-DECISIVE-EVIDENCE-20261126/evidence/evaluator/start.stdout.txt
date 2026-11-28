@@ -1,0 +1,15 @@
+{
+  "phase": "start",
+  "checks": {
+    "head_matches": true,
+    "index_matches": true,
+    "index_empty": true,
+    "manifest_matches": true,
+    "protected_unchanged": true,
+    "products_match_preflight": true
+  },
+  "protected_count": 3585,
+  "changed_protected_paths": [],
+  "changed_product_paths": [],
+  "baseline_sha256": "8d159df8ab9be18b59d4a01969f513d0b39dd644e385b0a4060fe41c5961328d"
+}

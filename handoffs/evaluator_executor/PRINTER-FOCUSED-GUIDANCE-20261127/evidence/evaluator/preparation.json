@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "name": "VERIFY_FOCUS.py",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\VERIFY_FOCUS.py"
+      ],
+      "start": "2026-11-27T08:33:39.788503+00:00",
+      "end": "2026-11-27T08:33:41.482908+00:00",
+      "exit_code": 1,
+      "expected_before_implementation": "nonzero",
+      "stdout_sha256": "8f96054f5d14f61405c9da6ac55117c2cf67f682655994ed16c873f20e73e3b4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "VERIFY_TESTS.py",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\VERIFY_TESTS.py"
+      ],
+      "start": "2026-11-27T08:33:41.482908+00:00",
+      "end": "2026-11-27T08:33:41.637088+00:00",
+      "exit_code": 1,
+      "expected_before_implementation": "nonzero",
+      "stdout_sha256": "103b768cb7450a137360ad792fffbf688d19699f48e9245f940b8d8a3bb8c35e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "VERIFY_MEASUREMENT.py",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\VERIFY_MEASUREMENT.py"
+      ],
+      "start": "2026-11-27T08:33:41.639099+00:00",
+      "end": "2026-11-27T08:33:41.917986+00:00",
+      "exit_code": 1,
+      "expected_before_implementation": "nonzero",
+      "stdout_sha256": "8e6a72aede3ee897313b916f7751e02326475819d919c799a7f6c7524f7e5eb5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "VERIFY_DELIVERY.py",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\VERIFY_DELIVERY.py"
+      ],
+      "start": "2026-11-27T08:33:41.917986+00:00",
+      "end": "2026-11-27T08:33:42.046848+00:00",
+      "exit_code": 1,
+      "expected_before_implementation": "nonzero",
+      "stdout_sha256": "5b02403952e77d83c04f1e4a57683603a36c18aee59f2cffdaf6cde0030b86c2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "VERIFY_NATIVE.py",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\VERIFY_NATIVE.py",
+        "--role",
+        "evaluator"
+      ],
+      "start": "2026-11-27T08:33:42.049712+00:00",
+      "end": "2026-11-27T08:33:42.174154+00:00",
+      "exit_code": 1,
+      "expected_before_implementation": "nonzero",
+      "stdout_sha256": "4daacbfbf9ba58a6afbd8258072d9a57c23ad9ca7a19f497ff87465e663f7d41",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "all_expected_failures_observed": true,
+  "scope": "Evaluator冻结前探针，无产品实现；正式L2尚未运行"
+}

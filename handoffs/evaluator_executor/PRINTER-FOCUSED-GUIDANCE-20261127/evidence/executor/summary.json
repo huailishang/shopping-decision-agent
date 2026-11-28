@@ -1,0 +1,43 @@
+{
+  "journeys_sha256": "702942631e5e5e1b605f2a10b1d73f7f6a90d905f4ef39830e9e19fbd1303c03",
+  "generator_sha256": "74c7db7d652a3a29ec01898291125aa2c3ebd18d851200c08075533dd96e59c9",
+  "completed": 12,
+  "native_completed": 10,
+  "safety_errors": 0,
+  "safety_error_details": [],
+  "upstream": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/comparisons.json",
+      "sha256": "1872ca421f4380aca3113fff9ed62f76df0116755d41481480a5c2c665182a4f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-24-audit.json",
+      "sha256": "12b8a74d17797a0aecb2fb4bfb537aaa3a4547167846910f8902140aeb56acd2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/source-audit.json",
+      "sha256": "d44e338a09b5fa0b343187c05f4005333bdbe8b5b53b241ced9657fa5357a176"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/challenge-results.json",
+      "sha256": "73c468938e0a653fae8bfccfa34e30f64963f6cd68e3ae578753d09b377393fb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/B1-shared-baseline.json",
+      "sha256": "4f982ecdc4fa910b4a772429de55815a3c42d2d7591f2d08afbeb25c87a8d032"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/results.json",
+      "sha256": "351f4b75f5d311a925d564d39d81e63715f0a71f4e1629a95922baef9b533e14"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/java-native-20261127T134725314158/summary.json",
+      "sha256": "7c8bdd6513be71353b2abff8134ff89b8890274c8c877ac9a13e4c169cbb3210"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/java-native-20261127T134725314158/FocusGuidanceSwingRegression.stdout.txt",
+      "sha256": "ac52d84132cc9781fab91eb52158f9e0977dc3fd8187caae13ed10d6c47f5003"
+    }
+  ],
+  "limit": "offline only"
+}

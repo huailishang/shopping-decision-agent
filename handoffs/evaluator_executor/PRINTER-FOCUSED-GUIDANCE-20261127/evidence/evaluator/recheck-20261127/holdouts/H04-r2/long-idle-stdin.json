@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "action": "guide",
+  "state": {
+    "version": 11,
+    "answers": {
+      "category": {
+        "value": "printer",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "打印机"
+      },
+      "usage": {
+        "value": "家庭纸质资料整理",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "家庭纸质资料整理"
+      },
+      "needs_color": {
+        "value": false,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "否"
+      },
+      "wechat_required": {
+        "value": false,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "否"
+      },
+      "accepts_initial_setup": {
+        "value": true,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "是"
+      },
+      "device_deployment_region": {
+        "value": "河南",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "河南"
+      },
+      "monthly_pages_range": {
+        "value": [
+          20,
+          80
+        ],
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "20-80"
+      },
+      "budget_max_cny": {
+        "value": 1200,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "1200"
+      },
+      "requires_scan": {
+        "value": true,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "是"
+      },
+      "requires_auto_duplex": {
+        "value": true,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "是"
+      },
+      "idle_weeks_pattern": {
+        "value": "often_long",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "经常连续多周不用"
+      }
+    },
+    "history": [
+      {
+        "version": 1,
+        "raw_text": "打印机",
+        "changed_fields": [
+          "category"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 2,
+        "raw_text": "家庭纸质资料整理",
+        "changed_fields": [
+          "usage"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 3,
+        "raw_text": "否",
+        "changed_fields": [
+          "needs_color"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 4,
+        "raw_text": "否",
+        "changed_fields": [
+          "wechat_required"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 5,
+        "raw_text": "是",
+        "changed_fields": [
+          "accepts_initial_setup"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 6,
+        "raw_text": "河南",
+        "changed_fields": [
+          "device_deployment_region"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 7,
+        "raw_text": "20-80",
+        "changed_fields": [
+          "monthly_pages_range"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 8,
+        "raw_text": "1200",
+        "changed_fields": [
+          "budget_max_cny"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 9,
+        "raw_text": "是",
+        "changed_fields": [
+          "requires_scan"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 10,
+        "raw_text": "是",
+        "changed_fields": [
+          "requires_auto_duplex"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 11,
+        "raw_text": "经常连续多周不用",
+        "changed_fields": [
+          "idle_weeks_pattern"
+        ],
+        "old_conclusions_invalidated": true
+      }
+    ],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false,
+    "deferred_fields": []
+  },
+  "worksheet": null,
+  "payload": {}
+}

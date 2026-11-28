@@ -1,0 +1,9 @@
+{
+  "id": "EVAL-READ-002",
+  "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+  "reference": "turn1view0",
+  "result": "支持对应型号功能例子",
+  "observed_on": "2026-11-27",
+  "support": "L189-203 M232dw扫描与自动双面",
+  "limits": "厂商营销页，只核型号宣称；不证实微信持续复用、实际体验、售价或整个品类可靠性。L243-251地区、配置和应用条件仍需逐项核。"
+}

@@ -1,0 +1,3 @@
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\docs\PROJECT_BOTTLENECK_MAP_CURRENT.md: missing capability chain
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\docs\PROJECT_BOTTLENECK_MAP_CURRENT.md: missing bottleneck register
+BLOCKING: D:\SoftWare\VScode\install\Project\shopping-decision-agent\docs\PROJECT_BOTTLENECK_MAP_CURRENT.md: missing reassessment triggers

@@ -1,0 +1,232 @@
+{
+  "passed": 5,
+  "total": 8,
+  "continuation_passed": 0,
+  "continuation_total": 3,
+  "cases": [
+    {
+      "id": "H01",
+      "kind": "positive_scan",
+      "expected": [
+        "requires_scan"
+      ],
+      "initial": "needs_color",
+      "checks": {
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": false,
+      "continuation": [
+        {
+          "field": "needs_color",
+          "answer": "否"
+        },
+        {
+          "field": "accepts_outsourced_color",
+          "answer": "暂不确定"
+        },
+        {
+          "field": "wechat_required",
+          "answer": "否"
+        },
+        {
+          "field": "monthly_pages_range",
+          "answer": "0-50"
+        },
+        {
+          "field": "budget_max_cny",
+          "answer": "1000"
+        }
+      ],
+      "target_and_research_reached": false,
+      "terminal_field": "",
+      "terminal_prompt": "已记录当前明确条件；可点击下方条件修改，或主动预览审计。"
+    },
+    {
+      "id": "H02",
+      "kind": "positive_duplex",
+      "expected": [
+        "requires_auto_duplex"
+      ],
+      "initial": "needs_color",
+      "checks": {
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": false,
+      "continuation": [
+        {
+          "field": "needs_color",
+          "answer": "否"
+        },
+        {
+          "field": "accepts_outsourced_color",
+          "answer": "暂不确定"
+        },
+        {
+          "field": "wechat_required",
+          "answer": "否"
+        },
+        {
+          "field": "monthly_pages_range",
+          "answer": "0-50"
+        },
+        {
+          "field": "budget_max_cny",
+          "answer": "1000"
+        }
+      ],
+      "target_and_research_reached": false,
+      "terminal_field": "",
+      "terminal_prompt": "已记录当前明确条件；可点击下方条件修改，或主动预览审计。"
+    },
+    {
+      "id": "H03",
+      "kind": "positive_idle",
+      "expected": [
+        "idle_weeks_pattern"
+      ],
+      "initial": "needs_color",
+      "checks": {
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": false,
+      "continuation": [
+        {
+          "field": "needs_color",
+          "answer": "否"
+        },
+        {
+          "field": "accepts_outsourced_color",
+          "answer": "暂不确定"
+        },
+        {
+          "field": "wechat_required",
+          "answer": "否"
+        },
+        {
+          "field": "monthly_pages_range",
+          "answer": "0-50"
+        },
+        {
+          "field": "budget_max_cny",
+          "answer": "1000"
+        }
+      ],
+      "target_and_research_reached": false,
+      "terminal_field": "",
+      "terminal_prompt": "已记录当前明确条件；可点击下方条件修改，或主动预览审计。"
+    },
+    {
+      "id": "H04",
+      "kind": "negation_prefix",
+      "expected": [
+        "wechat_required"
+      ],
+      "initial": "wechat_required",
+      "checks": {
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": true,
+      "continuation": [],
+      "target_and_research_reached": null,
+      "terminal_field": "wechat_required",
+      "terminal_prompt": "微信打印是必须条件，还是更喜欢但非必须？"
+    },
+    {
+      "id": "H05",
+      "kind": "negation_postfix",
+      "expected": [
+        "requires_auto_duplex"
+      ],
+      "initial": "requires_auto_duplex",
+      "checks": {
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": true,
+      "continuation": [],
+      "target_and_research_reached": null,
+      "terminal_field": "requires_auto_duplex",
+      "terminal_prompt": "自动双面打印是否必须？"
+    },
+    {
+      "id": "H06",
+      "kind": "ambiguity",
+      "expected": [
+        "requires_scan"
+      ],
+      "initial": "requires_scan",
+      "checks": {
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": true,
+      "continuation": [],
+      "target_and_research_reached": null,
+      "terminal_field": "requires_scan",
+      "terminal_prompt": "扫描或复印是否是必须功能？"
+    },
+    {
+      "id": "H07",
+      "kind": "budget",
+      "expected": [
+        "budget_scope"
+      ],
+      "initial": "budget_scope",
+      "checks": {
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": true,
+      "continuation": [],
+      "target_and_research_reached": null,
+      "terminal_field": "budget_scope",
+      "terminal_prompt": "预算是否包括运费和另购耗材？"
+    },
+    {
+      "id": "H08",
+      "kind": "adversarial_usage",
+      "expected": [
+        "requires_scan"
+      ],
+      "initial": "requires_scan",
+      "checks": {
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "same_focus": true,
+        "same_prompt": true,
+        "safe": true
+      },
+      "passed": true,
+      "continuation": [],
+      "target_and_research_reached": null,
+      "terminal_field": "requires_scan",
+      "terminal_prompt": "扫描或复印是否是必须功能？"
+    }
+  ],
+  "holdouts_sha256": "d3a9efa359b56d72f651e8006663bd683b105c7f998c946b903431b731176f23"
+}

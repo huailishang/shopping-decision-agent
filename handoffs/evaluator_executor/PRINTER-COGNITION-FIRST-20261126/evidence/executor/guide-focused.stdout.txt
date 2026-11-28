@@ -1,0 +1,8 @@
+test_guide_preserves_explicit_answers_and_route (test_cognition_guide.CognitionGuideTest.test_guide_preserves_explicit_answers_and_route) ... ok
+test_malformed_source_not_certified (test_cognition_guide.CognitionGuideTest.test_malformed_source_not_certified) ... ok
+test_reviewed_model_claims_expire (test_cognition_guide.CognitionGuideTest.test_reviewed_model_claims_expire) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.111s
+
+OK

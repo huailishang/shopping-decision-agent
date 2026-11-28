@@ -1,0 +1,52 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "8965636524df6ef1083eb1f5b2a3eaa2910023985636099e6021014e6aeb5e68",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/replay.json",
+      "sha256": "5d1c077447b3c7dc450d4d8753375996523b3be264d044cb91840c9c900a95c7"
+    }
+  },
+  "metrics": {
+    "completed": true,
+    "answers": 1,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 0
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:source_pending": true,
+    "authorization_false": true,
+    "setup:pending": true,
+    "setup:unchanged": true
+  },
+  "setup_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-response.json",
+      "sha256": "66e188dcea7bcf13920e7a7e9d6c3eaef37d301b15ef353b12b965f810227b00"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-stdin.json",
+      "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-stdout.txt",
+      "sha256": "2988802b0f15b80ff7d3d769c9af800ef1b437f4d9c308d0c010c19557b83229"
+    }
+  ],
+  "semantic_completed": true,
+  "terminal": "completed"
+}

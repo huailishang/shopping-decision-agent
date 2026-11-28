@@ -1,0 +1,47 @@
+{
+  "active": true,
+  "notice": "直接购物研究；不要求上游草案。",
+  "binding": null,
+  "draft": null,
+  "confirmed": {
+    "category": "printer",
+    "usage": "一年只在春节回家时用几天",
+    "idle_weeks_pattern": "often_long"
+  },
+  "deferred": [],
+  "withdrawn": [],
+  "field": "needs_color",
+  "question": "必须在家打印彩色吗？",
+  "base_field": "needs_color",
+  "base_question": "必须在家打印彩色吗？",
+  "choices": [
+    [
+      "是",
+      "是"
+    ],
+    [
+      "否",
+      "否"
+    ]
+  ],
+  "facts": [],
+  "usage_research": {
+    "field": "idle_weeks_pattern",
+    "answer": "often_long",
+    "answer_state": "confirmed",
+    "status": "research_required",
+    "question": "核各适用路线在连续多周不用后的恢复步骤、清洁耗材和维护条件；需型号说明及有条件的独立测试，缺证不淘汰。",
+    "source_ids": [
+      "rtings-cost-method-2021"
+    ],
+    "hard_requirement": false,
+    "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+  },
+  "public_decision": null,
+  "result": "商品判断：待核研究；本轮没有可对应当前用户需求的有效结构化商品事实。\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户预算尚未确认；不得推断任何商品满足预算。\n微信是否必须尚未确认：先向用户澄清，再决定优先核查微信复用还是其他型号条件。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。\n仍需查证：候选型号、匹配条件、原始来源、观察时间、适用地区和有效报价。\n下一行动：补齐上述可追溯事实，再重新计算；现有旧研究文字仅留内部审计。\n未批准购买，交易关闭，未核实实时价格。\n使用场景补证（不改变硬条件优先级）：核各适用路线在连续多周不用后的恢复步骤、清洁耗材和维护条件；需型号说明及有条件的独立测试，缺证不淘汰。",
+  "safe": {
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false,
+    "live_price_verified": false
+  }
+}

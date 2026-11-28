@@ -1,0 +1,52 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "07b8d8d272ee7513362d98f9a5ba3accebc1ad1374003e127b195d45efaff863",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T21/b/replay.json",
+      "sha256": "8a5f173ab36fc64b6b9ce2d30eef4a91a02c06ec37bb078c31c889d76ab6d85d"
+    }
+  },
+  "metrics": {
+    "completed": true,
+    "answers": 1,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 0
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:usage_research": true,
+    "authorization_false": true,
+    "setup:pending": true,
+    "setup:unchanged": true
+  },
+  "setup_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T21/b/compound/pending-source-response.json",
+      "sha256": "d87c9fce4726a3887155253d7df253029a0fb8df7a731628f0315690df15a75a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T21/b/compound/pending-source-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T21/b/compound/pending-source-stdin.json",
+      "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T21/b/compound/pending-source-stdout.txt",
+      "sha256": "ce720c840bdd53023261987671f1441b9bcee50902c64f2d52a881d3a2f61115"
+    }
+  ],
+  "semantic_completed": true,
+  "terminal": "completed"
+}

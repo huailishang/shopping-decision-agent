@@ -1,0 +1,1 @@
+WINDOW_SMOKE_PASS {"question": "核Brother HL-L1238W的扫描；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。", "safe": {"purchase_recommendation_approved": false, "transactions_enabled": false, "live_price_verified": false}, "window": "文印研究入口 · 本机实验样稿（非正式购买建议）"}

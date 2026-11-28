@@ -1,0 +1,2 @@
+{"event": "experiment_start", "timestamp": "2026-11-28T20:28:10.655318+08:00", "scope": "owner-authorized reversible local prototype only", "old_package": "BLOCKED unchanged", "prior_time_unknown": true}
+{"event": "experiment_end", "timestamp": "2026-11-28T20:32:20.653614+08:00", "scope": "local sample only", "new_tests_passed": 11, "existing_guard_tests_passed": 22, "windows_smoke": true, "human_trials": 0, "old_gate_unchanged": true}

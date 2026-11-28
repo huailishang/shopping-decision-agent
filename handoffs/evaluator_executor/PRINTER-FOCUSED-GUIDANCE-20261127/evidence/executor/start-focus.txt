@@ -1,0 +1,30 @@
+{
+  "cases": [
+    {
+      "case": "主要打印孩子黑白作业，不知道怎么买",
+      "passed": false,
+      "error": "KeyError('guidance_focus_json')"
+    },
+    {
+      "case": "想在家打印彩色照片，不懂参数",
+      "passed": false,
+      "error": "KeyError('guidance_focus_json')"
+    },
+    {
+      "case": "主要想把纸质资料扫描存档，也偶尔打印",
+      "passed": false,
+      "error": "KeyError('guidance_focus_json')"
+    },
+    {
+      "case": "coarse usage changes guidance explanation",
+      "passed": false
+    },
+    {
+      "case": "confirmed requirements retained",
+      "passed": false,
+      "error": "KeyError('guidance_focus_json')"
+    }
+  ],
+  "passed": 0,
+  "total": 5
+}

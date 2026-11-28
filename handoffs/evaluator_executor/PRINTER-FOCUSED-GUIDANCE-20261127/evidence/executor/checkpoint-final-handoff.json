@@ -1,0 +1,46 @@
+{
+  "task_id": "PRINTER-FOCUSED-GUIDANCE-20261127",
+  "state": "READY_FOR_REVIEW",
+  "executor_status": "SUBMITTED_FOR_REVIEW",
+  "gate": "PASS",
+  "passed": 14,
+  "mandatory_failures": 0,
+  "next_role": "Evaluator",
+  "recorded_at": "2026-11-27T14:06:23.600176+00:00",
+  "artifacts": [
+    {
+      "path": "CURRENT.md",
+      "sha256": "9ecbf9bf8d5f6b8f138c4106767bff2e64447497f6d275394d1a2df2318eda07"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/REPORT.md",
+      "sha256": "e5f2aa76460829a2ec41a71e7f81f2fe081ddf6b26b93e33eba9f74f6e5fcc31"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/COMPARISON.md",
+      "sha256": "9019b71a56607b6f4b93f34d132007ee280f5472fdaadf6eb1841a0e269c670c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/USAGE.md",
+      "sha256": "917dfb7e73b68808b7b6bf1ae510d2c1a5dd75e28ea69ff1255421f3275acdee"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/formal-handoff-manifest.json",
+      "sha256": "5f24ee6e8c88546668b0c733a72b000725528ff6ca1affbfe9ba0793425823c5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/process.json",
+      "sha256": "37577a3836708ef1a171379e6d150c1fe1aea5365221b0dee669b6507d90177c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/delivery-final-recheck.json",
+      "sha256": "e87d6a9cee8f3f1b2e1ae63c011ea9789c556d53f44f837f9b55e208b752988c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/L2-GATE.json",
+      "sha256": "a20536ea934ef5db32708c44f21bdef5aa7bb5c461e4da2c31e5c4438d0eb3ee"
+    }
+  ],
+  "independent_review": "NOT_RUN",
+  "holdouts": "NOT_RUN"
+}

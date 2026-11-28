@@ -14,6 +14,11 @@ final class DesktopBridgeClient {
 
     static Map<String, String> invoke(ProcessBuilder builder, long timeoutMillis)
             throws IOException, InterruptedException {
+        return invoke(builder, timeoutMillis, null);
+    }
+
+    static Map<String, String> invoke(ProcessBuilder builder, long timeoutMillis, byte[] input)
+            throws IOException, InterruptedException {
         if (timeoutMillis <= 0) throw new IllegalArgumentException("timeoutMillis must be positive");
         Process process = builder.redirectErrorStream(true).start();
         Drain drain = new Drain(process.getInputStream());
@@ -21,6 +26,9 @@ final class DesktopBridgeClient {
         reader.setDaemon(true);
         reader.start(); // Drain BEFORE waitFor; otherwise large report_json blocks the subprocess.
         try {
+            try (var stdin = process.getOutputStream()) {
+                if (input != null) stdin.write(input);
+            }
             if (!process.waitFor(timeoutMillis, TimeUnit.MILLISECONDS)) {
                 throw new IOException("后端超过" + timeoutMillis + "毫秒未响应");
             }

@@ -1,0 +1,22 @@
+{
+  "old_manifest_hash": "9740530f6b647349a84f23d0e592ee37cbac60c4a734e7b0fcd20e39c685ca44",
+  "expected_head": "3ae3514c482ab1b35335cd2978301efb348a09cd",
+  "actual_head": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+  "protected_count": 2017,
+  "changed_original_protected_paths": [],
+  "current_product_sha256": {
+    "shopping_decision/cognition_comparison.py": "c558c9e079727076282b4ffa43ddc81b6e7a5e7b5b8837e888eefaf0dc6f6ddf",
+    "shopping_decision/chat_bridge.py": "e88ecd62fa1d4202653f444fc89e912a5f578c1615f4d5b6bad9c2e6695499c4",
+    "shopping_decision/confirmed_comparison.py": "c949ab1147f92e49e0dcd68cd90e6d258b087822f6b820cfb552889812c12136",
+    "shopping_decision/claim_gate.py": "c4f72459cef81a32dbcd9736cc545c4dc3a56d0a110c8a7c385eca8a9b03f4d9",
+    "shopping_decision/printer_purchase_checks.py": "65526d9be05777ce58cb0c81cf2d6bacd3d4d91effeefd46ed5213b431451d9d",
+    "shopping_decision/evidence_comparison.py": "a69c7ef53d2166453007deb8ce54ea443b693ac9b9176e3f09c83f18ec0ed5a4",
+    "shopping_decision/model_comparison.py": "46d2f17b8ee693aeb975abf67a68d12d2f3ae2bfc35148e4934a065ba6c8f303",
+    "knowledge/printer_cognition_comparison_v1.json": "6e303e1cd0a85bfd1aca4302da2a0a88821f880c1e62ef098c2aa48ee873e7a6",
+    "tests/test_cognition_comparison.py": "d7e2ceeb26446b274de862bca7016286e0c5d027afc44422043d43718d28a23e",
+    "tests/test_printer_purchase_checks.py": "9d6c8fccb678e781c3f7ea823dd790994b22515b0b120a9d81ab1c92aeed2a22",
+    "tests/test_candidate_tradeoff.py": "07189710140b26a93657ab111b5d74f11a9dd7d5e61759369f5336bdf89fc617",
+    "shopping_decision/model_provider.py": null
+  },
+  "staged_paths": []
+}

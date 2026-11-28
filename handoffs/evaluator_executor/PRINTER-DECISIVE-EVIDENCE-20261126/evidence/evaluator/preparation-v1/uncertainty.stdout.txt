@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "id": "maintenance-target",
+      "passed": false,
+      "error": "AssertionError('analysis unavailable: 工作单操作无效')"
+    },
+    {
+      "id": "bounded-stability",
+      "passed": false,
+      "error": "AssertionError('analysis unavailable: 工作单操作无效')"
+    },
+    {
+      "id": "exact-tie-adjacent",
+      "passed": false,
+      "error": "AssertionError('analysis unavailable: 工作单操作无效')"
+    },
+    {
+      "id": "integer-replacement-step",
+      "passed": false,
+      "error": "AssertionError('analysis unavailable: 工作单操作无效')"
+    },
+    {
+      "id": "hard-priority",
+      "passed": false,
+      "error": "AssertionError('analysis unavailable: 工作单操作无效')"
+    },
+    {
+      "id": "bad-range-recovery",
+      "passed": true,
+      "observed": [
+        {
+          "error": "工作单操作无效"
+        },
+        {
+          "error": "工作单操作无效"
+        },
+        {
+          "error": "工作单操作无效"
+        },
+        {
+          "error": "工作单操作无效"
+        },
+        {
+          "error": "工作单操作无效"
+        }
+      ]
+    }
+  ],
+  "passed": 1,
+  "total": 6,
+  "external_calls": 0
+}

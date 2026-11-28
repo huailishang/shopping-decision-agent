@@ -1,0 +1,8 @@
+{"event": "start", "at": "2026-11-27T13:01:36.213616+00:00", "id": "chat-executor-20261127-evening", "label": "initial baseline and measurement preparation", "prior_interval": "unknown: initial reads before timestamp", "original_record": "initial-session-record-original.json"}
+{"event": "end", "at": "2026-11-27T13:08:22.295620+00:00", "id": "chat-executor-20261127-evening", "label": "checkpoint B partial; wall interval is not active time"}
+{"event": "start", "at": "2026-11-27T13:14:31.339355+00:00", "id": "chat-executor-20261127-continue-02", "label": "stage B continuation", "prior_interval": "request 13:13:34Z to actual start; unknown active time"}
+{"event": "end", "at": "2026-11-27T13:27:35.070391+00:00", "id": "chat-executor-20261127-continue-02", "label": "checkpoint C; wall interval only"}
+{"event": "start", "at": "2026-11-27T13:34:31.035035+00:00", "id": "chat-executor-20261127-continue-03", "label": "C continuation: interface, full replay, regression", "prior_interval": "request 13:33:50Z to recorded start"}
+{"event": "end", "at": "2026-11-27T13:52:51.955962+00:00", "id": "chat-executor-20261127-continue-03", "label": "pre-L2 checkpoint; recorded elapsed interval, active/wait split unknown"}
+{"event": "start", "at": "2026-11-27T14:04:42.393623+00:00", "id": "chat-executor-20261127-continue-04", "label": "formal gate result and handoff; initial connection interval unknown"}
+{"event": "end", "at": "2026-11-27T14:05:57.160231+00:00", "id": "chat-executor-20261127-continue-04", "label": "report and gate evidence closure; elapsed only"}

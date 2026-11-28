@@ -36,12 +36,26 @@ public final class ShoppingDecisionDesktop {
     // 新对话入口与旧表单共用后端和请求版本保护；参考按钮只编辑草稿。
     private final JTextArea chatTranscript = area(15), chatInput = area(3);
     private final JTextArea chatUnderstanding = area(10), chatOutcome = area(12);
+    private final JTextArea chatGuide = area(12);
     private final JLabel chatPrompt = new JLabel("正在加载本机问题...");
     private final JPanel chatReferences = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 4));
     private final JPanel chatEdits = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 4));
     private final JButton chatSend = new JButton("发送并确认"), chatPreview = new JButton("预览/另存审计");
-    private String chatState = "", chatPromptField = "", chatReport = "";
+    private String chatState = "", chatPromptField = "", chatReport = "", decisionNote = "";
+    private final JButton notePreview = new JButton("预览/另存决定说明"), guideRefresh = new JButton("刷新认知资料");
     private SwingWorker<Map<String,String>,Void> chatWorker;
+    private String worksheetJson = "", worksheetState = "";
+    private final JPanel worksheetFields = new JPanel(new GridLayout(0, 2, 5, 3));
+    private final Map<String,JTextField> worksheetInputs = new LinkedHashMap<>();
+    private final JButton worksheetCreate = new JButton("创建/重建工作单"),
+        worksheetApply = new JButton("提交假设并重算"), worksheetCancel = new JButton("取消草稿"),
+        worksheetSave = new JButton("另存工作单"), worksheetRestore = new JButton("恢复工作单");
+    private String worksheetFieldRows = "";
+    private final JTextArea worksheetSources = area(7);
+    private final JButton worksheetImportSource = new JButton("导入待审资料"),
+        worksheetWithdrawSource = new JButton("撤回导入资料"),
+        worksheetBindRef = new JButton("关联原事实"), worksheetWithdrawRef = new JButton("撤回关联");
+    private final JLabel worksheetNotice = new JLabel("先确认需求；空白为未知，0为明确零。费用均为假设。");
 
     private ShoppingDecisionDesktop(String python) {
         this.python = python;
@@ -71,6 +85,8 @@ public final class ShoppingDecisionDesktop {
         chatTranscript.setEditable(false);
         chatUnderstanding.setEditable(false);
         chatOutcome.setEditable(false);
+        chatGuide.setEditable(false);
+        chatGuide.setText("确认打印机品类后可查看选购指南；浏览不改变需求。");
         chatTranscript.setText("助手：请先明确商品品类。这里不会自动替你确认默认值，也不会查询或购买商品。\n");
         JTabbedPane details = new JTabbedPane();
         JPanel understandingPanel = new JPanel(new BorderLayout(4, 4));
@@ -82,7 +98,20 @@ public final class ShoppingDecisionDesktop {
         edits.setPreferredSize(new Dimension(300, 125));
         understandingPanel.add(edits, BorderLayout.SOUTH);
         details.addTab("目前理解/修改", understandingPanel);
+        JPanel guidePanel=new JPanel(new BorderLayout());
+        guidePanel.add(new JScrollPane(chatGuide),BorderLayout.CENTER);
+        guidePanel.add(guideRefresh,BorderLayout.SOUTH);
+        guideRefresh.addActionListener(e -> {
+            if(chatState.isBlank() || (chatWorker!=null && !chatWorker.isDone()))return;
+            if(!worksheetJson.isBlank() && worksheetState.equals(chatState)) {
+                worksheetRequest("preview",worksheetJson,"{}");
+            } else {
+                updateChat("","","");
+            }
+        });
+        details.addTab("选购前先看", guidePanel);
         details.addTab("证据与下一步", new JScrollPane(chatOutcome));
+        details.addTab("成本与资料", worksheetPage());
         JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
                 new JScrollPane(chatTranscript), details);
         split.setResizeWeight(0.58);
@@ -113,6 +142,19 @@ public final class ShoppingDecisionDesktop {
                 previewReport();
             }
         });
+        notePreview.addActionListener(e -> {
+            if(decisionNote.isBlank() || (chatWorker!=null && !chatWorker.isDone())){error("请先等待当前判断完成");return;}
+            final String content=decisionNote;
+            JTextArea preview=new JTextArea(content,25,62);
+            preview.setEditable(false);preview.setCaretPosition(0);
+            if(JOptionPane.showConfirmDialog(frame,new JScrollPane(preview),"预览决定说明（非订单）",JOptionPane.OK_CANCEL_OPTION)!=JOptionPane.OK_OPTION)return;
+            JFileChooser chooser=new JFileChooser(new File("data/private"));
+            chooser.setDialogTitle("另存本机决定说明（JSON）");
+            chooser.setSelectedFile(new File("printer-decision-note.json"));
+            if(chooser.showSaveDialog(frame)!=JFileChooser.APPROVE_OPTION)return;
+            try {saveWorksheet(chooser.getSelectedFile().toPath(),content);status.setText("决定说明已另存；没有上传。");}
+            catch(IOException ex){error("决定说明另存失败，旧文件未覆盖："+ex.getMessage());}
+        });
         JButton newSession = new JButton("新建空白会话");
         newSession.addActionListener(e -> {
             requestGate.invalidate();
@@ -120,6 +162,10 @@ public final class ShoppingDecisionDesktop {
             chatState = "";
             chatPromptField = "";
             chatReport = "";
+            decisionNote = "";
+            chatGuide.setText("确认打印机品类后可查看选购指南；浏览不改变需求。");
+            worksheetJson = ""; worksheetState = ""; worksheetFieldRows = "";
+            showWorksheetFields(""); worksheetSources.setText("");
             chatInput.setText("");
             chatTranscript.setText("助手：已开启空白会话。原会话不会自动带入；没有保存到磁盘。\n");
             chatSend.setEnabled(true);
@@ -143,6 +189,7 @@ public final class ShoppingDecisionDesktop {
         actions.add(chatSend);
         actions.add(bulk);
         actions.add(chatPreview);
+        actions.add(notePreview);
         actions.add(newSession);
         actions.add(oldForm);
         inputArea.add(actions, BorderLayout.SOUTH);
@@ -151,8 +198,160 @@ public final class ShoppingDecisionDesktop {
         return panel;
     }
 
+    private JPanel worksheetPage() {
+        JPanel panel = new JPanel(new BorderLayout(5,5));
+        JPanel top = new JPanel(new GridLayout(0,1));
+        top.add(worksheetNotice);
+        top.add(buttons(worksheetCreate,worksheetApply,worksheetCancel));
+        top.add(buttons(worksheetSave,worksheetRestore));
+        panel.add(top,BorderLayout.NORTH);
+        worksheetSources.setEditable(false);
+        JPanel sourcesPanel=new JPanel(new BorderLayout());
+        sourcesPanel.add(buttons(worksheetImportSource,worksheetWithdrawSource,worksheetBindRef,worksheetWithdrawRef),BorderLayout.NORTH);
+        sourcesPanel.add(new JScrollPane(worksheetSources),BorderLayout.CENTER);
+        JTabbedPane inputsAndSources=new JTabbedPane();
+        inputsAndSources.addTab("成本假设",new JScrollPane(worksheetFields));
+        inputsAndSources.addTab("资料审计",sourcesPanel);
+        panel.add(inputsAndSources,BorderLayout.CENTER);
+        worksheetImportSource.addActionListener(e -> {
+            if (!worksheetCurrent()) return;
+            JTextField sid=new JTextField(),model=new JTextField(),locator=new JTextField(),day=new JTextField(java.time.LocalDate.now().toString());
+            JComboBox<String> kind=new JComboBox<>(new String[]{"厂家摘录","专业评测","用户评论","报价线索"});
+            JTextArea excerpt=new JTextArea(5,30);
+            JPanel form=new JPanel(new GridLayout(0,1));
+            form.add(new JLabel("自定资料编号（同编号重新导入代表新版本）"));form.add(sid);
+            form.add(new JLabel("适用型号（完整候选名）"));form.add(model);
+            form.add(new JLabel("资料类型"));form.add(kind);
+            form.add(new JLabel("观察日期（YYYY-MM-DD）"));form.add(day);
+            form.add(new JLabel("来源地址及页/段定位（不会自动打开）"));form.add(locator);
+            form.add(new JLabel("必要原文摘录（待审）"));form.add(new JScrollPane(excerpt));
+            if (JOptionPane.showConfirmDialog(frame,form,"导入本地摘录（不认证为事实）",JOptionPane.OK_CANCEL_OPTION)!=JOptionPane.OK_OPTION)return;
+            String type=new String[]{"manufacturer_excerpt","professional_review","user_comment","quote_lead"}[kind.getSelectedIndex()];
+            worksheetRequest("import_source",worksheetJson,"{\"id\":"+jsonQuote(sid.getText())+",\"candidate\":"+jsonQuote(model.getText())+
+                ",\"kind\":"+jsonQuote(type)+",\"observed_at\":"+jsonQuote(day.getText())+",\"locator\":"+jsonQuote(locator.getText())+
+                ",\"excerpt\":"+jsonQuote(excerpt.getText())+"}");
+        });
+        worksheetWithdrawSource.addActionListener(e -> {
+            if (!worksheetCurrent())return;
+            String sid=JOptionPane.showInputDialog(frame,"请输入资料审计中的导入编号");
+            if (sid!=null)worksheetRequest("withdraw_source",worksheetJson,"{\"id\":"+jsonQuote(sid)+"}");
+        });
+        worksheetBindRef.addActionListener(e -> worksheetReference(false));
+        worksheetWithdrawRef.addActionListener(e -> worksheetReference(true));
+        worksheetCreate.addActionListener(e -> {
+            if (chatState.isBlank()) {error("请先等待会话初始化");return;}
+            if (!worksheetJson.isBlank() && JOptionPane.showConfirmDialog(frame,"重建会清空旧成本草稿，是否继续？","重建工作单",JOptionPane.YES_NO_OPTION)!=JOptionPane.YES_OPTION) return;
+            worksheetRequest("create","null","{}");
+        });
+        worksheetApply.addActionListener(e -> {
+            if (!worksheetCurrent()) return;
+            try {
+                List<String> changes = new ArrayList<>();
+                for (var row:worksheetInputs.entrySet()) {
+                    String[] key=row.getKey().split("\\t",-1);
+                    String value=row.getValue().getText().trim();
+                    String encoded;
+                    if (value.isEmpty()) encoded="null";
+                    else if (key[1].equals("separate_drum")) {
+                        if (!value.equals("是") && !value.equals("否")) throw new IllegalArgumentException("鼓粉分离填是或否，或留空");
+                        encoded=value.equals("是")?"true":"false";
+                    } else if (Set.of("pages","months","starter","toner_yield","drum_yield","drum_starter").contains(key[1])) {
+                        encoded=Long.toString(Long.parseLong(value));
+                    } else encoded=jsonQuote(value);
+                    changes.add("{\"candidate\":"+(key[0].isEmpty()?"null":jsonQuote(key[0]))+",\"field\":"+jsonQuote(key[1])+",\"value\":"+encoded+"}");
+                }
+                worksheetRequest("edit_many",worksheetJson,"{\"changes\":["+String.join(",",changes)+"]}");
+            } catch (RuntimeException ex) {error("成本草稿未提交："+ex.getMessage());}
+        });
+        worksheetCancel.addActionListener(e -> showWorksheetFields(worksheetFieldRows));
+        worksheetSave.addActionListener(e -> {
+            if (!worksheetCurrent()) return;
+            JFileChooser chooser = new JFileChooser(new File("data/private"));
+            chooser.setDialogTitle("另存已提交的工作单（未提交草稿不保存）");
+            chooser.setSelectedFile(new File("printer-worksheet.json"));
+            if (chooser.showSaveDialog(frame)!=JFileChooser.APPROVE_OPTION) return;
+            try {saveWorksheet(chooser.getSelectedFile().toPath(),worksheetJson);status.setText("工作单已另存；没有上传。");}
+            catch (IOException ex) {error("另存失败，旧文件未覆盖："+ex.getMessage());}
+        });
+        worksheetRestore.addActionListener(e -> {
+            if (chatState.isBlank()) {error("请先等待会话初始化");return;}
+            JFileChooser chooser = new JFileChooser(new File("data/private"));
+            chooser.setDialogTitle("选择工作单（建议在新建空白会话后恢复）");
+            if (chooser.showOpenDialog(frame)!=JFileChooser.APPROVE_OPTION) return;
+            try {
+                Path selected=chooser.getSelectedFile().toPath();
+                byte[] bytes;
+                try (InputStream input=Files.newInputStream(selected)) {bytes=input.readNBytes(256*1024+1);}
+                if (bytes.length>256*1024) throw new IOException("工作单超过256KiB");
+                String saved=StandardCharsets.UTF_8.newDecoder().decode(java.nio.ByteBuffer.wrap(bytes)).toString();
+                worksheetRequest("inspect",saved,"{}");
+            } catch(IOException ex) {error("恢复文件未读取："+ex.getMessage());}
+        });
+        return panel;
+    }
+
+    private void worksheetReference(boolean withdraw) {
+        if (!worksheetCurrent())return;
+        JTextField model=new JTextField(),fid=new JTextField();
+        JPanel form=new JPanel(new GridLayout(0,1));
+        form.add(new JLabel("完整候选名"));form.add(model);
+        form.add(new JLabel("原事实编号（见资料审计）"));form.add(fid);
+        if (JOptionPane.showConfirmDialog(frame,form,withdraw?"撤回成本引用":"关联成本依赖",JOptionPane.OK_CANCEL_OPTION)!=JOptionPane.OK_OPTION)return;
+        worksheetRequest(withdraw?"withdraw_reference":"bind_reference",worksheetJson,
+             "{\"candidate\":"+jsonQuote(model.getText())+",\"fact_id\":"+jsonQuote(fid.getText())+"}");
+    }
+
+    static void saveWorksheet(Path target,String json) throws IOException {
+        // Create a new file only; no overwrite of existing files, even in a race.
+        if (Files.exists(target)) throw new FileAlreadyExistsException(target.toString());
+        Path parent=target.toAbsolutePath().getParent();
+        Path tmp=Files.createTempFile(parent,".worksheet-",".tmp");
+        try {
+            Files.writeString(tmp,json,StandardCharsets.UTF_8);
+            Files.move(tmp,target.toAbsolutePath());
+        } finally {Files.deleteIfExists(tmp);}
+    }
+
+    private boolean worksheetCurrent() {
+        if (worksheetJson.isBlank() || !worksheetState.equals(chatState)) {
+            error("工作单尚未建立或需求已改变，请重新创建后输入当前假设。"); return false;
+        }
+        return true;
+    }
+    private void showWorksheetFields(String rows) {
+        worksheetFields.removeAll(); worksheetInputs.clear();
+        for (String row:rows.split("\\R")) {
+            String[] parts=row.split("\\t",4);
+            if (parts.length!=4) continue;
+            JTextField value=new JTextField(parts[3]);
+            worksheetFields.add(new JLabel((parts[0].isEmpty()?"":parts[0]+" · ")+parts[2]));
+            worksheetFields.add(value);
+            worksheetInputs.put(parts[0]+"\t"+parts[1],value);
+        }
+        worksheetFields.revalidate(); worksheetFields.repaint();
+        worksheetApply.setEnabled(!worksheetInputs.isEmpty());
+        worksheetSave.setEnabled(!rows.isBlank());
+    }
+    private static String jsonQuote(String value) {
+        StringBuilder b=new StringBuilder("\"");
+        for(char c:value.toCharArray()) {
+            if(c=='"' || c=='\\') b.append('\\').append(c);
+            else if(c<32) b.append(String.format("\\u%04x",(int)c));
+            else b.append(c);
+        }
+        return b.append('"').toString();
+    }
+    private void worksheetRequest(String action,String worksheet,String payload) {
+        String request="{\"schema_version\":1,\"action\":"+jsonQuote(action)+",\"state\":"+chatState+
+            ",\"worksheet\":"+worksheet+",\"payload\":"+payload+"}";
+        updateChat("","","",request,action);
+    }
+
     /** 所有轮次走统一Python受控规则与现有Web共享研究；Java不解析自由文字。 */
     private void updateChat(String field, String submitted, String previousPrompt) {
+        updateChat(field,submitted,previousPrompt,null,"");
+    }
+    private void updateChat(String field, String submitted, String previousPrompt, String worksheetRequest, String worksheetAction) {
         if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
         final String snapshot = chatState;
         final String changedField = field;
@@ -166,6 +365,10 @@ public final class ShoppingDecisionDesktop {
                 cmd.add(python);
                 cmd.add("-m");
                 cmd.add("shopping_decision.chat_bridge");
+                if (worksheetRequest != null) {
+                    cmd.add("--worksheet-stdin");
+                    return DesktopBridgeClient.invoke(new ProcessBuilder(cmd),20_000,worksheetRequest.getBytes(StandardCharsets.UTF_8));
+                }
                 for (String value : new String[]{snapshot, changedField, raw}) {
                     cmd.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
                 }
@@ -178,21 +381,46 @@ public final class ShoppingDecisionDesktop {
                 try {
                     Map<String,String> out = get();
                     if (out.containsKey("error")) throw new IllegalArgumentException(out.get("error"));
+                    if (worksheetAction.equals("inspect")) {
+                        JTextArea preview=new JTextArea(out.getOrDefault("worksheet_conditions",""),16,42);
+                        preview.setEditable(false);
+                        if (JOptionPane.showConfirmDialog(frame,new JScrollPane(preview),"核对保存条件并恢复（空白会话）",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION)
+                            worksheetRequest("restore",out.get("worksheet_json"),"{\"confirm_saved_conditions\":true}");
+                        return;
+                    }
                     if (!out.containsKey("state_json") || !out.containsKey("report_json")) {
                         throw new IllegalArgumentException("对话结果缺少版本/审计");
                     }
                     chatState = out.get("state_json");
                     chatReport = out.get("report_json");
+                    decisionNote = out.getOrDefault("decision_note_json","");
+                    if (out.containsKey("worksheet_json")) {
+                        worksheetJson=out.get("worksheet_json"); worksheetState=chatState;
+                        worksheetFieldRows=out.getOrDefault("worksheet_fields","");
+                        showWorksheetFields(worksheetFieldRows);
+                        worksheetSources.setText("来源审计：候选、编号、状态、分级、观察日期、有效期、定位、地址、边界（导入材料未审）\n"+out.getOrDefault("worksheet_sources",""));
+                        worksheetSources.setCaretPosition(0);
+                        worksheetNotice.setText("成本输入已提交；均为假设，不是实时价格。查看“证据与下一步”。");
+                    } else if (!worksheetJson.isBlank() && !worksheetState.equals(chatState)) {
+                        showWorksheetFields(""); worksheetSources.setText("");
+                        worksheetNotice.setText("需求已变更，旧成本不再适用；请重新建立工作单。");
+                    }
                     if (!raw.isBlank()) {
                         chatTranscript.append("\n用户（" + previousPrompt + "）：" + raw + "\n");
                     }
                     chatPromptField = out.getOrDefault("prompt_field", "");
                     String next = out.getOrDefault("prompt", "本轮已完成");
                     chatPrompt.setText(next.length() > 80 ? next.substring(0, 80) + "…" : next);
+                    String focusExplanation = out.getOrDefault("guidance_focus_text", "");
+                    if (!focusExplanation.isBlank()) {
+                        chatTranscript.append("为什么问：" + focusExplanation + "\n");
+                    }
                     chatTranscript.append("助手：" + next + "\n");
                     chatTranscript.setCaretPosition(chatTranscript.getDocument().getLength());
                     chatUnderstanding.setText(out.getOrDefault("understanding", ""));
                     chatUnderstanding.setCaretPosition(0);
+                    chatGuide.setText(out.getOrDefault("guide_text", "当前品类暂无可用指南。"));
+                    chatGuide.setCaretPosition(0);
                     chatOutcome.setText(out.getOrDefault("result_text", ""));
                     chatOutcome.setCaretPosition(0);
                     chatInput.setText("");
@@ -219,6 +447,16 @@ public final class ShoppingDecisionDesktop {
                             chatSend.setEnabled(true);
                             chatPromptField = items[0];
                             chatPrompt.setText("修改 " + items[1] + "（当前值：" + items[2] + "；发送后才生效）");
+                            chatReferences.removeAll();
+                            if ("idle_weeks_pattern".equals(items[0])) {
+                                for (String draft : new String[]{"经常连续多周不用", "通常每周都会用", "暂不确定", "撤回"}) {
+                                    JButton ref = new JButton(draft);
+                                    ref.addActionListener(event -> { chatInput.setText(draft); chatInput.requestFocusInWindow(); });
+                                    chatReferences.add(ref);
+                                }
+                            }
+                            chatReferences.revalidate();
+                            chatReferences.repaint();
                             chatInput.setText("");
                             chatInput.requestFocusInWindow();
                         });

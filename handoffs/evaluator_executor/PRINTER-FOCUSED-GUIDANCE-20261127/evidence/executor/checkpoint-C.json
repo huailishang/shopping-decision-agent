@@ -1,0 +1,88 @@
+{
+  "task_id": "PRINTER-FOCUSED-GUIDANCE-20261127",
+  "state": "EXECUTING",
+  "role": "Executor",
+  "stage_A": "complete",
+  "stage_B": "24 reference frozen v2 before product edits; common B1 repair and four formal challenges passed; compound setup B0 5/5, symmetric end-to-end terminal replay pending",
+  "stage_C": "positive pilot: 4 improved, 2 tied; machine and semantic completion 2/6 to 6/6, freeze focus 5/5",
+  "stage_D": "existing sources reused; full source audit pending",
+  "stage_E_F": "partial implementation in actual chat engine; full old business regression pending",
+  "stage_G": "desktop transcript explanation wired; native tests not run",
+  "stage_H_I": "partial: model context lineage and note output wired; full native restore and note tests pending",
+  "formal_l2": "NOT_RUN",
+  "raw_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0-results.json",
+      "sha256": "8bfad6fc27d4a07af4fbc2a267bd4a2f5ee34768f562d36741b3ca18310309d1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v1.json",
+      "sha256": "8420ef4a9b41b1e92e414694cee238a9707aae0561cd294a78cfc7b975f97a36"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v2.json",
+      "sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/B1-shared-baseline.json",
+      "sha256": "4f982ecdc4fa910b4a772429de55815a3c42d2d7591f2d08afbeb25c87a8d032"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/challenge-results.json",
+      "sha256": "5ae378a0464568a665d06ea58a5912a91f8e40b9ac976fadc0ef0a4363bf2d75"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-first.json",
+      "sha256": "6827f9d9f59145e727cc97584a9b52393838b3fb6c07da77ac4ae51945ea5169"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/pilot-pairs.json",
+      "sha256": "e70f93ec5a991d793b1fdb78cfcdbbde1c6d23709bfaf366f3cdeb939e155b01"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/c-context-regression.txt",
+      "sha256": "8abb9b680659215ae6f9792800b684e9955dcd118a0a50d7decd3a951e3d5688"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/c-context-regression-repair.txt",
+      "sha256": "f511e62ebe4a45da760fc46de3412d3659773118312c29336f8a723933d82ad0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-current.json",
+      "sha256": "6827f9d9f59145e727cc97584a9b52393838b3fb6c07da77ac4ae51945ea5169"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-new-suites.txt",
+      "sha256": "809945e66d9a130d6b69bd48c3fed1910bf8845236bedc5d661d26d0bf82d9b6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-new-suites-pythonpath.txt",
+      "sha256": "9ed77e73347dea62f149a1d3e2388ef906cb2708fb0baab02a26e0da79295854"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/checkpoint-C-scope.txt",
+      "sha256": "cd2c9727d60ec7fddcd776843c77588b1b0411b323d3747ce12edb7ba83fdefe"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/process-checkpoint-C.json",
+      "sha256": "0a5c2de8a79af2d32625bd4756cf79ccb8aa2ebdab110fd6f3534c0cd38d1484"
+    }
+  ],
+  "known_gaps": [
+    "Reference v2 corrects v1 static Brother negative-fact error before product edits; original retained, contract named v1 path so evaluator must audit version lineage",
+    "Initial 6-pair run precedes model-context and desktop changes; rerun current code, not claim final 24 pairs",
+    "T20/T23/T24 compound terminal intentionally marked not complete by pilot replayer; need symmetric real setup + terminal trace",
+    "New VERIFY_TESTS initially fails discovery; PYTHONPATH=. required from repo root; frozen verifier unmodified",
+    "Unsupported non-printer focus projection and full source audit pending",
+    "Native Java focus-specific tests missing, 12 composite journeys and full L2 not executed",
+    "Process time not separable from tool waits, conservative upper bound only"
+  ],
+  "next_actions": [
+    "Run paired_replay.py with new unique run name for current 24 cases; first fix symmetric compound setup and terminal checks, preserve failed evidence",
+    "Finish source audit and focus semantics; verify all legacy business cases and full unittest",
+    "Complete FocusGuidanceRegression/FocusGuidanceSwingRegression; native Windows tests and history exact-byte allowance per contract",
+    "Run complete standard L2 and prepare report, only handoff if PASS"
+  ],
+  "budget_debit_seconds": 1429.81304,
+  "remaining_budget_seconds": 862570.18696
+}

@@ -1,0 +1,14 @@
+Independent tool stdout excerpts before evaluator additions:
+SCOPE 7127 [] HEAD True INDEX True
+SCORING: 12/12 synthetic checks, including 6 incomplete record rejections; not participants
+ARMS: equal initial states, 3 target journeys and both arm guards; cross-process replay remains known failure
+ARMS_RECORDS 5
+REJECT no_raw
+REJECT unknown_exit
+REJECT bad_hash
+CONTRADICTORY_MANUAL_CODING_ACCEPTED True
+BLOCKED / INCONCLUSIVE: no separately authorized participants; zero human records
+HUMAN_RC 2
+WINDOW A exit=0
+WINDOW B exit=0
+A errors=[] events=12; B errors=[] events=13

@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "reference_basis": "Evaluator independent user-goal interpretation, not product outputs. Negated topic must not displace affirmative purpose; no topic inference is a confirmed answer.",
+  "cases": [
+    {
+      "id": "P01",
+      "kind": "positive",
+      "usage": "把老人手写的旧家谱变成电脑文件",
+      "allowed_fields": [
+        "requires_scan"
+      ]
+    },
+    {
+      "id": "P02",
+      "kind": "positive",
+      "usage": "两面都要印，家人不会自己翻纸",
+      "allowed_fields": [
+        "requires_auto_duplex"
+      ]
+    },
+    {
+      "id": "P03",
+      "kind": "positive",
+      "usage": "暑假结束后收柜子里，到寒假才用",
+      "allowed_fields": [
+        "idle_weeks_pattern"
+      ]
+    },
+    {
+      "id": "P04",
+      "kind": "positive",
+      "usage": "想把纸质合同转成PDF，在电脑留一份",
+      "allowed_fields": [
+        "requires_scan"
+      ]
+    },
+    {
+      "id": "P05",
+      "kind": "positive",
+      "usage": "纸的正反两页都得印，不想中途拿出来重放",
+      "allowed_fields": [
+        "requires_auto_duplex"
+      ]
+    },
+    {
+      "id": "P06",
+      "kind": "positive",
+      "usage": "出差一两个月，回来才打几张",
+      "allowed_fields": [
+        "idle_weeks_pattern"
+      ]
+    },
+    {
+      "id": "P07",
+      "kind": "positive",
+      "usage": "手机微信里的文件要直接发给机器",
+      "allowed_fields": [
+        "wechat_required"
+      ]
+    },
+    {
+      "id": "P08",
+      "kind": "positive",
+      "usage": "预算只买机器，耗材以后另算",
+      "allowed_fields": [
+        "budget_scope"
+      ]
+    },
+    {
+      "id": "P09",
+      "kind": "positive",
+      "usage": "买机器的钱和后续耗材得一起考虑",
+      "allowed_fields": [
+        "budget_scope"
+      ]
+    },
+    {
+      "id": "P10",
+      "kind": "positive",
+      "usage": "手头没打印任务，先比较放着",
+      "allowed_fields": [
+        "monthly_pages_range"
+      ]
+    },
+    {
+      "id": "P11",
+      "kind": "positive",
+      "usage": "每月大约就十几张",
+      "allowed_fields": [
+        "monthly_pages_range"
+      ]
+    },
+    {
+      "id": "P12",
+      "kind": "positive",
+      "usage": "彩色部分拿到店里打，家里只印文字",
+      "allowed_fields": [
+        "needs_color"
+      ]
+    },
+    {
+      "id": "N01",
+      "kind": "negation",
+      "usage": "不用扫描，最在意纸的两面能由机器处理",
+      "allowed_fields": [
+        "requires_auto_duplex"
+      ]
+    },
+    {
+      "id": "N02",
+      "kind": "negation",
+      "usage": "不用自动双面，只想把老照片转成电子文件",
+      "allowed_fields": [
+        "requires_scan"
+      ]
+    },
+    {
+      "id": "N03",
+      "kind": "negation",
+      "usage": "不需要微信，小孩作业想让机器自己翻纸",
+      "allowed_fields": [
+        "requires_auto_duplex"
+      ]
+    },
+    {
+      "id": "N04",
+      "kind": "negation",
+      "usage": "不考虑预算范围，主要把纸质票据变成PDF",
+      "allowed_fields": [
+        "requires_scan"
+      ]
+    },
+    {
+      "id": "N05",
+      "kind": "negation",
+      "usage": "页数还不清楚，主要怕几个月不动后恢复困难",
+      "allowed_fields": [
+        "idle_weeks_pattern"
+      ]
+    },
+    {
+      "id": "N06",
+      "kind": "negation",
+      "usage": "我说的存档是打印纸放文件夹，不是转电子文件；必须自动翻纸",
+      "allowed_fields": [
+        "requires_auto_duplex"
+      ]
+    },
+    {
+      "id": "A01",
+      "kind": "ambiguous",
+      "usage": "扫描或打印都可能，先看看能做什么",
+      "allowed_fields": [
+        "requires_scan"
+      ]
+    },
+    {
+      "id": "A02",
+      "kind": "ambiguous",
+      "usage": "给家里用，没想好任务",
+      "allowed_fields": [
+        "needs_color"
+      ]
+    },
+    {
+      "id": "A03",
+      "kind": "ambiguous",
+      "usage": "朋友说闲置坏得快但我还不知道用法",
+      "allowed_fields": [
+        "idle_weeks_pattern"
+      ]
+    },
+    {
+      "id": "A04",
+      "kind": "ambiguous",
+      "usage": "主机和耗材怎样比较，我还没定预算",
+      "allowed_fields": [
+        "budget_scope"
+      ]
+    },
+    {
+      "id": "A05",
+      "kind": "ambiguous",
+      "usage": "微信也许方便，但不一定非要",
+      "allowed_fields": [
+        "wechat_required"
+      ]
+    },
+    {
+      "id": "A06",
+      "kind": "ambiguous",
+      "usage": "照片需要彩色吗，我还不确定是不是自己印",
+      "allowed_fields": [
+        "needs_color"
+      ]
+    }
+  ],
+  "limitations": [
+    "disclosed regressions and development fixtures, not blind evaluation",
+    "A cases ask a clarification only; no requirement may be auto-confirmed",
+    "additional 8 Evaluator cases constructed after implementation"
+  ]
+}

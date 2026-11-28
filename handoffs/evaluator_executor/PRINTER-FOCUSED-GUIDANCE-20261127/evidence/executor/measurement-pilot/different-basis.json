@@ -1,0 +1,22 @@
+{
+  "a": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "bbf2b09f8322ec51fbe7dfeed0effc191b97493fcee71342dd4d26b9a7996691",
+    "reference_sha256": "1f5b082b841d9bf3f31198ea2a3be5fb81b2ee4764e91f9a848f6d1684465956",
+    "limits": {
+      "max_answer_turns": 12,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  },
+  "b": {
+    "as_of": "2026-11-27",
+    "source_set_sha256": "bbf2b09f8322ec51fbe7dfeed0effc191b97493fcee71342dd4d26b9a7996691",
+    "reference_sha256": "1f5b082b841d9bf3f31198ea2a3be5fb81b2ee4764e91f9a848f6d1684465956",
+    "limits": {
+      "max_answer_turns": 11,
+      "max_read_requests": 4,
+      "max_product_calls": 30
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "scenario_id": "P01",
+      "replay": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/replay.json",
+        "sha256": "d230ce7669ada2e3b596d44f97b505914051416765c862a9d8886d9b0a64c80e"
+      }
+    },
+    {
+      "scenario_id": "P02",
+      "replay": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/replay.json",
+        "sha256": "7218eec9d179678dd4a28279cdccd20021c79fed556c57a509044c47c5146f53"
+      }
+    },
+    {
+      "scenario_id": "P03",
+      "replay": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/replay.json",
+        "sha256": "ef6f51112df992eb54c1e1afd93b26e69a3df00fca49ac757e57d51c02877de1"
+      }
+    }
+  ]
+}

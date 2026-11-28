@@ -1,0 +1,34 @@
+[
+  {
+    "case": "C01",
+    "hash_matches": true,
+    "bytes": 408,
+    "recorded_failure": "JSONDecodeError",
+    "parseable_json": false
+  },
+  {
+    "case": "C08",
+    "hash_matches": true,
+    "bytes": 7585,
+    "recorded_failure": "JSONDecodeError",
+    "parseable_json": false
+  },
+  {
+    "case": "C12",
+    "hash_matches": true,
+    "bytes": 1327,
+    "recorded_failure": "JSONDecodeError",
+    "parseable_json": false
+  },
+  {
+    "case": "C12-r1",
+    "hash_matches": true,
+    "bytes": 36595,
+    "recorded_failure": "provider_not_completed",
+    "parseable_json": true,
+    "provider_status": "incomplete",
+    "output_item_types": [
+      "reasoning"
+    ]
+  }
+]

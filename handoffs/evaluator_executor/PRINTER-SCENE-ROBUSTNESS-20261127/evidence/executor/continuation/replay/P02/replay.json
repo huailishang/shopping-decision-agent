@@ -1,0 +1,531 @@
+{
+  "initial_state": {
+    "version": 2,
+    "answers": {
+      "category": {
+        "value": "printer",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "打印机"
+      },
+      "usage": {
+        "value": "两面都要印，家人不会自己翻纸",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "两面都要印，家人不会自己翻纸"
+      }
+    },
+    "history": [
+      {
+        "version": 1,
+        "raw_text": "打印机",
+        "changed_fields": [
+          "category"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 2,
+        "raw_text": "两面都要印，家人不会自己翻纸",
+        "changed_fields": [
+          "usage"
+        ],
+        "old_conclusions_invalidated": true
+      }
+    ],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false,
+    "deferred_fields": []
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 2,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "两面都要印，家人不会自己翻纸",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "两面都要印，家人不会自己翻纸"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "两面都要印，家人不会自己翻纸",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "exit_code": 0,
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-stdin.json",
+        "sha256": "8a2a9b869bdf881009220fcbf0044240e5a52132cf0040f772a13e24611ad86a"
+      },
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-stdout.txt",
+        "sha256": "093574dffff6fcf78690f8b6be6cd00f7b583aa73658003b8b271297ba3d9ac6"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-response.json",
+        "sha256": "18ee163476eaa375e787f2110046f2c0314208d95bb846401efe86aeb8cd3d93"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "requires_auto_duplex",
+      "answer": "是"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "两面都要印，家人不会自己翻纸",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "两面都要印，家人不会自己翻纸"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "两面都要印，家人不会自己翻纸",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "exit_code": 0,
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-stdin.json",
+        "sha256": "26143b900f2c49d7dc276944e2a9a85c7480f3e7195439ec123f993ff62ec3d7"
+      },
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-stdout.txt",
+        "sha256": "f31434b4ba1396d462c7a9ba45515b1105cd7cb4042f3517a349f1b6db515261"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-response.json",
+        "sha256": "f2b8053a6a5c16d49ff40b86eb082947cb6a5f4ccca8f37f6f94d383b92ee20c"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "needs_color",
+      "answer": "否"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 4,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "两面都要印，家人不会自己翻纸",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "两面都要印，家人不会自己翻纸"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "两面都要印，家人不会自己翻纸",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "exit_code": 0,
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-stdin.json",
+        "sha256": "eec05552ef56d1f3a79a3968457467d0a80300a741dc0d21bb34e470e3290e9a"
+      },
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-stdout.txt",
+        "sha256": "29ae0c3c437e05ebe6952fa1828eac959c265003c2627071f6b28c9c35face4b"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-response.json",
+        "sha256": "8466b7f36c169fa7ed5942f670420681d93afce14abb5112d54dad966b57fa6a"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "device_deployment_region",
+      "answer": "河南"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 5,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "两面都要印，家人不会自己翻纸",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "两面都要印，家人不会自己翻纸"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            },
+            "device_deployment_region": {
+              "value": "河南",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "河南"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "两面都要印，家人不会自己翻纸",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 5,
+              "raw_text": "河南",
+              "changed_fields": [
+                "device_deployment_region"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "exit_code": 0,
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-stdin.json",
+        "sha256": "59dfc31c1dbd099152a5a19ab0c72a298f9e2648c3433b8d839ef5e4745bfb02"
+      },
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-stdout.txt",
+        "sha256": "cafdf0ee2727364f4ff66641088453ad65b4cac658d7e40fb506187165b216af"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-response.json",
+        "sha256": "cce230b3d159a571160c2383a8e8b1e7acf20a69af21963ad5190aa80f4aa40d"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "monthly_pages_range",
+      "answer": "0-50"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 6,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "两面都要印，家人不会自己翻纸",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "两面都要印，家人不会自己翻纸"
+            },
+            "requires_auto_duplex": {
+              "value": true,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "是"
+            },
+            "needs_color": {
+              "value": false,
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "否"
+            },
+            "device_deployment_region": {
+              "value": "河南",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "河南"
+            },
+            "monthly_pages_range": {
+              "value": [
+                0,
+                50
+              ],
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "0-50"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "两面都要印，家人不会自己翻纸",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "是",
+              "changed_fields": [
+                "requires_auto_duplex"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 4,
+              "raw_text": "否",
+              "changed_fields": [
+                "needs_color"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 5,
+              "raw_text": "河南",
+              "changed_fields": [
+                "device_deployment_region"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 6,
+              "raw_text": "0-50",
+              "changed_fields": [
+                "monthly_pages_range"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "exit_code": 0,
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-stdin.json",
+        "sha256": "dab05113d4124ef40f0e187e1eda3f48947c4b6caae8e57325ebf8611e9078b8"
+      },
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-stdout.txt",
+        "sha256": "44ea76117feb7a6dc3f2b7b596166998fd070b1b08f312177d73a3352f39a52d"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-response.json",
+        "sha256": "7ebb16525f5838d5ad83f9a61429ff8a968f73edccfb55fd7cb5a1df3f31d228"
+      }
+    }
+  ]
+}

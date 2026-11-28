@@ -1,0 +1,15 @@
+test_current_transition_preserves_historical_failure (test_history_audit_version_transition.HistoryAuditVersionTransition.test_current_transition_preserves_historical_failure) ... ok
+test_frozen_manifest_change_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_frozen_manifest_change_rejected) ... ok
+test_ledger_append_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_ledger_append_rejected) ... ok
+test_missing_current_java_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_missing_current_java_rejected) ... ok
+test_missing_historical_snapshot_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_missing_historical_snapshot_rejected) ... ok
+test_old_bytes_are_independently_pinned (test_history_audit_version_transition.HistoryAuditVersionTransition.test_old_bytes_are_independently_pinned) ... ok
+test_previous_reviewed_test_change_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_previous_reviewed_test_change_rejected) ... ok
+test_unapproved_current_java_change_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_unapproved_current_java_change_rejected) ... ok
+test_unrelated_historical_source_change_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_unrelated_historical_source_change_rejected) ... ok
+test_wrong_historical_snapshot_rejected (test_history_audit_version_transition.HistoryAuditVersionTransition.test_wrong_historical_snapshot_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 133.150s
+
+OK

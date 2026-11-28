@@ -1,0 +1,86 @@
+[
+  {
+    "usage": "想把纸质病历留在电脑里发给医生",
+    "target": "requires_scan",
+    "baseline_actual_trace": [
+      {
+        "field": "needs_color",
+        "answer": "否"
+      },
+      {
+        "field": "accepts_outsourced_color",
+        "answer": "暂不确定"
+      },
+      {
+        "field": "wechat_required",
+        "answer": "否"
+      },
+      {
+        "field": "monthly_pages_range",
+        "answer": "0-50"
+      },
+      {
+        "field": "budget_max_cny",
+        "answer": "1000"
+      }
+    ],
+    "baseline": {
+      "target_reached": false,
+      "evidence_misread": false,
+      "completed": false
+    },
+    "prototype": {
+      "target_reached": true,
+      "evidence_misread": false,
+      "completed": true
+    },
+    "deliberate_misread": {
+      "target_reached": true,
+      "evidence_misread": true,
+      "completed": false
+    },
+    "note": "synthetic operator walk, not a new-user trial"
+  },
+  {
+    "usage": "每年只在回乡探亲时用机器，平时房子空着",
+    "target": "idle_weeks_pattern",
+    "baseline_actual_trace": [
+      {
+        "field": "needs_color",
+        "answer": "否"
+      },
+      {
+        "field": "accepts_outsourced_color",
+        "answer": "暂不确定"
+      },
+      {
+        "field": "wechat_required",
+        "answer": "否"
+      },
+      {
+        "field": "monthly_pages_range",
+        "answer": "0-50"
+      },
+      {
+        "field": "budget_max_cny",
+        "answer": "1000"
+      }
+    ],
+    "baseline": {
+      "target_reached": false,
+      "evidence_misread": false,
+      "completed": false
+    },
+    "prototype": {
+      "target_reached": true,
+      "evidence_misread": false,
+      "completed": true
+    },
+    "deliberate_misread": {
+      "target_reached": true,
+      "evidence_misread": true,
+      "completed": false
+    },
+    "note": "synthetic operator walk, not a new-user trial"
+  }
+]

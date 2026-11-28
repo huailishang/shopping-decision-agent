@@ -1,0 +1,64 @@
+{
+  "status": "EXPECTED_FAILURES_CONFIRMED",
+  "commands": [
+    {
+      "label": "business",
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_BUSINESS.py"
+      ],
+      "start_utc": "2026-11-26T08:07:27.731736+00:00",
+      "end_utc": "2026-11-26T08:07:29.117383+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "a78ceac5a243f46640e794bd2ba800118b3e069a7a9ae2b81ad85e7db651a559",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "new-test-groups",
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_TESTS.py"
+      ],
+      "start_utc": "2026-11-26T08:07:29.121085+00:00",
+      "end_utc": "2026-11-26T08:07:29.310054+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "4a5f90eb83a32d2cb2065a7bd93a8bb1af2bc575689d3d78f832935ca547f64b",
+      "stderr_sha256": "d1b96d2861907b8b7d96db20aede71685d39c77947a413993af11d98c286acb7"
+    },
+    {
+      "label": "native-entry",
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_JAVA.py",
+        "--role",
+        "evaluator"
+      ],
+      "start_utc": "2026-11-26T08:07:29.321090+00:00",
+      "end_utc": "2026-11-26T08:07:29.470214+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "bcf8ce1545f4893afa5fac55a91c3fc9f77b53a36ceae3467b5c0724fe191094",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "delivery",
+      "argv": [
+        "/usr/bin/python3",
+        "-X",
+        "utf8",
+        "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_DELIVERY.py"
+      ],
+      "start_utc": "2026-11-26T08:07:29.474065+00:00",
+      "end_utc": "2026-11-26T08:07:29.614938+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "e1dcb6443d8fc0b093c31af97d149df1f947bac1b7427f2627defce17e59a093",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "meaning": "前测，不是已修复/实现；不跑无新改动的全量。"
+}

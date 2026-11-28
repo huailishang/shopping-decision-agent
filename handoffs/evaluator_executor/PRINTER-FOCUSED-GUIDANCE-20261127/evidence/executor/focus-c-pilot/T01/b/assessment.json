@@ -1,0 +1,32 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-c-pilot/T01/b/replay.json",
+      "sha256": "ace0b81f9765e4f97cdc32e8043a700df082ee1975e022e13682d05fe446ed43"
+    }
+  },
+  "metrics": {
+    "completed": true,
+    "answers": 1,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 0
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:route": true,
+    "authorization_false": true
+  },
+  "semantic_completed": true,
+  "terminal": "completed"
+}

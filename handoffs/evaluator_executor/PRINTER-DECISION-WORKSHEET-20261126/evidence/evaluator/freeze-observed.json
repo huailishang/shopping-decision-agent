@@ -1,0 +1,17 @@
+{
+  "origin": "Observed successful Windows exec tool freeze response, after failed pre-manifest Windows traversal was corrected; not an Executor run",
+  "exit_code": 0,
+  "phase": "freeze",
+  "baseline_sha256": "8cdf91d89833090c30b812ba9243074c1dfdcfa17904ed0d3e406e6733893c35",
+  "protected_count": 3022,
+  "checks": {
+    "head_matches": true,
+    "index_empty": true,
+    "index_matches": true,
+    "manifest_matches": true,
+    "protected_unchanged": true,
+    "product_matches_preflight": true
+  },
+  "changed_product_paths": [],
+  "changed_protected_paths": []
+}

@@ -1,0 +1,22 @@
+{
+  "review_date": "2026-11-26",
+  "role": "Evaluator",
+  "public_queries": 0,
+  "public_reads": 5,
+  "read_limit": 6,
+  "exact_operation_times": "source-read-01.json through source-read-05.json; UTC with offsets or explicit UTC label",
+  "disposition": "independently_reproduced_with_limited_scope",
+  "source_url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
+  "title": "HP LaserJet MFP M232-M237 series 使用手册",
+  "version": "copyright 2020; c07148381.pdf; retrieved PDF 154 pages",
+  "raw_document_sha256": "c8838368bc03fa693cc50fb354c36c37b03e25710ef64bc35b6f8ab826af59ff",
+  "raw_document_bytes": 2600059,
+  "full_document_storage": "memory only, not retained in repository",
+  "necessary_images": ["maintenance.png", "model-table.png"],
+  "visual_review": "Both local cropped images actually viewed. Page 67 low/very-low toner prose supports quality-based replacement condition. Page 144 table includes M232dw in SHNGC-1901-01 group. Web screenshot operation 3 returned reference only and was not used as visual evidence.",
+  "locators": ["printed page 62 / zero-based PDF page 67, low and very-low toner", "printed page 139 / zero-based PDF page 144, regulatory model table"],
+  "fact_id": "hp-replace-on-quality",
+  "supported_scope": "Toner warning alone need not force replacement; unacceptable print quality is a replacement condition. Very-low toner ends that cartridge's premium protection warranty.",
+  "not_supported": ["actual remaining yield", "actual life or failure rate", "actual replacement frequency or money", "printer whole-unit warranty", "current seller/SKU/region price", "device or real-user observed benefit"],
+  "provenance_limit": "Evaluator's newly fetched PDF hash is not Executor's original cached-text acquisition hash. Old per-operation timing and active-hour gaps remain unknown. Product not changed by evaluator."
+}

@@ -45,7 +45,7 @@ def _exact_model_scope(row: dict, candidate_id: str) -> bool:
 
 def publish_confirmed_comparison(bundle, confirmed_requirements, *, as_of,
                                  deployment_region, delivery_region=None,
-                                 budget_scope=None):
+                                 budget_scope=None, session_values=None, deferred=(), withdrawn=()):
     """The confirmed rows alone govern thresholds, importance and eligibility.
 
     The complete provider bundle is checked first, even for unused rows.
@@ -140,14 +140,15 @@ def publish_confirmed_comparison(bundle, confirmed_requirements, *, as_of,
             matching = next(a for a in part["assessments"]
                             if a["candidate_id"] == candidate["id"])
             rows.extend(matching["comparisons"])
-        hard_ids = {req["id"] for req in requirements if req.get("importance") == "hard"}
-        hard = [row["status"] for row in rows if row["requirement_id"] in hard_ids]
-        disposition = ("excluded_for_research" if "failed" in hard else
-                       "pending_evidence" if any(s in ("unknown", "conflict") for s in hard)
-                       else "eligible_for_research")
+        from .decision_actions import disposition
+        state = disposition(rows, requirements)
         public["assessments"].append({
-            "candidate_id": candidate["id"], "research_status": disposition,
+            "candidate_id": candidate["id"], "research_status": state,
             "comparisons": rows})
-    return public
+    from .decision_actions import order_actions, bind_decision
+    public["next_actions"] = order_actions(public, requirements)
+    bind_decision(public, requirements, bundle)
+    from .decision_actions import apply_session_policy
+    return apply_session_policy(public, requirements, session_values, deferred, withdrawn)
 
 

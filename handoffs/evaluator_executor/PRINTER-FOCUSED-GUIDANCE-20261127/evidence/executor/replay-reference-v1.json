@@ -1,0 +1,3079 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_EXECUTOR_REFERENCE",
+  "cases": [
+    {
+      "case_id": "T01",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "主要打印孩子黑白作业，不知道怎么买",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "主要打印孩子黑白作业，不知道怎么买"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "主要打印孩子黑白作业，不知道怎么买",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "否"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "needs_color"
+      ],
+      "target": {
+        "confirmed": {
+          "needs_color": false
+        },
+        "route": {
+          "id": "mono_laser",
+          "status": "consider"
+        }
+      },
+      "semantic_target": "黑白路线可考虑；本人仍未授权购买",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "route",
+          "id": "mono_laser",
+          "status": "consider"
+        }
+      ]
+    },
+    {
+      "case_id": "T02",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "想在家打印彩色照片，不懂参数",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "想在家打印彩色照片，不懂参数"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "想在家打印彩色照片，不懂参数",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "是"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "needs_color"
+      ],
+      "target": {
+        "confirmed": {
+          "needs_color": true
+        },
+        "route": {
+          "id": "mono_laser",
+          "status": "not_fit"
+        }
+      },
+      "semantic_target": "必须在家彩印时黑白候选集合不适用，不能以便宜覆盖硬需求",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "route",
+          "id": "mono_laser",
+          "status": "not_fit"
+        }
+      ]
+    },
+    {
+      "case_id": "T03",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "主要想把纸质资料扫描存档，也偶尔打印",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "否"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "河南"
+        ],
+        "monthly_pages_range": [
+          "0-50"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "是"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "requires_scan",
+        "needs_color",
+        "device_deployment_region",
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "requires_scan": true,
+          "needs_color": false,
+          "device_deployment_region": "河南",
+          "monthly_pages_range": [
+            0,
+            50
+          ]
+        }
+      },
+      "semantic_target": "确认扫描必须后逐型号核扫描事实；无功能即不适用，缺事实则待核",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "candidate_dimension",
+          "dimension": "scan",
+          "hard": true,
+          "expected": {
+            "HP M232dw": "met",
+            "Brother HL-L1238W": "failed"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "T04",
+      "initial_state": {
+        "version": 3,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家里需要彩印，且必须扫描文件",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家里需要彩印，且必须扫描文件"
+          },
+          "requires_scan": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "是"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家里需要彩印，且必须扫描文件",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "是",
+            "changed_fields": [
+              "requires_scan"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "是"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "needs_color"
+      ],
+      "target": {
+        "confirmed": {
+          "needs_color": true
+        },
+        "route": {
+          "id": "mono_laser",
+          "status": "not_fit"
+        }
+      },
+      "semantic_target": "彩色必须时黑白集合不适用；保留已确认扫描硬要求",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "route",
+          "id": "mono_laser",
+          "status": "not_fit"
+        }
+      ]
+    },
+    {
+      "case_id": "T05",
+      "initial_state": {
+        "version": 3,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "偶尔需要彩印，平时打印黑白资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "偶尔需要彩印，平时打印黑白资料"
+          },
+          "needs_color": {
+            "value": false,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "否"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "偶尔需要彩印，平时打印黑白资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "否",
+            "changed_fields": [
+              "needs_color"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "是"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "accepts_outsourced_color"
+      ],
+      "target": {
+        "confirmed": {
+          "accepts_outsourced_color": true
+        },
+        "route": {
+          "id": "outsourcing",
+          "status": "consider"
+        }
+      },
+      "semantic_target": "可外包是本人选择；可考虑外包路线而非证明本地服务费用",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "route",
+          "id": "outsourcing",
+          "status": "consider"
+        }
+      ]
+    },
+    {
+      "case_id": "T06",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家庭打印，尚不知道是否需要家中彩印",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家庭打印，尚不知道是否需要家中彩印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家庭打印，尚不知道是否需要家中彩印",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "needs_color"
+      ],
+      "target": {
+        "deferred": [
+          "needs_color"
+        ]
+      },
+      "semantic_target": "彩色未知保留，不假设否；研究可比较的路线条件",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "color_unknown"
+        }
+      ]
+    },
+    {
+      "case_id": "T07",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "打印文件，不需要扫描",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印文件，不需要扫描"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "打印文件，不需要扫描",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "否"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "河南"
+        ],
+        "monthly_pages_range": [
+          "0-50"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "否"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "requires_scan",
+        "needs_color",
+        "device_deployment_region",
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "requires_scan": false,
+          "needs_color": false,
+          "device_deployment_region": "河南",
+          "monthly_pages_range": [
+            0,
+            50
+          ]
+        }
+      },
+      "semantic_target": "扫描否为本人明确答案；不得把缺扫描当淘汰条件",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "candidate_dimension",
+          "dimension": "scan",
+          "hard": false,
+          "expected": null
+        }
+      ]
+    },
+    {
+      "case_id": "T08",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "经常打印双面资料，需要机器自动翻面",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "经常打印双面资料，需要机器自动翻面"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "经常打印双面资料，需要机器自动翻面",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "否"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "河南"
+        ],
+        "monthly_pages_range": [
+          "0-50"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "是"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "requires_auto_duplex",
+        "needs_color",
+        "device_deployment_region",
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "requires_auto_duplex": true,
+          "needs_color": false,
+          "device_deployment_region": "河南",
+          "monthly_pages_range": [
+            0,
+            50
+          ]
+        }
+      },
+      "semantic_target": "确认自动双面后，逐型号核实自动双面；不把手动双面算满足",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "candidate_dimension",
+          "dimension": "auto_duplex",
+          "hard": true,
+          "expected": {
+            "HP M232dw": "met",
+            "Brother HL-L1238W": "failed"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "T09",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "双面资料自己手动翻面也行",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "双面资料自己手动翻面也行"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "双面资料自己手动翻面也行",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "否"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "河南"
+        ],
+        "monthly_pages_range": [
+          "0-50"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "否"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "requires_auto_duplex",
+        "needs_color",
+        "device_deployment_region",
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "requires_auto_duplex": false,
+          "needs_color": false,
+          "device_deployment_region": "河南",
+          "monthly_pages_range": [
+            0,
+            50
+          ]
+        }
+      },
+      "semantic_target": "自动双面非硬要求；仍分别展示型号事实",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "candidate_dimension",
+          "dimension": "auto_duplex",
+          "hard": false,
+          "expected": null
+        }
+      ]
+    },
+    {
+      "case_id": "T10",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家里常连续多周不用打印机",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家里常连续多周不用打印机"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家里常连续多周不用打印机",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "经常连续多周不用"
+        ]
+      },
+      "relevant_fields": [
+        "idle_weeks_pattern"
+      ],
+      "target": {
+        "confirmed": {
+          "idle_weeks_pattern": "often_long"
+        }
+      },
+      "semantic_target": "长闲置引发恢复步骤、清洁耗材及维护条件研究；不是自动淘汰喷墨",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "usage_research",
+          "status": "research_required",
+          "source_pending": false
+        }
+      ]
+    },
+    {
+      "case_id": "T11",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "一般每周都会打印资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "一般每周都会打印资料"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "一般每周都会打印资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "通常每周都会用"
+        ]
+      },
+      "relevant_fields": [
+        "idle_weeks_pattern"
+      ],
+      "target": {
+        "confirmed": {
+          "idle_weeks_pattern": "usually_short"
+        }
+      },
+      "semantic_target": "通常每周使用引发同口径维护和耗材研究；不猜测实际金额",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "usage_research",
+          "status": "research_required",
+          "source_pending": false
+        }
+      ]
+    },
+    {
+      "case_id": "T12",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "不知道将来会隔多久使用",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "不知道将来会隔多久使用"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "不知道将来会隔多久使用",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "idle_weeks_pattern"
+      ],
+      "target": {
+        "deferred": [
+          "idle_weeks_pattern"
+        ]
+      },
+      "semantic_target": "保留使用间隔暂不确定；不根据月印量猜间隔",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "usage_research",
+          "status": "unknown",
+          "source_pending": false
+        }
+      ]
+    },
+    {
+      "case_id": "T13",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "当前预计暂时没有要打印的资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "当前预计暂时没有要打印的资料"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "当前预计暂时没有要打印的资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "0-0"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "monthly_pages_range": [
+            0,
+            0
+          ]
+        }
+      },
+      "semantic_target": "月页数0-0是显式计划值，不等于实际产量或零维护费",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "no_inferred_idle",
+          "pages": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "T14",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "低印量家庭打印",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "低印量家庭打印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "低印量家庭打印",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "0-50"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "monthly_pages_range": [
+            0,
+            50
+          ]
+        }
+      },
+      "semantic_target": "月页数0-50仅是范围；闲置间隔不能自动确认",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "no_inferred_idle",
+          "pages": [
+            0,
+            50
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "T15",
+      "initial_state": {
+        "version": 10,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "专家明确家用打印与全部重要要求",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "专家明确家用打印与全部重要要求"
+          },
+          "needs_color": {
+            "value": false,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "否"
+          },
+          "accepts_outsourced_color": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "是"
+          },
+          "requires_scan": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "是"
+          },
+          "requires_auto_duplex": {
+            "value": false,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "否"
+          },
+          "wechat_required": {
+            "value": false,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "否"
+          },
+          "monthly_pages_range": {
+            "value": [
+              0,
+              50
+            ],
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "0-50"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          },
+          "device_deployment_region": {
+            "value": "河南",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "河南"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "专家明确家用打印与全部重要要求",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "否",
+            "changed_fields": [
+              "needs_color"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "是",
+            "changed_fields": [
+              "accepts_outsourced_color"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "是",
+            "changed_fields": [
+              "requires_scan"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 6,
+            "raw_text": "否",
+            "changed_fields": [
+              "requires_auto_duplex"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 7,
+            "raw_text": "否",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 8,
+            "raw_text": "0-50",
+            "changed_fields": [
+              "monthly_pages_range"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 9,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 10,
+            "raw_text": "河南",
+            "changed_fields": [
+              "device_deployment_region"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "是"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "requires_scan"
+      ],
+      "target": {
+        "confirmed": {
+          "requires_scan": true,
+          "device_deployment_region": "河南"
+        }
+      },
+      "semantic_target": "专家已给重要要求；不重复问扫描；逐型号核扫描事实",
+      "setup_plan": {
+        "kind": "expert_explicit_initial_batch"
+      },
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "candidate_dimension",
+          "dimension": "scan",
+          "hard": true,
+          "expected": {
+            "HP M232dw": "met",
+            "Brother HL-L1238W": "failed"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "T16",
+      "initial_state": {
+        "version": 4,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "必须微信小程序直接打印家中黑白资料",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须微信小程序直接打印家中黑白资料"
+          },
+          "needs_color": {
+            "value": false,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "否"
+          },
+          "wechat_workflow": {
+            "value": "miniprogram",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "微信小程序直接打印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "必须微信小程序直接打印家中黑白资料",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "否",
+            "changed_fields": [
+              "needs_color"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "微信小程序直接打印",
+            "changed_fields": [
+              "wechat_workflow"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "是"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "河南"
+        ],
+        "monthly_pages_range": [
+          "0-50"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "wechat_required",
+        "device_deployment_region",
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "wechat_required": true,
+          "device_deployment_region": "河南",
+          "monthly_pages_range": [
+            0,
+            50
+          ]
+        }
+      },
+      "semantic_target": "微信为硬要求；需同地区同使用流程的事实，不把转App算直接小程序",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "candidate_dimension",
+          "dimension": "wechat_miniprogram",
+          "hard": true,
+          "expected": null
+        }
+      ]
+    },
+    {
+      "case_id": "T17",
+      "initial_state": {
+        "version": 5,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "家人需要微信打印，不愿首次安装App或扫码",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "家人需要微信打印，不愿首次安装App或扫码"
+          },
+          "needs_color": {
+            "value": false,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "否"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "是"
+          },
+          "wechat_workflow": {
+            "value": "miniprogram",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "微信小程序直接打印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "家人需要微信打印，不愿首次安装App或扫码",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "否",
+            "changed_fields": [
+              "needs_color"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "是",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 5,
+            "raw_text": "微信小程序直接打印",
+            "changed_fields": [
+              "wechat_workflow"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "否"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "河南"
+        ],
+        "monthly_pages_range": [
+          "0-50"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "accepts_initial_setup",
+        "device_deployment_region",
+        "monthly_pages_range"
+      ],
+      "target": {
+        "confirmed": {
+          "accepts_initial_setup": false,
+          "device_deployment_region": "河南",
+          "monthly_pages_range": [
+            0,
+            50
+          ]
+        }
+      },
+      "semantic_target": "不接受首次App/扫码为硬约束；缺免设置证据保留待核",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "candidate_dimension",
+          "dimension": "initial_setup_without_app_or_scan",
+          "hard": true,
+          "expected": null
+        }
+      ]
+    },
+    {
+      "case_id": "T18",
+      "initial_state": {
+        "version": 3,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "已经有预算，想明确只算主机硬件",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "已经有预算，想明确只算主机硬件"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "已经有预算，想明确只算主机硬件",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "仅主机硬件"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "budget_scope"
+      ],
+      "target": {
+        "confirmed": {
+          "budget_scope": "hardware_only"
+        }
+      },
+      "semantic_target": "预算仅主机，运费和耗材另列；不把标价当应付价",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "budget_scope",
+          "value": "hardware_only"
+        }
+      ]
+    },
+    {
+      "case_id": "T19",
+      "initial_state": {
+        "version": 3,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "有预算但还没想好是否包括耗材",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "有预算但还没想好是否包括耗材"
+          },
+          "budget_max_cny": {
+            "value": 1000,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "1000"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "有预算但还没想好是否包括耗材",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "1000",
+            "changed_fields": [
+              "budget_max_cny"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "budget_scope"
+      ],
+      "target": {
+        "deferred": [
+          "budget_scope"
+        ]
+      },
+      "semantic_target": "预算范围暂缓，不能用未知口径判定超预算或符合",
+      "setup_plan": {},
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "budget_scope",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case_id": "T20",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "费用输入有明确0和未知，使用间隔也未知",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "费用输入有明确0和未知，使用间隔也未知"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "费用输入有明确0和未知，使用间隔也未知",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "idle_weeks_pattern"
+      ],
+      "target": {
+        "deferred": [
+          "idle_weeks_pattern"
+        ]
+      },
+      "semantic_target": "保留0和未知的差别；不得据此宣称总成本或排名",
+      "setup_plan": {
+        "kind": "worksheet_cost_setup",
+        "required": "真实工作单操作：一项明确0，一项清空/未知，保存原件；两臂同样操作"
+      },
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "usage_research",
+          "status": "unknown",
+          "source_pending": false
+        }
+      ],
+      "setup_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/create-response.json",
+          "sha256": "37eb3afbd16fe27c0cf42750f407339f7d38ade84cbca795423cd3e406fe0490"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/create-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/create-stdin.json",
+          "sha256": "0c83fd64767b8f3fd9195bac826042ead1bea682e82a66fd68af3ae6fa20647a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/create-stdout.txt",
+          "sha256": "6d80ae304aface57e3595a74ad110a9bea9d0211aa5f0dc3207fbd027cfcb5cc"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/preview-response.json",
+          "sha256": "d4c14892978b9ec063b04bbc61cba57dd12339b384bc2e294a0f8f2a7306228a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/preview-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/preview-stdin.json",
+          "sha256": "c1f2f7ad3783eb053a64601e21307b50daa9952c7a7a88032be87cb757d90b7e"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/preview-stdout.txt",
+          "sha256": "28e8b7787fd2a03e55cefce020fc918b91aa31710442f91fe2d3bada3f201c09"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/saved-worksheet.json",
+          "sha256": "65ca3428ddbf14355f9265751d34d2059d3a6b5be5cf83baabbfb17378492802"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/zero-response.json",
+          "sha256": "6a5da486631cb7c22ed8799befaed01c057788b99a70187631178a1d2f6458b9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/zero-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/zero-stdin.json",
+          "sha256": "7e082c21c3e09ec153a35e20cb0ddcfa095eb733c8c13763eb538ea721b97712"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T20/zero-stdout.txt",
+          "sha256": "c5f13dd31f413601403234a4659fcd66a9e6805469f5d502b68a81ffb1f07979"
+        }
+      ]
+    },
+    {
+      "case_id": "T21",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "担心经常连续多周不用后的维护",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "担心经常连续多周不用后的维护"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "担心经常连续多周不用后的维护",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "经常连续多周不用"
+        ]
+      },
+      "relevant_fields": [
+        "idle_weeks_pattern"
+      ],
+      "target": {
+        "confirmed": {
+          "idle_weeks_pattern": "often_long"
+        }
+      },
+      "semantic_target": "方法源待核时不沿用旧可信主张，仍可形成有限研究问题",
+      "setup_plan": {
+        "kind": "isolated_source_lifecycle",
+        "source": "rtings-cost-method-2021",
+        "revision": 1,
+        "status": "pending_review"
+      },
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "usage_research",
+          "status": "research_required",
+          "source_pending": true
+        }
+      ],
+      "setup_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/after-response.json",
+          "sha256": "809e99bcbbd3ab03ba2bb3a8d7f3dc3a592c27677c8f59b9927ac265388275e9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/after-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/after-stdin.json",
+          "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/after-stdout.txt",
+          "sha256": "fe467717dfcda423e86bb2e19cd342c883003981f9a383cfb836b24b383371c0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/before-response.json",
+          "sha256": "9b95fb0f8d5c36b314cb2285d014c7687bc68e8c41db444ef7c9a836e13dfdb0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/before-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/before-stdin.json",
+          "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/before-stdout.txt",
+          "sha256": "9bd0d6c15000b2e40a4623d7ffc4c83d19dd689e4d0423b558f4e6e938d73357"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/registry-after.json",
+          "sha256": "98d6b1a9f6e4a57258a3c70a6cc27028da8d9464ec1f3a5e15c813c152adaeb0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T21/registry-before.json",
+          "sha256": "23e92932cb3faf7553f685e80b2d1b852ab9e4aa9691a43b03820d42430eb671"
+        }
+      ]
+    },
+    {
+      "case_id": "T22",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "主要扫描资料，来源同ID新版本尚未核",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "主要扫描资料，来源同ID新版本尚未核"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "主要扫描资料，来源同ID新版本尚未核",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "是"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "requires_scan"
+      ],
+      "target": {
+        "confirmed": {
+          "requires_scan": true
+        }
+      },
+      "semantic_target": "同ID新版本待核，不把旧已核功能主张当新版本事实",
+      "setup_plan": {
+        "kind": "isolated_source_lifecycle",
+        "source": "hp-cn-home",
+        "revision": 2,
+        "status": "active"
+      },
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "source_pending",
+          "source": "hp-cn-home"
+        }
+      ],
+      "setup_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/after-response.json",
+          "sha256": "fec4f348f8d13cb6d5f99ca8cd204a541bdda3235de9bb496046f3b37d09b262"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/after-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/after-stdin.json",
+          "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/after-stdout.txt",
+          "sha256": "a5ae87c2143c378a5604696597369a8124ec2812e6d300fd81e442c789acc0d1"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/before-response.json",
+          "sha256": "b875453c0fb935fae30e9fca9d8f2d6a3a04343417e36f274272de5e2a08099e"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/before-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/before-stdin.json",
+          "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/before-stdout.txt",
+          "sha256": "f1b520914e6c81fc8101bcab6bd0515a1607ffaaccd8f508ff28a6903e058024"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/registry-after.json",
+          "sha256": "1e361d26525d5d2b65a69ac5746fd2ee1c5a3e2707d76fc9e0a18fa1685f3b7a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T22/registry-before.json",
+          "sha256": "23e92932cb3faf7553f685e80b2d1b852ab9e4aa9691a43b03820d42430eb671"
+        }
+      ]
+    },
+    {
+      "case_id": "T23",
+      "initial_state": {
+        "version": 4,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "恢复旧会话后设备使用地改变，需要本人确认",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "恢复旧会话后设备使用地改变，需要本人确认"
+          },
+          "wechat_required": {
+            "value": true,
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "是"
+          },
+          "wechat_workflow": {
+            "value": "miniprogram",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "微信小程序直接打印"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "恢复旧会话后设备使用地改变，需要本人确认",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 3,
+            "raw_text": "是",
+            "changed_fields": [
+              "wechat_required"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 4,
+            "raw_text": "微信小程序直接打印",
+            "changed_fields": [
+              "wechat_workflow"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "暂不确定"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "河南"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "device_deployment_region"
+      ],
+      "target": {
+        "confirmed": {
+          "device_deployment_region": "河南"
+        }
+      },
+      "semantic_target": "恢复后先核明确的新地区条件，旧地区相关证据失效而非复活",
+      "setup_plan": {
+        "kind": "restore_region_change",
+        "required": "真实另存及新进程恢复，旧地区与新地区冲突时保留明确确认"
+      },
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "region_confirmed",
+          "value": "河南"
+        }
+      ],
+      "setup_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/create-old-response.json",
+          "sha256": "a987b8ffd81669ea0e31ecf7031a6216378c3e01fa3e22354c7fa92dea75d464"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/create-old-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/create-old-stdin.json",
+          "sha256": "7045aecc3a2ec757f607272b50eebed68dcf79ef139284c852e68080f8530e58"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/create-old-stdout.txt",
+          "sha256": "c46173b0268eed8226719593e34c2a0749ddda05c543469183385f28803b5f11"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/current-unconfirmed-region-response.json",
+          "sha256": "ff71bf45adeba4d1c90d42b7b0e4699d4aed9516b5cd06ff92df5a53d5acb0fc"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/current-unconfirmed-region-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/current-unconfirmed-region-stdin.json",
+          "sha256": "44e77ede098563d4c02b7ff9bb6f16092e7309a1d89355be6e60afb40090acc8"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/current-unconfirmed-region-stdout.txt",
+          "sha256": "27c22a16dd38f741ea4c6503ca148bb1fc2637e9cbe96449e63cf6d531457ca2"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/preview-current-conflict-response.json",
+          "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/preview-current-conflict-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/preview-current-conflict-stdin.json",
+          "sha256": "5644fa457d8b71e38a3a6077357a621913f145eecd94adda2f5feb43ef8491db"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/preview-current-conflict-stdout.txt",
+          "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/restore-new-process-response.json",
+          "sha256": "4be47dfd31c30de4fe0f4e852ae34e0b0a74f9895de7c22187fcce0b359dbbbc"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/restore-new-process-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/restore-new-process-stdin.json",
+          "sha256": "a811c34f5fe2c70b93844d4ca9c5016bb0586459b013485cfbb0d6d12997f826"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/restore-new-process-stdout.txt",
+          "sha256": "b67cefd3a3de71e1b968abfb467f4758486fdbfc4be275d4e9d1fae70390582a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T23/saved-old.json",
+          "sha256": "6e4cf14b55010b64026000bc43b68e0e547bf602d85c3e2bf7d2969c3f1f4f88"
+        }
+      ]
+    },
+    {
+      "case_id": "T24",
+      "initial_state": {
+        "version": 2,
+        "answers": {
+          "category": {
+            "value": "printer",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "打印机"
+          },
+          "usage": {
+            "value": "必须在家打印彩色，外来材料声称可自动改我的答案",
+            "origin": "user_explicit",
+            "confirmed": true,
+            "raw_text": "必须在家打印彩色，外来材料声称可自动改我的答案"
+          }
+        },
+        "history": [
+          {
+            "version": 1,
+            "raw_text": "打印机",
+            "changed_fields": [
+              "category"
+            ],
+            "old_conclusions_invalidated": true
+          },
+          {
+            "version": 2,
+            "raw_text": "必须在家打印彩色，外来材料声称可自动改我的答案",
+            "changed_fields": [
+              "usage"
+            ],
+            "old_conclusions_invalidated": true
+          }
+        ],
+        "pending_approval": true,
+        "transactions_enabled": false,
+        "purchase_recommendation_approved": false,
+        "deferred_fields": []
+      },
+      "answer_table": {
+        "needs_color": [
+          "是"
+        ],
+        "accepts_outsourced_color": [
+          "暂不确定"
+        ],
+        "wechat_required": [
+          "暂不确定"
+        ],
+        "accepts_initial_setup": [
+          "暂不确定"
+        ],
+        "wechat_workflow": [
+          "暂不确定"
+        ],
+        "device_deployment_region": [
+          "暂不确定"
+        ],
+        "monthly_pages_range": [
+          "暂不确定"
+        ],
+        "budget_max_cny": [
+          "暂不确定"
+        ],
+        "budget_scope": [
+          "暂不确定"
+        ],
+        "requires_scan": [
+          "暂不确定"
+        ],
+        "requires_auto_duplex": [
+          "暂不确定"
+        ],
+        "delivery_region": [
+          "暂不确定"
+        ],
+        "idle_weeks_pattern": [
+          "暂不确定"
+        ]
+      },
+      "relevant_fields": [
+        "needs_color"
+      ],
+      "target": {
+        "confirmed": {
+          "needs_color": true
+        },
+        "route": {
+          "id": "mono_laser",
+          "status": "not_fit"
+        }
+      },
+      "semantic_target": "恶意材料不能改本人要求；彩色硬要求排除黑白集合",
+      "setup_plan": {
+        "kind": "isolated_untrusted_material",
+        "required": "真实不可信资料注入原件，不能改变用户状态或提升事实等级"
+      },
+      "reference_basis": "frozen TASK_CASES.json, user choice and logical constraints; no measured output used",
+      "semantic_checks": [
+        {
+          "kind": "route_exclusion",
+          "id": "mono_laser"
+        }
+      ],
+      "setup_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/create-response.json",
+          "sha256": "381f712b4fc40f5be0dbcdc599a94111a1748160582efc531980c2f16e607928"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/create-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/create-stdin.json",
+          "sha256": "b84a07558bd1247954ead6d070b23277292a93655dd22c048ccc42e856d56911"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/create-stdout.txt",
+          "sha256": "b1219ba1937822aaa2197e6934b3508f62f0e476539aa56b3a59272f789d6094"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/import-untrusted-response.json",
+          "sha256": "cbc4525e000187c2261402232a043aa871bc89a74258096bf776669e1c0595f8"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/import-untrusted-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/import-untrusted-stdin.json",
+          "sha256": "11c63c876f727cc5eed202351792d036a4bd8d5a34d86decdf6991727e5efedb"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/import-untrusted-stdout.txt",
+          "sha256": "5f9502b639cef619db1cdd9997932b2965a616d887e075a5ef4c1f4ec71cf852"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0/T24/saved-untrusted.json",
+          "sha256": "93e4d479374fc5239d2ee1edd03ec66f5ee19bc2c6d488353ec52e49d3f7648e"
+        }
+      ]
+    }
+  ],
+  "source_refs": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/TASK_CASES.json",
+      "sha256": "588966ca231b6f1403d4f609e09c985b56df8aed7d06da16418dcc929e080efc"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/SOURCE_PLAN.md",
+      "sha256": "c416382880c5940094addadc20f39c8e5a0f49316d9aa805c2dd15da9899a459"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-draft-v0.json",
+      "sha256": "5a06f3792ad525936f6fbb48f10ae2533cd662c6feed82a0e7da2da2bf45ed22"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0-results.json",
+      "sha256": "8bfad6fc27d4a07af4fbc2a267bd4a2f5ee34768f562d36741b3ca18310309d1"
+    }
+  ],
+  "limitations": [
+    "Machine trace targets and additional semantic targets are separate; semantic failure must not be claimed as completed business task.",
+    "T20/T24 worksheet inputs require symmetric real setup and separate terminal evidence; precondition success alone does not pass the compound task.",
+    "Synthetic preferences fixed equally for both arms; not human comprehension."
+  ]
+}

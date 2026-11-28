@@ -1,0 +1,29 @@
+{
+  "errors": [
+    "missing meaningful REPORT.md",
+    "missing meaningful COMPARISON.md",
+    "missing meaningful USAGE.md",
+    "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journeys.json:FileNotFoundError",
+    "missing schema/baseline",
+    "require exactly J01-J12",
+    "completion/core/native threshold not met",
+    "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-summary.json:FileNotFoundError",
+    "journey raw digest mismatch",
+    "generator digest mismatch",
+    "summary count mismatch:completed",
+    "summary count mismatch:core_completed",
+    "summary count mismatch:java_event_completed",
+    "missing operations.jsonl including empty 0-call ledger",
+    "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/active-time.json:FileNotFoundError",
+    "missing/over-budget active work",
+    "repair round limit/missing record"
+  ],
+  "counts": {
+    "completed": 0,
+    "core_completed": 0,
+    "java_event_completed": 0,
+    "reads": 0,
+    "queries": 0,
+    "active_seconds": 0
+  }
+}

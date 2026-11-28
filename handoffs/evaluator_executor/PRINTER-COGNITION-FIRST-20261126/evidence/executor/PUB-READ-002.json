@@ -1,0 +1,28 @@
+{
+  "id": "PUB-READ-002",
+  "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+  "title": "Our Printing Tests: Cost-Per-Print",
+  "source_ref": "turn292908view0",
+  "updated": "2021-09-21",
+  "author": "Daniel V. Dijamco",
+  "result": "method_page_read",
+  "observations": [
+    {
+      "locator": "Our Tests; Price Of Black Cartridges; Black Text Document Cost-Per-Print, lines 65-98",
+      "paraphrase": "同一测试台测得的估算页产量与评测时耗材建议零售价用于计算单页耗材成本。价格时点与覆盖率、使用频率会影响结果。"
+    },
+    {
+      "locator": "Costs Not Related To Printing; What's Missing?, lines 54-64, 162-165",
+      "paraphrase": "喷墨清洁耗墨与激光鼓组件属于维护成本；该方法没有把这些维护费用和长期可靠性纳入实测成本。不能据此作长期总费用承诺。"
+    },
+    {
+      "locator": "lines 15, 192-193",
+      "paraphrase": "网站披露会员和联盟收入；样品主要购自美国。仅作为比较方法参考，不外推国内型号、价格、适用性或可靠性。"
+    }
+  ],
+  "limits": [
+    "页面为2021年方法说明，不宣称是2026最新版本",
+    "专业方法参考，待独立复核，不是厂商型号事实",
+    "未采集产品报价、排名或完整原文"
+  ]
+}

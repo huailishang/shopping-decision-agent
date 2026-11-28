@@ -1,0 +1,58 @@
+{
+  "task_id": "PRINTER-COGNITION-FIRST-20261126",
+  "state": "EXECUTING",
+  "next_role": "Executor",
+  "checkpoint": "first implementation slice; not formal L2 submission",
+  "guide": {
+    "passed": 3,
+    "total": 3
+  },
+  "context": {
+    "passed": 2,
+    "total": 2
+  },
+  "focused_tests": {
+    "passed": 3,
+    "total": 3
+  },
+  "scope": {
+    "phase": "post",
+    "checks": {
+      "head_matches": true,
+      "index_empty": true,
+      "index_matches": true,
+      "manifest_matches": true,
+      "protected_unchanged": true
+    },
+    "protected_count": 3651,
+    "changed_protected_paths": [],
+    "changed_product_paths": [
+      "desktop/ShoppingDecisionDesktop.java",
+      "shopping_decision/action_ranking.py",
+      "shopping_decision/chat_bridge.py",
+      "shopping_decision/cognition_comparison.py",
+      "shopping_decision/cognition_guide.py",
+      "shopping_decision/context_builder.py",
+      "shopping_decision/decision_worksheet.py",
+      "tests/test_cognition_guide.py"
+    ],
+    "baseline_sha256": "13113b9d7d335b7a16993c31fc5ae2eda3347a365008f6b600f5b2577cd8a751"
+  },
+  "public_query": 1,
+  "public_read": 2,
+  "real_model_calls": 0,
+  "remaining": [
+    "Complete typed user-confirmed use factor and downstream action changes",
+    "Complete source-claims and user guide/parameter content",
+    "Actual Java event chains and model context/receipt adversarial tests",
+    "Fix carried maintenance/price/consumable actions",
+    "Full 20 journeys, fair comparison, all 13 L2 gates and delivery artifacts"
+  ],
+  "limitations": [
+    "Source method read successfully but independent evaluation pending",
+    "No formal gate or acceptance claimed",
+    "Current time interval is session elapsed, not evidence of hours of effective work"
+  ],
+  "session_elapsed_seconds": 503.03297,
+  "recorded_at": "2026-11-27T11:27:42.817866+08:00"
+}

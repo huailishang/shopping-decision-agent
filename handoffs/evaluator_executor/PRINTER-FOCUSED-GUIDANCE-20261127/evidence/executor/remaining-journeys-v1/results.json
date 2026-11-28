@@ -1,0 +1,242 @@
+{
+  "cases": [
+    {
+      "id": "F09",
+      "core": true,
+      "completed": true,
+      "route": "stdin_and_controlled_transport",
+      "before": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/before-response.json",
+        "sha256": "ffc52c8fe110db21eba26b79cd085edeff5084625b54538d82e19d2bae0947b6"
+      },
+      "after": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/fixture-stale.json",
+        "sha256": "27ff5f0d0bb4737c6516ab210d1c06093db97e4a3030a82f349a5dbc81495ea4"
+      },
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/before-response.json",
+          "sha256": "ffc52c8fe110db21eba26b79cd085edeff5084625b54538d82e19d2bae0947b6"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/before-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/before-stdin.json",
+          "sha256": "ea6c209ff1cf779d4195c7b58aef27fb397121a095c8c67a6dc8834a9e46aac9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/before-stdout.txt",
+          "sha256": "c8b79fe605030f0688b2dc28ccaf9bf68c3cada31658c966deef0b57dc27ecff"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/checks.json",
+          "sha256": "e6adcede88c78b9ab5f011cbcf7255dc8cd53673805a8b8f52a98dbe18279dad"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/fixture-accepted.json",
+          "sha256": "bd7afbc47cdb1ad2fec72f9598ebdca53abef8da8b2468e0cfc1f89adb34e5ed"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/fixture-input.json",
+          "sha256": "13d700832c869cbf981bf8dd5a50352bb4f2c26ea45a5f2f2d9eb9cd29f9ffbf"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/fixture-rule.json",
+          "sha256": "8054823a5a32994b77959381b89cb3d5d5f90ed09570abedfeb2f122c2ae00a6"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/fixture-stale.json",
+          "sha256": "27ff5f0d0bb4737c6516ab210d1c06093db97e4a3030a82f349a5dbc81495ea4"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/forged-status-rejected-response.json",
+          "sha256": "cfa3d878c9b4f35f841d7258bf0346189946c57b27a549d3d3b08281da693e85"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/forged-status-rejected-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/forged-status-rejected-stdin.json",
+          "sha256": "16a92024071be81ab15baba1419d94823f6ed5faea79d2ec442ed7690fa011b4"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/forged-status-rejected-stdout.txt",
+          "sha256": "8a6f123a7cee4def91b70e6189a3a57506070d9c019b6acfd25da57baf1f588f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/pending-foreign-ad-response.json",
+          "sha256": "0418d6c8b19e1a54c53a6719fc661a8ff73a1766c9473adf2a988a4315426fa2"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/pending-foreign-ad-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/pending-foreign-ad-stdin.json",
+          "sha256": "fdfc1c13f36919d6e17f9ce74af80b7e74be3636f1f38705faa3a3a8509cedb9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F09/pending-foreign-ad-stdout.txt",
+          "sha256": "4c3598117bbf0c9d34289b2a6af88615e1fbd892641fa67cf2821d7f523bec1a"
+        }
+      ],
+      "checks": {
+        "source_pending": true,
+        "claims_unchanged": true,
+        "user_unchanged": true,
+        "forged_rejected": true,
+        "authorization": true,
+        "valid_fixture": true,
+        "stale_rejected": true,
+        "rule_actions_preserved": true,
+        "no_external_calls": true,
+        "fixture_safe": true
+      }
+    },
+    {
+      "id": "F10",
+      "core": true,
+      "completed": true,
+      "route": "stdin",
+      "before": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/before-response.json",
+        "sha256": "8227630d438c9740c1953d5edf6b879744b26144e1c54ce83cc441716e493569"
+      },
+      "after": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/after-response.json",
+        "sha256": "89f3ab7872f7cb7afcbb46de9169e8e3cb76ba24ade0690dafd3e5ffa2f60317"
+      },
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/after-response.json",
+          "sha256": "89f3ab7872f7cb7afcbb46de9169e8e3cb76ba24ade0690dafd3e5ffa2f60317"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/after-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/after-stdin.json",
+          "sha256": "f94f0431eae4d0e6904327396d4a0e004675e1d2941c41c4875ca01b36aa26a5"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/after-stdout.txt",
+          "sha256": "0322113b65919884c89b79953fe308837dc4661e65f2a21826c2c1d3854a6975"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/before-response.json",
+          "sha256": "8227630d438c9740c1953d5edf6b879744b26144e1c54ce83cc441716e493569"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/before-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/before-stdin.json",
+          "sha256": "c2d0d6c1b9032ed42f2c01ec5dc279d36ed9e8293c92774590cde63f2614abf4"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/before-stdout.txt",
+          "sha256": "20a6ed738620b687263e3ddbd9d6f4437db4efb88ed24ce10a9ef28800427bd7"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/checks.json",
+          "sha256": "c1bf70a853aedee0ca21824abcd614d2efcca202b30cbe8b8c488b466fe4ccf7"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/create-response.json",
+          "sha256": "7f2b83436e21ec06d95c7f6bcc22a7bf5d9f8b1cf02a678c380f531fa59e0302"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/create-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/create-stdin.json",
+          "sha256": "ea6c209ff1cf779d4195c7b58aef27fb397121a095c8c67a6dc8834a9e46aac9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/create-stdout.txt",
+          "sha256": "c717b0916e2268dedf601d8954bed41737d87f5659b596171d46487b6c2921f9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/hardware-response.json",
+          "sha256": "76ab869c25e5ca144fe8d1cb30295d82437ecf2dc09f498423f028e41b255b0f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/hardware-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/hardware-stdin.json",
+          "sha256": "d65afd4b16d92ef7d63e8c1bc614d542c308e30b5d7567903bb47ff64a1a14dd"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/hardware-stdout.txt",
+          "sha256": "c5c4a210dde6a22adf1e1e9979d79cc7977ae774140b05e951ce284c1b1484d0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/maintenance-response.json",
+          "sha256": "1c147a0f8a837f30f4529fb629c47a3bd47b34e7800096e8b7ea8054d8324c89"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/maintenance-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/maintenance-stdin.json",
+          "sha256": "6c9cf764e6fe4ce7587b5004d043366b067157b1522704207b689720e6cdf87e"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/maintenance-stdout.txt",
+          "sha256": "ec460f80a158ce29f52e4e37ba113db696d2eba5d69927924927fef6458bcf21"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/stale-cost-rejected-response.json",
+          "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/stale-cost-rejected-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/stale-cost-rejected-stdin.json",
+          "sha256": "bf4b08ce7a42479c196bd0f710b73c4aee7b8b5df14406d76569a746bad8165e"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/stale-cost-rejected-stdout.txt",
+          "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/starter-response.json",
+          "sha256": "0ac27f695c9b0da74a533117c9049a8393aadba34629ccf857fad0c6b2ad01f0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/starter-stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/starter-stdin.json",
+          "sha256": "13ba278b11019e9215d5d2c2556175c251c0c7ac839a240893f9cbb157400efb"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/remaining-journeys-v1/F10/starter-stdout.txt",
+          "sha256": "a27fca5276e94b6bd995976a881fdaf6dd682af2d5d1878ac9cac1f8614d427e"
+        }
+      ],
+      "checks": {
+        "baseline_hp": true,
+        "maintenance": true,
+        "hardware": true,
+        "starter": true,
+        "stale_cost_rejected": true,
+        "all_excluded": true,
+        "no_winner": true,
+        "authorization": true
+      }
+    }
+  ]
+}

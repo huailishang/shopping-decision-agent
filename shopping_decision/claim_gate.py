@@ -45,6 +45,10 @@ def _source_assessment(fact, source, candidate_id, request, bundle):
     price is usable as a conditional rule input only with an exact region,
     seller/SKU and a bounded quote; live_price_verified remains false.
     """
+    if source.get("snapshot_required") or "snapshot" in source:
+        from .evidence_snapshot import snapshot_valid
+        if not snapshot_valid(source,fact):
+            return "snapshot_unverified", False, "必要原文、版本或命题绑定失效"
     url = source.get("url", "")
     host = urlsplit(url).hostname or ""
     kind = fact.get("kind", "")
@@ -59,8 +63,17 @@ def _source_assessment(fact, source, candidate_id, request, bundle):
     models = source.get("scope_models")
     if models is None:
         models = [source["model_scope"]] if source.get("model_scope") else []
-    if not isinstance(models, list) or candidate_id not in models:
+    if (not isinstance(models, list) or not models or candidate_id not in models
+            or any(not isinstance(m,str) or not m.strip() or m != m.strip() for m in models)):
         return "model_scope_unverified", False, "来源没有绑定准确候选型号"
+    if "scope_models" in fact:
+        scope = fact["scope_models"]
+        if (not isinstance(scope,list) or not scope or candidate_id not in scope
+                or any(not isinstance(m,str) or not m.strip() or m != m.strip() for m in scope)):
+            return "model_scope_unverified", False, "事实没有绑定准确候选型号"
+    observed = datetime.fromisoformat(source["observed_at"].replace("Z","+00:00"))
+    if observed.date() > date.fromisoformat(bundle["as_of"]):
+        return "observation_time_unverified", False, "观察时间晚于当前研究日期"
     if source.get("scope_region") != bundle["region"]:
         return "region_scope_unverified", False, "来源没有绑定需求地区"
     if _price_requirement(request):
@@ -148,6 +161,7 @@ def publish_checked_comparison(bundle, model_result=None, *, origin="rule"):
                 evidence.append({"fact_id": normalized["fact_id"],
                                  "source_id": normalized["source_id"],
                                  "source_grade": normalized["grade"],
+                                 "evidence_sha256": digest({"fact":fact,"source":source}),
                                  "admitted": normalized["admitted"],
                                  "limit": normalized["limitations"]["gate_reason"]})
             admissible = [e for e in evidence if e["admitted"]]
@@ -205,19 +219,21 @@ def publish_checked_comparison(bundle, model_result=None, *, origin="rule"):
             elif _price_requirement(request) and not all(
                     facts[fid].get("kind") == "live_quote" for fid in supporting):
                 add_action("verify_price", candidate_id, request_id)
-        hard = [row["status"] for row in rows if requirements[row["requirement_id"]]["importance"] == "hard"]
-        state = ("excluded_for_research" if "failed" in hard else
-                 "pending_evidence" if any(s in ("unknown", "conflict") for s in hard)
-                 else "eligible_for_research")
+        from .decision_actions import disposition
+        state = disposition(rows, bundle["requirements"])
         assessments.append({"candidate_id": candidate_id, "research_status": state,
                             "comparisons": rows})
-    return {"schema_version": 1, "publication_schema": "verified-claims/v1",
+    public = {"schema_version": 1, "publication_schema": "verified-claims/v1",
             "origin": origin, "input_sha256": calculated["input_sha256"],
             "claims": claims, "assessments": assessments,
             "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
             "next_actions": actions, "raw_model_text_published": False,
             "manual_decision_gain_accepted": False,
             **{flag: False for flag in SAFE_FLAGS}}
+    from .decision_actions import order_actions, bind_decision
+    public["next_actions"] = order_actions(public, bundle["requirements"])
+    bind_decision(public, bundle["requirements"], bundle)
+    return public
 
 
 def validate_research_claims(matrix):

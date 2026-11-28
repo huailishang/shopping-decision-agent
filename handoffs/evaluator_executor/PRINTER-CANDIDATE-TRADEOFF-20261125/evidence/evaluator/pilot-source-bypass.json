@@ -1,0 +1,31 @@
+{
+  "intervention": "remove observed_at from every source; other inputs unchanged",
+  "publication_states": [
+    [
+      "Brother HL-L1238W",
+      "pending_evidence"
+    ],
+    [
+      "HP M232dw",
+      "pending_evidence"
+    ]
+  ],
+  "pilot_mode": "rules_only",
+  "pilot_reason": "all_candidates_excluded",
+  "pilot_states": [
+    [
+      "Brother HL-L1238W",
+      "excluded_for_research"
+    ],
+    [
+      "HP M232dw",
+      "excluded_for_research"
+    ]
+  ],
+  "action_candidates": [
+    {
+      "id": "search_alternatives",
+      "kind": "research"
+    }
+  ]
+}

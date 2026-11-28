@@ -1,0 +1,113 @@
+[
+  {
+    "usage": "把老人手写的旧家谱变成电脑文件",
+    "wanted": "requires_scan",
+    "asked": false,
+    "trace": [
+      {
+        "turn": 0,
+        "field": "needs_color",
+        "prompt": "必须在家打印彩色吗？",
+        "safe": true
+      },
+      {
+        "turn": 1,
+        "field": "wechat_required",
+        "prompt": "微信打印是必须条件，还是更喜欢但非必须？",
+        "safe": true
+      },
+      {
+        "turn": 2,
+        "field": "monthly_pages_range",
+        "prompt": "每月大约打印多少页？可以输入区间。",
+        "safe": true
+      },
+      {
+        "turn": 3,
+        "field": "budget_max_cny",
+        "prompt": "这次购买主机的预算上限是多少元？",
+        "safe": true
+      },
+      {
+        "turn": 4,
+        "field": "",
+        "prompt": "已记录当前明确条件；可点击下方条件修改，或主动预览审计。",
+        "safe": true
+      }
+    ]
+  },
+  {
+    "usage": "两面都要印，家人不会自己翻纸",
+    "wanted": "requires_auto_duplex",
+    "asked": false,
+    "trace": [
+      {
+        "turn": 0,
+        "field": "needs_color",
+        "prompt": "必须在家打印彩色吗？",
+        "safe": true
+      },
+      {
+        "turn": 1,
+        "field": "wechat_required",
+        "prompt": "微信打印是必须条件，还是更喜欢但非必须？",
+        "safe": true
+      },
+      {
+        "turn": 2,
+        "field": "monthly_pages_range",
+        "prompt": "每月大约打印多少页？可以输入区间。",
+        "safe": true
+      },
+      {
+        "turn": 3,
+        "field": "budget_max_cny",
+        "prompt": "这次购买主机的预算上限是多少元？",
+        "safe": true
+      },
+      {
+        "turn": 4,
+        "field": "",
+        "prompt": "已记录当前明确条件；可点击下方条件修改，或主动预览审计。",
+        "safe": true
+      }
+    ]
+  },
+  {
+    "usage": "暑假结束后收柜子里，到寒假才用",
+    "wanted": "idle_weeks_pattern",
+    "asked": false,
+    "trace": [
+      {
+        "turn": 0,
+        "field": "needs_color",
+        "prompt": "必须在家打印彩色吗？",
+        "safe": true
+      },
+      {
+        "turn": 1,
+        "field": "wechat_required",
+        "prompt": "微信打印是必须条件，还是更喜欢但非必须？",
+        "safe": true
+      },
+      {
+        "turn": 2,
+        "field": "monthly_pages_range",
+        "prompt": "每月大约打印多少页？可以输入区间。",
+        "safe": true
+      },
+      {
+        "turn": 3,
+        "field": "budget_max_cny",
+        "prompt": "这次购买主机的预算上限是多少元？",
+        "safe": true
+      },
+      {
+        "turn": 4,
+        "field": "",
+        "prompt": "已记录当前明确条件；可点击下方条件修改，或主动预览审计。",
+        "safe": true
+      }
+    ]
+  }
+]

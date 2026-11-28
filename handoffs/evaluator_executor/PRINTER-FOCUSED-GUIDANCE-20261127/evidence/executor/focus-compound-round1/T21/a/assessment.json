@@ -1,0 +1,52 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "07b8d8d272ee7513362d98f9a5ba3accebc1ad1374003e127b195d45efaff863",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/replay.json",
+      "sha256": "3cf8fdf515049a9c5d65bcbf88949ced2242f2260551b31268410114af265447"
+    }
+  },
+  "metrics": {
+    "completed": false,
+    "answers": 4,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 4
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:usage_research": false,
+    "authorization_false": true,
+    "setup:pending": true,
+    "setup:unchanged": true
+  },
+  "setup_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-response.json",
+      "sha256": "24389848ab9d33d1fe1428e854ddf2e13fb2e9b7207be860132a8890339ffc26"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-stdin.json",
+      "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-stdout.txt",
+      "sha256": "41322230ac3ac90434c49a23180c439bbe83e2928394a1c7e671ea4d77026798"
+    }
+  ],
+  "semantic_completed": false,
+  "terminal": "stalled"
+}

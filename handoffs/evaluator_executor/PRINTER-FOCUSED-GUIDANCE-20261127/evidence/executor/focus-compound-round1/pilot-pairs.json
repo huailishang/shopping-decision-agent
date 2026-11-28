@@ -1,0 +1,1065 @@
+{
+  "reference_artifact": {
+    "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v2.json",
+    "sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db"
+  },
+  "pairs": [
+    {
+      "case_id": "T20",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/replay.json",
+            "sha256": "0d10a262aedfa44a239dcb4f4569cb31cd0f2082707efdc4d732121063ed6abf"
+          }
+        },
+        "metrics": {
+          "completed": false,
+          "answers": 4,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 4
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:usage_research": true,
+          "authorization_false": true,
+          "setup:zero": true,
+          "setup:unknown": true,
+          "setup:unchanged": true,
+          "stale_rejected": true,
+          "current_state": true,
+          "safe": true,
+          "explicit_zero_and_unknown": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/create-response.json",
+            "sha256": "ac2e94879d35ff3f6d35c1dcf27ad0c89c796adf6568a94aeba559417dc7c41c"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/create-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/create-stdin.json",
+            "sha256": "0c83fd64767b8f3fd9195bac826042ead1bea682e82a66fd68af3ae6fa20647a"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/create-stdout.txt",
+            "sha256": "5df6c6db838c5e6ee3b92035ef6594c878d938aa63312858ed6702c9a005b7b9"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/preview-response.json",
+            "sha256": "1467d675dae51c2eb338753133619dea1d27e12928958ff48a0d4d30a87a83c7"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/preview-stdin.json",
+            "sha256": "03a68f47d039a7e31c16a9cd545fda589a553ac6816bb98730777dd27e340fb2"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/preview-stdout.txt",
+            "sha256": "8687f7ed90b6647af2fe27286a5206a7fd65f98ca2a323aab5ef527fc487777f"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/set-zero-response.json",
+            "sha256": "c82b46aa6cb894e8f5e9c9d8462fa8458acdeb552ad77c8b9f88a0e952378cf9"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/set-zero-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/set-zero-stdin.json",
+            "sha256": "27d8e6c61b38128de2cc2817f7e771a9ef178f1fa9bfc640b9406740e0f5fbef"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/set-zero-stdout.txt",
+            "sha256": "17a6f94f605e5c6cbc8f4e7df1ae9da0a69d7a367fbfedf1065d76e555758669"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-explicit-zero-response.json",
+            "sha256": "dd2dfa671ebd1d73450640a2bff473566ded2232108a1e84044c2e1d09610e73"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-explicit-zero-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-explicit-zero-stdin.json",
+            "sha256": "ce26397c65b6733b7dd4c7d46ad9f8fcc9187c3a3471f7961477ef8842935685"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-explicit-zero-stdout.txt",
+            "sha256": "330412c20450d2d46d9e8ec1bddf0a424a06dc779d9ad9b9c6cde0878a2ae6c6"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-old-preview-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-old-preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-old-preview-stdin.json",
+            "sha256": "e6838774935bd06d8412f3a0200239c7e52e384ef1297166480652101eb2a3b7"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-old-preview-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-rebind-response.json",
+            "sha256": "0932d3b507ea4f65f8c3d7fd9d566ec75010f0948cda535ad3c66e0f2033f95d"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-rebind-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-rebind-stdin.json",
+            "sha256": "0a4e48c145dd4188eb6666188d5b59d578d02f79c0d7c95f6bfbbd975f423e7e"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/a/compound/terminal-rebind-stdout.txt",
+            "sha256": "eafb1356a0bbe2f9728bcf8261619fc30948fd35c5a3c8637b509e162d781aaf"
+          }
+        ],
+        "semantic_completed": false,
+        "terminal": "stalled",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/replay.json",
+            "sha256": "9cbc8d02300d5393a924a38dacee836e415b32955075ba76304157b4938a34e7"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:usage_research": true,
+          "authorization_false": true,
+          "setup:zero": true,
+          "setup:unknown": true,
+          "setup:unchanged": true,
+          "stale_rejected": true,
+          "current_state": true,
+          "safe": true,
+          "explicit_zero_and_unknown": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/create-response.json",
+            "sha256": "a86b4a46989e700a4376b0ad5e3ba9c951e866914c28588f5922ed1e6b94b93a"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/create-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/create-stdin.json",
+            "sha256": "0c83fd64767b8f3fd9195bac826042ead1bea682e82a66fd68af3ae6fa20647a"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/create-stdout.txt",
+            "sha256": "87054b84cf63aacf3145b1d03492ec0bf785636139283c838dc289b168318369"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/preview-response.json",
+            "sha256": "a1487191f2f19436b206c238a341b8e1251eff20adf0800f8eb76d9d5f1127f4"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/preview-stdin.json",
+            "sha256": "42866beca0cd9f22653530a5ba33f73e6095fa714c26a363e65ad47526052304"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/preview-stdout.txt",
+            "sha256": "e387a702cde2cf4565c6390180924e432d8e6f675aa056a98abc0fd18eff4d5a"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/set-zero-response.json",
+            "sha256": "3d6721f6cf1d44f8325e7ccd7b7db38c8e9eb34db09672b8d717d58a6e3d25a5"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/set-zero-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/set-zero-stdin.json",
+            "sha256": "9f61206b041298b2bd3e73347913a3162fd4ebb1f6f263546b05e77971b7d26a"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/set-zero-stdout.txt",
+            "sha256": "f37528a649daf7b7b2061303509e7c3b84d9de11161452bc35f010a9d3806bf0"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-explicit-zero-response.json",
+            "sha256": "a3fa853ea7eaf6b1ddfdad4d1b53a7b7488492cc5a98763b4a554a4515423271"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-explicit-zero-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-explicit-zero-stdin.json",
+            "sha256": "dd285dd90c1d180aac3dbb768e0d8fc4379737cd7ab3c5e6017675a4248ff1f4"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-explicit-zero-stdout.txt",
+            "sha256": "f90eb06986188b7ba4760ed841b8aa5477e48908057751210ed22d4d063eaa59"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-old-preview-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-old-preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-old-preview-stdin.json",
+            "sha256": "f85399cb53eecb97e7b603bc5b295c62c87a0cc5196f7ae3ca528f38b76c118d"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-old-preview-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-rebind-response.json",
+            "sha256": "4a4514850c45a52334403fae93b96fc2971abb4534bc1ca13658612672b2d59e"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-rebind-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-rebind-stdin.json",
+            "sha256": "61164f3eccebb94dcaf4cfe63c4685c25af99c5565670db54c5d80f8458b20a8"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T20/b/compound/terminal-rebind-stdout.txt",
+            "sha256": "6c3b9d46cd7de442f8cfbee8d4083173d8ccc8a781a9beec11f2b8acfd3204eb"
+          }
+        ],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T21",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "07b8d8d272ee7513362d98f9a5ba3accebc1ad1374003e127b195d45efaff863",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "07b8d8d272ee7513362d98f9a5ba3accebc1ad1374003e127b195d45efaff863",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/replay.json",
+            "sha256": "3cf8fdf515049a9c5d65bcbf88949ced2242f2260551b31268410114af265447"
+          }
+        },
+        "metrics": {
+          "completed": false,
+          "answers": 4,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 4
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:usage_research": false,
+          "authorization_false": true,
+          "setup:pending": true,
+          "setup:unchanged": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-response.json",
+            "sha256": "24389848ab9d33d1fe1428e854ddf2e13fb2e9b7207be860132a8890339ffc26"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-stdin.json",
+            "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/a/compound/pending-source-stdout.txt",
+            "sha256": "41322230ac3ac90434c49a23180c439bbe83e2928394a1c7e671ea4d77026798"
+          }
+        ],
+        "semantic_completed": false,
+        "terminal": "stalled",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "07b8d8d272ee7513362d98f9a5ba3accebc1ad1374003e127b195d45efaff863",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/b/replay.json",
+            "sha256": "11ef05315c25ae2713621ca6c36e20daa37eb87221da4f8a22d78720934296db"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:usage_research": true,
+          "authorization_false": true,
+          "setup:pending": true,
+          "setup:unchanged": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/b/compound/pending-source-response.json",
+            "sha256": "75b7a462674651e693c2d122248a3cb525ed0db92f87ce61836a325f78d7bf04"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/b/compound/pending-source-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/b/compound/pending-source-stdin.json",
+            "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T21/b/compound/pending-source-stdout.txt",
+            "sha256": "7a86694dae36fead84f180b524f490d7fee822638cc792374f1baddf5d834ae1"
+          }
+        ],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T22",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "8965636524df6ef1083eb1f5b2a3eaa2910023985636099e6021014e6aeb5e68",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "8965636524df6ef1083eb1f5b2a3eaa2910023985636099e6021014e6aeb5e68",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/a/replay.json",
+            "sha256": "c231dfbe665a9266ce1ee88f17af745cb7a741b18afee7bd9e5f16d2995215a0"
+          }
+        },
+        "metrics": {
+          "completed": false,
+          "answers": 4,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 4
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:source_pending": true,
+          "authorization_false": true,
+          "setup:pending": true,
+          "setup:unchanged": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/a/compound/pending-source-response.json",
+            "sha256": "72291f216f6651ef05f4f1a35579e636053ebd4801ef2c558784bf96ef00b896"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/a/compound/pending-source-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/a/compound/pending-source-stdin.json",
+            "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/a/compound/pending-source-stdout.txt",
+            "sha256": "55b1d3f39dbbec8417821ad899923e19a322162999a87dcb1418e55fcd33b3a3"
+          }
+        ],
+        "semantic_completed": false,
+        "terminal": "stalled",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "8965636524df6ef1083eb1f5b2a3eaa2910023985636099e6021014e6aeb5e68",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/replay.json",
+            "sha256": "5d1c077447b3c7dc450d4d8753375996523b3be264d044cb91840c9c900a95c7"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:source_pending": true,
+          "authorization_false": true,
+          "setup:pending": true,
+          "setup:unchanged": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-response.json",
+            "sha256": "66e188dcea7bcf13920e7a7e9d6c3eaef37d301b15ef353b12b965f810227b00"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-stdin.json",
+            "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T22/b/compound/pending-source-stdout.txt",
+            "sha256": "2988802b0f15b80ff7d3d769c9af800ef1b437f4d9c308d0c010c19557b83229"
+          }
+        ],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T23",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/replay.json",
+            "sha256": "acd3bd642e568cfdba2a1985a878809eea8dc3be5bef5f905097170b17da1c6a"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 3,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 2
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:region_confirmed": true,
+          "authorization_false": true,
+          "setup:restore_old": true,
+          "setup:reject_conflict": true,
+          "setup:not_preconfirmed": true,
+          "stale_rejected": true,
+          "current_state": true,
+          "safe": true,
+          "new_region": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/create-old-response.json",
+            "sha256": "9891473243f8f397f6ef0b52c5a8d9f4a99352e37c178c9ec52778e81fc4b3e3"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/create-old-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/create-old-stdin.json",
+            "sha256": "7045aecc3a2ec757f607272b50eebed68dcf79ef139284c852e68080f8530e58"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/create-old-stdout.txt",
+            "sha256": "fb1b6c5b05348be86dd23a4f302e1adde111a8a433718f9d41a4604d789a7eaf"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/reject-current-conflict-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/reject-current-conflict-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/reject-current-conflict-stdin.json",
+            "sha256": "ce769afdf4a73ed7efadf355306a901912b9ace4fe687b2a6493702ab0bb209d"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/reject-current-conflict-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/restore-old-response.json",
+            "sha256": "44dbaacf29917b254458b8e20db94d52d9b48c8e2268950c87bcd46722c47604"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/restore-old-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/restore-old-stdin.json",
+            "sha256": "5f7e7b6cc8b29c039414860bd0bb06ae96120349c013fa9e695a77633547fd9d"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/restore-old-stdout.txt",
+            "sha256": "78dba538b735dbd6b63e8f00ffc384798e169bb81a4b0e53d9a4d3777bc094f3"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/saved.json",
+            "sha256": "c426f306780bf591fe273556852a068f4c3b616c6970cfdb2256de5cccd79d65"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-old-preview-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-old-preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-old-preview-stdin.json",
+            "sha256": "5bfaf1aa069e437b4f7e1a41e5be92f06568be779fd06f90d272b0cfb7a35a71"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-old-preview-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-rebind-response.json",
+            "sha256": "5b9964e995c4e5879f4c366e4fbd6af009a7b5d6acf1443b5e8a97bf89a73b53"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-rebind-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-rebind-stdin.json",
+            "sha256": "dd7ec3ad2eb9f578a554c28f5a2dbbb26e3b648e37c4651e20deb3954cb10c53"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/a/compound/terminal-rebind-stdout.txt",
+            "sha256": "cb028d05a20f1aca46566cae938d0d91bac52be082e6c09f86f551d310dc7357"
+          }
+        ],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/replay.json",
+            "sha256": "fc860d7395f7a746be0766dfbf1ea27831e83f7a2bb68850b264b26ac016f310"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 3,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 2
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:region_confirmed": true,
+          "authorization_false": true,
+          "setup:restore_old": true,
+          "setup:reject_conflict": true,
+          "setup:not_preconfirmed": true,
+          "stale_rejected": true,
+          "current_state": true,
+          "safe": true,
+          "new_region": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/create-old-response.json",
+            "sha256": "2b4c59af5eecc355e3d102bb26bd900db1e5c2bee183fed4e704b203a17dbd7b"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/create-old-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/create-old-stdin.json",
+            "sha256": "7045aecc3a2ec757f607272b50eebed68dcf79ef139284c852e68080f8530e58"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/create-old-stdout.txt",
+            "sha256": "0945c11ec1168b91423cd9149078c7e9b25c9ce6a2baa16ebcd9ba398ab71142"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/reject-current-conflict-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/reject-current-conflict-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/reject-current-conflict-stdin.json",
+            "sha256": "2e30dadaa40d6cb55a7b82c38357e8f8839b1eec5ff2f61b059b7436aa80406a"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/reject-current-conflict-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/restore-old-response.json",
+            "sha256": "f337026ea01e83a5e0f62952581dbaf5907aaa7212977737382b33d88ea8dc19"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/restore-old-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/restore-old-stdin.json",
+            "sha256": "f80befe4c6edbc5645c4b73804c6897472c7e59633ae279de15b31b63311ff51"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/restore-old-stdout.txt",
+            "sha256": "f854a565812c3aad5c9c83f2fb92034df092c0428147f3a0d6080bc2946d4d97"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/saved.json",
+            "sha256": "f525ecb9c3329c2972481981350e30fff84cae062b208c4c32bf266337354533"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-old-preview-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-old-preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-old-preview-stdin.json",
+            "sha256": "d7476a36175264c7befa923be797c9ed79e12c090822d2fa1a9e8c9c2d563ce3"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-old-preview-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-rebind-response.json",
+            "sha256": "668aef9b90da8052f5279819c85935e2098948690ae8cd38145421d6fbc664b0"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-rebind-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-rebind-stdin.json",
+            "sha256": "cb1e16afa01d5c830cb7d10fb78c7c4cbf997fe3e412d16c9caf1bd94acab91b"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T23/b/compound/terminal-rebind-stdout.txt",
+            "sha256": "16e07edc3bd77c2561fe2648cea9cf5284c393b8fc29e2567f52d0b7edbe7f80"
+          }
+        ],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T24",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/replay.json",
+            "sha256": "1d05f501d1a1277ffe9af7b38a93611c0a80e99f6dee7dc0c6ef5cefbf95c618"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route_exclusion": true,
+          "authorization_false": true,
+          "setup:pending": true,
+          "setup:unchanged": true,
+          "stale_rejected": true,
+          "current_state": true,
+          "safe": true,
+          "ad_still_pending": true,
+          "confirmed_color_preserved": true,
+          "mono_excluded": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/create-response.json",
+            "sha256": "792cab074b8ecc762d0a5017440e80a490ecd76542775bbc08c66339bcc2aecb"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/create-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/create-stdin.json",
+            "sha256": "b84a07558bd1247954ead6d070b23277292a93655dd22c048ccc42e856d56911"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/create-stdout.txt",
+            "sha256": "8bbe102f04167ea3cc186224a5034d79556b4a2c4d195d866c15ccb3ed6d76ca"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/import-ad-response.json",
+            "sha256": "3ed7531fd543a94a842b211d4a41a1afaffc28af801299e0b2d1bef10eaae5f0"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/import-ad-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/import-ad-stdin.json",
+            "sha256": "c95687b8284615ce10b0a6ef10a86882a796eb1657b5221add7819755b178e8a"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/import-ad-stdout.txt",
+            "sha256": "9d7b4775f53daf3ac100ec89fdc4f73a55860bc952206a5886bf48e7c71f81c6"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-ad-response.json",
+            "sha256": "6236be95568ab55b27626b9739f97b3bb50b3d9160aff9fb1cc895bbad2f3f2e"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-ad-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-ad-stdin.json",
+            "sha256": "9cd3d019df6534cbf438da52c21bc4c94c7779130df069d10ea59fcfe079ac53"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-ad-stdout.txt",
+            "sha256": "b046cdb1c1ba0ba1b91bd4b9688db33f01b3318630042e5b78dcaadd7cab9e8e"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-old-preview-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-old-preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-old-preview-stdin.json",
+            "sha256": "fea205495d191aa858037edd4162ca83280c36cc73ace8f095d2fe20c9158350"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-old-preview-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-rebind-response.json",
+            "sha256": "56eecb696c1b0e2ec15141c903a588cecc33dfee803359d427cc62cc4b24e058"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-rebind-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-rebind-stdin.json",
+            "sha256": "692fc5659e28acccf9b9e18db52730fef218a8702299b2c3a87ba90b58684bb8"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/a/compound/terminal-rebind-stdout.txt",
+            "sha256": "44045a27e4ac61c5d0f7bc07d19974ccfb87dd6a89b9b02683b3e04c48a23d93"
+          }
+        ],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/replay.json",
+            "sha256": "eaaae1ac0195c8f2ea017a5901a31da275d6f61a7740526206dde4f847800c28"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route_exclusion": true,
+          "authorization_false": true,
+          "setup:pending": true,
+          "setup:unchanged": true,
+          "stale_rejected": true,
+          "current_state": true,
+          "safe": true,
+          "ad_still_pending": true,
+          "confirmed_color_preserved": true,
+          "mono_excluded": true
+        },
+        "setup_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/create-response.json",
+            "sha256": "811a8c9dbedb3dea85c0ae3eaab659c1405b499ed8a72864ad70ca712c754f84"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/create-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/create-stdin.json",
+            "sha256": "b84a07558bd1247954ead6d070b23277292a93655dd22c048ccc42e856d56911"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/create-stdout.txt",
+            "sha256": "8a97c72e051600e9b966bdc50785c08d5b26442e5eeec22910f3ff884f0626d0"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/import-ad-response.json",
+            "sha256": "d64cc93b962d7af81e4b1f9e6e90cced25ed358fa4ddec5ade9dc76cda793287"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/import-ad-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/import-ad-stdin.json",
+            "sha256": "2adf9ef18c0ab0a7efb97ce29cef9cbf7d0882431ce5ed1c72cf707fe67c2c60"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/import-ad-stdout.txt",
+            "sha256": "7bc1dbf01006d51accc236d0f07a3ac24f7dea72102cbbd4dc3dcc2d21db5afc"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-ad-response.json",
+            "sha256": "c87ab484dcfb07173cb51e0fec0dc50c15442d55c1c696c06b6272bebb2ce1ec"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-ad-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-ad-stdin.json",
+            "sha256": "d03a9e4d920b550abf69357f995a137243306f87a4a89e9dab6e3bcc79ca4558"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-ad-stdout.txt",
+            "sha256": "41de6ffb324f605f5bc605c57a89541e04d900715a72a659a5e2ff8f9a66bce5"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-old-preview-response.json",
+            "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-old-preview-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-old-preview-stdin.json",
+            "sha256": "ed28263cc79ad430ea29a63a5382e9692be2033463a47c093b39975b72cf36ca"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-old-preview-stdout.txt",
+            "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-rebind-response.json",
+            "sha256": "4e113d6555adb014fba870144f608dd550b8324ea5eda35701e8a227157f73c1"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-rebind-stderr.txt",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-rebind-stdin.json",
+            "sha256": "dc358b08e6fbcb165a2cf830deb4abf261ca37f25dc42478562a841c2d5e8ea0"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-compound-round1/T24/b/compound/terminal-rebind-stdout.txt",
+            "sha256": "2a5ce71278e351f19921c109ae6c32fd89a16269185160477b66c29ebe3d2dba"
+          }
+        ],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    }
+  ],
+  "limit": "pilot subset; not final comparisons.json"
+}

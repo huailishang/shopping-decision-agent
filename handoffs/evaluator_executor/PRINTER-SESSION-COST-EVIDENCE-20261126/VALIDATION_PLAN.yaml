@@ -1,0 +1,66 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-SESSION-COST-EVIDENCE-20261126
+runtime: WSL Python3 UTF-8, repository root
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-04]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_BUSINESS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-01, AC-02, AC-03, AC-04, AC-05, AC-06]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_DELIVERY.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-01, AC-04, AC-07]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_BUSINESS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-01, AC-03, AC-06]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: [AC-01, AC-02, AC-03, AC-04, AC-05, AC-07]
+    cwd: .
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: [AC-07]
+    cwd: .
+    command: [python3, -X, utf8, scripts/audit_model_history_readonly.py, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-07
+    ac: [AC-07, AC-08]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_SCOPE.py, --phase, post]
+    expected_exit_code: 0
+    mandatory: true
+human_checks:
+  authority: EVALUATION.md
+  independent_source_reads: 6
+  paired_scenarios_min: 18
+  actual_render_chat_interventions_min: 6
+  real_model_gain_required: false
+  real_user_gain_required: false
+  reproducible_decisive_source_disposition_required: true
+  end_to_end_cost_flip_required: true
+limits:
+  effective_hours: 72
+  concentrated_repair_rounds: 3
+  public_queries: 8
+  public_reads_executor: 14
+  public_reads_evaluator: 6
+  new_model_api: 0
+  model_cli: 0
+  platform_business_api: 0
+  git_commit: false
+  git_push: false

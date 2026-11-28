@@ -1,0 +1,168 @@
+{
+  "known_active_seconds": 0,
+  "known_active_seconds_definition": "verified individually timed active-only lower bound; actual active time unknown, not zero",
+  "recorded_wall_seconds": 2365.500575,
+  "unknown_segments": [
+    {
+      "reason": "initial reads before start; minute-resolution request timestamp",
+      "upper_bound_seconds": 180,
+      "upper_bound_evidence": "initial-unknown-bound.json (reported time, independent host log unavailable)",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/initial-unknown-bound.json",
+          "sha256": "a241843ec84c8aeb8d9acfbb82f46dda14c8447ae8c1b90bcda054c86a3875aa"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/initial-session-record-original.json",
+          "sha256": "a143b0af43fa88322fc2390c6e33d63c417980c7db31ec868adcb28d13cb9acd"
+        }
+      ]
+    },
+    {
+      "reason": "initial connector and routing reads before start",
+      "upper_bound_seconds": 60,
+      "upper_bound_evidence": "continue-02-unknown-bound.json",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/continue-02-unknown-bound.json",
+          "sha256": "37cb56e3a302fc2d810ffe57f3111fedad0c180e119278d4ce3c72c713978cd1"
+        }
+      ]
+    },
+    {
+      "reason": "connector and CURRENT read before start",
+      "upper_bound_seconds": 60,
+      "upper_bound_evidence": "continue-03-unknown-bound.json",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/continue-03-unknown-bound.json",
+          "sha256": "8a9633543183f7bcf86b162cc86277b734ae02e5c5ffb363bede49c8d9d78622"
+        }
+      ]
+    },
+    {
+      "reason": "effective attention vs tool wait not timed separately: chat-executor-20261127-evening",
+      "upper_bound_seconds": 406.082004,
+      "upper_bound_evidence": "actual session start/end elapsed in active-sessions-pre-l2.jsonl",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/active-sessions-pre-l2.jsonl",
+          "sha256": "80762f39fedaa49d31d561c0359af32a1986f111b11cd7e09528e801aaba0388"
+        }
+      ],
+      "start": "2026-11-27T13:01:36.213616+00:00",
+      "end": "2026-11-27T13:08:22.295620+00:00"
+    },
+    {
+      "reason": "effective attention vs tool wait not timed separately: chat-executor-20261127-continue-02",
+      "upper_bound_seconds": 783.731036,
+      "upper_bound_evidence": "actual session start/end elapsed in active-sessions-pre-l2.jsonl",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/active-sessions-pre-l2.jsonl",
+          "sha256": "80762f39fedaa49d31d561c0359af32a1986f111b11cd7e09528e801aaba0388"
+        }
+      ],
+      "start": "2026-11-27T13:14:31.339355+00:00",
+      "end": "2026-11-27T13:27:35.070391+00:00"
+    },
+    {
+      "reason": "effective attention vs tool wait not timed separately: chat-executor-20261127-continue-03",
+      "upper_bound_seconds": 1100.920927,
+      "upper_bound_evidence": "actual session start/end elapsed in active-sessions-pre-l2.jsonl",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/active-sessions-pre-l2.jsonl",
+          "sha256": "80762f39fedaa49d31d561c0359af32a1986f111b11cd7e09528e801aaba0388"
+        }
+      ],
+      "start": "2026-11-27T13:34:31.035035+00:00",
+      "end": "2026-11-27T13:52:51.955962+00:00"
+    },
+    {
+      "reason": "pre-L2 checkpoint to handoff session, including runner and idle/unrecorded attention",
+      "upper_bound_seconds": 710.437661,
+      "upper_bound_evidence": "handoff-gap-bound.json",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/handoff-gap-bound.json",
+          "sha256": "50d348065a3a5cebc0b88ebfcfb271cece67e5136cbca6cb35dfc4fd5d9a7a85"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-01.meta.json",
+          "sha256": "6d24f03328ddc5328e7c4303026ad3df76cf1eec2c46365667dd560242853efd"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-14.meta.json",
+          "sha256": "7415608714b359793ec35036d06d0204aa28b68f88fe4bf503158d9f0878fc16"
+        }
+      ]
+    },
+    {
+      "reason": "handoff reporting elapsed interval; active/wait not separately timed",
+      "upper_bound_seconds": 74.766608,
+      "upper_bound_evidence": "active-sessions-handoff.jsonl",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/active-sessions-handoff.jsonl",
+          "sha256": "00b28d0400e216907f03be88a4765f7f9703316c273a7cdaf393ae45aaa14538"
+        }
+      ],
+      "start": "2026-11-27T14:04:42.393623+00:00",
+      "end": "2026-11-27T14:05:57.160231+00:00"
+    }
+  ],
+  "unknown_upper_bound_seconds": 3375.938236,
+  "budget_debit_seconds": 3375.938236,
+  "budget_debit_is_conservative_wall_upper_bound": true,
+  "remaining_budget_upper_limit_seconds": 860624.061764,
+  "inherited_prior_unknown": true,
+  "baseline_known_prior_seconds": 1859.459384,
+  "process_time_accounting_complete": false,
+  "repair_rounds": [
+    {
+      "start": "2026-11-27T13:14:31.339355+00:00",
+      "end": "2026-11-27T13:27:35.070391+00:00",
+      "time_semantics": "containing recorded interval only; exact individual repair subinterval unknown",
+      "reason": "T18 common hardware scope failure and correction plus context lineage parity correction; ordinary localized fixes aggregated in same recorded work slice",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/T18-common-repair-before-stdout.txt",
+          "sha256": "2faa563f1e19cf91b63fd9a2f3b5d12427f89946d41b33fce8f151d4df639277"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/T18-common-repair-after-stdout.txt",
+          "sha256": "a54f1d776841181057cb4e56da7334a4667a4fe349b27384dadd078664a25297"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/c-context-regression.txt",
+          "sha256": "8abb9b680659215ae6f9792800b684e9955dcd118a0a50d7decd3a951e3d5688"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/c-context-regression-repair.txt",
+          "sha256": "f511e62ebe4a45da760fc46de3412d3659773118312c29336f8a723933d82ad0"
+        }
+      ]
+    }
+  ],
+  "forbidden_operations": {
+    "model_api": 0,
+    "model_cli": 0,
+    "platform_api": 0,
+    "account": 0,
+    "device": 0,
+    "transaction": 0,
+    "install": 0,
+    "external_write": 0,
+    "git_commit": 0,
+    "git_push": 0,
+    "git_index": 0
+  },
+  "source_reads": 0,
+  "source_queries": 0,
+  "public_reads": 0,
+  "public_queries": 0,
+  "limit": "Exact active time remains unknown; entire uncovered gap and handoff session conservatively deducted; machine command duration separate; inherited old unknown preserved.",
+  "formal_runner_machine_command_seconds": 552.8996609999999,
+  "formal_runner_machine_span_seconds": 557.58539
+}

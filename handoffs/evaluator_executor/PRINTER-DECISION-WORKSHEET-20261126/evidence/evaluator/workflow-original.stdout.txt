@@ -1,0 +1,16 @@
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing Executor status
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing workspace snapshot
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing changed files
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing deviations
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing impact comparison
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing measurement evidence
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing before measurement
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing after measurement
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing delta
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing guardrail result
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing scope caveat
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing L2 task gate
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing L2 gate result
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing L2 gate summary
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing validation plan reference
+FIX_IN_PLACE: D:\SoftWare\VScode\install\Project\shopping-decision-agent\handoffs\evaluator_executor\PRINTER-DECISION-WORKSHEET-20261126\REPORT.md: missing EV evidence section

@@ -1,0 +1,1239 @@
+diff --git a/CURRENT.md b/CURRENT.md
+index 51e5815..4f8c82c 100644
+--- a/CURRENT.md
++++ b/CURRENT.md
+@@ -1,4 +1,199 @@
+-# 当前状态（2026-11-25，外部模型7次未通过，网页版GPT四案结构通过，待独立复核）
++# 当前状态（2026-11-26，工作单长包执行中）
++
++<!-- evaluator-executor-workflow:v2.2 -->
++
++```yaml
++workflow: evaluator-executor-workflow/v2.2
++task_id: PRINTER-DECISION-WORKSHEET-20261126
++task_kind: capability_experiment
++state: EXECUTING
++current_role: Executor
++next_role: Executor
++mandatory_gate_status: FAIL
++preparation_status: EXPECTED_FAILURES_CONFIRMED
++baseline_commit: c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f
++baseline_path: handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/BASELINE.json
++baseline_sha256: 8cdf91d89833090c30b812ba9243074c1dfdcfa17904ed0d3e406e6733893c35
++project_map_path: docs/PROJECT_BOTTLENECK_MAP_CURRENT.md
++project_map_revision: r41
++active_bottleneck_id: B05
++hypothesis_id: H-B05-USER-WORKSHEET-01
++contract_path: handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/CONTRACT.md
++validation_plan_path: handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VALIDATION_PLAN.yaml
++executor_report_path: handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/REPORT.md
++evaluator_review_path: handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/REVIEW.md
++next_artifact_path: handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/REPORT.md
++previous_task_reassessment_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/REVIEW.md
++authorization_commit: false
++authorization_push: false
++authorization_history_rewrite: false
++authorization_api_call: false
++authorization_existing_local_model_cli: false
++authorization_platform_business_api: false
++authorization_public_research: true
++public_query_limit: 10
++public_read_limit_total: 32
++public_read_limit_executor: 24
++public_read_limit_evaluator: 8
++new_model_inference_limit: 0
++effective_hour_limit: 120
++concentrated_repair_round_limit: 5
++```
++
++## 本包执行检查点
++
++R2：原始业务探针7/7，工作单专项33/33；固定任务链12/12、核心8/8、Windows原生6/6，原生窗口回归、原历史案例、3022份保护文件及交付检查均通过。正式L2 runner 实际执行9项、7通过2失败（VP-05全量647项中仅1个历史审计错误；VP-06独立历史审计同因失败）。原件 [L2-GATE](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/l2-r2/L2-GATE.md)。旧历史manifest固定DesktopBridgeClient.java与ShoppingDecisionDesktop.java，新合同要求修改原窗与桥；历史审计器/manifest不在本包授权改动范围。执行者保留FAIL、不回滚用户成果、不擅改历史审计。需评估者/负责人明确可审计兼容边界后继续；当前仍EXECUTING，不冒充正式提交。公开读取1次未新增决定性事实；真实模型/业务API/账号设备/交易/安装/Git提交推送均0。已记录续轮同步命令段135秒（仅已记录部分），前轮缺口不追补。REPORT、COMPARISON、USAGE与原件已落盘。
++
++## R3 审计兼容候选（待冻结增补，不是正式通过）
++
++仅在本包证据目录生成最小兼容候选补丁，未修改正式审计器。固定旧Git提交与历史清单两份Java原件SHA一致，候选仅允许两份现行Java精确SHA；其余历史检查不变。隔离12/12正反例、647/647全量（仅内存候选替换）、3022/3022保护件通过，旧失败模型实验未被改写。正式L2仍FAIL 7/9。下一操作需评估者/负责人核对并冻结最小审计器修复范围与新范围检查口径，保留现有冻结原件；当前EXECUTING不改。见 [R3兼容建议](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/AUDIT_COMPATIBILITY_PROPOSAL.md)。
++
++## R4 执行者收口（实际修复已完成，原冻结范围待独立确认）
++
++负责人在明确提出最小审计修复后回复“继续完成”；按具体继续指示执行，仅改正式审计器并新增对应测试，未重冻旧合同/基线。真实全量657/657，新增专项10/10，正式历史审计通过。原冻结9项正式L2 8/9，唯一VP-08 FAIL（原范围尚不包含这两个文件）；补充精确差异检查PASS，原保护3022份中3021份不变，现行产品字节、HEAD、索引、旧清单和旧证据均不变。原门禁仍FAIL，不自签通过。已完成可执行修复，下一实际动作请评估者独立审阅负责人指示及两份差异，明确增补范围后复核；旧路由EXECUTING保留到评估者确认。[正式R4门禁](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/l2-r4/L2-GATE.md)；[补充范围](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/R4_OWNER_DIRECTED_SCOPE.json)。不再增加产品功能。
++
++## 最新独立裁定
++
++`PRINTER-SESSION-COST-EVIDENCE-20261126` 正式 **REJECTED，业务NEEDS_REPAIR**；独立工程 **7/7、611/611、新专项30项、2230保护件不变，HEAD/索引匹配**。会话首项、成本可比口径和实际render_chat成本翻转均独立复现，不抹掉成果。[正式评审](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/REVIEW.md)
++
++新反例：有限字符串1e1000000导致默认/后端decimal.Overflow；reasoning内部工具内容被跳过，附正常排序回执仍被实际入口接受，未观察工具执行。执行者精确操作/主动工时缺失仍未完成。当前26/19配对摘要与原件/生成器哈希独立匹配。
++
++HP维护命题本轮 **5/6独立读取内限范围复证**：官方PDF154页，维护段落与型号表已保留必要裁图并视觉核对，新获取完整字节SHA已记（完整PDF仅内存）。不证明寿命、产量、费用、故障率/整机保修。真实模型/真人收益、微信稳定复用与河南有效价仍未证，所有旧失败账保持。
++
++## 唯一当前执行入口（产品主链已实现，历史门禁待处理）
++
++Executor读取 [START_HERE](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/START_HERE.md)、[完整合同](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/CONTRACT.md)、[独立验收](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/EVALUATION.md)、[9项验证计划](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VALIDATION_PLAN.yaml)、[交付格式](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/DELIVERY_FORMAT.md)及 [r41当前地图](docs/PROJECT_BOTTLENECK_MAP_CURRENT.md)。原r35地图冻结不改；此前包内ASSESSMENT为历史判断。
++
++单一主改变：把现有会话/来源/成本接成用户可编辑的本地决策工作单，通过现有聊天和Java窗口录入、改值、撤回、显式保存和恢复后重算。先合修两项边界，再完成协议→窗口→来源状态→恢复失效→12条任务链→完整交付。复用原比较引擎，不再只证明Python参数注入，不建第二应用或真实品类。
++
++上限 **120有效小时、5轮集中纠错**；第8/24/44/68/92/112小时检查点，第4小时先保留边界处置，独立建议12小时。按范围连续推进，不逐段等授权；目标达到提前交，外部缺件不阻塞离线主线。12链至少10条完成且8核心全过，至少6链窗口事件，J02成本翻转/J07保存恢复必须实际窗口；真人/模型效用仍另验。
++
++[实际前测](handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/preparation/preflight.json)：业务7项3通过4失败，五组测试缺失、新Java类缺失、交付未实现均真实exit1；这些是待做任务，不是已实现结果。新BASELINE冻结3022份保护件（含旧日志），核对后开工。查询≤10、读取执行24/独立8；模型API/CLI、平台业务API、账号/设备/交易/安装/Git提交推送均0。
++
++## 历史入口与交付（只读历史，当前责任以上方唯一新路由为准）
++
++# 当前状态（2026-11-26，执行工程7/7，611项通过，待独立评估）
++
++<!-- evaluator-executor-workflow:v2.2 -->
++
++```yaml
++workflow: evaluator-executor-workflow/v2.2
++task_id: PRINTER-SESSION-COST-EVIDENCE-20261126
++task_kind: one_off
++state: READY_FOR_REVIEW
++current_role: Evaluator
++next_role: Evaluator
++mandatory_gate_status: PASS
++preparation_status: EXPECTED_FAILURES_CONFIRMED
++baseline_commit: c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f
++baseline_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/BASELINE.json
++baseline_sha256: 80e5afc1b6b2a9601fd3506c73eb34bb5ff5743aa1550da2a9e3f8f1a508e71f
++project_map_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/ASSESSMENT.md
++project_map_revision: r40
++active_bottleneck_id: B05
++hypothesis_id: H-B05-SESSION-COST-EVIDENCE-01
++contract_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/CONTRACT.md
++validation_plan_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VALIDATION_PLAN.yaml
++executor_report_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/REPORT.md
++evaluator_review_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/REVIEW.md
++next_artifact_path: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/REVIEW.md
++previous_task_reassessment_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/REVIEW.md
++authorization_commit: false
++authorization_push: false
++authorization_history_rewrite: false
++authorization_api_call: false
++authorization_existing_local_model_cli: false
++authorization_platform_business_api: false
++authorization_public_research: true
++public_query_limit: 8
++public_read_limit_total: 20
++public_read_limit_executor: 14
++public_read_limit_evaluator: 6
++new_model_inference_limit: 0
++effective_hour_limit: 72
++concentrated_repair_round_limit: 3
++```
++
++## 最新独立裁定（2026-11-26）
++
++- `PRINTER-UNIFIED-DECISION-CONTEXT-20261126`独立工程 **PASS，7/7**：全量581/581、新专项17/17、候选5/5、原12案及历史审计通过，2154保护件不变，HEAD/索引匹配。整体业务 **NEEDS_REPAIR**，未改旧判据或保护件追认其他历史包。[正式独立评审](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/REVIEW.md)
++- 原全部失败仍查功能/核价、生产上下文绕过来源准入的问题已修好；缺身份、畸形回执和普通故障回退有进展。14配对/4产品回放是离线代码消费，真实模型与真人增益仍未证，不重新开启API。
++- 新反例：同会话与同bundle，扫描未答或暂缓时默认先澄清、后端先查微信；两项明确无需时才一致。成本函数会把0页和1800页总额直接比较选a，缺任务口径身份，且数值比较未被正常聊天消费。Responses含tool_calls/function_call并附合法文本仍会记complete；未观察工具执行。
++- HP维护指南本轮4次预留操作后未完成精确复证，当前提取页/行与旧定位不同，未判伪造也不升级通过。最终回放与旧汇总字节数版本不一致；旧操作精确时点/主动工时缺口保留。[独立原件](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/evidence/evaluator/independent-20261126/frozen-results.json)
++
++## 当前执行包（Executor已提交，待独立复核）
++
++Executor读取[接手入口](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/START_HERE.md)、[冻结合同](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/CONTRACT.md)及[业务验收](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/EVALUATION.md)。复用已有准入/行动/上下文与适配，连续完成会话未答/暂缓/改答共同契约 → 回执混合字段拒绝 → 成本可比身份与正常入口实际翻转 → 维护原文/版本/定位和依赖撤回 → 用户简明结果、当前摘要及完整回归。主B05，B06/B01按具体缺口推进，不扩品类或跨仓平台。
++
++上限72有效小时、3轮集中纠错，第4小时完整粗链，第16/36/56小时检查点，独立复核建议10小时。匿名查询≤8、读取≤20（执行14、评估预留6）；新模型API/CLI/平台API/账号/设备/交易/提交推送均0。外部资料失败继续离线主线，不等待家庭回传，不以长包为由耗满工时。
++
++[机器7项](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VALIDATION_PLAN.yaml)已冻结制定；[前测](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/preparation/preflight.json)实际退出1并复现5条失败，五组新专项未实现而退出1。它们不是已修复结果。新基线保护2230份文件，freeze/start回执见本包evidence/evaluator。执行者核新BASELINE后开工，交REPORT/COMPARISON和evidence/executor，再转Evaluator独立裁定。
++
++执行者交付：冻结7/7，全量611/611（新增30），26配对/19实际聊天回放，2230保护件不变。来源9/14次读取、独立6次预留；无模型API/CLI、业务平台API、提交推送。HP必要摘录及版本已留存，完整PDF字节/逐操作精确时点未取得，独立业务及真人收益未裁定。详见[REPORT](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/REPORT.md)与[COMPARISON](handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/COMPARISON.md)。
++
++## 上一包送审路由与交付（历史，已由上述独立裁定覆盖）
++
++<!-- evaluator-executor-workflow:v2.2 -->
++
++```yaml
++workflow: evaluator-executor-workflow/v2.2
++task_id: PRINTER-UNIFIED-DECISION-CONTEXT-20261126
++task_kind: one_off
++state: READY_FOR_REVIEW
++current_role: Evaluator
++next_role: Evaluator
++mandatory_gate_status: PASS
++preparation_status: EXPECTED_FAILURES_CONFIRMED
++baseline_commit: c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f
++baseline_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/BASELINE.json
++baseline_sha256: 0fa49ba52efe61b9daf60f98824520cb01bcda6cb3cea1367e339809626e7630
++project_map_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/ASSESSMENT.md
++project_map_revision: r39
++active_bottleneck_id: B05
++hypothesis_id: H-B05-UNIFIED-DECISION-CONTEXT-01
++contract_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/CONTRACT.md
++validation_plan_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VALIDATION_PLAN.yaml
++executor_report_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/REPORT.md
++evaluator_review_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/REVIEW.md
++next_artifact_path: handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/REVIEW.md
++previous_task_reassessment_path: handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/REVIEW.md
++authorization_commit: false
++authorization_push: false
++authorization_history_rewrite: false
++authorization_api_call: false
++authorization_existing_local_model_cli: false
++authorization_platform_business_api: false
++authorization_public_research: true
++public_query_limit: 6
++public_read_limit_total: 16
++public_read_limit_executor: 12
++public_read_limit_evaluator: 4
++new_model_inference_limit: 0
++effective_hour_limit: 60
++concentrated_repair_round_limit: 3
++```
++
++## 最新独立评估（2026-11-26）
++
++- 上包正式业务裁定 **NEEDS_REPAIR**，严格工程冻结 **5/6通过**；独立全量564/564、专项8/8、候选5/5、原12案及历史审计通过。2017份原保护件内容未变；后续归档HEAD、两份续办说明及五份独立原型文件造成旧范围检查失败，不改旧基线追认PASS。[独立评审](handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/REVIEW.md)
++- 默认认知聊天硬失败后的首问已修好；通用发布与后端资料包入口仍对已淘汰候选列研究/核价，默认认知的公开行动数组和首问也有次序差异。独立原型8/8，但删除来源观察时间后，正式门禁pending、原型却全部淘汰。适配器缺模型身份/错误message角色也会记complete；不得原样接产品。
++- Brother耗材结构/标称量有有限官方文本支持；HP新增商城命题本轮未独立复证，旧三条HP功能依据保留。维护费用、家庭产量、实际应付价和真人收益未证。网页版四案哈希/结构/公开结果独立匹配，规则与模型除origin外相同，公开增益未证；4份指定私有HTTP哈希匹配，原4+3次失败及旧账不变。本轮模型API调用0。
++
++## 本包执行交付（2026-11-26）
++
++执行者完成冻结机器验收7/7、全量581/581、新专项17/17、候选5/5、原12案及历史审计；前测27条失败现为空。保护2154份无变化，HEAD和索引匹配。统一合法行动、最小上下文、两协议离线适配及受控排序已进入聊天；14组配对、4个产品入口回放，10组无需模型，3组模拟排序接受、1组故障回退。新HP维护指南文字已接入，截图未获、独立核验待做；真实模型/真人收益未证。本轮模型API/CLI/平台API/交易/提交推送均0。公开查询6/6、读取12/12，独立预留4。见[报告](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/REPORT.md)、[对照](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/COMPARISON.md)。
++
++唯一下一责任：Evaluator；按冻结EVALUATION独立复跑和裁定，不以机器PASS代替业务PASS。
++
++## 本包原执行入口（历史，已交付）
++
++Executor读取[接手入口](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/START_HERE.md)和[冻结合同](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/CONTRACT.md)，连续完成：统一来源准入后的候选与行动 → 四消费者一致 → 原家庭维护/成本资料与分支 → 保真上下文及预算 → 两协议离线适配与受控排序实际进入聊天 → 配对评估和完整回归。B05为主，B06先决修复，B01按决定性缺件推进；不扩真实品类或跨仓平台。
++
++最多60有效小时、3轮集中纠错，第4小时留完整粗结果，第12/30/48小时留可接续检查点；独立评估建议8小时。新模型API/模型CLI/平台业务API/交易/Git提交推送均0。匿名查询≤6，来源读取≤16（执行12、评估预留4）；外部受阻继续离线主线，不等待设备或家庭回传。
++
++新[机器验收7项](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VALIDATION_PLAN.yaml)与[业务判据](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/EVALUATION.md)已制定；[前测](handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/preparation/preflight.json)实际暴露27条重复消费失败断言，五组新专项未实现而退出1，不能称已修复。新基线冻结2154份保护件，freeze/start回执见本包evidence/evaluator；执行者核新BASELINE后开工，交REPORT/COMPARISON和原件，再转Evaluator独立裁定。
++
++## 上一包送审路由（历史，已由上述独立评估覆盖）
+ 
+ <!-- evaluator-executor-workflow:v2.2 -->
+ 
+diff --git a/desktop/DesktopBridgeClient.java b/desktop/DesktopBridgeClient.java
+index f38b9f7..f17a39d 100644
+--- a/desktop/DesktopBridgeClient.java
++++ b/desktop/DesktopBridgeClient.java
+@@ -14,6 +14,11 @@ final class DesktopBridgeClient {
+ 
+     static Map<String, String> invoke(ProcessBuilder builder, long timeoutMillis)
+             throws IOException, InterruptedException {
++        return invoke(builder, timeoutMillis, null);
++    }
++
++    static Map<String, String> invoke(ProcessBuilder builder, long timeoutMillis, byte[] input)
++            throws IOException, InterruptedException {
+         if (timeoutMillis <= 0) throw new IllegalArgumentException("timeoutMillis must be positive");
+         Process process = builder.redirectErrorStream(true).start();
+         Drain drain = new Drain(process.getInputStream());
+@@ -21,6 +26,9 @@ final class DesktopBridgeClient {
+         reader.setDaemon(true);
+         reader.start(); // Drain BEFORE waitFor; otherwise large report_json blocks the subprocess.
+         try {
++            try (var stdin = process.getOutputStream()) {
++                if (input != null) stdin.write(input);
++            }
+             if (!process.waitFor(timeoutMillis, TimeUnit.MILLISECONDS)) {
+                 throw new IOException("后端超过" + timeoutMillis + "毫秒未响应");
+             }
+diff --git a/desktop/ShoppingDecisionDesktop.java b/desktop/ShoppingDecisionDesktop.java
+index e15476b..c0cf248 100644
+--- a/desktop/ShoppingDecisionDesktop.java
++++ b/desktop/ShoppingDecisionDesktop.java
+@@ -42,6 +42,18 @@ public final class ShoppingDecisionDesktop {
+     private final JButton chatSend = new JButton("发送并确认"), chatPreview = new JButton("预览/另存审计");
+     private String chatState = "", chatPromptField = "", chatReport = "";
+     private SwingWorker<Map<String,String>,Void> chatWorker;
++    private String worksheetJson = "", worksheetState = "";
++    private final JPanel worksheetFields = new JPanel(new GridLayout(0, 2, 5, 3));
++    private final Map<String,JTextField> worksheetInputs = new LinkedHashMap<>();
++    private final JButton worksheetCreate = new JButton("创建/重建工作单"),
++        worksheetApply = new JButton("提交假设并重算"), worksheetCancel = new JButton("取消草稿"),
++        worksheetSave = new JButton("另存工作单"), worksheetRestore = new JButton("恢复工作单");
++    private String worksheetFieldRows = "";
++    private final JTextArea worksheetSources = area(7);
++    private final JButton worksheetImportSource = new JButton("导入待审资料"),
++        worksheetWithdrawSource = new JButton("撤回导入资料"),
++        worksheetBindRef = new JButton("关联原事实"), worksheetWithdrawRef = new JButton("撤回关联");
++    private final JLabel worksheetNotice = new JLabel("先确认需求；空白为未知，0为明确零。费用均为假设。");
+ 
+     private ShoppingDecisionDesktop(String python) {
+         this.python = python;
+@@ -83,6 +95,7 @@ public final class ShoppingDecisionDesktop {
+         understandingPanel.add(edits, BorderLayout.SOUTH);
+         details.addTab("目前理解/修改", understandingPanel);
+         details.addTab("证据与下一步", new JScrollPane(chatOutcome));
++        details.addTab("成本与资料", worksheetPage());
+         JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
+                 new JScrollPane(chatTranscript), details);
+         split.setResizeWeight(0.58);
+@@ -120,6 +133,8 @@ public final class ShoppingDecisionDesktop {
+             chatState = "";
+             chatPromptField = "";
+             chatReport = "";
++            worksheetJson = ""; worksheetState = ""; worksheetFieldRows = "";
++            showWorksheetFields(""); worksheetSources.setText("");
+             chatInput.setText("");
+             chatTranscript.setText("助手：已开启空白会话。原会话不会自动带入；没有保存到磁盘。\n");
+             chatSend.setEnabled(true);
+@@ -151,8 +166,160 @@ public final class ShoppingDecisionDesktop {
+         return panel;
+     }
+ 
++    private JPanel worksheetPage() {
++        JPanel panel = new JPanel(new BorderLayout(5,5));
++        JPanel top = new JPanel(new GridLayout(0,1));
++        top.add(worksheetNotice);
++        top.add(buttons(worksheetCreate,worksheetApply,worksheetCancel));
++        top.add(buttons(worksheetSave,worksheetRestore));
++        panel.add(top,BorderLayout.NORTH);
++        worksheetSources.setEditable(false);
++        JPanel sourcesPanel=new JPanel(new BorderLayout());
++        sourcesPanel.add(buttons(worksheetImportSource,worksheetWithdrawSource,worksheetBindRef,worksheetWithdrawRef),BorderLayout.NORTH);
++        sourcesPanel.add(new JScrollPane(worksheetSources),BorderLayout.CENTER);
++        JTabbedPane inputsAndSources=new JTabbedPane();
++        inputsAndSources.addTab("成本假设",new JScrollPane(worksheetFields));
++        inputsAndSources.addTab("资料审计",sourcesPanel);
++        panel.add(inputsAndSources,BorderLayout.CENTER);
++        worksheetImportSource.addActionListener(e -> {
++            if (!worksheetCurrent()) return;
++            JTextField sid=new JTextField(),model=new JTextField(),locator=new JTextField(),day=new JTextField(java.time.LocalDate.now().toString());
++            JComboBox<String> kind=new JComboBox<>(new String[]{"厂家摘录","专业评测","用户评论","报价线索"});
++            JTextArea excerpt=new JTextArea(5,30);
++            JPanel form=new JPanel(new GridLayout(0,1));
++            form.add(new JLabel("自定资料编号（同编号重新导入代表新版本）"));form.add(sid);
++            form.add(new JLabel("适用型号（完整候选名）"));form.add(model);
++            form.add(new JLabel("资料类型"));form.add(kind);
++            form.add(new JLabel("观察日期（YYYY-MM-DD）"));form.add(day);
++            form.add(new JLabel("来源地址及页/段定位（不会自动打开）"));form.add(locator);
++            form.add(new JLabel("必要原文摘录（待审）"));form.add(new JScrollPane(excerpt));
++            if (JOptionPane.showConfirmDialog(frame,form,"导入本地摘录（不认证为事实）",JOptionPane.OK_CANCEL_OPTION)!=JOptionPane.OK_OPTION)return;
++            String type=new String[]{"manufacturer_excerpt","professional_review","user_comment","quote_lead"}[kind.getSelectedIndex()];
++            worksheetRequest("import_source",worksheetJson,"{\"id\":"+jsonQuote(sid.getText())+",\"candidate\":"+jsonQuote(model.getText())+
++                ",\"kind\":"+jsonQuote(type)+",\"observed_at\":"+jsonQuote(day.getText())+",\"locator\":"+jsonQuote(locator.getText())+
++                ",\"excerpt\":"+jsonQuote(excerpt.getText())+"}");
++        });
++        worksheetWithdrawSource.addActionListener(e -> {
++            if (!worksheetCurrent())return;
++            String sid=JOptionPane.showInputDialog(frame,"请输入资料审计中的导入编号");
++            if (sid!=null)worksheetRequest("withdraw_source",worksheetJson,"{\"id\":"+jsonQuote(sid)+"}");
++        });
++        worksheetBindRef.addActionListener(e -> worksheetReference(false));
++        worksheetWithdrawRef.addActionListener(e -> worksheetReference(true));
++        worksheetCreate.addActionListener(e -> {
++            if (chatState.isBlank()) {error("请先等待会话初始化");return;}
++            if (!worksheetJson.isBlank() && JOptionPane.showConfirmDialog(frame,"重建会清空旧成本草稿，是否继续？","重建工作单",JOptionPane.YES_NO_OPTION)!=JOptionPane.YES_OPTION) return;
++            worksheetRequest("create","null","{}");
++        });
++        worksheetApply.addActionListener(e -> {
++            if (!worksheetCurrent()) return;
++            try {
++                List<String> changes = new ArrayList<>();
++                for (var row:worksheetInputs.entrySet()) {
++                    String[] key=row.getKey().split("\\t",-1);
++                    String value=row.getValue().getText().trim();
++                    String encoded;
++                    if (value.isEmpty()) encoded="null";
++                    else if (key[1].equals("separate_drum")) {
++                        if (!value.equals("是") && !value.equals("否")) throw new IllegalArgumentException("鼓粉分离填是或否，或留空");
++                        encoded=value.equals("是")?"true":"false";
++                    } else if (Set.of("pages","months","starter","toner_yield","drum_yield","drum_starter").contains(key[1])) {
++                        encoded=Long.toString(Long.parseLong(value));
++                    } else encoded=jsonQuote(value);
++                    changes.add("{\"candidate\":"+(key[0].isEmpty()?"null":jsonQuote(key[0]))+",\"field\":"+jsonQuote(key[1])+",\"value\":"+encoded+"}");
++                }
++                worksheetRequest("edit_many",worksheetJson,"{\"changes\":["+String.join(",",changes)+"]}");
++            } catch (RuntimeException ex) {error("成本草稿未提交："+ex.getMessage());}
++        });
++        worksheetCancel.addActionListener(e -> showWorksheetFields(worksheetFieldRows));
++        worksheetSave.addActionListener(e -> {
++            if (!worksheetCurrent()) return;
++            JFileChooser chooser = new JFileChooser(new File("data/private"));
++            chooser.setDialogTitle("另存已提交的工作单（未提交草稿不保存）");
++            chooser.setSelectedFile(new File("printer-worksheet.json"));
++            if (chooser.showSaveDialog(frame)!=JFileChooser.APPROVE_OPTION) return;
++            try {saveWorksheet(chooser.getSelectedFile().toPath(),worksheetJson);status.setText("工作单已另存；没有上传。");}
++            catch (IOException ex) {error("另存失败，旧文件未覆盖："+ex.getMessage());}
++        });
++        worksheetRestore.addActionListener(e -> {
++            if (chatState.isBlank()) {error("请先等待会话初始化");return;}
++            JFileChooser chooser = new JFileChooser(new File("data/private"));
++            chooser.setDialogTitle("选择工作单（建议在新建空白会话后恢复）");
++            if (chooser.showOpenDialog(frame)!=JFileChooser.APPROVE_OPTION) return;
++            try {
++                Path selected=chooser.getSelectedFile().toPath();
++                byte[] bytes;
++                try (InputStream input=Files.newInputStream(selected)) {bytes=input.readNBytes(256*1024+1);}
++                if (bytes.length>256*1024) throw new IOException("工作单超过256KiB");
++                String saved=StandardCharsets.UTF_8.newDecoder().decode(java.nio.ByteBuffer.wrap(bytes)).toString();
++                worksheetRequest("inspect",saved,"{}");
++            } catch(IOException ex) {error("恢复文件未读取："+ex.getMessage());}
++        });
++        return panel;
++    }
++
++    private void worksheetReference(boolean withdraw) {
++        if (!worksheetCurrent())return;
++        JTextField model=new JTextField(),fid=new JTextField();
++        JPanel form=new JPanel(new GridLayout(0,1));
++        form.add(new JLabel("完整候选名"));form.add(model);
++        form.add(new JLabel("原事实编号（见资料审计）"));form.add(fid);
++        if (JOptionPane.showConfirmDialog(frame,form,withdraw?"撤回成本引用":"关联成本依赖",JOptionPane.OK_CANCEL_OPTION)!=JOptionPane.OK_OPTION)return;
++        worksheetRequest(withdraw?"withdraw_reference":"bind_reference",worksheetJson,
++             "{\"candidate\":"+jsonQuote(model.getText())+",\"fact_id\":"+jsonQuote(fid.getText())+"}");
++    }
++
++    static void saveWorksheet(Path target,String json) throws IOException {
++        // Create a new file only; no overwrite of existing files, even in a race.
++        if (Files.exists(target)) throw new FileAlreadyExistsException(target.toString());
++        Path parent=target.toAbsolutePath().getParent();
++        Path tmp=Files.createTempFile(parent,".worksheet-",".tmp");
++        try {
++            Files.writeString(tmp,json,StandardCharsets.UTF_8);
++            Files.move(tmp,target.toAbsolutePath());
++        } finally {Files.deleteIfExists(tmp);}
++    }
++
++    private boolean worksheetCurrent() {
++        if (worksheetJson.isBlank() || !worksheetState.equals(chatState)) {
++            error("工作单尚未建立或需求已改变，请重新创建后输入当前假设。"); return false;
++        }
++        return true;
++    }
++    private void showWorksheetFields(String rows) {
++        worksheetFields.removeAll(); worksheetInputs.clear();
++        for (String row:rows.split("\\R")) {
++            String[] parts=row.split("\\t",4);
++            if (parts.length!=4) continue;
++            JTextField value=new JTextField(parts[3]);
++            worksheetFields.add(new JLabel((parts[0].isEmpty()?"":parts[0]+" · ")+parts[2]));
++            worksheetFields.add(value);
++            worksheetInputs.put(parts[0]+"\t"+parts[1],value);
++        }
++        worksheetFields.revalidate(); worksheetFields.repaint();
++        worksheetApply.setEnabled(!worksheetInputs.isEmpty());
++        worksheetSave.setEnabled(!rows.isBlank());
++    }
++    private static String jsonQuote(String value) {
++        StringBuilder b=new StringBuilder("\"");
++        for(char c:value.toCharArray()) {
++            if(c=='"' || c=='\\') b.append('\\').append(c);
++            else if(c<32) b.append(String.format("\\u%04x",(int)c));
++            else b.append(c);
++        }
++        return b.append('"').toString();
++    }
++    private void worksheetRequest(String action,String worksheet,String payload) {
++        String request="{\"schema_version\":1,\"action\":"+jsonQuote(action)+",\"state\":"+chatState+
++            ",\"worksheet\":"+worksheet+",\"payload\":"+payload+"}";
++        updateChat("","","",request,action);
++    }
++
+     /** 所有轮次走统一Python受控规则与现有Web共享研究；Java不解析自由文字。 */
+     private void updateChat(String field, String submitted, String previousPrompt) {
++        updateChat(field,submitted,previousPrompt,null,"");
++    }
++    private void updateChat(String field, String submitted, String previousPrompt, String worksheetRequest, String worksheetAction) {
+         if (chatWorker != null && !chatWorker.isDone()) chatWorker.cancel(true);
+         final String snapshot = chatState;
+         final String changedField = field;
+@@ -166,6 +333,10 @@ public final class ShoppingDecisionDesktop {
+                 cmd.add(python);
+                 cmd.add("-m");
+                 cmd.add("shopping_decision.chat_bridge");
++                if (worksheetRequest != null) {
++                    cmd.add("--worksheet-stdin");
++                    return DesktopBridgeClient.invoke(new ProcessBuilder(cmd),20_000,worksheetRequest.getBytes(StandardCharsets.UTF_8));
++                }
+                 for (String value : new String[]{snapshot, changedField, raw}) {
+                     cmd.add(Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8)));
+                 }
+@@ -178,11 +349,29 @@ public final class ShoppingDecisionDesktop {
+                 try {
+                     Map<String,String> out = get();
+                     if (out.containsKey("error")) throw new IllegalArgumentException(out.get("error"));
++                    if (worksheetAction.equals("inspect")) {
++                        JTextArea preview=new JTextArea(out.getOrDefault("worksheet_conditions",""),16,42);
++                        preview.setEditable(false);
++                        if (JOptionPane.showConfirmDialog(frame,new JScrollPane(preview),"核对保存条件并恢复（空白会话）",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION)
++                            worksheetRequest("restore",out.get("worksheet_json"),"{\"confirm_saved_conditions\":true}");
++                        return;
++                    }
+                     if (!out.containsKey("state_json") || !out.containsKey("report_json")) {
+                         throw new IllegalArgumentException("对话结果缺少版本/审计");
+                     }
+                     chatState = out.get("state_json");
+                     chatReport = out.get("report_json");
++                    if (out.containsKey("worksheet_json")) {
++                        worksheetJson=out.get("worksheet_json"); worksheetState=chatState;
++                        worksheetFieldRows=out.getOrDefault("worksheet_fields","");
++                        showWorksheetFields(worksheetFieldRows);
++                        worksheetSources.setText("来源审计：候选、编号、状态、分级、观察日期、有效期、定位、地址、边界（导入材料未审）\n"+out.getOrDefault("worksheet_sources",""));
++                        worksheetSources.setCaretPosition(0);
++                        worksheetNotice.setText("成本输入已提交；均为假设，不是实时价格。查看“证据与下一步”。");
++                    } else if (!worksheetJson.isBlank() && !worksheetState.equals(chatState)) {
++                        showWorksheetFields(""); worksheetSources.setText("");
++                        worksheetNotice.setText("需求已变更，旧成本不再适用；请重新建立工作单。");
++                    }
+                     if (!raw.isBlank()) {
+                         chatTranscript.append("\n用户（" + previousPrompt + "）：" + raw + "\n");
+                     }
+diff --git a/knowledge/printer_cognition_comparison_v1.json b/knowledge/printer_cognition_comparison_v1.json
+index 1ece7d7..3766aff 100644
+--- a/knowledge/printer_cognition_comparison_v1.json
++++ b/knowledge/printer_cognition_comparison_v1.json
+@@ -83,6 +83,54 @@
+       "locator": "SKU 9YF97A；文本235–241、325–329、459–463、537–543、668–670行",
+       "limitations": "网页缓存，非实时销售或应付价证明；随箱有黑色硒鼓但未见页数；更换硒鼓型号仅此销售配置口径，未证鼓粉结构、实际维护或产量；观察时点为审读记录。",
+       "review_status": "executor_provisional"
++    },
++    {
++      "id": "hp-cn-maintenance-guide-20261126",
++      "url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
++      "type": "official_exact_model_document",
++      "allowed_use": "model_research_short_summary",
++      "scope_models": [
++        "HP M232dw"
++      ],
++      "scope_region": "中国大陆",
++      "captured_on": "2026-11-26",
++      "observed_at": "2026-11-26T02:58:06+00:00",
++      "valid_until": "2026-12-26",
++      "locator": "印刷页62（PDF零基页67，硒鼓中碳粉严重不足）；印刷页139（PDF零基页144，管制型号表）",
++      "limitations": "仅限低/严重不足告警下按打印质量决定更换、耗材高级保护保修终止；非实际产量、费用、寿命或整机保修。文本与型号表在本次缓存版本复核，未获得完整原PDF字节。 原观察时间为旧审读记录，本轮复查时间另载；独立核验仍待评估者。",
++      "review_status": "executor_text_rechecked",
++      "previous_locator": "中文用户指南印刷页77–78（文本2037–2063行），印刷页139明确列HP LaserJet MFP M232dw（3674行）",
++      "snapshot_required": true,
++      "snapshot": {
++        "body": {
++          "source_id": "hp-cn-maintenance-guide-20261126",
++          "url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
++          "models": [
++            "HP M232dw"
++          ],
++          "source_region": "中国大陆",
++          "title": "HP LaserJet MFP M232-M237 series 使用手册（ZH-CN）",
++          "version": "2020 copyright; c07148381.pdf; 154 PDF pages (web cached rendition)",
++          "locator": "印刷页62（PDF零基页67，硒鼓中碳粉严重不足）；印刷页139（PDF零基页144，管制型号表）",
++          "excerpt": "时不需要更换硒鼓，除非打印质量无法接受。",
++          "excerpt_sha256": "79cfd59137f51512ab0e7013a1fb9cd9ce7806e89c3c0cadb86167a1a7a5db16",
++          "fact": {
++            "id": "hp-replace-on-quality",
++            "candidate_id": "HP M232dw",
++            "dimension": "replace_on_unacceptable_quality",
++            "unit": "bool",
++            "value": true
++          },
++          "review_status": "executor_text_rechecked",
++          "model_visual_checked": true,
++          "review_date": "2026-11-26",
++          "review_time_window": "+08:00 14:27:18–14:29:03; per-operation exact start/end unknown",
++          "raw_document_sha256": null,
++          "maintenance_page_visual": "failed_cache_miss_twice; relevant section is prose",
++          "limits": "仅限低/严重不足告警下按打印质量决定更换、耗材高级保护保修终止；非实际产量、费用、寿命或整机保修。文本与型号表在本次缓存版本复核，未获得完整原PDF字节。"
++        },
++        "sha256": "96c840733b2edb1c015034369d15c416ccdfc08be35b5bd443fbb45ad760d0bc"
++      }
+     }
+   ],
+   "facts": [
+@@ -280,6 +328,21 @@
+       "scope_region": "中国大陆",
+       "statement": "9YF97A列出137A及137X黑色更换硒鼓",
+       "limitations": "网页缓存，非实时销售或应付价证明；随箱有黑色硒鼓但未见页数；更换硒鼓型号仅此销售配置口径，未证鼓粉结构、实际维护或产量；观察时点为审读记录。"
++    },
++    {
++      "id": "hp-replace-on-quality",
++      "candidate_id": "HP M232dw",
++      "source_id": "hp-cn-maintenance-guide-20261126",
++      "dimension": "replace_on_unacceptable_quality",
++      "unit": "bool",
++      "value": true,
++      "kind": "official_feature",
++      "scope_models": [
++        "HP M232dw"
++      ],
++      "scope_region": "中国大陆",
++      "statement": "指南说明碳粉严重不足时不必仅因告警更换，可在打印质量无法接受时安装替换件；高级保护保修终止需单独考虑。",
++      "limitations": "仅限指南所述耗材低告警场景；不能推断剩余页数、无故障、维护频率、低频寿命或保修覆盖。本轮执行者文本复核，独立复核待办。"
+     }
+   ]
+ }
+diff --git a/scripts/audit_model_history_readonly.py b/scripts/audit_model_history_readonly.py
+index 1cfa32d..3a0a59a 100644
+--- a/scripts/audit_model_history_readonly.py
++++ b/scripts/audit_model_history_readonly.py
+@@ -21,6 +21,17 @@ PIN = (ROOT / "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+        / "post_review/PRINTER-TRUSTED-DECISION-20261119/post_review"
+        / "GENERIC-EVIDENCE-CLAIM-GATE-20261119")
+ CURRENT_TASK_ALLOWED_DRIFT = {"shopping_decision/chat_bridge.py"}
++
++# Owner-directed worksheet transition: historical bytes must still match the
++# original manifest at the pinned pre-task commit; current bytes must match
++# the exact candidate tested by the executor (independent review pending).
++# No wildcard or caller-supplied exception; no historical file is rewritten.
++WORKSHEET_PRE_TASK_COMMIT = "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f"
++WORKSHEET_APPROVED_SOURCE_SHA256 = {
++    'desktop/DesktopBridgeClient.java': 'ba0a8c8aa5a5d1309721d0b79f09eba472a9cee000e656c00f3d579b9c2f8ff3',
++    'desktop/ShoppingDecisionDesktop.java': '054c127c30b542f4b47c7b1a9fccce949303f532b68b0b19bdb62aeefd3a36ac',
++}
++
+ # Only the exact two R1 test revisions independently reviewed on 2026-11-23
+ # may drift from the frozen historical inventory. Never blanket-allow test edits.
+ REVIEWED_R1_TEST_SHA256 = {
+@@ -71,9 +82,21 @@ def audit_history(task: Path, *, ledger_bytes_override: bytes | None = None):
+         p = ROOT / filename
+         if not p.is_file() or sha(p.read_bytes()) != expected:
+             historic_drifts.append(filename)
+-            check(filename in CURRENT_TASK_ALLOWED_DRIFT or
+-                  filename in REVIEWED_R1_TEST_SHA256,
+-                  "unapproved_historical_file_drift:" + filename)
++            if filename in WORKSHEET_APPROVED_SOURCE_SHA256:
++                check(p.is_file() and sha(p.read_bytes()) == WORKSHEET_APPROVED_SOURCE_SHA256[filename],
++                      "worksheet_current_source_sha_mismatch:" + filename)
++                try:
++                    historical = subprocess.check_output(
++                        ["git", "show", WORKSHEET_PRE_TASK_COMMIT + ":" + filename],
++                        cwd=ROOT, stderr=subprocess.DEVNULL)
++                except (OSError, subprocess.CalledProcessError) as exc:
++                    raise ValueError("worksheet_historical_source_unavailable:" + filename) from exc
++                check(sha(historical) == expected,
++                      "worksheet_historical_source_sha_mismatch:" + filename)
++            else:
++                check(filename in CURRENT_TASK_ALLOWED_DRIFT or
++                      filename in REVIEWED_R1_TEST_SHA256,
++                      "unapproved_historical_file_drift:" + filename)
+     actual_head = subprocess.check_output(
+         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+     frozen_head = manifest["baseline_head"]
+diff --git a/shopping_decision/chat_bridge.py b/shopping_decision/chat_bridge.py
+index 4c32756..f19504b 100644
+--- a/shopping_decision/chat_bridge.py
++++ b/shopping_decision/chat_bridge.py
+@@ -106,12 +106,15 @@ def _valid_state(state: dict) -> dict:
+     skipped = state.get("deferred_fields", [])
+     if not isinstance(skipped, list) or any(f not in LABELS for f in skipped):
+         raise ValueError("待确认字段无效")
++    withdrawn=state.get("withdrawn_fields",[])
++    if not isinstance(withdrawn,list) or any(f not in LABELS for f in withdrawn) or set(withdrawn)&set(skipped):
++        raise ValueError("撤回字段无效")
+     return state
+ 
+ 
+ def _question_fields(state: dict) -> list[str]:
+     v = confirmed_values(state)
+-    skipped = set(state.get("deferred_fields", []))
++    skipped = set(state.get("deferred_fields", [])) | set(state.get("withdrawn_fields", []))
+     # 复用现有问答分流，并在聊天入口按最有信息增量的顺序补字段。
+     legacy = {q["field"] for q in next_questions(state, limit=3)}
+     if "category" not in v:
+@@ -200,6 +203,8 @@ def _parse(field: str, submitted: str):
+ def submit_message(state: dict, field: str, submitted: str) -> dict:
+     _valid_state(state)
+     v = confirmed_values(state)
++    withdrawn=set(state.get("withdrawn_fields",[]))
++    explicit_withdrawals=set()
+     if field == "batch":
+         # 明示“字段：答复”的本轮批量提交；不自动拆解随意自然语言。
+         if len(submitted) > 1000:
+@@ -221,13 +226,21 @@ def submit_message(state: dict, field: str, submitted: str) -> dict:
+                 raise ValueError("不支持的/重复的批量字段：" + key.strip())
+             if name in PRINTER_FIELDS and v.get("category") != "printer":
+                 raise ValueError("非打印机不能填打印机条件")
+-            changes[name] = _parse(name, value)
++            if value.strip() in ("撤回","撤回答案") and name in v:
++                changes[name]=None
++                explicit_withdrawals.add(name)
++            else:
++                changes[name] = _parse(name, value)
+     else:
+         if field not in LABELS:
+             raise ValueError("当前没有可确认的条件字段")
+         if field in PRINTER_FIELDS and v.get("category") != "printer":
+             raise ValueError("此字段仅适用于打印机，不能跨品类使用")
+-        parsed = _parse(field, submitted)
++        if submitted.strip() in ("撤回","撤回答案") and field in v and field!="category":
++            parsed=None
++            explicit_withdrawals.add(field)
++        else:
++            parsed = _parse(field, submitted)
+         changes = {field: parsed}
+         if field == "category" and parsed != v.get("category"):
+             # 换品类也要清预算等旧需求，不能把原打印机用户条件当成新商品的确认。
+@@ -246,12 +259,19 @@ def submit_message(state: dict, field: str, submitted: str) -> dict:
+         turn.update(changed_fields=updated, old_conclusions_invalidated=bool(updated))
+     skipped = set(state.get("deferred_fields", []))
+     for name, value in changes.items():
+-        if value is None:
++        withdrawn.discard(name)
++        if name in explicit_withdrawals:
++            withdrawn.add(name)
++            skipped.discard(name)
++        elif value is None:
+             skipped.add(name)
+         else:
+             skipped.discard(name)
+     if field == "category" and changes.get("category") != v.get("category"):
+         skipped = set()
++        withdrawn=set()
++    if withdrawn or "withdrawn_fields" in state:
++        state["withdrawn_fields"]=sorted(withdrawn)
+     state["deferred_fields"] = sorted(skipped)
+     # 只保留合理有界的本次会话原话；跨会话不自动保存到磁盘。
+     return state
+@@ -328,7 +348,7 @@ def _confirmed_comparison_rows(values: dict, legacy_rows: list) -> list:
+     return result
+ 
+ 
+-def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None:
++def _publish_for_chat(analysis: dict, values: dict, version: int, deferred=(), withdrawn=()) -> dict | None:
+     """Only accept typed backend data bound to this dialogue; never legacy prose.
+ 
+     The existing backend provides no typed bundle, so ordinary chat correctly
+@@ -374,6 +394,13 @@ def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None
+         return None
+ 
+     confirmed = _confirmed_comparison_rows(values, requirements)
++    # A complete cognition bundle uses the same user-derived full requirements
++    # as the default consumer; backend-provided thresholds are never trusted.
++    if values.get("category")=="printer" and bundle.get("request_id")=="printer-cognition-pilot":
++        from .cognition_comparison import requirements as cognition_requirements
++        canonical = cognition_requirements(values)
++        if {r["id"] for r in requirements} == {r["id"] for r in canonical}:
++            confirmed = canonical
+     if not confirmed:
+         return None
+     # For multi-candidate displays, unresolved newly introduced conditions come
+@@ -385,7 +412,7 @@ def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None
+         bundle, confirmed, as_of=date.today().isoformat(),
+         deployment_region=values.get("device_deployment_region"),
+         delivery_region=values.get("delivery_region"),
+-        budget_scope=values.get("budget_scope"))
++        budget_scope=values.get("budget_scope"), session_values=values, deferred=deferred, withdrawn=withdrawn)
+ 
+ 
+ def _safe_research_progress(state: dict, analysis: dict, values: dict) -> str:
+@@ -441,13 +468,23 @@ def _public_chat_text(public: dict | None, setup_guard: str, progress: str = "")
+         for j, item in enumerate(assessment["comparisons"], 1):
+             lines.append(f"候选{i} 条件{j}：{item['text']} "
+                          f"核验命题ID：{item['claim_id']}。适用边界：{item['limit']}")
+-    for action in public["next_actions"]:
+-        lines.append("下一行动：" + action["description"])
++    survivors = [a["candidate_id"] for a in public["assessments"]
++                 if a["research_status"] != "excluded_for_research"]
++    if not survivors:
++        lines.append("整体取舍：原候选均有硬性反证，结束本轮候选比较；调整需求或另找候选。")
++    elif public["next_actions"]:
++        first = public["next_actions"][0]
++        claim = next(c for c in public["claims"] if c["candidate_id"] == first["candidate_id"]
++                     and c["requirement_id"] == first["requirement_id"])
++        lines.append("下一行动：" + first["candidate_id"] + " / " + claim["dimension"] + "：" + first["description"])
++    else:
++        lines.append("下一行动：等待新的有效资料，不自动批准购买。")
+     lines.append("未批准购买，交易关闭，未核实实时价格。")
+     return "\n".join(lines)
+ 
+ 
+-def render_chat(state: dict) -> dict:
++def render_chat(state: dict, *, ranking_route=None, ranking_transport=None,
++                ranking_budget=None, cost_scenario=None) -> dict:
+     _valid_state(state)
+     v = confirmed_values(state)
+     fields = _question_fields(state)
+@@ -458,14 +495,17 @@ def render_chat(state: dict) -> dict:
+                  for k, val in v.items()]
+     missing = [LABELS.get(k, k) for k in fields]
+     deferred = [LABELS.get(k, k) for k in state.get("deferred_fields", [])]
++    withdrawn = [LABELS.get(k, k) for k in state.get("withdrawn_fields", [])]
+     understanding = ("已明确：\n" + ("\n".join(confirmed) if confirmed else "暂无")
+                      + "\n\n尚需确认：" + ("、".join(missing) if missing else "当前无必须追问")
+                      + ("\n暂不确定：" + "、".join(deferred) if deferred else "")
++                     + ("\n已撤回：" + "、".join(withdrawn) if withdrawn else "")
+                      + "\n参考答案点击只填草稿，发送后才会被确认为用户原话。")
+     analysis = _analysis(state)
+     public_decision = None
+     purchase_checks = None
+     cognition = None
++    ranking_audit = None
+     if analysis is None:
+         outcome = ("尚未选择受审品类或缺用途，先收集需求；未给出商品推荐。"
+                    if v.get("category") in (None, "printer")
+@@ -481,7 +521,14 @@ def render_chat(state: dict) -> dict:
+             reviewed = local_bundle(v, state["version"], _confirmed_comparison_rows(v, []), date.today())
+             if reviewed is not None:
+                 analysis = dict(analysis, verified_research_bundle=reviewed)
+-        public_decision = _publish_for_chat(analysis, v, state["version"])
++        public_decision = _publish_for_chat(analysis, v, state["version"], state.get("deferred_fields", []), state.get("withdrawn_fields", []))
++        if public_decision is not None:
++            from .cost_scenario import bind_cost
++            bind_cost(public_decision, cost_scenario)
++            from .action_ranking import rank_actions
++            ranked, ranking_audit = rank_actions(public_decision, ranking_route, ranking_transport,
++                                                  **(ranking_budget or {}))
++            public_decision["next_actions"] = ranked
+         research_progress = _safe_research_progress(state, analysis, v)
+         outcome = _public_chat_text(public_decision, setup_guard, research_progress)
+         if reviewed is not None and public_decision is not None:
+@@ -496,17 +543,34 @@ def render_chat(state: dict) -> dict:
+         research = analysis.get("research_case")
+         if isinstance(research, dict) and research.get("case_id") == CASE_ID:
+             purchase_checks = build_purchase_checks(v)
+-            outcome += "\n" + render_purchase_checks(purchase_checks)
++            if public_decision is not None and reviewed is None:
++                survivors = {a["candidate_id"] for a in public_decision["assessments"]
++                             if a["research_status"] != "excluded_for_research"}
++                purchase_checks["candidates"] = [x for x in purchase_checks["candidates"]
++                                                   if x["model"] in survivors]
++                if public_decision["next_actions"]:
++                    first = public_decision["next_actions"][0]
++                    purchase_checks["decision_first_action"] = first
++                    # The legacy action list cannot override a validated decision.
++                    outcome += "\n购买前核价仅作为后续条件；先完成上述统一下一行动。"
++                elif not survivors:
++                    purchase_checks["decision_first_action"] = None
++            else:
++                outcome += "\n" + render_purchase_checks(purchase_checks)
+         # The local cognition pilot uses the same deterministic claim gate.
+         # Never use it to override a provider's validated or rejected bundle.
+         if not isinstance(analysis.get("verified_research_bundle"), dict):
+             cognition = compare_cognition(v, state["version"], date.today(),
+-                                          deferred=state.get("deferred_fields", []))
++                                          deferred=state.get("deferred_fields", []), withdrawn=state.get("withdrawn_fields", []),
++                                          ranking_route=ranking_route,
++                                          ranking_transport=ranking_transport,
++                                          ranking_budget=ranking_budget, cost_scenario=cost_scenario)
+             if cognition is not None:
+                 outcome = (setup_guard + render_cognition(cognition, v)
+                            + "\n旧研究材料（待核研究，不影响上述有据维度）：\n"
+                            + research_progress)
+                 decision = cognition["decision"]
++                ranking_audit = cognition["ranking_audit"]
+                 action = decision["next_action"]
+                 if purchase_checks is not None:
+                     # Keep quote/fee audit fields, but never recommend actions for
+@@ -529,6 +593,28 @@ def render_chat(state: dict) -> dict:
+                     prompt = action["text"]
+                     choices = []
+ 
++        if public_decision is not None and reviewed is None and cognition is None:
++            from .cost_scenario import render_cost
++            outcome += "\n" + render_cost(public_decision.get("cost_comparison"))
++            if not any(a["research_status"] != "excluded_for_research"
++                       for a in public_decision["assessments"]):
++                active, choices = "", []
++                prompt = "原候选均有硬性反证，结束本轮候选比较；调整需求或另找候选。"
++                if purchase_checks is not None:
++                    purchase_checks["candidates"] = []
++            elif public_decision["next_actions"]:
++                first = public_decision["next_actions"][0]
++                claim = next(c for c in public_decision["claims"]
++                             if c["candidate_id"] == first["candidate_id"]
++                             and c["requirement_id"] == first["requirement_id"])
++                if first["kind"]=="clarify":
++                    active={"scan":"requires_scan","auto_duplex":"requires_auto_duplex"}[claim["dimension"]]
++                    prompt=QUESTION[active]
++                    choices=[*REFS[active], ("暂不确定","暂不确定")]
++                    fields=[active]+[f for f in fields if f!=active]
++                else:
++                    active, choices = "", []
++                    prompt = first["candidate_id"] + " / " + claim["dimension"] + "：" + first["description"]
+         # The status remains a dialogue workflow signal, never a verified
+         # product claim. Only the gate-generated text can be published as such.
+         status = r["status"]
+@@ -537,11 +623,13 @@ def render_chat(state: dict) -> dict:
+                           if (v.get("category") == "printer" or k not in PRINTER_FIELDS))
+     report = {"dialogue": state, "confirmed_fields": v,
+               "unconfirmed_fields": fields, "deferred_fields": state.get("deferred_fields", []),
++              "withdrawn_fields":state.get("withdrawn_fields", []),
+               "research_result": analysis,
+               "legacy_unverified_research": analysis is not None,
+               "public_decision": public_decision,
+               "purchase_checks": purchase_checks,
+               "cognition_comparison": cognition,
++              "ranking_audit": ranking_audit,
+               "public_claim_source": "publish_checked_comparison" if public_decision else "unverified_research_only",
+               "purchase_recommendation_approved": False, "transactions_enabled": False,
+               "live_price_verified": False}
+@@ -556,6 +644,12 @@ def render_chat(state: dict) -> dict:
+ def main() -> None:
+     try:
+         args = sys.argv[1:]
++        if args == ["--worksheet-stdin"]:
++            from .decision_worksheet import handle, parse, MAX_BYTES
++            out = handle(parse(sys.stdin.buffer.read(MAX_BYTES + 1)))
++            for key, value in out.items():
++                print(key + "\t" + encode(value))
++            return
+         if len(args) != 3:
+             raise ValueError("需要状态、条件字段和本轮发送原话")
+         raw = [base64.b64decode(x, validate=True).decode("utf-8") for x in args]
+@@ -563,7 +657,7 @@ def main() -> None:
+         if raw[1] or raw[2]:
+             state = submit_message(state, raw[1], raw[2])
+         out = render_chat(state)
+-    except (ValueError, TypeError, KeyError, UnicodeError, json.JSONDecodeError) as exc:
++    except (ValueError, TypeError, KeyError, UnicodeError, json.JSONDecodeError, RecursionError, OverflowError) as exc:
+         out = {"error": str(exc)}
+     for key, value in out.items():
+         print(key + "\t" + encode(value))
+diff --git a/shopping_decision/claim_gate.py b/shopping_decision/claim_gate.py
+index 25afe98..5b0d38d 100644
+--- a/shopping_decision/claim_gate.py
++++ b/shopping_decision/claim_gate.py
+@@ -45,6 +45,10 @@ def _source_assessment(fact, source, candidate_id, request, bundle):
+     price is usable as a conditional rule input only with an exact region,
+     seller/SKU and a bounded quote; live_price_verified remains false.
+     """
++    if source.get("snapshot_required") or "snapshot" in source:
++        from .evidence_snapshot import snapshot_valid
++        if not snapshot_valid(source,fact):
++            return "snapshot_unverified", False, "必要原文、版本或命题绑定失效"
+     url = source.get("url", "")
+     host = urlsplit(url).hostname or ""
+     kind = fact.get("kind", "")
+@@ -59,8 +63,17 @@ def _source_assessment(fact, source, candidate_id, request, bundle):
+     models = source.get("scope_models")
+     if models is None:
+         models = [source["model_scope"]] if source.get("model_scope") else []
+-    if not isinstance(models, list) or candidate_id not in models:
++    if (not isinstance(models, list) or not models or candidate_id not in models
++            or any(not isinstance(m,str) or not m.strip() or m != m.strip() for m in models)):
+         return "model_scope_unverified", False, "来源没有绑定准确候选型号"
++    if "scope_models" in fact:
++        scope = fact["scope_models"]
++        if (not isinstance(scope,list) or not scope or candidate_id not in scope
++                or any(not isinstance(m,str) or not m.strip() or m != m.strip() for m in scope)):
++            return "model_scope_unverified", False, "事实没有绑定准确候选型号"
++    observed = datetime.fromisoformat(source["observed_at"].replace("Z","+00:00"))
++    if observed.date() > date.fromisoformat(bundle["as_of"]):
++        return "observation_time_unverified", False, "观察时间晚于当前研究日期"
+     if source.get("scope_region") != bundle["region"]:
+         return "region_scope_unverified", False, "来源没有绑定需求地区"
+     if _price_requirement(request):
+@@ -148,6 +161,7 @@ def publish_checked_comparison(bundle, model_result=None, *, origin="rule"):
+                 evidence.append({"fact_id": normalized["fact_id"],
+                                  "source_id": normalized["source_id"],
+                                  "source_grade": normalized["grade"],
++                                 "evidence_sha256": digest({"fact":fact,"source":source}),
+                                  "admitted": normalized["admitted"],
+                                  "limit": normalized["limitations"]["gate_reason"]})
+             admissible = [e for e in evidence if e["admitted"]]
+@@ -205,19 +219,21 @@ def publish_checked_comparison(bundle, model_result=None, *, origin="rule"):
+             elif _price_requirement(request) and not all(
+                     facts[fid].get("kind") == "live_quote" for fid in supporting):
+                 add_action("verify_price", candidate_id, request_id)
+-        hard = [row["status"] for row in rows if requirements[row["requirement_id"]]["importance"] == "hard"]
+-        state = ("excluded_for_research" if "failed" in hard else
+-                 "pending_evidence" if any(s in ("unknown", "conflict") for s in hard)
+-                 else "eligible_for_research")
++        from .decision_actions import disposition
++        state = disposition(rows, bundle["requirements"])
+         assessments.append({"candidate_id": candidate_id, "research_status": state,
+                             "comparisons": rows})
+-    return {"schema_version": 1, "publication_schema": "verified-claims/v1",
++    public = {"schema_version": 1, "publication_schema": "verified-claims/v1",
+             "origin": origin, "input_sha256": calculated["input_sha256"],
+             "claims": claims, "assessments": assessments,
+             "summary": "仅展示结构化事实与规则生成的研究结论；未经授权不产生购买建议。",
+             "next_actions": actions, "raw_model_text_published": False,
+             "manual_decision_gain_accepted": False,
+             **{flag: False for flag in SAFE_FLAGS}}
++    from .decision_actions import order_actions, bind_decision
++    public["next_actions"] = order_actions(public, bundle["requirements"])
++    bind_decision(public, bundle["requirements"], bundle)
++    return public
+ 
+ 
+ def validate_research_claims(matrix):
+diff --git a/shopping_decision/cognition_comparison.py b/shopping_decision/cognition_comparison.py
+index e04a065..7038bb6 100644
+--- a/shopping_decision/cognition_comparison.py
++++ b/shopping_decision/cognition_comparison.py
+@@ -10,7 +10,7 @@ from .minimal_research import MODEL_NAMES
+ from .printer_reviewed_evidence import MAINLAND
+ 
+ PACK_PATH = Path(__file__).resolve().parent.parent / "knowledge" / "printer_cognition_comparison_v1.json"
+-PACK_SHA256 = "6e303e1cd0a85bfd1aca4302da2a0a88821f880c1e62ef098c2aa48ee873e7a6"
++PACK_SHA256 = "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385"
+ DIMS = {"scan": "扫描", "auto_duplex": "自动双面", "manual_duplex": "手动双面",
+         "laser_print": "激光打印", "wechat_miniprogram": "微信小程序功能",
+         "color_print": "彩色打印"}
+@@ -24,7 +24,8 @@ COST_DIMS = {"starter_toner_yield": "随箱墨粉标称页数",
+ EXTRA_LABELS = {"wechat_reuse": "微信稳定复用", "wechat_transfer_to_app": "微信转App",
+                 "initial_setup_without_app_or_scan": "免首次App/扫码", "cost": "预算",
+                 "separate_drum": "鼓粉分离", "starter_included": "随箱附黑色硒鼓",
+-                "replacement_137a_x": "137A/137X替换硒鼓", **COST_DIMS}
++                "replacement_137a_x": "137A/137X替换硒鼓",
++                 "replace_on_unacceptable_quality": "按打印质量更换耗材", **COST_DIMS}
+ LABELS = {**DIMS, **EXTRA_LABELS}
+ 
+ 
+@@ -39,15 +40,92 @@ def load_pack():
+         return None
+ 
+ 
++MAX_SCENARIO_PAGES = 10_000_000
++MAX_SCENARIO_MONTHS = 1200
++MAX_SCENARIO_PRICE = 1_000_000_000
++
++def _scenario_money(value):
++    from .evidence_comparison import number
++    amount = number(value)
++    if amount < 0:
++        raise ValueError("negative_cost")
++    # Bound magnitude and significant fractional precision before arithmetic.
++    if amount > MAX_SCENARIO_PRICE or amount.as_tuple().exponent < -6:
++        raise ValueError("cost_input_out_of_range")
++    return amount
++
++
+ def replacement_count(pages, starter, yield_pages):
+     """Scenario arithmetic only, not a forecast or a price."""
+     if any(type(x) is not int for x in (pages, starter, yield_pages)):
+         raise ValueError("scenario integers required")
+-    if min(pages, starter) < 0 or yield_pages <= 0:
++    if min(pages, starter) < 0 or yield_pages <= 0 or max(pages, starter, yield_pages) > MAX_SCENARIO_PAGES:
+         raise ValueError("invalid scenario")
+     return (max(0, pages - starter) + yield_pages - 1) // yield_pages
+ 
+ 
++def lifecycle_cost(*, pages, hardware, starter, toner_yield, toner_price,
++                   separate_drum, drum_yield=None, drum_price=None, maintenance=None,
++                   months=None, currency=None, fee_scope=None, scenario_version=1,
++                   drum_starter=None):
++    """Calculate an explicit scenario, never turn missing inputs into zero."""
++    from .evidence_comparison import number
++    if type(pages) is not int or not 0 <= pages <= MAX_SCENARIO_PAGES:
++        raise ValueError("invalid_pages")
++    if months is not None and (type(months) is not int or not 1 <= months <= MAX_SCENARIO_MONTHS):
++        raise ValueError("invalid_months")
++    if currency is not None and (not isinstance(currency,str) or len(currency)!=3 or not currency.isupper()):
++        raise ValueError("invalid_currency")
++    if fee_scope is not None and fee_scope!="hardware_consumables_maintenance":
++        raise ValueError("invalid_fee_scope")
++    if type(scenario_version) is not int or scenario_version<=0:
++        raise ValueError("invalid_scenario_version")
++    if separate_drum is not None and type(separate_drum) is not bool:
++        raise ValueError("invalid_drum_type")
++    if any(x is None for x in (hardware, starter, toner_yield, toner_price,
++                               separate_drum, maintenance)):
++        return None
++    values = [_scenario_money(v) for v in (hardware, toner_price, maintenance)]
++    if min(values) < 0:
++        raise ValueError("negative_cost")
++    count = replacement_count(pages, starter, toner_yield)
++    drum_count = 0
++    drum_cost = number(0)
++    if separate_drum:
++        if drum_yield is None or drum_price is None:
++            return None
++        if type(drum_yield) is not int or drum_yield <= 0:
++            raise ValueError("invalid_drum_yield")
++        drum_cost = _scenario_money(drum_price)
++        if drum_cost < 0:
++            raise ValueError("negative_cost")
++        # Scenario assumes a new included drum at the start.
++        drum_count = replacement_count(pages, drum_yield if drum_starter is None else drum_starter, drum_yield)
++    return {"toner_replacements":count,"drum_replacements":drum_count,
++            "total":format(values[0]+count*values[1]+drum_count*drum_cost+values[2],"f"),
++            "assumption_only":True,
++            "comparison_basis":{"pages":pages,"months":months,"currency":currency,
++                                "fee_scope":fee_scope,"scenario_version":scenario_version},
++            "basis_status":"explicit" if None not in (months,currency,fee_scope) else "legacy_unscoped_fixture",
++            "input_lineage":{"kind":"scenario_assumption","hardware":str(hardware),"starter":starter,
++                             "toner_yield":toner_yield,"toner_price":str(toner_price),
++                             "separate_drum":separate_drum,"drum_yield":drum_yield,
++                             "drum_price":str(drum_price) if drum_price is not None else None,
++                             "drum_starter":(drum_yield if drum_starter is None else drum_starter) if separate_drum else None,
++                             "maintenance":str(maintenance)}}
++
++
++def compare_lifecycle_costs(a,b):
++    """No winner if a scenario has unresolved inputs; compare only like scenarios."""
++    from .evidence_comparison import number
++    if a is None or b is None:
++        return "unknown"
++    if not a.get("comparison_basis") or a["comparison_basis"] != b.get("comparison_basis"):
++        return "incomparable"
++    x,y=number(a["total"]),number(b["total"])
++    return "a" if x<y else "b" if x>y else "tie"
++
++
+ def requirements(values):
+     reqs = [{"id": "cognition:" + dim, "dimension": dim, "unit": "bool",
+              "op": "eq", "value": True,
+@@ -55,6 +133,12 @@ def requirements(values):
+                     (dim == "wechat_miniprogram" and values.get("wechat_required") is True
+                      and values.get("wechat_workflow") == "miniprogram")) else "soft"}
+             for dim in DIMS]
++    for r in reqs:
++        field = HARD_FIELDS.get(r["dimension"])
++        if field and values.get(field) is False:
++            r["research_relevant"] = False
++        if r["dimension"] == "manual_duplex" and values.get("requires_auto_duplex") is False:
++            r["research_relevant"] = False
+     def add(dim, unit="bool", op="eq", value=True, hard=False):
+         reqs.append({"id": "cognition:" + dim, "dimension": dim, "unit": unit,
+                      "op": op, "value": value, "importance": "hard" if hard else "soft"})
+@@ -66,7 +150,7 @@ def requirements(values):
+             add("initial_setup_without_app_or_scan", hard=True)
+     if type(values.get("budget_max_cny")) is int:
+         add("cost", "CNY", "lte", values["budget_max_cny"], True)
+-    for dim in ("separate_drum", "starter_included", "replacement_137a_x"):
++    for dim in ("separate_drum", "starter_included", "replacement_137a_x", "replace_on_unacceptable_quality"):
+         add(dim)
+     for dim in COST_DIMS:
+         add(dim, "pages", "gte", 1)
+@@ -82,10 +166,12 @@ def _cost_scenario(values, claims, facts):
+     for model in MODEL_NAMES.values():
+         row = {"starter": None, "replacement_yield": None, "drum_yield": None,
+                "separate_drum": None, "starter_included": None, "replacement_137a_x": None,
++               "replace_on_unacceptable_quality": None,
+                "fact_ids": [], "example_replacements": None}
+         for dim, name in (("starter_toner_yield", "starter"), ("replacement_toner_yield", "replacement_yield"),
+                           ("drum_yield", "drum_yield"), ("separate_drum", "separate_drum"),
+-                          ("starter_included", "starter_included"), ("replacement_137a_x", "replacement_137a_x")):
++                          ("starter_included", "starter_included"), ("replacement_137a_x", "replacement_137a_x"),
++                          ("replace_on_unacceptable_quality", "replace_on_unacceptable_quality")):
+             c = claims[(model, dim)]
+             if c["status"] != "met" or not c["supporting_fact_ids"]:
+                 continue
+@@ -130,20 +216,35 @@ def _decision(values, reqs, public, facts, deferred=()):
+         else:
+             action = {"kind": "research", "field": None, "candidates": names, "dimension": "cost",
+                       "text": "核" + "、".join(names) + "的实际随箱耗材量及同配置耗材价格；若成本优势足以抵消主机差价则优先该款，否则继续比较另一款。"}
+-        # An unanswered scan/duplex preference changes the decision before quoting.
+-        # A known hard-feature contradiction takes precedence over this question.
+-        if action["dimension"] in ("wechat_miniprogram", "wechat_reuse", "cost") and len(survivors) > 1:
+-            for field, dim in (("requires_scan","scan"), ("requires_auto_duplex","auto_duplex")):
+-                if field not in values and field not in deferred:
+-                    action = {"kind": "clarify", "field": field, "candidates": names, "dimension": dim,
+-                              "text": "确认是否必须" + DIMS[dim] + "；若必须则按有据能力筛选，若无需则不为该功能额外付费。"}
+-                    break
+-    # Remove actions that refer to excluded candidates, preserving the gate's claims.
+-    public["next_actions"] = [a for a in public["next_actions"] if a["candidate_id"] in names]
++    # Both consumers receive the same policy before ranking.
++    if public["next_actions"] and public["next_actions"][0]["kind"] == "clarify":
++        first = public["next_actions"][0]
++        dim = next(r["dimension"] for r in reqs if r["id"] == first["requirement_id"])
++        action = {"kind":"clarify","field":HARD_FIELDS[dim],"candidates":names,
++                  "dimension":dim,"text":first["description"]}
++    elif public["next_actions"] and public["next_actions"][0]["kind"]=="confirm_cost_assumption":
++        first=public["next_actions"][0]
++        action={"kind":"confirm_cost_assumption","field":None,"candidates":names,
++                "dimension":"cost","text":first["description"]}
++    elif public["next_actions"]:
++        first = public["next_actions"][0]
++        dim = next(r["dimension"] for r in reqs if r["id"] == first["requirement_id"])
++        targets = list(dict.fromkeys(a["candidate_id"] for a in public["next_actions"]
++                                     if a["requirement_id"] == first["requirement_id"]))
++        if dim == "cost":
++            text = "核" + "、".join(targets) + "的实际硬件报价及同配置耗材成本；若硬件超预算则排除，否则继续比较。"
++        else:
++            text = "核" + "、".join(targets) + "的" + LABELS.get(dim, dim) + "；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。"
++        action = {"kind": "research", "field": None, "candidates": targets,
++                  "dimension": dim, "text": text}
++    elif survivors:
++        action = {"kind": "wait", "field": None, "candidates": names, "dimension": None,
++                  "text": "现有条件已核至当前资料边界；等待新的有效证据，不自动批准购买。"}
+     return {"candidates": rows, "next_action": action, "cost_scenario": _cost_scenario(values, claims, facts)}
+ 
+ 
+-def compare(values, version, today, *, deferred=()):
++def compare(values, version, today, *, deferred=(), withdrawn=(), ranking_route=None,
++            ranking_transport=None, ranking_budget=None, cost_scenario=None):
+     if (values.get("category") != "printer" or "usage" not in values
+             or "monthly_pages_range" not in values or "needs_color" not in values
+             or values.get("device_deployment_region") not in MAINLAND):
+@@ -166,11 +267,21 @@ def compare(values, version, today, *, deferred=()):
+                   "region": region, "candidates": [{"id": m} for m in MODEL_NAMES.values()],
+                   "requirements": reqs, "sources": sources, "facts": facts}
+         public = publish_confirmed_comparison(bundle, reqs, as_of=today.isoformat(),
+-                                               deployment_region=region)
++                                               deployment_region=region, session_values=values, deferred=deferred, withdrawn=withdrawn)
+         if not public:
+             return None
+-        decision = _decision(values, reqs, public, {f["id"]: f for f in facts}, deferred)
+-        return {"public": public, "sources": sources, "facts": facts, "decision": decision, "bundle": bundle}
++        from .cost_scenario import bind_cost
++        bind_cost(public, cost_scenario)
++        fact_map = {f["id"]: f for f in facts}
++        decision = _decision(values, reqs, public, fact_map, deferred)
++        from .action_ranking import rank_actions
++        ranked, audit = rank_actions(public, ranking_route, ranking_transport,
++                                     **(ranking_budget or {}))
++        if audit["business_accepted"]:
++            public["next_actions"] = ranked
++            decision = _decision(values, reqs, public, fact_map, deferred)
++        return {"public": public, "sources": sources, "facts": facts, "decision": decision,
++                "bundle": bundle, "ranking_audit": audit}
+     except (ValueError, TypeError, KeyError, AttributeError, OverflowError):
+         return None
+ 
+@@ -208,7 +319,7 @@ def render(result, values):
+                 lines.append("  " + name + "：" + "、".join(LABELS[d] for d in row[key]) + "。")
+         for dim, label in DIMS.items():
+             c = claims[(model, dim)]
+-            lines.append(f"  {label}：{STATUS[c['status']]}；命题 {c['claim_id']}。")
++            lines.append(f"  {label}：{STATUS[c['status']]}。")
+             for fid in c["supporting_fact_ids"]:
+                 source = sources[facts[fid]["source_id"]]
+                 lines.append(f"    来源 {source['url']}；获取 {source['captured_on']}；本地复核期限 {source['valid_until']}。")
+@@ -227,7 +338,7 @@ def render(result, values):
+     cost = decision["cost_scenario"]
+     lines.append("低频维护与总成本（3年情景，非本人确认年限或设备寿命）："
+                  + str(cost["pages"][0]) + "–" + str(cost["pages"][1]) + "页。")
+-    lines.append("成本=主机H+替换墨粉数量×墨粉单价P+另换硒鼓数量×鼓价D+维护M；"
++    lines.append("成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；"
+                  "替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。"
+                  "各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。")
+     for model in survivors:
+@@ -241,6 +352,10 @@ def render(result, values):
+             known.append("随箱附黑色硒鼓（页数未知）")
+         if row["replacement_137a_x"]:
+             known.append("137A/137X替换硒鼓（具体产量及价格待核）")
++        if row["replace_on_unacceptable_quality"]:
++            known.append("厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止")
++            lines.append(model + "维护条件：不能仅因低告警就计入一次更换成本；"
++                         "若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。")
+         lines.append(model + "耗材：" + ("；".join(known) if known else "所售套装与标称产量待核") + "；随箱量和实际维护/价格仍需按配置核对。")
+         for fid in row["fact_ids"]:
+             source = sources[facts[fid]["source_id"]]
+@@ -254,6 +369,8 @@ def render(result, values):
+         lines.append("翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。")
+     if type(values.get("budget_max_cny")) is int:
+         lines.append(f"预算上限为{values['budget_max_cny']}元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。")
++    from .cost_scenario import render_cost
++    lines.append(render_cost(public.get("cost_comparison")))
+     lines.append("下一项高价值核查：" + decision["next_action"]["text"])
+     lines.append("没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。")
+     return "\n".join(lines)
+diff --git a/shopping_decision/confirmed_comparison.py b/shopping_decision/confirmed_comparison.py
+index b6883f4..29468de 100644
+--- a/shopping_decision/confirmed_comparison.py
++++ b/shopping_decision/confirmed_comparison.py
+@@ -45,7 +45,7 @@ def _exact_model_scope(row: dict, candidate_id: str) -> bool:
+ 
+ def publish_confirmed_comparison(bundle, confirmed_requirements, *, as_of,
+                                  deployment_region, delivery_region=None,
+-                                 budget_scope=None):
++                                 budget_scope=None, session_values=None, deferred=(), withdrawn=()):
+     """The confirmed rows alone govern thresholds, importance and eligibility.
+ 
+     The complete provider bundle is checked first, even for unused rows.
+@@ -140,14 +140,15 @@ def publish_confirmed_comparison(bundle, confirmed_requirements, *, as_of,
+             matching = next(a for a in part["assessments"]
+                             if a["candidate_id"] == candidate["id"])
+             rows.extend(matching["comparisons"])
+-        hard_ids = {req["id"] for req in requirements if req.get("importance") == "hard"}
+-        hard = [row["status"] for row in rows if row["requirement_id"] in hard_ids]
+-        disposition = ("excluded_for_research" if "failed" in hard else
+-                       "pending_evidence" if any(s in ("unknown", "conflict") for s in hard)
+-                       else "eligible_for_research")
++        from .decision_actions import disposition
++        state = disposition(rows, requirements)
+         public["assessments"].append({
+-            "candidate_id": candidate["id"], "research_status": disposition,
++            "candidate_id": candidate["id"], "research_status": state,
+             "comparisons": rows})
+-    return public
++    from .decision_actions import order_actions, bind_decision
++    public["next_actions"] = order_actions(public, requirements)
++    bind_decision(public, requirements, bundle)
++    from .decision_actions import apply_session_policy
++    return apply_session_policy(public, requirements, session_values, deferred, withdrawn)
+ 
+ 

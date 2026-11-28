@@ -1,0 +1,16 @@
+{
+  "phase": "freeze",
+  "checks": {
+    "head_matches": true,
+    "index_empty": true,
+    "index_matches": true,
+    "manifest_matches": true,
+    "protected_unchanged": true,
+    "product_matches_preflight": true
+  },
+  "head": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+  "baseline_sha256": "80e5afc1b6b2a9601fd3506c73eb34bb5ff5743aa1550da2a9e3f8f1a508e71f",
+  "protected_count": 2230,
+  "changed_protected_paths": [],
+  "changed_product_paths": []
+}

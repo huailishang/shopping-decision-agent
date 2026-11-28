@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-X",
+    "utf8",
+    "-c",
+    "import VERIFY_DIAGNOSTIC as v; from REPAIR_CHECK import save; v.save=save; v.scoring()"
+  ],
+  "started": "2026-11-28T13:51:48.000681+00:00",
+  "ended": "2026-11-28T13:51:52.357164+00:00",
+  "elapsed": 4.356518816999994,
+  "exit": 0
+}

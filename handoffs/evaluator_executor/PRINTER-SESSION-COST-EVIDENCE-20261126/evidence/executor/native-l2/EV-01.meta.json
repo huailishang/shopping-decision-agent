@@ -1,0 +1,21 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-01",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_BUSINESS.py"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_BUSINESS.py",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-26T06:41:22.923755+00:00",
+  "finished_at_utc": "2026-11-26T06:41:23.803990+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-01.stdout.log",
+  "stderr_path": "EV-01.stderr.log",
+  "stdout_bytes": 55705,
+  "stderr_bytes": 0,
+  "stdout_sha256": "3795bf1292882013dd3140906b71cc0167e3a25c92f0dedf74c9fb726de3e15e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

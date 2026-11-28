@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "action": "edit",
+  "state": {
+    "version": 3,
+    "answers": {
+      "category": {
+        "value": "printer",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "打印机"
+      },
+      "usage": {
+        "value": "费用输入有明确0和未知，使用间隔也未知",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "费用输入有明确0和未知，使用间隔也未知"
+      }
+    },
+    "history": [
+      {
+        "version": 1,
+        "raw_text": "打印机",
+        "changed_fields": [
+          "category"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 2,
+        "raw_text": "费用输入有明确0和未知，使用间隔也未知",
+        "changed_fields": [
+          "usage"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 3,
+        "raw_text": "暂不确定",
+        "changed_fields": [],
+        "old_conclusions_invalidated": false
+      }
+    ],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false,
+    "deferred_fields": [
+      "idle_weeks_pattern"
+    ]
+  },
+  "worksheet": {
+    "schema_version": 1,
+    "worksheet_id": "f4eb34a7e4c54ad9bfcbe96006389969",
+    "revision": 0,
+    "binding": {
+      "category": "printer",
+      "dialogue_version": 3,
+      "confirmed_values_sha256": "71123e5e1eaad254ab0b278ba4083a1f42bf22a6f52694c273eb724f41bf08ca",
+      "session": null
+    },
+    "confirmed": {
+      "category": "printer",
+      "usage": "费用输入有明确0和未知，使用间隔也未知"
+    },
+    "deferred": [
+      "idle_weeks_pattern"
+    ],
+    "withdrawn": [],
+    "basis": {
+      "pages": null,
+      "months": null,
+      "currency": "CNY",
+      "fee_scope": "hardware_consumables_maintenance",
+      "scenario_version": 1
+    },
+    "models": {},
+    "sources": [],
+    "guide_reference": {
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+      "source_ids": [
+        "brother-cn-202405-brochure",
+        "hp-cn-home",
+        "rtings-cost-method-2021"
+      ]
+    }
+  },
+  "payload": {
+    "candidate": null,
+    "field": "pages",
+    "value": 0
+  }
+}

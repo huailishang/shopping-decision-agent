@@ -1,0 +1,941 @@
+{
+  "zip": {
+    "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/evaluator/runtime-baseline.zip",
+    "sha256": "bbf2b09f8322ec51fbe7dfeed0effc191b97493fcee71342dd4d26b9a7996691"
+  },
+  "cases": [
+    {
+      "case": "coarse_mono",
+      "events": [
+        {
+          "request": {
+            "schema_version": 1,
+            "action": "guide",
+            "state": {
+              "version": 2,
+              "answers": {
+                "category": {
+                  "value": "printer",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "打印机"
+                },
+                "usage": {
+                  "value": "主要打印孩子黑白作业，不知道怎么买",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "主要打印孩子黑白作业，不知道怎么买"
+                }
+              },
+              "history": [
+                {
+                  "version": 1,
+                  "raw_text": "打印机",
+                  "changed_fields": [
+                    "category"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 2,
+                  "raw_text": "主要打印孩子黑白作业，不知道怎么买",
+                  "changed_fields": [
+                    "usage"
+                  ],
+                  "old_conclusions_invalidated": true
+                }
+              ],
+              "pending_approval": true,
+              "transactions_enabled": false,
+              "purchase_recommendation_approved": false,
+              "deferred_fields": []
+            },
+            "worksheet": null,
+            "payload": {}
+          },
+          "argv": [
+            "/usr/bin/python3",
+            "-X",
+            "utf8",
+            "-m",
+            "shopping_decision.chat_bridge",
+            "--worksheet-stdin"
+          ],
+          "exit_code": 0,
+          "raw_artifacts": [
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/0-stdin.json",
+              "sha256": "66936b7d041546dadbd0b721e91ada92293ab14a1a7fddcfd5b9c059c983dd63"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/0-stdout.txt",
+              "sha256": "8e62c5206178f4ca2a2ce1046dd5a5802b7da838fd556ad18b59b5c38be50238"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/0-stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/0-response.json",
+              "sha256": "184c7dcb277b6e469e1d0044dd02a6271fb5baee6784d3d1fbe8576f8738f63f"
+            }
+          ],
+          "prompt_field": "needs_color",
+          "prompt": "先看选购指南：必须在家打印彩色吗？黑白资料和偶尔彩印可分开考虑。",
+          "route_basis": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "state_unchanged": true
+        },
+        {
+          "type": "answer",
+          "field": "needs_color",
+          "answer": "否"
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "action": "guide",
+            "state": {
+              "version": 3,
+              "answers": {
+                "category": {
+                  "value": "printer",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "打印机"
+                },
+                "usage": {
+                  "value": "主要打印孩子黑白作业，不知道怎么买",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "主要打印孩子黑白作业，不知道怎么买"
+                },
+                "needs_color": {
+                  "value": false,
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "否"
+                }
+              },
+              "history": [
+                {
+                  "version": 1,
+                  "raw_text": "打印机",
+                  "changed_fields": [
+                    "category"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 2,
+                  "raw_text": "主要打印孩子黑白作业，不知道怎么买",
+                  "changed_fields": [
+                    "usage"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 3,
+                  "raw_text": "否",
+                  "changed_fields": [
+                    "needs_color"
+                  ],
+                  "old_conclusions_invalidated": true
+                }
+              ],
+              "pending_approval": true,
+              "transactions_enabled": false,
+              "purchase_recommendation_approved": false,
+              "deferred_fields": []
+            },
+            "worksheet": null,
+            "payload": {}
+          },
+          "argv": [
+            "/usr/bin/python3",
+            "-X",
+            "utf8",
+            "-m",
+            "shopping_decision.chat_bridge",
+            "--worksheet-stdin"
+          ],
+          "exit_code": 0,
+          "raw_artifacts": [
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/1-stdin.json",
+              "sha256": "2f2e43efd32ca628ee99be266c978d624a4a69f73e252385017fbb48cc6d9d95"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/1-stdout.txt",
+              "sha256": "f0a31e9570427ea66173f4dd03c8dd36fbc7678794f0c21aabc7554bb3e42e5b"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/1-stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_mono/1-response.json",
+              "sha256": "d7cf98ac84e4909b831041484e53e57a834944c1265028750268e3a936366e5d"
+            }
+          ],
+          "prompt_field": "accepts_outsourced_color",
+          "prompt": "偶尔需要彩印时，能去打印店处理吗？",
+          "route_basis": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "state_unchanged": true
+        }
+      ]
+    },
+    {
+      "case": "coarse_color",
+      "events": [
+        {
+          "request": {
+            "schema_version": 1,
+            "action": "guide",
+            "state": {
+              "version": 2,
+              "answers": {
+                "category": {
+                  "value": "printer",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "打印机"
+                },
+                "usage": {
+                  "value": "想在家打印彩色照片，不懂参数",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "想在家打印彩色照片，不懂参数"
+                }
+              },
+              "history": [
+                {
+                  "version": 1,
+                  "raw_text": "打印机",
+                  "changed_fields": [
+                    "category"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 2,
+                  "raw_text": "想在家打印彩色照片，不懂参数",
+                  "changed_fields": [
+                    "usage"
+                  ],
+                  "old_conclusions_invalidated": true
+                }
+              ],
+              "pending_approval": true,
+              "transactions_enabled": false,
+              "purchase_recommendation_approved": false,
+              "deferred_fields": []
+            },
+            "worksheet": null,
+            "payload": {}
+          },
+          "argv": [
+            "/usr/bin/python3",
+            "-X",
+            "utf8",
+            "-m",
+            "shopping_decision.chat_bridge",
+            "--worksheet-stdin"
+          ],
+          "exit_code": 0,
+          "raw_artifacts": [
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/0-stdin.json",
+              "sha256": "7b61fcec67251019799306d9b57b0ad16dfcc2e021d57eeb64323387f523ee8f"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/0-stdout.txt",
+              "sha256": "11747558c294437b45ee66481fb52ce0b350e8f0d0fcc4448c55b40874a3f1c2"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/0-stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/0-response.json",
+              "sha256": "3d5fce70c8b1d4b0f4e885a754265eaedfdce931068d54e9ca66de2228410516"
+            }
+          ],
+          "prompt_field": "needs_color",
+          "prompt": "先看选购指南：必须在家打印彩色吗？黑白资料和偶尔彩印可分开考虑。",
+          "route_basis": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "state_unchanged": true
+        },
+        {
+          "type": "answer",
+          "field": "needs_color",
+          "answer": "是"
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "action": "guide",
+            "state": {
+              "version": 3,
+              "answers": {
+                "category": {
+                  "value": "printer",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "打印机"
+                },
+                "usage": {
+                  "value": "想在家打印彩色照片，不懂参数",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "想在家打印彩色照片，不懂参数"
+                },
+                "needs_color": {
+                  "value": true,
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "是"
+                }
+              },
+              "history": [
+                {
+                  "version": 1,
+                  "raw_text": "打印机",
+                  "changed_fields": [
+                    "category"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 2,
+                  "raw_text": "想在家打印彩色照片，不懂参数",
+                  "changed_fields": [
+                    "usage"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 3,
+                  "raw_text": "是",
+                  "changed_fields": [
+                    "needs_color"
+                  ],
+                  "old_conclusions_invalidated": true
+                }
+              ],
+              "pending_approval": true,
+              "transactions_enabled": false,
+              "purchase_recommendation_approved": false,
+              "deferred_fields": []
+            },
+            "worksheet": null,
+            "payload": {}
+          },
+          "argv": [
+            "/usr/bin/python3",
+            "-X",
+            "utf8",
+            "-m",
+            "shopping_decision.chat_bridge",
+            "--worksheet-stdin"
+          ],
+          "exit_code": 0,
+          "raw_artifacts": [
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/1-stdin.json",
+              "sha256": "50edbd442d2c2cc3a1155ee77d5cf4081b4de3bf7104fc72c433d78b27484e9e"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/1-stdout.txt",
+              "sha256": "0b4bd94036036fef266eaf38d41953dcd21c7e0202e0643b085c25ba493600e3"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/1-stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_color/1-response.json",
+              "sha256": "ec14babca69fe9cdbae15081ea2a9a9bc068bbae4ea40342d0cc782107b21103"
+            }
+          ],
+          "prompt_field": "wechat_required",
+          "prompt": "微信打印是必须条件，还是更喜欢但非必须？",
+          "route_basis": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "not_fit",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "research_required",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "state_unchanged": true
+        }
+      ]
+    },
+    {
+      "case": "coarse_scan",
+      "events": [
+        {
+          "request": {
+            "schema_version": 1,
+            "action": "guide",
+            "state": {
+              "version": 2,
+              "answers": {
+                "category": {
+                  "value": "printer",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "打印机"
+                },
+                "usage": {
+                  "value": "主要想把纸质资料扫描存档，也偶尔打印",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+                }
+              },
+              "history": [
+                {
+                  "version": 1,
+                  "raw_text": "打印机",
+                  "changed_fields": [
+                    "category"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 2,
+                  "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+                  "changed_fields": [
+                    "usage"
+                  ],
+                  "old_conclusions_invalidated": true
+                }
+              ],
+              "pending_approval": true,
+              "transactions_enabled": false,
+              "purchase_recommendation_approved": false,
+              "deferred_fields": []
+            },
+            "worksheet": null,
+            "payload": {}
+          },
+          "argv": [
+            "/usr/bin/python3",
+            "-X",
+            "utf8",
+            "-m",
+            "shopping_decision.chat_bridge",
+            "--worksheet-stdin"
+          ],
+          "exit_code": 0,
+          "raw_artifacts": [
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/0-stdin.json",
+              "sha256": "26b05913d6f068356da7c8fd6b653b2b50aeac12652190cf978915f8f2d09129"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/0-stdout.txt",
+              "sha256": "2d8182814be42242d52ae5e1e886057ba2495e4b980fc9bf595d5f5ab3d63f14"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/0-stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/0-response.json",
+              "sha256": "67fe560ef778611f053ef76b786f086fb4a941177ee1ce91a70c43e7746aea5e"
+            }
+          ],
+          "prompt_field": "needs_color",
+          "prompt": "先看选购指南：必须在家打印彩色吗？黑白资料和偶尔彩印可分开考虑。",
+          "route_basis": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "state_unchanged": true
+        },
+        {
+          "type": "answer",
+          "field": "needs_color",
+          "answer": "暂不确定"
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "action": "guide",
+            "state": {
+              "version": 3,
+              "answers": {
+                "category": {
+                  "value": "printer",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "打印机"
+                },
+                "usage": {
+                  "value": "主要想把纸质资料扫描存档，也偶尔打印",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+                }
+              },
+              "history": [
+                {
+                  "version": 1,
+                  "raw_text": "打印机",
+                  "changed_fields": [
+                    "category"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 2,
+                  "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+                  "changed_fields": [
+                    "usage"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 3,
+                  "raw_text": "暂不确定",
+                  "changed_fields": [],
+                  "old_conclusions_invalidated": false
+                }
+              ],
+              "pending_approval": true,
+              "transactions_enabled": false,
+              "purchase_recommendation_approved": false,
+              "deferred_fields": [
+                "needs_color"
+              ]
+            },
+            "worksheet": null,
+            "payload": {}
+          },
+          "argv": [
+            "/usr/bin/python3",
+            "-X",
+            "utf8",
+            "-m",
+            "shopping_decision.chat_bridge",
+            "--worksheet-stdin"
+          ],
+          "exit_code": 0,
+          "raw_artifacts": [
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/1-stdin.json",
+              "sha256": "df54d10a63747f7e92470d4a88b4d9778a7c68ecff46fba40f6f363dc3e8651e"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/1-stdout.txt",
+              "sha256": "bf819be5e7ab761bc094c29268f3a9aec13c35ccae08348b4f504c877bc4a9f7"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/1-stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/coarse_scan/1-response.json",
+              "sha256": "4898718cb0f58f280cf98b0bb1caac2cae96e5be7d0a67757b19af9039ce3b00"
+            }
+          ],
+          "prompt_field": "wechat_required",
+          "prompt": "微信打印是必须条件，还是更喜欢但非必须？",
+          "route_basis": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "state_unchanged": true
+        }
+      ]
+    },
+    {
+      "case": "expert",
+      "events": [
+        {
+          "request": {
+            "schema_version": 1,
+            "action": "guide",
+            "state": {
+              "version": 6,
+              "answers": {
+                "category": {
+                  "value": "printer",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "打印机"
+                },
+                "usage": {
+                  "value": "家庭打印",
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "家庭打印"
+                },
+                "needs_color": {
+                  "value": false,
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "否"
+                },
+                "requires_scan": {
+                  "value": true,
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "是"
+                },
+                "requires_auto_duplex": {
+                  "value": false,
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "否"
+                },
+                "wechat_required": {
+                  "value": false,
+                  "origin": "user_explicit",
+                  "confirmed": true,
+                  "raw_text": "否"
+                }
+              },
+              "history": [
+                {
+                  "version": 1,
+                  "raw_text": "打印机",
+                  "changed_fields": [
+                    "category"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 2,
+                  "raw_text": "家庭打印",
+                  "changed_fields": [
+                    "usage"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 3,
+                  "raw_text": "否",
+                  "changed_fields": [
+                    "needs_color"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 4,
+                  "raw_text": "是",
+                  "changed_fields": [
+                    "requires_scan"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 5,
+                  "raw_text": "否",
+                  "changed_fields": [
+                    "requires_auto_duplex"
+                  ],
+                  "old_conclusions_invalidated": true
+                },
+                {
+                  "version": 6,
+                  "raw_text": "否",
+                  "changed_fields": [
+                    "wechat_required"
+                  ],
+                  "old_conclusions_invalidated": true
+                }
+              ],
+              "pending_approval": true,
+              "transactions_enabled": false,
+              "purchase_recommendation_approved": false,
+              "deferred_fields": []
+            },
+            "worksheet": null,
+            "payload": {}
+          },
+          "argv": [
+            "/usr/bin/python3",
+            "-X",
+            "utf8",
+            "-m",
+            "shopping_decision.chat_bridge",
+            "--worksheet-stdin"
+          ],
+          "exit_code": 0,
+          "raw_artifacts": [
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/expert/0-stdin.json",
+              "sha256": "4c73dea66021a440766105952c82df53e74e7d557e706a5153ad73511d81a40a"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/expert/0-stdout.txt",
+              "sha256": "8fcde8cfd95c9e610a0801eac35f22e213470b32a712dc48d3e206c9dbcb6c5b"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/expert/0-stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/baseline-prototype/expert/0-response.json",
+              "sha256": "623b8e3563b8b338cb94e81dcb0c0034f7fb5b1404ef372403a56700a0d7f0a7"
+            }
+          ],
+          "prompt_field": "accepts_outsourced_color",
+          "prompt": "偶尔需要彩印时，能去打印店处理吗？",
+          "route_basis": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "state_unchanged": true
+        }
+      ]
+    }
+  ],
+  "limit": "B0 prototype only; not 24 paired tasks or impact evidence"
+}

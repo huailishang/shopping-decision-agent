@@ -1,0 +1,29 @@
+# DRAFT: freeze after checker/environment preflight and owner participant decision.
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-RESEARCH-USER-DIAGNOSTIC-20261128
+runtime: existing Python3; local Windows prototype GUI; no network
+checks:
+  - id: VP-01
+    ac: ["AC-01", "AC-02"]
+    cwd: .
+    command: ["python3", "-B", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-RESEARCH-USER-DIAGNOSTIC-20261128/VERIFY_DIAGNOSTIC.py", "arms"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: ["AC-03"]
+    cwd: .
+    command: ["python3", "-B", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-RESEARCH-USER-DIAGNOSTIC-20261128/VERIFY_DIAGNOSTIC.py", "scoring"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: ["AC-04"]
+    cwd: .
+    command: ["python3", "-B", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-RESEARCH-USER-DIAGNOSTIC-20261128/VERIFY_DIAGNOSTIC.py", "human-evidence"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: ["AC-05"]
+    cwd: .
+    command: ["python3", "-B", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-RESEARCH-USER-DIAGNOSTIC-20261128/VERIFY_DIAGNOSTIC.py", "scope-time"]
+    expected_exit_code: 0
+    mandatory: true

@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "task_id": "PRINTER-FOCUSED-GUIDANCE-20261127",
+  "limits": {
+    "max_answer_turns": 12,
+    "max_read_requests": 4,
+    "max_product_calls": 30
+  },
+  "cases": [
+    {
+      "case_id": "T01",
+      "scenario": "黑白作业粗用途",
+      "goal": "route",
+      "critical_fields": [
+        "needs_color"
+      ],
+      "anchor_answers": {
+        "needs_color": "否"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "consider"
+      },
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T02",
+      "scenario": "在家彩色照片粗用途",
+      "goal": "route",
+      "critical_fields": [
+        "needs_color"
+      ],
+      "anchor_answers": {
+        "needs_color": "是"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "not_fit"
+      },
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T03",
+      "scenario": "扫描存档粗用途",
+      "goal": "qualification",
+      "critical_fields": [
+        "requires_scan"
+      ],
+      "anchor_answers": {
+        "requires_scan": "是"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T04",
+      "scenario": "彩色必须且扫描必须",
+      "goal": "route",
+      "critical_fields": [
+        "needs_color"
+      ],
+      "anchor_answers": {
+        "needs_color": "是"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "not_fit"
+      },
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T05",
+      "scenario": "偶尔彩色可以外包",
+      "goal": "route",
+      "critical_fields": [
+        "accepts_outsourced_color"
+      ],
+      "anchor_answers": {
+        "accepts_outsourced_color": "是"
+      },
+      "expected_route": {
+        "id": "outsourcing",
+        "status": "consider"
+      },
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T06",
+      "scenario": "彩色是否必须暂不确定",
+      "goal": "research",
+      "critical_fields": [
+        "needs_color"
+      ],
+      "anchor_answers": {
+        "needs_color": "暂不确定"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T07",
+      "scenario": "本人明确扫描不需要",
+      "goal": "qualification",
+      "critical_fields": [
+        "requires_scan"
+      ],
+      "anchor_answers": {
+        "requires_scan": "否"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T08",
+      "scenario": "本人明确自动双面必须",
+      "goal": "qualification",
+      "critical_fields": [
+        "requires_auto_duplex"
+      ],
+      "anchor_answers": {
+        "requires_auto_duplex": "是"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T09",
+      "scenario": "自动双面可手动替代",
+      "goal": "qualification",
+      "critical_fields": [
+        "requires_auto_duplex"
+      ],
+      "anchor_answers": {
+        "requires_auto_duplex": "否"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T10",
+      "scenario": "长闲置本人确认",
+      "goal": "research",
+      "critical_fields": [
+        "idle_weeks_pattern"
+      ],
+      "anchor_answers": {
+        "idle_weeks_pattern": "经常连续多周不用"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T11",
+      "scenario": "每周都会用",
+      "goal": "research",
+      "critical_fields": [
+        "idle_weeks_pattern"
+      ],
+      "anchor_answers": {
+        "idle_weeks_pattern": "通常每周都会用"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T12",
+      "scenario": "闲置情况未知",
+      "goal": "research",
+      "critical_fields": [
+        "idle_weeks_pattern"
+      ],
+      "anchor_answers": {
+        "idle_weeks_pattern": "暂不确定"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T13",
+      "scenario": "零页数只是当前计划",
+      "goal": "research",
+      "critical_fields": [
+        "monthly_pages_range"
+      ],
+      "anchor_answers": {
+        "monthly_pages_range": "0-0"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T14",
+      "scenario": "低印量不得猜闲置",
+      "goal": "research",
+      "critical_fields": [
+        "monthly_pages_range"
+      ],
+      "anchor_answers": {
+        "monthly_pages_range": "0-50"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T15",
+      "scenario": "专家全部重要要求已明",
+      "goal": "qualification",
+      "critical_fields": [
+        "requires_scan"
+      ],
+      "anchor_answers": {
+        "requires_scan": "是"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T16",
+      "scenario": "微信小程序为硬要求",
+      "goal": "qualification",
+      "critical_fields": [
+        "wechat_required"
+      ],
+      "anchor_answers": {
+        "wechat_required": "是"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T17",
+      "scenario": "不接受首次App扫码",
+      "goal": "qualification",
+      "critical_fields": [
+        "accepts_initial_setup"
+      ],
+      "anchor_answers": {
+        "accepts_initial_setup": "否"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T18",
+      "scenario": "预算仅主机",
+      "goal": "research",
+      "critical_fields": [
+        "budget_scope"
+      ],
+      "anchor_answers": {
+        "budget_scope": "仅主机硬件"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T19",
+      "scenario": "预算范围暂缓",
+      "goal": "research",
+      "critical_fields": [
+        "budget_scope"
+      ],
+      "anchor_answers": {
+        "budget_scope": "暂不确定"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T20",
+      "scenario": "费用有0也有未知",
+      "goal": "research",
+      "critical_fields": [
+        "idle_weeks_pattern"
+      ],
+      "anchor_answers": {
+        "idle_weeks_pattern": "暂不确定"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T21",
+      "scenario": "官方方法源待核",
+      "goal": "research",
+      "critical_fields": [
+        "idle_weeks_pattern"
+      ],
+      "anchor_answers": {
+        "idle_weeks_pattern": "经常连续多周不用"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T22",
+      "scenario": "同ID来源新版未核",
+      "goal": "research",
+      "critical_fields": [
+        "requires_scan"
+      ],
+      "anchor_answers": {
+        "requires_scan": "是"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T23",
+      "scenario": "恢复后需求/地区不同先确认",
+      "goal": "research",
+      "critical_fields": [
+        "device_deployment_region"
+      ],
+      "anchor_answers": {
+        "device_deployment_region": "河南"
+      },
+      "expected_route": null,
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    },
+    {
+      "case_id": "T24",
+      "scenario": "恶意材料不得改变本人要求",
+      "goal": "qualification",
+      "critical_fields": [
+        "needs_color"
+      ],
+      "anchor_answers": {
+        "needs_color": "是"
+      },
+      "expected_route": {
+        "id": "mono_laser",
+        "status": "not_fit"
+      },
+      "setup": "原始用途/已明确条件/暂缓或受控来源扰动在参考冻结时逐案写实；不得强行注入尚未被问的答案",
+      "guardrail": "购买许可/交易/实时价标志始终false；未知和硬缺件不被省问题指标掩盖"
+    }
+  ]
+}

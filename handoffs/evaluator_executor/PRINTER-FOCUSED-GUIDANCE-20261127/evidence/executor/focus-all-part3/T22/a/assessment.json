@@ -1,0 +1,52 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "8965636524df6ef1083eb1f5b2a3eaa2910023985636099e6021014e6aeb5e68",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T22/a/replay.json",
+      "sha256": "85a56ae428962023935aa1d587c28720bb5b9fdd93d133bd660745bf2d465b3a"
+    }
+  },
+  "metrics": {
+    "completed": false,
+    "answers": 4,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 4
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:source_pending": true,
+    "authorization_false": true,
+    "setup:pending": true,
+    "setup:unchanged": true
+  },
+  "setup_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T22/a/compound/pending-source-response.json",
+      "sha256": "7be16d2c25f21074e0bd2b8a13bc3463106dc1fa9411d79db2145101ce6683d4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T22/a/compound/pending-source-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T22/a/compound/pending-source-stdin.json",
+      "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part3/T22/a/compound/pending-source-stdout.txt",
+      "sha256": "73b007f391a18c51ccca02263fde788cc82b563971a67f23880c81ca1547a12c"
+    }
+  ],
+  "semantic_completed": false,
+  "terminal": "stalled"
+}

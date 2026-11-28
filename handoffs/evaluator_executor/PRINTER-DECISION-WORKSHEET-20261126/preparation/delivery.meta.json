@@ -1,0 +1,14 @@
+{
+  "label": "delivery",
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_DELIVERY.py"
+  ],
+  "start_utc": "2026-11-26T08:07:29.474065+00:00",
+  "end_utc": "2026-11-26T08:07:29.614938+00:00",
+  "exit_code": 1,
+  "stdout_sha256": "e1dcb6443d8fc0b093c31af97d149df1f947bac1b7427f2627defce17e59a093",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

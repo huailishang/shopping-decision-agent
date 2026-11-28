@@ -1,0 +1,5 @@
+{
+  "file": "shopping_decision/chat_bridge.py",
+  "insert": "    if v.get(\"category\") == \"printer\" and \"needs_color\" not in v:\n        active = \"\" if \"budget_max_cny\" in state.get(\"deferred_fields\", []) else \"budget_max_cny\"\n        prompt = QUESTION[\"budget_max_cny\"] if active else \"测试故意阻断\"\n        choices = REFS[\"budget_max_cny\"] if active else []\n",
+  "only_isolated_copy": true
+}

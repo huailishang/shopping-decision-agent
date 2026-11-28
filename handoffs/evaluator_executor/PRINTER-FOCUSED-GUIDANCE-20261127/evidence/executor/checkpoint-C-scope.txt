@@ -1,0 +1,25 @@
+{
+  "phase": "post",
+  "checks": {
+    "manifest": true,
+    "head": true,
+    "index": true,
+    "protected": true
+  },
+  "protected_count": 4087,
+  "changed_protected": [],
+  "changed_product": [
+    "desktop/ShoppingDecisionDesktop.java",
+    "shopping_decision/chat_bridge.py",
+    "shopping_decision/cognition_comparison.py",
+    "shopping_decision/cognition_guide.py",
+    "shopping_decision/context_builder.py",
+    "shopping_decision/decision_note.py",
+    "shopping_decision/dialogue_flow.py",
+    "shopping_decision/focus_guidance.py",
+    "tests/test_focus_guidance.py",
+    "tests/test_focus_guidance_bridge.py",
+    "tests/test_focus_guidance_lineage.py",
+    "tests/test_guidance_replay.py"
+  ]
+}

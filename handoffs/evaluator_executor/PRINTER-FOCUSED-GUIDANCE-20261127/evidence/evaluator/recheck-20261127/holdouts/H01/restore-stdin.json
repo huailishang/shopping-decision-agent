@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "action": "restore",
+  "state": {
+    "version": 0,
+    "answers": {},
+    "history": [],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false
+  },
+  "worksheet": {
+    "schema_version": 1,
+    "worksheet_id": "429c241cb0fe4089828843199e676507",
+    "revision": 0,
+    "binding": {
+      "category": "printer",
+      "dialogue_version": 10,
+      "confirmed_values_sha256": "e50e857ae3ddb1e1624423827bf7118436920101913bc1501f8e8d60b4b0f789",
+      "session": null
+    },
+    "confirmed": {
+      "category": "printer",
+      "usage": "家庭纸质资料整理",
+      "needs_color": false,
+      "wechat_required": false,
+      "accepts_initial_setup": true,
+      "device_deployment_region": "广东",
+      "monthly_pages_range": [
+        20,
+        80
+      ],
+      "budget_max_cny": 1200,
+      "requires_scan": true,
+      "requires_auto_duplex": true
+    },
+    "deferred": [],
+    "withdrawn": [],
+    "basis": {
+      "pages": null,
+      "months": null,
+      "currency": "CNY",
+      "fee_scope": "hardware_consumables_maintenance",
+      "scenario_version": 1
+    },
+    "models": {},
+    "sources": [],
+    "guide_reference": {
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+      "source_ids": [
+        "brother-cn-202405-brochure",
+        "hp-cn-home",
+        "rtings-cost-method-2021"
+      ]
+    }
+  },
+  "payload": {
+    "confirm_saved_conditions": true
+  }
+}

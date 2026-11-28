@@ -10,7 +10,7 @@ from .minimal_research import MODEL_NAMES
 from .printer_reviewed_evidence import MAINLAND
 
 PACK_PATH = Path(__file__).resolve().parent.parent / "knowledge" / "printer_cognition_comparison_v1.json"
-PACK_SHA256 = "6e303e1cd0a85bfd1aca4302da2a0a88821f880c1e62ef098c2aa48ee873e7a6"
+PACK_SHA256 = "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385"
 DIMS = {"scan": "扫描", "auto_duplex": "自动双面", "manual_duplex": "手动双面",
         "laser_print": "激光打印", "wechat_miniprogram": "微信小程序功能",
         "color_print": "彩色打印"}
@@ -24,7 +24,8 @@ COST_DIMS = {"starter_toner_yield": "随箱墨粉标称页数",
 EXTRA_LABELS = {"wechat_reuse": "微信稳定复用", "wechat_transfer_to_app": "微信转App",
                 "initial_setup_without_app_or_scan": "免首次App/扫码", "cost": "预算",
                 "separate_drum": "鼓粉分离", "starter_included": "随箱附黑色硒鼓",
-                "replacement_137a_x": "137A/137X替换硒鼓", **COST_DIMS}
+                "replacement_137a_x": "137A/137X替换硒鼓",
+                 "replace_on_unacceptable_quality": "按打印质量更换耗材", **COST_DIMS}
 LABELS = {**DIMS, **EXTRA_LABELS}
 
 
@@ -39,13 +40,90 @@ def load_pack():
         return None
 
 
+MAX_SCENARIO_PAGES = 10_000_000
+MAX_SCENARIO_MONTHS = 1200
+MAX_SCENARIO_PRICE = 1_000_000_000
+
+def _scenario_money(value):
+    from .evidence_comparison import number
+    amount = number(value)
+    if amount < 0:
+        raise ValueError("negative_cost")
+    # Bound magnitude and significant fractional precision before arithmetic.
+    if amount > MAX_SCENARIO_PRICE or amount.as_tuple().exponent < -6:
+        raise ValueError("cost_input_out_of_range")
+    return amount
+
+
 def replacement_count(pages, starter, yield_pages):
     """Scenario arithmetic only, not a forecast or a price."""
     if any(type(x) is not int for x in (pages, starter, yield_pages)):
         raise ValueError("scenario integers required")
-    if min(pages, starter) < 0 or yield_pages <= 0:
+    if min(pages, starter) < 0 or yield_pages <= 0 or max(pages, starter, yield_pages) > MAX_SCENARIO_PAGES:
         raise ValueError("invalid scenario")
     return (max(0, pages - starter) + yield_pages - 1) // yield_pages
+
+
+def lifecycle_cost(*, pages, hardware, starter, toner_yield, toner_price,
+                   separate_drum, drum_yield=None, drum_price=None, maintenance=None,
+                   months=None, currency=None, fee_scope=None, scenario_version=1,
+                   drum_starter=None):
+    """Calculate an explicit scenario, never turn missing inputs into zero."""
+    from .evidence_comparison import number
+    if type(pages) is not int or not 0 <= pages <= MAX_SCENARIO_PAGES:
+        raise ValueError("invalid_pages")
+    if months is not None and (type(months) is not int or not 1 <= months <= MAX_SCENARIO_MONTHS):
+        raise ValueError("invalid_months")
+    if currency is not None and (not isinstance(currency,str) or len(currency)!=3 or not currency.isupper()):
+        raise ValueError("invalid_currency")
+    if fee_scope is not None and fee_scope!="hardware_consumables_maintenance":
+        raise ValueError("invalid_fee_scope")
+    if type(scenario_version) is not int or scenario_version<=0:
+        raise ValueError("invalid_scenario_version")
+    if separate_drum is not None and type(separate_drum) is not bool:
+        raise ValueError("invalid_drum_type")
+    if any(x is None for x in (hardware, starter, toner_yield, toner_price,
+                               separate_drum, maintenance)):
+        return None
+    values = [_scenario_money(v) for v in (hardware, toner_price, maintenance)]
+    if min(values) < 0:
+        raise ValueError("negative_cost")
+    count = replacement_count(pages, starter, toner_yield)
+    drum_count = 0
+    drum_cost = number(0)
+    if separate_drum:
+        if drum_yield is None or drum_price is None:
+            return None
+        if type(drum_yield) is not int or drum_yield <= 0:
+            raise ValueError("invalid_drum_yield")
+        drum_cost = _scenario_money(drum_price)
+        if drum_cost < 0:
+            raise ValueError("negative_cost")
+        # Scenario assumes a new included drum at the start.
+        drum_count = replacement_count(pages, drum_yield if drum_starter is None else drum_starter, drum_yield)
+    return {"toner_replacements":count,"drum_replacements":drum_count,
+            "total":format(values[0]+count*values[1]+drum_count*drum_cost+values[2],"f"),
+            "assumption_only":True,
+            "comparison_basis":{"pages":pages,"months":months,"currency":currency,
+                                "fee_scope":fee_scope,"scenario_version":scenario_version},
+            "basis_status":"explicit" if None not in (months,currency,fee_scope) else "legacy_unscoped_fixture",
+            "input_lineage":{"kind":"scenario_assumption","hardware":str(hardware),"starter":starter,
+                             "toner_yield":toner_yield,"toner_price":str(toner_price),
+                             "separate_drum":separate_drum,"drum_yield":drum_yield,
+                             "drum_price":str(drum_price) if drum_price is not None else None,
+                             "drum_starter":(drum_yield if drum_starter is None else drum_starter) if separate_drum else None,
+                             "maintenance":str(maintenance)}}
+
+
+def compare_lifecycle_costs(a,b):
+    """No winner if a scenario has unresolved inputs; compare only like scenarios."""
+    from .evidence_comparison import number
+    if a is None or b is None:
+        return "unknown"
+    if not a.get("comparison_basis") or a["comparison_basis"] != b.get("comparison_basis"):
+        return "incomparable"
+    x,y=number(a["total"]),number(b["total"])
+    return "a" if x<y else "b" if x>y else "tie"
 
 
 def requirements(values):
@@ -55,6 +133,12 @@ def requirements(values):
                     (dim == "wechat_miniprogram" and values.get("wechat_required") is True
                      and values.get("wechat_workflow") == "miniprogram")) else "soft"}
             for dim in DIMS]
+    for r in reqs:
+        field = HARD_FIELDS.get(r["dimension"])
+        if field and values.get(field) is False:
+            r["research_relevant"] = False
+        if r["dimension"] == "manual_duplex" and values.get("requires_auto_duplex") is False:
+            r["research_relevant"] = False
     def add(dim, unit="bool", op="eq", value=True, hard=False):
         reqs.append({"id": "cognition:" + dim, "dimension": dim, "unit": unit,
                      "op": op, "value": value, "importance": "hard" if hard else "soft"})
@@ -66,7 +150,7 @@ def requirements(values):
             add("initial_setup_without_app_or_scan", hard=True)
     if type(values.get("budget_max_cny")) is int:
         add("cost", "CNY", "lte", values["budget_max_cny"], True)
-    for dim in ("separate_drum", "starter_included", "replacement_137a_x"):
+    for dim in ("separate_drum", "starter_included", "replacement_137a_x", "replace_on_unacceptable_quality"):
         add(dim)
     for dim in COST_DIMS:
         add(dim, "pages", "gte", 1)
@@ -82,10 +166,12 @@ def _cost_scenario(values, claims, facts):
     for model in MODEL_NAMES.values():
         row = {"starter": None, "replacement_yield": None, "drum_yield": None,
                "separate_drum": None, "starter_included": None, "replacement_137a_x": None,
+               "replace_on_unacceptable_quality": None,
                "fact_ids": [], "example_replacements": None}
         for dim, name in (("starter_toner_yield", "starter"), ("replacement_toner_yield", "replacement_yield"),
                           ("drum_yield", "drum_yield"), ("separate_drum", "separate_drum"),
-                          ("starter_included", "starter_included"), ("replacement_137a_x", "replacement_137a_x")):
+                          ("starter_included", "starter_included"), ("replacement_137a_x", "replacement_137a_x"),
+                          ("replace_on_unacceptable_quality", "replace_on_unacceptable_quality")):
             c = claims[(model, dim)]
             if c["status"] != "met" or not c["supporting_fact_ids"]:
                 continue
@@ -130,20 +216,35 @@ def _decision(values, reqs, public, facts, deferred=()):
         else:
             action = {"kind": "research", "field": None, "candidates": names, "dimension": "cost",
                       "text": "核" + "、".join(names) + "的实际随箱耗材量及同配置耗材价格；若成本优势足以抵消主机差价则优先该款，否则继续比较另一款。"}
-        # An unanswered scan/duplex preference changes the decision before quoting.
-        # A known hard-feature contradiction takes precedence over this question.
-        if action["dimension"] in ("wechat_miniprogram", "wechat_reuse", "cost") and len(survivors) > 1:
-            for field, dim in (("requires_scan","scan"), ("requires_auto_duplex","auto_duplex")):
-                if field not in values and field not in deferred:
-                    action = {"kind": "clarify", "field": field, "candidates": names, "dimension": dim,
-                              "text": "确认是否必须" + DIMS[dim] + "；若必须则按有据能力筛选，若无需则不为该功能额外付费。"}
-                    break
-    # Remove actions that refer to excluded candidates, preserving the gate's claims.
-    public["next_actions"] = [a for a in public["next_actions"] if a["candidate_id"] in names]
+    # Both consumers receive the same policy before ranking.
+    if public["next_actions"] and public["next_actions"][0]["kind"] == "clarify":
+        first = public["next_actions"][0]
+        dim = next(r["dimension"] for r in reqs if r["id"] == first["requirement_id"])
+        action = {"kind":"clarify","field":HARD_FIELDS[dim],"candidates":names,
+                  "dimension":dim,"text":first["description"]}
+    elif public["next_actions"] and public["next_actions"][0]["kind"]=="confirm_cost_assumption":
+        first=public["next_actions"][0]
+        action={"kind":"confirm_cost_assumption","field":None,"candidates":[first["candidate_id"]],
+                "dimension":"cost","text":first["description"], **({"scenario_field":first["scenario_field"]} if "scenario_field" in first else {})}
+    elif public["next_actions"]:
+        first = public["next_actions"][0]
+        dim = next(r["dimension"] for r in reqs if r["id"] == first["requirement_id"])
+        targets = list(dict.fromkeys(a["candidate_id"] for a in public["next_actions"]
+                                     if a["requirement_id"] == first["requirement_id"]))
+        if dim == "cost":
+            text = "核" + "、".join(targets) + "的实际硬件报价及同配置耗材成本；若硬件超预算则排除，否则继续比较。"
+        else:
+            text = "核" + "、".join(targets) + "的" + LABELS.get(dim, dim) + "；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。"
+        action = {"kind": "research", "field": None, "candidates": targets,
+                  "dimension": dim, "text": text}
+    elif survivors:
+        action = {"kind": "wait", "field": None, "candidates": names, "dimension": None,
+                  "text": "现有条件已核至当前资料边界；等待新的有效证据，不自动批准购买。"}
     return {"candidates": rows, "next_action": action, "cost_scenario": _cost_scenario(values, claims, facts)}
 
 
-def compare(values, version, today, *, deferred=()):
+def compare(values, version, today, *, deferred=(), withdrawn=(), ranking_route=None,
+            ranking_transport=None, ranking_budget=None, cost_scenario=None):
     if (values.get("category") != "printer" or "usage" not in values
             or "monthly_pages_range" not in values or "needs_color" not in values
             or values.get("device_deployment_region") not in MAINLAND):
@@ -166,11 +267,24 @@ def compare(values, version, today, *, deferred=()):
                   "region": region, "candidates": [{"id": m} for m in MODEL_NAMES.values()],
                   "requirements": reqs, "sources": sources, "facts": facts}
         public = publish_confirmed_comparison(bundle, reqs, as_of=today.isoformat(),
-                                               deployment_region=region)
+                                               deployment_region=region, session_values=values, deferred=deferred, withdrawn=withdrawn)
         if not public:
             return None
-        decision = _decision(values, reqs, public, {f["id"]: f for f in facts}, deferred)
-        return {"public": public, "sources": sources, "facts": facts, "decision": decision, "bundle": bundle}
+        from .cost_scenario import bind_cost
+        bind_cost(public, cost_scenario)
+        fact_map = {f["id"]: f for f in facts}
+        decision = _decision(values, reqs, public, fact_map, deferred)
+        from .action_ranking import rank_actions
+        from .cognition_guide import project
+        cognition_context = json.loads(project(values, {"public_decision":public}, as_of=today, deferred=deferred, withdrawn=withdrawn, state_version=version)["cognition_context_json"])
+        ranked, audit = rank_actions(public, ranking_route, ranking_transport,
+                                     cognition_context=cognition_context,
+                                     **(ranking_budget or {}))
+        if audit["business_accepted"]:
+            public["next_actions"] = ranked
+            decision = _decision(values, reqs, public, fact_map, deferred)
+        return {"public": public, "sources": sources, "facts": facts, "decision": decision,
+                "bundle": bundle, "ranking_audit": audit}
     except (ValueError, TypeError, KeyError, AttributeError, OverflowError):
         return None
 
@@ -208,7 +322,7 @@ def render(result, values):
                 lines.append("  " + name + "：" + "、".join(LABELS[d] for d in row[key]) + "。")
         for dim, label in DIMS.items():
             c = claims[(model, dim)]
-            lines.append(f"  {label}：{STATUS[c['status']]}；命题 {c['claim_id']}。")
+            lines.append(f"  {label}：{STATUS[c['status']]}。")
             for fid in c["supporting_fact_ids"]:
                 source = sources[facts[fid]["source_id"]]
                 lines.append(f"    来源 {source['url']}；获取 {source['captured_on']}；本地复核期限 {source['valid_until']}。")
@@ -227,7 +341,7 @@ def render(result, values):
     cost = decision["cost_scenario"]
     lines.append("低频维护与总成本（3年情景，非本人确认年限或设备寿命）："
                  + str(cost["pages"][0]) + "–" + str(cost["pages"][1]) + "页。")
-    lines.append("成本=主机H+替换墨粉数量×墨粉单价P+另换硒鼓数量×鼓价D+维护M；"
+    lines.append("成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；"
                  "替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。"
                  "各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。")
     for model in survivors:
@@ -241,6 +355,10 @@ def render(result, values):
             known.append("随箱附黑色硒鼓（页数未知）")
         if row["replacement_137a_x"]:
             known.append("137A/137X替换硒鼓（具体产量及价格待核）")
+        if row["replace_on_unacceptable_quality"]:
+            known.append("厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止")
+            lines.append(model + "维护条件：不能仅因低告警就计入一次更换成本；"
+                         "若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。")
         lines.append(model + "耗材：" + ("；".join(known) if known else "所售套装与标称产量待核") + "；随箱量和实际维护/价格仍需按配置核对。")
         for fid in row["fact_ids"]:
             source = sources[facts[fid]["source_id"]]
@@ -254,6 +372,8 @@ def render(result, values):
         lines.append("翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。")
     if type(values.get("budget_max_cny")) is int:
         lines.append(f"预算上限为{values['budget_max_cny']}元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。")
+    from .cost_scenario import render_cost
+    lines.append(render_cost(public.get("cost_comparison")))
     lines.append("下一项高价值核查：" + decision["next_action"]["text"])
     lines.append("没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。")
     return "\n".join(lines)

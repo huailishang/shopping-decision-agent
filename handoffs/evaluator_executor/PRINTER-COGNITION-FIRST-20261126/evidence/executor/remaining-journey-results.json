@@ -1,0 +1,74 @@
+[
+  {
+    "id": "G07",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G07-bridge-trace.json",
+      "sha256": "5111a0009bba4f7b10c35ac00ffc219039b6ccdeb0cb709d2eb44d873988a0fd"
+    },
+    "error": null
+  },
+  {
+    "id": "G08",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G08-bridge-trace.json",
+      "sha256": "79768f3720e4cd87b02b20f87350e9aed873b3656839710395ae1741193905d9"
+    },
+    "error": null
+  },
+  {
+    "id": "G09",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G09-bridge-trace.json",
+      "sha256": "a93f0cfde0240b7afe66210185391137fd5f9e721de47799f1ab9c24ddb4c25c"
+    },
+    "error": null
+  },
+  {
+    "id": "G10",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G10-bridge-trace.json",
+      "sha256": "9304c7c450a98bf938c051322d548923d74d89600c5a47c2ab6fee30d11c7036"
+    },
+    "error": null
+  },
+  {
+    "id": "G11",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G11-bridge-trace.json",
+      "sha256": "0803d7480d740fe799ba600cc036f1f77f99e9cd859d4fa1e9de24fdceda38ef"
+    },
+    "error": null
+  },
+  {
+    "id": "G17",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G17-bridge-trace.json",
+      "sha256": "a556077e7e091469cc2739a5bad206e81e8ca712db11a8aad4feffdc72eb8614"
+    },
+    "error": null
+  },
+  {
+    "id": "G18",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G18-bridge-trace.json",
+      "sha256": "a32cfa0a76a3a56220253752bf13d5d585e3c7c76a0253b7b9e3f21ae2868181"
+    },
+    "error": null
+  },
+  {
+    "id": "G20",
+    "passed": true,
+    "raw_artifact": {
+      "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G20-bridge-trace.json",
+      "sha256": "6eea0ba65a9776f46da10206c8ea5eb1691e84091184b38724090019cb2ad547"
+    },
+    "error": null
+  }
+]

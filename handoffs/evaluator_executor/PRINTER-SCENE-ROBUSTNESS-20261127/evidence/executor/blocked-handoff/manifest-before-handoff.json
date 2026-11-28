@@ -1,0 +1,3161 @@
+{
+  "status": "partial closeout; not L2",
+  "artifacts": [
+    {
+      "path": "CURRENT.md",
+      "sha256": "bb701bd26ff7b908c4ba627fe5b4195c9579073579dcd94e10749e9663517531"
+    },
+    {
+      "path": "desktop/SceneRobustnessRegression.java",
+      "sha256": "5c57e703e28fcc1927aef3b4052e0c29e527ede13691424f20ff7b07fce95959"
+    },
+    {
+      "path": "desktop/SceneRobustnessSwingRegression.java",
+      "sha256": "12f860cc168d4140d2ed1bd47d2d43be4ccc5e489d3664a23257a296a4b20c2e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/BASELINE.json",
+      "sha256": "78468c9e5935b1604e0e23af357f8c044fa799f2af3288015c0df73ced274a47"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/CONTRACT.md",
+      "sha256": "563a29500479a4a89d0784486259e825083a2048a2fafd53ebbc26be16a49d05"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/CONTROL_REPLAY.md",
+      "sha256": "95a9b96097a285afc1eb979722cb884e8d76362a4f167f30d465ab93ae145868"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/REPORT.md",
+      "sha256": "dee3458a96fe3c62a567f7c77099e85b20fe77df7929b5e77e923cda941574ea"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/SCENARIOS.json",
+      "sha256": "fc07f7dc8f9861cb78efbed5ab5f75844c226509c12282d94d1875292577e3cd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/USAGE.md",
+      "sha256": "9e8b5c10005c59692c57225aba014209c0cb17070260f4b92c5017aa92766b37"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VALIDATION_PLAN.yaml",
+      "sha256": "d921f5b796fb4f9df0e7b47e71e0df4caba76986beff784e8896d510964a28d9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_NATIVE.py",
+      "sha256": "d4335a78fe53bfb823e4225540fe16f21006e8b365b3de6a1a9427efa4a5e8c3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py",
+      "sha256": "98ac21b90b5068cdbef9c65fdb1d11b435a3ebd789dda74673ac57785a88c87d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_SCENARIOS.py",
+      "sha256": "4b70140ccae44deab36ca2897e21f3d45bb37b348eb58b76360b8540e2d6e4bf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/activity.jsonl",
+      "sha256": "7987aba3fc45ca058ace9414ee2807db2963d7e23b0fa8d8d73e4ff888bf086f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/native.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/native.stdout",
+      "sha256": "bc82d46e05497af1c48c329f82118c83ff3a49ac236b014961137ef204f388e1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-04.meta.json",
+      "sha256": "1ef9e5734d36c365e79d23d50a0e8ab4316cdf3b147af8abbd5d3168bea25545"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-04.stderr",
+      "sha256": "46750e1e60c3b5c15d0f444253e9f2deeca4a1460127f016160dacfd1f10d8ff"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-04.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-05.meta.json",
+      "sha256": "3a3d7100116fefaf5aaca5c61e61711be5fb0e1da49aa5e6241503d2e2af39a7"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-05.stderr",
+      "sha256": "03c1cde10bdc820a5a9733d2abde2d3769fdf716fe3e9bde46e2d279fa13e0d1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-05.stdout",
+      "sha256": "09c272354f1394a28859e5b531ab7512b8cdfd959b37d9f9b35e5fee79355bcc"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-06.meta.json",
+      "sha256": "83b8b05e01291051c739b7eb7294252a733664d5ba0bbd53df11a497cac8fa83"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-06.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-06.stdout",
+      "sha256": "fa3659ff3325ec774e15713aff6eb172f6677a683a00b26947538552b97c70e8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-07.meta.json",
+      "sha256": "aadf2021549da03b9289a2c3f33dbdf8054921164e7143a4a8ebae7ad6badc06"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-07.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-07.stdout",
+      "sha256": "f9501be41c186d9140c7092272c47e442575f179ede8cfc9e3272db51a6607c0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-08.meta.json",
+      "sha256": "d10fb1fbe4566f70e75a5512104584749946a7294451e0e366cbe66e30c60304"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-08.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-08.stdout",
+      "sha256": "45ca8aedba148c64d391978eaa53f95e631b35f836ef520c3fe19b475a013d5e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-09.meta.json",
+      "sha256": "d3f86da8134cbf6d632c8ef886023c9697f7971815ce33b7cfca18989da20c83"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-09.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-09.stdout",
+      "sha256": "d4f8f4879a70c6773a30440ad035f3cb2276d0d0aa691bd8c64de667090a22ac"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-10.meta.json",
+      "sha256": "e72260b26972e210b17a1567784f9ec082847a0879c790320b338857b222923e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-10.stderr",
+      "sha256": "08fbedb4b5ffa9820513055aacca9a5409174571395e4b2207f7c51b6c928d73"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-10.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-11.meta.json",
+      "sha256": "c914d4dfca2f2fc7a50b8d846a39b03cb4b7f03f753ebba10da35922ce14a062"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-11.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-11.stdout",
+      "sha256": "2038cc00c778ecabcb1980d28bdd18a4e9d572f48849e946158380e48c15f4d1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-12.meta.json",
+      "sha256": "c1e016c1ebb36209a77eafd79b80eafbf422f9eae86d0294d40f6b8698b8c73a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-12.stderr",
+      "sha256": "b5eeb83ba7d9595b04bf8e190231b257581aea77045bb1744eb5e6c419bc96f1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/remaining-checks/VP-12.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/0-response.json",
+      "sha256": "3c1eec3e2fcbcc491036e66ae0ffe6074f341aa3035b99d21b2bf37462c46a43"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/0-stdin.json",
+      "sha256": "e77011bf5aa2d7cd2b3d6e64ad0ecba6ab58a2fbc72249714b5205bf5f89b4bd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/0-stdout.txt",
+      "sha256": "bfe14a2fd60f3131c725b3c197b04d9728236e02a0b01e38a0faa6e228f339a2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/1-response.json",
+      "sha256": "eee34c2fc2a88f0c7699af49fa32c5216fd6b0b2c5b5980a341932badf13c067"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/1-stdin.json",
+      "sha256": "39ed9a072d4165a89eb5f256bf8450ffe655ae6bf3ed788ec7479a53f4e782ba"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/1-stdout.txt",
+      "sha256": "5d77584828d51723c1a3780a32c52bb516707c88ef60c4a3d41f915550d6d8ce"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/2-response.json",
+      "sha256": "b80a8f488b23e6c9a579b15b4b0d4dce839b03f47004877d1c75940105f35b50"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/2-stdin.json",
+      "sha256": "d3a813a762da3319dbdc0c3c39ecb44a83ce8388538bb77c83c2f058935803b4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/2-stdout.txt",
+      "sha256": "5558b5ab5db5d083e2aac84bc537c27bb080780a5169777b20eff0f02b8c4124"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/3-response.json",
+      "sha256": "188483f6fdd8e777fd29474f51de6590920778ae78a1b1dba82c306e3c4920b2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/3-stdin.json",
+      "sha256": "455286e8602518416fefe09c63adede4800bf3dda5e1131e082ac582ddbbc379"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/3-stdout.txt",
+      "sha256": "61ab52dd9d378fc4f3419d8bb9511c9591a0b06229cc0d2ec0c6108e2e2875ee"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/4-response.json",
+      "sha256": "7bdc94928a02af459d78098a4277366c720314da730a97d4f623b5e603b74fe5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/4-stdin.json",
+      "sha256": "3dd65b302f09edbbfc0e3a8e8033a77745ed5c9207e2b2a25584eff8d4bb27eb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/4-stdout.txt",
+      "sha256": "caa71f13ae2bf791d31648ac7f84fa395565c146876611d4d59357459e7c3452"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P01/replay.json",
+      "sha256": "d230ce7669ada2e3b596d44f97b505914051416765c862a9d8886d9b0a64c80e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-response.json",
+      "sha256": "18ee163476eaa375e787f2110046f2c0314208d95bb846401efe86aeb8cd3d93"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-stdin.json",
+      "sha256": "8a2a9b869bdf881009220fcbf0044240e5a52132cf0040f772a13e24611ad86a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/0-stdout.txt",
+      "sha256": "093574dffff6fcf78690f8b6be6cd00f7b583aa73658003b8b271297ba3d9ac6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-response.json",
+      "sha256": "f2b8053a6a5c16d49ff40b86eb082947cb6a5f4ccca8f37f6f94d383b92ee20c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-stdin.json",
+      "sha256": "26143b900f2c49d7dc276944e2a9a85c7480f3e7195439ec123f993ff62ec3d7"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/1-stdout.txt",
+      "sha256": "f31434b4ba1396d462c7a9ba45515b1105cd7cb4042f3517a349f1b6db515261"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-response.json",
+      "sha256": "8466b7f36c169fa7ed5942f670420681d93afce14abb5112d54dad966b57fa6a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-stdin.json",
+      "sha256": "eec05552ef56d1f3a79a3968457467d0a80300a741dc0d21bb34e470e3290e9a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/2-stdout.txt",
+      "sha256": "29ae0c3c437e05ebe6952fa1828eac959c265003c2627071f6b28c9c35face4b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-response.json",
+      "sha256": "cce230b3d159a571160c2383a8e8b1e7acf20a69af21963ad5190aa80f4aa40d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-stdin.json",
+      "sha256": "59dfc31c1dbd099152a5a19ab0c72a298f9e2648c3433b8d839ef5e4745bfb02"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/3-stdout.txt",
+      "sha256": "cafdf0ee2727364f4ff66641088453ad65b4cac658d7e40fb506187165b216af"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-response.json",
+      "sha256": "7ebb16525f5838d5ad83f9a61429ff8a968f73edccfb55fd7cb5a1df3f31d228"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-stdin.json",
+      "sha256": "dab05113d4124ef40f0e187e1eda3f48947c4b6caae8e57325ebf8611e9078b8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/4-stdout.txt",
+      "sha256": "44ea76117feb7a6dc3f2b7b596166998fd070b1b08f312177d73a3352f39a52d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P02/replay.json",
+      "sha256": "7218eec9d179678dd4a28279cdccd20021c79fed556c57a509044c47c5146f53"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-response.json",
+      "sha256": "3800b3bb8166325615ada5831cf252b26e3d837491a34c4ff56172f6df57308c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-stdin.json",
+      "sha256": "9393c273cf90c215bf7e073378a1305bb9b4c03b9aa59391d60ab7767ecf0a79"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-stdout.txt",
+      "sha256": "e66f186dc7efcbd5c5cd991f7c9916ac50021cdffc83f388d4eb0ccaed04c592"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-response.json",
+      "sha256": "927cb9d219b75e943de7f1b3081025e5ec9972642f3218b0c0eded9da958aa41"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-stdin.json",
+      "sha256": "81e7d900fff8bce1ebabc0c0b97e0d475341b03661cce6c7769b4d65adab2759"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-stdout.txt",
+      "sha256": "37091c21d94d52bebc47e71d1af1fe1fe5e43a70ba40da515ff09640e0c0076c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/replay.json",
+      "sha256": "ef6f51112df992eb54c1e1afd93b26e69a3df00fca49ac757e57d51c02877de1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/0-response.json",
+      "sha256": "1a65302f657054714926b29865830019e4b7f42566942c2a2cf5339e38c21b34"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/0-stdin.json",
+      "sha256": "f59c07f828c9eb1f1474642db453c739180a2d56c4ccc4cee90fd85a8603a8a2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/0-stdout.txt",
+      "sha256": "fe43aff3579a7b194b8aea9afd037abdef1249e36f6c24636aeebaa91825839d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/1-response.json",
+      "sha256": "770458ce0cc74044ebc4b7a6a753fe2ec5dacfdb93a4481e32394f25c0ecf4e1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/1-stdin.json",
+      "sha256": "36331f9a05aaf99cd4daaf1c2d4553902cd5705b548c2b6570f28ff12b911b9f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/1-stdout.txt",
+      "sha256": "26840f43bc83346035d794e54b5b7b07f07cacfc38e41ad01ae9de73291ac38e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/assessment.json",
+      "sha256": "822809ffdfb5ad1ae340399d8923ff2113292855653c49f79d4ab92ea37b80b7"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/replay.json",
+      "sha256": "1b102f7308df7f269deafc703672e1a71c5ab91f10a5817db21fad1607794001"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/0-response.json",
+      "sha256": "5946a7e8d572e4e88865ae152681d82693b3ddeb1faa1416390518ccf1aa0e82"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/0-stdin.json",
+      "sha256": "43f321302bfe78d742f4c0063591a855de207f6c1dd4f16d31746c4908f7fd68"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/0-stdout.txt",
+      "sha256": "ba5b8565dfffbe9e0d06de48ca04551c15289184387a6afbeaa9632655daf39e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/1-response.json",
+      "sha256": "f439612adafd913c71536133757f74eb0b4aae47ecef2fe8ed756d7a6064d7e2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/1-stdin.json",
+      "sha256": "7d7a5ef30be9d1b05c984b086c36e2ab994bbc92fe721c7c59b6194f7c5bb095"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/1-stdout.txt",
+      "sha256": "1d0affd2fdef3a045945c4f9a69ffe30d5c27e034556af9b927f69f4d0fb833c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/assessment.json",
+      "sha256": "c52948f3e37976298899dda41903ad06673db457fbd1d2de4e3485ad9d60928e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/replay.json",
+      "sha256": "351df7220171f19fda091b3c87818fd942a0689532c8e26398f4cf8298b45567"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/0-response.json",
+      "sha256": "20905091647f6140c4581c0acd01fa5a06614969e06e2bbb43a7754523f011d4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/0-stdin.json",
+      "sha256": "decc0f3029ef18ee53d9e08da757a8cd2cff99c45adca58e8cccce29e739bb58"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/0-stdout.txt",
+      "sha256": "1d4ad2ca38ed39eeefd089140493fd2d7a1395a9221e559c9c3a66745d470e8c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/1-response.json",
+      "sha256": "6b550f40e1510110c7ab8b6c2328b29f65a70a53fb27bc06f93579606ff2ce11"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/1-stdin.json",
+      "sha256": "ca221a199d9dc85765ed6d99e6fec92d5a68993c0a753067c1dab178a2e4cc28"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/1-stdout.txt",
+      "sha256": "ec97a00bcbfd75b4922fc0c27cad3c9e5d36129958110b8867e8552dfe68a7a5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/2-response.json",
+      "sha256": "deef22660855278f0e3825d4d84e4828a26cff71007dbfa36da862052a2f7bfa"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/2-stdin.json",
+      "sha256": "d09a67cefa9cd702361d1733f5138458ddf5ad90cfc2438f591d72b6c98bb84f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/2-stdout.txt",
+      "sha256": "7a7a7a91e1b8acbee58911aa7d1248e0ebfd480b46c672e78098c68f2afc6a6d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/3-response.json",
+      "sha256": "21ec374edd498b8d59cf6ff5f2c7678067268266c0e67cfc90d6e5f7e0f4cc6b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/3-stdin.json",
+      "sha256": "28c0fc75f6158cdde7ce78475af96cacbb5fe9af281ef057fc714f45893a376c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/3-stdout.txt",
+      "sha256": "6b131fb273a12ebd0601b64075f1a13b72f6e78cd4557aff139a701534df56eb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/4-response.json",
+      "sha256": "5340b29fb3522b822664c97592d3e0339ac5bf5103d6d7314069da48ad9f2d81"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/4-stdin.json",
+      "sha256": "154af6432434d4b903970708fb5e80238f08ae26d180296da48e3c50f17b800b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/4-stdout.txt",
+      "sha256": "8e2ceeecd272d94ebbfb2f226040b7b41dd2ef212e6df3f81b397fe23c1edd4f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/assessment.json",
+      "sha256": "51ae833bbca9e99e2f73edbdb1305fc07c3aec12ae9c32922144796593ef2847"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/replay.json",
+      "sha256": "5b7bf1e9354ce8c6159d303e1922642d41414d6020cf7165e6923a81d4685a93"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-response.json",
+      "sha256": "290a4a16cf109da11ec03c643944a3cc6121ddd7e673eea599781dc538beabe4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-stdin.json",
+      "sha256": "a0d55dc5f2dd0efee29c19dec3541f8d86ca65dcbbd2018227092db9c96960b3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/0-stdout.txt",
+      "sha256": "b9dbfc9dcae217fb76ef85574332574c4d64f35e13a19bb2eeb3f9fd6f5f229d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-response.json",
+      "sha256": "5c4b81163abfa7d3a792457683fb82bd6384a3322a62302036f6263af14488df"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-stdin.json",
+      "sha256": "78a897a9e437d0ae14f58b65c79c990a5966fe7b70a5385e582d6bdb7243e7be"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/1-stdout.txt",
+      "sha256": "1cb1660355c02e9d83d4d13c5912316f57ab389f44cacd9dde4e54e5b759b587"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/assessment.json",
+      "sha256": "682b8750f70b084020a9b5c9d049b09c1209b4630f6d0266036b2a8b51f80d55"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/replay.json",
+      "sha256": "ce256aefd869a8df322a157b7a41251254d9dcb1a49c41c1249339f5136880bc"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/0-response.json",
+      "sha256": "aae0c9a7c2f40c1023e3661f925aaa8ebb437b203dddfd0bce69e671380e58a1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/0-stdin.json",
+      "sha256": "40d8421b61870cd19eed76777b751b7120106f1d99e6bb10ed8643353b6a1a02"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/0-stdout.txt",
+      "sha256": "e283588e3e6078049bc5161677aa74a48d8e0f03c70c2c357c34398beb707416"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/1-response.json",
+      "sha256": "179364174d4623659eb47a1c24e96b2e5c0b255886866a5189683a464efa16b4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/1-stdin.json",
+      "sha256": "7ef5a27a02ddf6544e7a6c0d1ea0b6954b52dec00504ffa30c784c78b9e464bc"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/1-stdout.txt",
+      "sha256": "21273a916ddfa727a6e8a8e5c0d4261badfa6c45fc9fbe94d5807b317b7fac24"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/assessment.json",
+      "sha256": "5abaa38aea888202e0e1cec33e4dc19353bae055a77f64da68e7a3e56637cd75"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/replay.json",
+      "sha256": "7d6ecc9fd0b04459f836a83d5b4ca69fe03303989e9c4c1806a093a59588a21a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/0-response.json",
+      "sha256": "680dd16c6b4249f42bf25a21dda648b8437341906ca29bd0644dd50c727b116f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/0-stdin.json",
+      "sha256": "9bf6be644077f6b288ca6e8b82d5aad0befca930204aeffbbfb0189538e9c925"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/0-stdout.txt",
+      "sha256": "faab6c171527b9cab3717fbe8789227f765f816eaaf3ffd87e606e2bd31c152c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/1-response.json",
+      "sha256": "158f1be7cf2358b49d74b952c86c24afb44178cf927122422883f40135681d50"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/1-stdin.json",
+      "sha256": "5c45e206f656e67b54a9aa859f6adbb1539fa975a6bc4b23dec26a8bb0504169"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/1-stdout.txt",
+      "sha256": "3ab865c4d57fbb7b265a208708c6c599341d1fbd2f9096fceb168b242f043fc4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/assessment.json",
+      "sha256": "302c215d4334fe44afe7506a50a82f00d1bac2783f949ba8bac0103074b002fb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/replay.json",
+      "sha256": "bf387a60b5b35afa1eb2a18a0c77c494cb3d2af04f07a1ba82e3abc3755c6658"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/0-response.json",
+      "sha256": "e408d2f25d8b17bd1a76950253df6c33c1570624db3f2640035fe73d2de77f26"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/0-stdin.json",
+      "sha256": "c103a804c81403f9290d519ed7cd742ed2a0e32f6b6a1c547a8119d11bdd5d8c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/0-stdout.txt",
+      "sha256": "f9e0a079f991d1f7bd81bcf5b1f3386c496486df35f93912b3cea1ccd5431e4c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/1-response.json",
+      "sha256": "21eff87ce3ca9d8be446e95ce43c3a73b69b2318a3351a91b160d265f7a66559"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/1-stdin.json",
+      "sha256": "c4c24209749f916cada3c9754d7993800a000b216bb2cac575f2e653b80c53f6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/1-stdout.txt",
+      "sha256": "ac7ddc7f0f1456f638cdd703e2b608608eb15f80470c007e32dc0e6c204905bb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/2-response.json",
+      "sha256": "ddf06552d31352b7980fd5aac14858c91fe5d487cf524e03f467cf90fa0d2ff8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/2-stdin.json",
+      "sha256": "0f23ae7cef2b5e1fc057af77b7b7528ce9785bc33147230712b0021dd74fa416"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/2-stdout.txt",
+      "sha256": "0390c371ae52c23199b94863c71d6476fbf43548790ed2db49ffbe4d0b60a47a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/3-response.json",
+      "sha256": "97cf9bf922e340b81af7834e5e92e2e6b3c5521f796b68ad9486acff1281f89d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/3-stdin.json",
+      "sha256": "5a8c4d7066e500e52ba1b98293d33ffc8ed0f67e80a0d1089dfb882f851c9ab0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/3-stdout.txt",
+      "sha256": "14d8012ee04264a0a9beee9f22e64924dcf223204535111ebaf0fbf32f9d81b4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/4-response.json",
+      "sha256": "a27ff3934d32d0b11707e55ef406e59cd3656583a16f50a8fab51ebea4eb1fe6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/4-stdin.json",
+      "sha256": "6d4ff3fac704e0faa6d4e9f2dc3c779367643667bfd94d3f17391fb755090e5c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/4-stdout.txt",
+      "sha256": "b7069f7e5a52a7f2a832ddbcfb20a0b7ac8ddf23870cc34867c5edba1ae79811"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/assessment.json",
+      "sha256": "c8ea992e8c4494e69bddf5f3b31f2d94743ed59a34d67842a4af5478ef85b872"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/replay.json",
+      "sha256": "a86b7a052e2446134a1e4203fe89f91087a45dcd8299cbcf4f088a75b063429f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/0-response.json",
+      "sha256": "020eba0f43eb2b49104ecc6877c97f44ce0d1e8610ab9c12ca72afb90745de9b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/0-stdin.json",
+      "sha256": "175ea548cfcd5fa1e222cd7cf92ae0c5256c77a6aaca93e7c2c1931cf96e4b16"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/0-stdout.txt",
+      "sha256": "4b3cad8d017a3966dcaebbfeb18d7daa467e37c2ebe19be70267d1784400a823"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/1-response.json",
+      "sha256": "d18cf3d47638d59eb03b4e22908657db25a4dccd2c2f92ad805f837dd9ff637a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/1-stdin.json",
+      "sha256": "fff867978b11c43dc460f717e6c256792dd86ce4c4d28a77325c8868045c433b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/1-stdout.txt",
+      "sha256": "66a0c7e97a421c1819290ba7d07e42815b3b6ba01ae3c5fe22da42a1c49239a9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/2-response.json",
+      "sha256": "27c7b7b5bfb365aa0d26e427ffad7094cab982fc58dfb8326e83b711a0f29057"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/2-stdin.json",
+      "sha256": "4cae7e2ed3d49a4562b589d14f69e8b5f0a5cfd7f05b5c7c68184d5e2d68cf3f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/2-stdout.txt",
+      "sha256": "e8530d62165ebeeadc3474855a56921c56e82171c597d534e56bf835faa04743"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/3-response.json",
+      "sha256": "414315b5e905ed458c41ecb44b7ce25cc1e653e8e67d610290529e7e9d70664a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/3-stdin.json",
+      "sha256": "3a177505e97b146222afc850f1ba59d604fb93b61148c97a09dddc32c9ac3036"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/3-stdout.txt",
+      "sha256": "126e8cbdea67c9590725c76465054e184e5a12988417c972e60e946bb0f3fcee"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/4-response.json",
+      "sha256": "3a8c5dc605bed62e3aac716504291066c4aba5cf6a7006a325bf3c916d590ee5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/4-stdin.json",
+      "sha256": "7064d56ac8356cdc3509638145a0f62bc9dc680a705fb46489b8b0f18bb81a14"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/4-stdout.txt",
+      "sha256": "5cb39fa0daae615d9c30fb6ed9fb18ede5e52e914cbea0adf6eb380092d49ab6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/assessment.json",
+      "sha256": "b021d05ec62df4dc5f6a0a95d7c40f803d9497f6e4f9e8daf66e523256ae468c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/replay.json",
+      "sha256": "8d12fb339294089cfec97589ef0d4f6ba843221bee597d0c5067cc097dd46eaa"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/0-response.json",
+      "sha256": "62c4480889a83a15228a8d8891528dd4d046715c4242242686635e58a16681ac"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/0-stdin.json",
+      "sha256": "85194954ea10f7afaa68cdd87523dc0cf9c6f41609eefb7e20b744bbbb81deff"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/0-stdout.txt",
+      "sha256": "7201eaff9f46f9799a690dc537c97e392c940c480aca15bc6fb4a66e6a74afff"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/1-response.json",
+      "sha256": "d5ddeea122bb0c49d71c66b6b8649f3eda52cdcbe2e2703754e5c89e327b48e8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/1-stdin.json",
+      "sha256": "2d0850832c88da3e1ec1922de604b3e3a581f8e9e948343dccb9d8b610dc05fd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/1-stdout.txt",
+      "sha256": "20ad07534240b5befc17b3664220cecbe49b912cb2ba31bd8d5981bcc7180f38"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/2-response.json",
+      "sha256": "e6ad5c9fb13c0631bf2371ac4e651115f60a760b7f0f15d44c96964efab99357"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/2-stdin.json",
+      "sha256": "3d92bf5499aa25f022d2d8ea0677ae543a65f9f82679e3316fe34249b91d8228"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/2-stdout.txt",
+      "sha256": "3b4a2ec7e7c477a1c119fe6492a8f44e20c9bc9a5837d200bebb33844c63b6d4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/3-response.json",
+      "sha256": "a7330bf11309fbe786fdd2a6bf271608193f4ed1400ca59da32a74f8d618d52d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/3-stdin.json",
+      "sha256": "1e247c55620666c3c201ea7582c7208e0336866010ae3e017fc62a3978f8101b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/3-stdout.txt",
+      "sha256": "639aa5e12d5651ff20cfe897cafc931baef81d60a56b697999c02642b8bea0e6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/4-response.json",
+      "sha256": "3d3fc644f325c5416273228b1f3dd84dd6ece1b79193b0ba2db3a85b85101b52"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/4-stdin.json",
+      "sha256": "bcb96dcd69300af6c542ac166714eaafe8d13fe78694c2d4285e80909d44cbbe"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/4-stdout.txt",
+      "sha256": "c85d5e5e97d5797968e59d7cbd44504d18f0001c34be68b77457b74817a98d72"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/assessment.json",
+      "sha256": "3c0913cc44e1ec8cddf7ef1a1c0e25c32fbf11892432a9810b3abfc787ec25ad"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/replay.json",
+      "sha256": "26500fde26e9e156d2c7f7ad7a77f123ebb20b0c127146f30e6af7033c9205e4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/0-response.json",
+      "sha256": "60a0072b0e58c640a504a68dac3af4ec5b9cc987988d50426530d5909d9929ed"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/0-stdin.json",
+      "sha256": "0df87060f0340d1a7fafc9f040ee2b99155604c87dc93ff9fb14e424afc93563"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/0-stdout.txt",
+      "sha256": "1a02dde92b74db15697df604faacad09b9199214976e3e35861c7ea9c317da3b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/1-response.json",
+      "sha256": "895669017ddcd14dc137cda98dcba7c0aaeae24543a8f79b9d54c1358f85b440"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/1-stdin.json",
+      "sha256": "fd35981eb088e36137a1c44eb65e1fa34559a86e418d34a81528aaeac1c6ecac"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/1-stdout.txt",
+      "sha256": "03bf7415b9629677ccfcac6725dae2e902fe2f79379fb6285d1689276087b51d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/assessment.json",
+      "sha256": "c989c55bca81db30b77b7409c9d0bbeb5ac3e4028fb0f4ed2acf9e333b319f7a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/replay.json",
+      "sha256": "079e1a984a93fd6b1905a22892f2dfb3a893e94578eb1d335ae5d536769538a1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-response.json",
+      "sha256": "55f90d826d53a843950eac3df9b6fdfb13c7045735925b5c3ba790930a78524a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-stdin.json",
+      "sha256": "1580312ad5b7d5c36dee37a3558e62ce69b1c666c2897d758dc24a80f15c13cb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/0-stdout.txt",
+      "sha256": "f0ad3bfec0e8410bf8c322659945ca4384ea03c70949c5df7c5f8fef0f3db971"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-response.json",
+      "sha256": "5f5b5173b880c35cbd85d2e43f95746f0ab3aad9d37af89b1fb8ca6e42d47f73"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-stdin.json",
+      "sha256": "52f2a85a32c13c4f15e8d2efcee4c797de8fa104fc508678d7663d0d6ad14137"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/1-stdout.txt",
+      "sha256": "c6eb2bd0518c81efcc998a135a9a7a25191dc32974d876904c4fcac22542efd1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/assessment.json",
+      "sha256": "8934bd4f84eac72b8cf490fca35dd9164c63943c43ad8073281ab344397f6faf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/replay.json",
+      "sha256": "2259e043e41701210b227a4bfd91a2ba1f28c19cbdfc8f7897df7e3bac9a0629"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/0-response.json",
+      "sha256": "52ee8a0fc750689787faaa5d07bc68797cdd1feb5b0b2ac5ac1a8b0d761956da"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/0-stdin.json",
+      "sha256": "72017f64ea3b556e28131887e3c4475837e6547bc4ac70bf938c84b392a840b6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/0-stdout.txt",
+      "sha256": "999ff6f42d2af78b20aeac20bb6633ed319dd382b417bedbb666ecf29f950cae"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/1-response.json",
+      "sha256": "7d2d39a17b4338e95e69bd9a75693d16fbddde9d6e105f29025a3763101b5aca"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/1-stdin.json",
+      "sha256": "82adff1dd5da5cb4f30028c7dd2dfa11db34287511e9c15e0da25c3e44e2515a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/1-stdout.txt",
+      "sha256": "b3a836c4f6c50e5ad59b169956dcab0a9517ffc96994bc9e334bc0b0037b255f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/assessment.json",
+      "sha256": "b6602dd7d8051e4071de714df774ba2a7a65a8dc0dacdaef69a62de5d30784ab"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/replay.json",
+      "sha256": "daca7a07602730bdc40e75e401ba41f7cec22feb8f0254ab0ecc5f10456a958e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/0-response.json",
+      "sha256": "fa561a9d9691dab9d89f5fa2b268ad6d7086b31dc26cbd32f0aa5a611d5bff03"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/0-stdin.json",
+      "sha256": "b897cd75835a50aa02f6c4ca2766bc344e9c84ca9737f9b367891bebe5d55be8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/0-stdout.txt",
+      "sha256": "47314912a1ed106a7be38c4481405ba0194edbc1a1fc5efa0f7694aa61cd6403"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/1-response.json",
+      "sha256": "d806f2e317b0046e72281fb88ae3383554c37b5a60334183ed9c2f79ef56041b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/1-stdin.json",
+      "sha256": "8ffa0e498cbc8e7abf89a16caca98e00acf7d58bf0498bfb28ace3251742f307"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/1-stdout.txt",
+      "sha256": "150621c82dfef0595ffa34da313a91676fad47a979025ac2e28f59c794e954d4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/assessment.json",
+      "sha256": "473ce65f4e497ab5f7f220ebd593d85c3f13111bd7dee32867cca067969c5f27"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/replay.json",
+      "sha256": "0afcaa0527c5e221de32657e1b7377641cf1fa3a645009226b404910ad39b910"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/0-response.json",
+      "sha256": "99be3eaad8db8433f113687b3a57c164412a65fbb0d75b7f93aba42b6b65f3f7"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/0-stdin.json",
+      "sha256": "e87fbf90301d812a5057399b9b2c2810651c15c10d5e2ae21c491d653b482c81"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/0-stdout.txt",
+      "sha256": "6430cc4a31d3958511a275d30f3404b893b669a2a4ddeac666de5805beec40c2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/1-response.json",
+      "sha256": "322e0915de27ed46673d484c4deff05eb8474d6c9b413df7abcc0762d5781914"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/1-stdin.json",
+      "sha256": "b7044e785c868790386a0b24ecfb760161679e87b91e86f113eb4924a22cbc72"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/1-stdout.txt",
+      "sha256": "df009e1149d378201d060b954c5742720463548ee1c7b01c46ff1d3c13c9694c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/assessment.json",
+      "sha256": "7ed563747967ca3068f3ef02be2bb941fd84092c5d03706947f1de094697efa3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/replay.json",
+      "sha256": "d7d231739d42284c96ba0d9e588226b11bdf31bdab738c14fc92ff209d177b5d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T15/0-response.json",
+      "sha256": "c90a65a18d1df22cb36448cee19a6c21e993c9ff50ff94c357bbadceb7aee063"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T15/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T15/0-stdin.json",
+      "sha256": "b30273e33a6e259aac5860849dcaeaeb2bd162a60b72da837870c20f0ea7c6db"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T15/0-stdout.txt",
+      "sha256": "6b989f5686fad6cda477ed8f6845bcde9f3bf228f959b12ad100ff0c99adf424"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T15/assessment.json",
+      "sha256": "db5fdbc5d314f929d27ce9347c1fa5fd16c36915856ca1f73624e70b8d4cd7b5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T15/replay.json",
+      "sha256": "a5f64123373dd246ca9960a3ac5b18b7814bb3120f86d10b1dbe5c83499b7b3e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/0-response.json",
+      "sha256": "36317d5c4b5628306e8483b9ab9cabef2cabd69401dae664e84a216247428d04"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/0-stdin.json",
+      "sha256": "f7782675e40712b9273c1a424ca569d55ca96dc8fb4db51aeb7e66dee5f6b489"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/0-stdout.txt",
+      "sha256": "7ab1d2a57f3599771eca007f35e2609c72c5acde4eb043e1e099780e4b405ce6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/1-response.json",
+      "sha256": "54edc0cb923a7825393bf44e12df0aca7d71617b09b92fa86403910bdcd6380b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/1-stdin.json",
+      "sha256": "e3032561243d5790905a4f46fd1c5a0629c61266a6207712fca17a603a441ae8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/1-stdout.txt",
+      "sha256": "9608706fc60faa633e52629889ee78652530a38e4fe061e775ef08cf5be317ef"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/2-response.json",
+      "sha256": "db516726848d725043fbf1ae79155468c12c8286be183300be635217ae5b1898"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/2-stdin.json",
+      "sha256": "8ba58de56f75dd099d3a1fd0305eda4218eeb7e83feae4ce3772bc0d89988379"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/2-stdout.txt",
+      "sha256": "7ee4906136ac90265316c14b61c01bf9b7314f76985adb002a48db7e113cf87e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/3-response.json",
+      "sha256": "d1ad87e361457876ca5bd20d56308d230100113830ce4c2e04edf7328fc66985"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/3-stdin.json",
+      "sha256": "21c8f121d6a34ee810eb4078f84cc124aa74495602825ecc37cd6e5f83740a5d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/3-stdout.txt",
+      "sha256": "dfe041005e4a7a2c071445c69cac643cd369ae300871f8692e7a2bbb2d982d82"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/4-response.json",
+      "sha256": "ed7e652fb7c04d0f4a5077b53b4d8c211c146002f11606e2bdab1063601ffb05"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/4-stdin.json",
+      "sha256": "f77da1e24ac923e011f6fbd2c84a95c3451142b1d3221fa5b590b35833204771"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/4-stdout.txt",
+      "sha256": "a048d50a834df3d7e4e96bfe95307a2fa4e4aef304ed9c2f92faa21913aca4d2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/5-response.json",
+      "sha256": "aeec18386eda397a727593d1670b8ae85b78503faacfcfd49448f635c73f2abb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/5-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/5-stdin.json",
+      "sha256": "c2a8c39ac3fb77bbda8929f7e1383d27bbb5cbada2286c5e660b3c40cb07d934"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/5-stdout.txt",
+      "sha256": "246d4dfd222e3d4f576bdb9c3ac90ce8e947ad63d578e22a022ad9e176da8c1b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/assessment.json",
+      "sha256": "a231749cfb63126a00cc1f9ffcf61e5f534220bd7c5f95ef1c1bd539efeb94aa"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/replay.json",
+      "sha256": "c0e8fa5e0417da45d486c9debffe11e5e343a78f42076fa41781da7cd0839a9b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/0-response.json",
+      "sha256": "4210f7e254ec52edcf94a0fdf6747cfdc1b5053368fc9962de2146bead52662f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/0-stdin.json",
+      "sha256": "d07737437329db28245cc450140ec02b5cf55ba37e9729de89363e1e59c5a943"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/0-stdout.txt",
+      "sha256": "2ce25b0d418ed27577c65e91c00a39c10837daa9e5c6997dabd522f371c013af"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/1-response.json",
+      "sha256": "43c897414d69e3d03fb9c54ffeb6c86533151dc515959a84967202aa22511915"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/1-stdin.json",
+      "sha256": "e69143bad7d0288754f7c31c80d1d7782a632c150a609683c863464409c15f9e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/1-stdout.txt",
+      "sha256": "fcdab9f6cdfd55190584086c2c3930caf983864a7d50917a2d3216c5864d5198"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/2-response.json",
+      "sha256": "29e67e4a287b3167c5b851514bdd3ec8bd91343c0c44d7976259d2faada76c8e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/2-stdin.json",
+      "sha256": "da97741163f0f1eff20573d90de64020e76a6b7ae4134fb2c16cafcfdeae4ff1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/2-stdout.txt",
+      "sha256": "d2788ac8e48c30b230e622cc4cc58a77adb3ac8e4d8f0db81b460bdddfdab452"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/3-response.json",
+      "sha256": "20a2eb3f184eb2f6b015675bcaf48e823a50847c9fc8074bc892e919c831f836"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/3-stdin.json",
+      "sha256": "1a364d5f1cd0bec6f28e2bfa140e4429d988af36a4e96886a81b4151e3f10799"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/3-stdout.txt",
+      "sha256": "f706189b23b53c1fb937c8b1344ea38690d1a607d79147c84630e02ad3ff013d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/4-response.json",
+      "sha256": "de332830238836b1975ea99b107214b47fe55c8c3f55b44105cb99cd749898b8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/4-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/4-stdin.json",
+      "sha256": "45f25f19734f1216e4aee012e92892149b4bffeeebff0ea8f04ae6f80959944e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/4-stdout.txt",
+      "sha256": "a12b7d765c167b83bf7d5ec827d550340bf1d07411f3588f9a01701f369068de"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/assessment.json",
+      "sha256": "2a71347697a12d2b7ec5e0d3217ebe8e1bab9d976ad90b1a1ac23dc0f90061d1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/replay.json",
+      "sha256": "be88cbbcbb3fed1a54dc199a2679f22a73f768d09c3c8c5084400fda89d523d4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/0-response.json",
+      "sha256": "1999549efa0c54041d61bceb93209e21fac4342f9e1f85a1c74a0f2190361025"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/0-stdin.json",
+      "sha256": "cccf8dd1a6e4ca33b8f5fbc79384cc58368a7458542b76838faa206121e23796"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/0-stdout.txt",
+      "sha256": "e5ab45d76956e555739289c23e986621c36ab92eec71a253d6095c472d1106c5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/1-response.json",
+      "sha256": "c351b31d60857678e3e95ae08753160487f323cd3c76ba1ddc6fe7775c4f39de"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/1-stdin.json",
+      "sha256": "cb05c6d03fee68c414fc470127da0f74e0041d28c1e87c81a4048a5a8caa2345"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/1-stdout.txt",
+      "sha256": "7fc2269451efedd5614090ef4329c80bd66d762fbaa5cc27580b6cb0229c0ea8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/assessment.json",
+      "sha256": "81c824f0a2290c8ca3014043527c7d10d36773bb21a99ce6e4347efe5b45d528"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/replay.json",
+      "sha256": "2f1ef3f791cbdbf9443eb446104be1ebe0f090f937d5c9b1ac9fe1ebd66ae90e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-response.json",
+      "sha256": "da810affa172e715a9840598d63cd58de09b5fcaf6016e91d93beaf447916963"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-stdin.json",
+      "sha256": "fbe749746f304eacc2bd41967a580fa8ca89f2cc87f061ea6a25bd44118e91fa"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/0-stdout.txt",
+      "sha256": "4e6869d1d1c67db33a39e60cde271f143679a4033ffc2a94c0feccc661dd92e0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-response.json",
+      "sha256": "80cecea6bc03e6267582f6dce4eee361425505e59fbdbe523b1f3447585da742"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-stdin.json",
+      "sha256": "9f589cf3ef762b5b92329c32d659271d7ed7ce55c8a7dbd7d8288652a8f8ccd5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/1-stdout.txt",
+      "sha256": "0bf3c9281ff69cd52387e212a0344f5be9959e97d34ce11bd432ee5dc7f83cbe"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/assessment.json",
+      "sha256": "8de2d6122252e6c323beca80f314a928184489ca1b6e9031835fc8673089ca07"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/replay.json",
+      "sha256": "5e5126bbf2b85df198914d44dbeec7de4babd2af2361aad3d4bbefb4a3790d02"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/0-response.json",
+      "sha256": "4c52f95920718836f2d05e01bb99c0efdff03e43b671e2af568e969842a1d3be"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/0-stdin.json",
+      "sha256": "d29ae1d967ae810be342ec0cf9b14bfdbbc48c62e87bbb056c96b662d4e702b1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/0-stdout.txt",
+      "sha256": "83de0ffafc733a8aba6900a150fa81bbb6a4051fac80b38c4dee282eb7045ce2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/1-response.json",
+      "sha256": "a40dfd16744811ddb4c0a46764d26bf7d830c790322bb1788e086cc501a9e5ac"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/1-stdin.json",
+      "sha256": "419d75faa6c284a9484cee2164d7aa3a56821fc611ed96bab0785da0d4492622"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/1-stdout.txt",
+      "sha256": "9e717f94f93538fefd8dd0a1bd51215da7b364ea69012cbc5ba909a9e09f53ba"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/assessment.json",
+      "sha256": "7d781757f26943b265fa33c654b442a11d0f9745e197c34cd6dbf643566564ba"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-response.json",
+      "sha256": "a6f2e678f3fef72ef9c5628b09bcf6b9ff3953f064e932ded04370c1af056797"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-stdin.json",
+      "sha256": "0c83fd64767b8f3fd9195bac826042ead1bea682e82a66fd68af3ae6fa20647a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-stdout.txt",
+      "sha256": "1a0694f74e2101d0a0190f5d92148f2666682e45b56e637f3b6071c1dffb5382"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-response.json",
+      "sha256": "f7cab30251b73224180b4d15a6b531f4ee31853c3e3f5459994896a6099e814d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-stdin.json",
+      "sha256": "9e77b522efb07f1bb89db27d1ebb52c55c9a7127d81e86275e206d5cf7910fc6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-stdout.txt",
+      "sha256": "be40f202b0b1c021e13916c668091b207adf74d4e20ac406f4c5b79c60aaa54a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-response.json",
+      "sha256": "d940deae93858592e0dbd81426a013711aa918bedddc21a945ccb70dddb83fb6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-stdin.json",
+      "sha256": "c38aeb274df395ea71f2224ed1cf000a6d71f36428613e7de0e93841afb16a4b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-stdout.txt",
+      "sha256": "3cf82f45d9fb196832eabc89f914037e591d524c4f3ff3ac02f85a8b670ee601"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-response.json",
+      "sha256": "b7dd2e28ce4cb9328aeca81e7cfeb708dba965915b1c9ed80a99fb76abc3e705"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-stdin.json",
+      "sha256": "04a4b9dc10e160ed16fc5c2c1f11d85e7b91196aaea948a6fe93f21a58ca4980"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-stdout.txt",
+      "sha256": "fcb361a2aac395345c7b6573153f9bc8c6e1f48888dac7f9d851e8f8d621f008"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-response.json",
+      "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-stdin.json",
+      "sha256": "c8159c1968e1171939663702dc419234fa7140769a706669bce6267c895b1ec5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-stdout.txt",
+      "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-response.json",
+      "sha256": "d47cce8b993514982415a45680ab94d744a25a1e0b78a41a0c95ab240fc6b2e6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-stdin.json",
+      "sha256": "2f5a6f57013cb727de3feff0cadde9bbd99f8184b37928592f45fe6cf0bef9f4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-stdout.txt",
+      "sha256": "c4cc7d1228f07842346cf7f06a59724bb48904a022791366b6222b1139b4889c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/replay.json",
+      "sha256": "7944bf6232860ad46f6d57bd6c0e0c4ad32a419e3cad7e2272f4da0a06ad88a2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/0-response.json",
+      "sha256": "1c2ba2a82134c9e29bd14a810c3bec6d48a1a5b3d2e51602e07bba7c45cfea4f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/0-stdin.json",
+      "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/0-stdout.txt",
+      "sha256": "931ef86084e65b94124fdeaa5f4200a27b34226088410c9f2d28ec7561a32cd0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/1-response.json",
+      "sha256": "8923839777448b3ab8823c7b6e234a1e1df3ee8a7443251c8b2968d922586f5b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/1-stdin.json",
+      "sha256": "7a27ff4944b09c02432f076829cdd204a7f2e69baec5383fce3f2fcc5353852c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/1-stdout.txt",
+      "sha256": "de2147ac696f94cbd7d08ee4cf896637cdc92dd97f5b52b13d38bb4d718e1185"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/assessment.json",
+      "sha256": "ff2a69067130b96d5ed2f137a096b368a6630c2930776ecbcf85516245999b12"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-response.json",
+      "sha256": "ef60f15d9983acafed7003ab0e8e33666b47cbb5695362828bb9bb04c51eef5e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-stdin.json",
+      "sha256": "5b622fe6fc74347c4fb9e68c0c192bea81c481d11ee9b5d8e5d6b0eebc156287"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/compound/pending-source-stdout.txt",
+      "sha256": "10d9c50a6eae98490e84e66687b5aaa572675382355d70e734a7c023098da1de"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/replay.json",
+      "sha256": "9ef154ad1a5e1e4687b3b0d41f4025ce64497c5cbaedea97359b080337c4f07d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/0-response.json",
+      "sha256": "5527907e16d7122e16df959b04568168c8a991ede9de9409c02d49e05df5c5f4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/0-stdin.json",
+      "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/0-stdout.txt",
+      "sha256": "315d536fb5f94b4bfc69aa18eddf5c61ebe43c3cdc720151b06fd8120210c7bb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/1-response.json",
+      "sha256": "82e88d43d9a34ac667055f288d725ab3daa56e069d1125a4356eeeda3ea0888b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/1-stdin.json",
+      "sha256": "29a268b70f94cfee75be9f90ef20a4692da97384e22ef62479aad88b2252c4ed"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/1-stdout.txt",
+      "sha256": "5d2391defccfb1eedb8ac5c71fea8ec28991235c563b0345c5674e989df6d71c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/assessment.json",
+      "sha256": "de3bf9796bb50fc32351e12c0233ac7f86f19e5c69d89695c201bbed179cb587"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/compound/pending-source-response.json",
+      "sha256": "ee9ef20ec34362a3291a0aff1c7e7b151005a39aafbc806c347d173e222e8a53"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/compound/pending-source-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/compound/pending-source-stdin.json",
+      "sha256": "4abf88e8c66b3db6f7e471ad9b6a1138c7eae5ebb7eabbef8240e95e00af4198"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/compound/pending-source-stdout.txt",
+      "sha256": "d9a84416f302a3f94eab244d9a7bc70fadcdfb8c0294b489f4a24225f25e76d3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/replay.json",
+      "sha256": "8d636890185ad1ba0be853d50c5842c38d43ca958355bc892c36df8a5fb1539b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/0-response.json",
+      "sha256": "f691f3fd6a5d24880d7536dadca25193b2cc01229af8df5907bc2d112d4242ca"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/0-stdin.json",
+      "sha256": "44e77ede098563d4c02b7ff9bb6f16092e7309a1d89355be6e60afb40090acc8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/0-stdout.txt",
+      "sha256": "87684652c7d928662131cd91fe3bf6ada68ad942b6601ced1d02736300747d56"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/1-response.json",
+      "sha256": "94b5bf00618d3b736b963570629042a67ac9dd831910b30cdbff1236ef2de05b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/1-stdin.json",
+      "sha256": "24cb6f0f6ab9fd8423f9ed05fad604e50220fcf5db6908aad2612461a2c596b3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/1-stdout.txt",
+      "sha256": "f4881039adeeb276181c9dd314be4e47325423aafa9d8f470b73c3268040b416"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/2-response.json",
+      "sha256": "e919ee8dd1cdd0f130a53ebb40c7967fa6d24b21231651762be2869b7f4fc9ea"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/2-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/2-stdin.json",
+      "sha256": "bc022709632c9fc7ab4a0b126f705f68c481db0f8e9a985ac5c370a45cd330db"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/2-stdout.txt",
+      "sha256": "6a4e1179ed07c5416493f3c8ffaae54d18ea46367044b40f4d5cb51a7a7d0f7e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/3-response.json",
+      "sha256": "55ca827e7a890f477e091b3ecc985b91adedece00237fc1a73109b50b15fb4c9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/3-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/3-stdin.json",
+      "sha256": "f83e0b30a79a1d001eafe6871c2f7c66f6b101c3b2b0fe421271ebd9511e3406"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/3-stdout.txt",
+      "sha256": "d9780474f8be74f7a6701e4e092c7d8fb3b7395ada6c10edbd3ae2767353e03a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/assessment.json",
+      "sha256": "a8279bc05c62b595783b554d1cffd8dd508362c251d5ccb8528a4e95ef66a2af"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/create-old-response.json",
+      "sha256": "bbecb1544d9ba2ccf851f3de8e5da7c39bf6dc582072c58dbd867b87546f668c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/create-old-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/create-old-stdin.json",
+      "sha256": "7045aecc3a2ec757f607272b50eebed68dcf79ef139284c852e68080f8530e58"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/create-old-stdout.txt",
+      "sha256": "2ced66245673506b05e3d86ed3631d37d81b4e42c3652c885ab82c4f2b73d310"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/reject-current-conflict-response.json",
+      "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/reject-current-conflict-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/reject-current-conflict-stdin.json",
+      "sha256": "4014744240df9d8e8632db4dfd2913df69b27791679585d0638d95da42b62b12"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/reject-current-conflict-stdout.txt",
+      "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/restore-old-response.json",
+      "sha256": "a1dc6d48b1116cc86ac1a1542603c939c4f5b528fedd8ade798976e07d86cc9e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/restore-old-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/restore-old-stdin.json",
+      "sha256": "24f83005400281ba179d6735acaf4f164ad0295efcb38515a4ea436096ef3dbf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/restore-old-stdout.txt",
+      "sha256": "b3bd2bd49920cdd660c84061f7c04649085a75a9b293508a880c2f683b5a9de8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/saved.json",
+      "sha256": "505ab671cc377bcf343f1ded1d7512650c4189e87107748f6dd04d0caedef4d5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-old-preview-response.json",
+      "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-old-preview-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-old-preview-stdin.json",
+      "sha256": "268d8ecdc7944c4bfaa13475461c159cd9483f0b0afa29a70c57906ef026a9c7"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-old-preview-stdout.txt",
+      "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-rebind-response.json",
+      "sha256": "50c46487ea67ea4bb3876cab446dcb7f447181813f34b1636b2bddeb5fc65cad"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-rebind-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-rebind-stdin.json",
+      "sha256": "8b26a9b5447a78ea5cd1bb04362629d71bd269d007438e6a52fcf4bdd04d95f9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/compound/terminal-rebind-stdout.txt",
+      "sha256": "17d1710252b10ea680ba1eecf2ae1a33da13fafe174eb377a0eb686321b801fb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/replay.json",
+      "sha256": "933d1a0e1b8762902ab2e3613b4883dea9a52efd9dae65d82cd9e5e0d256cefb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/0-response.json",
+      "sha256": "8f3853bf164814448f8cb2e74a03b137085488603d768d853e2f87632b1f7ee3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/0-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/0-stdin.json",
+      "sha256": "f22a3ad159785c1bcfec192184e651c472b529ed9f208060cde8248f4d62edb3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/0-stdout.txt",
+      "sha256": "17d684c97174d76036b8cfdc697ce851993cbddad20c6ff112125b1555cba678"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/1-response.json",
+      "sha256": "93de4179225e99c417c1c5dc57f02e2a7687f9fa9b3e9902ac99d50a273ef651"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/1-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/1-stdin.json",
+      "sha256": "b1d6b623faf6940fed651c344e9f2e40635cde134799e784e1e85bf13ad22021"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/1-stdout.txt",
+      "sha256": "f517e9c85be792a794c52dde360da2820f8742e9561b3e2daaaa50e5bb3bbd83"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/assessment.json",
+      "sha256": "86dcd27934bb72991b13482fee8f4a5b9ea2924c9b47ac651982cf153a69d998"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/create-response.json",
+      "sha256": "6c2319a069675cdd26348a62dc50a958f1af4a13c1956b6193336a3e55f7b916"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/create-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/create-stdin.json",
+      "sha256": "b84a07558bd1247954ead6d070b23277292a93655dd22c048ccc42e856d56911"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/create-stdout.txt",
+      "sha256": "d27971ac182f9c2aef14d752fc9cddc973b9450ba5b18bb0575d61b860926967"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/import-ad-response.json",
+      "sha256": "1449f7a29abe1ddc51f9cba69becb326378c94f3f8d9f463a19b7e2b6e2a22f2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/import-ad-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/import-ad-stdin.json",
+      "sha256": "cc90233184ef89458bfc13112d304059c5f49db07bf7f730a57eacaca46ac9e2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/import-ad-stdout.txt",
+      "sha256": "37aa75be92157c32332176c93f6cdf8fd44af6cb0798559e6c0c15686fee7a29"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-ad-response.json",
+      "sha256": "a327ee6ccfbd37cc9719f7d007bc0e694de12b28ab015bfddcff3040886d8b3e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-ad-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-ad-stdin.json",
+      "sha256": "a093c7eb4c0210402909517b9458488ca65ac74ebc5a6d8d59d22d2111299937"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-ad-stdout.txt",
+      "sha256": "730b467eca430253308e099e8636690e2959fd86d11fcd58db25735044159de1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-old-preview-response.json",
+      "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-old-preview-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-old-preview-stdin.json",
+      "sha256": "ef30aee453be365e20eb3619bb97b0cfe58825078a5ab67aac8ff109942d7e43"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-old-preview-stdout.txt",
+      "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-rebind-response.json",
+      "sha256": "098887bd5ba590d9fd1199e27c72f90ef8afc8f705aed4e33c0bf217a10c7171"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-rebind-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-rebind-stdin.json",
+      "sha256": "9090247958f011553b8b2cb08a7f16b3f226fb58710f2f03064fea54ceccd990"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/compound/terminal-rebind-stdout.txt",
+      "sha256": "ec285fce1e1c1b615964e75502a5342710543311ec0784ac139fe62ceb6bfb04"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/replay.json",
+      "sha256": "ee496487e7e15c69252bc3b2bb70f113b591242a36d15f2efec53dd27ac223e4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay.stdout",
+      "sha256": "4c18f8e606620f9020cbcc9dc65200561574039c2d6d4772ecdfce4588c18892"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay_current.py",
+      "sha256": "13be115e1cc927ae4b777a8e73889a891d2d7c90604caa994dd5fc9a084a71cb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/scenarios.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/scenarios.stdout",
+      "sha256": "88f5ccb11235214a10808b296e55db1f23ab0e8f4f74ce35282eec5ddda39962"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/control_results.json",
+      "sha256": "632b94497a5ee8dd18a93e10c77a501348a08782a3e8266254b1cea0abb899cf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/ChatBridgeRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/ChatBridgeRegression.stdout.txt",
+      "sha256": "ab5b0b2fc270a92e232ff46262e8c591cfc8037cd5a252f6a54f4e61aac655a0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/ChatSwingRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/ChatSwingRegression.stdout.txt",
+      "sha256": "928a28c2f0a58672204946fcc49a6641a611db840bafb4cb4b0bb90b6a647fb9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/CognitionGuideRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/CognitionGuideRegression.stdout.txt",
+      "sha256": "344b4ae354bf853c84e3cb1d30c7231b4edbd273fb6fde5d61054fb2bb5a1c1a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/CognitionGuideSwingRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/CognitionGuideSwingRegression.stdout.txt",
+      "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/DecisionWorksheetRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/DecisionWorksheetRegression.stdout.txt",
+      "sha256": "b661d5e732af68bd0d51471c0bfc3735bec7000fd9e9668d71ffac562ba79e0b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/DecisionWorksheetSwingRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/DecisionWorksheetSwingRegression.stdout.txt",
+      "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F01-after.txt",
+      "sha256": "0acc3b6019e575c127c99832bc2490b0d5ffda70ce94fa3d630b71775824adbf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F01-before.txt",
+      "sha256": "355818f220b90750488210142b671579471ff4bac3121a5eb9898dd000c87a53"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F01-confirmed.txt",
+      "sha256": "5bde435439969450114f1d1d140bb2af90c29c9f6e1f89945f93fc16bb0deb55"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F02-after.txt",
+      "sha256": "de5e7961714b1cb638a0ab0d61ec344c490f449e786e690312d4eb024b966e00"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F02-before.txt",
+      "sha256": "d882e1cf0fb3abc457cf9dc9d40eaeb9ed2ac29913dae855c145d8ae7502cee9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F03-after.txt",
+      "sha256": "3505c494a16c85e9eedbe2f916fc1acb7010e9246ad9ae4378383c2540437e7b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F03-before.txt",
+      "sha256": "001a4bf9307c55bf0ad06b40c14a4004320e463e49ff5b2b995f5d8ee75c5aab"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F04-after.txt",
+      "sha256": "a0f8a4b26fb45269f4b1a6a3e3efc2859015274c2a9e645d22e737c55b1a3500"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F04-before.txt",
+      "sha256": "6ec76f157b59bbe45fc20a8e3ae02192ae5c438b9beb45f002190b95a6b3ca06"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F05-after.txt",
+      "sha256": "666f518a621f14364d9bcbc7326a26c061e35aaaaffa3e44c114225d3154a01b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F05-before.txt",
+      "sha256": "f7961959f73eb8b1d7f698c1ee4e3092ae6a6d3fdde2e70c101d0d2c43648c4c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F06-after.txt",
+      "sha256": "5cfedc24079089e0ba76d039459b5204f594f1bdae8785b3d0d85aba82e58f62"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F06-before.txt",
+      "sha256": "589c88195ff015f0b27de592f4f7955994b399af64786f76e3e1e9ab54869976"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F07-after.txt",
+      "sha256": "21519224bc2447fc5aed370499841dc454da16b79cdc0116a76ede46b938ed29"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F07-before.txt",
+      "sha256": "38234a75deb1f922784e01c0b2998eef3d560114eb6471d855f50272d8a4ae49"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F07-withdrawn.txt",
+      "sha256": "0686040d881e687d110b5cbc99581dd5833afb6b9e36a174d4a57ba1dff9cfc4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F08-after.txt",
+      "sha256": "228fab8b3e86811e37279782d4535e551b371e03ebd326ee220603fb98f57e8f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F08-before.txt",
+      "sha256": "48389e5a3e01d475da409fa6567f0b6f6a6437396a99a261bbce0dccde02a76f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F08-cached-winner.json",
+      "sha256": "261689df9632cf52d48c65e5dc660486a3ded7d64102cbf8248ffd71511b7946"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F08-restored.txt",
+      "sha256": "58bb6df6aeb9051fad39b02737f6c740c43661a3c5cf1cc17c5f0cbd3cb73df0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F08-saved.json",
+      "sha256": "fb4a74b0b600daa0c1b2a92f9ff6da528eee02052334fa1a19d97fa21b116e50"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F11-after.txt",
+      "sha256": "7c8ea503f1a16264910311eb26a8fbac1da490f0ed319fbbcfe7ba3640b69dee"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F11-before.txt",
+      "sha256": "def0c8024aea5d2a1feec60fcc5995f34094b1d9233034730fd1a71a4225de81"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F12-after.txt",
+      "sha256": "8accdd4594cdae8c552f0cef12dff9b3ee1d35986d8b284b1b36b08a04781cff"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F12-before.txt",
+      "sha256": "b61531e7b33e81cd861df92f3acb606cc6ebcd07ac8cf40f8c743bc58aef6fa2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/F12-note.json",
+      "sha256": "cbd8dbf20b40cf5385ceff05a97eb10485f5cc4a09007ef5a18ff92837c5b681"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/FocusGuidanceRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/FocusGuidanceRegression.stdout.txt",
+      "sha256": "fdee40f23755c73131f39ae9c9c21b98b9776b4520dc5f02485a9cccb0972c03"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/FocusGuidanceSwingRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/FocusGuidanceSwingRegression.stdout.txt",
+      "sha256": "ac52d84132cc9781fab91eb52158f9e0977dc3fd8187caae13ed10d6c47f5003"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G01-guide.txt",
+      "sha256": "c16746580adc3d75c2d8ad17e86c0c5ba2dd2ca7442f1413a492305953fc9513"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G02-color.txt",
+      "sha256": "a4f8df941ff4acb90c1f02f177d70a59bc2442474f5729b2f0bb01a5981a5bcc"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G02-outsourced.txt",
+      "sha256": "cc6c59c20fa8cbd1e8cc550b083bfacc2b7fba9859b6c2080aa9d61d56e805e3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G03-source-details.txt",
+      "sha256": "dc20376ceed54d00430fc8dc928b44e3c356e3a8cdb2f9fc9b1e4a09439ab712"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G04-draft.txt",
+      "sha256": "8b05353272fa97fc58f35fc74b3c28dd547d4b79d45dd4e9994c5f45a9e2a35a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G05-confirmed.txt",
+      "sha256": "c0504dfa2a39b8064a67ba0bd5577d0a36f92b272eb83914fa5a3566a07c4cb3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G06-withdrawn.txt",
+      "sha256": "fcf540734d3e7c49d98d1a5c1c60933263fe880a858f14e9be2b08771038b643"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G13-before.txt",
+      "sha256": "4382bfd50685fcaff2555d41942a8e45601f9422ebd470cf04ebdd0b69cf2240"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G13-recovered.txt",
+      "sha256": "7806ee2ebde12c886536d9075eb626f5abdb7c607703d97470c2c57b257489e9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G13-revision2.txt",
+      "sha256": "480e2dfea6d3ee6409abf107ab17f6498b851ebc7b9ddb6e5d5065441f7a8a88"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G13-withdrawn.txt",
+      "sha256": "73189dfd6af2c74dc06d1b9645c314898753d4fea505e924281fedd9520f8cc1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G14-restored.txt",
+      "sha256": "dbadcf388e92857b8176c6558635bdc050f8e3e53ec0efdb065a1b2dd8abe844"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G14-saved.json",
+      "sha256": "1c50ca7d30236da9e43b1ebe30954a7747c56eb45091e49e1e2cddc0a1cce8fe"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G15-decision-note.json",
+      "sha256": "35b79e27f197e03f5a41cbe678de4c6ae87621974604bc7e992b5ef54473580e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G16-note-cancel.txt",
+      "sha256": "ae1a0922a44378cf1d1b24aae510bc7e3185b2d9af0190441e4ae0abf3f1eaf9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/G16-reset-and-fault.txt",
+      "sha256": "5775bb16ebf5d4461467a05ad3974b7205d8572a4fcd1e17e2fc462162822948"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J02-after.txt",
+      "sha256": "45458ef411853061eed00cea138bdec11978c11c911584e701ef29c843b0aefb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J02-before.txt",
+      "sha256": "44fbc1dd462d136c706ec04c5664c2310528aaac79f68743b3a0cae2acda1769"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J04-after.txt",
+      "sha256": "4f48fc5fa7c9709e7e5afb9bb9a7191962baa30457798030def7374b447d9b72"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J04-before.txt",
+      "sha256": "643e784ccb5a6b07b6d1427a53f9f76575207902b0c9253e74731064a3a93c36"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J07-restored.txt",
+      "sha256": "ebbaaf81a7761ef0df66c67bdf9a249cef10482c9c3ba872b3944cc9cc6b2442"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J07-saved.json",
+      "sha256": "047fa21491257667fd2776e510160b66d1495f6d90e25b2397d56528abb5ecc6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J08-after.txt",
+      "sha256": "afc06311bf191833b4142e5e7f643d1615e50914acb4e244a2dd0798f63ee519"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J08-before.txt",
+      "sha256": "4f48fc5fa7c9709e7e5afb9bb9a7191962baa30457798030def7374b447d9b72"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J09-after.txt",
+      "sha256": "f44b411bd5294ae59abfdb71a4caf2d3b90b50366892c61e2285cf9bcc67ad11"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J10-after.txt",
+      "sha256": "2a7e05722f1756a679f4de845dd7de0c214e030de2dd520da329a8fc76291ce1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/J10-before.txt",
+      "sha256": "afc06311bf191833b4142e5e7f643d1615e50914acb4e244a2dd0798f63ee519"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S01-after.txt",
+      "sha256": "74e0ab509aa3c5c90ad9f0be9533a0a2251b7fe8c6fc738a0046c1e242470f10"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S01-before.txt",
+      "sha256": "e8eacbd35e4ee7e32657870465efa917c2e7efe50ee2650669284cbfadcc6998"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S02-after.txt",
+      "sha256": "f79743c5c79e3e14ec705095dd86bde6162e9a8ae62cf68d642ec082e9f15260"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S02-before.txt",
+      "sha256": "940d2cfa4b088298649bcb46665342d9d22bb3512f3a448ec98b05ac203425c5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S03-after.txt",
+      "sha256": "e14388476d6d5002573d659619c3e6c6b06ce49d468ad947997f8536ef016a0f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S03-before.txt",
+      "sha256": "46a8229164c104bb53208977a4564c3c382d733b2467122af8de26a522894c56"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S04-restored.txt",
+      "sha256": "508735e9dc9d85f981e38bf7bca894834b79da957c42f1ff1fc26385538672de"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/S04-withdrawn.txt",
+      "sha256": "8ef1f44395775d2ff5167d73657c1759a38a57f62e86b73ddeb6e2d351ea7c08"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/SceneRobustnessRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/SceneRobustnessRegression.stdout.txt",
+      "sha256": "772fc7fabdfd173fe74a89ac45cfcf3a0dad3744d02d1155a579d8ca7368d266"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/SceneRobustnessSwingRegression.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/SceneRobustnessSwingRegression.stdout.txt",
+      "sha256": "07a2e9ee030a023c4f701414d8639c7d37c790a3d18975b02ba4063ce4e34828"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/compile.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/compile.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/focus-bridge-context.json",
+      "sha256": "22d5e85be3b8d71e1f6de93874265c06d63ee69f912a5e88a4eb3734be884d96"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/focus-bridge-note.json",
+      "sha256": "56edba037cc6e4bd22d0c100c9b61c0de3e38207f000725a156a69e832cae218"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/focus-bridge.json",
+      "sha256": "a5f6c2296328bf51b406a4f471a660f937c81e381feb59b78044a19d4d23efcf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/guide-bridge-context.json",
+      "sha256": "5fb0f86dadafb1bdcff9660a6636e80195ddfbad0a1cc92a36f7755c5e997323"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/guide-bridge-note.json",
+      "sha256": "9a3cfda79296a74e9ec84ba190cbe9851ceb868d512347fe243b4cc71870b81a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/scene-bridge-0.txt",
+      "sha256": "eedd19b38e972392813bc4109e6200c28f54d859902ddafcc021662a5aba7796"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/scene-bridge-1.txt",
+      "sha256": "2be0ff837adc2fabdcf778174d8aedbdb4ebeebaa5d10a901cd6d300966131fe"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/scene-bridge-2.txt",
+      "sha256": "1fda23ef95c9169a699b024ac53a49d25e69afac47f45ac81018dc959bea5b83"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/scene-withdrawn-saved.json",
+      "sha256": "39428865c1e9a3e7efcc2b4dcf0f69ff015b84f2b56238f4a46d1b173faff7e0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/summary.json",
+      "sha256": "cfca7e6c57edc5d1b4ea06d5591f1d1660cf14abe06cc6d223fab635e5c4c7cd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/java-native-20261128T082955771912/worksheet-bridge-zero.json",
+      "sha256": "76977546bdd49db264f1a27c849101f3900a7e51df73a4d6cba4f1aa4e09dcbb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/journeys.json",
+      "sha256": "074bb2309207de472ba35fe15f4f4d3b873668e29c7a5e4770be034c2d867874"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/pretest/scenarios.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/pretest/scenarios.stdout",
+      "sha256": "13357faed432c57ea393a924e27c80fdc0bd8d5fdc9bde98c0716f82216b051f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/pretest/scope.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/pretest/scope.stdout",
+      "sha256": "d3c62dec34e1a5e1dc1a41d8bd9602f6916e9398f5bf99ff40f72c6d5b4e7e14"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/process.json",
+      "sha256": "0e9c3b0de2fafc48310546368b627d644985528e439237cd8dd488f6062b443d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A01/response.json",
+      "sha256": "9d67efdb528c0b32ce2bf6d5a60e36786b44a14b72865701b6e9b5b2abe84a03"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A01/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A01/stdin.json",
+      "sha256": "e73ac95792712c9ee3c886cef5e07f0b3a7901c4f09ce869103c71153b7f0a9d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A01/stdout.txt",
+      "sha256": "61da555b57694f858f9e961bdeee4e528fcc04f2edf463c5c4a7713115072044"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A02/response.json",
+      "sha256": "ed438ffe5d41ded5aabd7e92f8383bb1171367377a4b7bab5752f364dfce02ec"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A02/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A02/stdin.json",
+      "sha256": "a4ec4aa1851833d96cf5a8530773171ca8b0a5121db46a025ac24dd3fb3246e9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A02/stdout.txt",
+      "sha256": "301522e9395e7e72a843367bacb761cd409f083eb5d0d049f0240883dd7459fd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A03/response.json",
+      "sha256": "2563a57e94fc663277d2cc034864bf7db8c0dcb5cdb8a21fb7a43108854f62f3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A03/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A03/stdin.json",
+      "sha256": "8c5f160c1d732caf3dc78f1d51589409d8ad34d07a20a58936bf9a07a5ab86fd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A03/stdout.txt",
+      "sha256": "8fca7a2462a8c9200f61bf6732ce783173701093658a39fcb1a783a75b22ee48"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A04/response.json",
+      "sha256": "43e79bcddef25e4bf4c43f8acf2663c1b61d6e82354f066f0eaff8eca72b0f1b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A04/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A04/stdin.json",
+      "sha256": "9161c5a26d3b256f154f58b54f8a94757acb560285d8b119cd70248812a231b5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A04/stdout.txt",
+      "sha256": "d703504da0090c619fefe7d4d6789033daa43fdf092a124ed39dfb32bcf4675b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A05/response.json",
+      "sha256": "c82b460faec829bc5903432e878720cfe0548351c4a6c12cf41d833d08ea84fb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A05/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A05/stdin.json",
+      "sha256": "0d7a436bd88b2c8aa219c46abb68f501a7ec7613a61b7e3da5052a3787b9f941"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A05/stdout.txt",
+      "sha256": "14c706b6237ba2440b635f1e7406ca7852c03987ebb666e59e2df2d4a4b88571"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A06/response.json",
+      "sha256": "a77c2c0ae3425bd10279f98b332e26f7fb826053477849e3b3009809840d2e7e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A06/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A06/stdin.json",
+      "sha256": "8d79d95ed2d8ddfb9d982537c3eda7e2536851577c747bad99bd8dd18b8c5391"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/A06/stdout.txt",
+      "sha256": "6e504e96b4fcbecb40387b99ffaac5de85ec2135be5735221f92f0a2883b943b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N01/response.json",
+      "sha256": "fcc317bb5d9ee3b2c88618f684fff25d1e0737097e977932cfcc3ab370d9b428"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N01/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N01/stdin.json",
+      "sha256": "c2d6172e3bdbe07a1e81bc6ad9013aea92e908725edf794219357df5371af94b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N01/stdout.txt",
+      "sha256": "8202172129e055100baed1c713edb9263c748d17a339884844e9e90b760b7e05"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N02/response.json",
+      "sha256": "f18fac4117336cd0680f49229daa83b456023303bc5e0b860b589f42061b580d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N02/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N02/stdin.json",
+      "sha256": "a54dc3bdbe96dbb430af3b4a70e9b48aeccf1881aa419523eabf64f57c7cda2d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N02/stdout.txt",
+      "sha256": "f0126232b073b7864acc6f802c22932e3ca7849b5bec9396e27de2ec2bedb55c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N03/response.json",
+      "sha256": "a7b4c043d5a0e7faf5c4be53c8dffabf3b6088d075dd036fb7ab465c6c35bb3c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N03/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N03/stdin.json",
+      "sha256": "b74f6299f93e879c2d1b75651cae54426a59f6ae6c6fab888a2e779312812058"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N03/stdout.txt",
+      "sha256": "ec24f1d271717ee3e65c9162947a6975bcf4a8a0e925f3b8d75c088468273c64"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N04/response.json",
+      "sha256": "2158cb62bed3ae6cff3fe4108dafa1fa0935d334962c8729a9d56fcfa139d715"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N04/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N04/stdin.json",
+      "sha256": "287e9f416a1c04d1cadbf80dcaf589b0fffef4035e03bfbb877478d7c47b6e1c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N04/stdout.txt",
+      "sha256": "7729014021977d703e6445f03bee43423f340f6519523ccb9b04496d03f34743"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N05/response.json",
+      "sha256": "4f9fec7684877b592fcfee3f032fc0d89322c0c94c801ec638a5dc672b4ed175"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N05/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N05/stdin.json",
+      "sha256": "e6ca738caf89837d556ba30e6540a6ad6bf484a403d6a5cd306e2ef26b8455c0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N05/stdout.txt",
+      "sha256": "df8447e4c944d12a540481e0192b49b808f67c9e0cb2985b672d140aa0ad1792"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N06/response.json",
+      "sha256": "225f86d4acb440ef4d8424298146fbd2cd28d5d6605268db0c080221ae3a2b02"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N06/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N06/stdin.json",
+      "sha256": "a497ae23cfab63e3cfa0329d2bd8355877666813ad3d41cd754c3b70f6e332bd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/N06/stdout.txt",
+      "sha256": "4d9071b88e72392e17cd311007ca318174f185c72c7fb709623f6bf1b0d60394"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P01/response.json",
+      "sha256": "3b17ed1d0a6b00a04f59b4dcb07dbee690c69e2800eb1c80f797752708f8d4b6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P01/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P01/stdin.json",
+      "sha256": "e77011bf5aa2d7cd2b3d6e64ad0ecba6ab58a2fbc72249714b5205bf5f89b4bd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P01/stdout.txt",
+      "sha256": "caff81165a4ee523e2685188e250c9ecf41b9fc96a5fdf4c7430e50f5a01400a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P02/response.json",
+      "sha256": "4b037a6793ad1e02fe33f87a706a7b0135d1f810a795888d6645eb6af20df014"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P02/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P02/stdin.json",
+      "sha256": "8a2a9b869bdf881009220fcbf0044240e5a52132cf0040f772a13e24611ad86a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P02/stdout.txt",
+      "sha256": "01d9db5f7d4824640aab7172f9d9af8616a2c62f3936a35789eda3d620ec916f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P03/response.json",
+      "sha256": "e16380fc305e0f10be83075e9a46c82d88188ea8588c161fc9fff4bca6c61f28"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P03/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P03/stdin.json",
+      "sha256": "9393c273cf90c215bf7e073378a1305bb9b4c03b9aa59391d60ab7767ecf0a79"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P03/stdout.txt",
+      "sha256": "617332d97b08ed7e9d3fad6cda29e43668bf530b0f97dee096e95b1250b29d15"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P04/response.json",
+      "sha256": "21d60569829af6b13738cb547967acb3b3327d568854fa83cd529130fbb724a5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P04/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P04/stdin.json",
+      "sha256": "48bdd1429c97f05a4ded0352b2ea537962811b10cd31d07f779d1b6c5035469b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P04/stdout.txt",
+      "sha256": "c4d44c3ec28ff54c8875a885d53d26c974aaa73a7086a82530ffa075174c4d2f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P05/response.json",
+      "sha256": "f3bc9d2d781db8a5e82ed7415ba4e5f2d6055e1b6ad36068fb7122395f94c3d6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P05/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P05/stdin.json",
+      "sha256": "51f34e172fad7ea5e65a38268662d64e6c9dd9c40c22e4942b333de0737b854f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P05/stdout.txt",
+      "sha256": "c5948ff600be73d1e2e80c9726257f2ffdaa1de48f39de86d55d5c4e5e2d5f1c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P06/response.json",
+      "sha256": "49d7050c0bf44ef5ca28ebafdfd6783bcd9d0a809bb2b681ef7636d2c0fc441b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P06/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P06/stdin.json",
+      "sha256": "fc98a0e3162698b296dc6d10b36b4d6a54cff37192553672340656944003ea77"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P06/stdout.txt",
+      "sha256": "412eab90fb78aa36cf26e431e407811c06e19290641851e1a358d18ccdb7bca8"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P07/response.json",
+      "sha256": "0be65a6ab83a1bf4f9b435464d91a7701a73261b8437ecffa7111e0758639075"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P07/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P07/stdin.json",
+      "sha256": "8da573b1e71dc4812884bd452b4765bf451ffe5e96c815241eabddc610fb2941"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P07/stdout.txt",
+      "sha256": "800daded8edc2e58b5abef64e1c38f1f0107667ed40d8435386598053a9e8191"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P08/response.json",
+      "sha256": "2d8ee1000d0a99a2f0ff8248d119931361cc590345d6ab290156ef59ade6d177"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P08/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P08/stdin.json",
+      "sha256": "8d53a4072912fa8bfa2f5a32f7ea9833788c02319ac135ce518ab1f3fdc0c1bd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P08/stdout.txt",
+      "sha256": "1599ed5197634f625fd1fe0d888a710ab42245f4f92f6c5b73391249473f5bed"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P09/response.json",
+      "sha256": "758dc618684febe480996779dc8144b615577a813c87b0737b510fbf3292bce3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P09/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P09/stdin.json",
+      "sha256": "ea9009ac9e899d4957403214069be3157b841f4f81ddb64a1e0209245733df94"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P09/stdout.txt",
+      "sha256": "ca8247b93651d4e948c0581a00edd099dd8f302dc30a16f999615b0e93e01641"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P10/response.json",
+      "sha256": "8b4d9663d45b4d8ec4c9ad82b8a8dad98490b84fb89d6202cc2e136f5b456267"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P10/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P10/stdin.json",
+      "sha256": "2f2df9b6f394b5bb2a4bcd6a449a8069dd9d0ba61d81773457b623d54208ba98"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P10/stdout.txt",
+      "sha256": "b88daf5af9ee59470a35a11fb6f04a1fce9966fac6fdc13e60b4e1e033d7f1e1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P11/response.json",
+      "sha256": "28814f5b1f750c2d3ce2f166d2618605cd49a5b2de9f178aa187f8eca536f373"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P11/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P11/stdin.json",
+      "sha256": "50641c455c929ce8c4b6fcfe6496cc581fbb918242e2fd29e069ebed68eb35d1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P11/stdout.txt",
+      "sha256": "805426f2cd3114a8672468296164cbae5ea3419d4e3e1373d45cabb06e8ad760"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P12/response.json",
+      "sha256": "587fac27f78fcda0dc1313b3839e56a503d2e05daf0e3d81fdfc06c9635f9bc1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P12/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P12/stdin.json",
+      "sha256": "22df02bb6d94cde7f267d200a63a357ccfafda395238e059b974d1d6a588002f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/P12/stdout.txt",
+      "sha256": "baa086bb511cce167a1dd3a63457ee55baf3d4ee90c6c001aaaf5c6535d6adbf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T080231525798/results.json",
+      "sha256": "50101f406de2e077eb61acede00eb9d831df554f37886c473f5e1b121c5a6946"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A01/response.json",
+      "sha256": "159f47589d8b94fddd8bf7d89d3e218c082b45e2cdf4b29db3f17b2c6b92f294"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A01/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A01/stdin.json",
+      "sha256": "e73ac95792712c9ee3c886cef5e07f0b3a7901c4f09ce869103c71153b7f0a9d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A01/stdout.txt",
+      "sha256": "b184824227017f1dd8b90f348a29ce84f9a401e3b6eb90c77632267b387969a1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A02/response.json",
+      "sha256": "8584940ec5c5e15be21c3f51669deefa7d619666f7554ccba8b5cf3e87964411"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A02/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A02/stdin.json",
+      "sha256": "a4ec4aa1851833d96cf5a8530773171ca8b0a5121db46a025ac24dd3fb3246e9"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A02/stdout.txt",
+      "sha256": "cc4b8cfde19b837f5a6465bb3e77bd696f7e9abb0fdeaed02dd0fc800e8bf760"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A03/response.json",
+      "sha256": "4ed50e449d11e6fc342e7cd589a212d53afe240248ee518e635e390da45367c7"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A03/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A03/stdin.json",
+      "sha256": "8c5f160c1d732caf3dc78f1d51589409d8ad34d07a20a58936bf9a07a5ab86fd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A03/stdout.txt",
+      "sha256": "34c0c4800d560b3eb15b6e94d859052bf3151222a9d265286373309172c94672"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A04/response.json",
+      "sha256": "c9a6b8a335b8a7a985daa9380319b02bd3f353a934b6b8f395e2441feb450e44"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A04/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A04/stdin.json",
+      "sha256": "9161c5a26d3b256f154f58b54f8a94757acb560285d8b119cd70248812a231b5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A04/stdout.txt",
+      "sha256": "5e12f63d77bf808a8b7afeb1d38ced9aca1fc509a1d51518a7ad36b91fbf1933"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A05/response.json",
+      "sha256": "3ea9254ab61b7b84025a8b9d5181c8e6cc6cd307cc1db30a7c634db11e2f7d6c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A05/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A05/stdin.json",
+      "sha256": "0d7a436bd88b2c8aa219c46abb68f501a7ec7613a61b7e3da5052a3787b9f941"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A05/stdout.txt",
+      "sha256": "fefacdffc6fb305552f242a6ba0479029f52320772e75d583f5cc444b2e59d22"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A06/response.json",
+      "sha256": "d5c00ba0011a3ac80b7dd109cb07654f8e0f0a68c90c4d2e079d109b9349bd29"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A06/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A06/stdin.json",
+      "sha256": "8d79d95ed2d8ddfb9d982537c3eda7e2536851577c747bad99bd8dd18b8c5391"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/A06/stdout.txt",
+      "sha256": "3e146a72760644f1e9438acd5b3ccba6acdf76373ab6ea4977bde5ecc5a76749"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N01/response.json",
+      "sha256": "e668ceadd35064a583d8f00e94d80600da140e88bdd9444eb16c959db00888df"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N01/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N01/stdin.json",
+      "sha256": "c2d6172e3bdbe07a1e81bc6ad9013aea92e908725edf794219357df5371af94b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N01/stdout.txt",
+      "sha256": "4308d78bd732dd96ae216fae6afdb4fca0da6fabcd9f583f98c9cd45566efac2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N02/response.json",
+      "sha256": "1e241848a474cd443ce88ee4fdb122d7aabcff979bc3d9f8b359827b9ddc116f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N02/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N02/stdin.json",
+      "sha256": "a54dc3bdbe96dbb430af3b4a70e9b48aeccf1881aa419523eabf64f57c7cda2d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N02/stdout.txt",
+      "sha256": "b743fe723d44c7132f82dd867309a54b566136e121a3e38bed990306fd492621"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N03/response.json",
+      "sha256": "12477e376befe166c1832ec330076d9c11dcdd4251b7de8a45228a620209d542"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N03/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N03/stdin.json",
+      "sha256": "b74f6299f93e879c2d1b75651cae54426a59f6ae6c6fab888a2e779312812058"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N03/stdout.txt",
+      "sha256": "4e461ab6b986f120cdf47280697d5532e9412a7e9dba76179880b89a5e320fde"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N04/response.json",
+      "sha256": "444623162b0cbfc8a017a5ea4b28e92818e31623636eec930b203a493bcba61e"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N04/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N04/stdin.json",
+      "sha256": "287e9f416a1c04d1cadbf80dcaf589b0fffef4035e03bfbb877478d7c47b6e1c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N04/stdout.txt",
+      "sha256": "90257c6601dea60060e653a3a68a37b2ef69ce702a7bf0fcff2f89edc7e79d2c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N05/response.json",
+      "sha256": "00c93d1372d490d53e5e9f4167faeb072777f9d2b4e305e379185c3ec6c8c430"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N05/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N05/stdin.json",
+      "sha256": "e6ca738caf89837d556ba30e6540a6ad6bf484a403d6a5cd306e2ef26b8455c0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N05/stdout.txt",
+      "sha256": "41bb9272654fd9c67e8ef387c015acab339890182ef553872956477aa0517f67"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N06/response.json",
+      "sha256": "8a68c265f03679670d794a7f04cb3432d73eb31dcfafd0942089b72716f6eb98"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N06/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N06/stdin.json",
+      "sha256": "a497ae23cfab63e3cfa0329d2bd8355877666813ad3d41cd754c3b70f6e332bd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/N06/stdout.txt",
+      "sha256": "efd624a68a0a61d4d830d22da16a8dae567cf8651acac4fd96ea477784e50c96"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P01/response.json",
+      "sha256": "50aa46fb1731bb4f8abd070fa37a5b63ccff1e30da31fd7fa0c0274b50b162c7"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P01/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P01/stdin.json",
+      "sha256": "e77011bf5aa2d7cd2b3d6e64ad0ecba6ab58a2fbc72249714b5205bf5f89b4bd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P01/stdout.txt",
+      "sha256": "a1c2514ffa9910db1362617cc57f1498406c39e31ed557094b2afd6f693c3bba"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P02/response.json",
+      "sha256": "f96c6f5acff6a6e3a555d96d54a58733588c3b5946f8cbbe551837de6cf09525"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P02/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P02/stdin.json",
+      "sha256": "8a2a9b869bdf881009220fcbf0044240e5a52132cf0040f772a13e24611ad86a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P02/stdout.txt",
+      "sha256": "65bc26faa3a028d82aebdb3c6a547e79c849214358c5ecff92114b34e7e55c1b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P03/response.json",
+      "sha256": "d54112f29bbde5248d657cfa48c6ef697a1f6d56b31323fbf842e10f109cfb11"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P03/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P03/stdin.json",
+      "sha256": "9393c273cf90c215bf7e073378a1305bb9b4c03b9aa59391d60ab7767ecf0a79"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P03/stdout.txt",
+      "sha256": "8d77f1964375ed19694cf1608f8445ae09ba033c1606d8203e52ffb17199607b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P04/response.json",
+      "sha256": "0effaedb382aa04308e58ffb05afd163587f5cb74c0d1ad2ba45ca50df9b7db5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P04/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P04/stdin.json",
+      "sha256": "48bdd1429c97f05a4ded0352b2ea537962811b10cd31d07f779d1b6c5035469b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P04/stdout.txt",
+      "sha256": "2a82ef29683cf75e3871910dfbeb1941502f08ec32896f26e3ddd7e889e2bf39"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P05/response.json",
+      "sha256": "09bddc5785c329da5bf974e3f0acd2f886369080e7bd2e1e59dda3243c95f71f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P05/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P05/stdin.json",
+      "sha256": "51f34e172fad7ea5e65a38268662d64e6c9dd9c40c22e4942b333de0737b854f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P05/stdout.txt",
+      "sha256": "e75bcbfa766a7cb047021a7a64def34ba44c2747cd2446794c1801996a96506c"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P06/response.json",
+      "sha256": "ce26bba7436fb2bf9f5bbb8bd050ba6dc0aceb3241ea7d8287a06e436e78d58d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P06/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P06/stdin.json",
+      "sha256": "fc98a0e3162698b296dc6d10b36b4d6a54cff37192553672340656944003ea77"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P06/stdout.txt",
+      "sha256": "0123fbc795ee52d60dfd725645abb0dd193e3b21f54c79e97c11985da79c41c4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P07/response.json",
+      "sha256": "8f1efa3aacbc87db428263b0b1a9adac127570d23fade83cbe0e83510f397d66"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P07/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P07/stdin.json",
+      "sha256": "8da573b1e71dc4812884bd452b4765bf451ffe5e96c815241eabddc610fb2941"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P07/stdout.txt",
+      "sha256": "b93ff385de44e23d92dd0d219801489096269852f467532f6b445773ab7805e4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P08/response.json",
+      "sha256": "8cba29a7d291aaed07247620db36898abdd86030fc98357e42e251ef5860a360"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P08/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P08/stdin.json",
+      "sha256": "8d53a4072912fa8bfa2f5a32f7ea9833788c02319ac135ce518ab1f3fdc0c1bd"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P08/stdout.txt",
+      "sha256": "af8d9cd5d2990ca24850919068b395ebbdf5655c069e8220cd220023747882d2"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P09/response.json",
+      "sha256": "1f5992f6fdeaf54bb7977675b75414f16709b2e6383660ef37200cb54a4df5e0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P09/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P09/stdin.json",
+      "sha256": "ea9009ac9e899d4957403214069be3157b841f4f81ddb64a1e0209245733df94"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P09/stdout.txt",
+      "sha256": "1927c5663cb29b0be080f04bf1ad3cbe550d7f5ae629ef31e8cf9bcf2653312f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P10/response.json",
+      "sha256": "795c8fb49083e3e20ba944a59914fdb7a400f719170caf17ee62f419c51ba9e3"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P10/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P10/stdin.json",
+      "sha256": "2f2df9b6f394b5bb2a4bcd6a449a8069dd9d0ba61d81773457b623d54208ba98"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P10/stdout.txt",
+      "sha256": "07c5db5f6f6eeb9b5b42d7257deee960f36ad26a976c60a000b3128fb02c3968"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P11/response.json",
+      "sha256": "222b028eb5027645c7746f08486886c210d503a94e2ffe1ef6bae129af5a85b5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P11/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P11/stdin.json",
+      "sha256": "50641c455c929ce8c4b6fcfe6496cc581fbb918242e2fd29e069ebed68eb35d1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P11/stdout.txt",
+      "sha256": "bdbdd98984e919ae8df8ad2ed3ff8765f37402745af113abfc296a8ef7402537"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P12/response.json",
+      "sha256": "fdeb9de2b91f69c78ca59f133d4d8882d2ec5f94c4b778ee1c94377e20c3cdaf"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P12/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P12/stdin.json",
+      "sha256": "22df02bb6d94cde7f267d200a63a357ccfafda395238e059b974d1d6a588002f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/P12/stdout.txt",
+      "sha256": "36b2f0aaf41c2000cac1c15f3179c1150f1b0827fd0b6aa10d226bbb4e7293d0"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/scenarios-20261128T082646321765/results.json",
+      "sha256": "799b3e6cd6cd894a1b6b8f9ab471a804b7f5ee05b0bdb4dc0217fe4c4046df93"
+    },
+    {
+      "path": "shopping_decision/focus_guidance.py",
+      "sha256": "1260adccdd44791df37e751fb5198df313c7a1f1a8fb083614dbf02a5d8d1f58"
+    },
+    {
+      "path": "tests/test_scene_robustness.py",
+      "sha256": "adb823fa17c623ad8e7e3d2826b8514209bb1f9154612d0ab735e1a52960ab6e"
+    }
+  ]
+}

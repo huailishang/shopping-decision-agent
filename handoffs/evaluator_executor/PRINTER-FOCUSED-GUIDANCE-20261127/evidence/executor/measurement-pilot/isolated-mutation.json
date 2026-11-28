@@ -1,0 +1,6 @@
+{
+  "file": "shopping_decision/chat_bridge.py",
+  "before_sha256": "acd4e3fcfc8b0b388ac0e5848886a1a47d05ce4a9ccb8d8a71b70164a4c87a61",
+  "after_sha256": "98623f8c2de69350371650f4c1a9fba447b6a9782fadcdd3768382bd392867e3",
+  "injected": "    if v.get(\"category\") == \"printer\" and \"needs_color\" not in v:\n        active = \"\" if \"budget_max_cny\" in v else \"budget_max_cny\"\n        prompt = QUESTION[\"budget_max_cny\"] if active else \"测试：故意阻断彩色问题\"\n        choices = REFS[\"budget_max_cny\"] if active else []\n"
+}

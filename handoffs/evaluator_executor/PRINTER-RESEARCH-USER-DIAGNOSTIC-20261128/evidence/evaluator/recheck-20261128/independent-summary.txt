@@ -1,0 +1,18 @@
+Independent tool stdout excerpts, before evaluator additions:
+CHECK arms.json records 5
+ARMS: equal initial states, 3 target journeys and both arm guards; cross-process replay remains known failure
+CHECK scoring.json records 4
+SCORING: 4/4 synthetic cases; not participants
+BLOCKED / INCONCLUSIVE: no separately authorized participants; zero human records
+HUMAN_RC 2
+CARD P1a handoff needs_color
+CARD P1b handoff needs_color
+CARD P2a direct idle_weeks_pattern
+CARD P2b direct idle_weeks_pattern
+CARD P3a direct needs_color
+CARD P3b direct needs_color
+ALL SIX INITIAL STATES EQUAL
+SCOPE_RESULT {'count': 7119, 'changed': [], 'head_same': True, 'index_same': True, 'historical_worktime': None, 'pre_baseline_prep_seconds': None}
+SCOPE 7119 unchanged; initial prep wall time unknown, not certified freeze
+WINDOW A exit=0
+WINDOW B exit=0

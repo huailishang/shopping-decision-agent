@@ -1,0 +1,414 @@
+{
+  "errors": [],
+  "recomputed": [
+    {
+      "case_id": "T01",
+      "a": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T02",
+      "a": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T03",
+      "a": {
+        "completed": false,
+        "answers": 5,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 3
+      },
+      "b": {
+        "completed": true,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T04",
+      "a": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T05",
+      "a": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T06",
+      "a": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T07",
+      "a": {
+        "completed": false,
+        "answers": 5,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 3
+      },
+      "b": {
+        "completed": true,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T08",
+      "a": {
+        "completed": false,
+        "answers": 5,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 3
+      },
+      "b": {
+        "completed": true,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T09",
+      "a": {
+        "completed": false,
+        "answers": 5,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 3
+      },
+      "b": {
+        "completed": true,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T10",
+      "a": {
+        "completed": false,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 4
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T11",
+      "a": {
+        "completed": false,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 4
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T12",
+      "a": {
+        "completed": false,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 4
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T13",
+      "a": {
+        "completed": true,
+        "answers": 3,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 2
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T14",
+      "a": {
+        "completed": true,
+        "answers": 3,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 2
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T15",
+      "a": {
+        "completed": true,
+        "answers": 0,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      },
+      "b": {
+        "completed": true,
+        "answers": 0,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T16",
+      "a": {
+        "completed": true,
+        "answers": 5,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 2
+      },
+      "b": {
+        "completed": true,
+        "answers": 5,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 2
+      }
+    },
+    {
+      "case_id": "T17",
+      "a": {
+        "completed": true,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 1
+      },
+      "b": {
+        "completed": true,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 1
+      }
+    },
+    {
+      "case_id": "T18",
+      "a": {
+        "completed": false,
+        "answers": 3,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 3
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T19",
+      "a": {
+        "completed": false,
+        "answers": 3,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 3
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T20",
+      "a": {
+        "completed": false,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 4
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T21",
+      "a": {
+        "completed": false,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 4
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T22",
+      "a": {
+        "completed": false,
+        "answers": 4,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 4
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    },
+    {
+      "case_id": "T23",
+      "a": {
+        "completed": true,
+        "answers": 3,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 2
+      },
+      "b": {
+        "completed": true,
+        "answers": 3,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 2
+      }
+    },
+    {
+      "case_id": "T24",
+      "a": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      },
+      "b": {
+        "completed": true,
+        "answers": 1,
+        "reads": 0,
+        "duplicates": 0,
+        "irrelevant": 0
+      }
+    }
+  ],
+  "limit": "trace discipline and finite frozen targets; not human learning or source truth"
+}

@@ -1,0 +1,59 @@
+{
+  "known_active_seconds": null,
+  "recorded_wall_seconds": 1189.81304,
+  "unknown_segments": [
+    {
+      "reason": "initial reads before start; minute-resolution request timestamp",
+      "upper_bound_seconds": 180,
+      "upper_bound_evidence": "initial-unknown-bound.json (reported time, independent host log unavailable)",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/initial-unknown-bound.json",
+          "sha256": "a241843ec84c8aeb8d9acfbb82f46dda14c8447ae8c1b90bcda054c86a3875aa"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/initial-session-record-original.json",
+          "sha256": "a143b0af43fa88322fc2390c6e33d63c417980c7db31ec868adcb28d13cb9acd"
+        }
+      ]
+    },
+    {
+      "reason": "initial connector and routing reads before start",
+      "upper_bound_seconds": 60,
+      "upper_bound_evidence": "continue-02-unknown-bound.json",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/continue-02-unknown-bound.json",
+          "sha256": "37cb56e3a302fc2d810ffe57f3111fedad0c180e119278d4ce3c72c713978cd1"
+        }
+      ]
+    }
+  ],
+  "unknown_upper_bound_seconds": 240,
+  "budget_debit_seconds": 1429.81304,
+  "budget_debit_is_conservative_wall_upper_bound": true,
+  "remaining_budget_upper_limit_seconds": 862570.18696,
+  "inherited_prior_unknown": true,
+  "repair_rounds": [],
+  "repair_events": [
+    "T18 common repair real before/after",
+    "context lineage failure and repair; individual active intervals not separately recorded"
+  ],
+  "forbidden_operations": {
+    "model_api": 0,
+    "model_cli": 0,
+    "platform_api": 0,
+    "account": 0,
+    "device": 0,
+    "transaction": 0,
+    "install": 0,
+    "external_write": 0,
+    "git_commit": 0,
+    "git_push": 0,
+    "git_index": 0
+  },
+  "public_reads": 0,
+  "public_queries": 0,
+  "process_time_accounting_complete": false,
+  "limit": "Checkpoint only; no final process PASS or exact effective hours asserted."
+}

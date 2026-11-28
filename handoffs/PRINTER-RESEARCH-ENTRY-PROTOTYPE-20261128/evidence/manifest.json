@@ -1,0 +1,100 @@
+{
+  "artifacts": [
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/BRIEF.md",
+      "sha256": "b838393c9f197531303201f7cedc72f3bbc3f7dd665aa9db06b8194bd0ed8e23"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/README.md",
+      "sha256": "8188d83788503d52a1c9dae199b4f96718f03788f3c085208f39addeabf8cd05"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/REPORT.md",
+      "sha256": "00d031a2b87a5ec6809ab4a507c59082ec1ba158a3c3b837aba8570a3ee0452a"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/activity.jsonl",
+      "sha256": "f9f4fedb12dff8fb2f728fcaed5a2962f17bd531eb723e8d6bbd4ce50afaa8d8"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/duplex-terminal.json",
+      "sha256": "63583179bce2e6b55c9e35e130acf829b8b7a4decf28e469857e77eae0b87127"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/existing-guards.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/existing-guards.stderr",
+      "sha256": "5f57aef176847a2ee5083adde1cdf722b65c30e91c9e0058f8a594c969f45d48"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/existing-guards.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/idle-terminal.json",
+      "sha256": "616352fbb76ecaef64e4c4992eb101150c4387e96e14db2eb8fb7ecfbec84440"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/internal-walkthroughs.json",
+      "sha256": "44ba73c21eaad1e0eb4dd771b328d95827d0748ca50cf0ca069f693f4d9364d3"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/negative-guards.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/negative-guards.stderr",
+      "sha256": "7510b3dd77d53a5fe45c4889d4fd09bba2aee133a9d1db1d5743db29ef170b76"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/negative-guards.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/old-manifest-check.json",
+      "sha256": "a72b945813671daf86f03e5ca0baa31f1166c17b76cd8a62019d078cc6926f6b"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/scan-terminal.json",
+      "sha256": "911aee24815056ee267cb90bdf98bdcf12ca5388c1a7944b014675d0f6d092ae"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/tests.stderr",
+      "sha256": "cd8266d8679f085ab939a98ae5acc4eef3aa93d6904fa403ff57edcd653657ba"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/upstream-device.json",
+      "sha256": "ddd9e6d47e4555d738695b8b43bf77f811ea324d66824f43ec09e9b12d2ce250"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/window.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/window.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/evidence/window.stdout",
+      "sha256": "3927da7ad12e2b1270e97f4c51ecdbef6941f933ffb244b99a3233d4e63cb9b3"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/prototype.py",
+      "sha256": "222d1af1c3fb5b8ac1f1c31380062ae31a1a32c655d71389096754e5906b7706"
+    },
+    {
+      "path": "handoffs/PRINTER-RESEARCH-ENTRY-PROTOTYPE-20261128/test_prototype.py",
+      "sha256": "afd068db9c294e9e0c35748c3a892caa35d309969668faef5ceb31f096517b13"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source_pending": true,
+  "claims_unchanged": true,
+  "user_unchanged": true,
+  "forged_rejected": true,
+  "authorization": true,
+  "valid_fixture": true,
+  "stale_rejected": true,
+  "rule_actions_preserved": true,
+  "no_external_calls": true,
+  "fixture_safe": true
+}

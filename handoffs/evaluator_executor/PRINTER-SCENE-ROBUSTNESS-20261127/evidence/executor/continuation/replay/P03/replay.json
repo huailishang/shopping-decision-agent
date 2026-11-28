@@ -1,0 +1,192 @@
+{
+  "initial_state": {
+    "version": 2,
+    "answers": {
+      "category": {
+        "value": "printer",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "打印机"
+      },
+      "usage": {
+        "value": "暑假结束后收柜子里，到寒假才用",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "暑假结束后收柜子里，到寒假才用"
+      }
+    },
+    "history": [
+      {
+        "version": 1,
+        "raw_text": "打印机",
+        "changed_fields": [
+          "category"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 2,
+        "raw_text": "暑假结束后收柜子里，到寒假才用",
+        "changed_fields": [
+          "usage"
+        ],
+        "old_conclusions_invalidated": true
+      }
+    ],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false,
+    "deferred_fields": []
+  },
+  "events": [
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 2,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "暑假结束后收柜子里，到寒假才用",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "暑假结束后收柜子里，到寒假才用"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "暑假结束后收柜子里，到寒假才用",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "exit_code": 0,
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-stdin.json",
+        "sha256": "9393c273cf90c215bf7e073378a1305bb9b4c03b9aa59391d60ab7767ecf0a79"
+      },
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-stdout.txt",
+        "sha256": "e66f186dc7efcbd5c5cd991f7c9916ac50021cdffc83f388d4eb0ccaed04c592"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/0-response.json",
+        "sha256": "3800b3bb8166325615ada5831cf252b26e3d837491a34c4ff56172f6df57308c"
+      }
+    },
+    {
+      "type": "answer",
+      "field": "idle_weeks_pattern",
+      "answer": "经常连续多周不用"
+    },
+    {
+      "type": "response",
+      "request": {
+        "schema_version": 1,
+        "action": "guide",
+        "state": {
+          "version": 3,
+          "answers": {
+            "category": {
+              "value": "printer",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "打印机"
+            },
+            "usage": {
+              "value": "暑假结束后收柜子里，到寒假才用",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "暑假结束后收柜子里，到寒假才用"
+            },
+            "idle_weeks_pattern": {
+              "value": "often_long",
+              "origin": "user_explicit",
+              "confirmed": true,
+              "raw_text": "经常连续多周不用"
+            }
+          },
+          "history": [
+            {
+              "version": 1,
+              "raw_text": "打印机",
+              "changed_fields": [
+                "category"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 2,
+              "raw_text": "暑假结束后收柜子里，到寒假才用",
+              "changed_fields": [
+                "usage"
+              ],
+              "old_conclusions_invalidated": true
+            },
+            {
+              "version": 3,
+              "raw_text": "经常连续多周不用",
+              "changed_fields": [
+                "idle_weeks_pattern"
+              ],
+              "old_conclusions_invalidated": true
+            }
+          ],
+          "pending_approval": true,
+          "transactions_enabled": false,
+          "purchase_recommendation_approved": false,
+          "deferred_fields": []
+        },
+        "worksheet": null,
+        "payload": {}
+      },
+      "exit_code": 0,
+      "stdin_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-stdin.json",
+        "sha256": "81e7d900fff8bce1ebabc0c0b97e0d475341b03661cce6c7769b4d65adab2759"
+      },
+      "stdout_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-stdout.txt",
+        "sha256": "37091c21d94d52bebc47e71d1af1fe1fe5e43a70ba40da515ff09640e0c0076c"
+      },
+      "stderr_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "response_artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/P03/1-response.json",
+        "sha256": "927cb9d219b75e943de7f1b3081025e5ec9972642f3218b0c0eded9da958aa41"
+      }
+    }
+  ]
+}

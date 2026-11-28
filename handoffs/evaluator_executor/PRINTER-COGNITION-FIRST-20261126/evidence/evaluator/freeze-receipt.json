@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-26T14:04:25.876828+00:00",
+  "task_id": "PRINTER-COGNITION-FIRST-20261126",
+  "baseline_sha256": "13113b9d7d335b7a16993c31fc5ae2eda3347a365008f6b600f5b2577cd8a751",
+  "protected_count": 3651,
+  "plans": {
+    "executor": 13,
+    "evaluator": 13
+  },
+  "preparation": "EXPECTED_FAILURES_CONFIRMED",
+  "scope_start_exit_code": 0,
+  "workflow_exit_code": 0,
+  "product_bytes_unchanged_by_evaluator": true,
+  "current_sha256": "20c5c04efa710093b1650dbbab00f383f1807f46162733a4119b20325b2c4c5a",
+  "state": "CONTRACT_FROZEN / Executor",
+  "superseded_task": "PRINTER-DECISIVE-EVIDENCE-20261126",
+  "real_public_reads_model_api_cli_platform_transactions_git_commit_push": 0
+}

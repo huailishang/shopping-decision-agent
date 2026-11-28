@@ -1,0 +1,27 @@
+T01 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T02 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T03 True {'completed': True, 'answers': 4, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T04 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T05 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T06 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T07 True {'completed': True, 'answers': 4, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T08 True {'completed': True, 'answers': 4, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T09 True {'completed': True, 'answers': 4, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T10 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T11 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T12 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T13 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T14 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T15 True {'completed': True, 'answers': 0, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T16 True {'completed': True, 'answers': 5, 'reads': 0, 'duplicates': 0, 'irrelevant': 2}
+T17 True {'completed': True, 'answers': 4, 'reads': 0, 'duplicates': 0, 'irrelevant': 1}
+T18 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T19 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T20 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T21 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T22 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+T23 True {'completed': True, 'answers': 3, 'reads': 0, 'duplicates': 0, 'irrelevant': 2}
+T24 True {'completed': True, 'answers': 1, 'reads': 0, 'duplicates': 0, 'irrelevant': 0}
+P01 terminal  核Brother HL-L1238W的扫描；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。
+P02 terminal  核Brother HL-L1238W的自动双面；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。
+P03 terminal needs_color 必须在家打印彩色吗？

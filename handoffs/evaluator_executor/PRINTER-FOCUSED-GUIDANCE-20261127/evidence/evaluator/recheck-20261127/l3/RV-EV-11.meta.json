@@ -1,0 +1,28 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "RV-EV-11",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_history_audit_version_transition.py",
+    "-v"
+  ],
+  "command_display": "python3 -X utf8 -m unittest discover -s tests -p test_history_audit_version_transition.py -v",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-27T14:16:18.987809+00:00",
+  "finished_at_utc": "2026-11-27T14:18:14.880990+00:00",
+  "exit_code": 0,
+  "stdout_path": "RV-EV-11.stdout.log",
+  "stderr_path": "RV-EV-11.stderr.log",
+  "stdout_bytes": 0,
+  "stderr_bytes": 1697,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "a32d282dbf4783d6a7b020a46f1b869e52945b2aa3aa89b6b19d8aa6bf74a923"
+}

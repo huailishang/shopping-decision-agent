@@ -1,0 +1,103 @@
+{
+  "current_exit": 0,
+  "baseline_exit": 0,
+  "checks": {
+    "cognition_guide_json": true,
+    "cognition_context_json": true,
+    "prompt": true,
+    "result_text": true
+  },
+  "stderr": "",
+  "same_all_decoded": false,
+  "request": {
+    "schema_version": 1,
+    "action": "guide",
+    "state": {
+      "version": 5,
+      "answers": {
+        "category": {
+          "value": "printer",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "打印机"
+        },
+        "usage": {
+          "value": "家庭低频打印",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "家庭低频打印"
+        },
+        "needs_color": {
+          "value": false,
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "否"
+        },
+        "monthly_pages_range": {
+          "value": [
+            0,
+            50
+          ],
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "0-50"
+        },
+        "device_deployment_region": {
+          "value": "河南",
+          "origin": "user_explicit",
+          "confirmed": true,
+          "raw_text": "河南"
+        }
+      },
+      "history": [
+        {
+          "version": 1,
+          "raw_text": "打印机",
+          "changed_fields": [
+            "category"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 2,
+          "raw_text": "家庭低频打印",
+          "changed_fields": [
+            "usage"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 3,
+          "raw_text": "否",
+          "changed_fields": [
+            "needs_color"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 4,
+          "raw_text": "0-50",
+          "changed_fields": [
+            "monthly_pages_range"
+          ],
+          "old_conclusions_invalidated": true
+        },
+        {
+          "version": 5,
+          "raw_text": "河南",
+          "changed_fields": [
+            "device_deployment_region"
+          ],
+          "old_conclusions_invalidated": true
+        }
+      ],
+      "pending_approval": true,
+      "transactions_enabled": false,
+      "purchase_recommendation_approved": false,
+      "deferred_fields": []
+    },
+    "worksheet": null,
+    "payload": {}
+  },
+  "only_decoded_difference": "report_json.research_result.evaluated_at，实时评估时刻；guide/context/prompt/result均一致"
+}

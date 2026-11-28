@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-26T13:09:48.349694+00:00",
+  "formal_baseline": "BASELINE.R1.json",
+  "baseline_sha256": "c9525974112d286dfcca727f30c00135e76310908dadc8f4bd6f4998baee3599",
+  "initial_failed_preparation_baseline_preserved_sha256": "8d159df8ab9be18b59d4a01969f513d0b39dd644e385b0a4060fe41c5961328d",
+  "protected_count": 3588,
+  "scope_start_exit_code": 0,
+  "workflow_exit_code": 0,
+  "product_bytes_unchanged_by_evaluator": true,
+  "preparation": "EXPECTED_FAILURES_CONFIRMED",
+  "plan_checks": 12,
+  "state": "CONTRACT_FROZEN / Executor",
+  "current_sha256": "60f34f33472639af3a3298d3146a2908e32edf522d33c640d683f843999710e5"
+}

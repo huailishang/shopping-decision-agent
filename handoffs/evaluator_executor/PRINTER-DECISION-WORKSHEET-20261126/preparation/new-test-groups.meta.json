@@ -1,0 +1,14 @@
+{
+  "label": "new-test-groups",
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_TESTS.py"
+  ],
+  "start_utc": "2026-11-26T08:07:29.121085+00:00",
+  "end_utc": "2026-11-26T08:07:29.310054+00:00",
+  "exit_code": 1,
+  "stdout_sha256": "4a5f90eb83a32d2cb2065a7bd93a8bb1af2bc575689d3d78f832935ca547f64b",
+  "stderr_sha256": "d1b96d2861907b8b7d96db20aede71685d39c77947a413993af11d98c286acb7"
+}

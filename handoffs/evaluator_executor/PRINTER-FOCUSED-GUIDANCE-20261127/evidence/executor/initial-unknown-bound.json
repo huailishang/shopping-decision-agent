@@ -1,0 +1,7 @@
+{
+  "request_timestamp_reported": "2026-11-27T20:59+08:00",
+  "first_recorded_start": "2026-11-27T13:01:36.213616+00:00",
+  "precision": "minute; reported conversation timestamp, not independent host log",
+  "upper_bound_seconds": 180,
+  "method": "round up elapsed from start of reported minute; not an estimate of effective active time"
+}

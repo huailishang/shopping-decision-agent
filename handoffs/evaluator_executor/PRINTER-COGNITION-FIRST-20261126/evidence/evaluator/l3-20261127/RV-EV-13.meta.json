@@ -1,0 +1,21 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "RV-EV-13",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_DELIVERY.py"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_DELIVERY.py",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-27T08:20:33.236085+00:00",
+  "finished_at_utc": "2026-11-27T08:20:39.860017+00:00",
+  "exit_code": 1,
+  "stdout_path": "RV-EV-13.stdout.log",
+  "stderr_path": "RV-EV-13.stderr.log",
+  "stdout_bytes": 398,
+  "stderr_bytes": 0,
+  "stdout_sha256": "bb0a118d4f7709d7f9457bf6a388147f8fdb58c4de43a45da1c3e17e1605cdfa",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

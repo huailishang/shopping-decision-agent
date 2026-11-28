@@ -1,0 +1,10 @@
+{
+  "published_on": "2024-05",
+  "observed_on": "2026-11-27",
+  "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+  "limits": "本轮不作逐列参数视觉映射；不推断实际随箱量、家庭产量、维护金额或使用体验。厂商资料非独立评测。",
+  "id": "EVAL-READ-004",
+  "result": "PDF文本取得",
+  "reference": "turn3view0",
+  "support": "P0 L2-8 列三型号、鼓粉分离与黑白；P1 L62-63 TN118/DR118标称量；L70-72标准测试和单页作业条件；L103日期"
+}

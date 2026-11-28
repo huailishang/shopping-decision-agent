@@ -1,0 +1,13 @@
+{'raw_sha256': 'fb66d2db13ea5987a904d689019b5904298f076472a63773306312a7f53786e7', 'generator_sha256': 'c374d1ee065618d818db1c2ddf61b5527a5a29386c897504d17c7e877d85f6d2', 'completed': 7, 'core_completed': 6, 'java_event_completed': 2}
+J01 True bridge_process None
+J02 True java_event None
+J03 True bridge_process None
+J04 False bridge_process None
+J05 True bridge_process None
+J06 False bridge_process None
+J07 True java_event None
+J08 True bridge_process None
+J09 False java_event None
+J10 True bridge_process None
+J11 False bridge_process None
+J12 False bridge_process None

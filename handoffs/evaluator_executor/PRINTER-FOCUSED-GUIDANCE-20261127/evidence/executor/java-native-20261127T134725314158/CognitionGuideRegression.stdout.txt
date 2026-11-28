@@ -1,0 +1,1 @@
+PASS actual Java guide stdin and legacy three-argument projection parity; malicious payload rejected

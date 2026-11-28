@@ -1,0 +1,251 @@
+[
+  {
+    "case": "C01",
+    "input_hash_matches": true,
+    "prompt_hash_matches": true,
+    "response_hash_matches": true,
+    "validated": true,
+    "public_equal_except_origin": true,
+    "saved_rule_equal": true,
+    "excluded": [],
+    "first_action": [
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:scan",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ],
+    "excluded_candidate_actions": []
+  },
+  {
+    "case": "C08",
+    "input_hash_matches": true,
+    "prompt_hash_matches": true,
+    "response_hash_matches": true,
+    "validated": true,
+    "public_equal_except_origin": true,
+    "saved_rule_equal": true,
+    "excluded": [
+      "Brother HL-L1238W",
+      "HP M232dw"
+    ],
+    "first_action": [
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:scan",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ],
+    "excluded_candidate_actions": [
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:scan",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:auto_duplex",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:manual_duplex",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_reuse",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "verify_price",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:cost",
+        "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:starter_included",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:replacement_137a_x",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:starter_toner_yield",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:manual_duplex",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:wechat_reuse",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "verify_price",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:cost",
+        "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:separate_drum",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:starter_toner_yield",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:replacement_toner_yield",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "HP M232dw",
+        "requirement_id": "cognition:drum_yield",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ]
+  },
+  {
+    "case": "C12",
+    "input_hash_matches": true,
+    "prompt_hash_matches": true,
+    "response_hash_matches": true,
+    "validated": true,
+    "public_equal_except_origin": true,
+    "saved_rule_equal": true,
+    "excluded": [
+      "Brother HL-L1238W"
+    ],
+    "first_action": [
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:scan",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ],
+    "excluded_candidate_actions": [
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:scan",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:auto_duplex",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:manual_duplex",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_reuse",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "verify_price",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:cost",
+        "description": "先取得对应商家、准确SKU、目的地区和有效时间的实时报价"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:starter_included",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:replacement_137a_x",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:starter_toner_yield",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ]
+  },
+  {
+    "case": "C08_SHORT",
+    "input_hash_matches": true,
+    "prompt_hash_matches": true,
+    "response_hash_matches": true,
+    "validated": true,
+    "public_equal_except_origin": true,
+    "saved_rule_equal": true,
+    "excluded": [
+      "Brother HL-L1238W",
+      "HP M232dw"
+    ],
+    "first_action": [
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:scan",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ],
+    "excluded_candidate_actions": [
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:scan",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      },
+      {
+        "kind": "research",
+        "candidate_id": "Brother HL-L1238W",
+        "requirement_id": "cognition:wechat_miniprogram",
+        "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "purpose": "owner-directed supplemental evidence, independent approval pending; does not change frozen VP-08",
+  "checks": {
+    "original_baseline_intact": true,
+    "original_plan_intact": true,
+    "head_unchanged": true,
+    "index_unchanged": true,
+    "original_auditor_pinned": true,
+    "new_test_not_in_original": true,
+    "exact_two_deltas": true,
+    "delta_exact_sha256": true,
+    "all_product_bytes_unchanged_in_R4": true
+  },
+  "original_protected_count": 3022,
+  "unchanged_original_protected": 3021,
+  "changed_protected_paths": [
+    "scripts/audit_model_history_readonly.py",
+    "tests/test_history_audit_version_transition.py"
+  ],
+  "exact_delta_sha256": {
+    "scripts/audit_model_history_readonly.py": "2da43c97c5ca3330272a1f46cb5bbb624912b8e5750012ed14b5d2a4e0a100fa",
+    "tests/test_history_audit_version_transition.py": "a657b2187ebbbd826378cfdcaadbe814ca73e3a092ca0a1071866b1d0025bc5a"
+  }
+}

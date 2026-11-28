@@ -1,0 +1,38 @@
+test_defer_and_withdraw_not_reasked (test_focus_guidance.FocusGuidance.test_defer_and_withdraw_not_reasked) ... ok
+test_explicit_color_changes_route (test_focus_guidance.FocusGuidance.test_explicit_color_changes_route) ... ok
+test_hardware_scope_real_state (test_focus_guidance.FocusGuidance.test_hardware_scope_real_state) ... ok
+test_scan_and_duplex_different (test_focus_guidance.FocusGuidance.test_scan_and_duplex_different) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.883s
+
+OK
+
+test_reject_injected_focus (test_focus_guidance_bridge.FocusBridge.test_reject_injected_focus) ... ok
+test_restore_recomputes_not_cached (test_focus_guidance_bridge.FocusBridge.test_restore_recomputes_not_cached) ... ok
+test_same_projection (test_focus_guidance_bridge.FocusBridge.test_same_projection) ... ok
+test_unsupported_category_does_not_offer_hidden_question (test_focus_guidance_bridge.FocusBridge.test_unsupported_category_does_not_offer_hidden_question) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.876s
+
+OK
+
+test_ranked_context_same_focus (test_focus_guidance_lineage.FocusLineage.test_ranked_context_same_focus) ... ok
+test_source_new_version_invalidates_claim (test_focus_guidance_lineage.FocusLineage.test_source_new_version_invalidates_claim) ... ok
+test_stale_focus_rejected (test_focus_guidance_lineage.FocusLineage.test_stale_focus_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.739s
+
+OK
+
+test_follow_current_field_only_scan (test_guidance_replay.ReplayDiscipline.test_follow_current_field_only_scan) ... ok
+test_idle_question_changes_research_not_answers (test_guidance_replay.ReplayDiscipline.test_idle_question_changes_research_not_answers) ... ok
+test_zero_pages_does_not_infer_idle (test_guidance_replay.ReplayDiscipline.test_zero_pages_does_not_infer_idle) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.058s
+
+OK
+

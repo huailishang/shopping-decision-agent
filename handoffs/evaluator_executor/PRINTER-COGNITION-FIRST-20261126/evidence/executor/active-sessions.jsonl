@@ -1,0 +1,8 @@
+{"id": "executor-20261127-01", "event": "start", "at": "2026-11-27T11:19:19.784896+08:00", "label": "baseline and cognition-first implementation"}
+{"id": "executor-20261127-01", "event": "end", "at": "2026-11-27T11:27:42.817866+08:00", "label": "first slice and scope check checkpoint; not submitted"}
+{"id": "executor-20261127-02", "event": "start", "at": "2026-11-27T15:22:49.951764+08:00", "label": "guided requirements and decision integration"}
+{"id": "executor-20261127-02", "event": "end", "at": "2026-11-27T15:32:29.055837+08:00", "label": "slice02 checkpoint; not submitted"}
+{"id": "executor-20261127-03", "event": "start", "at": "2026-11-27T15:34:08.172729+08:00", "label": "source lifecycle and decision note"}
+{"id": "executor-20261127-03", "event": "end", "at": "2026-11-27T15:47:05.495070+08:00", "label": "deliverables and task-chain evidence prepared; automated L2 starts next"}
+{"id": "executor-20261127-04", "event": "start", "at": "2026-11-27T15:53:50.615435+08:00", "label": "formal gate results review and checkpoint"}
+{"id": "executor-20261127-04", "event": "end", "at": "2026-11-27T15:53:50.640147+08:00", "label": "gate failure preserved; blocked pending process disposition"}

@@ -1,0 +1,471 @@
+{
+  "schema_version": 1,
+  "request_id": "printer-cognition-pilot",
+  "category": "printer",
+  "dialogue_version": 14,
+  "confirmed_values_sha256": "3a0fcb4bc39e398db73b1bc20e72afd392b567623822a38a2d87c4cea423c119",
+  "as_of": "2026-11-26",
+  "region": "中国大陆河南省",
+  "candidates": [
+    {
+      "id": "Brother HL-L1238W"
+    },
+    {
+      "id": "HP M232dw"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "cognition:scan",
+      "dimension": "scan",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft",
+      "research_relevant": false
+    },
+    {
+      "id": "cognition:auto_duplex",
+      "dimension": "auto_duplex",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft",
+      "research_relevant": false
+    },
+    {
+      "id": "cognition:manual_duplex",
+      "dimension": "manual_duplex",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft",
+      "research_relevant": false
+    },
+    {
+      "id": "cognition:laser_print",
+      "dimension": "laser_print",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:wechat_miniprogram",
+      "dimension": "wechat_miniprogram",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:color_print",
+      "dimension": "color_print",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft",
+      "research_relevant": false
+    },
+    {
+      "id": "cognition:separate_drum",
+      "dimension": "separate_drum",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:starter_included",
+      "dimension": "starter_included",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:replacement_137a_x",
+      "dimension": "replacement_137a_x",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:replace_on_unacceptable_quality",
+      "dimension": "replace_on_unacceptable_quality",
+      "unit": "bool",
+      "op": "eq",
+      "value": true,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:starter_toner_yield",
+      "dimension": "starter_toner_yield",
+      "unit": "pages",
+      "op": "gte",
+      "value": 1,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:replacement_toner_yield",
+      "dimension": "replacement_toner_yield",
+      "unit": "pages",
+      "op": "gte",
+      "value": 1,
+      "importance": "soft"
+    },
+    {
+      "id": "cognition:drum_yield",
+      "dimension": "drum_yield",
+      "unit": "pages",
+      "op": "gte",
+      "value": 1,
+      "importance": "soft"
+    }
+  ],
+  "sources": [
+    {
+      "id": "hp-cn-home",
+      "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+      "type": "official_exact_model_document",
+      "allowed_use": "model_research_short_summary",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "captured_on": "2026-11-25",
+      "observed_at": "2026-11-25T01:52:08Z",
+      "valid_until": "2026-12-25",
+      "locator": "M232dw 段落，190–204行；限制249、256–261行",
+      "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+      "review_status": "independently_supported_20261125"
+    },
+    {
+      "id": "brother-cn-manual-duplex",
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-AF8C0063-911B-44B3-B52D-0FC0D110ABB5_1.html",
+      "type": "official_exact_model_document",
+      "allowed_use": "model_research_short_summary",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "captured_on": "2026-11-25",
+      "observed_at": "2026-11-25T01:52:08Z",
+      "valid_until": "2026-12-25",
+      "locator": "双面打印(Windows)，标题型号，35–39行及94行",
+      "limitations": "手动双面需要重新放纸；不据此推出不存在自动双面。缓存正文；30天是本地复核期限。",
+      "revoked": true,
+      "review_status": "403_not_independently_verified"
+    },
+    {
+      "id": "brother-cn-spec",
+      "url": "https://support.brother.com/g/s/id/htmldoc/printer/cv_hll1230w/sch/html/GUID-4BD9944E-9970-4D7B-AD4F-1E1184F0A81F_1.html",
+      "type": "official_exact_model_document",
+      "allowed_use": "model_research_short_summary",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "captured_on": "2026-11-25",
+      "observed_at": "2026-11-25T01:52:08Z",
+      "valid_until": "2026-12-25",
+      "locator": "常规及打印规格，27–38、129–140行",
+      "limitations": "激光类型及打印规格；不据此推断寿命或扫描缺失。缓存正文；30天是本地复核期限。",
+      "revoked": true,
+      "review_status": "not_independently_reopened"
+    },
+    {
+      "id": "brother-cn-202405-brochure",
+      "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+      "type": "official_exact_model_document",
+      "allowed_use": "model_research_short_summary",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "captured_on": "2026-11-25",
+      "observed_at": "2026-11-25T08:31:49Z",
+      "valid_until": "2026-12-25",
+      "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+      "review_status": "executor_provisional"
+    },
+    {
+      "id": "hp-cn-9yf97a-store",
+      "url": "https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html",
+      "type": "official_exact_model_document",
+      "allowed_use": "model_research_short_summary",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "captured_on": "2026-11-25",
+      "observed_at": "2026-11-25T08:33:28.846470+00:00",
+      "valid_until": "2026-12-25",
+      "locator": "SKU 9YF97A；文本235–241、325–329、459–463、537–543、668–670行",
+      "limitations": "网页缓存，非实时销售或应付价证明；随箱有黑色硒鼓但未见页数；更换硒鼓型号仅此销售配置口径，未证鼓粉结构、实际维护或产量；观察时点为审读记录。",
+      "review_status": "executor_provisional"
+    },
+    {
+      "id": "hp-cn-maintenance-guide-20261126",
+      "url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
+      "type": "official_exact_model_document",
+      "allowed_use": "model_research_short_summary",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "captured_on": "2026-11-26",
+      "observed_at": "2026-11-26T02:58:06+00:00",
+      "valid_until": "2026-12-26",
+      "locator": "印刷页62（PDF零基页67，硒鼓中碳粉严重不足）；印刷页139（PDF零基页144，管制型号表）",
+      "limitations": "仅限低/严重不足告警下按打印质量决定更换、耗材高级保护保修终止；非实际产量、费用、寿命或整机保修。文本与型号表在本次缓存版本复核，未获得完整原PDF字节。 原观察时间为旧审读记录，本轮复查时间另载；独立核验仍待评估者。",
+      "review_status": "executor_text_rechecked",
+      "previous_locator": "中文用户指南印刷页77–78（文本2037–2063行），印刷页139明确列HP LaserJet MFP M232dw（3674行）",
+      "snapshot_required": true,
+      "snapshot": {
+        "body": {
+          "source_id": "hp-cn-maintenance-guide-20261126",
+          "url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
+          "models": [
+            "HP M232dw"
+          ],
+          "source_region": "中国大陆",
+          "title": "HP LaserJet MFP M232-M237 series 使用手册（ZH-CN）",
+          "version": "2020 copyright; c07148381.pdf; 154 PDF pages (web cached rendition); controlled new edition",
+          "locator": "印刷页62（PDF零基页67，硒鼓中碳粉严重不足）；印刷页139（PDF零基页144，管制型号表）",
+          "excerpt": "时不需要更换硒鼓，除非打印质量无法接受。",
+          "excerpt_sha256": "79cfd59137f51512ab0e7013a1fb9cd9ce7806e89c3c0cadb86167a1a7a5db16",
+          "fact": {
+            "id": "hp-replace-on-quality",
+            "candidate_id": "HP M232dw",
+            "dimension": "replace_on_unacceptable_quality",
+            "unit": "bool",
+            "value": true
+          },
+          "review_status": "executor_text_rechecked",
+          "model_visual_checked": true,
+          "review_date": "2026-11-26",
+          "review_time_window": "+08:00 14:27:18–14:29:03; per-operation exact start/end unknown",
+          "raw_document_sha256": null,
+          "maintenance_page_visual": "failed_cache_miss_twice; relevant section is prose",
+          "limits": "仅限低/严重不足告警下按打印质量决定更换、耗材高级保护保修终止；非实际产量、费用、寿命或整机保修。文本与型号表在本次缓存版本复核，未获得完整原PDF字节。"
+        },
+        "sha256": "58da697731f18e409665de8d341e26519cf03289341cec9caa7c9062042072eb"
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "hp-scan",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-home",
+      "dimension": "scan",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "厂商列有扫描",
+      "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。"
+    },
+    {
+      "id": "hp-auto-duplex",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-home",
+      "dimension": "auto_duplex",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "厂商列有自动双面",
+      "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。"
+    },
+    {
+      "id": "hp-wechat-path",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-home",
+      "dimension": "wechat_miniprogram",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "厂商列有微信小程序打印；首次设置与复用未证",
+      "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。"
+    },
+    {
+      "id": "brother-manual-duplex",
+      "candidate_id": "Brother HL-L1238W",
+      "source_id": "brother-cn-manual-duplex",
+      "dimension": "manual_duplex",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "说明书描述Windows手动双面",
+      "limitations": "手动双面需要重新放纸；不据此推出不存在自动双面。缓存正文；30天是本地复核期限。"
+    },
+    {
+      "id": "brother-laser",
+      "candidate_id": "Brother HL-L1238W",
+      "source_id": "brother-cn-202405-brochure",
+      "dimension": "laser_print",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "规格册标为黑白激光打印机",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。"
+    },
+    {
+      "id": "brother-mono",
+      "candidate_id": "Brother HL-L1238W",
+      "source_id": "brother-cn-202405-brochure",
+      "dimension": "color_print",
+      "unit": "bool",
+      "value": false,
+      "kind": "official_feature",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "规格册将HL-L1238W列为黑白激光打印机",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。"
+    },
+    {
+      "id": "brother-separate-drum",
+      "candidate_id": "Brother HL-L1238W",
+      "source_id": "brother-cn-202405-brochure",
+      "dimension": "separate_drum",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "规格册注明鼓粉分离",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。"
+    },
+    {
+      "id": "brother-tn118-yield",
+      "candidate_id": "Brother HL-L1238W",
+      "source_id": "brother-cn-202405-brochure",
+      "dimension": "replacement_toner_yield",
+      "unit": "pages",
+      "value": 1500,
+      "kind": "official_feature",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "TN118标准容量约1500页，ISO/IEC 19752",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。"
+    },
+    {
+      "id": "brother-dr118-yield",
+      "candidate_id": "Brother HL-L1238W",
+      "source_id": "brother-cn-202405-brochure",
+      "dimension": "drum_yield",
+      "unit": "pages",
+      "value": 10000,
+      "kind": "official_feature",
+      "scope_models": [
+        "Brother HL-L1238W"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "DR118约10000页，1页/次作业",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。"
+    },
+    {
+      "id": "hp-mono",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-9yf97a-store",
+      "dimension": "color_print",
+      "unit": "bool",
+      "value": false,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "9YF97A标为A4黑白激光打印机",
+      "limitations": "网页缓存，非实时销售或应付价证明；随箱有黑色硒鼓但未见页数；更换硒鼓型号仅此销售配置口径，未证鼓粉结构、实际维护或产量；观察时点为审读记录。"
+    },
+    {
+      "id": "hp-laser",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-9yf97a-store",
+      "dimension": "laser_print",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "9YF97A标为激光打印机",
+      "limitations": "网页缓存，非实时销售或应付价证明；随箱有黑色硒鼓但未见页数；更换硒鼓型号仅此销售配置口径，未证鼓粉结构、实际维护或产量；观察时点为审读记录。"
+    },
+    {
+      "id": "hp-starter-included",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-9yf97a-store",
+      "dimension": "starter_included",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "9YF97A包装含黑色硒鼓",
+      "limitations": "网页缓存，非实时销售或应付价证明；随箱有黑色硒鼓但未见页数；更换硒鼓型号仅此销售配置口径，未证鼓粉结构、实际维护或产量；观察时点为审读记录。"
+    },
+    {
+      "id": "hp-replacement-137",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-9yf97a-store",
+      "dimension": "replacement_137a_x",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "9YF97A列出137A及137X黑色更换硒鼓",
+      "limitations": "网页缓存，非实时销售或应付价证明；随箱有黑色硒鼓但未见页数；更换硒鼓型号仅此销售配置口径，未证鼓粉结构、实际维护或产量；观察时点为审读记录。"
+    },
+    {
+      "id": "hp-replace-on-quality",
+      "candidate_id": "HP M232dw",
+      "source_id": "hp-cn-maintenance-guide-20261126",
+      "dimension": "replace_on_unacceptable_quality",
+      "unit": "bool",
+      "value": true,
+      "kind": "official_feature",
+      "scope_models": [
+        "HP M232dw"
+      ],
+      "scope_region": "中国大陆河南省",
+      "statement": "指南说明碳粉严重不足时不必仅因告警更换，可在打印质量无法接受时安装替换件；高级保护保修终止需单独考虑。",
+      "limitations": "仅限指南所述耗材低告警场景；不能推断剩余页数、无故障、维护频率、低频寿命或保修覆盖。本轮执行者文本复核，独立复核待办。"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ _FIELDS = {
     "category", "usage", "budget_max_cny", "budget_scope", "monthly_pages_range",
     "needs_color", "accepts_outsourced_color", "requires_wireless", "requires_scan",
     "requires_auto_duplex", "wechat_required", "wechat_workflow",
-    "delivery_region", "device_deployment_region", "accepts_initial_setup", "requirements",
+    "delivery_region", "device_deployment_region", "accepts_initial_setup", "requirements", "idle_weeks_pattern",
 }
 _BOOLEAN = {
     "needs_color", "accepts_outsourced_color", "requires_wireless",
@@ -51,13 +51,16 @@ def _check_answer(field: str, value: object) -> None:
                 or any(type(x) is not int or x < 0 or x > 100_000 for x in value)
                 or value[0] > value[1]):
             raise ValueError("invalid_page_range")
+    elif field == "idle_weeks_pattern":
+        if type(value) is not str or value not in ("often_long", "usually_short"):
+            raise ValueError("invalid_idle_weeks_pattern")
     elif field == "requirements":
         if (not isinstance(value, list) or len(value) > 20
                 or any(not isinstance(x, str) or not 1 <= len(x) <= _MAX_TEXT for x in value)):
             raise ValueError("invalid_requirements")
     elif field in ("wechat_workflow", "budget_scope"):
         options = (("unknown", "miniprogram", "transfer_to_app") if field == "wechat_workflow"
-                   else ("unknown", "device_delivered", "device_and_extra_consumables"))
+                   else ("unknown", "hardware_only", "device_delivered", "device_and_extra_consumables"))
         if value not in options:
             raise ValueError(f"invalid_choice:{field}")
     elif not isinstance(value, str) or not 1 <= len(value.strip()) <= _MAX_TEXT:

@@ -1,0 +1,299 @@
+{
+  "purpose": "冻结相邻业务反例；通过仍须独立人审",
+  "checks": {
+    "unanswered:normal_comparison_present": true,
+    "unanswered:same_first_action": false,
+    "unanswered:same_candidate_states": true,
+    "unanswered:no_authorization_upgrade": true,
+    "scan_deferred:normal_comparison_present": true,
+    "scan_deferred:same_first_action": false,
+    "scan_deferred:same_candidate_states": true,
+    "scan_deferred:no_authorization_upgrade": true,
+    "scan_deferred:no_repeated_scan_question": true,
+    "not_needed:normal_comparison_present": true,
+    "not_needed:same_first_action": true,
+    "not_needed:same_candidate_states": true,
+    "not_needed:no_authorization_upgrade": true,
+    "cost:unlike_workload_cannot_choose": false,
+    "cost:like_workload_still_compares": true,
+    "receipt:tool_calls": false,
+    "receipt:function_call": false,
+    "receipt:pure_text": true
+  },
+  "failed_checks": [
+    "unanswered:same_first_action",
+    "scan_deferred:same_first_action",
+    "cost:unlike_workload_cannot_choose",
+    "receipt:tool_calls",
+    "receipt:function_call"
+  ],
+  "cases": {
+    "unanswered": {
+      "default": {
+        "prompt": "扫描或复印是否是必须功能？",
+        "prompt_field": "requires_scan",
+        "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：暂不选冠军；先满足硬条件，再以低频耗材、维护成本与主机差价比较。\n彩印可外包：额外彩印功能不是当前必要条件。\nBrother HL-L1238W：待核，保留研究资格。\n  待核：微信小程序功能、微信稳定复用、预算。\n  扫描：缺少适用证据；命题 675b0d1da38a682f96e0edf2462fda0cd28ae5b178588532828799216a0deb0e。\n  自动双面：缺少适用证据；命题 8e8a640c14332f7bf7ec78e845bf383e310d2782cacae6e9e1d015d828159f2a。\n  手动双面：缺少适用证据；命题 17d65588ecff1954609c9e2bb82ac7ad43a1b92b535a52066bfaf1a037d17037。\n  激光打印：有资料支持；命题 79a12b79d807846c2009219c308299121bf07d630b7fe38d14811fa7a822b1b3。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据；命题 ff29d80c50dd757560f3e262e5952905133b19f3c4649bba939a5669e259e18b。\n  彩色打印：有不满足的依据；命题 514f9e2ff559884f67b1071a5f700fbf93b8402824d9e0e27a5a112c7efc1c4b。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：待核，保留研究资格。\n  待核：微信稳定复用、预算。\n  有据硬条件：微信小程序功能。\n  扫描：有资料支持；命题 3f42b562f739109d02ecdaac2f09c8d1c21c6b7b9d6c743c89a45f6ddbb46afe。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持；命题 2bb3172be1df41daa0f22437d0758cb799828dbbc239471bebd282c183d1f84a。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据；命题 4ba91c5b4932d1049aa156c617d8c3cb101edde81eb497f44b1b64090562a62e。\n  激光打印：有资料支持；命题 27e4d7241c41d73ca23153cbe5e739790e739966ccbd4123397b5fba046811f4。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持；命题 d46905125d26dbee45176e6b49e629d9abe89a903a6704ba28f6be3054ebf575。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据；命题 68dd6fc65d45780fc798787c6eb25dc1e36d273e697cdc0373c22a0266f376a8。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n若需要扫描：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n若需要自动双面：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\nBrother HL-L1238W耗材：鼓粉分离，墨粉用完不等同更换硒鼓；替换墨粉标称页数 1500；硒鼓标称页数 10000；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 brother-tn118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-dr118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-separate-drum：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  仅作情景：按1800页、假设实际替换产量1500页；若随箱为0页则需2盒，若随箱为1500页则需1盒。标称量不等于家庭实际量；此处未假定实际随箱量。\nHP M232dw维护条件：不能仅因低告警就计入一次更换成本；若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。\nHP M232dw耗材：随箱附黑色硒鼓（页数未知）；137A/137X替换硒鼓（具体产量及价格待核）；厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 hp-starter-included：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replacement-137：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replace-on-quality：https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf；获取 2026-11-26。\n翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n下一项高价值核查：确认是否必须扫描；若必须则按有据能力筛选，若无需则不为该功能额外付费。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+        "first": {
+          "kind": "clarify",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:scan",
+          "description": "确认是否必须扫描；若必须则按有据能力筛选，若无需则不为该功能额外付费。"
+        },
+        "first_key": {
+          "kind": "clarify",
+          "dimension": "scan",
+          "candidate_id": null
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "backend": {
+        "prompt": "Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单",
+        "prompt_field": "",
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：ff29d80c50dd757560f3e262e5952905133b19f3c4649bba939a5669e259e18b。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：8d01be094d2201e0e58767c54267af50a407f23dda52d582fde73dda4449e0e5。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件1：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：d46905125d26dbee45176e6b49e629d9abe89a903a6704ba28f6be3054ebf575。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：9a8dc8e87249012aba6dd9ec1d883a4f4b3f021713837a7140f4378c0c225eb5。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。",
+        "first": {
+          "kind": "research",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:wechat_miniprogram",
+          "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+        },
+        "first_key": {
+          "kind": "research",
+          "dimension": "wechat_miniprogram",
+          "candidate_id": "Brother HL-L1238W"
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "scan_deferred": {
+      "default": {
+        "prompt": "自动双面打印是否必须？",
+        "prompt_field": "requires_auto_duplex",
+        "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：暂不选冠军；先满足硬条件，再以低频耗材、维护成本与主机差价比较。\n彩印可外包：额外彩印功能不是当前必要条件。\nBrother HL-L1238W：待核，保留研究资格。\n  待核：微信小程序功能、微信稳定复用、预算。\n  扫描：缺少适用证据；命题 0387a30488d37289a78110d673396277af01b0359fb1fc9348c38912b2643167。\n  自动双面：缺少适用证据；命题 12d0cfdbe6a77e53b9a96b42697cbbf6688a879804564698920198d1a0916e63。\n  手动双面：缺少适用证据；命题 6acaed6a155ebf2b359f4aad150b299ac492776a62906b862ce934fbfa5cd65c。\n  激光打印：有资料支持；命题 c38d8f1f7526a434c56d7499fdcdd4b96654e8dc4d765d7d8637341ed2d8a035。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据；命题 594f3fce0e29c9ae92a5695b32c08e818076b29824d01eaa91625c011b1c17cd。\n  彩色打印：有不满足的依据；命题 d35b8c8ce106c93cdbb3454fa105b2578435c68c08b0914ae94d395055d28c84。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：待核，保留研究资格。\n  待核：微信稳定复用、预算。\n  有据硬条件：微信小程序功能。\n  扫描：有资料支持；命题 1a9ce50b8bd92ef6872819cc2218d71ad194c970c691a444290e413c03a49959。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持；命题 d324cc4de8ecd1495f7513546c770f55efb77eb996f29008cfabe7a5d72d2bc8。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据；命题 241ecec4be7074f077879bf2ea8d387ad8af5dd2221ab7fd26a9cceb3edaa7ce。\n  激光打印：有资料支持；命题 baf2324e0d64128ec146c78b1f91d3af372c6a12b6a4e4a4353610ab5b825219。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持；命题 754f9b013672f98b6d820e696e8b34344f4ece88c5250c61df753d5f97ebc9aa。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据；命题 c981e3f9fd5d11f6acbe331fc75b7f3b2d6a375a9e884225971b81052ae37a96。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n若需要扫描：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n若需要自动双面：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\nBrother HL-L1238W耗材：鼓粉分离，墨粉用完不等同更换硒鼓；替换墨粉标称页数 1500；硒鼓标称页数 10000；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 brother-tn118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-dr118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-separate-drum：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  仅作情景：按1800页、假设实际替换产量1500页；若随箱为0页则需2盒，若随箱为1500页则需1盒。标称量不等于家庭实际量；此处未假定实际随箱量。\nHP M232dw维护条件：不能仅因低告警就计入一次更换成本；若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。\nHP M232dw耗材：随箱附黑色硒鼓（页数未知）；137A/137X替换硒鼓（具体产量及价格待核）；厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 hp-starter-included：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replacement-137：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replace-on-quality：https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf；获取 2026-11-26。\n翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n下一项高价值核查：确认是否必须自动双面；若必须则按有据能力筛选，若无需则不为该功能额外付费。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+        "first": {
+          "kind": "clarify",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:auto_duplex",
+          "description": "确认是否必须自动双面；若必须则按有据能力筛选，若无需则不为该功能额外付费。"
+        },
+        "first_key": {
+          "kind": "clarify",
+          "dimension": "auto_duplex",
+          "candidate_id": null
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "backend": {
+        "prompt": "Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单",
+        "prompt_field": "",
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：594f3fce0e29c9ae92a5695b32c08e818076b29824d01eaa91625c011b1c17cd。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：af9c7719198a2ff1202ecb000869af320f94533544d29ec129414f97ae0aaabd。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件1：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：754f9b013672f98b6d820e696e8b34344f4ece88c5250c61df753d5f97ebc9aa。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：9d0e1738f1d7c1e535c1a787f87d161c595e7c86943915b3b9f150fc3364813f。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。",
+        "first": {
+          "kind": "research",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:wechat_miniprogram",
+          "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+        },
+        "first_key": {
+          "kind": "research",
+          "dimension": "wechat_miniprogram",
+          "candidate_id": "Brother HL-L1238W"
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "not_needed": {
+      "default": {
+        "prompt": "核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+        "prompt_field": "",
+        "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：暂不选冠军；先满足硬条件，再以低频耗材、维护成本与主机差价比较。\n彩印可外包：额外彩印功能不是当前必要条件。\nBrother HL-L1238W：待核，保留研究资格。\n  待核：微信小程序功能、微信稳定复用、预算。\n  扫描：缺少适用证据；命题 ace9071adda3f2da32045f4862a8944dd2cb2ecc33551b25db4802390437bb5c。\n  自动双面：缺少适用证据；命题 98928b0e1a1d21740f97efc5def0fa4752a4a89cb6cc21bb7451accf61822ded。\n  手动双面：缺少适用证据；命题 7f3071f071e1ed118b617cff3d782699dbf584dab58cce2ab89be73c07b15311。\n  激光打印：有资料支持；命题 83569183912737696ee3628e6dbbd074be3ecd621fd652d9f1f1dc42bca15b11。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据；命题 c96f4e7d3e733a258a6847d1a3c328889ded4c41d18d47369506e5a9b60932b7。\n  彩色打印：有不满足的依据；命题 2b5f667d5b9f255d8a4fd70685630509fdc2238c035283f1d30523fada72b381。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：待核，保留研究资格。\n  待核：微信稳定复用、预算。\n  有据硬条件：微信小程序功能。\n  扫描：有资料支持；命题 2063119bac21d1b5afce3448328d966ff7d3f2af5edb5bb1e02154137af50924。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持；命题 483dc9ae2bc5bcac13098f27d45ca5613942b39de6f7f1fffd620b3c969f4f3e。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据；命题 15c017685b635e1f9f88ca1e571b3689563100e09fa969ce8813e78918bbf37a。\n  激光打印：有资料支持；命题 a4f641ca6531fee77c14f9ad80f5a5813cbd6a53e076cb163ec93fbac1370ef9。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持；命题 0ae32d5836b09c26520f88224ed4114daa87642e01d09efc7ebcb3f4d9c89e12。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据；命题 c1913608613f2a1335b43d98f848e8bdd24918258f6cde5924dca1101eeda111。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n当前不要求扫描：该额外功能不构成当前选型必要性。\n当前不要求自动双面：该额外功能不构成当前选型必要性。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\nBrother HL-L1238W耗材：鼓粉分离，墨粉用完不等同更换硒鼓；替换墨粉标称页数 1500；硒鼓标称页数 10000；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 brother-tn118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-dr118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-separate-drum：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  仅作情景：按1800页、假设实际替换产量1500页；若随箱为0页则需2盒，若随箱为1500页则需1盒。标称量不等于家庭实际量；此处未假定实际随箱量。\nHP M232dw维护条件：不能仅因低告警就计入一次更换成本；若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。\nHP M232dw耗材：随箱附黑色硒鼓（页数未知）；137A/137X替换硒鼓（具体产量及价格待核）；厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 hp-starter-included：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replacement-137：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replace-on-quality：https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf；获取 2026-11-26。\n翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n下一项高价值核查：核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+        "first": {
+          "kind": "research",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:wechat_miniprogram",
+          "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+        },
+        "first_key": {
+          "kind": "research",
+          "dimension": "wechat_miniprogram",
+          "candidate_id": "Brother HL-L1238W"
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "backend": {
+        "prompt": "Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单",
+        "prompt_field": "",
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：c96f4e7d3e733a258a6847d1a3c328889ded4c41d18d47369506e5a9b60932b7。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：374deaea960221780dfd526ab95f3484c2dc23c30924501bbdac2a34d97f092c。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件1：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：0ae32d5836b09c26520f88224ed4114daa87642e01d09efc7ebcb3f4d9c89e12。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：5da27a5ab39d58b45942076f71ca5cdfbf5fdfaca681413dab4e008dd47add28。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。",
+        "first": {
+          "kind": "research",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:wechat_miniprogram",
+          "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+        },
+        "first_key": {
+          "kind": "research",
+          "dimension": "wechat_miniprogram",
+          "candidate_id": "Brother HL-L1238W"
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "cost": {
+      "zero_pages": {
+        "toner_replacements": 0,
+        "drum_replacements": 0,
+        "total": "500",
+        "assumption_only": true
+      },
+      "eighteen_hundred_pages": {
+        "toner_replacements": 2,
+        "drum_replacements": 0,
+        "total": "700",
+        "assumption_only": true
+      },
+      "unlike_result": "a",
+      "like_result": "a"
+    },
+    "receipts": {
+      "tool_calls": {
+        "provider": "fixture",
+        "declared_model": "mock",
+        "observed_model": "mock",
+        "identity": "matched",
+        "protocol": "responses",
+        "request_id": null,
+        "context_id": null,
+        "http_status": 200,
+        "usage": null,
+        "provider_code": null,
+        "finish_reason": "completed",
+        "elapsed_ms": null,
+        "raw_sha256": "4858c3b2136e40c95878df03d64086656073b7515d5236e2b38091ec75b834c3",
+        "status": "complete",
+        "text": "{}",
+        "business_accepted": false,
+        "fixture": true
+      },
+      "function_call": {
+        "provider": "fixture",
+        "declared_model": "mock",
+        "observed_model": "mock",
+        "identity": "matched",
+        "protocol": "responses",
+        "request_id": null,
+        "context_id": null,
+        "http_status": 200,
+        "usage": null,
+        "provider_code": null,
+        "finish_reason": "completed",
+        "elapsed_ms": null,
+        "raw_sha256": "eeb3e7e50081fdc578b096d9d151d74ae5c0f2ee1487dd7efd6ac0df0ae4c8d4",
+        "status": "complete",
+        "text": "{}",
+        "business_accepted": false,
+        "fixture": true
+      },
+      "pure_text": {
+        "provider": "fixture",
+        "declared_model": "mock",
+        "observed_model": "mock",
+        "identity": "matched",
+        "protocol": "responses",
+        "request_id": null,
+        "context_id": null,
+        "http_status": 200,
+        "usage": null,
+        "provider_code": null,
+        "finish_reason": "completed",
+        "elapsed_ms": null,
+        "raw_sha256": "eb7954ce0567516217538ba127c7b6ca3c30e42c63c2cadd796ce40bd43444f5",
+        "status": "complete",
+        "text": "{}",
+        "business_accepted": false,
+        "fixture": true
+      }
+    }
+  }
+}

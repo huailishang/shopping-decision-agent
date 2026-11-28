@@ -1,0 +1,3482 @@
+{
+  "manifest_refs_checked": 67,
+  "errors": [],
+  "b0_to_b1_changes": [
+    "shopping_decision/dialogue_flow.py"
+  ],
+  "paired_trajectories": [
+    {
+      "case_id": "T01",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "否"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "否"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T02",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T03",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "requires_scan",
+              "answer": "是"
+            },
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T04",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T05",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T06",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T07",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "requires_scan",
+              "answer": "否"
+            },
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T08",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "requires_auto_duplex",
+              "answer": "是"
+            },
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T09",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "requires_auto_duplex",
+              "answer": "否"
+            },
+            {
+              "field": "needs_color",
+              "answer": "否"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T10",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "idle_weeks_pattern",
+              "answer": "经常连续多周不用"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T11",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "idle_weeks_pattern",
+              "answer": "通常每周都会用"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T12",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "idle_weeks_pattern",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T13",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-0"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-0"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T14",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T15",
+      "arms": {
+        "a": {
+          "answers": [],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T16",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "是"
+            },
+            {
+              "field": "accepts_initial_setup",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "wechat_required",
+              "answer": "是"
+            },
+            {
+              "field": "accepts_initial_setup",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T17",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "accepts_initial_setup",
+              "answer": "否"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "accepts_initial_setup",
+              "answer": "否"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            },
+            {
+              "field": "accepts_outsourced_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "0-50"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T18",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "budget_scope",
+              "answer": "仅主机硬件"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T19",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "budget_scope",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T20",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "idle_weeks_pattern",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T21",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "pending",
+              "lifecycle": {
+                "revision": 1,
+                "status": "pending_review"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "idle_weeks_pattern",
+              "answer": "经常连续多周不用"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "pending",
+              "lifecycle": {
+                "revision": 1,
+                "status": "pending_review"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T22",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "wechat_required",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "monthly_pages_range",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "budget_max_cny",
+              "answer": "暂不确定"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "pending",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 2,
+                "status": "pending_review"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "stalled"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "requires_scan",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "pending",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 2,
+                "status": "pending_review"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T23",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "accepts_initial_setup",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "accepts_initial_setup",
+              "answer": "暂不确定"
+            },
+            {
+              "field": "device_deployment_region",
+              "answer": "河南"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    },
+    {
+      "case_id": "T24",
+      "arms": {
+        "a": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        },
+        "b": {
+          "answers": [
+            {
+              "field": "needs_color",
+              "answer": "是"
+            }
+          ],
+          "violations": [],
+          "sources": [
+            {
+              "id": "hp-cn-home",
+              "type": "official_exact_model_document",
+              "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+              "source_group": "hp",
+              "captured_on": "2026-11-25",
+              "published_on": null,
+              "review_status": "prior_narrow_review",
+              "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+              "locator": "M232dw 段落，190–204行；限制249、256–261行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "brother-cn-202405-brochure",
+              "type": "official_exact_model_document",
+              "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+              "source_group": "brother",
+              "captured_on": "2026-11-25",
+              "published_on": "2024-05",
+              "review_status": "prior_narrow_review",
+              "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+              "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+              "valid_until": "2026-12-25",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              }
+            },
+            {
+              "id": "rtings-cost-method-2021",
+              "type": "independent_comparison_method",
+              "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+              "source_group": "rtings",
+              "captured_on": "2026-11-27",
+              "published_on": "2021-09-21",
+              "review_status": "executor_read_pending_independent_review",
+              "lifecycle": {
+                "revision": 1,
+                "status": "active"
+              },
+              "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+              "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+              "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+            }
+          ],
+          "terminal": "completed"
+        }
+      },
+      "source_records_equal": true
+    }
+  ],
+  "reference_delta": [
+    {
+      "path": "/cases/2/semantic_checks/0/expected/Brother HL-L1238W",
+      "before": "failed",
+      "after": "unknown"
+    },
+    {
+      "path": "/cases/7/semantic_checks/0/expected/Brother HL-L1238W",
+      "before": "failed",
+      "after": "unknown"
+    },
+    {
+      "path": "/cases/14/semantic_checks/0/expected/Brother HL-L1238W",
+      "before": "failed",
+      "after": "unknown"
+    },
+    {
+      "path": "/source_refs",
+      "before": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/TASK_CASES.json",
+          "sha256": "588966ca231b6f1403d4f609e09c985b56df8aed7d06da16418dcc929e080efc"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/SOURCE_PLAN.md",
+          "sha256": "c416382880c5940094addadc20f39c8e5a0f49316d9aa805c2dd15da9899a459"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-draft-v0.json",
+          "sha256": "5a06f3792ad525936f6fbb48f10ae2533cd662c6feed82a0e7da2da2bf45ed22"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0-results.json",
+          "sha256": "8bfad6fc27d4a07af4fbc2a267bd4a2f5ee34768f562d36741b3ca18310309d1"
+        }
+      ],
+      "after": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/TASK_CASES.json",
+          "sha256": "588966ca231b6f1403d4f609e09c985b56df8aed7d06da16418dcc929e080efc"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/SOURCE_PLAN.md",
+          "sha256": "c416382880c5940094addadc20f39c8e5a0f49316d9aa805c2dd15da9899a459"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-draft-v0.json",
+          "sha256": "5a06f3792ad525936f6fbb48f10ae2533cd662c6feed82a0e7da2da2bf45ed22"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/compound-setup-b0-results.json",
+          "sha256": "8bfad6fc27d4a07af4fbc2a267bd4a2f5ee34768f562d36741b3ca18310309d1"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        }
+      ]
+    },
+    {
+      "path": "/supersedes",
+      "before": null,
+      "after": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v1.json",
+        "sha256": "8420ef4a9b41b1e92e414694cee238a9707aae0561cd294a78cfc7b975f97a36",
+        "reason": "Static source audit: Brother scan and automatic duplex have no admitted negative fact; unknown not failed. No paired result or product edits preceded this correction."
+      }
+    }
+  ],
+  "h08": {
+    "actual_file_change_detected": true,
+    "all_current_question_only": true,
+    "all_sources_equal": true,
+    "all_basis_equal": true
+  }
+}

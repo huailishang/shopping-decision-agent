@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py",
+    "delivery"
+  ],
+  "start": "2026-11-28T08:59:54.280082+00:00",
+  "end": "2026-11-28T09:00:05.138929+00:00",
+  "elapsed_seconds": 10.858852020000086,
+  "exit_code": 1
+}

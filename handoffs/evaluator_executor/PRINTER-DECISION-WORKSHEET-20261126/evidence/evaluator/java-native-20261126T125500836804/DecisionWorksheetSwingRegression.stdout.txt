@@ -1,0 +1,8 @@
+PASS J02 native input and result cost flip; draft cancel
+PASS J07 native save and fresh session / Python process restore
+PASS save dialog cancel
+PASS J09 native draft cancel, file cancel and refused overwrite
+PASS J04 native zero/blank/shared basis recovery
+PASS J08 native invalid finite cost and successful retry
+PASS J10 native region change invalidates worksheet
+WORKSHEET_NATIVE_PASS

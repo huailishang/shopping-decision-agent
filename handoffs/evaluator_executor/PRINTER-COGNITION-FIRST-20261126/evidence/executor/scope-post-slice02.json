@@ -1,0 +1,30 @@
+{
+  "phase": "post",
+  "checks": {
+    "head_matches": true,
+    "index_empty": true,
+    "index_matches": true,
+    "manifest_matches": true,
+    "protected_unchanged": true
+  },
+  "protected_count": 3651,
+  "changed_protected_paths": [],
+  "changed_product_paths": [
+    "desktop/CognitionGuideSwingRegression.java",
+    "desktop/ShoppingDecisionDesktop.java",
+    "shopping_decision/action_ranking.py",
+    "shopping_decision/chat_bridge.py",
+    "shopping_decision/cognition_comparison.py",
+    "shopping_decision/cognition_guide.py",
+    "shopping_decision/context_builder.py",
+    "shopping_decision/cost_scenario.py",
+    "shopping_decision/decision_worksheet.py",
+    "shopping_decision/dialogue_flow.py",
+    "tests/test_cognition_context_lineage.py",
+    "tests/test_cognition_guide.py",
+    "tests/test_cognition_guide_bridge.py",
+    "tests/test_cognition_guide_persistence.py",
+    "tests/test_guided_requirements.py"
+  ],
+  "baseline_sha256": "13113b9d7d335b7a16993c31fc5ae2eda3347a365008f6b600f5b2577cd8a751"
+}

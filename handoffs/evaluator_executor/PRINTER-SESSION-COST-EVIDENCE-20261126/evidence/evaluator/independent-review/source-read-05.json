@@ -1,0 +1,13 @@
+{
+  "operation": "public PDF fetch and in-memory rendering of necessary pages",
+  "read_number": 5,
+  "url": "https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf",
+  "start_utc": "2026-11-26T07:56:40.138172+00:00",
+  "raw_document_sha256": "c8838368bc03fa693cc50fb354c36c37b03e25710ef64bc35b6f8ab826af59ff",
+  "raw_document_bytes": 2600059,
+  "pages": 154,
+  "model-table_sha256": "5615fc970b5c3bdf514cda67d89a88a9c1d33e7e726e02a767d343d71f9e06dd",
+  "maintenance_sha256": "b00bc8df9c73b190e9f317656a5212e17aff76ddea0863c5879319604c7e2f8c",
+  "result": "necessary cropped pages saved; full PDF memory only",
+  "end_utc": "2026-11-26T07:56:45.228535+00:00"
+}

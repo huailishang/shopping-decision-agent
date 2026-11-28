@@ -1,0 +1,33 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/replay.json",
+      "sha256": "c0e8fa5e0417da45d486c9debffe11e5e343a78f42076fa41781da7cd0839a9b"
+    }
+  },
+  "metrics": {
+    "completed": true,
+    "answers": 5,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 2
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:candidate_dimension": true,
+    "authorization_false": true
+  },
+  "setup_artifacts": [],
+  "semantic_completed": true,
+  "terminal": "completed"
+}

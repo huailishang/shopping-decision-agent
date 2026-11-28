@@ -1,0 +1,24 @@
+{
+  "missing_model": {
+    "provider": "fixture",
+    "model": "mock",
+    "protocol": "responses",
+    "http_status": 200,
+    "status": "complete",
+    "text": "{}",
+    "usage": null,
+    "provider_code": null,
+    "retry_hint": "none"
+  },
+  "non_assistant_message": {
+    "provider": "fixture",
+    "model": "mock",
+    "protocol": "responses",
+    "http_status": 200,
+    "status": "complete",
+    "text": "{}",
+    "usage": null,
+    "provider_code": null,
+    "retry_hint": "none"
+  }
+}

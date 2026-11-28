@@ -1,0 +1,22 @@
+test_four_cases (test_unified_decision_actions.UnifiedActions.test_four_cases) ... ok
+test_origins (test_unified_decision_actions.UnifiedActions.test_origins) ... ok
+test_source_time_and_candidate_order (test_unified_decision_actions.UnifiedActions.test_source_time_and_candidate_order) ... ok
+test_budget_and_omission (test_context_builder.ContextTests.test_budget_and_omission) ... ok
+test_context_preserves_admitted_refutation (test_context_builder.ContextTests.test_context_preserves_admitted_refutation) ... ok
+test_source_gate_and_skip (test_context_builder.ContextTests.test_source_gate_and_skip) ... ok
+test_chat_completions (test_model_adapter.ModelAdapterTests.test_chat_completions) ... ok
+test_classify_and_raw_hash (test_model_adapter.ModelAdapterTests.test_classify_and_raw_hash) ... ok
+test_identity_role_and_multiple_messages (test_model_adapter.ModelAdapterTests.test_identity_role_and_multiple_messages) ... ok
+test_protocol_and_budget (test_model_adapter.ModelAdapterTests.test_protocol_and_budget) ... ok
+test_fault_falls_back (test_action_ranking.RankingTests.test_fault_falls_back) ... ok
+test_real_backend_chat_injection (test_action_ranking.RankingTests.test_real_backend_chat_injection) ... ok
+test_real_default_chat_injection (test_action_ranking.RankingTests.test_real_default_chat_injection) ... ok
+test_valid_invalid_stale (test_action_ranking.RankingTests.test_valid_invalid_stale) ... ok
+test_new_maintenance_evidence_withdrawal (test_printer_lifecycle.LifecycleTests.test_new_maintenance_evidence_withdrawal) ... ok
+test_scenario_drum_dedup_and_flip (test_printer_lifecycle.LifecycleTests.test_scenario_drum_dedup_and_flip) ... ok
+test_zero_boundary_and_sensitivity (test_printer_lifecycle.LifecycleTests.test_zero_boundary_and_sensitivity) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.429s
+
+OK

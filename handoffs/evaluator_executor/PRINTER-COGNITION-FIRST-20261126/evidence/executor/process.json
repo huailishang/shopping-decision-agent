@@ -1,0 +1,11 @@
+{
+  "time_accounting_complete": false,
+  "unrecorded_segments": [
+    "三轮均在记录正式start前进行工作区连接、CURRENT或合同阅读；不能精确重建这段主动用时。已记录区间为会话经过时间，不冒充有效工时。"
+  ],
+  "repair_rounds": [],
+  "consumed_predecessor_active_seconds": 0,
+  "predecessor_scope": "被替换包executor目录存在=False，条目数=0；未发现可计的执行活动，0仅为已发现消耗，不追认未知为事实。",
+  "repair_note": "尚未经过正式L2集中修复轮；实现期间小范围回归、路径调整、历史精确哈希兼容记录见原件，不另行捏造主动工时。",
+  "automated_gate_note": "机器顺序执行正式验收的时间另计，开始前结束当前主动活动会话；结果审读另开活动会话。"
+}

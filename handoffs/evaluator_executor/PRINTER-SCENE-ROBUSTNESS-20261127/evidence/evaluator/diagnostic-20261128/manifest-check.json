@@ -1,0 +1,7 @@
+{
+  "total": 798,
+  "mismatches": [
+    "CURRENT.md"
+  ],
+  "current_note": "Evaluator appended diagnostic entry to CURRENT after reading executor handoff; mismatch is recorded, not repaired."
+}

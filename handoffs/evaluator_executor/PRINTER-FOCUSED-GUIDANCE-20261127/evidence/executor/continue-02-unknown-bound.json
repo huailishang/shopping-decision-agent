@@ -1,0 +1,6 @@
+{
+  "request_timestamp": "2026-11-27T13:13:34Z",
+  "first_recorded_start": "2026-11-27T13:14:31.339355+00:00",
+  "upper_bound_seconds": 60,
+  "method": "round up elapsed, reported request timestamp not independently verified host log"
+}

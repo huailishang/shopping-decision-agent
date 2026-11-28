@@ -1,0 +1,13 @@
+{
+  "phase": "freeze",
+  "checks": {
+    "manifest": true,
+    "head": true,
+    "index": true,
+    "protected": true,
+    "products_unchanged": true
+  },
+  "protected_count": 4087,
+  "changed_protected": [],
+  "changed_product": []
+}

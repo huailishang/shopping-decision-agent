@@ -1,0 +1,50 @@
+{
+  "authorization_interpretation": "负责人在明确提出仅改审计器并新增对应测试后回复“继续完成”（2026-11-26 20:32 +08:00）；执行者按该具体指示做最小范围修复，不伪称评估者已重新冻结或独立批准。",
+  "original_baseline_sha256": "8cdf91d89833090c30b812ba9243074c1dfdcfa17904ed0d3e406e6733893c35",
+  "original_validation_plan_sha256": "933f34f057bdaa46d85cb262fa9fa3778ccfc8c95a2747de77e05e101fd998ae",
+  "original_auditor_sha256": "6ef2d10540a1a1fb43ff44de6df6d9a7db152c5aa8dd340bb2da6e8d541004a7",
+  "allowed_delta_paths": [
+    "scripts/audit_model_history_readonly.py",
+    "tests/test_history_audit_version_transition.py"
+  ],
+  "before_product_sha256": {
+    "shopping_decision/chat_bridge.py": "3f545a0d64c10d3ecb2847b3074e61c1323533589bdce391acae324dc31adcb1",
+    "shopping_decision/cognition_comparison.py": "77a7005232f4838828227537ecc6e791fa04dd4ce9340e4076c4157474edbc0b",
+    "shopping_decision/cost_scenario.py": "1b49522049930e1fc552ec6ae864b5633564321013deab4b57e71dfb2479d555",
+    "shopping_decision/decision_actions.py": "588606790069d031ee45e4553d352ac15180743795e100c3f15228ff670a3ea2",
+    "shopping_decision/confirmed_comparison.py": "d3214f9b67537ed086da9b3d73989bf6c64157e7c725ebb25d3301ecf337064d",
+    "shopping_decision/claim_gate.py": "6cc1831541bb966ecf79bf4d1e4108e9b7b5847664c4522727482a717a2f36e8",
+    "shopping_decision/evidence_snapshot.py": "9a694ade1633719619084a3dbf54cd56fe7e76ce6e29795c1bfa6d4e470a3846",
+    "shopping_decision/context_builder.py": "605bfdd1ed71e77a5cf0896b6e9ba5812de3a2f9c8517639879f5fbf25288bfc",
+    "shopping_decision/action_ranking.py": "2f1c330d5dfb8f152f9a07163826dfe6c599962ea74fc83543959649b9994010",
+    "shopping_decision/model_adapter.py": "09792f14fe87cf58392dfd167ca23afd12781c2f38e2ee173dcc88e064e91618",
+    "shopping_decision/evidence_comparison.py": "a69c7ef53d2166453007deb8ce54ea443b693ac9b9176e3f09c83f18ec0ed5a4",
+    "shopping_decision/decision_worksheet.py": "35d77098de73a520ba9d2fcebd8e566b663bf4b873ecf1c0eadff5fa000c494e",
+    "shopping_decision/worksheet_io.py": null,
+    "desktop/ShoppingDecisionDesktop.java": "054c127c30b542f4b47c7b1a9fccce949303f532b68b0b19bdb62aeefd3a36ac",
+    "desktop/DesktopBridgeClient.java": "ba0a8c8aa5a5d1309721d0b79f09eba472a9cee000e656c00f3d579b9c2f8ff3",
+    "desktop/ChatBridgeRegression.java": "4b43ba887681928cd8e708c5c24bb4557ddeaa23b90fb0c997402e15716b9276",
+    "desktop/ChatSwingRegression.java": "c43937364b103188a95f71b2c0e6187be4be58aa2b0e70f3860c64edc74cd1f9",
+    "desktop/ChatNativeAuditRegression.java": "a254bba12a347845bac953829f44d33a197244a7d532bc03278df06d25dbb38d",
+    "desktop/DecisionWorksheetRegression.java": "96bb23a3e1952202c2983e09afe4b3eb021af6d54b1e17eb55a8ca3673316d06",
+    "desktop/DecisionWorksheetSwingRegression.java": "339d8055a9f6afb8123e2ff383685bbccfd6fa9a0e6cf98601a96e7205c91a5a",
+    "knowledge/printer_cognition_comparison_v1.json": "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385",
+    "tests/test_cost_scenario_binding.py": "67f000361b23cda18080a326ef3bc03cd922477c5e236846cb05520b3b803363",
+    "tests/test_printer_decision_journey.py": "c670a751efb069e61974b77910cdec11c6a2e97cd42d3d1c48f12b77935bf57a",
+    "tests/test_model_receipt_boundaries.py": "5f18308dbda8f333516b6aa5a9e2368a3dfd847acf4503ac05d4280b8635afe9",
+    "tests/test_session_decision_contract.py": "b6df0f695b95272f0057fff053dfc2e0e9e932ef5650274d01bf8c303a125bad",
+    "tests/test_evidence_snapshot_lineage.py": "81eeaa239edac9655f48ec6071d363ddc83fab751277a2b25d29652e20006b3f",
+    "tests/test_action_ranking.py": "590371f1eae76e3a1263f956fcda4a11ec9a25c871e4dc0e46672a5e914b82d1",
+    "tests/test_decision_worksheet.py": "fd77465df7dc37277c0b8d503fe53f3545de595e742c0b57f6338ca7f381b4c4",
+    "tests/test_worksheet_bridge.py": "7e0447b0690e7c3689287a5e33f669d32a949ebca9b88bdec354fc439376830b",
+    "tests/test_worksheet_persistence.py": "d9bfff618b933720b594eae1b6807853387ce3d70ff0499eca05948c9f022d30",
+    "tests/test_worksheet_evidence.py": "4421cb816bbd67b6af758f3c44b61ce5d41969e323bd84b01cefbe22d16ec666",
+    "tests/test_worksheet_journeys.py": "5e9224ea1e1cc49ffb4ef13baf0a580615ecb6fc89be395bac7b2112ee3ea131"
+  },
+  "proposal_sha256": "8ee18a2f8660ce8ae044077c1d290d03ff5bd85fd8f56e172b20f6d3d65ff76b",
+  "created_at": "2026-11-26T20:35:20.519461+08:00",
+  "after_sha256": {
+    "scripts/audit_model_history_readonly.py": "2da43c97c5ca3330272a1f46cb5bbb624912b8e5750012ed14b5d2a4e0a100fa",
+    "tests/test_history_audit_version_transition.py": "a657b2187ebbbd826378cfdcaadbe814ca73e3a092ca0a1071866b1d0025bc5a"
+  }
+}

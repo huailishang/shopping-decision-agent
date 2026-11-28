@@ -1,0 +1,98 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-FOCUSED-GUIDANCE-20261127
+runtime: WSL Python3 UTF-8; existing Windows Python/JDK
+checks:
+  - id: VP-01
+    ac: ["AC-10"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_SCOPE.py","--phase","post"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: ["AC-02","AC-03","AC-05"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_FOCUS.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: ["AC-02","AC-03","AC-04","AC-05","AC-06"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_TESTS.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: ["AC-02","AC-03","AC-05"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_GUIDE.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: ["AC-05"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_CONTEXT.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: ["AC-04"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-DECISIVE-EVIDENCE-20261126/VERIFY_ACTION.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-07
+    ac: ["AC-04","AC-10"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_BUSINESS.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-08
+    ac: ["AC-04","AC-10"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-09
+    ac: ["AC-01","AC-02","AC-03","AC-04","AC-05","AC-06","AC-10"]
+    cwd: .
+    command: ["python3","-X","utf8","-m","unittest","discover","-s","tests","-q"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-10
+    ac: ["AC-10"]
+    cwd: .
+    command: ["python3","-X","utf8","scripts/audit_model_history_readonly.py","--task","handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-11
+    ac: ["AC-10"]
+    cwd: .
+    command: ["python3","-X","utf8","-m","unittest","discover","-s","tests","-p","test_history_audit_version_transition.py","-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-12
+    ac: ["AC-03","AC-05","AC-06","AC-07"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_NATIVE.py","--role","executor"]
+    evaluator_command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_NATIVE.py","--role","evaluator"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-13
+    ac: ["AC-08","AC-09"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_MEASUREMENT.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-14
+    ac: ["AC-01","AC-06","AC-07","AC-09","AC-11"]
+    cwd: .
+    command: ["python3","-X","utf8","handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_DELIVERY.py"]
+    expected_exit_code: 0
+    mandatory: true
+human_checks:
+  authority: EVALUATION.md
+  paired_tasks_min: 24
+  composite_journeys_min: 12
+  completed_journeys_min: 11
+  native_journeys_min: 10
+  independent_holdout_min: 8
+  real_user_gain_required: false
+  real_model_gain_required: false

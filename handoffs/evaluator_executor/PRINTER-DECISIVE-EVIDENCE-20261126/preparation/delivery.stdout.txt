@@ -1,0 +1,33 @@
+{
+  "errors": [
+    "missing meaningful REPORT.md",
+    "missing meaningful COMPARISON.md",
+    "missing meaningful USAGE.md",
+    "handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\evidence\\executor\\expectations.json:[Errno 2] No such file or directory: 'D:\\\\SoftWare\\\\VScode\\\\install\\\\Project\\\\shopping-decision-agent\\\\handoffs\\\\evaluator_executor\\\\PRINTER-DECISIVE-EVIDENCE-20261126\\\\evidence\\\\executor\\\\expectations.json'",
+    "missing preregistered 16 expectations",
+    "handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\evidence\\executor\\journeys.json:[Errno 2] No such file or directory: 'D:\\\\SoftWare\\\\VScode\\\\install\\\\Project\\\\shopping-decision-agent\\\\handoffs\\\\evaluator_executor\\\\PRINTER-DECISIVE-EVIDENCE-20261126\\\\evidence\\\\executor\\\\journeys.json'",
+    "require S01-S16 exactly",
+    "completion/core/native threshold",
+    "handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\evidence\\executor\\summary.json:[Errno 2] No such file or directory: 'D:\\\\SoftWare\\\\VScode\\\\install\\\\Project\\\\shopping-decision-agent\\\\handoffs\\\\evaluator_executor\\\\PRINTER-DECISIVE-EVIDENCE-20261126\\\\evidence\\\\executor\\\\summary.json'",
+    "journey SHA mismatch",
+    "generator SHA mismatch",
+    "summary mismatch completed",
+    "summary mismatch core_completed",
+    "summary mismatch java_event_completed",
+    "summary mismatch safety_errors",
+    "missing ledger active-sessions.jsonl",
+    "active time missing/over budget",
+    "handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\evidence\\executor\\process.json:[Errno 2] No such file or directory: 'D:\\\\SoftWare\\\\VScode\\\\install\\\\Project\\\\shopping-decision-agent\\\\handoffs\\\\evaluator_executor\\\\PRINTER-DECISIVE-EVIDENCE-20261126\\\\evidence\\\\executor\\\\process.json'",
+    "current time accounting incomplete",
+    "repair limit/record",
+    "missing ledger operations.jsonl"
+  ],
+  "counts": {
+    "completed": 0,
+    "core_completed": 0,
+    "java_event_completed": 0,
+    "active_seconds": 0,
+    "reads": 0,
+    "queries": 0
+  }
+}

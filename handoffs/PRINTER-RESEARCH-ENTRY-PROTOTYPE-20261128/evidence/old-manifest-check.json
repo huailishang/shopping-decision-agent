@@ -1,0 +1,9 @@
+{
+  "old_manifest_references": 798,
+  "mismatches": [
+    "CURRENT.md"
+  ],
+  "note": "CURRENT was already changed by Evaluator before this experiment; other references must match",
+  "head": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+  "staged_diff_bytes": 0
+}

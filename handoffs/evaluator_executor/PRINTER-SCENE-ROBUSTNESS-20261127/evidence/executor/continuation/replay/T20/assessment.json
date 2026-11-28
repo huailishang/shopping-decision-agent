@@ -1,0 +1,137 @@
+{
+  "arm": {
+    "basis": {
+      "as_of": "2026-11-27",
+      "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+      "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+      "limits": {
+        "max_answer_turns": 12,
+        "max_read_requests": 4,
+        "max_product_calls": 30
+      }
+    },
+    "replay": {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/replay.json",
+      "sha256": "7944bf6232860ad46f6d57bd6c0e0c4ad32a419e3cad7e2272f4da0a06ad88a2"
+    }
+  },
+  "metrics": {
+    "completed": true,
+    "answers": 1,
+    "reads": 0,
+    "duplicates": 0,
+    "irrelevant": 0
+  },
+  "trace_errors": [],
+  "semantic_checks": {
+    "0:usage_research": true,
+    "authorization_false": true,
+    "setup:zero": true,
+    "setup:unknown": true,
+    "setup:unchanged": true,
+    "stale_rejected": true,
+    "current_state": true,
+    "safe": true,
+    "explicit_zero_and_unknown": true
+  },
+  "setup_artifacts": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-response.json",
+      "sha256": "a6f2e678f3fef72ef9c5628b09bcf6b9ff3953f064e932ded04370c1af056797"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-stdin.json",
+      "sha256": "0c83fd64767b8f3fd9195bac826042ead1bea682e82a66fd68af3ae6fa20647a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/create-stdout.txt",
+      "sha256": "1a0694f74e2101d0a0190f5d92148f2666682e45b56e637f3b6071c1dffb5382"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-response.json",
+      "sha256": "f7cab30251b73224180b4d15a6b531f4ee31853c3e3f5459994896a6099e814d"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-stdin.json",
+      "sha256": "9e77b522efb07f1bb89db27d1ebb52c55c9a7127d81e86275e206d5cf7910fc6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/preview-stdout.txt",
+      "sha256": "be40f202b0b1c021e13916c668091b207adf74d4e20ac406f4c5b79c60aaa54a"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-response.json",
+      "sha256": "d940deae93858592e0dbd81426a013711aa918bedddc21a945ccb70dddb83fb6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-stdin.json",
+      "sha256": "c38aeb274df395ea71f2224ed1cf000a6d71f36428613e7de0e93841afb16a4b"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/set-zero-stdout.txt",
+      "sha256": "3cf82f45d9fb196832eabc89f914037e591d524c4f3ff3ac02f85a8b670ee601"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-response.json",
+      "sha256": "b7dd2e28ce4cb9328aeca81e7cfeb708dba965915b1c9ed80a99fb76abc3e705"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-stdin.json",
+      "sha256": "04a4b9dc10e160ed16fc5c2c1f11d85e7b91196aaea948a6fe93f21a58ca4980"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-explicit-zero-stdout.txt",
+      "sha256": "fcb361a2aac395345c7b6573153f9bc8c6e1f48888dac7f9d851e8f8d621f008"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-response.json",
+      "sha256": "8fac62ded16112204b759c92b8f15a477e13f96f7c0af6012904c8ad36230a09"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-stdin.json",
+      "sha256": "c8159c1968e1171939663702dc419234fa7140769a706669bce6267c895b1ec5"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-old-preview-stdout.txt",
+      "sha256": "970438914fb65649c0afac9a006f62c29ae925aaac8278d1da1b5d47a9dc8c17"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-response.json",
+      "sha256": "d47cce8b993514982415a45680ab94d744a25a1e0b78a41a0c95ab240fc6b2e6"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-stdin.json",
+      "sha256": "2f5a6f57013cb727de3feff0cadde9bbd99f8184b37928592f45fe6cf0bef9f4"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/compound/terminal-rebind-stdout.txt",
+      "sha256": "c4cc7d1228f07842346cf7f06a59724bb48904a022791366b6222b1139b4889c"
+    }
+  ],
+  "semantic_completed": true,
+  "terminal": "completed"
+}

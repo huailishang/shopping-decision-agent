@@ -1,0 +1,102 @@
+[
+  {
+    "id": "VP-01",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/VERIFY_CANDIDATES.py"
+    ],
+    "started_at_utc": "2026-11-26T02:11:31.408541+00:00",
+    "finished_at_utc": "2026-11-26T02:11:32.648627+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-02",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_candidate_tradeoff.py",
+      "-v"
+    ],
+    "started_at_utc": "2026-11-26T02:11:32.648750+00:00",
+    "finished_at_utc": "2026-11-26T02:11:34.487033+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-03",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py"
+    ],
+    "started_at_utc": "2026-11-26T02:11:34.487174+00:00",
+    "finished_at_utc": "2026-11-26T02:11:36.785591+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-04",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-q"
+    ],
+    "started_at_utc": "2026-11-26T02:11:36.785691+00:00",
+    "finished_at_utc": "2026-11-26T02:12:44.038001+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-05",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "scripts/audit_model_history_readonly.py",
+      "--task",
+      "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
+    ],
+    "started_at_utc": "2026-11-26T02:12:44.038299+00:00",
+    "finished_at_utc": "2026-11-26T02:12:55.061370+00:00",
+    "exit_code": 0
+  },
+  {
+    "id": "VP-06",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/VERIFY_SCOPE.py",
+      "--phase",
+      "post"
+    ],
+    "started_at_utc": "2026-11-26T02:12:55.061556+00:00",
+    "finished_at_utc": "2026-11-26T02:13:11.492154+00:00",
+    "exit_code": 1
+  },
+  {
+    "id": "PILOT",
+    "command": [
+      "python3",
+      "-X",
+      "utf8",
+      "handoffs/context-model-pilot-20261126/test_pilot.py"
+    ],
+    "started_at_utc": "2026-11-26T02:13:11.492246+00:00",
+    "finished_at_utc": "2026-11-26T02:13:11.808048+00:00",
+    "exit_code": 0
+  }
+]

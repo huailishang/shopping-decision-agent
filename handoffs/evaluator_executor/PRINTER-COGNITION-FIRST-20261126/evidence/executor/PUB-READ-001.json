@@ -1,0 +1,7 @@
+{
+  "id": "PUB-READ-001",
+  "url": "https://www.consumer.org.hk/sc/article/598-multifunctional-printers/598-multifunctional-printers-test-items-and-results",
+  "result": "failed_cache_miss",
+  "detail": "web retrieval returned Failed to fetch: Cache miss; no page text obtained; no source approved",
+  "source_ref": "turn339797view0"
+}

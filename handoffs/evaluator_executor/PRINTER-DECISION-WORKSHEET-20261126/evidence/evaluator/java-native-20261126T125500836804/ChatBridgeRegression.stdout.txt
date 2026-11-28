@@ -1,0 +1,7 @@
+PASS references are drafts
+PASS explicit category and next turn
+PASS unknown remains unknown
+PASS edit version and transaction block
+PASS cross-category protection
+PASS illegal field rejected
+ChatBridge Java subprocess regression: 6/6 PASS

@@ -1,0 +1,11 @@
+PASS F01 native event chain
+PASS F02 native event chain
+PASS F03 native event chain
+PASS F04 native event chain
+PASS F05 native event chain
+PASS F06 native event chain
+PASS F07 native event chain
+PASS F08 native event chain
+PASS F11 native event chain
+PASS F12 native event chain
+FOCUS_GUIDANCE_NATIVE_PASS

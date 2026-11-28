@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "raw": "paired-observations-v1.json",
+  "raw_sha256": "1cb1d1227803c1a4300f02ff13017024fbee4b230f9692a063cd4ecf544695da",
+  "raw_bytes": 7362076,
+  "generator_sha256": "d0681e55e5f2be92fecc2e86db1e419a9e0adb05d7e60fcb57e731d5f8613a45",
+  "pair_count": 26,
+  "render_chat_pairs": 19,
+  "observations": [
+    {
+      "id": "unanswered",
+      "observed": {
+        "same_first": true,
+        "first": [
+          "clarify",
+          "scan",
+          null
+        ]
+      }
+    },
+    {
+      "id": "deferred",
+      "observed": {
+        "same_first": true,
+        "first": [
+          "clarify",
+          "auto_duplex",
+          null
+        ]
+      }
+    },
+    {
+      "id": "scan_no",
+      "observed": {
+        "same_first": true,
+        "first": [
+          "clarify",
+          "auto_duplex",
+          null
+        ]
+      }
+    },
+    {
+      "id": "both_no",
+      "observed": {
+        "same_first": true,
+        "first": [
+          "research",
+          "wechat_miniprogram",
+          "Brother HL-L1238W"
+        ]
+      }
+    },
+    {
+      "id": "scan_required",
+      "observed": {
+        "same_first": true,
+        "first": [
+          "research",
+          "scan",
+          "Brother HL-L1238W"
+        ]
+      }
+    },
+    {
+      "id": "withdrawn",
+      "observed": {
+        "same_first": true,
+        "first": [
+          "clarify",
+          "auto_duplex",
+          null
+        ]
+      }
+    },
+    {
+      "id": "hard_color",
+      "observed": {
+        "same_first": true,
+        "first": null
+      }
+    },
+    {
+      "id": "setup_rejection",
+      "observed": {
+        "same_first": true,
+        "first": [
+          "research",
+          "initial_setup_without_app_or_scan",
+          "Brother HL-L1238W"
+        ]
+      }
+    },
+    {
+      "id": "cost_flip",
+      "observed": {
+        "before": {
+          "status": "b",
+          "arithmetic_status": "b",
+          "scenario_preference": "HP M232dw",
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "700",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "650",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "550",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "50",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            }
+          },
+          "reasons": {},
+          "scenario_sha256": "82f5fda09bc6bdbe1a9558b3bfb1061b81517e8fdce2bb82cc1d050f035511c5"
+        },
+        "after": {
+          "status": "a",
+          "arithmetic_status": "a",
+          "scenario_preference": "Brother HL-L1238W",
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 1,
+              "drum_replacements": 0,
+              "total": "600",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 1500,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "650",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "550",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "50",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            }
+          },
+          "reasons": {},
+          "scenario_sha256": "be41258c5bb62161b729a387149039dd06404347481afb884fbf18fec232a2ea"
+        },
+        "same_first": true
+      }
+    },
+    {
+      "id": "cost_incomparable",
+      "observed": {
+        "before": {
+          "status": "b",
+          "arithmetic_status": "b",
+          "scenario_preference": "HP M232dw",
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "700",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "650",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "550",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "50",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            }
+          },
+          "reasons": {},
+          "scenario_sha256": "82f5fda09bc6bdbe1a9558b3bfb1061b81517e8fdce2bb82cc1d050f035511c5"
+        },
+        "after": {
+          "status": "incomparable",
+          "arithmetic_status": "incomparable",
+          "scenario_preference": null,
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 0,
+              "drum_replacements": 0,
+              "total": "500",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 0,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "650",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "550",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "50",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            }
+          },
+          "reasons": {},
+          "scenario_sha256": "43438381ca03ad57c0bb5f0ac30c91fd2daf30dabe42016b77ecd6861dfd2492"
+        },
+        "same_first": true
+      }
+    },
+    {
+      "id": "hard_pending",
+      "observed": {
+        "before": {
+          "status": "hard_conditions_first",
+          "arithmetic_status": "b",
+          "scenario_preference": null,
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "700",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "650",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "550",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "50",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            }
+          },
+          "reasons": {},
+          "scenario_sha256": "82f5fda09bc6bdbe1a9558b3bfb1061b81517e8fdce2bb82cc1d050f035511c5"
+        },
+        "after": {
+          "status": "hard_conditions_first",
+          "arithmetic_status": "a",
+          "scenario_preference": null,
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 1,
+              "drum_replacements": 0,
+              "total": "600",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 1500,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "650",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "550",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "50",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            }
+          },
+          "reasons": {},
+          "scenario_sha256": "be41258c5bb62161b729a387149039dd06404347481afb884fbf18fec232a2ea"
+        },
+        "same_first": true
+      }
+    },
+    {
+      "id": "maintenance_revoked",
+      "observed": {
+        "before": {
+          "status": "b",
+          "arithmetic_status": "b",
+          "scenario_preference": "HP M232dw",
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "700",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "650",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "550",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "50",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [
+                "hp-replace-on-quality"
+              ],
+              "dependency_fingerprints": {
+                "hp-replace-on-quality": "26f83f0319a501dee379b0b173fc6ec0b3e1d511f23468620f0172eeb0f57afb"
+              }
+            }
+          },
+          "reasons": {},
+          "scenario_sha256": "e57da7cf9fe811348238b2b78fe2e1108421cd161f22f86024308a9fde56be15"
+        },
+        "after": {
+          "status": "unknown",
+          "arithmetic_status": "unknown",
+          "scenario_preference": null,
+          "assumption_only": true,
+          "models": {
+            "Brother HL-L1238W": {
+              "toner_replacements": 2,
+              "drum_replacements": 0,
+              "total": "700",
+              "assumption_only": true,
+              "comparison_basis": {
+                "pages": 1800,
+                "months": 36,
+                "currency": "CNY",
+                "fee_scope": "hardware_consumables_maintenance",
+                "scenario_version": 1
+              },
+              "basis_status": "explicit",
+              "input_lineage": {
+                "kind": "scenario_assumption",
+                "hardware": "500",
+                "starter": 0,
+                "toner_yield": 1500,
+                "toner_price": "100",
+                "separate_drum": false,
+                "drum_yield": null,
+                "drum_price": null,
+                "drum_starter": null,
+                "maintenance": "0"
+              },
+              "dependency_fact_ids": [],
+              "dependency_fingerprints": {}
+            },
+            "HP M232dw": null
+          },
+          "reasons": {
+            "HP M232dw": "dependency_not_admitted"
+          },
+          "scenario_sha256": "e57da7cf9fe811348238b2b78fe2e1108421cd161f22f86024308a9fde56be15"
+        },
+        "same_confirmed": true
+      }
+    },
+    {
+      "id": "stale_cost",
+      "observed": {
+        "status": "stale",
+        "reason": "session_changed"
+      }
+    },
+    {
+      "id": "responses_tool_calls",
+      "observed": "应拒绝混合输出"
+    },
+    {
+      "id": "responses_function_call",
+      "observed": "应拒绝混合输出"
+    },
+    {
+      "id": "responses_refusal",
+      "observed": "应拒绝混合输出"
+    },
+    {
+      "id": "chat_completions_tool_calls",
+      "observed": "应拒绝混合输出"
+    },
+    {
+      "id": "chat_completions_function_call",
+      "observed": "应拒绝混合输出"
+    },
+    {
+      "id": "chat_completions_refusal",
+      "observed": "应拒绝混合输出"
+    },
+    {
+      "id": "snapshot_tampered",
+      "observed": "旧哈希拒绝变造"
+    },
+    {
+      "id": "default_rank_legal",
+      "observed": {
+        "first": [
+          "research",
+          "color_print",
+          "HP M232dw"
+        ],
+        "accepted": true
+      }
+    },
+    {
+      "id": "default_rank_mixed",
+      "observed": {
+        "first": [
+          "research",
+          "color_print",
+          "Brother HL-L1238W"
+        ],
+        "accepted": false
+      }
+    },
+    {
+      "id": "default_rank_stale",
+      "observed": {
+        "first": [
+          "research",
+          "color_print",
+          "Brother HL-L1238W"
+        ],
+        "accepted": false
+      }
+    },
+    {
+      "id": "backend_rank_legal",
+      "observed": {
+        "first": [
+          "research",
+          "color_print",
+          "HP M232dw"
+        ],
+        "accepted": true
+      }
+    },
+    {
+      "id": "backend_rank_mixed",
+      "observed": {
+        "first": [
+          "research",
+          "color_print",
+          "Brother HL-L1238W"
+        ],
+        "accepted": false
+      }
+    },
+    {
+      "id": "backend_rank_stale",
+      "observed": {
+        "first": [
+          "research",
+          "color_print",
+          "Brother HL-L1238W"
+        ],
+        "accepted": false
+      }
+    }
+  ],
+  "limitations": "离线合成、非盲；真实模型质量/耗时/真人收益未测。旧包摘要原件不覆盖。"
+}

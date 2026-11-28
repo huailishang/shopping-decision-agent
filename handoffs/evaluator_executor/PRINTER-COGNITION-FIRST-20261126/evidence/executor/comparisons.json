@@ -1,0 +1,3811 @@
+{
+  "schema_version": 1,
+  "pairs": [
+    {
+      "id": "P01",
+      "basis": {
+        "initial_request_sha256": "1597fdb024b8c70745d30a6bfe6c6040daad863c13507aad2ad332094406fa01",
+        "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+        "user_profile_sha256": "e313a77a71109853a29504258ad00118a621ab70ee097629503df99a5130c477",
+        "as_of": "2026-11-27",
+        "max_answer_turns": 16,
+        "max_read_requests": 2
+      },
+      "reference_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/paired-reference-v1.json",
+          "sha256": "564a6a9490d4819cb9881d96fd11e46a039224b7e1ed633ebc79ed7df889e31f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/source-claims.json",
+          "sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403"
+        }
+      ],
+      "a": {
+        "basis": {
+          "initial_request_sha256": "1597fdb024b8c70745d30a6bfe6c6040daad863c13507aad2ad332094406fa01",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "e313a77a71109853a29504258ad00118a621ab70ee097629503df99a5130c477",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 0,
+            "elapsed_ms": 1285
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "低频家庭作业，偶尔彩印可外包",
+            "needs_color": false,
+            "accepts_outsourced_color": true,
+            "requires_scan": false,
+            "requires_auto_duplex": false,
+            "idle_weeks_pattern": "often_long",
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "often_long",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在连续多周不用后的恢复步骤、清洁耗材和维护条件；需型号说明及有条件的独立测试，缺证不淘汰。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "f7ddf36ec41bb6ed7231e78e3ade1c897171531b14efb9e04ca59f2b57b10cef",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "a60436adcaa978af45c7dd9fd03136f7a62879f8420c56e71cc998c9322c1640",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "7e3e6078ca0e36bc450cdc2dae92f74eb62f1b59b66620f6180e1fb0bc007695",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "fe6a968edc5a254125b52d4cba1fb7cd2b02b2276dea506252e03eed2c85a7df",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "4222b73eb48fa6c33c232358c1538daeae0c5f0abc12b1960c3f2a1ff0e340e3",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "91d84dae47b0e89bbeacea9a61e9dd5c8b51a9d44907b9b6d0cff5577bd38048",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "faa834cfd0fea18e09eb2acb2d669f2912e867fa52929d5969ce0f5b663860f9",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "e916b2f873683332ce57bad5f210244a22a1234905b231acf078fb81e99ab3ca",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "81d7dd532ebe1ce8e98aa75a4c42e787fced367363071c55764ef90f67f526be",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "a4a10f3dbb37a23fe088f0ee2b5c56b968dd9f2d9f4807bd49f024381f3cd0da",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "219388ff7eca2cce0525fcff7c72d394ed9df4803c152c730b33250283ccbd88",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "1e7e0458908d524dabeb07df686bd98a1cedf7217ad99e4c34a2c43936f5880b",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "5238461932deba9626c3669ac48ecc226783846f0d930f0486d4a83d77841753",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "5243312358e25c797e70c41021148dd48ea739728c15e4aedb33dcaeae4ec696",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "d953b6741e7d7423527dfd32097851a2648f4c559c7eac4d3d683debd9d72b64",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "d5ffcaef159f9863da0060ae7d221b8bc87471b2455ccc5d01e4aac98e642364",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "e7112eb70a7c185a1c579052119120996671985be2996a861f3166c1c261fc25",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "0f223f319d2f788a4854f9bec8133541762eee3923d82d869422f6f0452fd902",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "92bb6467cc942488a00ca3e9f6b495b402dff03618c4cc02142376d19c670140",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "2b07629018cc6c9c1ecd8cb65752890d61c06f113838b7bfdf2359e3b22d93e9",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "a86b75b9a75216ca9ab8d2c2e2934327aa0f26c1e83b92be70701fc9a6a5039c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "21c6d1fe902b9f304cce574770f008412642927374dc25818070c666ad902892",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "32eb7e396d5979162e760643dd292ccd0fd5ff6509022800ca36d51a52bcddbd",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "6cee5980e52863e586a972bf36c40b4564ff50997b20c1ad00cb8dd423af3d67",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "456ecaca6e389c63101aed815347cea1ac35a725f3d7aebfd573815b42a8214b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "111ae2dab2510bc3a0b9b8fa9fafb81833bb7b21f933ecc239010d5c36e6eeb9",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P01-a.json",
+            "sha256": "39fe3b5acc6076ba2e24c53c330f544f5550687dc80120983d72db41e4a924ea"
+          }
+        ]
+      },
+      "b": {
+        "basis": {
+          "initial_request_sha256": "1597fdb024b8c70745d30a6bfe6c6040daad863c13507aad2ad332094406fa01",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "e313a77a71109853a29504258ad00118a621ab70ee097629503df99a5130c477",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 1,
+            "elapsed_ms": 1162
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "低频家庭作业，偶尔彩印可外包",
+            "needs_color": false,
+            "requires_scan": false,
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "idle_weeks_pattern": "often_long",
+            "accepts_outsourced_color": true,
+            "requires_auto_duplex": false,
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "often_long",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在连续多周不用后的恢复步骤、清洁耗材和维护条件；需型号说明及有条件的独立测试，缺证不淘汰。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "f7ddf36ec41bb6ed7231e78e3ade1c897171531b14efb9e04ca59f2b57b10cef",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "a60436adcaa978af45c7dd9fd03136f7a62879f8420c56e71cc998c9322c1640",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "7e3e6078ca0e36bc450cdc2dae92f74eb62f1b59b66620f6180e1fb0bc007695",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "fe6a968edc5a254125b52d4cba1fb7cd2b02b2276dea506252e03eed2c85a7df",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "4222b73eb48fa6c33c232358c1538daeae0c5f0abc12b1960c3f2a1ff0e340e3",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "91d84dae47b0e89bbeacea9a61e9dd5c8b51a9d44907b9b6d0cff5577bd38048",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "faa834cfd0fea18e09eb2acb2d669f2912e867fa52929d5969ce0f5b663860f9",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "e916b2f873683332ce57bad5f210244a22a1234905b231acf078fb81e99ab3ca",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "81d7dd532ebe1ce8e98aa75a4c42e787fced367363071c55764ef90f67f526be",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "a4a10f3dbb37a23fe088f0ee2b5c56b968dd9f2d9f4807bd49f024381f3cd0da",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "219388ff7eca2cce0525fcff7c72d394ed9df4803c152c730b33250283ccbd88",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "1e7e0458908d524dabeb07df686bd98a1cedf7217ad99e4c34a2c43936f5880b",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "5238461932deba9626c3669ac48ecc226783846f0d930f0486d4a83d77841753",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "5243312358e25c797e70c41021148dd48ea739728c15e4aedb33dcaeae4ec696",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "d953b6741e7d7423527dfd32097851a2648f4c559c7eac4d3d683debd9d72b64",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "d5ffcaef159f9863da0060ae7d221b8bc87471b2455ccc5d01e4aac98e642364",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "e7112eb70a7c185a1c579052119120996671985be2996a861f3166c1c261fc25",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "0f223f319d2f788a4854f9bec8133541762eee3923d82d869422f6f0452fd902",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "92bb6467cc942488a00ca3e9f6b495b402dff03618c4cc02142376d19c670140",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "2b07629018cc6c9c1ecd8cb65752890d61c06f113838b7bfdf2359e3b22d93e9",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "a86b75b9a75216ca9ab8d2c2e2934327aa0f26c1e83b92be70701fc9a6a5039c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "21c6d1fe902b9f304cce574770f008412642927374dc25818070c666ad902892",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "32eb7e396d5979162e760643dd292ccd0fd5ff6509022800ca36d51a52bcddbd",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "6cee5980e52863e586a972bf36c40b4564ff50997b20c1ad00cb8dd423af3d67",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "456ecaca6e389c63101aed815347cea1ac35a725f3d7aebfd573815b42a8214b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "111ae2dab2510bc3a0b9b8fa9fafb81833bb7b21f933ecc239010d5c36e6eeb9",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P01-b.json",
+            "sha256": "b6f8428a94f03d13211cecf56bdb9d40a0d158c3919af12a4197b54398d55557"
+          }
+        ]
+      },
+      "outcome": "equal",
+      "limitations": "固定合成oracle，直接组同样允许完整参数澄清；不测真人理解。决策正确性相同时，指南阅读是额外认知步骤，不能宣称净收益。耗时仅本机观测。"
+    },
+    {
+      "id": "P02",
+      "basis": {
+        "initial_request_sha256": "4b3dae6a242fb3b99af1e4e2379949e31c92a37091dee2ee9f609a883bf82a2e",
+        "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+        "user_profile_sha256": "a2ab16e8441626e22312387b8ed15b74e5f2ea167c9eb24c210eb775a84dea9f",
+        "as_of": "2026-11-27",
+        "max_answer_turns": 16,
+        "max_read_requests": 2
+      },
+      "reference_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/paired-reference-v1.json",
+          "sha256": "564a6a9490d4819cb9881d96fd11e46a039224b7e1ed633ebc79ed7df889e31f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/source-claims.json",
+          "sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403"
+        }
+      ],
+      "a": {
+        "basis": {
+          "initial_request_sha256": "4b3dae6a242fb3b99af1e4e2379949e31c92a37091dee2ee9f609a883bf82a2e",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "a2ab16e8441626e22312387b8ed15b74e5f2ea167c9eb24c210eb775a84dea9f",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 7,
+            "read_requests": 2,
+            "extra_guide_read": 0,
+            "elapsed_ms": 1230
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "孩子彩色资料必须在家打印",
+            "needs_color": true,
+            "requires_scan": false,
+            "requires_auto_duplex": false,
+            "idle_weeks_pattern": "usually_short",
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "not_fit",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "research_required",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "usually_short",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在通常每周使用时的耗材更换和清洁维护口径；仍不推断实际费用或可靠性。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "excluded_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "b6207c3f0680c81ad06bfb2fdee617ede7af6c8f32ae6c5945db77035f583e89",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "a77ecc493c4471b3d7c33c46ab01afcd5c22b58e51f37ae7e408149b5736be3b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "879ff8e390adfcd832856fd0ec7f22c6d450aa709ce5771ce1b0ba5eb39ebc36",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "55c1db3d961f5aee8691eb3cd22755fb1ff37a6e9450be79adad2a5a21b43e5d",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "42c48ae8b0b3cb77d355af580fe1007378c0cc32de1b25d4369be20b09e9569d",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "60a911329c66656278dd1610f66487f5cb5d438c3cd330ae0a1e59d75858c334",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "bcad86bc9abc401cd46ae868c74d751c55e662f5ce8076f2163b730007de5a6b",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "67f124d6708eaa456d62eb717fbc8861d16d17567da1203671f69cea114b6ebd",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "1f56736b551fc5701031abfdf522b37db5cb017bd351521c5b387802ef470129",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "d898a5e5fa2cecba28bbfd0aab23f4f4af254e86cc5d82465699be8d13c2fb10",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "1cf2ffabd27fde7d6302509c0f23e294547845d7793b6a0f5ac7c02421b21cad",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "c3d57277233202b82e16e49bdc82d5fe49c08e21d503e10286f29ad4d9932f2b",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "5af6919d173e9e533f5770ff5f35f1b711c621a33d3258f1f02cb786033251ff",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "excluded_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "b82da2d5cf0083d042d17d67c2b55f001b5fae14737620d8c946f118904682e4",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "b9e8e8681313fcb08aa96c5a7017351a72351584c69686f5cdd4e3333b1fec0c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "feba29e1dfacbc7078913f389c903871ab45e3f767605436284bfb92b9ebed9c",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "2dd7ea2d6e8ee03d85715a396e1dce5b18af812447d9540cc5f1e810bba12294",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "5903dbb193b2e41445a0009a5a661f78d792fd64189a679ce17a9d860c3bdc1c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "6ff95435f854ba5ce6b4514d73b102064bc1d64f0d011cbd670b0efe363e88d2",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "71e4571e50e88caa5ea825262620d2afab581ba5e11b5c2db59b5ca2cc7fe6f5",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "a8713c923ae6f06c2ac87ef475236d905d4b6f9579503bc939c89d3e88b088dc",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "ba0b816f54684adefcacfe0b2272089558304a8d276d31335c93b5f05a858c11",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "dc714ece98c39266b841e92fef1bbddb3a8e7af28e7b9d9f4e34e8299c6bb889",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "bf93f5c209d17a25e0d4c970a30de3aa9d5019dc5605a8f73a3e08b571f93594",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "9985b357dc5e47223733ecfed03d7c678b1a2bbd282abc5acad130dbb926d641",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "856b1777d6be574c46aff524351ff50201455da78b40f55e437cc715deb73244",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "原两款均有硬性反证，结束本轮两款比较；调整需求或另找候选。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P02-a.json",
+            "sha256": "278894dbc6c6108226e3f033073002eeccb470aae3727a8e7cfa7ebf763c43a9"
+          }
+        ]
+      },
+      "b": {
+        "basis": {
+          "initial_request_sha256": "4b3dae6a242fb3b99af1e4e2379949e31c92a37091dee2ee9f609a883bf82a2e",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "a2ab16e8441626e22312387b8ed15b74e5f2ea167c9eb24c210eb775a84dea9f",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 7,
+            "read_requests": 2,
+            "extra_guide_read": 1,
+            "elapsed_ms": 1301
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "孩子彩色资料必须在家打印",
+            "needs_color": true,
+            "requires_scan": false,
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "idle_weeks_pattern": "usually_short",
+            "requires_auto_duplex": false,
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "not_fit",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "research_required",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "usually_short",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在通常每周使用时的耗材更换和清洁维护口径；仍不推断实际费用或可靠性。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "excluded_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "b6207c3f0680c81ad06bfb2fdee617ede7af6c8f32ae6c5945db77035f583e89",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "a77ecc493c4471b3d7c33c46ab01afcd5c22b58e51f37ae7e408149b5736be3b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "879ff8e390adfcd832856fd0ec7f22c6d450aa709ce5771ce1b0ba5eb39ebc36",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "55c1db3d961f5aee8691eb3cd22755fb1ff37a6e9450be79adad2a5a21b43e5d",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "42c48ae8b0b3cb77d355af580fe1007378c0cc32de1b25d4369be20b09e9569d",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "60a911329c66656278dd1610f66487f5cb5d438c3cd330ae0a1e59d75858c334",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "bcad86bc9abc401cd46ae868c74d751c55e662f5ce8076f2163b730007de5a6b",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "67f124d6708eaa456d62eb717fbc8861d16d17567da1203671f69cea114b6ebd",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "1f56736b551fc5701031abfdf522b37db5cb017bd351521c5b387802ef470129",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "d898a5e5fa2cecba28bbfd0aab23f4f4af254e86cc5d82465699be8d13c2fb10",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "1cf2ffabd27fde7d6302509c0f23e294547845d7793b6a0f5ac7c02421b21cad",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "c3d57277233202b82e16e49bdc82d5fe49c08e21d503e10286f29ad4d9932f2b",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "5af6919d173e9e533f5770ff5f35f1b711c621a33d3258f1f02cb786033251ff",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "excluded_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "b82da2d5cf0083d042d17d67c2b55f001b5fae14737620d8c946f118904682e4",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "b9e8e8681313fcb08aa96c5a7017351a72351584c69686f5cdd4e3333b1fec0c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "feba29e1dfacbc7078913f389c903871ab45e3f767605436284bfb92b9ebed9c",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "2dd7ea2d6e8ee03d85715a396e1dce5b18af812447d9540cc5f1e810bba12294",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "5903dbb193b2e41445a0009a5a661f78d792fd64189a679ce17a9d860c3bdc1c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "6ff95435f854ba5ce6b4514d73b102064bc1d64f0d011cbd670b0efe363e88d2",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "71e4571e50e88caa5ea825262620d2afab581ba5e11b5c2db59b5ca2cc7fe6f5",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "a8713c923ae6f06c2ac87ef475236d905d4b6f9579503bc939c89d3e88b088dc",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "ba0b816f54684adefcacfe0b2272089558304a8d276d31335c93b5f05a858c11",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "dc714ece98c39266b841e92fef1bbddb3a8e7af28e7b9d9f4e34e8299c6bb889",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "bf93f5c209d17a25e0d4c970a30de3aa9d5019dc5605a8f73a3e08b571f93594",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "9985b357dc5e47223733ecfed03d7c678b1a2bbd282abc5acad130dbb926d641",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "856b1777d6be574c46aff524351ff50201455da78b40f55e437cc715deb73244",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "原两款均有硬性反证，结束本轮两款比较；调整需求或另找候选。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P02-b.json",
+            "sha256": "66a5d70395dd2e2b9abfb18374edefb0c3126c558d41fb28a6b18135513ebbaf"
+          }
+        ]
+      },
+      "outcome": "equal",
+      "limitations": "固定合成oracle，直接组同样允许完整参数澄清；不测真人理解。决策正确性相同时，指南阅读是额外认知步骤，不能宣称净收益。耗时仅本机观测。"
+    },
+    {
+      "id": "P03",
+      "basis": {
+        "initial_request_sha256": "257544cbdb6cc667bb1b4e7920a5595af90c6cf8ec8909c8fcfbf7a9c7d1a43e",
+        "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+        "user_profile_sha256": "a66e639ac13e72326ce593f1b4e68658c5c9de1622448cf5c781018e55c928a1",
+        "as_of": "2026-11-27",
+        "max_answer_turns": 16,
+        "max_read_requests": 2
+      },
+      "reference_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/paired-reference-v1.json",
+          "sha256": "564a6a9490d4819cb9881d96fd11e46a039224b7e1ed633ebc79ed7df889e31f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/source-claims.json",
+          "sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403"
+        }
+      ],
+      "a": {
+        "basis": {
+          "initial_request_sha256": "257544cbdb6cc667bb1b4e7920a5595af90c6cf8ec8909c8fcfbf7a9c7d1a43e",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "a66e639ac13e72326ce593f1b4e68658c5c9de1622448cf5c781018e55c928a1",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 0,
+            "elapsed_ms": 1118
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "纸质文件经常要扫描",
+            "needs_color": false,
+            "accepts_outsourced_color": true,
+            "requires_scan": true,
+            "requires_auto_duplex": false,
+            "idle_weeks_pattern": "usually_short",
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "usually_short",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在通常每周使用时的耗材更换和清洁维护口径；仍不推断实际费用或可靠性。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "dd478bd11680d923bdda840d6c184b9cda0138d094af87088657f892658880fe",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "7802ff9790ce97fef3bf93b3a23c584bf6603bc59d08d4b95446e575afd5d1ea",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "68be4e4ad02fa19ff35f7e5765e27265ccbe9bd930125b36f15c83b701fc37e2",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "7f26f74c48440404ef273e3199ef55be42496a57a20d2f1536399f557c2057cc",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "243974f5cf87adee27ea439ef6610df1e5fb5f76013bedc524cc0166f9402e79",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "6994ad875e79ccb219c073344e51e2c4bc72959df093c834d7ae9e2a0e49d432",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "0e0677f457ab37d0b52eabc1bcb213fae1a3ba2b90ff4dc36a903605ef7fca02",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "5a58d34f9974be123785ec7d127d5e76b7f2cf0b09bedabc03e5db0307336322",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "db721c8008ee43e24db29da73f93b756deaba6582366fa8277e752716402c59f",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "7e673032fca93093b41fb1270b5e6fd0c55bedfb33cbd40f7bef3e20aa6e5678",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "fb3ff841c90120222663f6357192afb33576225b0786bee8be83d91688b3ad28",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "c94006d1906093b97c0d4bf92c0c7410bcf8f9ac3382efe4e49d7216179ac575",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "92dc7367178b780c5e49a43b09d9a7fd807d7fcde9f5b2325323792b02d33cb8",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "1f6a31c91d72e841d6d931a9f75f099360b5653ca23f45c4a11cf3a5c71c1e9a",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "9c79728a1c8195d6a1970dc0b25b106fab9edaa2f666e63976ddfb17f9de959c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "d66cb9a4ecff562daf795dc9f3129a401df734503d35b690f721accdf2607b00",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "cb79258423caf103a92971725c2894e8cfe12cbcd6f42ab63c9ea26e3eb1b98d",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "b671d2533c74fa03a6f4e0f7d6b18c2d35e53240dc3173da00338550ea21b52d",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "f115e950a4eb2576d2b32cf2924020f28274cd4f518ad1d7205b3823e4fc5b41",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "43539a126606c1768507a82c0fba4e590a0c8c8fb99ffb1c674c5ceb73053810",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "41494277ad4fecd3ce19ddd4194a299ce2da7e7bbebfd4e3198b04bc8037abc2",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "0f2f0d88faf493231e57ceb0f0c911d2e1be2264cac05be2f019318f3389bc25",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "c9b4c845ee18f407770e1b30716bbff2a4c7f29d338672567866c17d2957a33c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "d60beef60e4a7b2b4e87d35d5a2faebea5b520d571feead8f58ff6ffde887aca",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "0193991a3dea596293f823f19fe31d7d04ce6233d897565120a8f7ac0460f5b7",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "177c3f7ec024f3e254ac71fe1ba0ab1758b81894e40bd02624179037f9a480f2",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的扫描；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P03-a.json",
+            "sha256": "9b6111c442c3eb03768b0e1dba8ad89611be3224afd8ba89b46ca17e746e3d28"
+          }
+        ]
+      },
+      "b": {
+        "basis": {
+          "initial_request_sha256": "257544cbdb6cc667bb1b4e7920a5595af90c6cf8ec8909c8fcfbf7a9c7d1a43e",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "a66e639ac13e72326ce593f1b4e68658c5c9de1622448cf5c781018e55c928a1",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 1,
+            "elapsed_ms": 1200
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "纸质文件经常要扫描",
+            "needs_color": false,
+            "requires_scan": true,
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "idle_weeks_pattern": "usually_short",
+            "accepts_outsourced_color": true,
+            "requires_auto_duplex": false,
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "usually_short",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在通常每周使用时的耗材更换和清洁维护口径；仍不推断实际费用或可靠性。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "dd478bd11680d923bdda840d6c184b9cda0138d094af87088657f892658880fe",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "7802ff9790ce97fef3bf93b3a23c584bf6603bc59d08d4b95446e575afd5d1ea",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "68be4e4ad02fa19ff35f7e5765e27265ccbe9bd930125b36f15c83b701fc37e2",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "7f26f74c48440404ef273e3199ef55be42496a57a20d2f1536399f557c2057cc",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "243974f5cf87adee27ea439ef6610df1e5fb5f76013bedc524cc0166f9402e79",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "6994ad875e79ccb219c073344e51e2c4bc72959df093c834d7ae9e2a0e49d432",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "0e0677f457ab37d0b52eabc1bcb213fae1a3ba2b90ff4dc36a903605ef7fca02",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "5a58d34f9974be123785ec7d127d5e76b7f2cf0b09bedabc03e5db0307336322",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "db721c8008ee43e24db29da73f93b756deaba6582366fa8277e752716402c59f",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "7e673032fca93093b41fb1270b5e6fd0c55bedfb33cbd40f7bef3e20aa6e5678",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "fb3ff841c90120222663f6357192afb33576225b0786bee8be83d91688b3ad28",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "c94006d1906093b97c0d4bf92c0c7410bcf8f9ac3382efe4e49d7216179ac575",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "92dc7367178b780c5e49a43b09d9a7fd807d7fcde9f5b2325323792b02d33cb8",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "1f6a31c91d72e841d6d931a9f75f099360b5653ca23f45c4a11cf3a5c71c1e9a",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "9c79728a1c8195d6a1970dc0b25b106fab9edaa2f666e63976ddfb17f9de959c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "d66cb9a4ecff562daf795dc9f3129a401df734503d35b690f721accdf2607b00",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "cb79258423caf103a92971725c2894e8cfe12cbcd6f42ab63c9ea26e3eb1b98d",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "b671d2533c74fa03a6f4e0f7d6b18c2d35e53240dc3173da00338550ea21b52d",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "f115e950a4eb2576d2b32cf2924020f28274cd4f518ad1d7205b3823e4fc5b41",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "43539a126606c1768507a82c0fba4e590a0c8c8fb99ffb1c674c5ceb73053810",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "41494277ad4fecd3ce19ddd4194a299ce2da7e7bbebfd4e3198b04bc8037abc2",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "0f2f0d88faf493231e57ceb0f0c911d2e1be2264cac05be2f019318f3389bc25",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "c9b4c845ee18f407770e1b30716bbff2a4c7f29d338672567866c17d2957a33c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "d60beef60e4a7b2b4e87d35d5a2faebea5b520d571feead8f58ff6ffde887aca",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "0193991a3dea596293f823f19fe31d7d04ce6233d897565120a8f7ac0460f5b7",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "177c3f7ec024f3e254ac71fe1ba0ab1758b81894e40bd02624179037f9a480f2",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的扫描；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P03-b.json",
+            "sha256": "67f6ae7fbc5124a3d49fbc0ccb890628f26cc8d51ec415495f21fa7ab4a85a11"
+          }
+        ]
+      },
+      "outcome": "equal",
+      "limitations": "固定合成oracle，直接组同样允许完整参数澄清；不测真人理解。决策正确性相同时，指南阅读是额外认知步骤，不能宣称净收益。耗时仅本机观测。"
+    },
+    {
+      "id": "P04",
+      "basis": {
+        "initial_request_sha256": "d325e693625ef2d42367be9463d20b473c5cfb9ffaebfd780092484d9d9ca70a",
+        "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+        "user_profile_sha256": "f9afe988973e403f074e568de978d87ea94b8153605463e2f130be264dda8702",
+        "as_of": "2026-11-27",
+        "max_answer_turns": 16,
+        "max_read_requests": 2
+      },
+      "reference_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/paired-reference-v1.json",
+          "sha256": "564a6a9490d4819cb9881d96fd11e46a039224b7e1ed633ebc79ed7df889e31f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/source-claims.json",
+          "sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403"
+        }
+      ],
+      "a": {
+        "basis": {
+          "initial_request_sha256": "d325e693625ef2d42367be9463d20b473c5cfb9ffaebfd780092484d9d9ca70a",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "f9afe988973e403f074e568de978d87ea94b8153605463e2f130be264dda8702",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 0,
+            "elapsed_ms": 1177
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "需要自动双面，维护情况不确定",
+            "needs_color": false,
+            "accepts_outsourced_color": false,
+            "requires_scan": false,
+            "requires_auto_duplex": true,
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": null,
+            "answer_state": "deferred",
+            "status": "unknown",
+            "question": "使用间隔未确认；保留闲置与维护条件为未知，不预设使用频率。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "e282fa57a95322068b5982ff9d3a0901f2965e720d79a23ae0111b7e20c9601f",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "f4d3478332678a742481bd1434fe6507b7a109de350a2542e0750911021e5e15",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "6ffe36a1ca37b9abe8f59c7a71be5034bc06d81244ecae6fe0792d881fb7edec",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "c1a2b7ab6752d1b993485fc826fde420d415f488b89d029a1b152f18be8703ed",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "283fba1f5ffe0d40a945b0db94ff04d3acca37412d39a784d432a2bbf300a824",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "fb87f5f3f48c7e0f713ee5ad1d28064c1150165514b125ba7edfe0ae7ee6947c",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "1d66c23219e41e49f940204a3d0ef4e57116e24c8e66e9fae737d34551666816",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "f3e9931c4da9032b7c21342bb2ad2327203ad692efe54234e0cb55f8a6dd5e05",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "56d8961aeb16ccd3c283fdc2623fd23e189f6bed22b3e035b5f650e6766e4f6b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "84301913801c8ec2aeeb3949dcac2d0d24f02ce1dcb06af8ed94d59611babc41",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "039b6bbe7d305e4a102ddac94e7316508f7a96c46a3972e4f38ac0c8c87de52b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "bce7fc527716bb5dcd32a7a566989dac5ef18b109a4ccadab02da9789be293ac",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "8465ea6ccab6e31bfc7c8ecad0df85c095cea3b13ba1717b1fcab24e508d152f",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "c006c8b25a3acb145668729b25cb5f97c3359b62f55489d69817b4f4f6935d7e",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "a4030d49771b12d1a38be1436b0a7eed368c2c03bc336fd9bb7b0cf64b115cfb",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "ca986ce1b1eb7808c05fa27bddbb01f8ff4610ef1aa840d157124af081b8751a",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "b9a36997b37757930c253339a5270ebc81533a568499e99f8408eaf3e1000de9",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "b6dd190f5508d7cbae0fbbbd68d65e412fae9b4ba4f8df2e6a62b00dacc75841",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "1018b87014e951238dc01333e5f454c59e96515153cebd716dbdd10491914538",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "991ea168c5df652cc35eaec628267401b51fc3823703a35b6735dbb6346d20df",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "93b7cc7a39b0b0ce48cecb89f79d68aac14f3a2e1a2b6ae91b2679266c65cfc6",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "eebb2a2a64fe0c6779cf2885d20955d06e12dafde1fc2556e738c353a3e1b28c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "94d0f442c07b56bf5c524931dd7f936467c20fca60fe382979493a10b33bd39b",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "d6e1ada0761c1c22d45d1c3d2e068f53200c987a79aead2ac3e5c149a455ad2e",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "66d5fc4c17adca123963c4c26654992fbd32e7a02650ebfc1ca1ae57f13e58b1",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "b1af11bde249ebab2482e09046819e23a1993b467893ed5c1d2598cf89774d23",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的自动双面；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P04-a.json",
+            "sha256": "d3dd37f2f36d5a2efc2cdc94dc1f6b220662c5a904e4f6eb197eab82d9fd4cac"
+          }
+        ]
+      },
+      "b": {
+        "basis": {
+          "initial_request_sha256": "d325e693625ef2d42367be9463d20b473c5cfb9ffaebfd780092484d9d9ca70a",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "f9afe988973e403f074e568de978d87ea94b8153605463e2f130be264dda8702",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 1,
+            "elapsed_ms": 1166
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "需要自动双面，维护情况不确定",
+            "needs_color": false,
+            "requires_scan": false,
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "accepts_outsourced_color": false,
+            "requires_auto_duplex": true,
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": null,
+            "answer_state": "deferred",
+            "status": "unknown",
+            "question": "使用间隔未确认；保留闲置与维护条件为未知，不预设使用频率。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "pending_evidence",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "e282fa57a95322068b5982ff9d3a0901f2965e720d79a23ae0111b7e20c9601f",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "f4d3478332678a742481bd1434fe6507b7a109de350a2542e0750911021e5e15",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "6ffe36a1ca37b9abe8f59c7a71be5034bc06d81244ecae6fe0792d881fb7edec",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "c1a2b7ab6752d1b993485fc826fde420d415f488b89d029a1b152f18be8703ed",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "283fba1f5ffe0d40a945b0db94ff04d3acca37412d39a784d432a2bbf300a824",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "fb87f5f3f48c7e0f713ee5ad1d28064c1150165514b125ba7edfe0ae7ee6947c",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "1d66c23219e41e49f940204a3d0ef4e57116e24c8e66e9fae737d34551666816",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "f3e9931c4da9032b7c21342bb2ad2327203ad692efe54234e0cb55f8a6dd5e05",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "56d8961aeb16ccd3c283fdc2623fd23e189f6bed22b3e035b5f650e6766e4f6b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "84301913801c8ec2aeeb3949dcac2d0d24f02ce1dcb06af8ed94d59611babc41",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "039b6bbe7d305e4a102ddac94e7316508f7a96c46a3972e4f38ac0c8c87de52b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "bce7fc527716bb5dcd32a7a566989dac5ef18b109a4ccadab02da9789be293ac",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "8465ea6ccab6e31bfc7c8ecad0df85c095cea3b13ba1717b1fcab24e508d152f",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "c006c8b25a3acb145668729b25cb5f97c3359b62f55489d69817b4f4f6935d7e",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "a4030d49771b12d1a38be1436b0a7eed368c2c03bc336fd9bb7b0cf64b115cfb",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "ca986ce1b1eb7808c05fa27bddbb01f8ff4610ef1aa840d157124af081b8751a",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "b9a36997b37757930c253339a5270ebc81533a568499e99f8408eaf3e1000de9",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "b6dd190f5508d7cbae0fbbbd68d65e412fae9b4ba4f8df2e6a62b00dacc75841",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "1018b87014e951238dc01333e5f454c59e96515153cebd716dbdd10491914538",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "991ea168c5df652cc35eaec628267401b51fc3823703a35b6735dbb6346d20df",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "93b7cc7a39b0b0ce48cecb89f79d68aac14f3a2e1a2b6ae91b2679266c65cfc6",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "eebb2a2a64fe0c6779cf2885d20955d06e12dafde1fc2556e738c353a3e1b28c",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "94d0f442c07b56bf5c524931dd7f936467c20fca60fe382979493a10b33bd39b",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "d6e1ada0761c1c22d45d1c3d2e068f53200c987a79aead2ac3e5c149a455ad2e",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "66d5fc4c17adca123963c4c26654992fbd32e7a02650ebfc1ca1ae57f13e58b1",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "b1af11bde249ebab2482e09046819e23a1993b467893ed5c1d2598cf89774d23",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的自动双面；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P04-b.json",
+            "sha256": "a5bc73aaf41015fcceafca8d700b59674d965db22297bc762634c261c8af5925"
+          }
+        ]
+      },
+      "outcome": "equal",
+      "limitations": "固定合成oracle，直接组同样允许完整参数澄清；不测真人理解。决策正确性相同时，指南阅读是额外认知步骤，不能宣称净收益。耗时仅本机观测。"
+    },
+    {
+      "id": "P05",
+      "basis": {
+        "initial_request_sha256": "1139d4305c271d918dd0a7722766414609f872d79356d48ed725f9f25bdc1fdf",
+        "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+        "user_profile_sha256": "fa1a9c006ed29e5e8bb88d204d4e04a09650847a6ed7c58568b934d3502e450c",
+        "as_of": "2026-11-27",
+        "max_answer_turns": 16,
+        "max_read_requests": 2
+      },
+      "reference_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/paired-reference-v1.json",
+          "sha256": "564a6a9490d4819cb9881d96fd11e46a039224b7e1ed633ebc79ed7df889e31f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/source-claims.json",
+          "sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403"
+        }
+      ],
+      "a": {
+        "basis": {
+          "initial_request_sha256": "1139d4305c271d918dd0a7722766414609f872d79356d48ed725f9f25bdc1fdf",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "fa1a9c006ed29e5e8bb88d204d4e04a09650847a6ed7c58568b934d3502e450c",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 0,
+            "elapsed_ms": 1151
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "熟悉参数的专家，只需黑白",
+            "needs_color": false,
+            "accepts_outsourced_color": true,
+            "requires_scan": false,
+            "requires_auto_duplex": false,
+            "idle_weeks_pattern": "usually_short",
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "usually_short",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在通常每周使用时的耗材更换和清洁维护口径；仍不推断实际费用或可靠性。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "82a435f8fe6a8a4d9c98b859730a4396baa3ebb903530bb6fa4ed188bb200885",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "c8bfbb4de28c1795837fc05b9a2f452ded3b2872f2525d4a6b229ed4f1f16ed7",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "9b5c3c1ed6342cbaf80b070277af7dbbada95772e12ccc348ab7136c8d3aaece",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "88ea14847d440f161db184975ba9e497212676b1b167b071a42145f10e086f5f",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "148eac1b9f37fd9b578d8b6491d3177802c62472d6675076277156f23d14f0ac",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "d7d18ac250e4b2af7cbde8f5ee9a01ad320426be6483ce9999a955f40efcb73f",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "af266ec4255bde849c22a993951ba3e78330c995db373cb6dc8b7934e69f508f",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "5b7377806f829506ebc36c6936681f439ec7d17f13c2714d9ad40069e78a9a79",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "e200d2357c7a34a29a4ecc1504a65f2b13f72cd0f4aad1213eebce5882032c3c",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "40b6811d5e10ccdef04e34b10069993c295ef42de7b556501a91f7950c131f5b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "027f7424daeed22df80a0a85f64cb7689db09ab1612c9ccea2e2765fe45702cf",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "d77a0918c332b5357dd646fde0947d5c2b37926790c589ecc31c71705bc20612",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "0eca5dc8e7555eaa1a35c0ecec29772873f776b48440a3435fcb84ff24ecf6a5",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "51ab7e16c960c439966d6aaae3479c5651aec648ca1e7aa389cdd4b029f3de05",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "70d6106275a6646cb5512131a523dd3101924ba9904340cbd4a00f19a7072289",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "8d7c540badf09da9294bbe609867d0798a38ebaf690a1e2766ef1de5da4b2f48",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "440584441aaacaac475bad71ea082d4520fa62471336f46b69e1de78a2d63301",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "9a69b0948e9338b1adcc3ed6a8922489bb718abce97e6487b61a81ca1841bd44",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "c3cdbd3be335a7cc335ea4154cd21d5b921d8ca2570e6d4b6f8ebed78a156bed",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "7803188f02ea6b39b44e930511ea3103f56e3547f5b99eb7adf8734552d9cc6d",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "546a0cb7274ae4a9ca18a82d99acd17cd03832bd7c19c07c5140b9b7133328c3",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "36a1c1de95254a65fe08d63f487d2507edf8a6c0b7181fef4b699251fa538d54",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "68ae063a68150e63485c83d8b0b8af73af99f04f375ba21edd450294d5d9aacf",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "ea7ca00e5e02d6cf3f3b3a6f071092157f70247155c9da462bbdf44fe239efb5",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "7ca155fecae6002ef52e4ce7bb25f6bfe81d4cfa19bf06788b91d2403173691f",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "83e156797e97806cb6d1071085f16e8e83ab3afe48b0062026750783d9b607b5",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P05-a.json",
+            "sha256": "4764dd7c6d6ec73699ee857b2262ab700560712113dedbb0ce02f405d132a2ed"
+          }
+        ]
+      },
+      "b": {
+        "basis": {
+          "initial_request_sha256": "1139d4305c271d918dd0a7722766414609f872d79356d48ed725f9f25bdc1fdf",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "fa1a9c006ed29e5e8bb88d204d4e04a09650847a6ed7c58568b934d3502e450c",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 8,
+            "read_requests": 2,
+            "extra_guide_read": 1,
+            "elapsed_ms": 1147
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "熟悉参数的专家，只需黑白",
+            "needs_color": false,
+            "requires_scan": false,
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "idle_weeks_pattern": "usually_short",
+            "accepts_outsourced_color": true,
+            "requires_auto_duplex": false,
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": "usually_short",
+            "answer_state": "confirmed",
+            "status": "research_required",
+            "question": "核各适用路线在通常每周使用时的耗材更换和清洁维护口径；仍不推断实际费用或可靠性。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [
+            {
+              "candidate_id": "Brother HL-L1238W",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "82a435f8fe6a8a4d9c98b859730a4396baa3ebb903530bb6fa4ed188bb200885",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "c8bfbb4de28c1795837fc05b9a2f452ded3b2872f2525d4a6b229ed4f1f16ed7",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "9b5c3c1ed6342cbaf80b070277af7dbbada95772e12ccc348ab7136c8d3aaece",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "88ea14847d440f161db184975ba9e497212676b1b167b071a42145f10e086f5f",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "148eac1b9f37fd9b578d8b6491d3177802c62472d6675076277156f23d14f0ac",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "d7d18ac250e4b2af7cbde8f5ee9a01ad320426be6483ce9999a955f40efcb73f",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "brother-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "af266ec4255bde849c22a993951ba3e78330c995db373cb6dc8b7934e69f508f",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-separate-drum"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "5b7377806f829506ebc36c6936681f439ec7d17f13c2714d9ad40069e78a9a79",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "e200d2357c7a34a29a4ecc1504a65f2b13f72cd0f4aad1213eebce5882032c3c",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "40b6811d5e10ccdef04e34b10069993c295ef42de7b556501a91f7950c131f5b",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "027f7424daeed22df80a0a85f64cb7689db09ab1612c9ccea2e2765fe45702cf",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "d77a0918c332b5357dd646fde0947d5c2b37926790c589ecc31c71705bc20612",
+                  "status": "met",
+                  "text": "1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-tn118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "0eca5dc8e7555eaa1a35c0ecec29772873f776b48440a3435fcb84ff24ecf6a5",
+                  "status": "met",
+                  "text": "10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "brother-dr118-yield"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                }
+              ]
+            },
+            {
+              "candidate_id": "HP M232dw",
+              "research_status": "eligible_for_research",
+              "comparisons": [
+                {
+                  "requirement_id": "cognition:scan",
+                  "claim_id": "51ab7e16c960c439966d6aaae3479c5651aec648ca1e7aa389cdd4b029f3de05",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-scan"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:auto_duplex",
+                  "claim_id": "70d6106275a6646cb5512131a523dd3101924ba9904340cbd4a00f19a7072289",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-auto-duplex"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:manual_duplex",
+                  "claim_id": "8d7c540badf09da9294bbe609867d0798a38ebaf690a1e2766ef1de5da4b2f48",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:laser_print",
+                  "claim_id": "440584441aaacaac475bad71ea082d4520fa62471336f46b69e1de78a2d63301",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-laser"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:wechat_miniprogram",
+                  "claim_id": "9a69b0948e9338b1adcc3ed6a8922489bb718abce97e6487b61a81ca1841bd44",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-wechat-path"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:color_print",
+                  "claim_id": "c3cdbd3be335a7cc335ea4154cd21d5b921d8ca2570e6d4b6f8ebed78a156bed",
+                  "status": "failed",
+                  "text": "根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。",
+                  "supporting_fact_ids": [
+                    "hp-mono"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:separate_drum",
+                  "claim_id": "7803188f02ea6b39b44e930511ea3103f56e3547f5b99eb7adf8734552d9cc6d",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:starter_included",
+                  "claim_id": "546a0cb7274ae4a9ca18a82d99acd17cd03832bd7c19c07c5140b9b7133328c3",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-starter-included"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replacement_137a_x",
+                  "claim_id": "36a1c1de95254a65fe08d63f487d2507edf8a6c0b7181fef4b699251fa538d54",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replacement-137"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:replace_on_unacceptable_quality",
+                  "claim_id": "68ae063a68150e63485c83d8b0b8af73af99f04f375ba21edd450294d5d9aacf",
+                  "status": "met",
+                  "text": "根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。",
+                  "supporting_fact_ids": [
+                    "hp-replace-on-quality"
+                  ],
+                  "limit": "仅对输入的结构化事实作规则推导，外部事实内容不保证真实"
+                },
+                {
+                  "requirement_id": "cognition:starter_toner_yield",
+                  "claim_id": "ea7ca00e5e02d6cf3f3b3a6f071092157f70247155c9da462bbdf44fe239efb5",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:replacement_toner_yield",
+                  "claim_id": "7ca155fecae6002ef52e4ce7bb25f6bfe81d4cfa19bf06788b91d2403173691f",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                },
+                {
+                  "requirement_id": "cognition:drum_yield",
+                  "claim_id": "83e156797e97806cb6d1071085f16e8e83ab3afe48b0062026750783d9b607b5",
+                  "status": "unknown",
+                  "text": "缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。",
+                  "supporting_fact_ids": [],
+                  "limit": "证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核"
+                }
+              ]
+            }
+          ],
+          "next_step": "核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P05-b.json",
+            "sha256": "3b26d7670bf2f023c827f84ab81d3e673806ed4cfaa46dadaa5b46a0afe6d429"
+          }
+        ]
+      },
+      "outcome": "equal",
+      "limitations": "固定合成oracle，直接组同样允许完整参数澄清；不测真人理解。决策正确性相同时，指南阅读是额外认知步骤，不能宣称净收益。耗时仅本机观测。"
+    },
+    {
+      "id": "P06",
+      "basis": {
+        "initial_request_sha256": "d5bc3fa536b5d40b89c6b64b9165cfa77f942b25973d1905ecebcd5c9e7eac9f",
+        "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+        "user_profile_sha256": "d0cba8775e95e679a140d37e1256e9963a335185c81459089c79e8c146dbbd7e",
+        "as_of": "2026-11-27",
+        "max_answer_turns": 16,
+        "max_read_requests": 2
+      },
+      "reference_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/paired-reference-v1.json",
+          "sha256": "564a6a9490d4819cb9881d96fd11e46a039224b7e1ed633ebc79ed7df889e31f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/source-claims.json",
+          "sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403"
+        }
+      ],
+      "a": {
+        "basis": {
+          "initial_request_sha256": "d5bc3fa536b5d40b89c6b64b9165cfa77f942b25973d1905ecebcd5c9e7eac9f",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "d0cba8775e95e679a140d37e1256e9963a335185c81459089c79e8c146dbbd7e",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 7,
+            "read_requests": 2,
+            "extra_guide_read": 0,
+            "elapsed_ms": 1106
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "彩印需求尚未确定，使用间隔未知",
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": null,
+            "answer_state": "deferred",
+            "status": "unknown",
+            "question": "使用间隔未确认；保留闲置与维护条件为未知，不预设使用频率。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [],
+          "next_step": "这次购买主机的预算上限是多少元？",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P06-a.json",
+            "sha256": "4686ea181342bc9780523184a92a50494471c992498fa90251e3a4bbc1784c08"
+          }
+        ]
+      },
+      "b": {
+        "basis": {
+          "initial_request_sha256": "d5bc3fa536b5d40b89c6b64b9165cfa77f942b25973d1905ecebcd5c9e7eac9f",
+          "source_set_sha256": "a0dac7674ae3a7245b68f62e2b1fa6353d2357088b87eaaa127dd0a27d92d403",
+          "user_profile_sha256": "d0cba8775e95e679a140d37e1256e9963a335185c81459089c79e8c146dbbd7e",
+          "as_of": "2026-11-27",
+          "max_answer_turns": 16,
+          "max_read_requests": 2
+        },
+        "output": {
+          "metrics": {
+            "missing_fields": [],
+            "missing_deferrals": [],
+            "route_correct": true,
+            "idle_correct": true,
+            "safety_error": false,
+            "answer_turns": 7,
+            "read_requests": 2,
+            "extra_guide_read": 1,
+            "elapsed_ms": 1147
+          },
+          "confirmed": {
+            "category": "printer",
+            "usage": "彩印需求尚未确定，使用间隔未知",
+            "monthly_pages_range": [
+              0,
+              50
+            ],
+            "wechat_required": false,
+            "device_deployment_region": "中国大陆河南省"
+          },
+          "routes": [
+            {
+              "id": "mono_laser",
+              "label": "黑白激光",
+              "status": "consider",
+              "evidence_ids": [],
+              "conditions": [
+                "必须在家彩印时不适用"
+              ],
+              "limitations": [
+                "尚未核实各路线长期维护差异"
+              ]
+            },
+            {
+              "id": "color_inkjet",
+              "label": "喷墨或其他彩色路线",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人确认彩色需求后再查路线"
+              ],
+              "limitations": [
+                "未核专业比较资料，不排名"
+              ]
+            },
+            {
+              "id": "outsourcing",
+              "label": "外部打印或暂缓购买",
+              "status": "unknown",
+              "evidence_ids": [],
+              "conditions": [
+                "本人愿意外部打印时比较便利性与费用"
+              ],
+              "limitations": [
+                "未核当地费用与可达性"
+              ]
+            }
+          ],
+          "usage_research": {
+            "field": "idle_weeks_pattern",
+            "answer": null,
+            "answer_state": "deferred",
+            "status": "unknown",
+            "question": "使用间隔未确认；保留闲置与维护条件为未知，不预设使用频率。",
+            "source_ids": [
+              "rtings-cost-method-2021"
+            ],
+            "hard_requirement": false,
+            "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+          },
+          "assessments": [],
+          "next_step": "这次购买主机的预算上限是多少元？",
+          "unknowns": [
+            "路线间独立专业试验尚待核源",
+            "真实维护费用、闲置后表现和家庭实际耗材量未核",
+            "具体型号、销售配置、价格及库存需单独验证"
+          ]
+        },
+        "raw_artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P06-b.json",
+            "sha256": "e81f81731d1b5f2ba6f1fc04ebf6dc39b2ab524a1dcfef146c10d9db693dfa70"
+          }
+        ]
+      },
+      "outcome": "equal",
+      "limitations": "固定合成oracle，直接组同样允许完整参数澄清；不测真人理解。决策正确性相同时，指南阅读是额外认知步骤，不能宣称净收益。耗时仅本机观测。"
+    }
+  ]
+}

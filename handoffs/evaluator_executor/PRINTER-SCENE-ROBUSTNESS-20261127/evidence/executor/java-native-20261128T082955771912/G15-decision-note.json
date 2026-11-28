@@ -1,0 +1,351 @@
+{
+  "schema_version": 1,
+  "document_type": "local_research_decision_note",
+  "as_of": "2026-11-28",
+  "purpose": "本机研究说明，不是订单、购买许可或实时报价",
+  "original_turns": [],
+  "confirmed_requirements": {
+    "category": "printer",
+    "usage": "家里想买打印机，不懂参数",
+    "needs_color": false,
+    "accepts_outsourced_color": true,
+    "idle_weeks_pattern": "often_long"
+  },
+  "deferred": [],
+  "withdrawn": [],
+  "guide_id": "printer-cognition-guide",
+  "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+  "guide_status": "partial",
+  "parameter_reference": [
+    {
+      "id": "color",
+      "label": "彩色还是黑白",
+      "why_it_matters": "先想是否必须在家打印彩色；偶尔彩印能否外包也要本人决定。",
+      "question_field": "needs_color",
+      "source_ids": [],
+      "claim_ids": [],
+      "evidence_status": "pending",
+      "user_decides": "needs_color",
+      "product_evidence": "具体型号适用事实须单独核验",
+      "personal_assumption": "只在本人明确提供情景时采用，不代填实际数值"
+    },
+    {
+      "id": "function",
+      "label": "扫描与双面",
+      "why_it_matters": "需要扫描纸质资料吗？希望机器自动翻面吗？两项分别核型号。",
+      "question_field": "requires_scan",
+      "source_ids": [
+        "hp-cn-home"
+      ],
+      "claim_ids": [
+        "guide-functions"
+      ],
+      "evidence_status": "supported",
+      "user_decides": "requires_scan",
+      "product_evidence": "具体型号适用事实须单独核验",
+      "personal_assumption": "只在本人明确提供情景时采用，不代填实际数值"
+    },
+    {
+      "id": "usage",
+      "label": "使用场景",
+      "why_it_matters": "估计月印量和使用间隔，不知道可暂缓；闲置影响尚缺专业比较证据。",
+      "question_field": "monthly_pages_range",
+      "source_ids": [],
+      "claim_ids": [],
+      "evidence_status": "pending",
+      "user_decides": "monthly_pages_range",
+      "product_evidence": "具体型号适用事实须单独核验",
+      "personal_assumption": "只在本人明确提供情景时采用，不代填实际数值"
+    },
+    {
+      "id": "idle",
+      "label": "连续多周闲置",
+      "why_it_matters": "本人确认是否经常连续多周不用；实际维护与恢复条件需要资料验证，不凭印量推断。",
+      "question_field": "idle_weeks_pattern",
+      "source_ids": [
+        "rtings-cost-method-2021"
+      ],
+      "claim_ids": [
+        "guide-cost-method"
+      ],
+      "evidence_status": "supported",
+      "user_decides": "idle_weeks_pattern",
+      "product_evidence": "具体型号适用事实须单独核验",
+      "personal_assumption": "只在本人明确提供情景时采用，不代填实际数值"
+    },
+    {
+      "id": "cost",
+      "label": "长期耗材成本",
+      "why_it_matters": "除主机外，核对耗材种类、标称测试条件、随箱量和更换价格；不要先填虚构维护费。",
+      "question_field": "budget_max_cny",
+      "source_ids": [
+        "rtings-cost-method-2021"
+      ],
+      "claim_ids": [
+        "guide-cost-method"
+      ],
+      "evidence_status": "supported",
+      "user_decides": "budget_max_cny",
+      "product_evidence": "具体型号适用事实须单独核验",
+      "personal_assumption": "只在本人明确提供情景时采用，不代填实际数值"
+    }
+  ],
+  "cognition_claims": [
+    {
+      "id": "guide-functions",
+      "text": "有的打印机兼有扫描和自动双面；选购时应分别核实功能，不能只看打印机名称。",
+      "source_ids": [
+        "hp-cn-home"
+      ],
+      "conditions": [
+        "以 M232dw 官方规格为例"
+      ],
+      "exceptions": [
+        "不能推断其他型号、微信复用或实际体验"
+      ],
+      "counter_evidence": [
+        "不能推断其他型号、微信复用或实际体验"
+      ],
+      "evidence_status": "supported",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "fact_ids": [
+        "hp-scan",
+        "hp-auto-duplex"
+      ],
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+    },
+    {
+      "id": "guide-consumables",
+      "text": "部分激光打印机鼓粉分离；长期费用不能只看墨粉价格，还要核对硒鼓等耗材。",
+      "source_ids": [
+        "brother-cn-202405-brochure"
+      ],
+      "conditions": [
+        "以 HL-L1238W 系列规格册为例"
+      ],
+      "exceptions": [
+        "不推断所有激光机的结构或实际维护费用"
+      ],
+      "counter_evidence": [
+        "不推断所有激光机的结构或实际维护费用"
+      ],
+      "evidence_status": "supported",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "fact_ids": [
+        "brother-separate-drum"
+      ],
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+    },
+    {
+      "id": "guide-yield",
+      "text": "标称耗材页数有测试条件，不等于家里一定能打这么多页。",
+      "source_ids": [
+        "brother-cn-202405-brochure"
+      ],
+      "conditions": [
+        "限规格册所述 ISO 测试及单页作业口径"
+      ],
+      "exceptions": [
+        "随箱量、家庭实测产量和维护费未知"
+      ],
+      "counter_evidence": [
+        "随箱量、家庭实测产量和维护费未知"
+      ],
+      "evidence_status": "supported",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "fact_ids": [
+        "brother-tn118-yield",
+        "brother-dr118-yield"
+      ],
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+    },
+    {
+      "id": "guide-cost-method",
+      "text": "单页耗材成本与长期总费用不同；比较时应另问维护费、随箱量和实际使用条件。",
+      "source_ids": [
+        "rtings-cost-method-2021"
+      ],
+      "conditions": [
+        "同测试口径的估算产量与耗材价格仅作方法参考"
+      ],
+      "exceptions": [
+        "清洁耗墨、鼓组件、长期可靠性未纳入该测试成本"
+      ],
+      "counter_evidence": [
+        "评测时价格与家庭真实产量可能不同；少量打印时单页成本未必是首要因素"
+      ],
+      "evidence_status": "supported",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      }
+    }
+  ],
+  "cognition_sources": [
+    {
+      "id": "hp-cn-home",
+      "type": "official_exact_model_document",
+      "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+      "source_group": "hp",
+      "captured_on": "2026-11-25",
+      "published_on": null,
+      "review_status": "prior_narrow_review",
+      "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+      "locator": "M232dw 段落，190–204行；限制249、256–261行",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+      "valid_until": "2026-12-25",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      }
+    },
+    {
+      "id": "brother-cn-202405-brochure",
+      "type": "official_exact_model_document",
+      "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+      "source_group": "brother",
+      "captured_on": "2026-11-25",
+      "published_on": "2024-05",
+      "review_status": "prior_narrow_review",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+      "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+      "valid_until": "2026-12-25",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      }
+    },
+    {
+      "id": "rtings-cost-method-2021",
+      "type": "independent_comparison_method",
+      "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+      "source_group": "rtings",
+      "captured_on": "2026-11-27",
+      "published_on": "2021-09-21",
+      "review_status": "executor_read_pending_independent_review",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+      "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json"
+    }
+  ],
+  "routes": [
+    {
+      "id": "mono_laser",
+      "label": "黑白激光",
+      "status": "consider",
+      "evidence_ids": [],
+      "conditions": [
+        "必须在家彩印时不适用"
+      ],
+      "limitations": [
+        "尚未核实各路线长期维护差异"
+      ]
+    },
+    {
+      "id": "color_inkjet",
+      "label": "喷墨或其他彩色路线",
+      "status": "unknown",
+      "evidence_ids": [],
+      "conditions": [
+        "本人确认彩色需求后再查路线"
+      ],
+      "limitations": [
+        "未核专业比较资料，不排名"
+      ]
+    },
+    {
+      "id": "outsourcing",
+      "label": "外部打印或暂缓购买",
+      "status": "consider",
+      "evidence_ids": [],
+      "conditions": [
+        "本人愿意外部打印时比较便利性与费用"
+      ],
+      "limitations": [
+        "未核当地费用与可达性"
+      ]
+    }
+  ],
+  "usage_research": {
+    "field": "idle_weeks_pattern",
+    "answer": "often_long",
+    "answer_state": "confirmed",
+    "status": "research_required",
+    "question": "核各适用路线在连续多周不用后的恢复步骤、清洁耗材和维护条件；需型号说明及有条件的独立测试，缺证不淘汰。",
+    "source_ids": [
+      "rtings-cost-method-2021"
+    ],
+    "hard_requirement": false,
+    "limitation": "资料仅支持维护与单页成本分开；没有可据此选择路线的闲置阈值。"
+  },
+  "candidate_assessments": [],
+  "candidate_claims": [],
+  "candidate_source_records": [],
+  "requirements": [],
+  "personal_assumptions": {},
+  "unknowns": [
+    "路线间独立专业试验尚待核源",
+    "真实维护费用、闲置后表现和家庭实际耗材量未核",
+    "具体型号、销售配置、价格及库存需单独验证"
+  ],
+  "next_step": "微信打印是必须条件，还是更喜欢但非必须？",
+  "guidance_focus": {
+    "schema_version": 1,
+    "guide_id": "printer-cognition-guide",
+    "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+    "state_version": 1,
+    "status": "ask",
+    "field": "wechat_required",
+    "question": "微信打印是必须条件，还是更喜欢但非必须？",
+    "explanation": "微信打印是否必须，决定能否用其他打印方式替代。",
+    "claim_ids": [],
+    "source_ids": [],
+    "basis_kind": "user_choice",
+    "if_unknown": "可以暂不确定；保留这一条件为未知，不替你作答或据此淘汰候选。",
+    "effect_if_yes": "作为硬要求，继续核具体微信流程。",
+    "effect_if_no": "作为偏好，不因此直接淘汰。",
+    "next_step": "本人提交、暂缓或展开完整指南；按明确答复重算。",
+    "purchase_recommendation_approved": false,
+    "transactions_enabled": false
+  },
+  "guide_reference_change": {
+    "previous": {
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "a8041977a2211095346520693397fab6562daefcd10f6181356b33ccb37f6aa1",
+      "source_ids": [
+        "brother-cn-202405-brochure",
+        "hp-cn-home",
+        "rtings-cost-method-2021"
+      ]
+    },
+    "current": {
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+      "source_ids": [
+        "brother-cn-202405-brochure",
+        "hp-cn-home",
+        "rtings-cost-method-2021"
+      ]
+    },
+    "notice": "指南版本或来源已变化；旧认知引用失效，按当前材料重算，不复活旧判断。用户明确答案保留。"
+  },
+  "invalidation": "需求、认知来源版本、时点、地区、商品证据或假设变化均应重新计算。",
+  "purchase_recommendation_approved": false,
+  "transactions_enabled": false,
+  "live_price_verified": false
+}

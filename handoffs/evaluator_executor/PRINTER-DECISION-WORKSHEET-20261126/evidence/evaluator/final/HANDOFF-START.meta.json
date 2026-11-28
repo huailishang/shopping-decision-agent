@@ -1,0 +1,23 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "HANDOFF-START",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_SCOPE.py",
+    "--phase",
+    "start"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_SCOPE.py --phase start",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-26T08:10:19.014965+00:00",
+  "finished_at_utc": "2026-11-26T08:10:50.925760+00:00",
+  "exit_code": 0,
+  "stdout_path": "HANDOFF-START.stdout.log",
+  "stderr_path": "HANDOFF-START.stderr.log",
+  "stdout_bytes": 401,
+  "stderr_bytes": 0,
+  "stdout_sha256": "92aae14694c26671acf5f8b97af57962b775f95404364020d1e61d1e3411612b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,71 @@
+{
+  "task_id": "PRINTER-COGNITION-FIRST-20261126",
+  "state": "EXECUTING",
+  "next_role": "Executor",
+  "previous_checkpoint": "checkpoint-first-slice.json",
+  "this_slice": {
+    "guided_factor": "idle_weeks_pattern",
+    "guide_probe": "3/3",
+    "context_probe": "2/2",
+    "mandatory_five_suites": "15/15",
+    "carried_decisive_actions": "3/3",
+    "old_targeted_regression": "59/59 before optional guide reference migration; persistence and journeys 13/13 rerun after migration",
+    "native_partial_journeys": [
+      "G01",
+      "G02",
+      "G04",
+      "G05",
+      "G06",
+      "G14"
+    ],
+    "native_reset_check": true
+  },
+  "scope": {
+    "phase": "post",
+    "checks": {
+      "head_matches": true,
+      "index_empty": true,
+      "index_matches": true,
+      "manifest_matches": true,
+      "protected_unchanged": true
+    },
+    "protected_count": 3651,
+    "changed_protected_paths": [],
+    "changed_product_paths": [
+      "desktop/CognitionGuideSwingRegression.java",
+      "desktop/ShoppingDecisionDesktop.java",
+      "shopping_decision/action_ranking.py",
+      "shopping_decision/chat_bridge.py",
+      "shopping_decision/cognition_comparison.py",
+      "shopping_decision/cognition_guide.py",
+      "shopping_decision/context_builder.py",
+      "shopping_decision/cost_scenario.py",
+      "shopping_decision/decision_worksheet.py",
+      "shopping_decision/dialogue_flow.py",
+      "tests/test_cognition_context_lineage.py",
+      "tests/test_cognition_guide.py",
+      "tests/test_cognition_guide_bridge.py",
+      "tests/test_cognition_guide_persistence.py",
+      "tests/test_guided_requirements.py"
+    ],
+    "baseline_sha256": "13113b9d7d335b7a16993c31fc5ae2eda3347a365008f6b600f5b2577cd8a751"
+  },
+  "public_query_new": 0,
+  "public_read_new": 0,
+  "real_model_calls_new": 0,
+  "commit_push": false,
+  "remaining": [
+    "Complete source claims evidence and actual independent source revocation/new-version journey G13 without changing historical artifacts",
+    "Complete decision note export and native chains including G13 (8 minimum total); separate native G16 full fault/cancel checks",
+    "Register fair A/B references and execute 20 chains, 6 paired tasks, 13 formal L2 checks; independent holdout reserved to evaluator",
+    "Update current Java exact hash in historical audit after final bytes are frozen; full-suite and historical audit not yet run in this task"
+  ],
+  "limitations": [
+    "No formal L2 or independent PASS; native marker intentionally partial",
+    "New idle factor changes research task, not evidence-based route preference",
+    "No claim of actual user benefit, live model quality, prices or real transaction",
+    "Session elapsed not verified effective hours; no backfill"
+  ],
+  "session_elapsed_seconds": 579.104073,
+  "recorded_at": "2026-11-27T15:32:29.055837+08:00"
+}

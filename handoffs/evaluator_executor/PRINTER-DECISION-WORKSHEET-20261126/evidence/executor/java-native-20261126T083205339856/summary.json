@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "role": "executor",
+  "platform": "win32",
+  "python": "D:\\SoftWare\\Anaconda\\install\\python.exe",
+  "commands": [
+    {
+      "label": "compile",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\javac.EXE",
+        "-encoding",
+        "UTF-8",
+        "--release",
+        "17",
+        "-d",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISION-WORKSHEET-20261126\\evidence\\executor\\java-native-20261126T083205339856\\classes",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatBridgeRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatNativeAuditRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\CognitionSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DecisionWorksheetRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DecisionWorksheetSwingRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DesktopBridgeClient.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\H10JavaRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\P04MarketplaceRegression.java",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ShoppingDecisionDesktop.java"
+      ],
+      "start_utc": "2026-11-26T08:32:05.349651+00:00",
+      "end_utc": "2026-11-26T08:32:08.906711+00:00",
+      "exit_code": 0
+    },
+    {
+      "label": "ChatBridgeRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISION-WORKSHEET-20261126\\evidence\\executor\\java-native-20261126T083205339856\\classes",
+        "ChatBridgeRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe"
+      ],
+      "start_utc": "2026-11-26T08:32:08.906711+00:00",
+      "end_utc": "2026-11-26T08:32:11.254294+00:00",
+      "exit_code": 0
+    },
+    {
+      "label": "ChatSwingRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISION-WORKSHEET-20261126\\evidence\\executor\\java-native-20261126T083205339856\\classes",
+        "ChatSwingRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe"
+      ],
+      "start_utc": "2026-11-26T08:32:11.254294+00:00",
+      "end_utc": "2026-11-26T08:32:16.053344+00:00",
+      "exit_code": 0
+    },
+    {
+      "label": "DecisionWorksheetRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISION-WORKSHEET-20261126\\evidence\\executor\\java-native-20261126T083205339856\\classes",
+        "DecisionWorksheetRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISION-WORKSHEET-20261126\\evidence\\executor\\java-native-20261126T083205339856"
+      ],
+      "start_utc": "2026-11-26T08:32:16.053344+00:00",
+      "end_utc": "2026-11-26T08:32:18.014460+00:00",
+      "exit_code": 0
+    },
+    {
+      "label": "DecisionWorksheetSwingRegression",
+      "argv": [
+        "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE",
+        "-cp",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISION-WORKSHEET-20261126\\evidence\\executor\\java-native-20261126T083205339856\\classes",
+        "DecisionWorksheetSwingRegression",
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISION-WORKSHEET-20261126\\evidence\\executor\\java-native-20261126T083205339856"
+      ],
+      "start_utc": "2026-11-26T08:32:18.014460+00:00",
+      "end_utc": "2026-11-26T08:32:28.191633+00:00",
+      "exit_code": 0
+    }
+  ],
+  "native_requirement": "new Swing check must execute events and print WORKSHEET_NATIVE_PASS only after actual assertions"
+}

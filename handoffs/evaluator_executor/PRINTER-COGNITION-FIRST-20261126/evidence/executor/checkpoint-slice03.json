@@ -1,0 +1,69 @@
+{
+  "task_id": "PRINTER-COGNITION-FIRST-20261126",
+  "state": "EXECUTING",
+  "next_role": "Executor",
+  "executor_status": "BLOCKED_NOT_SUBMITTED",
+  "mandatory_gate_status": "FAIL",
+  "gate_passed": 12,
+  "gate_total": 13,
+  "failed_check": "VP-13",
+  "failure": [
+    "current active accounting incomplete"
+  ],
+  "counts": {
+    "completed": 20,
+    "core_completed": 14,
+    "java_event_completed": 10,
+    "supported_claims": 4,
+    "source_groups": 3,
+    "paired_tasks": 6,
+    "active_seconds": 1859.459384,
+    "reads": 2,
+    "queries": 1
+  },
+  "full_python_tests": 675,
+  "pair_outcomes": {
+    "equal": 6,
+    "improved": 0,
+    "regressed": 0
+  },
+  "scope": {
+    "phase": "post",
+    "checks": {
+      "head_matches": true,
+      "index_empty": true,
+      "index_matches": true,
+      "manifest_matches": true,
+      "protected_unchanged": true
+    },
+    "protected_count": 3651,
+    "changed_protected_paths": [],
+    "changed_product_paths": [
+      "desktop/CognitionGuideRegression.java",
+      "desktop/CognitionGuideSwingRegression.java",
+      "desktop/ShoppingDecisionDesktop.java",
+      "knowledge/printer_cognition_guide_v1.json",
+      "scripts/audit_model_history_readonly.py",
+      "shopping_decision/action_ranking.py",
+      "shopping_decision/chat_bridge.py",
+      "shopping_decision/cognition_comparison.py",
+      "shopping_decision/cognition_guide.py",
+      "shopping_decision/context_builder.py",
+      "shopping_decision/cost_scenario.py",
+      "shopping_decision/decision_note.py",
+      "shopping_decision/decision_worksheet.py",
+      "shopping_decision/dialogue_flow.py",
+      "shopping_decision/guide_binding.py",
+      "tests/test_cognition_context_lineage.py",
+      "tests/test_cognition_guide.py",
+      "tests/test_cognition_guide_bridge.py",
+      "tests/test_cognition_guide_persistence.py",
+      "tests/test_guided_requirements.py"
+    ],
+    "baseline_sha256": "13113b9d7d335b7a16993c31fc5ae2eda3347a365008f6b600f5b2577cd8a751"
+  },
+  "gate_sha256": "d81ea4d3e446dd545e87c3c7489f2ae9fcffe14c826f7461ee39afe1570b86cd",
+  "commit_push": false,
+  "new_model_calls": 0,
+  "recorded_at": "2026-11-27T15:53:50.640147+08:00"
+}

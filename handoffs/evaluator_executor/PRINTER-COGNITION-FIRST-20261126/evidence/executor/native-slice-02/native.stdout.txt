@@ -1,0 +1,8 @@
+PASS G01 native coarse request and guide
+PASS G04 native reference only drafts
+PASS G05 native explicit confirmation and changed research
+PASS G06 native defer, confirm, withdraw
+PASS G02 native color and outsourcing route decisions
+PASS G14 native save and new-process restore of guide inputs
+PASS partial native reset
+COGNITION_GUIDE_NATIVE_PARTIAL

@@ -1,0 +1,82 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-DECISION-WORKSHEET-20261126
+runtime: WSL Python3 UTF-8; Java checker forwards to existing Windows Python/JDK for native Swing
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-03, AC-04]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_BUSINESS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-02, AC-03, AC-04, AC-05, AC-06, AC-07]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_TESTS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-01, AC-02, AC-04]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_BUSINESS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-02, AC-04, AC-07]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: [AC-01, AC-02, AC-03, AC-04, AC-05, AC-06, AC-08]
+    cwd: .
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: [AC-08]
+    cwd: .
+    command: [python3, -X, utf8, scripts/audit_model_history_readonly.py, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-07
+    ac: [AC-03, AC-06, AC-07, AC-08]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_JAVA.py, --role, executor]
+    evaluator_command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_JAVA.py, --role, evaluator]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-08
+    ac: [AC-08]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_SCOPE.py, --phase, post]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-09
+    ac: [AC-05, AC-07, AC-09]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_DELIVERY.py]
+    expected_exit_code: 0
+    mandatory: true
+human_checks:
+  authority: EVALUATION.md
+  core_journeys: [J01, J02, J03, J04, J05, J06, J07, J08]
+  total_journeys: 12
+  min_completed: 10
+  java_event_journeys_min: 6
+  native_cost_flip_and_restore_required: true
+  independent_holdout_journeys_min: 4
+  independent_source_read_limit: 8
+  real_model_gain_required: false
+  real_user_gain_required: false
+limits:
+  effective_hours: 120
+  concentrated_repair_rounds: 5
+  public_queries: 10
+  public_reads_executor: 24
+  public_reads_evaluator: 8
+  same_url_locator_failure_limit: 2
+  new_model_api: 0
+  model_cli: 0
+  platform_business_api: 0
+  git_commit: false
+  git_push: false

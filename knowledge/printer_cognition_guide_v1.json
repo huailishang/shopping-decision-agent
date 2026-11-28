@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "hp-cn-home": {"revision": 1, "status": "active"},
+    "brother-cn-202405-brochure": {"revision": 1, "status": "active"},
+    "rtings-cost-method-2021": {"revision": 1, "status": "active"}
+  }
+}

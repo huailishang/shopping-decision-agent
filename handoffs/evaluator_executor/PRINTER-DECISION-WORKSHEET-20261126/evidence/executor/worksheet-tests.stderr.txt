@@ -1,0 +1,34 @@
+test_invalid_batch_atomic (test_decision_worksheet.Worksheet.test_invalid_batch_atomic) ... ok
+test_invalid_version (test_decision_worksheet.Worksheet.test_invalid_version) ... ok
+test_new (test_decision_worksheet.Worksheet.test_new) ... ok
+test_numeric_bound (test_decision_worksheet.Worksheet.test_numeric_bound) ... ok
+test_stale_rebind (test_decision_worksheet.Worksheet.test_stale_rebind) ... ok
+test_zero_unknown (test_decision_worksheet.Worksheet.test_zero_unknown) ... ok
+test_create (test_worksheet_bridge.Bridge.test_create) ... ok
+test_depth (test_worksheet_bridge.Bridge.test_depth) ... ok
+test_duplicate (test_worksheet_bridge.Bridge.test_duplicate) ... ok
+test_edit (test_worksheet_bridge.Bridge.test_edit) ... ok
+test_size (test_worksheet_bridge.Bridge.test_size) ... ok
+test_unknown_action (test_worksheet_bridge.Bridge.test_unknown_action) ... ok
+test_inspect (test_worksheet_persistence.Persistence.test_inspect) ... ok
+test_no_cached_conclusion (test_worksheet_persistence.Persistence.test_no_cached_conclusion) ... ok
+test_no_consent (test_worksheet_persistence.Persistence.test_no_consent) ... ok
+test_no_overwrite (test_worksheet_persistence.Persistence.test_no_overwrite) ... ok
+test_only_inputs (test_worksheet_persistence.Persistence.test_only_inputs) ... ok
+test_round_trip (test_worksheet_persistence.Persistence.test_round_trip) ... ok
+test_forgery (test_worksheet_evidence.Evidence.test_forgery) ... ok
+test_import_pending (test_worksheet_evidence.Evidence.test_import_pending) ... ok
+test_reference_withdraw (test_worksheet_evidence.Evidence.test_reference_withdraw) ... ok
+test_unknown_reference (test_worksheet_evidence.Evidence.test_unknown_reference) ... ok
+test_version_withdraw (test_worksheet_evidence.Evidence.test_version_withdraw) ... ok
+test_wrong_model (test_worksheet_evidence.Evidence.test_wrong_model) ... ok
+test_clear (test_worksheet_journeys.Journeys.test_clear) ... ok
+test_deferred (test_worksheet_journeys.Journeys.test_deferred) ... ok
+test_flip (test_worksheet_journeys.Journeys.test_flip) ... ok
+test_hard_pending (test_worksheet_journeys.Journeys.test_hard_pending) ... ok
+test_rebuild (test_worksheet_journeys.Journeys.test_rebuild) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 50.310s
+
+OK

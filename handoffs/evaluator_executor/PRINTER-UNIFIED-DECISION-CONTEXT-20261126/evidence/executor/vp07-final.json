@@ -1,0 +1,30 @@
+{
+  "phase": "post",
+  "checks": {
+    "head_matches": true,
+    "index_empty": true,
+    "index_matches": true,
+    "manifest_matches": true,
+    "protected_unchanged": true
+  },
+  "head": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+  "baseline_sha256": "0fa49ba52efe61b9daf60f98824520cb01bcda6cb3cea1367e339809626e7630",
+  "protected_count": 2154,
+  "changed_protected_paths": [],
+  "changed_product_paths": [
+    "knowledge/printer_cognition_comparison_v1.json",
+    "shopping_decision/action_ranking.py",
+    "shopping_decision/chat_bridge.py",
+    "shopping_decision/claim_gate.py",
+    "shopping_decision/cognition_comparison.py",
+    "shopping_decision/confirmed_comparison.py",
+    "shopping_decision/context_builder.py",
+    "shopping_decision/decision_actions.py",
+    "shopping_decision/model_adapter.py",
+    "tests/test_action_ranking.py",
+    "tests/test_context_builder.py",
+    "tests/test_model_adapter.py",
+    "tests/test_printer_lifecycle.py",
+    "tests/test_unified_decision_actions.py"
+  ]
+}

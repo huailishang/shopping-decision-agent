@@ -1,0 +1,58 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-UNIFIED-DECISION-CONTEXT-20261126
+runtime: WSL Python3 UTF-8, repository root
+checks:
+  - id: VP-01
+    ac: [AC-01, AC-02, AC-03]
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_BUSINESS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-01, AC-02, AC-03, AC-04, AC-05, AC-06, AC-07]
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_DELIVERY.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-01, AC-02, AC-03]
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/VERIFY_CANDIDATES.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-02, AC-04, AC-07]
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: [AC-03, AC-08]
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: [AC-08]
+    command: [python3, -X, utf8, scripts/audit_model_history_readonly.py, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-07
+    ac: [AC-08]
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-UNIFIED-DECISION-CONTEXT-20261126/VERIFY_SCOPE.py, --phase, post]
+    expected_exit_code: 0
+    mandatory: true
+human_checks:
+  authority: EVALUATION.md
+  source_read_reserve: 4
+  independent_adjacent_interventions_min: 2
+  paired_replay_cases_min: 12
+  real_model_or_user_gain_required_for_offline_pass: false
+  real_source_increment_required: true
+  machine_green_substitutes_for_business_review: false
+limits:
+  effective_hours: 60
+  concentrated_repair_rounds: 3
+  public_queries: 6
+  public_reads_executor: 12
+  public_reads_evaluator: 4
+  new_model_inference: 0
+  model_cli: 0
+  platform_business_api: 0
+  git_commit: false
+  git_push: false

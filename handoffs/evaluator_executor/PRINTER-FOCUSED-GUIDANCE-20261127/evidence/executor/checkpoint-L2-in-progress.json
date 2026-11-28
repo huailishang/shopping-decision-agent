@@ -1,0 +1,142 @@
+{
+  "task_id": "PRINTER-FOCUSED-GUIDANCE-20261127",
+  "state": "EXECUTING",
+  "role": "Executor",
+  "recorded_at": "2026-11-27T13:59:34.329872+00:00",
+  "full_gate": "RUNNING_OR_UNCONFIRMED",
+  "results": [
+    {
+      "id": "EV-01",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-01.meta.json",
+        "sha256": "6d24f03328ddc5328e7c4303026ad3df76cf1eec2c46365667dd560242853efd"
+      }
+    },
+    {
+      "id": "EV-02",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-02.meta.json",
+        "sha256": "d7d6cf56e1797fc3e25eded37a5abee39b8446259cc03c7ac928c365aae2afb7"
+      }
+    },
+    {
+      "id": "EV-03",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-03.meta.json",
+        "sha256": "5602902d93bcd378bd4d9069be5b3c1e8fe1d1eeaed559fb5176a54434b1c10d"
+      }
+    },
+    {
+      "id": "EV-04",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-04.meta.json",
+        "sha256": "681c5a423a3539db4df05d95742878a22c36b1229877d90794dddb666a8a4b78"
+      }
+    },
+    {
+      "id": "EV-05",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-05.meta.json",
+        "sha256": "7a01334a1f13564df153c1d85b2e3afba4659bad33dd24a378978637a49a79b9"
+      }
+    },
+    {
+      "id": "EV-06",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-06.meta.json",
+        "sha256": "9ea44db30aa46a742d6963d56b59e3540c4fde9a661ec191a177eae8d2aa5a6a"
+      }
+    },
+    {
+      "id": "EV-07",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-07.meta.json",
+        "sha256": "3b18cdf359a230d0c5c76960abe55d9df8ab3425bb9310ed9e3432023b8d51d7"
+      }
+    },
+    {
+      "id": "EV-08",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-08.meta.json",
+        "sha256": "3c729e6f920774aa07e24eb823d5b68fcc320699cfa316b7419ec8cc65d016eb"
+      }
+    },
+    {
+      "id": "EV-09",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-09.meta.json",
+        "sha256": "4c695f32ea6d74613572619c4fc27efaa2d93d46160c20d880028bfa54ea0076"
+      }
+    },
+    {
+      "id": "EV-10",
+      "exit": 0,
+      "artifact": {
+        "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-10.meta.json",
+        "sha256": "5f9d60fcbb222588ac7019d482d44365f7b8e32938cfd5b5b0781e5ee4eab9ea"
+      }
+    }
+  ],
+  "comparison": {
+    "old_completed": 12,
+    "new_completed": 24,
+    "improved": 14,
+    "tie": 10,
+    "regressed": 0
+  },
+  "journeys": {
+    "completed": 12,
+    "native": 10,
+    "safety_errors": 0
+  },
+  "evidence": [
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/comparisons.json",
+      "sha256": "1872ca421f4380aca3113fff9ed62f76df0116755d41481480a5c2c665182a4f"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/journeys.json",
+      "sha256": "702942631e5e5e1b605f2a10b1d73f7f6a90d905f4ef39830e9e19fbd1303c03"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/summary.json",
+      "sha256": "ce0340b8963e30d894e1671c3d1ccf7f382c6c98dfac64daec9d1e050dac54f1"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/source-audit.json",
+      "sha256": "d44e338a09b5fa0b343187c05f4005333bdbe8b5b53b241ced9657fa5357a176"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/challenge-results.json",
+      "sha256": "73c468938e0a653fae8bfccfa34e30f64963f6cd68e3ae578753d09b377393fb"
+    },
+    {
+      "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/process.json",
+      "sha256": "937543ce34c1dd6711eb41fa51c650452318075bea4d1cc9710544ad690e4167"
+    }
+  ],
+  "remaining": [
+    "Read existing l2-final/L2-GATE.json when generated; do not start duplicate runner while PID 1494 remains active",
+    "Account final verification elapsed as machine/wall upper bound separately, do not treat as exact active",
+    "Append formal EV/AC results to REPORT and run workflow validator; hand off only if complete gate and honest semantic caveats"
+  ],
+  "limitations": [
+    "Connector timed out waiting for full runner; process observed still running, not PASS or FAIL",
+    "Independent review and 8 holdouts not performed",
+    "Exact effective attention intervals remain unknown; only conservative budget bounds"
+  ],
+  "full_regression": {
+    "tests": 689,
+    "status": "PASS",
+    "evidence": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/l2-final/EV-09.stderr.log"
+  }
+}

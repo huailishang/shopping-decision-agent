@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-26T13:07:52.128778+00:00",
+  "baseline_sha256": "8d159df8ab9be18b59d4a01969f513d0b39dd644e385b0a4060fe41c5961328d",
+  "protected_count": 3585,
+  "plans": {
+    "executor": 12,
+    "evaluator": 12
+  },
+  "preparation": "EXPECTED_FAILURES_CONFIRMED",
+  "scope_start_exit_code": 0,
+  "workflow_exit_code": 1,
+  "product_bytes_unchanged_by_evaluator": true,
+  "current_sha256": "6c5578e7113ef1532b4b46e8634348aa9125aae47734df9afab63cc7f5722eac",
+  "previous_review_sha256": "d55329bb2c3b6e29bb919055646005fd6c3c2fa694423d934f1b6458682753d7",
+  "old_gate_result": "FAIL (preserved)",
+  "new_task_state": "CONTRACT_FROZEN / Executor",
+  "commit_push_model_api_transaction_calls": 0
+}

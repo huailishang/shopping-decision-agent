@@ -1,0 +1,115 @@
+{
+  "task_id": "PRINTER-COGNITION-FIRST-20261126",
+  "at": "2026-11-26T14:01:51.454922+00:00",
+  "status": "EXPECTED_FAILURES_CONFIRMED",
+  "plans": {
+    "executor": 13,
+    "evaluator": 13
+  },
+  "checks": [
+    {
+      "id": "guide",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-COGNITION-FIRST-20261126\\VERIFY_GUIDE.py"
+      ],
+      "start": "2026-11-26T14:01:43.291960+00:00",
+      "end": "2026-11-26T14:01:47.223590+00:00",
+      "exit_code": 1,
+      "expected_preparation_exit_code": 1,
+      "stdout_sha256": "4f8150f1bec57a5dc303a09609ea6fdf54521820fdd8cc5785155b706c38ceae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "real missing/failing target, not completed feature"
+    },
+    {
+      "id": "context",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-COGNITION-FIRST-20261126\\VERIFY_CONTEXT.py"
+      ],
+      "start": "2026-11-26T14:01:47.223590+00:00",
+      "end": "2026-11-26T14:01:48.129899+00:00",
+      "exit_code": 1,
+      "expected_preparation_exit_code": 1,
+      "stdout_sha256": "65ca5f5adc54fb10248ecbcdb9d4fb6abdb17f83493fd1d27f6452228138b02a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "real missing/failing target, not completed feature"
+    },
+    {
+      "id": "tests",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-COGNITION-FIRST-20261126\\VERIFY_TESTS.py"
+      ],
+      "start": "2026-11-26T14:01:48.129899+00:00",
+      "end": "2026-11-26T14:01:48.324967+00:00",
+      "exit_code": 1,
+      "expected_preparation_exit_code": 1,
+      "stdout_sha256": "962148d94f3f9e85464106eb5ff842f8105b2a852dcf4f7b60b80563973b777a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "real missing/failing target, not completed feature"
+    },
+    {
+      "id": "carried_action",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-DECISIVE-EVIDENCE-20261126\\VERIFY_ACTION.py"
+      ],
+      "start": "2026-11-26T14:01:48.324967+00:00",
+      "end": "2026-11-26T14:01:50.953834+00:00",
+      "exit_code": 1,
+      "expected_preparation_exit_code": 1,
+      "stdout_sha256": "711a80263c29aae26221a71289587aa099a0ec353f2860385c7a6f1e0ebd8908",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "real missing/failing target, not completed feature"
+    },
+    {
+      "id": "java",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-COGNITION-FIRST-20261126\\VERIFY_JAVA.py",
+        "--role",
+        "executor"
+      ],
+      "start": "2026-11-26T14:01:50.954846+00:00",
+      "end": "2026-11-26T14:01:51.094236+00:00",
+      "exit_code": 1,
+      "expected_preparation_exit_code": 1,
+      "stdout_sha256": "38032890ad2608fc10a62f45f992b2ab59b3935e73486bd1647cad4ad509cacb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "real missing/failing target, not completed feature"
+    },
+    {
+      "id": "delivery",
+      "argv": [
+        "D:\\SoftWare\\Anaconda\\install\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-COGNITION-FIRST-20261126\\VERIFY_DELIVERY.py"
+      ],
+      "start": "2026-11-26T14:01:51.094236+00:00",
+      "end": "2026-11-26T14:01:51.225205+00:00",
+      "exit_code": 1,
+      "expected_preparation_exit_code": 1,
+      "stdout_sha256": "21637474e764a72d08912d73957d477864f1a4f7f1c0d70faa22882db569900f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "real missing/failing target, not completed feature"
+    }
+  ],
+  "workflow_draft_exit_code": 0,
+  "product_bytes_unchanged_by_evaluator": true,
+  "real_public_reads": 0,
+  "real_model_api_cli_platform_calls": 0,
+  "no_predecessor_executor_directory_observed": true,
+  "old_baseline_sha256": "c9525974112d286dfcca727f30c00135e76310908dadc8f4bd6f4998baee3599"
+}

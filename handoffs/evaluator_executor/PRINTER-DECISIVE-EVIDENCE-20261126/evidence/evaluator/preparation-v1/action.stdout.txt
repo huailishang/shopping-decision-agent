@@ -1,0 +1,229 @@
+{
+  "cases": [
+    {
+      "candidate": "HP M232dw",
+      "field": "maintenance",
+      "value": 100,
+      "passed": false,
+      "prompt": "核实Brother HL-L1238W的随箱实际可用页数和同配置耗材价，确认当前假设优势是否成立；并非购买建议。",
+      "cost": {
+        "status": "a",
+        "arithmetic_status": "a",
+        "scenario_preference": "Brother HL-L1238W",
+        "assumption_only": true,
+        "models": {
+          "Brother HL-L1238W": {
+            "toner_replacements": 2,
+            "drum_replacements": 0,
+            "total": "700",
+            "assumption_only": true,
+            "comparison_basis": {
+              "pages": 1800,
+              "months": 36,
+              "currency": "CNY",
+              "fee_scope": "hardware_consumables_maintenance",
+              "scenario_version": 1
+            },
+            "basis_status": "explicit",
+            "input_lineage": {
+              "kind": "scenario_assumption",
+              "hardware": "500",
+              "starter": 0,
+              "toner_yield": 1500,
+              "toner_price": "100",
+              "separate_drum": false,
+              "drum_yield": null,
+              "drum_price": null,
+              "drum_starter": null,
+              "maintenance": "0"
+            },
+            "dependency_fact_ids": [],
+            "dependency_fingerprints": {}
+          },
+          "HP M232dw": {
+            "toner_replacements": 2,
+            "drum_replacements": 0,
+            "total": "750",
+            "assumption_only": true,
+            "comparison_basis": {
+              "pages": 1800,
+              "months": 36,
+              "currency": "CNY",
+              "fee_scope": "hardware_consumables_maintenance",
+              "scenario_version": 1
+            },
+            "basis_status": "explicit",
+            "input_lineage": {
+              "kind": "scenario_assumption",
+              "hardware": "550",
+              "starter": 0,
+              "toner_yield": 1500,
+              "toner_price": "50",
+              "separate_drum": false,
+              "drum_yield": null,
+              "drum_price": null,
+              "drum_starter": null,
+              "maintenance": "100"
+            },
+            "dependency_fact_ids": [],
+            "dependency_fingerprints": {}
+          }
+        },
+        "reasons": {},
+        "scenario_sha256": "db8c4d3f6065e15de798c85e76ffb690b6557b9cb1a165e72f44c43ea7327b38"
+      },
+      "result_text": "当前取舍（研究判断，不是购买许可）\nBrother HL-L1238W：现有硬条件研究层面满足\nHP M232dw：现有硬条件研究层面满足\n合成成本情景（非真实报价）：Brother HL-L1238W 700 CNY；HP M232dw 750 CNY。相同口径下Brother HL-L1238W情景成本较低；不代表可购买。\n下一步：核实Brother HL-L1238W的随箱实际可用页数和同配置耗材价，确认当前假设优势是否成立；并非购买建议。\n本机决策工作单：成本输入均为个人情景假设，不是实时价格。\n暂无新导入资料；原有事实仍以原证据门禁为准。\n完整来源、日期及核查限制见资料审计；原结果见完整审计。未批准购买，交易关闭，未核实实时价格。"
+    },
+    {
+      "candidate": "HP M232dw",
+      "field": "hardware",
+      "value": 650,
+      "passed": false,
+      "prompt": "核实Brother HL-L1238W的随箱实际可用页数和同配置耗材价，确认当前假设优势是否成立；并非购买建议。",
+      "cost": {
+        "status": "a",
+        "arithmetic_status": "a",
+        "scenario_preference": "Brother HL-L1238W",
+        "assumption_only": true,
+        "models": {
+          "Brother HL-L1238W": {
+            "toner_replacements": 2,
+            "drum_replacements": 0,
+            "total": "700",
+            "assumption_only": true,
+            "comparison_basis": {
+              "pages": 1800,
+              "months": 36,
+              "currency": "CNY",
+              "fee_scope": "hardware_consumables_maintenance",
+              "scenario_version": 1
+            },
+            "basis_status": "explicit",
+            "input_lineage": {
+              "kind": "scenario_assumption",
+              "hardware": "500",
+              "starter": 0,
+              "toner_yield": 1500,
+              "toner_price": "100",
+              "separate_drum": false,
+              "drum_yield": null,
+              "drum_price": null,
+              "drum_starter": null,
+              "maintenance": "0"
+            },
+            "dependency_fact_ids": [],
+            "dependency_fingerprints": {}
+          },
+          "HP M232dw": {
+            "toner_replacements": 2,
+            "drum_replacements": 0,
+            "total": "750",
+            "assumption_only": true,
+            "comparison_basis": {
+              "pages": 1800,
+              "months": 36,
+              "currency": "CNY",
+              "fee_scope": "hardware_consumables_maintenance",
+              "scenario_version": 1
+            },
+            "basis_status": "explicit",
+            "input_lineage": {
+              "kind": "scenario_assumption",
+              "hardware": "650",
+              "starter": 0,
+              "toner_yield": 1500,
+              "toner_price": "50",
+              "separate_drum": false,
+              "drum_yield": null,
+              "drum_price": null,
+              "drum_starter": null,
+              "maintenance": "0"
+            },
+            "dependency_fact_ids": [],
+            "dependency_fingerprints": {}
+          }
+        },
+        "reasons": {},
+        "scenario_sha256": "5f3eb1822c3b3379c42256106ea941200c8943aa9af84fc705b83693d4dda523"
+      },
+      "result_text": "当前取舍（研究判断，不是购买许可）\nBrother HL-L1238W：现有硬条件研究层面满足\nHP M232dw：现有硬条件研究层面满足\n合成成本情景（非真实报价）：Brother HL-L1238W 700 CNY；HP M232dw 750 CNY。相同口径下Brother HL-L1238W情景成本较低；不代表可购买。\n下一步：核实Brother HL-L1238W的随箱实际可用页数和同配置耗材价，确认当前假设优势是否成立；并非购买建议。\n本机决策工作单：成本输入均为个人情景假设，不是实时价格。\n暂无新导入资料；原有事实仍以原证据门禁为准。\n完整来源、日期及核查限制见资料审计；原结果见完整审计。未批准购买，交易关闭，未核实实时价格。"
+    },
+    {
+      "candidate": "Brother HL-L1238W",
+      "field": "starter",
+      "value": 300,
+      "passed": true,
+      "prompt": "核实Brother HL-L1238W的随箱实际可用页数和同配置耗材价，确认当前假设优势是否成立；并非购买建议。",
+      "cost": {
+        "status": "a",
+        "arithmetic_status": "a",
+        "scenario_preference": "Brother HL-L1238W",
+        "assumption_only": true,
+        "models": {
+          "Brother HL-L1238W": {
+            "toner_replacements": 1,
+            "drum_replacements": 0,
+            "total": "600",
+            "assumption_only": true,
+            "comparison_basis": {
+              "pages": 1800,
+              "months": 36,
+              "currency": "CNY",
+              "fee_scope": "hardware_consumables_maintenance",
+              "scenario_version": 1
+            },
+            "basis_status": "explicit",
+            "input_lineage": {
+              "kind": "scenario_assumption",
+              "hardware": "500",
+              "starter": 300,
+              "toner_yield": 1500,
+              "toner_price": "100",
+              "separate_drum": false,
+              "drum_yield": null,
+              "drum_price": null,
+              "drum_starter": null,
+              "maintenance": "0"
+            },
+            "dependency_fact_ids": [],
+            "dependency_fingerprints": {}
+          },
+          "HP M232dw": {
+            "toner_replacements": 2,
+            "drum_replacements": 0,
+            "total": "650",
+            "assumption_only": true,
+            "comparison_basis": {
+              "pages": 1800,
+              "months": 36,
+              "currency": "CNY",
+              "fee_scope": "hardware_consumables_maintenance",
+              "scenario_version": 1
+            },
+            "basis_status": "explicit",
+            "input_lineage": {
+              "kind": "scenario_assumption",
+              "hardware": "550",
+              "starter": 0,
+              "toner_yield": 1500,
+              "toner_price": "50",
+              "separate_drum": false,
+              "drum_yield": null,
+              "drum_price": null,
+              "drum_starter": null,
+              "maintenance": "0"
+            },
+            "dependency_fact_ids": [],
+            "dependency_fingerprints": {}
+          }
+        },
+        "reasons": {},
+        "scenario_sha256": "fb8d179ccfba2c4992f4d8a67b48f0a51cd41717c6461c60e506f3eeb588350c"
+      },
+      "result_text": "当前取舍（研究判断，不是购买许可）\nBrother HL-L1238W：现有硬条件研究层面满足\nHP M232dw：现有硬条件研究层面满足\n合成成本情景（非真实报价）：Brother HL-L1238W 600 CNY；HP M232dw 650 CNY。相同口径下Brother HL-L1238W情景成本较低；不代表可购买。\n下一步：核实Brother HL-L1238W的随箱实际可用页数和同配置耗材价，确认当前假设优势是否成立；并非购买建议。\n本机决策工作单：成本输入均为个人情景假设，不是实时价格。\n暂无新导入资料；原有事实仍以原证据门禁为准。\n完整来源、日期及核查限制见资料审计；原结果见完整审计。未批准购买，交易关闭，未核实实时价格。"
+    }
+  ],
+  "passed": 1,
+  "total": 3,
+  "external_calls": 0
+}

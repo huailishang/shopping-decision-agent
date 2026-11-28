@@ -21,6 +21,27 @@ PIN = (ROOT / "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"
        / "post_review/PRINTER-TRUSTED-DECISION-20261119/post_review"
        / "GENERIC-EVIDENCE-CLAIM-GATE-20261119")
 CURRENT_TASK_ALLOWED_DRIFT = {"shopping_decision/chat_bridge.py"}
+
+# Owner-directed worksheet transition: historical bytes must still match the
+# original manifest at the pinned pre-task commit; current bytes must match
+# the exact candidate tested by the executor (independent review pending).
+# No wildcard or caller-supplied exception; no historical file is rewritten.
+WORKSHEET_PRE_TASK_COMMIT = "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f"
+WORKSHEET_PREVIOUS_SOURCE_SHA256 = {
+    'desktop/DesktopBridgeClient.java': 'ba0a8c8aa5a5d1309721d0b79f09eba472a9cee000e656c00f3d579b9c2f8ff3',
+    # Cognition-first typed user input; old bytes remain checked against the same pin.
+    'shopping_decision/dialogue_flow.py': '080e2cfbc6ff501e0aa131b5a4ef4691b1c5f63161006e698db36a80588dfaba',
+    'desktop/ShoppingDecisionDesktop.java': '873437da98eca260f8d26edd3042daa1e366c6c039f75d98cc3351dcd6659525',
+}
+
+# Focus-guidance transition: exact current candidates; original historical
+# commit and predecessor candidate bytes above remain independently pinned.
+WORKSHEET_APPROVED_SOURCE_SHA256 = {
+    **WORKSHEET_PREVIOUS_SOURCE_SHA256,
+    'desktop/ShoppingDecisionDesktop.java': '92639e5b600c420936c8b96d3476e101b3e7b4864179e78e9d9e210abe0c87d3',
+    'shopping_decision/dialogue_flow.py': 'abeb0355d46f9def24d38ff0f508f49c75875d7aee8d3edf2f6770be834ee815',
+}
+
 # Only the exact two R1 test revisions independently reviewed on 2026-11-23
 # may drift from the frozen historical inventory. Never blanket-allow test edits.
 REVIEWED_R1_TEST_SHA256 = {
@@ -71,9 +92,21 @@ def audit_history(task: Path, *, ledger_bytes_override: bytes | None = None):
         p = ROOT / filename
         if not p.is_file() or sha(p.read_bytes()) != expected:
             historic_drifts.append(filename)
-            check(filename in CURRENT_TASK_ALLOWED_DRIFT or
-                  filename in REVIEWED_R1_TEST_SHA256,
-                  "unapproved_historical_file_drift:" + filename)
+            if filename in WORKSHEET_APPROVED_SOURCE_SHA256:
+                check(p.is_file() and sha(p.read_bytes()) == WORKSHEET_APPROVED_SOURCE_SHA256[filename],
+                      "worksheet_current_source_sha_mismatch:" + filename)
+                try:
+                    historical = subprocess.check_output(
+                        ["git", "show", WORKSHEET_PRE_TASK_COMMIT + ":" + filename],
+                        cwd=ROOT, stderr=subprocess.DEVNULL)
+                except (OSError, subprocess.CalledProcessError) as exc:
+                    raise ValueError("worksheet_historical_source_unavailable:" + filename) from exc
+                check(sha(historical) == expected,
+                      "worksheet_historical_source_sha_mismatch:" + filename)
+            else:
+                check(filename in CURRENT_TASK_ALLOWED_DRIFT or
+                      filename in REVIEWED_R1_TEST_SHA256,
+                      "unapproved_historical_file_drift:" + filename)
     actual_head = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     frozen_head = manifest["baseline_head"]

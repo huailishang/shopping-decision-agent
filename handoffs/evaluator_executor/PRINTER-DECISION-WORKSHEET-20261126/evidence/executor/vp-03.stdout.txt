@@ -1,0 +1,336 @@
+{
+  "purpose": "冻结相邻业务反例；通过仍须独立人审",
+  "checks": {
+    "unanswered:normal_comparison_present": true,
+    "unanswered:same_first_action": true,
+    "unanswered:same_candidate_states": true,
+    "unanswered:no_authorization_upgrade": true,
+    "scan_deferred:normal_comparison_present": true,
+    "scan_deferred:same_first_action": true,
+    "scan_deferred:same_candidate_states": true,
+    "scan_deferred:no_authorization_upgrade": true,
+    "scan_deferred:no_repeated_scan_question": true,
+    "not_needed:normal_comparison_present": true,
+    "not_needed:same_first_action": true,
+    "not_needed:same_candidate_states": true,
+    "not_needed:no_authorization_upgrade": true,
+    "cost:unlike_workload_cannot_choose": true,
+    "cost:like_workload_still_compares": true,
+    "receipt:tool_calls": true,
+    "receipt:function_call": true,
+    "receipt:pure_text": true
+  },
+  "failed_checks": [],
+  "cases": {
+    "unanswered": {
+      "default": {
+        "prompt": "扫描或复印是否是必须功能？",
+        "prompt_field": "requires_scan",
+        "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：暂不选冠军；先满足硬条件，再以低频耗材、维护成本与主机差价比较。\n彩印可外包：额外彩印功能不是当前必要条件。\nBrother HL-L1238W：待核，保留研究资格。\n  待核：微信小程序功能、微信稳定复用、预算。\n  扫描：缺少适用证据。\n  自动双面：缺少适用证据。\n  手动双面：缺少适用证据。\n  激光打印：有资料支持。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据。\n  彩色打印：有不满足的依据。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：待核，保留研究资格。\n  待核：微信稳定复用、预算。\n  有据硬条件：微信小程序功能。\n  扫描：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据。\n  激光打印：有资料支持。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n若需要扫描：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n若需要自动双面：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\nBrother HL-L1238W耗材：鼓粉分离，墨粉用完不等同更换硒鼓；替换墨粉标称页数 1500；硒鼓标称页数 10000；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 brother-tn118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-dr118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-separate-drum：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  仅作情景：按1800页、假设实际替换产量1500页；若随箱为0页则需2盒，若随箱为1500页则需1盒。标称量不等于家庭实际量；此处未假定实际随箱量。\nHP M232dw维护条件：不能仅因低告警就计入一次更换成本；若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。\nHP M232dw耗材：随箱附黑色硒鼓（页数未知）；137A/137X替换硒鼓（具体产量及价格待核）；厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 hp-starter-included：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replacement-137：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replace-on-quality：https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf；获取 2026-11-26。\n翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n真实总成本仍未知：需同配置主机价、随箱量、实际产量、耗材及维护费用。\n下一项高价值核查：确认是否必须扫描；若必须则按有据能力筛选，若无需则不为该功能额外付费。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+        "first": {
+          "kind": "clarify",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:scan",
+          "description": "确认是否必须扫描；若必须则按有据能力筛选，若无需则不为该功能额外付费。"
+        },
+        "first_key": {
+          "kind": "clarify",
+          "dimension": "scan",
+          "candidate_id": null
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "backend": {
+        "prompt": "扫描或复印是否是必须功能？",
+        "prompt_field": "requires_scan",
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：61a372a53af0f1332b265b90b5a7e4bc2c68ae1083b535385c2fc3172bfecf99。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：41c5a6ea7ea1e8e998e3234620a76a74f7b8736904220beff3cc2ca4e84d0d18。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件3：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：0c54a98feb133cef5ce2a960275f39cf594413fe5ce93b29a9f0ce8db7ee39f9。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件4：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：e918d5df25544708f9f59bf3cf09f26f502d0e53b9fb7b32cc2d0aca29cf7b82。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件5：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：7f3fbc5944415b1aa9c5623028c78563567838b45025585948ea39e6312fc6d1。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件6：根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：0d2152c2d43be40136a4d23a243861d679017fc966f075c08f5534f6c553141f。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件7：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：c276659f28d815fdaca3485d556caee64bef74e95a2ec8b39da57aa4e2a620c8。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件8：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：b25f0d0f349286acee5890f00df7f7f2d841448a6c4d3af1731c3f9981d2ecd1。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件9：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：b70c6fe90fbabde1517e7d6c170f53faa0120689e22683cf6b69ec996bd0d8fa。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件10：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：f6b6560f467b1bee79f153be66939bf585ef09b0d9cbaab5a59314c71a406561。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件11：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：cfe480b046bdf082fdf39c4487bf59d443233d354d0355011b539efc8a25cba7。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件12：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：8383513bdba6019421f55dbf5ce3a5d0377e444377723bda06ef4503761088dd。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件13：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：81cf3be0091c1f57c0b0fe56c4f662157570e84376fe2052a89b400d965a427b。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件14：1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：97649838706eef22dd10e1090afe4353892ea1622a6af3ae3947a987a00751f1。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件15：10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：0b2a3afcd221e7c5e388f0435d462ccdf83d213b033ded4d2754a13689249c39。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件1：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：29489ca29b6c5ad6d943056f6b8d5924937d64dee98284788db655eafce7c3ad。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：47669b2ec826a60cdd1af7fb9f0ca3dc810289c417da8fe26b49c96cc4402956。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件3：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：4f3f13312175f414fd0c791d0ea2950d481adfb52b6ea54b1026656f407d58e9。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件4：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：5801ca37e9d8f0f3bf8b438f2c087b54ecac00c9a598c55f407d259efc03a27a。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件5：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：e4ab0a32d23629bc7318cd7fc51d082a1bcb177344f96dedcd52e038d7ef43c5。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件6：根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：0e5700d6ea651d4d75270265c72884d7648cafc803a2ff2aadaed7cf08ac2399。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件7：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：a04bb9aa11e1b1ee64eee8980c40ebd890be9806f110432ce8d3d454a4e92117。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件8：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：03a7542b96ec8608ae4146d59fbc4be9c761246ee4fec070094bdd7e13316b05。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件9：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：db5abfaf685774b2848fd53f583bb21eeabf46e383058f55ca2d84aa9d0f52d0。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件10：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：54ffec0f342d00fb109156dd642bc5efabfd1f6d2a9421006c601b2ef7ad131c。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件11：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：588ff6936bd457dde7b127ac1149216eea002beb2c23d3576776becd29cf6da7。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件12：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：409ad2ba26a23283134f47ed7bf91f056ed7752eb9842077aafef4af8bd87a5f。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件13：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：1c7ba3fc57b69bf6a638ed11d9c8620c18b4ed69f51307e5c03a5cbcba325c4e。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件14：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：ca0fc8774eb1c8723cd0bdbc2479df9f83277071ed2510f2ccf3a2d9063284ca。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件15：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：272eb91e9affed9c488cae7b5146ffe5967411b820ea2a56f996f4cb86b65e72。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：Brother HL-L1238W / scan：确认是否必须扫描；若必须则按有据能力筛选，若无需则不为该功能额外付费。\n未批准购买，交易关闭，未核实实时价格。\n真实总成本仍未知：需同配置主机价、随箱量、实际产量、耗材及维护费用。",
+        "first": {
+          "kind": "clarify",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:scan",
+          "description": "确认是否必须扫描；若必须则按有据能力筛选，若无需则不为该功能额外付费。"
+        },
+        "first_key": {
+          "kind": "clarify",
+          "dimension": "scan",
+          "candidate_id": null
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "scan_deferred": {
+      "default": {
+        "prompt": "自动双面打印是否必须？",
+        "prompt_field": "requires_auto_duplex",
+        "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：暂不选冠军；先满足硬条件，再以低频耗材、维护成本与主机差价比较。\n彩印可外包：额外彩印功能不是当前必要条件。\nBrother HL-L1238W：待核，保留研究资格。\n  待核：微信小程序功能、微信稳定复用、预算。\n  扫描：缺少适用证据。\n  自动双面：缺少适用证据。\n  手动双面：缺少适用证据。\n  激光打印：有资料支持。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据。\n  彩色打印：有不满足的依据。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：待核，保留研究资格。\n  待核：微信稳定复用、预算。\n  有据硬条件：微信小程序功能。\n  扫描：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据。\n  激光打印：有资料支持。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n若需要扫描：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n若需要自动双面：HP M232dw在该维度有依据，可优先核查；不代表另一款不支持或整体可买。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\nBrother HL-L1238W耗材：鼓粉分离，墨粉用完不等同更换硒鼓；替换墨粉标称页数 1500；硒鼓标称页数 10000；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 brother-tn118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-dr118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-separate-drum：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  仅作情景：按1800页、假设实际替换产量1500页；若随箱为0页则需2盒，若随箱为1500页则需1盒。标称量不等于家庭实际量；此处未假定实际随箱量。\nHP M232dw维护条件：不能仅因低告警就计入一次更换成本；若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。\nHP M232dw耗材：随箱附黑色硒鼓（页数未知）；137A/137X替换硒鼓（具体产量及价格待核）；厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 hp-starter-included：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replacement-137：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replace-on-quality：https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf；获取 2026-11-26。\n翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n真实总成本仍未知：需同配置主机价、随箱量、实际产量、耗材及维护费用。\n下一项高价值核查：确认是否必须自动双面；若必须则按有据能力筛选，若无需则不为该功能额外付费。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+        "first": {
+          "kind": "clarify",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:auto_duplex",
+          "description": "确认是否必须自动双面；若必须则按有据能力筛选，若无需则不为该功能额外付费。"
+        },
+        "first_key": {
+          "kind": "clarify",
+          "dimension": "auto_duplex",
+          "candidate_id": null
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "backend": {
+        "prompt": "自动双面打印是否必须？",
+        "prompt_field": "requires_auto_duplex",
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：d7364ce3ce2ef3186ac8e6cf33c283a8caec545b6e9ae3a08b85ab6d8f0f1355。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：818e95d4a47aff923f427748e9b3cd6151b5947a975624394ca2f4640e3febf5。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件3：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：17281af06444d63beafec3846c18f4471e817f0f9a03af840d2684eb9d728e05。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件4：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：bce4a55e4fc5518ae531ffaf80c1337e191b0b6f247332ea8e319eaa83d40f2e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件5：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：a92c110cba3e4383574b04d7aab55764fdc71c40fc27807a4fd1e69ed1708bdf。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件6：根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：b8ee6234506ee195defb6e79df6ae3abd11759669f358d77d0f15250fcc32db5。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件7：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：d3794c0b824090c3e23265a1102b9722050939da195cefdbca7fc57a653170a6。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件8：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：7dcc49f04262b6b273c6384ddbfdf00d69d2599efa6c6567793379ef6aaa8096。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件9：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：2f34a08d9d236ad6a6a6b34189b54ec69b0b0a0629d85cd1fd46d8fb6a47a97f。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件10：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：03971c3b0903b259d1ea45334c3cdb9c05fc85f73e4b77b915a71a03811a557d。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件11：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：7dc289235a5156674bc2fdbdbe1e76009fa9c925014c65f98124cc5a50d1169e。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件12：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：9f5a88a240dbfcb7af1aa09bb53ed3518faafd8f938d7985396555922bb22afa。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件13：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：2686078ff6fa25bc8c530eab2fc320a65419507137ba78e60232dbc012f3d7bd。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件14：1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：9103002d662ce49aec17723f3a40e0e19a78a9fcbcc98019a0fa02549c03c84b。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件15：10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：106fc5eae766993600e79fac39f5cf0101c0e81798a1d0bb83fff25677509ebb。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件1：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：38de3bd95dd6100e5b67e6366e96d7a331a33d41b01aeb531ef946785ea63220。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：83e23dbe0a68a61898f8e1605d407353c343b29701f5d864175e4b089bcc1499。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件3：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：7eb738ee56b01b9e97cf9eb1221f001ff88bd6a51a65ffb99b27ed8645eebe4b。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件4：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：6ab1e5562b0d94b6e25df776c4d51ed7c886b698d17c1f21276e184f48de9128。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件5：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：9f1618ed9cbd7db34894cfe38b027ab73ffc8dcd039461c54ea2e063e394821c。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件6：根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：6e6fd560ffda778e406ca3aead1a8ceae28528a24a478d3d03daa8f0d2757abf。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件7：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：91f37a68e7ec6fc39f8cf6cb5999ea0207b367acd3cdc3b1c2b642eab6024f6f。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件8：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：9a386f5db1fb0d7db5780f761e5ed77702c153e982dcf51a988961e39713ed5c。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件9：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：db0785549044c609d23450975dd6112fcf5aa056a142dcf4151593ced9e5b17d。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件10：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：e867e39ec4f6236e6b264b43c468acf9eb9d47fa0080ce0ef7e061a265ddacbd。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件11：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：0d87047e0fd8020c45dad035ff55f25d1c2aae402b2a9261db219169e1477f1a。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件12：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：bdd963fa47f555722de7d9fbf48dfcdd193624ffc68a2cfd3608fedd4f20e9a5。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件13：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：5e7de53281752e04683d8ab15abcf04d40d2e3a4b533fa28ea5a3206245ae70e。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件14：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：060f60981e3483c7d105aeeb1052762dad36c251ca9d3b00aaaa0bd03d2bc0d1。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件15：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：5ef12f7414d17c585c162ebddba3644876998c54b8adfbf5d3697b15293ce4a0。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：Brother HL-L1238W / auto_duplex：确认是否必须自动双面；若必须则按有据能力筛选，若无需则不为该功能额外付费。\n未批准购买，交易关闭，未核实实时价格。\n真实总成本仍未知：需同配置主机价、随箱量、实际产量、耗材及维护费用。",
+        "first": {
+          "kind": "clarify",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:auto_duplex",
+          "description": "确认是否必须自动双面；若必须则按有据能力筛选，若无需则不为该功能额外付费。"
+        },
+        "first_key": {
+          "kind": "clarify",
+          "dimension": "auto_duplex",
+          "candidate_id": null
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "not_needed": {
+      "default": {
+        "prompt": "核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+        "prompt_field": "",
+        "text": "品类认知与条件化比较（部分厂家资料已独立复证，其余仍待复核）：\n整体取舍：暂不选冠军；先满足硬条件，再以低频耗材、维护成本与主机差价比较。\n彩印可外包：额外彩印功能不是当前必要条件。\nBrother HL-L1238W：待核，保留研究资格。\n  待核：微信小程序功能、微信稳定复用、预算。\n  扫描：缺少适用证据。\n  自动双面：缺少适用证据。\n  手动双面：缺少适用证据。\n  激光打印：有资料支持。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：缺少适用证据。\n  彩色打印：有不满足的依据。\n    来源 https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25；本地复核期限 2026-12-25。\nHP M232dw：待核，保留研究资格。\n  待核：微信稳定复用、预算。\n  有据硬条件：微信小程序功能。\n  扫描：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  自动双面：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  手动双面：缺少适用证据。\n  激光打印：有资料支持。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  微信小程序功能：有资料支持。\n    来源 https://www.hp.com/cn-zh/printers/home-laser-printers.html；获取 2026-11-25；本地复核期限 2026-12-25。\n  彩色打印：有不满足的依据。\n    来源 https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25；本地复核期限 2026-12-25。\n当前不要求扫描：该额外功能不构成当前选型必要性。\n当前不要求自动双面：该额外功能不构成当前选型必要性。\n低频维护与总成本（3年情景，非本人确认年限或设备寿命）：0–1800页。\n成本=主机H+替换耗材数量×耗材单价P+仅鼓粉分离时另换硒鼓数量×鼓价D+维护M；替换墨粉数量=向上取整(max(0,打印页数−随箱可用页数)/实际替换产量)。各项实际售价、实际产量、闲置维护与故障成本未知，不能比较耐用排名。\nBrother HL-L1238W耗材：鼓粉分离，墨粉用完不等同更换硒鼓；替换墨粉标称页数 1500；硒鼓标称页数 10000；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 brother-tn118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-dr118-yield：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  耗材依据 brother-separate-drum：https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx；获取 2026-11-25。\n  仅作情景：按1800页、假设实际替换产量1500页；若随箱为0页则需2盒，若随箱为1500页则需1盒。标称量不等于家庭实际量；此处未假定实际随箱量。\nHP M232dw维护条件：不能仅因低告警就计入一次更换成本；若质量不可接受则计入实际替换件，剩余产量、频率和费用仍待核。\nHP M232dw耗材：随箱附黑色硒鼓（页数未知）；137A/137X替换硒鼓（具体产量及价格待核）；厂商指南允许耗材低告警后按打印质量决定更换；严重不足后耗材高级保护保修终止；随箱量和实际维护/价格仍需按配置核对。\n  耗材依据 hp-starter-included：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replacement-137：https://www.hpstore.cn/hp-laserjet-m232dw-9yf97a.html；获取 2026-11-25。\n  耗材依据 hp-replace-on-quality：https://h10032.www1.hp.com/ctg/Manual/c07148381.pdf；获取 2026-11-26。\n翻转条件：若兄弟的主机差价节省大于其相对多出的耗材及维护成本，且硬要求均满足，则优先兄弟；反向则优先惠普；相等或缺值则暂平局。\n预算上限为1000元；两款应付价未知，不能据历史建议价淘汰。收货区县只限制适用报价。\n真实总成本仍未知：需同配置主机价、随箱量、实际产量、耗材及维护费用。\n下一项高价值核查：核Brother HL-L1238W的微信小程序功能；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。\n没有证明低频耐用排名、真实价格或真人收益；未批准购买，交易关闭。\n旧研究材料（待核研究，不影响上述有据维度）：\n当前没有可核对的受控研究包记录数；研究材料仍待核。\n用户已确认预算上限为1000元；这不是商品售价或有效地区报价。\n微信打印是用户确认的必须条件：优先查证准确型号如何从微信发起、后续复用的具体条件；目前不能认定支持。\n先核实本轮研究包与来源记录是否可用，不能凭空生成商品结论。\n研究资料未经过最终商品事实核验，不能据此推荐购买。",
+        "first": {
+          "kind": "research",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:wechat_miniprogram",
+          "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+        },
+        "first_key": {
+          "kind": "research",
+          "dimension": "wechat_miniprogram",
+          "candidate_id": "Brother HL-L1238W"
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      },
+      "backend": {
+        "prompt": "Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单",
+        "prompt_field": "",
+        "text": "结构化条件比较（仅对准入事实和规则可核，不是购买许可）：\n候选1 条件1：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：8491474d7f605a9df0a420a7fefbd316afc782f8bfae6d6d8868881f1475e677。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件2：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：24b4696cde22978703ede662de427613dc1b909e9501e521d9fa096165ecfd3e。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件3：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：cd4f0bf7d7afa9cc015a79ec1ca1212be34177e8debce17a79a2b232fec2a224。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件4：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：ceaf58ab72c764d2b429a8a9b397555e98cbeda2f5bf6c2ef89aa2d4a772a562。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件5：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：a5b73f6f31477245ded3d2a81d637a0a912df4901f5935806114f5d6e5c764db。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件6：根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：db32340bee57745a04e83bff3843485e56088b7abb9655e9468321056e7f8b26。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件7：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：40371587a292b7d3d61b42b758040a26fc2af63c3967ff8f82254a35448eae1d。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件8：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：c3fd87fa0221f0eba3bb638397ffc6fbe902e753a3f47eb315c3e1f3e63510f6。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件9：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：42fcf06f0e6101b8618d390af8ae5bf4d26751a66ca2f87d5f5671a9dd51d67e。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件10：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：8604d826ac75c2dbf5847d6d188484827e206786caf927c382ede30547546be8。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件11：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：4d1760a6a4c210dc79bc6cf045a089fc64a87dbe05050a4b957fd29c14417007。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件12：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：dfe2dd52c5a8285b927b3f79646c39ab175fac595a6b40e38bf92b76c07adca6。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件13：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：c437c960dd05a885d56c0067e1fa6e6a888c8440a090d5ce356b3ddf8021346f。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选1 条件14：1500 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：9a84fb9151553c312c9ccf4f47284f3290903320a97f48387ac98ef8e77c455c。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选1 条件15：10000 ≥ 1。根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：2412e5444762639662798851fa31a37850dd8bc2fa92282539cce49ee24f7d76。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件1：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：eec323692bdcfe06be1e2f5e625a9f9a361030b78e93c3bfe1acb2baf84efadd。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件2：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：2d86dd4963464479ab306b48a79bb9f4268bf2af1a9b6f5f5e6204d787574c62。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件3：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：f9326cf11510b5020e4d9c9d1388de1c14bcb3c653128803e0c72103257b380e。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件4：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：bcd6a5e155c9165f8cecf23ba171e49dd04b0525d06eb53b69542cac0239d4ee。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件5：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：c457096ba6a89dba29cc1d0ef346e3028a06fd5f1168ac78e2f59634aa5bd951。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件6：根据纳入的结构化事实和比较规则，该条件不满足；不得推荐购买。 核验命题ID：457d49b1284c3650ae133ce1cc0bd83a9651dda81c547e687561222ed0e25451。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件7：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：e85aeeaf566b50ac65e7986b885f7c838e9bc5493294520fbc74d1c1959dda2c。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件8：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：b60424a62526c369e7543bc1c79b4122a72e443065acfe6f47d75a3a6f0fdbc7。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件9：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：5a531568ed8b24332de719055d003b520953438fb86973ecd2ed5af71ffadc9f。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件10：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：e8fd29defc9cc6f378db2713227a41ecb7b706d74040ef6c087582cb197c6aa3。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件11：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：26a0fc3f2b95b5d760823ad9528525c57efb4acc17fa2b9fc3abd9f582eed15b。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件12：根据纳入的结构化事实和比较规则，该条件在研究层面满足；不等于商品可购买。 核验命题ID：e0de011dcd5056ced7a83b0a7eb5a571101e89f83a62ea1994c8dec7d1d1cee4。适用边界：仅对输入的结构化事实作规则推导，外部事实内容不保证真实\n候选2 条件13：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：e41b3345d4d553251394ffc94be4bce07640383c9958dd823e5860650187a22c。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件14：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：8b9d68bf96c4407e6842e274ae887f784aa8bd6b5d04c1ccaaa8a97ebeb67844。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n候选2 条件15：缺少适用且具备足够来源、型号、地区和时效信息的事实，不能确认该条件。 核验命题ID：7cc91fe97f2009fd59ba847fbbf62572911cc36f73dadfa7ae0aeba5c24159a6。适用边界：证据缺失、来源等级不足、地区/型号/时间不匹配或已撤销；保持待核\n下一行动：Brother HL-L1238W / wechat_miniprogram：补查当前条件缺失或冲突的来源事实，不据此下单\n未批准购买，交易关闭，未核实实时价格。\n真实总成本仍未知：需同配置主机价、随箱量、实际产量、耗材及维护费用。",
+        "first": {
+          "kind": "research",
+          "candidate_id": "Brother HL-L1238W",
+          "requirement_id": "cognition:wechat_miniprogram",
+          "description": "补查当前条件缺失或冲突的来源事实，不据此下单"
+        },
+        "first_key": {
+          "kind": "research",
+          "dimension": "wechat_miniprogram",
+          "candidate_id": "Brother HL-L1238W"
+        },
+        "states": [
+          [
+            "Brother HL-L1238W",
+            "pending_evidence"
+          ],
+          [
+            "HP M232dw",
+            "pending_evidence"
+          ]
+        ],
+        "flags": {
+          "purchase_recommendation_approved": false,
+          "transactions_enabled": false,
+          "live_price_verified": false
+        }
+      }
+    },
+    "cost": {
+      "zero_pages": {
+        "toner_replacements": 0,
+        "drum_replacements": 0,
+        "total": "500",
+        "assumption_only": true,
+        "comparison_basis": {
+          "pages": 0,
+          "months": null,
+          "currency": null,
+          "fee_scope": null,
+          "scenario_version": 1
+        },
+        "basis_status": "legacy_unscoped_fixture",
+        "input_lineage": {
+          "kind": "scenario_assumption",
+          "hardware": "500",
+          "starter": 0,
+          "toner_yield": 1500,
+          "toner_price": "100",
+          "separate_drum": false,
+          "drum_yield": null,
+          "drum_price": null,
+          "drum_starter": null,
+          "maintenance": "0"
+        }
+      },
+      "eighteen_hundred_pages": {
+        "toner_replacements": 2,
+        "drum_replacements": 0,
+        "total": "700",
+        "assumption_only": true,
+        "comparison_basis": {
+          "pages": 1800,
+          "months": null,
+          "currency": null,
+          "fee_scope": null,
+          "scenario_version": 1
+        },
+        "basis_status": "legacy_unscoped_fixture",
+        "input_lineage": {
+          "kind": "scenario_assumption",
+          "hardware": "500",
+          "starter": 0,
+          "toner_yield": 1500,
+          "toner_price": "100",
+          "separate_drum": false,
+          "drum_yield": null,
+          "drum_price": null,
+          "drum_starter": null,
+          "maintenance": "0"
+        }
+      },
+      "unlike_result": "incomparable",
+      "like_result": "a"
+    },
+    "receipts": {
+      "tool_calls": {
+        "provider": "fixture",
+        "declared_model": "mock",
+        "observed_model": "mock",
+        "identity": "matched",
+        "protocol": "responses",
+        "request_id": null,
+        "context_id": null,
+        "http_status": 200,
+        "usage": null,
+        "provider_code": null,
+        "finish_reason": "completed",
+        "elapsed_ms": null,
+        "raw_sha256": "4858c3b2136e40c95878df03d64086656073b7515d5236e2b38091ec75b834c3",
+        "status": "unexpected_output",
+        "text": null,
+        "business_accepted": false,
+        "fixture": true,
+        "text_sha256": null
+      },
+      "function_call": {
+        "provider": "fixture",
+        "declared_model": "mock",
+        "observed_model": "mock",
+        "identity": "matched",
+        "protocol": "responses",
+        "request_id": null,
+        "context_id": null,
+        "http_status": 200,
+        "usage": null,
+        "provider_code": null,
+        "finish_reason": "completed",
+        "elapsed_ms": null,
+        "raw_sha256": "eeb3e7e50081fdc578b096d9d151d74ae5c0f2ee1487dd7efd6ac0df0ae4c8d4",
+        "status": "unexpected_output",
+        "text": null,
+        "business_accepted": false,
+        "fixture": true,
+        "text_sha256": null
+      },
+      "pure_text": {
+        "provider": "fixture",
+        "declared_model": "mock",
+        "observed_model": "mock",
+        "identity": "matched",
+        "protocol": "responses",
+        "request_id": null,
+        "context_id": null,
+        "http_status": 200,
+        "usage": null,
+        "provider_code": null,
+        "finish_reason": "completed",
+        "elapsed_ms": null,
+        "raw_sha256": "eb7954ce0567516217538ba127c7b6ca3c30e42c63c2cadd796ce40bd43444f5",
+        "status": "complete",
+        "text": "{}",
+        "business_accepted": false,
+        "fixture": true,
+        "text_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    }
+  }
+}

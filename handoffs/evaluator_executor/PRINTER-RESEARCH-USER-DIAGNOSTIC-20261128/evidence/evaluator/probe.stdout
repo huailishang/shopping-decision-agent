@@ -1,0 +1,43 @@
+[
+  {
+    "usage": "把爷爷签过字的纸保存到电脑里，发给远方家人",
+    "base_first_field": "needs_color",
+    "manual_target": "requires_scan",
+    "reached": true,
+    "question": "核Brother HL-L1238W的扫描；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+    "safe": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  {
+    "usage": "每份练习纸正反都印满，不想翻纸重放",
+    "base_first_field": "requires_auto_duplex",
+    "manual_target": "requires_auto_duplex",
+    "reached": true,
+    "question": "核Brother HL-L1238W的自动双面；若证实满足则继续研究，若证实不满足则按当前硬要求筛选，缺证仍待核。",
+    "safe": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  {
+    "usage": "一年就寒暑假回去住几天，其余时候机器不动",
+    "base_first_field": "needs_color",
+    "manual_target": "idle_weeks_pattern",
+    "reached": true,
+    "question": "必须在家打印彩色吗？",
+    "safe": {
+      "purchase_recommendation_approved": false,
+      "transactions_enabled": false,
+      "live_price_verified": false
+    }
+  },
+  {
+    "same_instance_replay_blocked": true,
+    "fresh_instance_replay_reactivates": true,
+    "scope": "process-local only"
+  }
+]

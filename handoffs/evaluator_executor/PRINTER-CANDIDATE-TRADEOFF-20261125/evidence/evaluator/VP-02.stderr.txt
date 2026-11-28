@@ -1,0 +1,13 @@
+test_arithmetic_boundaries (test_candidate_tradeoff.CandidateTradeoffTests.test_arithmetic_boundaries) ... ok
+test_color_conflict_not_failed (test_candidate_tradeoff.CandidateTradeoffTests.test_color_conflict_not_failed) ... ok
+test_cost_gate_does_not_publish_quote (test_candidate_tradeoff.CandidateTradeoffTests.test_cost_gate_does_not_publish_quote) ... ok
+test_cost_scenario_and_real_inputs (test_candidate_tradeoff.CandidateTradeoffTests.test_cost_scenario_and_real_inputs) ... ok
+test_cost_yield_withdrawal_and_synthetic_change (test_candidate_tradeoff.CandidateTradeoffTests.test_cost_yield_withdrawal_and_synthetic_change) ... ok
+test_real_hard_color_excludes_both (test_candidate_tradeoff.CandidateTradeoffTests.test_real_hard_color_excludes_both) ... ok
+test_region_does_not_hide_comparison (test_candidate_tradeoff.CandidateTradeoffTests.test_region_does_not_hide_comparison) ... ok
+test_withdraw_color_only_maintains_other_facts (test_candidate_tradeoff.CandidateTradeoffTests.test_withdraw_color_only_maintains_other_facts) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.006s
+
+OK

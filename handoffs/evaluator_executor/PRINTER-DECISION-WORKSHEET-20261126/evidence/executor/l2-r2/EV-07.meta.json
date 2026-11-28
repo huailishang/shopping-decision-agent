@@ -1,0 +1,23 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "EV-07",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_JAVA.py",
+    "--role",
+    "executor"
+  ],
+  "command_display": "python3 -X utf8 handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_JAVA.py --role executor",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-26T08:51:13.486443+00:00",
+  "finished_at_utc": "2026-11-26T08:51:36.155783+00:00",
+  "exit_code": 0,
+  "stdout_path": "EV-07.stdout.log",
+  "stderr_path": "EV-07.stderr.log",
+  "stdout_bytes": 5107,
+  "stderr_bytes": 0,
+  "stdout_sha256": "f15c6bcff2972e706eaa78db6086f7969e24595ce310f57734acd8e0364cb0e0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

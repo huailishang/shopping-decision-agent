@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "action": "guide",
+  "state": {
+    "version": 6,
+    "answers": {
+      "category": {
+        "value": "printer",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "打印机"
+      },
+      "usage": {
+        "value": "主要想把纸质资料扫描存档，也偶尔打印",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "主要想把纸质资料扫描存档，也偶尔打印"
+      },
+      "requires_scan": {
+        "value": true,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "是"
+      },
+      "needs_color": {
+        "value": false,
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "否"
+      },
+      "device_deployment_region": {
+        "value": "河南",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "河南"
+      },
+      "monthly_pages_range": {
+        "value": [
+          0,
+          50
+        ],
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "0-50"
+      }
+    },
+    "history": [
+      {
+        "version": 1,
+        "raw_text": "打印机",
+        "changed_fields": [
+          "category"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 2,
+        "raw_text": "主要想把纸质资料扫描存档，也偶尔打印",
+        "changed_fields": [
+          "usage"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 3,
+        "raw_text": "是",
+        "changed_fields": [
+          "requires_scan"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 4,
+        "raw_text": "否",
+        "changed_fields": [
+          "needs_color"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 5,
+        "raw_text": "河南",
+        "changed_fields": [
+          "device_deployment_region"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 6,
+        "raw_text": "0-50",
+        "changed_fields": [
+          "monthly_pages_range"
+        ],
+        "old_conclusions_invalidated": true
+      }
+    ],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false,
+    "deferred_fields": []
+  },
+  "worksheet": null,
+  "payload": {}
+}

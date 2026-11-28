@@ -1,0 +1,23 @@
+{
+  "states": [
+    [
+      "Brother HL-L1238W",
+      "pending_evidence"
+    ],
+    [
+      "HP M232dw",
+      "pending_evidence"
+    ]
+  ],
+  "plan_mode": "model_rank_actions",
+  "plan_eligibility": [
+    [
+      "Brother HL-L1238W",
+      "pending_evidence"
+    ],
+    [
+      "HP M232dw",
+      "pending_evidence"
+    ]
+  ]
+}

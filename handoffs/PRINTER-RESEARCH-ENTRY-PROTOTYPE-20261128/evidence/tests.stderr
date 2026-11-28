@@ -1,0 +1,16 @@
+test_change_category_invalidates (__main__.PrototypeTests.test_change_category_invalidates) ... ok
+test_deferral_and_withdrawal (__main__.PrototypeTests.test_deferral_and_withdrawal) ... ok
+test_duplex_and_idle_direct (__main__.PrototypeTests.test_duplex_and_idle_direct) ... ok
+test_duplicate_revision_conflict_and_stale (__main__.PrototypeTests.test_duplicate_revision_conflict_and_stale) ... ok
+test_handoff_not_confirmation (__main__.PrototypeTests.test_handoff_not_confirmation) ... ok
+test_invalid_handoff_and_purchase_intent (__main__.PrototypeTests.test_invalid_handoff_and_purchase_intent) ... ok
+test_nonshopping_routes (__main__.PrototypeTests.test_nonshopping_routes) ... ok
+test_revised_route_invalidates (__main__.PrototypeTests.test_revised_route_invalidates) ... ok
+test_scan_correction_to_evidence (__main__.PrototypeTests.test_scan_correction_to_evidence) ... ok
+test_two_internal_walkthroughs (__main__.PrototypeTests.test_two_internal_walkthroughs) ... ok
+test_withdrawal_duplicate_no_resurrection (__main__.PrototypeTests.test_withdrawal_duplicate_no_resurrection) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 14.318s
+
+OK

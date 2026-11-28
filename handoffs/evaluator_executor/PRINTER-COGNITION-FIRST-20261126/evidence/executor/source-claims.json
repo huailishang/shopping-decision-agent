@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "hp-cn-home",
+      "type": "official_exact_model_document",
+      "url": "https://www.hp.com/cn-zh/printers/home-laser-printers.html",
+      "source_group": "hp",
+      "captured_on": "2026-11-25",
+      "published_on": null,
+      "review_status": "prior_narrow_review",
+      "limitations": "厂商页面缓存正文；非实机、销售配置、复用或成交价证明。观察时点为取证汇总；30天是本地复核期限。",
+      "locator": "M232dw 段落，190–204行；限制249、256–261行",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+      "valid_until": "2026-12-25",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        },
+        {
+          "path": "knowledge/printer_cognition_comparison_v1.json",
+          "sha256": "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/evidence/evaluator/source-review.md",
+          "sha256": "cb6c349c7b577e4f2e7bb3ec2e495da93cef8edf32928b771cbc88ae739180ba"
+        }
+      ]
+    },
+    {
+      "id": "brother-cn-202405-brochure",
+      "type": "official_exact_model_document",
+      "url": "https://www.brother.cn/-/media/ap/cn/products/pdf-file/prt/size/122812381808size.ashx",
+      "source_group": "brother",
+      "captured_on": "2026-11-25",
+      "published_on": "2024-05",
+      "review_status": "prior_narrow_review",
+      "limitations": "官方PDF文本取得；截图缓存未命中。观察时点为本轮材料审读记录，非厂商更新时间。标称产量非家庭实测；未说明随机耗材量，30天为本地复核期限。",
+      "locator": "规格册2024年5月；文本第4、13–14、31、40–41、46–48、78–79行",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+      "valid_until": "2026-12-25",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        },
+        {
+          "path": "knowledge/printer_cognition_comparison_v1.json",
+          "sha256": "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385"
+        }
+      ]
+    },
+    {
+      "id": "rtings-cost-method-2021",
+      "type": "independent_comparison_method",
+      "url": "https://www.rtings.com/printer/tests/printing/cost-per-print",
+      "source_group": "rtings",
+      "captured_on": "2026-11-27",
+      "published_on": "2021-09-21",
+      "review_status": "executor_read_pending_independent_review",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "locator": "Our Tests; Costs Not Related To Printing; What's Missing?",
+      "limitations": "2021年方法、美国为主样品、有联盟收入；不证明国内型号实价、长期可靠性或维护金额；不宣称为最新方法。",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json",
+          "sha256": "e1b9392c04faf1438f1ce64af96b74b43fcd910e88c6b67e48717a4da95fea93"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "guide-functions",
+      "text": "有的打印机兼有扫描和自动双面；选购时应分别核实功能，不能只看打印机名称。",
+      "source_ids": [
+        "hp-cn-home"
+      ],
+      "conditions": [
+        "以 M232dw 官方规格为例"
+      ],
+      "exceptions": [
+        "不能推断其他型号、微信复用或实际体验"
+      ],
+      "counter_evidence": [
+        "不能推断其他型号、微信复用或实际体验"
+      ],
+      "evidence_status": "supported",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "fact_ids": [
+        "hp-scan",
+        "hp-auto-duplex"
+      ],
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        },
+        {
+          "path": "knowledge/printer_cognition_comparison_v1.json",
+          "sha256": "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/evidence/evaluator/source-review.md",
+          "sha256": "cb6c349c7b577e4f2e7bb3ec2e495da93cef8edf32928b771cbc88ae739180ba"
+        }
+      ]
+    },
+    {
+      "id": "guide-consumables",
+      "text": "部分激光打印机鼓粉分离；长期费用不能只看墨粉价格，还要核对硒鼓等耗材。",
+      "source_ids": [
+        "brother-cn-202405-brochure"
+      ],
+      "conditions": [
+        "以 HL-L1238W 系列规格册为例"
+      ],
+      "exceptions": [
+        "不推断所有激光机的结构或实际维护费用"
+      ],
+      "counter_evidence": [
+        "不推断所有激光机的结构或实际维护费用"
+      ],
+      "evidence_status": "supported",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "fact_ids": [
+        "brother-separate-drum"
+      ],
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        },
+        {
+          "path": "knowledge/printer_cognition_comparison_v1.json",
+          "sha256": "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385"
+        }
+      ]
+    },
+    {
+      "id": "guide-yield",
+      "text": "标称耗材页数有测试条件，不等于家里一定能打这么多页。",
+      "source_ids": [
+        "brother-cn-202405-brochure"
+      ],
+      "conditions": [
+        "限规格册所述 ISO 测试及单页作业口径"
+      ],
+      "exceptions": [
+        "随箱量、家庭实测产量和维护费未知"
+      ],
+      "counter_evidence": [
+        "随箱量、家庭实测产量和维护费未知"
+      ],
+      "evidence_status": "supported",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "fact_ids": [
+        "brother-tn118-yield",
+        "brother-dr118-yield"
+      ],
+      "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md",
+          "sha256": "a31f590fc0cc3b0278265e4745aed88990a101c8b7474a0d284369e1fad04736"
+        },
+        {
+          "path": "knowledge/printer_cognition_comparison_v1.json",
+          "sha256": "8b288d33f55f94323534e00a6b2524fce6b58c04bde97c65c5fd8a51add64385"
+        }
+      ]
+    },
+    {
+      "id": "guide-cost-method",
+      "text": "单页耗材成本与长期总费用不同；比较时应另问维护费、随箱量和实际使用条件。",
+      "source_ids": [
+        "rtings-cost-method-2021"
+      ],
+      "conditions": [
+        "同测试口径的估算产量与耗材价格仅作方法参考"
+      ],
+      "exceptions": [
+        "清洁耗墨、鼓组件、长期可靠性未纳入该测试成本"
+      ],
+      "counter_evidence": [
+        "评测时价格与家庭真实产量可能不同；少量打印时单页成本未必是首要因素"
+      ],
+      "evidence_status": "supported",
+      "review_ref": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json",
+      "lifecycle": {
+        "revision": 1,
+        "status": "active"
+      },
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/PUB-READ-002.json",
+          "sha256": "e1b9392c04faf1438f1ce64af96b74b43fcd910e88c6b67e48717a4da95fea93"
+        }
+      ]
+    }
+  ],
+  "qualification": "执行者所据最小集；RTINGS方法独立核验待完成，不能作为独立验收或国内具体型号结论"
+}

@@ -27,6 +27,7 @@ BOOL = {"是": True, "需要": True, "必须": True, "接受": True,
         "否": False, "不需要": False, "不是必须": False, "不接受": False}
 LABELS = {
     "category": "商品品类", "usage": "主要用途", "needs_color": "家中彩印是否必须",
+    "idle_weeks_pattern": "连续多周闲置情况",
     "accepts_outsourced_color": "能否外包彩印", "wechat_required": "微信是否必须",
     "accepts_initial_setup": "是否接受首次App/扫码设置",
     "wechat_workflow": "微信打印方式", "device_deployment_region": "打印机使用国家/地区",
@@ -37,6 +38,7 @@ LABELS = {
 QUESTION = {
     "category": "准备买什么商品？请明确品类（不会从含糊原话自动猜测）。",
     "usage": "主要用来做什么？可用自己的话描述。",
+    "idle_weeks_pattern": "家里的打印机是否经常连续多周不用？可暂缓，不作为淘汰条件。",
     "needs_color": "必须在家打印彩色吗？",
     "accepts_outsourced_color": "偶尔需要彩印时，能去打印店处理吗？",
     "wechat_required": "微信打印是必须条件，还是更喜欢但非必须？",
@@ -53,6 +55,7 @@ QUESTION = {
 REFS = {
     "category": [("打印机", "打印机"), ("手机", "手机"), ("电热水壶", "电热水壶")],
     "usage": [("示例：家用打印学习资料", "家用打印学习资料")],
+    "idle_weeks_pattern": [("经常连续多周不用", "经常连续多周不用"), ("通常每周都会用", "通常每周都会用")],
     "needs_color": [("是", "是"), ("否", "否")],
     "accepts_outsourced_color": [("是", "是"), ("否", "否")],
     "wechat_required": [("必须", "必须"), ("偏好（非必须）", "不是必须")],
@@ -71,13 +74,13 @@ REFS = {
 PRINTER_FIELDS = {
     "needs_color", "accepts_outsourced_color", "wechat_required", "accepts_initial_setup",
     "wechat_workflow", "device_deployment_region", "monthly_pages_range", "requires_scan",
-    "requires_auto_duplex", "delivery_region", "budget_scope",
+    "requires_auto_duplex", "delivery_region", "budget_scope", "idle_weeks_pattern",
 }
 FIELD_ORDER = (
     "category", "usage", "needs_color", "accepts_outsourced_color",
     "wechat_required", "accepts_initial_setup", "wechat_workflow",
     "device_deployment_region", "monthly_pages_range", "budget_max_cny",
-    "requires_scan", "requires_auto_duplex", "budget_scope", "delivery_region",
+    "requires_scan", "requires_auto_duplex", "budget_scope", "delivery_region", "idle_weeks_pattern",
 )
 
 
@@ -101,17 +104,25 @@ def _valid_state(state: dict) -> dict:
     for k, r in state["answers"].items():
         if not isinstance(r, dict) or r.get("origin") != "user_explicit" or r.get("confirmed") is not True:
             raise ValueError("存在未确认的会话字段")
+    if "idle_weeks_pattern" in state["answers"]:
+        from .dialogue_flow import _check_answer
+        _check_answer("idle_weeks_pattern", state["answers"]["idle_weeks_pattern"].get("value"))
+        if state["answers"]["idle_weeks_pattern"].get("value") is None:
+            raise ValueError("闲置情况不能确认未知值")
     state["purchase_recommendation_approved"] = False
     state["transactions_enabled"] = False
     skipped = state.get("deferred_fields", [])
     if not isinstance(skipped, list) or any(f not in LABELS for f in skipped):
         raise ValueError("待确认字段无效")
+    withdrawn=state.get("withdrawn_fields",[])
+    if not isinstance(withdrawn,list) or any(f not in LABELS for f in withdrawn) or set(withdrawn)&set(skipped):
+        raise ValueError("撤回字段无效")
     return state
 
 
 def _question_fields(state: dict) -> list[str]:
     v = confirmed_values(state)
-    skipped = set(state.get("deferred_fields", []))
+    skipped = set(state.get("deferred_fields", [])) | set(state.get("withdrawn_fields", []))
     # 复用现有问答分流，并在聊天入口按最有信息增量的顺序补字段。
     legacy = {q["field"] for q in next_questions(state, limit=3)}
     if "category" not in v:
@@ -167,6 +178,11 @@ def _parse(field: str, submitted: str):
         if not re.fullmatch(r"[\w\u4e00-\u9fff-]{2,30}", v):
             raise ValueError("请单独发送品类名，如“打印机”；需求用途下一轮再描述")
         return v
+    if field == "idle_weeks_pattern":
+        options = {"经常连续多周不用":"often_long", "通常每周都会用":"usually_short"}
+        if v not in options:
+            raise ValueError("请选择经常连续多周不用、通常每周都会用，或暂不确定")
+        return options[v]
     if field == "budget_max_cny":
         m = re.fullmatch(r"([0-9]{1,8})\s*元?", v)
         if not m:
@@ -200,6 +216,8 @@ def _parse(field: str, submitted: str):
 def submit_message(state: dict, field: str, submitted: str) -> dict:
     _valid_state(state)
     v = confirmed_values(state)
+    withdrawn=set(state.get("withdrawn_fields",[]))
+    explicit_withdrawals=set()
     if field == "batch":
         # 明示“字段：答复”的本轮批量提交；不自动拆解随意自然语言。
         if len(submitted) > 1000:
@@ -221,13 +239,21 @@ def submit_message(state: dict, field: str, submitted: str) -> dict:
                 raise ValueError("不支持的/重复的批量字段：" + key.strip())
             if name in PRINTER_FIELDS and v.get("category") != "printer":
                 raise ValueError("非打印机不能填打印机条件")
-            changes[name] = _parse(name, value)
+            if value.strip() in ("撤回","撤回答案") and name in v:
+                changes[name]=None
+                explicit_withdrawals.add(name)
+            else:
+                changes[name] = _parse(name, value)
     else:
         if field not in LABELS:
             raise ValueError("当前没有可确认的条件字段")
         if field in PRINTER_FIELDS and v.get("category") != "printer":
             raise ValueError("此字段仅适用于打印机，不能跨品类使用")
-        parsed = _parse(field, submitted)
+        if submitted.strip() in ("撤回","撤回答案") and field in v and field!="category":
+            parsed=None
+            explicit_withdrawals.add(field)
+        else:
+            parsed = _parse(field, submitted)
         changes = {field: parsed}
         if field == "category" and parsed != v.get("category"):
             # 换品类也要清预算等旧需求，不能把原打印机用户条件当成新商品的确认。
@@ -246,12 +272,19 @@ def submit_message(state: dict, field: str, submitted: str) -> dict:
         turn.update(changed_fields=updated, old_conclusions_invalidated=bool(updated))
     skipped = set(state.get("deferred_fields", []))
     for name, value in changes.items():
-        if value is None:
+        withdrawn.discard(name)
+        if name in explicit_withdrawals:
+            withdrawn.add(name)
+            skipped.discard(name)
+        elif value is None:
             skipped.add(name)
         else:
             skipped.discard(name)
     if field == "category" and changes.get("category") != v.get("category"):
         skipped = set()
+        withdrawn=set()
+    if withdrawn or "withdrawn_fields" in state:
+        state["withdrawn_fields"]=sorted(withdrawn)
     state["deferred_fields"] = sorted(skipped)
     # 只保留合理有界的本次会话原话；跨会话不自动保存到磁盘。
     return state
@@ -328,7 +361,7 @@ def _confirmed_comparison_rows(values: dict, legacy_rows: list) -> list:
     return result
 
 
-def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None:
+def _publish_for_chat(analysis: dict, values: dict, version: int, deferred=(), withdrawn=()) -> dict | None:
     """Only accept typed backend data bound to this dialogue; never legacy prose.
 
     The existing backend provides no typed bundle, so ordinary chat correctly
@@ -374,6 +407,13 @@ def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None
         return None
 
     confirmed = _confirmed_comparison_rows(values, requirements)
+    # A complete cognition bundle uses the same user-derived full requirements
+    # as the default consumer; backend-provided thresholds are never trusted.
+    if values.get("category")=="printer" and bundle.get("request_id")=="printer-cognition-pilot":
+        from .cognition_comparison import requirements as cognition_requirements
+        canonical = cognition_requirements(values)
+        if {r["id"] for r in requirements} == {r["id"] for r in canonical}:
+            confirmed = canonical
     if not confirmed:
         return None
     # For multi-candidate displays, unresolved newly introduced conditions come
@@ -385,7 +425,7 @@ def _publish_for_chat(analysis: dict, values: dict, version: int) -> dict | None
         bundle, confirmed, as_of=date.today().isoformat(),
         deployment_region=values.get("device_deployment_region"),
         delivery_region=values.get("delivery_region"),
-        budget_scope=values.get("budget_scope"))
+        budget_scope=values.get("budget_scope"), session_values=values, deferred=deferred, withdrawn=withdrawn)
 
 
 def _safe_research_progress(state: dict, analysis: dict, values: dict) -> str:
@@ -441,13 +481,23 @@ def _public_chat_text(public: dict | None, setup_guard: str, progress: str = "")
         for j, item in enumerate(assessment["comparisons"], 1):
             lines.append(f"候选{i} 条件{j}：{item['text']} "
                          f"核验命题ID：{item['claim_id']}。适用边界：{item['limit']}")
-    for action in public["next_actions"]:
-        lines.append("下一行动：" + action["description"])
+    survivors = [a["candidate_id"] for a in public["assessments"]
+                 if a["research_status"] != "excluded_for_research"]
+    if not survivors:
+        lines.append("整体取舍：原候选均有硬性反证，结束本轮候选比较；调整需求或另找候选。")
+    elif public["next_actions"]:
+        first = public["next_actions"][0]
+        claim = next(c for c in public["claims"] if c["candidate_id"] == first["candidate_id"]
+                     and c["requirement_id"] == first["requirement_id"])
+        lines.append("下一行动：" + first["candidate_id"] + " / " + claim["dimension"] + "：" + first["description"])
+    else:
+        lines.append("下一行动：等待新的有效资料，不自动批准购买。")
     lines.append("未批准购买，交易关闭，未核实实时价格。")
     return "\n".join(lines)
 
 
-def render_chat(state: dict) -> dict:
+def render_chat(state: dict, *, ranking_route=None, ranking_transport=None,
+                ranking_budget=None, cost_scenario=None) -> dict:
     _valid_state(state)
     v = confirmed_values(state)
     fields = _question_fields(state)
@@ -458,14 +508,17 @@ def render_chat(state: dict) -> dict:
                  for k, val in v.items()]
     missing = [LABELS.get(k, k) for k in fields]
     deferred = [LABELS.get(k, k) for k in state.get("deferred_fields", [])]
+    withdrawn = [LABELS.get(k, k) for k in state.get("withdrawn_fields", [])]
     understanding = ("已明确：\n" + ("\n".join(confirmed) if confirmed else "暂无")
                      + "\n\n尚需确认：" + ("、".join(missing) if missing else "当前无必须追问")
                      + ("\n暂不确定：" + "、".join(deferred) if deferred else "")
+                     + ("\n已撤回：" + "、".join(withdrawn) if withdrawn else "")
                      + "\n参考答案点击只填草稿，发送后才会被确认为用户原话。")
     analysis = _analysis(state)
     public_decision = None
     purchase_checks = None
     cognition = None
+    ranking_audit = None
     if analysis is None:
         outcome = ("尚未选择受审品类或缺用途，先收集需求；未给出商品推荐。"
                    if v.get("category") in (None, "printer")
@@ -481,7 +534,17 @@ def render_chat(state: dict) -> dict:
             reviewed = local_bundle(v, state["version"], _confirmed_comparison_rows(v, []), date.today())
             if reviewed is not None:
                 analysis = dict(analysis, verified_research_bundle=reviewed)
-        public_decision = _publish_for_chat(analysis, v, state["version"])
+        public_decision = _publish_for_chat(analysis, v, state["version"], state.get("deferred_fields", []), state.get("withdrawn_fields", []))
+        if public_decision is not None:
+            from .cost_scenario import bind_cost
+            bind_cost(public_decision, cost_scenario)
+            from .action_ranking import rank_actions
+            from .cognition_guide import project
+            cognition_context = json.loads(project(v, {"public_decision":public_decision}, deferred=state.get("deferred_fields", []), withdrawn=state.get("withdrawn_fields", []), state_version=state["version"])["cognition_context_json"])
+            ranked, ranking_audit = rank_actions(public_decision, ranking_route, ranking_transport,
+                                                  cognition_context=cognition_context,
+                                                  **(ranking_budget or {}))
+            public_decision["next_actions"] = ranked
         research_progress = _safe_research_progress(state, analysis, v)
         outcome = _public_chat_text(public_decision, setup_guard, research_progress)
         if reviewed is not None and public_decision is not None:
@@ -496,17 +559,34 @@ def render_chat(state: dict) -> dict:
         research = analysis.get("research_case")
         if isinstance(research, dict) and research.get("case_id") == CASE_ID:
             purchase_checks = build_purchase_checks(v)
-            outcome += "\n" + render_purchase_checks(purchase_checks)
+            if public_decision is not None and reviewed is None:
+                survivors = {a["candidate_id"] for a in public_decision["assessments"]
+                             if a["research_status"] != "excluded_for_research"}
+                purchase_checks["candidates"] = [x for x in purchase_checks["candidates"]
+                                                   if x["model"] in survivors]
+                if public_decision["next_actions"]:
+                    first = public_decision["next_actions"][0]
+                    purchase_checks["decision_first_action"] = first
+                    # The legacy action list cannot override a validated decision.
+                    outcome += "\n购买前核价仅作为后续条件；先完成上述统一下一行动。"
+                elif not survivors:
+                    purchase_checks["decision_first_action"] = None
+            else:
+                outcome += "\n" + render_purchase_checks(purchase_checks)
         # The local cognition pilot uses the same deterministic claim gate.
         # Never use it to override a provider's validated or rejected bundle.
         if not isinstance(analysis.get("verified_research_bundle"), dict):
             cognition = compare_cognition(v, state["version"], date.today(),
-                                          deferred=state.get("deferred_fields", []))
+                                          deferred=state.get("deferred_fields", []), withdrawn=state.get("withdrawn_fields", []),
+                                          ranking_route=ranking_route,
+                                          ranking_transport=ranking_transport,
+                                          ranking_budget=ranking_budget, cost_scenario=cost_scenario)
             if cognition is not None:
                 outcome = (setup_guard + render_cognition(cognition, v)
                            + "\n旧研究材料（待核研究，不影响上述有据维度）：\n"
                            + research_progress)
                 decision = cognition["decision"]
+                ranking_audit = cognition["ranking_audit"]
                 action = decision["next_action"]
                 if purchase_checks is not None:
                     # Keep quote/fee audit fields, but never recommend actions for
@@ -529,6 +609,28 @@ def render_chat(state: dict) -> dict:
                     prompt = action["text"]
                     choices = []
 
+        if public_decision is not None and reviewed is None and cognition is None:
+            from .cost_scenario import render_cost
+            outcome += "\n" + render_cost(public_decision.get("cost_comparison"))
+            if not any(a["research_status"] != "excluded_for_research"
+                       for a in public_decision["assessments"]):
+                active, choices = "", []
+                prompt = "原候选均有硬性反证，结束本轮候选比较；调整需求或另找候选。"
+                if purchase_checks is not None:
+                    purchase_checks["candidates"] = []
+            elif public_decision["next_actions"]:
+                first = public_decision["next_actions"][0]
+                claim = next(c for c in public_decision["claims"]
+                             if c["candidate_id"] == first["candidate_id"]
+                             and c["requirement_id"] == first["requirement_id"])
+                if first["kind"]=="clarify":
+                    active={"scan":"requires_scan","auto_duplex":"requires_auto_duplex"}[claim["dimension"]]
+                    prompt=QUESTION[active]
+                    choices=[*REFS[active], ("暂不确定","暂不确定")]
+                    fields=[active]+[f for f in fields if f!=active]
+                else:
+                    active, choices = "", []
+                    prompt = first["description"] if first["kind"]=="confirm_cost_assumption" else first["candidate_id"] + " / " + claim["dimension"] + "：" + first["description"]
         # The status remains a dialogue workflow signal, never a verified
         # product claim. Only the gate-generated text can be published as such.
         status = r["status"]
@@ -537,25 +639,93 @@ def render_chat(state: dict) -> dict:
                           if (v.get("category") == "printer" or k not in PRINTER_FIELDS))
     report = {"dialogue": state, "confirmed_fields": v,
               "unconfirmed_fields": fields, "deferred_fields": state.get("deferred_fields", []),
+              "withdrawn_fields":state.get("withdrawn_fields", []),
               "research_result": analysis,
               "legacy_unverified_research": analysis is not None,
               "public_decision": public_decision,
               "purchase_checks": purchase_checks,
               "cognition_comparison": cognition,
+              "ranking_audit": ranking_audit,
               "public_claim_source": "publish_checked_comparison" if public_decision else "unverified_research_only",
               "purchase_recommendation_approved": False, "transactions_enabled": False,
               "live_price_verified": False}
+    from .cognition_guide import project
+    guide = project(v, report, deferred=state.get("deferred_fields", []), withdrawn=state.get("withdrawn_fields", []), state_version=state["version"])
+    if guide:
+        from .focus_guidance import choose_field, build_focus
+        guide_context = json.loads(guide["cognition_context_json"])
+        guide_data = json.loads(guide["cognition_guide_json"])
+        selected = choose_field(v, state.get("deferred_fields", []),
+                                state.get("withdrawn_fields", []), active,
+                                comparison_ready=public_decision is not None or cognition is not None)
+        if selected != active:
+            active = selected
+            if active:
+                fields = [active] + [f for f in fields if f != active]
+                prompt = QUESTION[active]
+                choices = [*REFS.get(active, []), ("暂不确定", "暂不确定")]
+            else:
+                choices = []
+                if v.get("needs_color") is True:
+                    prompt = "现有两款黑白样本不适用；下一步核彩色路线的功能与适用证据。"
+        if active == "needs_color" and "usage" in v:
+            prompt = QUESTION[active]
+        projected_focus = guide_context.get("guidance_focus")
+        # Non-answerable public research focuses on the same equal-priority
+        # group even if a controlled ranking changes its first candidate.
+        focus = projected_focus if (projected_focus and not active and projected_focus["field"] is None) else build_focus(v, state, guide_data, active, prompt)
+        guide_context["guidance_focus"] = focus
+        guide["guidance_focus_json"] = json.dumps(focus, ensure_ascii=False)
+        guide["guidance_focus_text"] = focus["explanation"]
+        guide["cognition_context_json"] = json.dumps(guide_context, ensure_ascii=False)
+        report["cognition_guidance"] = guide_context
+        report["unconfirmed_fields"] = fields
+        # Visible in the existing main-screen understanding, without requiring
+        # the full guide or adding a second session state.
+        missing = [LABELS.get(k, k) for k in fields]
+        understanding = ("已明确：\n" + ("\n".join(confirmed) if confirmed else "暂无")
+                         + "\n\n尚需确认：" + ("、".join(missing) if missing else "当前无必须追问")
+                         + ("\n暂不确定：" + "、".join(deferred) if deferred else "")
+                         + ("\n已撤回：" + "、".join(withdrawn) if withdrawn else "")
+                         + "\n当前为什么问：" + focus["explanation"]
+                         + "\n" + focus["if_unknown"]
+                         + "\n参考答案点击只填草稿，发送后才会被确认为用户原话。")
+        task = guide_context["usage_research"]
+        if task["status"] == "research_required":
+            outcome += "\n使用场景补证（不改变硬条件优先级）：" + task["question"]
+        if v.get("needs_color") is True and cognition is None and public_decision is None:
+            outcome += "\n已确认必须在家彩印；当前两款黑白样本不适用，不能形成购买推荐。"
+    if guide:
+        from .decision_note import render_note
+        guide["decision_note_json"]=render_note(report,guide,prompt)
+    elif v.get("category") not in (None, "printer"):
+        # The guide has no professional material for this category. Keep
+        # editable inputs available, but do not masquerade as an ask focus.
+        from .focus_guidance import build_focus
+        active, choices = "", []
+        focus = build_focus(v, state, None, "", "")
+        prompt = focus["question"]
+        guide = {"guidance_focus_json": json.dumps(focus, ensure_ascii=False),
+                 "guidance_focus_text": focus["explanation"]}
+        report["guidance_focus"] = focus
+
     return {"status": status, "state_json": json.dumps(state, ensure_ascii=False),
             "prompt_field": active, "prompt": prompt,
             "choices": "\n".join(label + "\t" + draft for label, draft in choices),
             "understanding": understanding, "result_text": outcome,
             "editable": editable, "session_version": str(state["version"]),
-            "report_json": json.dumps(report, ensure_ascii=False, indent=2)}
+            "report_json": json.dumps(report, ensure_ascii=False, indent=2), **guide}
 
 
 def main() -> None:
     try:
         args = sys.argv[1:]
+        if args == ["--worksheet-stdin"]:
+            from .decision_worksheet import handle, parse, MAX_BYTES
+            out = handle(parse(sys.stdin.buffer.read(MAX_BYTES + 1)))
+            for key, value in out.items():
+                print(key + "\t" + encode(value))
+            return
         if len(args) != 3:
             raise ValueError("需要状态、条件字段和本轮发送原话")
         raw = [base64.b64decode(x, validate=True).decode("utf-8") for x in args]
@@ -563,7 +733,7 @@ def main() -> None:
         if raw[1] or raw[2]:
             state = submit_message(state, raw[1], raw[2])
         out = render_chat(state)
-    except (ValueError, TypeError, KeyError, UnicodeError, json.JSONDecodeError) as exc:
+    except (ValueError, TypeError, KeyError, UnicodeError, json.JSONDecodeError, RecursionError, OverflowError) as exc:
         out = {"error": str(exc)}
     for key, value in out.items():
         print(key + "\t" + encode(value))

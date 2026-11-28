@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "id": "coarse-novice",
+      "passed": true,
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "6c7b5ccf29fd4ff7a65bab0464a9ce0532a5c3507d081ac23ff8006130f8f002",
+      "context": {
+        "schema_version": 1,
+        "guide_id": "printer-cognition-guide",
+        "guide_version": "6c7b5ccf29fd4ff7a65bab0464a9ce0532a5c3507d081ac23ff8006130f8f002",
+        "user_confirmed": {
+          "category": "printer",
+          "usage": "家里偶尔用，我不懂打印机参数"
+        },
+        "cognition_claims": [
+          {
+            "id": "guide-functions",
+            "text": "有的打印机兼有扫描和自动双面；选购时应分别核实功能，不能只看打印机名称。",
+            "source_ids": [
+              "hp-cn-home"
+            ],
+            "conditions": [
+              "以 M232dw 官方规格为例"
+            ],
+            "exceptions": [
+              "不能推断其他型号、微信复用或实际体验"
+            ],
+            "counter_evidence": [
+              "不能推断其他型号、微信复用或实际体验"
+            ],
+            "evidence_status": "supported",
+            "fact_ids": [
+              "hp-scan",
+              "hp-auto-duplex"
+            ],
+            "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+          },
+          {
+            "id": "guide-consumables",
+            "text": "部分激光打印机鼓粉分离；长期费用不能只看墨粉价格，还要核对硒鼓等耗材。",
+            "source_ids": [
+              "brother-cn-202405-brochure"
+            ],
+            "conditions": [
+              "以 HL-L1238W 系列规格册为例"
+            ],
+            "exceptions": [
+              "不推断所有激光机的结构或实际维护费用"
+            ],
+            "counter_evidence": [
+              "不推断所有激光机的结构或实际维护费用"
+            ],
+            "evidence_status": "supported",
+            "fact_ids": [
+              "brother-separate-drum"
+            ],
+            "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+          },
+          {
+            "id": "guide-yield",
+            "text": "标称耗材页数有测试条件，不等于家里一定能打这么多页。",
+            "source_ids": [
+              "brother-cn-202405-brochure"
+            ],
+            "conditions": [
+              "限规格册所述 ISO 测试及单页作业口径"
+            ],
+            "exceptions": [
+              "随箱量、家庭实测产量和维护费未知"
+            ],
+            "counter_evidence": [
+              "随箱量、家庭实测产量和维护费未知"
+            ],
+            "evidence_status": "supported",
+            "fact_ids": [
+              "brother-tn118-yield",
+              "brother-dr118-yield"
+            ],
+            "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+          }
+        ],
+        "route_basis": [
+          {
+            "id": "mono_laser",
+            "label": "黑白激光",
+            "status": "consider",
+            "evidence_ids": [],
+            "conditions": [
+              "必须在家彩印时不适用"
+            ],
+            "limitations": [
+              "尚未核实各路线长期维护差异"
+            ]
+          },
+          {
+            "id": "color_inkjet",
+            "label": "喷墨或其他彩色路线",
+            "status": "unknown",
+            "evidence_ids": [],
+            "conditions": [
+              "本人确认彩色需求后再查路线"
+            ],
+            "limitations": [
+              "未核专业比较资料，不排名"
+            ]
+          },
+          {
+            "id": "outsourcing",
+            "label": "外部打印或暂缓购买",
+            "status": "unknown",
+            "evidence_ids": [],
+            "conditions": [
+              "本人愿意外部打印时比较便利性与费用"
+            ],
+            "limitations": [
+              "未核当地费用与可达性"
+            ]
+          }
+        ],
+        "candidate_facts": [],
+        "unknowns": [
+          "路线间独立专业试验尚待核源",
+          "真实维护费用、闲置后表现和家庭实际耗材量未核",
+          "具体型号、销售配置、价格及库存需单独验证"
+        ]
+      }
+    },
+    {
+      "id": "explicit-color",
+      "passed": true,
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "6c7b5ccf29fd4ff7a65bab0464a9ce0532a5c3507d081ac23ff8006130f8f002",
+      "context": {
+        "schema_version": 1,
+        "guide_id": "printer-cognition-guide",
+        "guide_version": "6c7b5ccf29fd4ff7a65bab0464a9ce0532a5c3507d081ac23ff8006130f8f002",
+        "user_confirmed": {
+          "category": "printer",
+          "usage": "家里偶尔用，我不懂打印机参数",
+          "needs_color": true
+        },
+        "cognition_claims": [
+          {
+            "id": "guide-functions",
+            "text": "有的打印机兼有扫描和自动双面；选购时应分别核实功能，不能只看打印机名称。",
+            "source_ids": [
+              "hp-cn-home"
+            ],
+            "conditions": [
+              "以 M232dw 官方规格为例"
+            ],
+            "exceptions": [
+              "不能推断其他型号、微信复用或实际体验"
+            ],
+            "counter_evidence": [
+              "不能推断其他型号、微信复用或实际体验"
+            ],
+            "evidence_status": "supported",
+            "fact_ids": [
+              "hp-scan",
+              "hp-auto-duplex"
+            ],
+            "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+          },
+          {
+            "id": "guide-consumables",
+            "text": "部分激光打印机鼓粉分离；长期费用不能只看墨粉价格，还要核对硒鼓等耗材。",
+            "source_ids": [
+              "brother-cn-202405-brochure"
+            ],
+            "conditions": [
+              "以 HL-L1238W 系列规格册为例"
+            ],
+            "exceptions": [
+              "不推断所有激光机的结构或实际维护费用"
+            ],
+            "counter_evidence": [
+              "不推断所有激光机的结构或实际维护费用"
+            ],
+            "evidence_status": "supported",
+            "fact_ids": [
+              "brother-separate-drum"
+            ],
+            "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+          },
+          {
+            "id": "guide-yield",
+            "text": "标称耗材页数有测试条件，不等于家里一定能打这么多页。",
+            "source_ids": [
+              "brother-cn-202405-brochure"
+            ],
+            "conditions": [
+              "限规格册所述 ISO 测试及单页作业口径"
+            ],
+            "exceptions": [
+              "随箱量、家庭实测产量和维护费未知"
+            ],
+            "counter_evidence": [
+              "随箱量、家庭实测产量和维护费未知"
+            ],
+            "evidence_status": "supported",
+            "fact_ids": [
+              "brother-tn118-yield",
+              "brother-dr118-yield"
+            ],
+            "review_ref": "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/evidence/evaluator/source-review.md"
+          }
+        ],
+        "route_basis": [
+          {
+            "id": "mono_laser",
+            "label": "黑白激光",
+            "status": "not_fit",
+            "evidence_ids": [],
+            "conditions": [
+              "必须在家彩印时不适用"
+            ],
+            "limitations": [
+              "尚未核实各路线长期维护差异"
+            ]
+          },
+          {
+            "id": "color_inkjet",
+            "label": "喷墨或其他彩色路线",
+            "status": "research_required",
+            "evidence_ids": [],
+            "conditions": [
+              "本人确认彩色需求后再查路线"
+            ],
+            "limitations": [
+              "未核专业比较资料，不排名"
+            ]
+          },
+          {
+            "id": "outsourcing",
+            "label": "外部打印或暂缓购买",
+            "status": "unknown",
+            "evidence_ids": [],
+            "conditions": [
+              "本人愿意外部打印时比较便利性与费用"
+            ],
+            "limitations": [
+              "未核当地费用与可达性"
+            ]
+          }
+        ],
+        "candidate_facts": [],
+        "unknowns": [
+          "路线间独立专业试验尚待核源",
+          "真实维护费用、闲置后表现和家庭实际耗材量未核",
+          "具体型号、销售配置、价格及库存需单独验证"
+        ]
+      }
+    }
+  ],
+  "passed": 2,
+  "total": 2,
+  "real_model_calls": 0,
+  "limit": "packet parity does not prove live model quality; actual ranking consumption and negative receipts are additionally required"
+}

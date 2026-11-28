@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "action": "guide",
+  "state": {
+    "version": 2,
+    "answers": {
+      "category": {
+        "value": "printer",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "打印机"
+      },
+      "usage": {
+        "value": "出差一两个月，回来才打几张",
+        "origin": "user_explicit",
+        "confirmed": true,
+        "raw_text": "出差一两个月，回来才打几张"
+      }
+    },
+    "history": [
+      {
+        "version": 1,
+        "raw_text": "打印机",
+        "changed_fields": [
+          "category"
+        ],
+        "old_conclusions_invalidated": true
+      },
+      {
+        "version": 2,
+        "raw_text": "出差一两个月，回来才打几张",
+        "changed_fields": [
+          "usage"
+        ],
+        "old_conclusions_invalidated": true
+      }
+    ],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false,
+    "deferred_fields": []
+  },
+  "worksheet": null,
+  "payload": {}
+}

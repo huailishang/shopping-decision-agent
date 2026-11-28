@@ -1,0 +1,127 @@
+{
+  "cases": [
+    {
+      "id": "CH01",
+      "expected": "same metrics and no trace errors",
+      "observed": [
+        {
+          "metrics": {
+            "completed": true,
+            "answers": 1,
+            "reads": 0,
+            "duplicates": 0,
+            "irrelevant": 0
+          },
+          "errors": []
+        },
+        {
+          "metrics": {
+            "completed": true,
+            "answers": 1,
+            "reads": 0,
+            "duplicates": 0,
+            "irrelevant": 0
+          },
+          "errors": []
+        }
+      ],
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/aa1/replay.json",
+          "sha256": "0e92e945d6de40362c4d13cc91e0494f7596d97e33aff679a3bb15b43dea6774"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/aa2/replay.json",
+          "sha256": "c974348a3317d3d7ed738eec48bb5b083b21c0a4326c5ba4e0abc849e849da8a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/pilot-reference.json",
+          "sha256": "1f5b082b841d9bf3f31198ea2a3be5fb81b2ee4764e91f9a848f6d1684465956"
+        }
+      ]
+    },
+    {
+      "id": "CH03",
+      "expected": "hidden state injection detected",
+      "observed": {
+        "metrics": {
+          "completed": true,
+          "answers": 0,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "errors": [
+          "hidden answer/state injection",
+          "unexpected read mutation"
+        ]
+      },
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/hidden/replay.json",
+          "sha256": "42aa9bfbfe1df44afc743878ec10fb83a4f5f91b1e6361b5c764e92643d481fe"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/pilot-reference.json",
+          "sha256": "1f5b082b841d9bf3f31198ea2a3be5fb81b2ee4764e91f9a848f6d1684465956"
+        }
+      ]
+    },
+    {
+      "id": "CH02",
+      "expected": "wrong question yields irrelevant answer and incomplete route",
+      "observed": {
+        "metrics": {
+          "completed": false,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 1
+        },
+        "errors": []
+      },
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/wrong-question/replay.json",
+          "sha256": "6d4e27cda0eb3a3b05467ba2dd8530db36bffcf6a86cc30920c0e0fb6562eebd"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/isolated-mutation.json",
+          "sha256": "9be61e0618e1a87523c8ec658d062022d5caf42c7b6acd1a2ba0ff1542067dcc"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/pilot-reference.json",
+          "sha256": "1f5b082b841d9bf3f31198ea2a3be5fb81b2ee4764e91f9a848f6d1684465956"
+        }
+      ]
+    },
+    {
+      "id": "CH04",
+      "expected": "resource basis mismatch is incomparable",
+      "observed": {
+        "equal": false,
+        "result": "incomparable"
+      },
+      "detected": true,
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/different-basis.json",
+          "sha256": "8e3a7ce0ea33c2551e8acfc3bacb784b591c57ec092499e7be34997072dc212f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/aa1/replay.json",
+          "sha256": "0e92e945d6de40362c4d13cc91e0494f7596d97e33aff679a3bb15b43dea6774"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/measurement-pilot/pilot-reference.json",
+          "sha256": "1f5b082b841d9bf3f31198ea2a3be5fb81b2ee4764e91f9a848f6d1684465956"
+        }
+      ],
+      "limitation": "pilot comparison of actual declared resource limits; final auditor over 24 pairs still required"
+    }
+  ],
+  "limit": "single T02 challenge pilot; not final challenge-results.json"
+}

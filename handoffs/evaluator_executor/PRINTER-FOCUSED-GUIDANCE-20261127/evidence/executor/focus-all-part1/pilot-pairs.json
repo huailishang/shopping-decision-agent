@@ -1,0 +1,665 @@
+{
+  "reference_artifact": {
+    "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/replay-reference-v2.json",
+    "sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db"
+  },
+  "pairs": [
+    {
+      "case_id": "T01",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T01/a/replay.json",
+            "sha256": "480e57b206420687b541d5b0d331f2ed39fc05f4f456fee2467025db75cf9dae"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T01/b/replay.json",
+            "sha256": "bfa1b66cd8dac69fb1335ac14260c4aa391ef66d949ca94b7892f1513fe0b0a5"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T02",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T02/a/replay.json",
+            "sha256": "2f475a4ec00d80259eb8f11dca61147c28dcba38843d238c0d35c32cbbffd83d"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T02/b/replay.json",
+            "sha256": "2647bde5f2efa2867875601327dde607f44597ed12d27e266aa13a32a8159503"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T03",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T03/a/replay.json",
+            "sha256": "d9d045fd7e935dffc39d2779ac4a2aab89bf63f2f61e66350e48d1c302a69198"
+          }
+        },
+        "metrics": {
+          "completed": false,
+          "answers": 5,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 3
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:candidate_dimension": false,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": false,
+        "terminal": "stalled",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T03/b/replay.json",
+            "sha256": "92a22f879e92dc1de9a667f0de7f11219ab28404832694c444ffa6e5cca77a68"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 4,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:candidate_dimension": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T04",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T04/a/replay.json",
+            "sha256": "18073f65ed8ed717adb4e32c40cd5a886f6d12074fc95cea147cb4958720f47b"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T04/b/replay.json",
+            "sha256": "97cdfad8a63384b5317c2f1cd2d28e23221ef5818b3f4902a57ca0ff30a4bad9"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T05",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T05/a/replay.json",
+            "sha256": "9f2d9f9703e190bb739fab40614877699c102a4fab3eefc1f0128040dc6c181d"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T05/b/replay.json",
+            "sha256": "920a86c4f6e9cc320c233e3d623f70b0b7f313a69ac5309a86cce037b692b771"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:route": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T06",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T06/a/replay.json",
+            "sha256": "d4ba1e3c8f7157ab3ab421296e2d4b35b21756351c023b5a9038058a39696be8"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:color_unknown": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T06/b/replay.json",
+            "sha256": "7cfefa75c2e714e886c7340c0e2d897e05a76108900e9973c11bde8fa0073160"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 1,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:color_unknown": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T07",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T07/a/replay.json",
+            "sha256": "e0746576b33d9aefbc7f6a3e223972cfe77f87e086ab99ec009320ecb35ba544"
+          }
+        },
+        "metrics": {
+          "completed": false,
+          "answers": 5,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 3
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:candidate_dimension": false,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": false,
+        "terminal": "stalled",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T07/b/replay.json",
+            "sha256": "0b2a15e03ee94be839efaf92da02098f93696101636568e7a5f08325f2c7a97f"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 4,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:candidate_dimension": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    },
+    {
+      "case_id": "T08",
+      "basis": {
+        "as_of": "2026-11-27",
+        "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+        "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+        "limits": {
+          "max_answer_turns": 12,
+          "max_read_requests": 4,
+          "max_product_calls": 30
+        }
+      },
+      "a": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T08/a/replay.json",
+            "sha256": "114853d0ff34dd95408aaaee0b7a12f4e31686f45f48a1e264fab5b0495d4e4d"
+          }
+        },
+        "metrics": {
+          "completed": false,
+          "answers": 5,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 3
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:candidate_dimension": false,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": false,
+        "terminal": "stalled",
+        "product_sha256": "0162e87a0f6c689c9e89b8302eb24d7d41f0a073a5aeb463de0e05bdbfacc739"
+      },
+      "b": {
+        "arm": {
+          "basis": {
+            "as_of": "2026-11-27",
+            "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+            "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+            "limits": {
+              "max_answer_turns": 12,
+              "max_read_requests": 4,
+              "max_product_calls": 30
+            }
+          },
+          "replay": {
+            "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/focus-all-part1/T08/b/replay.json",
+            "sha256": "b26c5f59586b4549b8a9771f881043bf9d6517a869e3cda8c8536f6cdda88c47"
+          }
+        },
+        "metrics": {
+          "completed": true,
+          "answers": 4,
+          "reads": 0,
+          "duplicates": 0,
+          "irrelevant": 0
+        },
+        "trace_errors": [],
+        "semantic_checks": {
+          "0:candidate_dimension": true,
+          "authorization_false": true
+        },
+        "setup_artifacts": [],
+        "semantic_completed": true,
+        "terminal": "completed",
+        "product_sha256": "b960a96b9329cc15263534e5e807abec4c25cd6679c8becf70d59c8134b6dd3b"
+      },
+      "comparable": true
+    }
+  ],
+  "limit": "pilot subset; not final comparisons.json"
+}

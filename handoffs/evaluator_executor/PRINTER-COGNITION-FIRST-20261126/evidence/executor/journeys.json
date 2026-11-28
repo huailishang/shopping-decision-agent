@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "G01",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "只有“家里想买打印机、不懂参数”→有据导览→一个生活化问题，不先填维护费",
+      "before": "仅粗用途，未确认专业参数",
+      "after": "真实窗口先出现指南，来源与生活化问题可读",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G01-guide.txt",
+          "sha256": "b5b53047ec317416667c580180510b5d02c0b2a24579d8c5dc393cda71d84a66"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G02",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "彩色需求/可否外部打印澄清→路线比较→不被原两型号绑死",
+      "before": "彩印选择尚未明确",
+      "after": "彩色必须排黑白，外包可考虑；不把原两款当唯一范围",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G02-color.txt",
+          "sha256": "f007e127c7aebb47957a848d208e56eac945adfaf78d906f4161736f676083fd"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G02-outsourced.txt",
+          "sha256": "7e6824d6db0276a29c3a419d33cd00c08c86e0ed6a5f27859f1230f0ecb86bd8"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G03",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "看参数含义/条件/例外/正反依据→展开找到原来源和日期",
+      "before": "只知道粗用途",
+      "after": "指南显示参数解释、反证、原地址、发布/获取日期及定位",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G03-source-details.txt",
+          "sha256": "dc20376ceed54d00430fc8dc928b44e3c356e3a8cdb2f9fc9b1e4a09439ab712"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G04",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "仅查看/点参考不确认，不把指南建议变成本人硬要求",
+      "before": "已有会话",
+      "after": "点击参考仅填草稿，会话原字节不变",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G04-draft.txt",
+          "sha256": "8b05353272fa97fc58f35fc74b3c28dd547d4b79d45dd4e9994c5f45a9e2a35a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G05",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "小白明确提交一个选择→同源需求/路线/候选或具体研究任务改变",
+      "before": "未确认闲置因素",
+      "after": "发送后often_long进入状态，恢复/维护问题出现",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G05-confirmed.txt",
+          "sha256": "b1735321a08a350235e1a9c337517430a108f690f62b1be8951ba57f992956d5"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G06",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "新增使用因素已确认→暂缓→撤回，保真且影响解释/任务",
+      "before": "已确认闲置因素",
+      "after": "暂缓、改答、撤回按实际按钮流程保真",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G06-withdrawn.txt",
+          "sha256": "f16d20e583b70dd4cac7fbc694680f15e14a4b5c27f34663f8d3df4ad6deb5d8"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G07",
+      "core": true,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "推广/方法不明/自称权威材料不升级行业规则",
+      "before": "原已准入资料",
+      "after": "合成广告/自证注入拒绝，待审摘录不升级认知或事实",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G07-bridge-trace.json",
+          "sha256": "5111a0009bba4f7b10c35ac00ffc219039b6ccdeb0cb709d2eb44d873988a0fd"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G08",
+      "core": true,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "重复转载/相互冲突/过期或跨市场试验不多数投票、不过度外推",
+      "before": "原已准入资料",
+      "after": "合成转载/冲突旧价及不适用型号均待审，不改变事实；美国方法限制保留",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G08-bridge-trace.json",
+          "sha256": "79768f3720e4cd87b02b20f87350e9aed873b3656839710395ae1741193905d9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G09",
+      "core": true,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "先路线后型号；硬缺证/反证下保留待核或淘汰，不按软成本复活",
+      "before": "硬条件待核",
+      "after": "彩色硬要求两旧款不适用；成本假设不能复活硬失败",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G09-bridge-trace.json",
+          "sha256": "a93f0cfde0240b7afe66210185391137fd5f9e721de47799f1ab9c24ddb4c25c"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G10",
+      "core": true,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "品类主张、用户要求、型号事实、标称量、实际假设、报价分别处理",
+      "before": "未做成本情景",
+      "after": "决定说明分层保留本人需求、认知、型号事实、标称量和假设；价格未核",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G10-bridge-trace.json",
+          "sha256": "9304c7c450a98bf938c051322d548923d74d89600c5a47c2ab6fee30d11c7036"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G11",
+      "core": true,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "实际模型上下文具当前认知版本；资料注入/伪造回执/陈旧上下文回退",
+      "before": "正常真实stdin指南及规则结果",
+      "after": "真实产品上下文由受控transport消费；伪造/陈旧回执和超预算回退，不调用真实模型",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G11-bridge-trace.json",
+          "sha256": "0803d7480d740fe799ba600cc036f1f77f99e9cd859d4fa1e9de24fdceda38ef"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G12",
+      "core": true,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "维护/主机价/随箱量单变量干预，结果和下一行动对准决定性项",
+      "before": "原前测仅1/3，行动固定追随赢家随箱量",
+      "after": "冻结探针维护/主机价/随箱量3/3定位实际干预对象；两点情景，不是全范围证明",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/action-slice03-final.json",
+          "sha256": "45ca8aedba148c64d391978eaa53f95e631b35f836ef520c3fe19b475a013d5e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G13",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "认知源撤回/同ID新版→仅依赖结果失效，用户答案/独立事实保留",
+      "before": "方法来源有效；用户已确认场景",
+      "after": "受控撤回与同ID新版待审，旧主张失效，独立主张及答案保持；恢复原注册表后重算",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G13-before.txt",
+          "sha256": "91526bd02503e4efc04b7b074b065314b0a62c54c42edde89ad7025806d7eff7"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G13-withdrawn.txt",
+          "sha256": "8201aa6e3637fa572758395d629ac0b03c339c09da85f28026b138d7b8265f33"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G13-revision2.txt",
+          "sha256": "bcf7029cf9e9e7faf05a5eda82c442d89ce3102cc60d6d458594a7ba026236b8"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G13-recovered.txt",
+          "sha256": "c67523ae34e5199de888eec80d248025c5e6dcf42cc4897bf77ce34676cce399"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/five-suites-05.stdout.txt",
+          "sha256": "0c25e2369261fa983fd3e08e44fcaa9bd6d01e4d4b9a92961759fd62103d3180"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G14",
+      "core": true,
+      "completed": true,
+      "route": "java_event",
+      "expected": "显式保存→新进程恢复→当前指南重算，旧结论/授权不复活",
+      "before": "当前指南、已确认闲置因素",
+      "after": "另存、新会话、新进程恢复；只保留输入及引用、不恢复结论",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G14-saved.json",
+          "sha256": "e5cd6744614c3ee66325f8cf6ad605d58853df7fdc41b068ec19c351f6eb0e94"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G14-restored.txt",
+          "sha256": "1145f0d1d98213029dcffafef1a02b79d84e4e3e9e2c8d6e081cc28b23cf1f33"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G15",
+      "core": false,
+      "completed": true,
+      "route": "java_event",
+      "expected": "当前认知到决定说明预览/另存，出处/日期/参数来源可回查",
+      "before": "当前产品报告",
+      "after": "实际预览/选择文件并另存，来源/版本/授权false可读",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G15-decision-note.json",
+          "sha256": "4b4b86855ee74368c4f7ccbe285c26ec6081ab5772858ed804021b613eba7423"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G16",
+      "core": false,
+      "completed": true,
+      "route": "java_event",
+      "expected": "取消草稿/文件选择/故障/迟到回执，新会话与旧文件完好",
+      "before": "有效会话与已存在文件",
+      "after": "取消、错误枚举、拒绝覆盖、实际新会话使旧worker失效；旧草稿取消另有原生证据",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G16-note-cancel.txt",
+          "sha256": "ae1a0922a44378cf1d1b24aae510bc7e3185b2d9af0190441e4ae0abf3f1eaf9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/G16-reset-and-fault.txt",
+          "sha256": "5775bb16ebf5d4461467a05ad3974b7205d8572a4fcd1e17e2fc462162822948"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/J09-after.txt",
+          "sha256": "3d36a2f6105b7e9205510935f0279b923db244feb52884894a4884c5f0ee6ffe"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/CognitionGuideSwingRegression.stdout.txt",
+          "sha256": "dcf0430f828a1ac62c24d483c2d7acd9a579e84c0edc06fb9e3555085fa59309"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/summary.json",
+          "sha256": "8320d8dbb7603355b601576f4d4482341cfaaa99c8ee7c5c05ead705a87d1020"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/java-native-20261127T074238427479/DecisionWorksheetSwingRegression.stdout.txt",
+          "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G17",
+      "core": false,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "0/未知/非法极端/单位错误→安全拒绝并继续正确修改",
+      "before": "已完成合成同口径工作单",
+      "after": "0与未知区分，拒绝极端费用/单候选币种错误，正常修改恢复",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G17-bridge-trace.json",
+          "sha256": "a556077e7e091469cc2739a5bad206e81e8ca712db11a8aad4feffdc72eb8614"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G18",
+      "core": false,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "专家跳过导览，已有明确要求保留，不重复追问/强迫测验",
+      "before": "专家直接确认所需参数",
+      "after": "不强制指南阅读，已有条件保留且不重复追问确认字段",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G18-bridge-trace.json",
+          "sha256": "a32cfa0a76a3a56220253752bf13d5d585e3c7c76a0253b7b9e3f21ae2868181"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G19",
+      "core": false,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "同材料公平A/B，无增益也如实记，合成回答不冒充真人学习",
+      "before": "固定同资料、同偏好oracle、同资源上限的配对参考",
+      "after": "六对实际后端双臂最终决策指标持平；明确无真实用户收益证明",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/comparisons.json",
+          "sha256": "a290286beb05cc85426d9b9b2f6dc8ea789f891eca55c2b10ac747de7624de1b"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/paired-reference-v1.json",
+          "sha256": "564a6a9490d4819cb9881d96fd11e46a039224b7e1ed633ebc79ed7df889e31f"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/B1-shared-product-snapshot.json",
+          "sha256": "23b111f532946f4a463398e32ce8a46a0d92bbf5d442830ce4c4d5aab4474b53"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P01-a.json",
+          "sha256": "39fe3b5acc6076ba2e24c53c330f544f5550687dc80120983d72db41e4a924ea"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P01-b.json",
+          "sha256": "b6f8428a94f03d13211cecf56bdb9d40a0d158c3919af12a4197b54398d55557"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P02-a.json",
+          "sha256": "278894dbc6c6108226e3f033073002eeccb470aae3727a8e7cfa7ebf763c43a9"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P02-b.json",
+          "sha256": "66a5d70395dd2e2b9abfb18374edefb0c3126c558d41fb28a6b18135513ebbaf"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P03-a.json",
+          "sha256": "9b6111c442c3eb03768b0e1dba8ad89611be3224afd8ba89b46ca17e746e3d28"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P03-b.json",
+          "sha256": "67f6ae7fbc5124a3d49fbc0ccb890628f26cc8d51ec415495f21fa7ab4a85a11"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P04-a.json",
+          "sha256": "d3dd37f2f36d5a2efc2cdc94dc1f6b220662c5a904e4f6eb197eab82d9fd4cac"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P04-b.json",
+          "sha256": "a5bc73aaf41015fcceafca8d700b59674d965db22297bc762634c261c8af5925"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P05-a.json",
+          "sha256": "4764dd7c6d6ec73699ee857b2262ab700560712113dedbb0ce02f405d132a2ed"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P05-b.json",
+          "sha256": "3b26d7670bf2f023c827f84ab81d3e673806ed4cfaa46dadaa5b46a0afe6d429"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P06-a.json",
+          "sha256": "4686ea181342bc9780523184a92a50494471c992498fa90251e3a4bbc1784c08"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/P06-b.json",
+          "sha256": "e81f81731d1b5f2ba6f1fc04ebf6dc39b2ab524a1dcfef146c10d9db693dfa70"
+        }
+      ],
+      "safety_violations": []
+    },
+    {
+      "id": "G20",
+      "core": false,
+      "completed": true,
+      "route": "bridge_process",
+      "expected": "缺认知材料/缺新来源时给具体未知与研究任务，不伪造指南完整性",
+      "before": "当前已有资料",
+      "after": "受控清空来源注册表后无supported主张，仍保留本人答案和具体补证；恢复原资料后重算",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/G20-bridge-trace.json",
+          "sha256": "6eea0ba65a9776f46da10206c8ea5eb1691e84091184b38724090019cb2ad547"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/evidence/executor/run_remaining_journeys.py",
+          "sha256": "986feb0cc82b22e46e929d362cce29e254f1b42f10d518425f984a29a6db3e4e"
+        }
+      ],
+      "safety_violations": []
+    }
+  ]
+}

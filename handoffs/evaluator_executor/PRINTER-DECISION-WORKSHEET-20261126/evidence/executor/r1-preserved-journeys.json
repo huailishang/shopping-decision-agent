@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "baseline_description": "共同修复后的直接规则入口原件 common-repaired-baseline.json SHA=e812e4e17750cd954d257fdad9ba8e5b7c08a1c8d51319aca284fb00de8a1245",
+  "cases": [
+    {
+      "id": "J01",
+      "expected": "扫描未答→暂缓→无需，同源首问",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J01.json",
+          "sha256": "0d0f6acb49b7211ac2204a946706147da5824d5c1ca9e2a1c6ce84b952c51218"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J01.json",
+          "sha256": "0d0f6acb49b7211ac2204a946706147da5824d5c1ca9e2a1c6ce84b952c51218"
+        },
+        "step": 2,
+        "assertion": true,
+        "error": null
+      },
+      "completed": true,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J01.json",
+          "sha256": "0d0f6acb49b7211ac2204a946706147da5824d5c1ca9e2a1c6ce84b952c51218"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": ""
+    },
+    {
+      "id": "J02",
+      "expected": "窗口改单变量成本和行动翻转",
+      "before": {
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-before.txt",
+          "sha256": "ce19129bd23d3c06b16729bee22ba36c4be01a51ccf5639787ccaf848df6f8e2"
+        },
+        "observation": "原生实际操作原件"
+      },
+      "after": {
+        "artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-after.txt",
+            "sha256": "e8b0a94c93d0f0ea976ed12d3dc241da5489ad97fc007e370c59d4ef8957b397"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/DecisionWorksheetSwingRegression.stdout.txt",
+            "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+          }
+        ],
+        "observation": "见原生回执和断言"
+      },
+      "completed": true,
+      "route": "java_event",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-before.txt",
+          "sha256": "ce19129bd23d3c06b16729bee22ba36c4be01a51ccf5639787ccaf848df6f8e2"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-after.txt",
+          "sha256": "e8b0a94c93d0f0ea976ed12d3dc241da5489ad97fc007e370c59d4ef8957b397"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/DecisionWorksheetSwingRegression.stdout.txt",
+          "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": "真实事件→桥→结果；合成硬条件，无真人/实时价"
+    },
+    {
+      "id": "J03",
+      "expected": "硬缺证时修改成本不选冠军",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J03.json",
+          "sha256": "79994310b6fa90b712f0c1acb1b3d789636c8a8737b57ddbd34a4f60558d16b0"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J03.json",
+          "sha256": "79994310b6fa90b712f0c1acb1b3d789636c8a8737b57ddbd34a4f60558d16b0"
+        },
+        "step": 2,
+        "assertion": true,
+        "error": null
+      },
+      "completed": true,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J03.json",
+          "sha256": "79994310b6fa90b712f0c1acb1b3d789636c8a8737b57ddbd34a4f60558d16b0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": ""
+    },
+    {
+      "id": "J04",
+      "expected": "零页/未知/口径补齐",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J04.json",
+          "sha256": "a4556ff05f5b17cb2a45c06aafe8182dfcb045037041b9ee37077ecf7e82b5e0"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J04.json",
+          "sha256": "a4556ff05f5b17cb2a45c06aafe8182dfcb045037041b9ee37077ecf7e82b5e0"
+        },
+        "step": 4,
+        "assertion": true,
+        "error": null
+      },
+      "completed": false,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J04.json",
+          "sha256": "a4556ff05f5b17cb2a45c06aafe8182dfcb045037041b9ee37077ecf7e82b5e0"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": "共享口径补齐已验证；工作单共享口径不允许两候选各设不同值，直接规则异口径另有专项，完整链暂不签。"
+    },
+    {
+      "id": "J05",
+      "expected": "未审/错型号/伪造状态隔离且合法邻居保留",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J05.json",
+          "sha256": "94fea0995f0b693dd229f0f15dbf4b415ab69df551a2456f71aab161fbcb4014"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J05.json",
+          "sha256": "94fea0995f0b693dd229f0f15dbf4b415ab69df551a2456f71aab161fbcb4014"
+        },
+        "step": 4,
+        "assertion": true,
+        "error": null
+      },
+      "completed": true,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J05.json",
+          "sha256": "94fea0995f0b693dd229f0f15dbf4b415ab69df551a2456f71aab161fbcb4014"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": ""
+    },
+    {
+      "id": "J06",
+      "expected": "依赖撤回/同ID版本失效，独立事实保留",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J06.json",
+          "sha256": "6c16692cc3b88cef3671a328a70594f760ad89e39e7261497fa7c2b818ade182"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J06.json",
+          "sha256": "6c16692cc3b88cef3671a328a70594f760ad89e39e7261497fa7c2b818ade182"
+        },
+        "step": 4,
+        "assertion": true,
+        "error": null
+      },
+      "completed": false,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J06.json",
+          "sha256": "6c16692cc3b88cef3671a328a70594f760ad89e39e7261497fa7c2b818ade182"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": "通过旧引用指纹变造模拟同ID改版；未实际核源变更，故完整链暂不签。"
+    },
+    {
+      "id": "J07",
+      "expected": "窗口显式保存→新空白会话和Python子进程恢复重算",
+      "before": {
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J07-saved.json",
+          "sha256": "6cdc5454f838b5a2b719f886bf26ce4a6a5d2d7173e1634cae5146dda8be6160"
+        },
+        "observation": "原生实际操作原件"
+      },
+      "after": {
+        "artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J07-restored.txt",
+            "sha256": "990bfbb88f63bb36e394a701a5777c4b6963fee7df38ffc3e42718d405bd4e33"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/DecisionWorksheetSwingRegression.stdout.txt",
+            "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+          }
+        ],
+        "observation": "见原生回执和断言"
+      },
+      "completed": true,
+      "route": "java_event",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J07-saved.json",
+          "sha256": "6cdc5454f838b5a2b719f886bf26ce4a6a5d2d7173e1634cae5146dda8be6160"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J07-restored.txt",
+          "sha256": "990bfbb88f63bb36e394a701a5777c4b6963fee7df38ffc3e42718d405bd4e33"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/DecisionWorksheetSwingRegression.stdout.txt",
+          "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": "实际窗口保存和恢复"
+    },
+    {
+      "id": "J08",
+      "expected": "超界错误后保留已提交工作单并继续有效修改",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J08.json",
+          "sha256": "73bd5e62a6f653979beaa8d01d8243e6d6dee81726620bf027fa7f84177a9203"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J08.json",
+          "sha256": "73bd5e62a6f653979beaa8d01d8243e6d6dee81726620bf027fa7f84177a9203"
+        },
+        "step": 3,
+        "assertion": true,
+        "error": null
+      },
+      "completed": true,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J08.json",
+          "sha256": "73bd5e62a6f653979beaa8d01d8243e6d6dee81726620bf027fa7f84177a9203"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": ""
+    },
+    {
+      "id": "J09",
+      "expected": "草稿/文件选择取消及失败保全",
+      "before": {
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-before.txt",
+          "sha256": "ce19129bd23d3c06b16729bee22ba36c4be01a51ccf5639787ccaf848df6f8e2"
+        },
+        "observation": "原生实际操作原件"
+      },
+      "after": {
+        "artifacts": [
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-after.txt",
+            "sha256": "e8b0a94c93d0f0ea976ed12d3dc241da5489ad97fc007e370c59d4ef8957b397"
+          },
+          {
+            "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/DecisionWorksheetSwingRegression.stdout.txt",
+            "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+          }
+        ],
+        "observation": "见原生回执和断言"
+      },
+      "completed": false,
+      "route": "java_event",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-before.txt",
+          "sha256": "ce19129bd23d3c06b16729bee22ba36c4be01a51ccf5639787ccaf848df6f8e2"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/J02-after.txt",
+          "sha256": "e8b0a94c93d0f0ea976ed12d3dc241da5489ad97fc007e370c59d4ef8957b397"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/java-native-20261126T084213729129/DecisionWorksheetSwingRegression.stdout.txt",
+          "sha256": "7ab97d65f8ae85ee5b1a5761d25f759dc16779e9080fe6219c47ee216ee6e468"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": "取消已通过；写入失败及原文件保全的窗口链未测完"
+    },
+    {
+      "id": "J10",
+      "expected": "需求地区或品类变更不回流",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J10.json",
+          "sha256": "bc840bc0365e2696fd89b16a264834b99729242d4894bacb8928b8c4239d9f78"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J10.json",
+          "sha256": "bc840bc0365e2696fd89b16a264834b99729242d4894bacb8928b8c4239d9f78"
+        },
+        "step": 3,
+        "assertion": true,
+        "error": null
+      },
+      "completed": true,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J10.json",
+          "sha256": "bc840bc0365e2696fd89b16a264834b99729242d4894bacb8928b8c4239d9f78"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": ""
+    },
+    {
+      "id": "J11",
+      "expected": "平局/单候选/全部失败",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J11.json",
+          "sha256": "55752878c57b9c95de5633a8b7fcc6491c35964951d62e224854a7b4fb54beae"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J11.json",
+          "sha256": "55752878c57b9c95de5633a8b7fcc6491c35964951d62e224854a7b4fb54beae"
+        },
+        "step": 3,
+        "assertion": true,
+        "error": null
+      },
+      "completed": false,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J11.json",
+          "sha256": "55752878c57b9c95de5633a8b7fcc6491c35964951d62e224854a7b4fb54beae"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": "未覆盖单候选完整链，暂不签。"
+    },
+    {
+      "id": "J12",
+      "expected": "来源审计与首问可见，首屏可读性待独立审查",
+      "before": {
+        "observation": "见真实首个请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J12.json",
+          "sha256": "8997b43e3146a18da3beec77c0a17269655d67e71747d58458f86c83027c2f4a"
+        },
+        "step": 0
+      },
+      "after": {
+        "observation": "见真实最后请求与回执",
+        "artifact": {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J12.json",
+          "sha256": "8997b43e3146a18da3beec77c0a17269655d67e71747d58458f86c83027c2f4a"
+        },
+        "step": 0,
+        "assertion": true,
+        "error": null
+      },
+      "completed": false,
+      "route": "bridge_process",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-raw-20261126T164617/J12.json",
+          "sha256": "8997b43e3146a18da3beec77c0a17269655d67e71747d58458f86c83027c2f4a"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/evidence/executor/journey-expectations.json",
+          "sha256": "d6f2da7fb90773ad08d5ab856e0cdd55dea834b7b7f41f28270e521e59de4b3f"
+        }
+      ],
+      "limitations": "未完成首屏人工检查，暂不签。"
+    }
+  ]
+}

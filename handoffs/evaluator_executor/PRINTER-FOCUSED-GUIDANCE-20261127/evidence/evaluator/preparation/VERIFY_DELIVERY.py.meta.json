@@ -1,0 +1,15 @@
+{
+  "name": "VERIFY_DELIVERY.py",
+  "argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\VERIFY_DELIVERY.py"
+  ],
+  "start": "2026-11-27T08:33:41.917986+00:00",
+  "end": "2026-11-27T08:33:42.046848+00:00",
+  "exit_code": 1,
+  "expected_before_implementation": "nonzero",
+  "stdout_sha256": "5b02403952e77d83c04f1e4a57683603a36c18aee59f2cffdaf6cde0030b86c2",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

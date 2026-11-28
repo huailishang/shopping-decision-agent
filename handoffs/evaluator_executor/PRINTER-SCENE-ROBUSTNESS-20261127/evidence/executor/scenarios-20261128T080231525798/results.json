@@ -1,0 +1,439 @@
+{
+  "cases": [
+    {
+      "id": "P01",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "requires_scan"
+        ]
+      }
+    },
+    {
+      "id": "P02",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "requires_auto_duplex"
+        ]
+      }
+    },
+    {
+      "id": "P03",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "idle_weeks_pattern"
+        ]
+      }
+    },
+    {
+      "id": "P04",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "requires_scan"
+        ]
+      }
+    },
+    {
+      "id": "P05",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "requires_auto_duplex"
+        ]
+      }
+    },
+    {
+      "id": "P06",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "idle_weeks_pattern"
+        ]
+      }
+    },
+    {
+      "id": "P07",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "wechat_required",
+        "expected_fields": [
+          "wechat_required"
+        ]
+      }
+    },
+    {
+      "id": "P08",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "budget_scope"
+        ]
+      }
+    },
+    {
+      "id": "P09",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "budget_scope"
+        ]
+      }
+    },
+    {
+      "id": "P10",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "monthly_pages_range"
+        ]
+      }
+    },
+    {
+      "id": "P11",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "monthly_pages_range"
+        ]
+      }
+    },
+    {
+      "id": "P12",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "needs_color"
+        ]
+      }
+    },
+    {
+      "id": "N01",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "requires_scan",
+        "expected_fields": [
+          "requires_auto_duplex"
+        ]
+      }
+    },
+    {
+      "id": "N02",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "requires_auto_duplex",
+        "expected_fields": [
+          "requires_scan"
+        ]
+      }
+    },
+    {
+      "id": "N03",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "wechat_required",
+        "expected_fields": [
+          "requires_auto_duplex"
+        ]
+      }
+    },
+    {
+      "id": "N04",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "budget_scope",
+        "expected_fields": [
+          "requires_scan"
+        ]
+      }
+    },
+    {
+      "id": "N05",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "monthly_pages_range",
+        "expected_fields": [
+          "idle_weeks_pattern"
+        ]
+      }
+    },
+    {
+      "id": "N06",
+      "checks": {
+        "exit_ok": true,
+        "relevant": false,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": false,
+      "details": {
+        "actual_field": "requires_scan",
+        "expected_fields": [
+          "requires_auto_duplex"
+        ]
+      }
+    },
+    {
+      "id": "A01",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "requires_scan",
+        "expected_fields": [
+          "requires_scan"
+        ]
+      }
+    },
+    {
+      "id": "A02",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "needs_color"
+        ]
+      }
+    },
+    {
+      "id": "A03",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "idle_weeks_pattern",
+        "expected_fields": [
+          "idle_weeks_pattern"
+        ]
+      }
+    },
+    {
+      "id": "A04",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "budget_scope",
+        "expected_fields": [
+          "budget_scope"
+        ]
+      }
+    },
+    {
+      "id": "A05",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "wechat_required",
+        "expected_fields": [
+          "wechat_required"
+        ]
+      }
+    },
+    {
+      "id": "A06",
+      "checks": {
+        "exit_ok": true,
+        "relevant": true,
+        "no_auto_confirmation": true,
+        "focus_same": true,
+        "prompt_same": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": {
+        "actual_field": "needs_color",
+        "expected_fields": [
+          "needs_color"
+        ]
+      }
+    }
+  ],
+  "passed": 8,
+  "total": 24,
+  "fixture_sha256": "fc07f7dc8f9861cb78efbed5ab5f75844c226509c12282d94d1875292577e3cd"
+}

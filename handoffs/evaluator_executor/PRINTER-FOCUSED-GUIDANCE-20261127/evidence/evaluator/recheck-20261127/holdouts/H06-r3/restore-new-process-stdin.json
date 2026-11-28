@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "action": "restore",
+  "state": {
+    "version": 0,
+    "answers": {},
+    "history": [],
+    "pending_approval": true,
+    "transactions_enabled": false,
+    "purchase_recommendation_approved": false
+  },
+  "worksheet": {
+    "schema_version": 1,
+    "worksheet_id": "3971d32fff5445dba12db5baeafbb192",
+    "revision": 2,
+    "binding": {
+      "category": "printer",
+      "dialogue_version": 10,
+      "confirmed_values_sha256": "1245c17c9e1e5a3320d60ef3d419fb08b4b913e1dc22cfbd3b7f71a97253d51a",
+      "session": {
+        "fields": {
+          "accepts_initial_setup": "confirmed",
+          "budget_max_cny": "confirmed",
+          "budget_scope": "unanswered",
+          "category": "confirmed",
+          "delivery_region": "unanswered",
+          "device_deployment_region": "confirmed",
+          "monthly_pages_range": "confirmed",
+          "needs_color": "confirmed",
+          "requires_auto_duplex": "confirmed",
+          "requires_scan": "confirmed",
+          "usage": "confirmed",
+          "wechat_required": "confirmed",
+          "wechat_workflow": "unanswered"
+        },
+        "deferred": [],
+        "withdrawn": []
+      }
+    },
+    "confirmed": {
+      "category": "printer",
+      "usage": "家庭纸质资料整理",
+      "needs_color": false,
+      "wechat_required": false,
+      "accepts_initial_setup": true,
+      "device_deployment_region": "河南",
+      "monthly_pages_range": [
+        20,
+        80
+      ],
+      "budget_max_cny": 1200,
+      "requires_scan": true,
+      "requires_auto_duplex": true
+    },
+    "deferred": [],
+    "withdrawn": [],
+    "basis": {
+      "pages": null,
+      "months": null,
+      "currency": "CNY",
+      "fee_scope": "hardware_consumables_maintenance",
+      "scenario_version": 1
+    },
+    "models": {
+      "Brother HL-L1238W": {
+        "values": {
+          "hardware": null,
+          "starter": null,
+          "toner_yield": null,
+          "toner_price": null,
+          "separate_drum": null,
+          "drum_yield": null,
+          "drum_price": null,
+          "drum_starter": null,
+          "maintenance": 0
+        },
+        "kind": "user_scenario_assumption",
+        "dependency_fact_ids": [],
+        "dependency_fingerprints": {},
+        "withdrawn_fact_ids": []
+      },
+      "HP M232dw": {
+        "values": {
+          "hardware": null,
+          "starter": null,
+          "toner_yield": null,
+          "toner_price": null,
+          "separate_drum": null,
+          "drum_yield": null,
+          "drum_price": null,
+          "drum_starter": null,
+          "maintenance": null
+        },
+        "kind": "user_scenario_assumption",
+        "dependency_fact_ids": [],
+        "dependency_fingerprints": {},
+        "withdrawn_fact_ids": []
+      }
+    },
+    "sources": [
+      {
+        "id": "old-price",
+        "candidate": "Brother HL-L1238W",
+        "kind": "quote_lead",
+        "locator": "synthetic://expired-quote",
+        "observed_at": "2020-01-01",
+        "excerpt": "仅2020年广东有效报价199元，现已过期。",
+        "status": "pending_review",
+        "version": 1
+      }
+    ],
+    "guide_reference": {
+      "guide_id": "printer-cognition-guide",
+      "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+      "source_ids": [
+        "brother-cn-202405-brochure",
+        "hp-cn-home",
+        "rtings-cost-method-2021"
+      ]
+    }
+  },
+  "payload": {
+    "confirm_saved_conditions": true
+  }
+}

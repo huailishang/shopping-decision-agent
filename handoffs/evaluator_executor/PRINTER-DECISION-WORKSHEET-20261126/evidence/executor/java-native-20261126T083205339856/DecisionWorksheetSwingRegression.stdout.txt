@@ -1,0 +1,4 @@
+PASS J02 native input and result cost flip; draft cancel
+PASS J07 native save and fresh session / Python process restore
+PASS save dialog cancel
+WORKSHEET_NATIVE_PASS

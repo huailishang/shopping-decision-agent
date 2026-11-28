@@ -1,0 +1,460 @@
+{
+  "cases": [
+    {
+      "case_id": "T01",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T01/replay.json",
+          "sha256": "1b102f7308df7f269deafc703672e1a71c5ab91f10a5817db21fad1607794001"
+        }
+      }
+    },
+    {
+      "case_id": "T02",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T02/replay.json",
+          "sha256": "351df7220171f19fda091b3c87818fd942a0689532c8e26398f4cf8298b45567"
+        }
+      }
+    },
+    {
+      "case_id": "T03",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T03/replay.json",
+          "sha256": "5b7bf1e9354ce8c6159d303e1922642d41414d6020cf7165e6923a81d4685a93"
+        }
+      }
+    },
+    {
+      "case_id": "T04",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T04/replay.json",
+          "sha256": "ce256aefd869a8df322a157b7a41251254d9dcb1a49c41c1249339f5136880bc"
+        }
+      }
+    },
+    {
+      "case_id": "T05",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T05/replay.json",
+          "sha256": "7d6ecc9fd0b04459f836a83d5b4ca69fe03303989e9c4c1806a093a59588a21a"
+        }
+      }
+    },
+    {
+      "case_id": "T06",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T06/replay.json",
+          "sha256": "bf387a60b5b35afa1eb2a18a0c77c494cb3d2af04f07a1ba82e3abc3755c6658"
+        }
+      }
+    },
+    {
+      "case_id": "T07",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T07/replay.json",
+          "sha256": "a86b7a052e2446134a1e4203fe89f91087a45dcd8299cbcf4f088a75b063429f"
+        }
+      }
+    },
+    {
+      "case_id": "T08",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T08/replay.json",
+          "sha256": "8d12fb339294089cfec97589ef0d4f6ba843221bee597d0c5067cc097dd46eaa"
+        }
+      }
+    },
+    {
+      "case_id": "T09",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T09/replay.json",
+          "sha256": "26500fde26e9e156d2c7f7ad7a77f123ebb20b0c127146f30e6af7033c9205e4"
+        }
+      }
+    },
+    {
+      "case_id": "T10",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T10/replay.json",
+          "sha256": "079e1a984a93fd6b1905a22892f2dfb3a893e94578eb1d335ae5d536769538a1"
+        }
+      }
+    },
+    {
+      "case_id": "T11",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T11/replay.json",
+          "sha256": "2259e043e41701210b227a4bfd91a2ba1f28c19cbdfc8f7897df7e3bac9a0629"
+        }
+      }
+    },
+    {
+      "case_id": "T12",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T12/replay.json",
+          "sha256": "daca7a07602730bdc40e75e401ba41f7cec22feb8f0254ab0ecc5f10456a958e"
+        }
+      }
+    },
+    {
+      "case_id": "T13",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T13/replay.json",
+          "sha256": "0afcaa0527c5e221de32657e1b7377641cf1fa3a645009226b404910ad39b910"
+        }
+      }
+    },
+    {
+      "case_id": "T14",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T14/replay.json",
+          "sha256": "d7d231739d42284c96ba0d9e588226b11bdf31bdab738c14fc92ff209d177b5d"
+        }
+      }
+    },
+    {
+      "case_id": "T15",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T15/replay.json",
+          "sha256": "a5f64123373dd246ca9960a3ac5b18b7814bb3120f86d10b1dbe5c83499b7b3e"
+        }
+      }
+    },
+    {
+      "case_id": "T16",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T16/replay.json",
+          "sha256": "c0e8fa5e0417da45d486c9debffe11e5e343a78f42076fa41781da7cd0839a9b"
+        }
+      }
+    },
+    {
+      "case_id": "T17",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T17/replay.json",
+          "sha256": "be88cbbcbb3fed1a54dc199a2679f22a73f768d09c3c8c5084400fda89d523d4"
+        }
+      }
+    },
+    {
+      "case_id": "T18",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T18/replay.json",
+          "sha256": "2f1ef3f791cbdbf9443eb446104be1ebe0f090f937d5c9b1ac9fe1ebd66ae90e"
+        }
+      }
+    },
+    {
+      "case_id": "T19",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T19/replay.json",
+          "sha256": "5e5126bbf2b85df198914d44dbeec7de4babd2af2361aad3d4bbefb4a3790d02"
+        }
+      }
+    },
+    {
+      "case_id": "T20",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T20/replay.json",
+          "sha256": "7944bf6232860ad46f6d57bd6c0e0c4ad32a419e3cad7e2272f4da0a06ad88a2"
+        }
+      }
+    },
+    {
+      "case_id": "T21",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "07b8d8d272ee7513362d98f9a5ba3accebc1ad1374003e127b195d45efaff863",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T21/replay.json",
+          "sha256": "9ef154ad1a5e1e4687b3b0d41f4025ce64497c5cbaedea97359b080337c4f07d"
+        }
+      }
+    },
+    {
+      "case_id": "T22",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "8965636524df6ef1083eb1f5b2a3eaa2910023985636099e6021014e6aeb5e68",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T22/replay.json",
+          "sha256": "8d636890185ad1ba0be853d50c5842c38d43ca958355bc892c36df8a5fb1539b"
+        }
+      }
+    },
+    {
+      "case_id": "T23",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T23/replay.json",
+          "sha256": "933d1a0e1b8762902ab2e3613b4883dea9a52efd9dae65d82cd9e5e0d256cefb"
+        }
+      }
+    },
+    {
+      "case_id": "T24",
+      "arm": {
+        "basis": {
+          "as_of": "2026-11-27",
+          "source_set_sha256": "cc685e5a0a71bdd9d6d16a9adfdac695dbd8d3e0e14931e9d445167c386ea9b9",
+          "reference_sha256": "2f27738755173567ff1dbe094561f054cb7ac45d38910ab751d8d3ef65a2c5db",
+          "limits": {
+            "max_answer_turns": 12,
+            "max_read_requests": 4,
+            "max_product_calls": 30
+          }
+        },
+        "replay": {
+          "path": "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/evidence/executor/continuation/replay/T24/replay.json",
+          "sha256": "ee496487e7e15c69252bc3b2bb70f113b591242a36d15f2efec53dd27ac223e4"
+        }
+      }
+    }
+  ]
+}

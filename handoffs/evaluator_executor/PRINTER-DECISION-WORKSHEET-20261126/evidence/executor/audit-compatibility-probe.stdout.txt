@@ -1,0 +1,101 @@
+{
+  "mode": "isolated_candidate_in_memory_not_production",
+  "candidate_source_sha256": "e0d9dd1f2cbe727731d53b1e9d9b3f058b2f4c933807f1889428e19d7c8e06a8",
+  "original_auditor_sha256": "6ef2d10540a1a1fb43ff44de6df6d9a7db152c5aa8dd340bb2da6e8d541004a7",
+  "original_auditor_unchanged": true,
+  "baseline_commit": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+  "approved_hashes_proposed_not_yet_reviewed": {
+    "desktop/DesktopBridgeClient.java": "ba0a8c8aa5a5d1309721d0b79f09eba472a9cee000e656c00f3d579b9c2f8ff3",
+    "desktop/ShoppingDecisionDesktop.java": "054c127c30b542f4b47c7b1a9fccce949303f532b68b0b19bdb62aeefd3a36ac"
+  },
+  "checks": [
+    {
+      "test": "unmodified production audit still rejects current source",
+      "result": "PASS",
+      "error": "unapproved_historical_file_drift:desktop/DesktopBridgeClient.java"
+    },
+    {
+      "test": "candidate accepts only known transition while preserving historical verdict",
+      "result": "PASS",
+      "audit": {
+        "audit_status": "historical_receipts_intact_experiment_incomplete",
+        "parent_vp04_status": "REJECTED_not_retroactively_repaired",
+        "frozen_manifest_sha_valid": true,
+        "protected_files_valid": 17,
+        "original_manifest_file_count": 1229,
+        "allowed_current_source_drift": [
+          "desktop/DesktopBridgeClient.java",
+          "desktop/ShoppingDecisionDesktop.java",
+          "shopping_decision/chat_bridge.py",
+          "tests/test_minimal_research_flow.py",
+          "tests/test_printer_decision_plan.py"
+        ],
+        "frozen_head": "ce34764ab7d803b06abbdbcea0afe32048096c0a",
+        "current_head": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+        "head_drift": true,
+        "scheduled": 6,
+        "completed": 6,
+        "attempt_limit": 10,
+        "not_attempted_cases": [
+          "C05",
+          "C06",
+          "C07"
+        ],
+        "accepted_model_outputs": 0,
+        "old_evidence_modified": false
+      }
+    },
+    {
+      "test": "historical ledger append rejected",
+      "result": "PASS",
+      "error": "historical_ledger_sha_mismatch"
+    },
+    {
+      "test": "simulated tamper desktop/DesktopBridgeClient.java",
+      "result": "PASS",
+      "error": "worksheet_current_source_sha_mismatch:desktop/DesktopBridgeClient.java"
+    },
+    {
+      "test": "simulated tamper desktop/ShoppingDecisionDesktop.java",
+      "result": "PASS",
+      "error": "worksheet_current_source_sha_mismatch:desktop/ShoppingDecisionDesktop.java"
+    },
+    {
+      "test": "simulated tamper handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118/FROZEN_INPUTS.json",
+      "result": "PASS",
+      "error": "historical_frozen_manifest_sha_mismatch"
+    },
+    {
+      "test": "simulated tamper tests/test_minimal_research_flow.py",
+      "result": "PASS",
+      "error": "approved_r1_test_sha_mismatch:tests/test_minimal_research_flow.py"
+    },
+    {
+      "test": "missing current source desktop/DesktopBridgeClient.java",
+      "result": "PASS",
+      "error": "worksheet_current_source_sha_mismatch:desktop/DesktopBridgeClient.java"
+    },
+    {
+      "test": "mismatched historical snapshot desktop/DesktopBridgeClient.java",
+      "result": "PASS",
+      "error": "worksheet_historical_source_sha_mismatch:desktop/DesktopBridgeClient.java"
+    },
+    {
+      "test": "missing current source desktop/ShoppingDecisionDesktop.java",
+      "result": "PASS",
+      "error": "worksheet_current_source_sha_mismatch:desktop/ShoppingDecisionDesktop.java"
+    },
+    {
+      "test": "mismatched historical snapshot desktop/ShoppingDecisionDesktop.java",
+      "result": "PASS",
+      "error": "worksheet_historical_source_sha_mismatch:desktop/ShoppingDecisionDesktop.java"
+    },
+    {
+      "test": "simulated tamper AGENTS.md",
+      "result": "PASS",
+      "error": "unapproved_historical_file_drift:AGENTS.md"
+    }
+  ],
+  "passed": 12,
+  "total": 12
+}

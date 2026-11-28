@@ -1,0 +1,52 @@
+compile 0 
+ChatBridgeRegression 0 PASS references are drafts
+PASS explicit category and next turn
+PASS unknown remains unknown
+PASS edit version and transaction block
+PASS cross-category protection
+PASS illegal field rejected
+ChatBridge Java subprocess regression: 6/6 PASS
+
+ChatSwingRegression 0 PASS actual Swing construct/reference draft/send/usage/result version
+
+DecisionWorksheetRegression 0 PASS Java actual worksheet stdin bridge create/zero/invalid/preview
+
+DecisionWorksheetSwingRegression 0 PASS J02 native input and result cost flip; draft cancel
+PASS J07 native save and fresh session / Python process restore
+PASS save dialog cancel
+PASS J09 native draft cancel, file cancel and refused overwrite
+PASS J04 native zero/blank/shared basis recovery
+PASS J08 native invalid finite cost and successful retry
+PASS J10 native region change invalidates worksheet
+WORKSHEET_NATIVE_PASS
+
+CognitionGuideRegression 0 PASS actual Java guide stdin and legacy three-argument projection parity; malicious payload rejected
+
+CognitionGuideSwingRegression 0 PASS G01 native coarse request and guide
+PASS G03 native source details and parameter explanation
+PASS G04 native reference only drafts
+PASS G05 native explicit confirmation and changed research
+PASS G06 native defer, confirm, withdraw
+PASS G02 native color and outsourcing route decisions
+PASS G14 native save and new-process restore of guide inputs
+PASS G13 native withdrawn and same-id unreviewed revision; current input preserved
+PASS G15 native decision note preview and save
+PASS partial G16 note cancel and refused overwrite
+PASS G16 native invalid input, cancel, file safety and prior-worker reset
+COGNITION_GUIDE_NATIVE_PASS
+
+FocusGuidanceRegression 0 PASS focus actual Java bridge parity and injection rejection
+
+FocusGuidanceSwingRegression 0 PASS F01 native event chain
+PASS F02 native event chain
+PASS F03 native event chain
+PASS F04 native event chain
+PASS F05 native event chain
+PASS F06 native event chain
+PASS F07 native event chain
+PASS F08 native event chain
+PASS F11 native event chain
+PASS F12 native event chain
+FOCUS_GUIDANCE_NATIVE_PASS
+
+{"passed": true, "role": "executor", "platform": "win32", "commands": [{"label": "compile", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\javac.EXE", "-encoding", "UTF-8", "--release", "17", "-d", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatBridgeRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatNativeAuditRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ChatSwingRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\CognitionGuideRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\CognitionGuideSwingRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\CognitionSwingRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DecisionWorksheetRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DecisionWorksheetSwingRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\DesktopBridgeClient.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\FocusGuidanceRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\FocusGuidanceSwingRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\H10JavaRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\P04MarketplaceRegression.java", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\desktop\\ShoppingDecisionDesktop.java"], "start": "2026-11-27T13:47:25.322119+00:00", "end": "2026-11-27T13:47:29.804599+00:00", "exit_code": 0, "passed": true}, {"label": "ChatBridgeRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "ChatBridgeRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe"], "start": "2026-11-27T13:47:29.804599+00:00", "end": "2026-11-27T13:47:32.773465+00:00", "exit_code": 0, "passed": true}, {"label": "ChatSwingRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "ChatSwingRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe"], "start": "2026-11-27T13:47:32.774020+00:00", "end": "2026-11-27T13:47:37.946107+00:00", "exit_code": 0, "passed": true}, {"label": "DecisionWorksheetRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "DecisionWorksheetRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158"], "start": "2026-11-27T13:47:37.946107+00:00", "end": "2026-11-27T13:47:40.578522+00:00", "exit_code": 0, "passed": true}, {"label": "DecisionWorksheetSwingRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "DecisionWorksheetSwingRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158"], "start": "2026-11-27T13:47:40.578522+00:00", "end": "2026-11-27T13:47:57.457707+00:00", "exit_code": 0, "passed": true}, {"label": "CognitionGuideRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "CognitionGuideRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158"], "start": "2026-11-27T13:47:57.457707+00:00", "end": "2026-11-27T13:47:59.732165+00:00", "exit_code": 0, "passed": true}, {"label": "CognitionGuideSwingRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "CognitionGuideSwingRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158"], "start": "2026-11-27T13:47:59.732165+00:00", "end": "2026-11-27T13:48:21.777137+00:00", "exit_code": 0, "passed": true}, {"label": "FocusGuidanceRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "FocusGuidanceRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158"], "start": "2026-11-27T13:48:21.777137+00:00", "end": "2026-11-27T13:48:23.996835+00:00", "exit_code": 0, "passed": true}, {"label": "FocusGuidanceSwingRegression", "argv": ["C:\\Program Files\\Common Files\\Oracle\\Java\\javapath\\java.EXE", "-cp", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158\\classes", "FocusGuidanceSwingRegression", "D:\\SoftWare\\Anaconda\\install\\python.exe", "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-FOCUSED-GUIDANCE-20261127\\evidence\\executor\\java-native-20261127T134725314158"], "start": "2026-11-27T13:48:23.996835+00:00", "end": "2026-11-27T13:49:05.383296+00:00", "exit_code": 0, "passed": true}]}

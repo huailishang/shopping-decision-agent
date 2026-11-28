@@ -1,0 +1,108 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-COGNITION-FIRST-20261126
+runtime: WSL Python3 UTF-8; Java forwards to existing Windows Python/JDK
+checks:
+  - id: VP-01
+    ac: [AC-02, AC-03, AC-04]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_GUIDE.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: [AC-04, AC-05]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_CONTEXT.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-03
+    ac: [AC-01, AC-02, AC-03, AC-04, AC-05, AC-07, AC-09]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_TESTS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: [AC-06]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISIVE-EVIDENCE-20261126/VERIFY_ACTION.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: [AC-04, AC-06, AC-10]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_BUSINESS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: [AC-06, AC-10]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VERIFY_BUSINESS.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-07
+    ac: [AC-06, AC-10]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-TO-COMPARISON-20261124/REPLAY_CASES.py]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-08
+    ac: [AC-01, AC-02, AC-03, AC-04, AC-05, AC-06, AC-07, AC-10]
+    cwd: .
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -q]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-09
+    ac: [AC-10]
+    cwd: .
+    command: [python3, -X, utf8, scripts/audit_model_history_readonly.py, --task, handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-10
+    ac: [AC-10]
+    cwd: .
+    command: [python3, -X, utf8, -m, unittest, discover, -s, tests, -p, test_history_audit_version_transition.py, -v]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-11
+    ac: [AC-03, AC-04, AC-07, AC-08, AC-09, AC-10]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_JAVA.py, --role, executor]
+    evaluator_command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_JAVA.py, --role, evaluator]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-12
+    ac: [AC-10]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_SCOPE.py, --phase, post]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-13
+    ac: [AC-01, AC-07, AC-08, AC-09, AC-11]
+    cwd: .
+    command: [python3, -X, utf8, handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_DELIVERY.py]
+    expected_exit_code: 0
+    mandatory: true
+human_checks:
+  authority: EVALUATION.md
+  core_journeys: [G01, G02, G03, G04, G05, G06, G07, G08, G09, G10, G11, G12, G13, G14]
+  total_journeys: 20
+  min_completed: 18
+  java_event_journeys_min: 8
+  mandatory_native_journeys: [G01, G05, G13, G14]
+  independent_holdout_journeys_min: 6
+  fair_paired_tasks_min: 6
+  real_cognition_claims_min: 3
+  independent_source_groups_min: 2
+  real_user_gain_required: false
+  real_model_gain_required: false
+limits:
+  effective_hours: 180
+  concentrated_repair_rounds: 6
+  public_queries: 12
+  public_reads_executor: 32
+  public_reads_evaluator: 12
+  same_url_locator_failure_limit: 2
+  new_model_api: 0
+  model_cli: 0
+  platform_business_api: 0
+  git_commit: false
+  git_push: false

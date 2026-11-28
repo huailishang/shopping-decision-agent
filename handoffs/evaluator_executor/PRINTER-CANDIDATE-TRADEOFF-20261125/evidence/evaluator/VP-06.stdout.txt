@@ -1,0 +1,29 @@
+{
+  "phase": "post",
+  "head": "c226f4e0c156e5d2bd1f6f19aaeb448e9979f73f",
+  "manifest_sha256": "9740530f6b647349a84f23d0e592ee37cbac60c4a734e7b0fcd20e39c685ca44",
+  "protected_files_count": 2017,
+  "changed_protected_paths": [
+    "handoffs/context-model-pilot-20261126/DESIGN.md",
+    "handoffs/context-model-pilot-20261126/REPORT.md",
+    "handoffs/context-model-pilot-20261126/runtime_contract.py",
+    "handoffs/context-model-pilot-20261126/shopping_projection.py",
+    "handoffs/context-model-pilot-20261126/test_pilot.py",
+    "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/MODEL_RESUME.md",
+    "handoffs/evaluator_executor/PRINTER-CANDIDATE-TRADEOFF-20261125/MODEL_SUPPLEMENT_SCOPE.md"
+  ],
+  "changed_product_paths": [
+    "shopping_decision/cognition_comparison.py",
+    "shopping_decision/chat_bridge.py",
+    "knowledge/printer_cognition_comparison_v1.json",
+    "tests/test_cognition_comparison.py",
+    "tests/test_candidate_tradeoff.py"
+  ],
+  "checks": {
+    "head_matches_baseline": false,
+    "index_empty": true,
+    "manifest_matches_checksum": true,
+    "protected_files_unchanged": false,
+    "required_product_files_present": true
+  }
+}

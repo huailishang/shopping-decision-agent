@@ -1,0 +1,18 @@
+{
+  "a_pages": 0,
+  "b_pages": 1800,
+  "a": {
+    "toner_replacements": 0,
+    "drum_replacements": 0,
+    "total": "500",
+    "assumption_only": true
+  },
+  "b": {
+    "toner_replacements": 2,
+    "drum_replacements": 0,
+    "total": "700",
+    "assumption_only": true
+  },
+  "compare_result": "a",
+  "note": "Unlike workload; result should be incomparable rather than a product preference."
+}

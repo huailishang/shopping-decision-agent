@@ -1,0 +1,87 @@
+{
+  "cases": [
+    {
+      "case": "主要打印孩子黑白作业，不知道怎么买",
+      "passed": true,
+      "focus": {
+        "schema_version": 1,
+        "guide_id": "printer-cognition-guide",
+        "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+        "state_version": 2,
+        "status": "ask",
+        "field": "needs_color",
+        "question": "必须在家打印彩色吗？",
+        "explanation": "你提到黑白作业，先确认彩色是否也是硬需求；不能仅凭用途替你决定。",
+        "claim_ids": [],
+        "source_ids": [],
+        "basis_kind": "logical_constraint",
+        "if_unknown": "可以暂不确定；保留这一条件为未知，不替你作答或据此淘汰候选。",
+        "effect_if_yes": "必须彩印：排除黑白路线，继续核彩色方案。",
+        "effect_if_no": "黑白可考虑，偶尔彩印是否外包仍由你决定。",
+        "next_step": "本人提交、暂缓或展开完整指南；按明确答复重算。",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "case": "想在家打印彩色照片，不懂参数",
+      "passed": true,
+      "focus": {
+        "schema_version": 1,
+        "guide_id": "printer-cognition-guide",
+        "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+        "state_version": 2,
+        "status": "ask",
+        "field": "needs_color",
+        "question": "必须在家打印彩色吗？",
+        "explanation": "你提到彩色照片，先确认是否必须在家彩印；黑白机器不能完成彩印。",
+        "claim_ids": [],
+        "source_ids": [],
+        "basis_kind": "logical_constraint",
+        "if_unknown": "可以暂不确定；保留这一条件为未知，不替你作答或据此淘汰候选。",
+        "effect_if_yes": "必须彩印：排除黑白路线，继续核彩色方案。",
+        "effect_if_no": "黑白可考虑，偶尔彩印是否外包仍由你决定。",
+        "next_step": "本人提交、暂缓或展开完整指南；按明确答复重算。",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "case": "主要想把纸质资料扫描存档，也偶尔打印",
+      "passed": true,
+      "focus": {
+        "schema_version": 1,
+        "guide_id": "printer-cognition-guide",
+        "guide_version": "9e0db9c4b59b6cb1dd5b0e65fa946eb47a2dfa71b33fe14975652e90997ecd4f",
+        "state_version": 2,
+        "status": "ask",
+        "field": "requires_scan",
+        "question": "扫描或复印是否是必须功能？",
+        "explanation": "你是否需要把纸质资料变成电子文件？打印与扫描是两个不同功能。 依据：有的打印机兼有扫描和自动双面；选购时应分别核实功能，不能只看打印机名称。 限制：不能推断其他型号、微信复用或实际体验。",
+        "claim_ids": [
+          "guide-functions"
+        ],
+        "source_ids": [
+          "hp-cn-home"
+        ],
+        "basis_kind": "supported_claim",
+        "if_unknown": "可以暂不确定；保留这一条件为未知，不替你作答或据此淘汰候选。",
+        "effect_if_yes": "扫描成为硬要求，逐型号核功能。",
+        "effect_if_no": "不将扫描列为淘汰条件。",
+        "next_step": "本人提交、暂缓或展开完整指南；按明确答复重算。",
+        "purchase_recommendation_approved": false,
+        "transactions_enabled": false
+      }
+    },
+    {
+      "case": "coarse usage changes guidance explanation",
+      "passed": true
+    },
+    {
+      "case": "confirmed requirements retained",
+      "passed": true
+    }
+  ],
+  "passed": 5,
+  "total": 5
+}

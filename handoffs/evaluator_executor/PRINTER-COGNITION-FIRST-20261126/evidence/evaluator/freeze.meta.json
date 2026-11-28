@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "D:\\SoftWare\\Anaconda\\install\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\SoftWare\\VScode\\install\\Project\\shopping-decision-agent\\handoffs\\evaluator_executor\\PRINTER-COGNITION-FIRST-20261126\\VERIFY_SCOPE.py",
+    "--phase",
+    "freeze"
+  ],
+  "start": "2026-11-26T14:04:20.031338+00:00",
+  "end": "2026-11-26T14:04:22.970330+00:00",
+  "exit_code": 0,
+  "stdout_sha256": "185c63fa845c51129605a2e9154682525edfd627f87dc029a09c88293b783995",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

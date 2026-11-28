@@ -1,0 +1,14 @@
+{
+  "label": "business",
+  "argv": [
+    "/usr/bin/python3",
+    "-X",
+    "utf8",
+    "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent/handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_BUSINESS.py"
+  ],
+  "start_utc": "2026-11-26T08:07:27.731736+00:00",
+  "end_utc": "2026-11-26T08:07:29.117383+00:00",
+  "exit_code": 1,
+  "stdout_sha256": "a78ceac5a243f46640e794bd2ba800118b3e069a7a9ae2b81ad85e7db651a559",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

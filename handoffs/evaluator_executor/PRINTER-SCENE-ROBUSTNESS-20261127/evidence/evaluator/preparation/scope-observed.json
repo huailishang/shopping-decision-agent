@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-11-27 14:32:00 UTC",
+  "command": "wsl env PYTHONPATH=. python3 -X utf8 handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py scope",
+  "observed_tool_result": {
+    "chunk_id": "878004",
+    "wall_time_seconds": 0.0000419,
+    "exit_code": 0,
+    "original_token_count": 34,
+    "output": "{\"phase\": \"scope\", \"errors\": [], \"limit\": \"machine checks do not certify semantic relevance, timestamps or absence of external calls\"}\n"
+  },
+  "semantics": "Observed stdout copied from actual preparation command; no invented start timestamp."
+}

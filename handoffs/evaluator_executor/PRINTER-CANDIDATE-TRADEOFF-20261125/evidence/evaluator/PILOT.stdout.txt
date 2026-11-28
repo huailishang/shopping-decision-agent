@@ -1,0 +1,4 @@
+{"case": "C01", "mode": "model_rank_actions", "old_prompt_bytes": 15469, "new_wire_bytes": 4134, "optional_omitted": 0}
+{"case": "C08", "mode": "rules_only", "old_prompt_bytes": 15469, "new_wire_bytes": 0, "optional_omitted": 0}
+{"case": "C12", "mode": "model_rank_actions", "old_prompt_bytes": 14945, "new_wire_bytes": 2847, "optional_omitted": 0}
+{"case": "C08_SHORT", "mode": "rules_only", "old_prompt_bytes": 7645, "new_wire_bytes": 0, "optional_omitted": 0}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "G01",
+      "expected": "只有“家里想买打印机、不懂参数”→有据导览→一个生活化问题，不先填维护费",
+      "core": true
+    },
+    {
+      "id": "G02",
+      "expected": "彩色需求/可否外部打印澄清→路线比较→不被原两型号绑死",
+      "core": true
+    },
+    {
+      "id": "G03",
+      "expected": "看参数含义/条件/例外/正反依据→展开找到原来源和日期",
+      "core": true
+    },
+    {
+      "id": "G04",
+      "expected": "仅查看/点参考不确认，不把指南建议变成本人硬要求",
+      "core": true
+    },
+    {
+      "id": "G05",
+      "expected": "小白明确提交一个选择→同源需求/路线/候选或具体研究任务改变",
+      "core": true
+    },
+    {
+      "id": "G06",
+      "expected": "新增使用因素已确认→暂缓→撤回，保真且影响解释/任务",
+      "core": true
+    },
+    {
+      "id": "G07",
+      "expected": "推广/方法不明/自称权威材料不升级行业规则",
+      "core": true
+    },
+    {
+      "id": "G08",
+      "expected": "重复转载/相互冲突/过期或跨市场试验不多数投票、不过度外推",
+      "core": true
+    },
+    {
+      "id": "G09",
+      "expected": "先路线后型号；硬缺证/反证下保留待核或淘汰，不按软成本复活",
+      "core": true
+    },
+    {
+      "id": "G10",
+      "expected": "品类主张、用户要求、型号事实、标称量、实际假设、报价分别处理",
+      "core": true
+    },
+    {
+      "id": "G11",
+      "expected": "实际模型上下文具当前认知版本；资料注入/伪造回执/陈旧上下文回退",
+      "core": true
+    },
+    {
+      "id": "G12",
+      "expected": "维护/主机价/随箱量单变量干预，结果和下一行动对准决定性项",
+      "core": true
+    },
+    {
+      "id": "G13",
+      "expected": "认知源撤回/同ID新版→仅依赖结果失效，用户答案/独立事实保留",
+      "core": true
+    },
+    {
+      "id": "G14",
+      "expected": "显式保存→新进程恢复→当前指南重算，旧结论/授权不复活",
+      "core": true
+    },
+    {
+      "id": "G15",
+      "expected": "当前认知到决定说明预览/另存，出处/日期/参数来源可回查",
+      "core": false
+    },
+    {
+      "id": "G16",
+      "expected": "取消草稿/文件选择/故障/迟到回执，新会话与旧文件完好",
+      "core": false
+    },
+    {
+      "id": "G17",
+      "expected": "0/未知/非法极端/单位错误→安全拒绝并继续正确修改",
+      "core": false
+    },
+    {
+      "id": "G18",
+      "expected": "专家跳过导览，已有明确要求保留，不重复追问/强迫测验",
+      "core": false
+    },
+    {
+      "id": "G19",
+      "expected": "同材料公平A/B，无增益也如实记，合成回答不冒充真人学习",
+      "core": false
+    },
+    {
+      "id": "G20",
+      "expected": "缺认知材料/缺新来源时给具体未知与研究任务，不伪造指南完整性",
+      "core": false
+    }
+  ],
+  "reference": "frozen EVALUATION.md; semantic and A/B reference judgments remain to be registered before their runs"
+}

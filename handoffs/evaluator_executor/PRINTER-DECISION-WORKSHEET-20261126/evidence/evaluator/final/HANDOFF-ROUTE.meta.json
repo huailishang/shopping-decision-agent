@@ -1,0 +1,25 @@
+{
+  "schema": "evaluator-executor-evidence/v1",
+  "label": "HANDOFF-ROUTE",
+  "command_argv": [
+    "python3",
+    "-X",
+    "utf8",
+    "/mnt/c/Users/HuailiShang/.codex/skills/evaluator-executor-workflow/scripts/validate_workflow.py",
+    "--repo",
+    ".",
+    "--current",
+    "CURRENT.md"
+  ],
+  "command_display": "python3 -X utf8 /mnt/c/Users/HuailiShang/.codex/skills/evaluator-executor-workflow/scripts/validate_workflow.py --repo . --current CURRENT.md",
+  "working_directory": "/mnt/d/SoftWare/VScode/install/Project/shopping-decision-agent",
+  "started_at_utc": "2026-11-26T08:10:19.009772+00:00",
+  "finished_at_utc": "2026-11-26T08:10:19.485422+00:00",
+  "exit_code": 0,
+  "stdout_path": "HANDOFF-ROUTE.stdout.log",
+  "stderr_path": "HANDOFF-ROUTE.stderr.log",
+  "stdout_bytes": 63,
+  "stderr_bytes": 0,
+  "stdout_sha256": "964aaa7e57a702d389d374fdaa0ff7acf3bf385ac8817508152ce6dc44fab479",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

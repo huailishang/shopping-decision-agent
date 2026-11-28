@@ -1,0 +1,44 @@
+{
+  "known_active_seconds": null,
+  "recorded_wall_seconds": 406.082004,
+  "unknown_segments": [
+    {
+      "reason": "initial reads before start; minute-resolution request timestamp",
+      "upper_bound_seconds": 180,
+      "upper_bound_evidence": "initial-unknown-bound.json (reported time, independent host log unavailable)",
+      "raw_artifacts": [
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/initial-unknown-bound.json",
+          "sha256": "a241843ec84c8aeb8d9acfbb82f46dda14c8447ae8c1b90bcda054c86a3875aa"
+        },
+        {
+          "path": "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/evidence/executor/initial-session-record-original.json",
+          "sha256": "a143b0af43fa88322fc2390c6e33d63c417980c7db31ec868adcb28d13cb9acd"
+        }
+      ]
+    }
+  ],
+  "unknown_upper_bound_seconds": 180,
+  "budget_debit_seconds": 586.082004,
+  "budget_debit_is_conservative_wall_upper_bound": true,
+  "remaining_budget_upper_limit_seconds": 863413.917996,
+  "inherited_prior_unknown": true,
+  "repair_rounds": [],
+  "forbidden_operations": {
+    "model_api": 0,
+    "model_cli": 0,
+    "platform_api": 0,
+    "account": 0,
+    "device": 0,
+    "transaction": 0,
+    "install": 0,
+    "external_write": 0,
+    "git_commit": 0,
+    "git_push": 0,
+    "git_index": 0
+  },
+  "public_reads": 0,
+  "public_queries": 0,
+  "process_time_accounting_complete": false,
+  "limit": "Checkpoint only; effective attention vs wait not separately measured. No final budget PASS asserted."
+}

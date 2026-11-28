@@ -1,0 +1,117 @@
+{
+  "expectations": "4fe526f5f07c5a453fe796ee7fe7e97b53b2efde9ad69d7aaf58e95e502961e6",
+  "cases": [
+    {
+      "id": "H01",
+      "checks": {
+        "answers_preserved": true,
+        "guide_recomputed": true,
+        "hp_pending": true,
+        "conflict_rejected": true,
+        "new_region": true,
+        "input_only": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "H02",
+      "checks": {
+        "scan_first": true,
+        "color_after_defer": true,
+        "scan_still_deferred": true,
+        "mono_excluded": true,
+        "explicit_research": true,
+        "safe": true
+      },
+      "passed": true,
+      "details": null
+    },
+    {
+      "id": "H03",
+      "checks": {
+        "execution_completed": false
+      },
+      "passed": false,
+      "details": {
+        "exception": "TypeError(\"'NoneType' object is not subscriptable\")"
+      }
+    },
+    {
+      "id": "H04",
+      "checks": {
+        "execution_completed": false
+      },
+      "passed": false,
+      "details": {
+        "exception": "StopIteration()"
+      }
+    },
+    {
+      "id": "H05",
+      "checks": {
+        "execution_completed": false
+      },
+      "passed": false,
+      "details": {
+        "exception": "TypeError(\"'NoneType' object is not subscriptable\")"
+      }
+    },
+    {
+      "id": "H06",
+      "checks": {
+        "execution_completed": false
+      },
+      "passed": false,
+      "details": {
+        "exception": "StopIteration()"
+      }
+    },
+    {
+      "id": "H07",
+      "checks": {
+        "0_relevant": false,
+        "0_no_auto_confirmation": true,
+        "1_relevant": false,
+        "1_no_auto_confirmation": true,
+        "2_relevant": false,
+        "2_no_auto_confirmation": true
+      },
+      "passed": false,
+      "details": [
+        {
+          "usage": "把老人手写的旧家谱变成电脑文件",
+          "expected": "requires_scan",
+          "actual": "needs_color",
+          "explanation": "是否必须在家打印彩色，直接决定黑白机器是否适用。"
+        },
+        {
+          "usage": "两面都要印，家人不会自己翻纸",
+          "expected": "requires_auto_duplex",
+          "actual": "needs_color",
+          "explanation": "是否必须在家打印彩色，直接决定黑白机器是否适用。"
+        },
+        {
+          "usage": "暑假结束后收柜子里，到寒假才用",
+          "expected": "idle_weeks_pattern",
+          "actual": "needs_color",
+          "explanation": "是否必须在家打印彩色，直接决定黑白机器是否适用。"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "checks": {
+        "actual_file_change_detected": true,
+        "all_current_question_only": true,
+        "all_sources_equal": true,
+        "all_basis_equal": true
+      },
+      "passed": true,
+      "details": "all 24 pairs independently traced; six semantic samples to be reviewed separately"
+    }
+  ],
+  "passed": 3,
+  "total": 8
+}

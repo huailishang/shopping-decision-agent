@@ -1,0 +1,18 @@
+# L3 Gate Summary
+
+- Task ID: PRINTER-SESSION-COST-EVIDENCE-20261126
+- Mode: evaluator
+- Gate result: PASS
+- Validation plan: handoffs/evaluator_executor/PRINTER-SESSION-COST-EVIDENCE-20261126/VALIDATION_PLAN.yaml
+- Checks: 7
+- Mandatory failures: 0
+
+| Check | AC | Evidence | Mandatory | Result | Exit | Expected |
+|---|---|---|---|---|---:|---:|
+| VP-01 | AC-01, AC-02, AC-04 | RV-EV-01 | yes | PASS | 0 | 0 |
+| VP-02 | AC-01, AC-02, AC-03, AC-04, AC-05, AC-06 | RV-EV-02 | yes | PASS | 0 | 0 |
+| VP-03 | AC-01, AC-04, AC-07 | RV-EV-03 | yes | PASS | 0 | 0 |
+| VP-04 | AC-01, AC-03, AC-06 | RV-EV-04 | yes | PASS | 0 | 0 |
+| VP-05 | AC-01, AC-02, AC-03, AC-04, AC-05, AC-07 | RV-EV-05 | yes | PASS | 0 | 0 |
+| VP-06 | AC-07 | RV-EV-06 | yes | PASS | 0 | 0 |
+| VP-07 | AC-07, AC-08 | RV-EV-07 | yes | PASS | 0 | 0 |

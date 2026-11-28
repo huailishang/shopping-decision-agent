@@ -1,0 +1,90 @@
+schema: evaluator-executor-validation-plan/v1
+task_id: PRINTER-SCENE-ROBUSTNESS-20261127
+runtime: WSL Python3 explicit PYTHONPATH; existing Windows Python/JDK
+checks:
+  - id: VP-01
+    ac: ["AC-05"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py", "scope"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-02
+    ac: ["AC-01"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_SCENARIOS.py", "--role", "executor"]
+    expected_exit_code: 0
+    mandatory: true
+    evaluator_command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_SCENARIOS.py", "--role", "evaluator"]
+  - id: VP-03
+    ac: ["AC-02"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py", "controls"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-04
+    ac: ["AC-01", "AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_scene_robustness.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-05
+    ac: ["AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-FOCUSED-GUIDANCE-20261127/VERIFY_TESTS.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-06
+    ac: ["AC-02", "AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_GUIDE.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-07
+    ac: ["AC-02", "AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-COGNITION-FIRST-20261126/VERIFY_CONTEXT.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-08
+    ac: ["AC-02", "AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-DECISIVE-EVIDENCE-20261126/VERIFY_ACTION.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-09
+    ac: ["AC-02", "AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-DECISION-WORKSHEET-20261126/VERIFY_BUSINESS.py"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-10
+    ac: ["AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-q"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-11
+    ac: ["AC-05"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "scripts/audit_model_history_readonly.py", "--task", "handoffs/evaluator_executor/PRINTER-MODEL-COMPARE-20261118"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-12
+    ac: ["AC-05"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_history_audit_version_transition.py", "-v"]
+    expected_exit_code: 0
+    mandatory: true
+  - id: VP-13
+    ac: ["AC-03", "AC-04"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_NATIVE.py", "--role", "executor"]
+    expected_exit_code: 0
+    mandatory: true
+    evaluator_command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_NATIVE.py", "--role", "evaluator"]
+  - id: VP-14
+    ac: ["AC-05", "AC-06"]
+    cwd: .
+    command: ["env", "PYTHONPATH=.:tests", "python3", "-X", "utf8", "handoffs/evaluator_executor/PRINTER-SCENE-ROBUSTNESS-20261127/VERIFY_PACKET.py", "delivery"]
+    expected_exit_code: 0
+    mandatory: true

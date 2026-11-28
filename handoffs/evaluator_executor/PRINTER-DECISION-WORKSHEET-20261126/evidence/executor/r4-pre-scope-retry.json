@@ -1,0 +1,31 @@
+{
+  "phase": "post",
+  "checks": {
+    "head_matches": true,
+    "index_empty": true,
+    "index_matches": true,
+    "manifest_matches": true,
+    "protected_unchanged": true
+  },
+  "baseline_sha256": "8cdf91d89833090c30b812ba9243074c1dfdcfa17904ed0d3e406e6733893c35",
+  "protected_count": 3022,
+  "changed_protected_paths": [],
+  "changed_product_paths": [
+    "desktop/DecisionWorksheetRegression.java",
+    "desktop/DecisionWorksheetSwingRegression.java",
+    "desktop/DesktopBridgeClient.java",
+    "desktop/ShoppingDecisionDesktop.java",
+    "shopping_decision/chat_bridge.py",
+    "shopping_decision/cognition_comparison.py",
+    "shopping_decision/cost_scenario.py",
+    "shopping_decision/decision_worksheet.py",
+    "shopping_decision/model_adapter.py",
+    "tests/test_cost_scenario_binding.py",
+    "tests/test_decision_worksheet.py",
+    "tests/test_model_receipt_boundaries.py",
+    "tests/test_worksheet_bridge.py",
+    "tests/test_worksheet_evidence.py",
+    "tests/test_worksheet_journeys.py",
+    "tests/test_worksheet_persistence.py"
+  ]
+}
